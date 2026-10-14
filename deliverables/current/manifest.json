@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R001",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "1f817e17835d5bbc9fafc2730ecb0de3f8d91a1b",
+  "source_commit": "ff5efb83e8a0cbf36adf59157d4211e1ca1c3681",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "d5189a809888f304480284c8db3b193c00be9ea8e224db2a7d614c768a18eb5b",
+  "source_tree_hash": "77af5e6ffeaac995b2552b9716bb565feecc45d25d3203aceaa38a7c4f69853c",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",

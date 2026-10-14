@@ -5,6 +5,7 @@ ROOT=Path(__file__).resolve().parents[1]
 
 def run(args,cwd=ROOT,env=None,log=None):
     if log:
+        log.parent.mkdir(parents=True,exist_ok=True)
         with log.open('w') as f:subprocess.run(args,cwd=cwd,env=env,check=True,stdout=f,stderr=subprocess.STDOUT)
     else:subprocess.run(args,cwd=cwd,env=env,check=True)
 
