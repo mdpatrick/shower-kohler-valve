@@ -42,5 +42,19 @@
   ],
   "saved_scene_state_check": "docs/validation/scene_state_check.json",
   "no_op_rebuild": "PASS - all seven stages reused",
-  "full_committed_archive_verification": "PASS - original three blobs hashed again"
+  "full_committed_archive_verification": "PASS - original three blobs hashed again",
+  "native_UI_review": {
+    "status": "PASS",
+    "date": "2026-10-14",
+    "application": "Blender 4.5.13 LTS",
+    "file": "deliverables/current/blender/installation_R001_DRAFT.blend",
+    "observed": [
+      "textured primary wall scan",
+      "coverage camera framing",
+      "damage and plate outlines",
+      "named collections including separate diverter and factory reference"
+    ],
+    "method": "native screenshot inspection after per-file File Open with Load UI enabled; Trusted Source disabled",
+    "limitation": "Visual usability check; physical fit unchanged."
+  }
 }
