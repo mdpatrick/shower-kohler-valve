@@ -8,7 +8,7 @@
       "title": "Stacked thermostatic valve trim installation",
       "revision": "1041504-2-F",
       "pages": "pp 3,7,8",
-      "applicability": "Factory layer order, gasket covers opening, stud adjustment; compare physical revision",
+      "applicability": "p7: front plate flat at wall; studs at most7/16in from finished wall, foam covers opening, downward drain, handles secure cover. p8: correct adapter length for engagement and seating. Actual installed revision must be checked.",
       "retrieved_date": "2026-10-14",
       "sha256": "7256f5693a6221c5e8e9369be3fe5d5ff2aeda0773e41a837193e4617f39cbe4",
       "size_bytes": 1318029
@@ -132,6 +132,12 @@
       "source": "direct user reply 2026-10-14",
       "path": "docs/decisions/current_state_2026-10-14.md",
       "claim": "Nothing has changed since capture: piping, valve pose, studs and wall opening."
+    },
+    {
+      "id": "SRC-USER-DEPTH-REVIEW",
+      "source": "direct browser review/comment 2026-10-14",
+      "path": "docs/decisions/depth_review_2026-10-14.md",
+      "claim": "User flagged impossible seated-cover/stud intersection and requested Z-depth/sealing explanation; no dimensions supplied."
     }
   ]
 }

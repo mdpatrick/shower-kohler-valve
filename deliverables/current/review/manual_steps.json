@@ -41,13 +41,13 @@
   },
   {
     "title": "Install only the released material detail",
-    "view": "assembled",
+    "view": "section_controls",
     "person": "Installer / fabricator as assigned",
     "prerequisite": "Selected design, material data, physical fit and explicit fabrication approval complete.",
     "tools": "Approved drawing, inspected finished part and named materials from the released schedule.",
     "action": "Protect service parts, prepare the verified substrates, place supported repairs and sealing layers in the approved order, and assemble the original Kohler components.",
     "check": "Incoming dimensions, flatness, thickness, edges and finish accepted; sealing path continuous; service parts remain removable; drain unobstructed.",
-    "stop": "This draft has no selected mortar, backing, sealant, finish or cure schedule. Do not permanently install from it."
+    "stop": "The current seated-cover trial has solid intersections and is rejected. No selected mortar, backing, sealant, finish or cure schedule exists. Do not install from this draft."
   },
   {
     "title": "Cure, test and preserve access",

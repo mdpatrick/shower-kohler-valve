@@ -2,8 +2,8 @@
   "project_id": "shower-kohler-valve",
   "revision": "R001",
   "units": "mm",
-  "state": "proposed_provisional",
-  "fit_verdict": "UNRESOLVED / candidate not selected",
+  "state": "diagnostic_trial_with_unchanged_hardware",
+  "fit_verdict": "FAIL in provisional geometry / physical fit UNRESOLVED / candidate not selected",
   "readiness": "DRAFT_NOT_FOR_FABRICATION",
   "coverage": [
     {
@@ -351,7 +351,8 @@
         "SRC-KOHLER-CURRENT-GUIDE step10"
       ],
       "tip_minus_original_wall_limit_mm": 15.49938122141667,
-      "conditional_result": "apparent excess; confirm datum and depth before adjustment",
+      "guide_datum": "finished wall, explicitly stated in 1041504-2-F p7",
+      "conditional_result": "apparent excess; confirm physical depth and applicable hardware before adjustment",
       "needed": "M07 physical straightedge-to-tip depth and thread/adjustment inspection by installer; no cutting authorized"
     },
     {
@@ -367,7 +368,8 @@
         "SRC-KOHLER-CURRENT-GUIDE step10"
       ],
       "tip_minus_original_wall_limit_mm": 19.563918397046805,
-      "conditional_result": "apparent excess; confirm datum and depth before adjustment",
+      "guide_datum": "finished wall, explicitly stated in 1041504-2-F p7",
+      "conditional_result": "apparent excess; confirm physical depth and applicable hardware before adjustment",
       "needed": "M07 physical straightedge-to-tip depth and thread/adjustment inspection by installer; no cutting authorized"
     },
     {
@@ -464,20 +466,130 @@
       "needed": "report any future piping, valve, stud or wall changes before relying on this state"
     },
     {
-      "id": "CAD-CLASH-STUD-SW",
-      "status": "UNRESOLVED",
-      "conditional_result": "FAIL in provisional geometry",
+      "id": "CAD-CLASH-FACTORY-STUD-SW",
+      "status": "FAIL",
+      "conditional_result": "FAIL in original-wall trial",
       "intersection_mm3": 29.452431127404317,
-      "method": "exact OCCT solid intersection of assumed stud envelope and reference trim cavity",
-      "needed": "M07 actual depths/cavity; installer adjustment feasibility"
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-FACTORY-STUD-NE",
+      "status": "FAIL",
+      "conditional_result": "FAIL in original-wall trial",
+      "intersection_mm3": 29.452431127404317,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-FACTORY-STUD-SW-NUT",
+      "status": "UNRESOLVED",
+      "conditional_result": "NO_SOLID_INTERSECTION in original-wall trial",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-FACTORY-STUD-NE-NUT",
+      "status": "UNRESOLVED",
+      "conditional_result": "NO_SOLID_INTERSECTION in original-wall trial",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-FACTORY-PLATE-INNER",
+      "status": "UNRESOLVED",
+      "conditional_result": "NO_SOLID_INTERSECTION in original-wall trial",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-FACTORY-VALVE-LOWER",
+      "status": "FAIL",
+      "conditional_result": "FAIL in original-wall trial",
+      "intersection_mm3": 2714.3360326624506,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-FACTORY-VALVE-UPPER",
+      "status": "UNRESOLVED",
+      "conditional_result": "NO_SOLID_INTERSECTION in original-wall trial",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-STUD-SW",
+      "status": "FAIL",
+      "conditional_result": "FAIL in trial with added backing plate",
+      "intersection_mm3": 29.452431127404317,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
     },
     {
       "id": "CAD-CLASH-STUD-NE",
+      "status": "FAIL",
+      "conditional_result": "FAIL in trial with added backing plate",
+      "intersection_mm3": 29.452431127404317,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-STUD-SW-NUT",
       "status": "UNRESOLVED",
-      "conditional_result": "FAIL in provisional geometry",
-      "intersection_mm3": 29.452431127404314,
-      "method": "exact OCCT solid intersection of assumed stud envelope and reference trim cavity",
-      "needed": "M07 actual depths/cavity; installer adjustment feasibility"
+      "conditional_result": "NO_SOLID_INTERSECTION in trial with added backing plate",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-STUD-NE-NUT",
+      "status": "UNRESOLVED",
+      "conditional_result": "NO_SOLID_INTERSECTION in trial with added backing plate",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-PLATE-INNER",
+      "status": "UNRESOLVED",
+      "conditional_result": "NO_SOLID_INTERSECTION in trial with added backing plate",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-VALVE-LOWER",
+      "status": "FAIL",
+      "conditional_result": "FAIL in trial with added backing plate",
+      "intersection_mm3": 2714.336032662566,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-VALVE-UPPER",
+      "status": "UNRESOLVED",
+      "conditional_result": "NO_SOLID_INTERSECTION in trial with added backing plate",
+      "intersection_mm3": 0.0,
+      "physical_fit": "UNRESOLVED",
+      "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
+      "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
     }
   ],
   "error_budget": {

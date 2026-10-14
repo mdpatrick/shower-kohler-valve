@@ -16,6 +16,8 @@ try {
   assert(nodes.includes('CUSTOM-01'));assert(nodes.includes('PLATE-INNER'));assert(nodes.includes('DIVERTER-TRIM'));assert(nodes.some(n=>n.startsWith('WALL')));
   const cadParts=JSON.parse(await readFile(path.join(root,'deliverables/current/cad/cad_manifest.json'),'utf8')).parts;
   await page.locator('[data-state="factory"]').click();
+  assert(await page.locator('#fit-warning').isVisible());
+  assert((await page.locator('#fit-warning').textContent()).includes('FAIL'));
   let display=await page.evaluate(()=>window.reviewDisplay);
   assert.equal(display.state,'factory');assert(!display.parts['CUSTOM-01'].visible);assert(!display.parts['NEW-SEAL-PATH'].visible);assert(display.parts['DIVERTER-TRIM'].visible);
   for(const p of cadParts.filter(p=>p.factory_location_mm))for(let axis=0;axis<3;axis++)assert(Math.abs(display.parts[p.id].position_m[axis]*1000-p.factory_location_mm[axis])<.001);
@@ -27,6 +29,20 @@ try {
   await page.locator('#explode').fill('0.35');await page.locator('#section').check();await page.locator('#section').uncheck();
   await page.locator('#explode').fill('0');await page.locator('[data-view="front"]').click();
   await mkdir(path.join(root,'build/browser-qa'),{recursive:true});
+  await page.locator('[data-depth-case="factory"]').click();
+  assert((await page.locator('#depth-image').getAttribute('src')).endsWith('depth_factory.svg'));
+  await page.locator('[data-depth-case="proposed"]').click();
+  assert((await page.locator('#depth-image').getAttribute('src')).endsWith('depth_proposed.svg'));
+  await page.locator('#depth-image').screenshot({path:path.join(root,'build/browser-qa/depth-diagram.png')});
+  await page.locator('#show-depth-3d').click();
+  assert(await page.locator('#section').isChecked());
+  display=await page.evaluate(()=>window.reviewDisplay);
+  assert(display.parts['STUD-NE'].visible&&display.parts['STUD-SW'].visible);
+  await page.locator('[data-view="front"]').click();
+  assert(!(await page.locator('#section').isChecked()));
+  await page.locator('[data-state="observed"]').click();
+  assert(!(await page.locator('#fit-warning').isVisible()));
+  await page.locator('[data-state="proposed"]').click();
   await page.locator('#model').screenshot({path:path.join(root,'build/browser-qa/model-desktop.png')});
   await page.locator('#measurement-date').fill('2026-10-14');
   const first=page.locator('[data-measurement="M01-O"]');
@@ -40,6 +56,7 @@ try {
   assert.equal(await first.locator('.raw').inputValue(),'4');
   await page.setViewportSize({width:390,height:844});
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Horizontal page overflow');
+  await page.locator('#depth').screenshot({path:path.join(root,'build/browser-qa/depth-mobile.png')});
   await page.locator('#measurements').screenshot({path:path.join(root,'build/browser-qa/worksheet-mobile.png')});
   await page.setViewportSize({width:1440,height:1000});
   const assets=await page.evaluate(()=>[...new Set([...document.querySelectorAll('img[src],a[href]')].map(el=>el.src||el.href).filter(u=>u.startsWith(location.origin)&&!u.includes('#')))]);
@@ -62,7 +79,7 @@ try {
   for(let side=0;side<2;side++)for(let axis=0;axis<3;axis++)assert(Math.abs(coordinate.custom_bounds_m[side][axis]*1000-(cad.bounds_local_mm[side][axis]+cad.location_mm[axis]))<.05);
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
   const report={status:'PASS',revision:resolved.revision,desktop:[1440,1000],mobile:[390,844],model_nodes:nodes,
-    checks:['GLB loading','factory/proposed per-part positions, visibility and round-trip restoration','local controls','responsive page','JSON download and persistence','linked asset HTTP success','known-size asymmetric part + hole in browser','CAD-to-browser custom placement/bounds'],coordinate,errors,failed,
+    checks:['GLB loading','original-wall/added-plate per-part positions, visibility and round-trip restoration','fit warnings and visible unchanged studs','depth diagram switching and stud-section navigation','local controls','responsive page','JSON download and persistence','linked asset HTTP success','known-size asymmetric part + hole in browser','CAD-to-browser custom placement/bounds'],coordinate,errors,failed,
     note:'Isolated synthetic browser values were never imported. No physical measurements or fit established.'};
   await writeFile(path.join(root,'docs/validation/browser_check.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }catch(e){

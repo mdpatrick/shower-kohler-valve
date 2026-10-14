@@ -22,6 +22,7 @@ def build():
         parts[id]=shape
         bb=shape.BoundingBox();stl=cache/f'{id}.stl'
         cq.exporters.export(shape,str(stl),tolerance=.04,angularTolerance=.08)
+        brep=cache/f'{id}.brep';shape.exportBrep(str(brep))
         step=None
         if export:
             step=OUT/f'{id}_DRAFT_NOT_FOR_FABRICATION.step';cq.exporters.export(shape,str(step))
@@ -35,7 +36,7 @@ def build():
         if factory_xyz and collection in ('02_INNER_AND_GASKET','03_OUTER_TRIM'):
             factory_xyz[2]-=newwall
         meta.append({'id':id,'stl':str(stl.relative_to(ROOT)),'step':str(step.relative_to(ROOT)) if step else None,
-            'factory_location_mm':factory_xyz,
+            'factory_location_mm':factory_xyz,'brep':str(brep.relative_to(ROOT)),
             'location_mm':list(map(float,xyz)),'color':color,'collection':collection,'evidence':evidence,
             'status':'provisional reference' if id!='CUSTOM-01' else 'unselected candidate',
             'bounds_local_mm':[[bb.xmin,bb.ymin,bb.zmin],[bb.xmax,bb.ymax,bb.zmax]],'volume_mm3':shape.Volume(),
@@ -109,7 +110,7 @@ def build():
     for id,point in zip(['STUD-SW','STUD-NE'],d['studs_mm']):
         x,y,z=point
         stud=cq.Workplane('XY').circle(a['stud_envelope_diameter_mm']/2).extrude(z+15).translate((0,0,-15))
-        add(id,stud,(x,y,0),(.65,.55,.23),'01_OBSERVED_ENVELOPES','Observed tip; envelope axis, diameter and hidden engagement unverified')
+        add(id,stud,(x,y,0),(.78,.08,.06),'01_OBSERVED_ENVELOPES','Observed tip; red flags cover interference. Envelope axis, diameter and hidden engagement unverified')
         nut=cq.Workplane('XY').polygon(6,10).circle(a['stud_envelope_diameter_mm']/2).extrude(4)
         add(id+'-NUT',nut,(x,y,innerz+a['inner_sheet_thickness_mm']),(.48,.48,.5),'02_INNER_AND_GASKET','Assumed nut envelope; seating unknown')
     # New sealing interface is only a diagnostic band; it is NOT a sealant specification.
@@ -130,8 +131,8 @@ def build():
     assert len(plate.faces('>Z').wires().vals())==2
     checks.append({'id':'DXF','status':'PASS','units':'mm','contours':2,'internal_apertures':1,'separate_fastener_holes':0,'entity_types':sorted(set(e.dxftype() for e in entities)),'reimport_volume_agrees':True})
     manifest={'revision':d['revision'],'status':'DRAFT_NOT_FOR_FABRICATION','units':'mm','parts':meta,'checks':checks,
-       'warnings':['Reference solids are not replacement Kohler parts.','Hidden cavity, gasket, slots and engagement unknown.','No physical fit or material approval.'],
-       'assembly_state':'proposed_provisional','wall':'irregular mesh accompanies STEP in Blender/GLB; not converted to faceted STEP'}
+       'warnings':['Reference solids are not replacement Kohler parts.','Hidden cavity, gasket, slots and engagement unknown.','Unchanged stud envelopes intersect the seated cover: this is a diagnostic placement, not a feasible assembly.','No physical fit or material approval.'],
+       'assembly_state':'diagnostic_trial_with_unchanged_hardware','wall':'irregular mesh accompanies STEP in Blender/GLB; not converted to faceted STEP'}
     (cache/'parts.json').write_text(json.dumps(manifest,indent=2)+'\n')
     (OUT/'cad_manifest.json').write_text(json.dumps(manifest,indent=2)+'\n')
     print('Generated',len(parts),'parts;',len(checks),'CAD/export checks passed; physical fit UNRESOLVED')

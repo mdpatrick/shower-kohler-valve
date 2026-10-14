@@ -90,6 +90,19 @@ def build():
         story+=[Paragraph(f'{i:02d} / {s0["title"]}',styles['ProjectTitle']),Paragraph(f'{rev} - DRAFT SEQUENCE - NOT INSTALLATION APPROVAL',styles['BodyText'])]
         right=Paragraph('<b>Responsible:</b> '+s0['person']+'<br/><br/><b>Prerequisite:</b> '+s0['prerequisite']+'<br/><br/><b>Tools / materials:</b> '+s0['tools'],styles['BodyText'])
         t=Table([[Image(str(views/(s0['view']+'.png')),width=260,height=260),right]],colWidths=[278,232]);t.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0)]));story+=[t,Spacer(1,22),Paragraph('Action',styles['Heading2']),Paragraph(s0['action'],styles['BodyText']),Paragraph('Completion check',styles['Heading2']),Paragraph(s0['check'],styles['BodyText']),Paragraph('Stop condition',styles['Heading2']),Paragraph(s0['stop'],styles['BodyText'])]
+    depth=json.loads((ROOT/'deliverables/current/analysis/depth_stack.json').read_text())
+    story += [PageBreak(),Paragraph('Depth and sealing / review correction',styles['ProjectTitle']),
+        Paragraph('The earlier seated-cover image is not a feasible assembly. The unchanged stud envelopes intersect the assumed cover. No captured hardware has been shortened or moved.',styles['BodyText']),
+        Image(str(views/'section_studs.png'),width=230,height=230),
+        Paragraph('All Z values use the original intact-stone plane as zero, with positive Z toward the shower. Numbers below are conditional model values, not physical measurements.',styles['BodyText'])]
+    rows=[[Paragraph(x,styles['SmallCell']) for x in ['Trial / stud','Tip Z, mm','Cover inside Z, mm','Signed gap, mm']]]
+    for case in depth['cases'].values():
+        for stud in case['studs']:
+            rows.append([Paragraph(case['label']+' / '+stud['id'],styles['SmallCell']),f"{stud['tip_z_mm']:.1f}",f"{stud['cover_rear_z_mm']:.1f}",f"{stud['tip_to_cover_rear_clearance_mm']:.1f}"])
+    table=Table(rows,colWidths=[210,95,110,95]);table.setStyle(TableStyle([('FONTNAME',(0,0),(-1,-1),'Project'),('FONTSIZE',(0,0),(-1,-1),9),('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e6eff0')),('VALIGN',(0,0),(-1,-1),'TOP'),('TOPPADDING',(0,0),(-1,-1),6),('BOTTOMPADDING',(0,0),(-1,-1),6)]));story += [table,Spacer(1,10),
+        Paragraph('Negative gap means interference. The assumed nut envelopes clear the cover, but real nut seats, formed metal, rear cavity and compressed foam remain unmeasured. A thicker backing plate also changes hub/adapter engagement and the cover landing.',styles['BodyText']),
+        Paragraph('Kohler 1041504-2-F, page 7: the inner plate lies flat at the wall; the studs project at most 7/16 inch from the finished wall; the foam covers the opening; nuts stay behind the outer cover; its drain faces down. Page 8 requires appropriate adapters for engagement and seating. Current guide 1216755-2-A, steps 8-12, shows the same assembly order. Check the actual revision.',styles['BodyText']),
+        Paragraph('Four separate questions remain: conceal all cuts; provide continuous supported foam landing; resolve surface-water seals and drainage; inspect concealed waterproofing through existing access. The current trial aperture conflicts with the assumed gasket path. Coverage alone is not a waterproof repair.',styles['BodyText'])]
     manual=ROOT/f'deliverables/current/manual/repair_manual_{rev}_DRAFT.pdf';SimpleDocTemplate(str(manual),pagesize=A4,leftMargin=40,rightMargin=40,topMargin=36,bottomMargin=42).build(story,onFirstPage=footer,onLaterPages=footer)
     print('Generated worksheet, drawing, calibrated tiled profile and six-step draft manual PDFs')
 

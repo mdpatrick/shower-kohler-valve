@@ -70,7 +70,23 @@
     "plate-side scans averaged into primary registration",
     "studs cut to resolve interference",
     "outer trim substituted for gasket support",
-    "surface seal assumed to restore hidden waterproofing"
+    "surface seal assumed to restore hidden waterproofing",
+    "seated-cover rendering with protruding studs presented as a feasible proposed assembly",
+    "outer-cover bolt holes invented to hide interference",
+    "decorative coverage treated as proof of gasket support or waterproofing"
   ],
-  "selection": null
+  "selection": null,
+  "depth_review": {
+    "status": "rejected trial; no physical correction assumed",
+    "source": "OBS-DEPTH-REVIEW-01",
+    "datum": "Original intact-stone fitted plane; all Z comparisons use this datum",
+    "factory_stud_limit": {
+      "value_mm": 11.1125,
+      "source": "SRC-KOHLER-OLD-GUIDE p7",
+      "datum": "finished wall explicitly stated in text",
+      "not_authorized": "not a cut length or an automatic limit above an unapproved backing plate"
+    },
+    "keep_observed_hardware": true,
+    "gasket": "free-thickness display is not installed compression"
+  }
 }

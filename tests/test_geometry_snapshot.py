@@ -47,7 +47,22 @@ class SnapshotTests(unittest.TestCase):
         self.assertIsNone(state['selected_state'])
         self.assertEqual(state['readiness']['fabrication_approval'],'NOT GIVEN')
         checks=json.loads((ROOT/'deliverables/current/analysis/checks.json').read_text())
-        self.assertTrue(all(c['status']=='UNRESOLVED' for c in checks['coverage']+checks['checks'] if c['id' if 'id' in c else 'feature_id']!='POST-SCAN-STATE'))
+        self.assertTrue(all(c['status'] in ('UNRESOLVED','FAIL') for c in checks['coverage']+checks['checks'] if c['id' if 'id' in c else 'feature_id']!='POST-SCAN-STATE'))
+        for c in checks['checks']:
+            if c['status']=='FAIL':self.assertEqual(c['physical_fit'],'UNRESOLVED')
+
+    def test_depth_reports_real_solid_conflicts_without_moving_studs(self):
+        report=json.loads((ROOT/'deliverables/current/analysis/depth_stack.json').read_text())
+        resolved=json.loads((ROOT/'data/derived/resolved.json').read_text())
+        for case in report['cases'].values():
+            self.assertFalse(case['captured_hardware_adjusted'])
+            for stud,observed in zip(case['studs'],resolved['studs_mm']):
+                self.assertAlmostEqual(stud['tip_z_mm'],observed[2])
+                if stud['tip_to_cover_rear_clearance_mm']<0:
+                    clash=next(c for c in case['collisions'] if c['part']==stud['id'])
+                    self.assertGreater(clash['intersection_mm3'],0)
+                    self.assertEqual(clash['model_result'],'FAIL')
+            self.assertEqual(case['physical_fit'],'UNRESOLVED')
 
     def test_factory_comparison_preserves_captured_hardware(self):
         parts=json.loads((ROOT/'deliverables/current/cad/cad_manifest.json').read_text())['parts']

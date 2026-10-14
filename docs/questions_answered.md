@@ -20,7 +20,7 @@ The new outer sealing band crosses GROUT-01. A planar CAD ring does not establis
 
 ## Are the studs too long?
 
-The visible tip estimates are approximately 26.61 mm (SW) and 30.68 mm (NE) from the fitted stone plane at conditional scale. The trim guides show a 7/16-inch (11.1125 mm) maximum with a specific factory datum/assembly. The discrepancy warrants M07 straightedge measurements and a qualified check of actual adapters, threads, stud adjustment and final layer stack. It does not authorize cutting studs. The exact provisional solid intersections are reported separately from actual fit.
+The visible tip estimates are approximately 26.61 mm (SW) and 30.68 mm (NE) from the fitted stone plane at conditional scale. Kohler 1041504-2-F page 7 explicitly gives a 7/16-inch (11.1125 mm) maximum **from the finished wall**. The discrepancy warrants M07 straightedge measurements and a qualified check of actual adapters, threads, stud adjustment and final layer stack. It does not authorize cutting studs. The trial cover intersects both studs: signed rear-cover clearances are about -7.94 and -12.00 mm with the trial backing plate. This rejects the rendered assembly, while actual fit still needs measurements. See [the depth report](../deliverables/current/analysis/depth_stack.json).
 
 The outer cavity, shell thickness, nuts, hubs, inner formed offsets and handle engagement are partly assumed. The manufacturer's exterior/BIM CAD cannot establish hidden mating details. No destructive adjustment or valve move is proposed.
 
@@ -38,8 +38,12 @@ The separate lower diverter now has a nominal 98.425 mm trim envelope centered a
 
 Kohler's 3-inch handle dimension is the axis-to-long-tip reach, not the total centered lever length. The reference handles now reflect that distinction. The main lower control and separate diverter have about 135.56 mm projected axis separation, compared with two 76.2 mm long reaches. Full-rotation reach circles overlap by about 16.84 mm. This flags an on-site travel/depth/tool-access check; it does not establish actual collision or that either handle permits every angle. Small-trim short reach is documented 31.75 mm; the main short reach and cross sections remain assumptions.
 
-The **Factory reference** state removes the 4.175 mm trial plate/seal display stack from the main factory components. It retains original stone and captured hardware unchanged, with the lower diverter at the original wall plane. Its assumed gasket and rear interfaces do not establish an approved installation on the damaged wall.
+The **Original-wall trial** state removes the 4.175 mm trial plate/seal display stack from the main factory components. It retains original stone and captured hardware unchanged, with the lower diverter at the original wall plane. Both this state and the added-plate trial intersect the unchanged studs. They are labeled diagnostic conflicts, not manufacturer-intended fitted assemblies. Nuts and yellow plate clear the cover only in the assumed solids; the lower valve placeholder also clashes and needs real profile/bore evidence.
 
 ## What is physically verified?
 
 Component identities were supplied by the user, who confirmed on 2026-10-14 that nothing has changed since capture. This current-state report is recorded separately from dimensions in `canon/observations.json`. No dimensional observations or fit-test results have been accepted. Local software checks establish evidence integrity, coordinate conversion and export consistency only. A successful render or CAD intersection test cannot establish water performance. [Dry-fit and incoming-inspection records](physical_checks/README.md) remain blank.
+
+## Is the over-cut the only concern?
+
+Not established. Concealing the cuts, supporting the foam/inner plate, resolving surface-water seals and drainage, and connecting concealed waterproofing are separate questions. The candidate does not yet provide demonstrated foam landing and its added depth changes seating and engagement. The [depth and sealing correction](decisions/depth_review_2026-10-14.md) explains the common datum and factory sequence.

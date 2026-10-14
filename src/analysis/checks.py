@@ -3,6 +3,7 @@ import json,math,numpy as np
 from shapely.geometry import Polygon,Point,LineString,box
 from shapely.ops import unary_union
 from shapely.affinity import translate
+from depth import analyze_depth
 ROOT=Path(__file__).resolve().parents[2]
 
 def capsule(w,h):return LineString([(0,-(h-w)/2),(0,(h-w)/2)]).buffer(w/2,quad_segs=128)
@@ -62,7 +63,7 @@ def run():
     for id,p in zip(['STUD-SW','STUD-NE'],studs):
         checks.append({'id':'DEPTH-'+id,'feature_ids':[id+'-TIP'],'status':'UNRESOLVED','observed_tip_z_mm':float(p[2]),
             'guide_nominal_max_mm':11.1125,'guide_sources':['SRC-KOHLER-OLD-GUIDE p7','SRC-KOHLER-CURRENT-GUIDE step10'],
-            'tip_minus_original_wall_limit_mm':float(p[2]-11.1125),'conditional_result':'apparent excess; confirm datum and depth before adjustment',
+            'tip_minus_original_wall_limit_mm':float(p[2]-11.1125),'guide_datum':'finished wall, explicitly stated in 1041504-2-F p7','conditional_result':'apparent excess; confirm physical depth and applicable hardware before adjustment',
             'needed':'M07 physical straightedge-to-tip depth and thread/adjustment inspection by installer; no cutting authorized'})
     diverter=np.array(d['diverter_tip_mm']);dn=d['nominal']['diverter_trim']
     separation=float(np.linalg.norm(center-diverter[:2]));direction=(diverter[:2]-center)/separation
@@ -113,13 +114,16 @@ def run():
     # Exact checks on provisional reference solids, distinguished from physical fit.
     import cadquery as cq
     cm=json.loads((ROOT/'data/derived/cad/parts.json').read_text());parts={p['id']:p for p in cm['parts']}
-    outer=cq.importers.importStep(str(ROOT/parts['TRIM-OUTER']['step'])).val().translate(tuple(parts['TRIM-OUTER']['location_mm']))
-    for id,p in zip(['STUD-SW','STUD-NE'],studs):
-        stud=cq.Workplane('XY').circle(a['stud_envelope_diameter_mm']/2).extrude(p[2]+15).translate((float(p[0]),float(p[1]),-15)).val()
-        clash=outer.intersect(stud).Volume()
-        checks.append({'id':'CAD-CLASH-'+id,'status':'UNRESOLVED','conditional_result':'FAIL in provisional geometry' if clash>1e-6 else 'no intersection of provisional solids','intersection_mm3':clash,
-            'method':'exact OCCT solid intersection of assumed stud envelope and reference trim cavity','needed':'M07 actual depths/cavity; installer adjustment feasibility'})
-    result={'project_id':d['project_id'],'revision':d['revision'],'units':'mm','state':'proposed_provisional','fit_verdict':'UNRESOLVED / candidate not selected',
+    depth=analyze_depth(d,cm)
+    for case,record in depth['cases'].items():
+        for clash in record['collisions']:
+            checks.append({'id':'CAD-CLASH-'+('FACTORY-' if case=='factory' else '')+clash['part'],
+                'status':'FAIL' if clash['model_result']=='FAIL' else 'UNRESOLVED',
+                'conditional_result':clash['model_result']+' in '+record['label'].lower(),
+                'intersection_mm3':clash['intersection_mm3'],'physical_fit':'UNRESOLVED',
+                'method':'exact OCCT common volume of disclosed reference solids; not a physical measurement',
+                'needed':'actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility'})
+    result={'project_id':d['project_id'],'revision':d['revision'],'units':'mm','state':'diagnostic_trial_with_unchanged_hardware','fit_verdict':'FAIL in provisional geometry / physical fit UNRESOLVED / candidate not selected',
         'readiness':'DRAFT_NOT_FOR_FABRICATION','coverage':coverage,'checks':checks,
         'error_budget':{'scan_scale':{'bound_mm':None,'note':'nominal control spacing used as fit input, not independent scale check'},
             'feature_tracing':{'bound_mm':1.5,'note':'conditional R001 projection selection allowance'},'registration':{'absolute_bound_mm':None,'plane_consistency_rms_mm':reg['plane']['all_selected_rms_mm']},
@@ -132,12 +136,13 @@ def run():
           {'id':'ALT-PLATE','name':'Custom backing plate','viability':'conditional coverage; current assumed aperture/gasket conflict prevents selection; support/retention/sealing unverified'},
           {'id':'ALT-COMBINATION','name':'Supported local repair plus shaped plate','viability':'may provide gasket landing with smaller apertures; no selected materials or permanent instructions yet'}]}
     OUT=ROOT/'deliverables/current/analysis';OUT.mkdir(parents=True,exist_ok=True)
+    (OUT/'depth_stack.json').write_text(json.dumps(depth,indent=2)+'\n')
     (OUT/'checks.json').write_text(json.dumps(result,indent=2)+'\n')
     schedule={'project_id':d['project_id'],'revision':d['revision'],'status':'DRAFT / inspection schedule, no adjustment authorized','units':'mm',
         'items':[
-          {'id':'STUD-'+name,'datum':'intact-stone reference plane; verify factory plate datum in applicable guide',
+          {'id':'STUD-'+name,'datum':'finished wall per 1041504-2-F p7; current measurements use original intact-stone plane',
            'current_model_tip_z_mm':p[2],'current_status':'accepted M07 depth' if 'M07-'+name in accepted else 'conditional scan estimate',
-           'proposed_target_mm':None,'guide_comparison_mm':11.1125,'guide_context':'7/16 inch maximum shown in applicable trim guides; establish exact reference surface with actual hardware',
+           'proposed_target_mm':None,'guide_comparison_mm':11.1125,'guide_context':'7/16 inch maximum from finished wall, explicit in 1041504-2-F p7. Not a stud-cut length or automatic target above a custom backing plate.',
            'responsible':'qualified plumber','prerequisites':['M07 depth readings','usable thread/adapter arrangement','selected final layer thickness'],
            'on_site_check':'Verify reversible factory adjustment, engagement and free outer-trim seating. No shortening or valve movement approved.'}
           for name,p in zip(['SW','NE'],studs)]+

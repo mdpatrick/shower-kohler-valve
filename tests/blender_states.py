@@ -18,11 +18,13 @@ for p in cad['parts']:
         assert all(abs(x-y)<.001 for x,y in zip(installed(factory),p['factory_location_mm'])),p['id']
         assert factory.data==o.data
         tested.append(p['id'])
-layer=bpy.context.scene.view_layers['Factory_reference']
+layer=bpy.context.scene.view_layers['Original_wall_trial']
 assert layer.layer_collection.children['04_CUSTOM_CANDIDATE'].exclude
 assert layer.layer_collection.children['05_PROPOSED_MATERIALS'].exclude
 assert not layer.layer_collection.children['03B_DIVERTER_REFERENCE'].exclude
 assert not layer.layer_collection.children['01_OBSERVED_WALL'].exclude
+assert not layer.layer_collection.children['01_OBSERVED_ENVELOPES'].exclude
+assert not bpy.context.scene.view_layers['Trial_fit_CONFLICT'].layer_collection.children['01_OBSERVED_ENVELOPES'].exclude
 glb=(ROOT/'deliverables/current/review/installation_DRAFT.glb').read_bytes()
 length,kind=struct.unpack_from('<II',glb,12)
 assert kind==0x4e4f534a

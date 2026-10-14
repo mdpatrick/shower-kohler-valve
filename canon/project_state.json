@@ -3,17 +3,17 @@
   "revision": "R001",
   "date": "2026-10-14",
   "selected_state": null,
-  "working_state": "proposed_provisional",
+  "working_state": "diagnostic_trial_with_unchanged_hardware",
   "states": {
     "as_observed_at_capture": "preserved scan; capture date unknown; user reports no changes since capture on 2026-10-14",
-    "manufacturer_intended": "Factory reference at original stone plane; nominal arrangement from Kohler guides, main and separate diverter trim; unmeasured mating details provisional",
-    "proposed_provisional": "conditional no-cutting alternatives; no selected repair",
+    "manufacturer_intended": "Documented layer/fastener order and original-finished-wall stud limit only; no physically verified installed geometry",
+    "proposed_provisional": "Seated-cover placement rejected: unchanged stud envelopes intersect the assumed cover; candidate gasket landing also conflicts",
     "selected_arrangement": null
   },
   "readiness": {
     "evidence_preserved": true,
     "software_geometry_checks": "PASS - coordinate/export/browser checks only; physical fit unresolved",
-    "geometric_fit": "UNRESOLVED",
+    "geometric_fit": "FAIL in provisional geometry; physical dimensions and fit unresolved",
     "materials_design_review": "UNRESOLVED",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
@@ -33,5 +33,6 @@
     "K-2973-KS-NA",
     "K-737-K-NA"
   ],
-  "post_scan_state_observation": "OBS-POST-SCAN-01"
+  "post_scan_state_observation": "OBS-POST-SCAN-01",
+  "depth_review_observation": "OBS-DEPTH-REVIEW-01"
 }

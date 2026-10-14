@@ -15,6 +15,14 @@
         "wall opening"
       ],
       "interpretation": "No changes since capture reported. Captured state remains current; no dimensional calibration or physical fit follows from this report."
+    },
+    {
+      "id": "OBS-DEPTH-REVIEW-01",
+      "date": "2026-10-14",
+      "source": "direct user review of assembled.png",
+      "observation": "User correctly identified studs passing through the decorative cover; no bolt/nut holes exist in that cover. Requested meaningful Z depth and sealing relationships.",
+      "classification": "model-review correction; not a physical depth reading",
+      "resolution": "Seated-cover trial rejected; preserve captured hardware, expose exact provisional collisions and sealing/depth uncertainty."
     }
   ]
 }

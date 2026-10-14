@@ -384,7 +384,7 @@
       "title": "Installer checks before selecting a repair",
       "view": "section_studs",
       "purpose": "Resolves inaccessible and hidden conditions without asking the homeowner to probe plumbing.",
-      "instructions": "Record in notes: exact adapter/stud/nut arrangement and usable thread engagement; access behind the opening; soundness of stone/substrate; visible waterproofing and a feasible local connection; cartridge and tool-removal paths; lower diverter trim/handle clearance. Do not loosen pressure-containing parts or infer an unseen membrane from the scan. No numeric target is authorized for valve relocation. The current pose remains the reference until a justified, measured adjustment is approved.",
+      "instructions": "Record in notes: actual nut thickness and bearing-seat position, any washers or rear stops, foam compression when correctly seated, and adapter/stud thread engagement. Check access behind the opening, sound substrate, visible waterproofing and feasible local connection; cartridge/tool-removal paths and lower diverter clearance. The original guide limits stud tips to 7/16 inch from the finished wall; it does not approve this custom plate stack. Do not loosen pressure parts, cut studs or infer an unseen membrane from the scan. No valve relocation is approved.",
       "fields": [],
       "first": false
     }

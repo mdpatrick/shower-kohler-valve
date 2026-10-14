@@ -34,3 +34,14 @@ The clean-checkout rebuild passed at commit `8899909`: all three full committed 
 The final handoff's bundle-clone receipt is saved beside the bundle as `build/handoff/bundle-restore-receipt.json`, with its bundle hash and source commit. Keeping that receipt outside the bundle avoids a circular requirement that a bundle contain the result of restoring itself. Local cloning and bundles protect recoverability on this machine; they are not off-machine backup or remote publication.
 
 The R001 supplement records OBS-POST-SCAN-01 (user reports no changes), adds a separate diverter tip/nominal trim, corrects the main handle long-reach interpretation, and provides factory versus proposed component poses. The original uniform transform and four original landmarks match the prior checkpoint exactly. POST-SCAN-STATE can pass as a user-report receipt only; every fit, support, sealing and manufacturing decision remains unresolved. The separate diverter landmark is not a fitting input.
+
+
+## Depth review correction, 2026-10-14
+
+The user flagged the impossible seated-cover rendering. This checkpoint explicitly rejects both trial assembly states. New exact OCCT checks include both studs, both nuts, the inner plate and both valve envelopes against the cover, in original-wall and added-plate placements. The two stud intersections are positive; the lower valve placeholder also conflicts and remains an unmeasured shape assumption. Nut/inner-plate nonintersection is not a physical fit approval. See `deliverables/current/analysis/depth_stack.json` and `docs/decisions/depth_review_2026-10-14.md`.
+
+Executed after this correction: 17 unit/snapshot tests; desktop/mobile browser tests with visible fit warnings, unchanged studs, depth-case switching and stud-section navigation; saved Blender scene reopened and placements/view exclusions checked; all 21 PDF pages rendered and visually inspected, including the new seventh manual page. No page errors or failed local requests. Original archives and current deliverable hashes passed validation against committed evidence. The registration, measurement canon, all scan-derived part positions, and all 15 reference-solid bounds/volumes exactly match checkpoint `dbaa438` (apart from harmless floating point volume tolerance).
+
+The existing in-app browser was refreshed and visibly opened at Depth & sealing. Its response still contained no physical readings. The native Blender scene was reloaded from the latest saved file without an unsaved-change prompt. No user data or measurements were imported by the isolated UI tests.
+
+The first warning-stamp render attempt exposed a Blender property-name error. It was corrected to `stamp_note_text`; all 13 views then rendered and the saved file reopened. The command wrapper now supplies `--python-exit-code 1` so Python exceptions cannot silently yield a successful stage exit.

@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "revision": "R001",
+  "scope": "software verification of a rejected diagnostic assembly; no physical fit",
+  "reference_commit": "dbaa4388de309a848a61f4bc109c92870c256bca",
+  "unchanged": [
+    "measurement canon",
+    "registration transform and landmarks",
+    "scan-derived positions",
+    "candidate dimensions",
+    "all 15 reference-solid bounds/volumes and placements"
+  ],
+  "unit_tests": 17,
+  "browser": "PASS: desktop1440x1000/mobile390x844, depth switch, warnings, stud section and measurement export",
+  "blender": "saved and reopened; new diagnostic view layers and CAD poses verified",
+  "native_UI": "review refreshed at #depth; Blender latest file reopened",
+  "PDF_pages_visually_checked": 21,
+  "CAD_clashes": "studs SW/NE and unmeasured lower valve envelope in both cases",
+  "physical_fit": "UNRESOLVED",
+  "fabrication_approval": "NOT GIVEN"
+}

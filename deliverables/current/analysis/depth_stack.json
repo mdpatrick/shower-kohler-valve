@@ -1,0 +1,371 @@
+{
+  "revision": "R001",
+  "units": "mm",
+  "datum": "Intact-stone fitted reference plane Z=0; +Z toward shower",
+  "purpose": "Explain why the prior seated-cover visualization is not an assemblable repair",
+  "cases": {
+    "factory": {
+      "label": "Original-wall trial",
+      "cover_rim_z_mm": 0.0,
+      "ranges_z_mm": {
+        "GASKET-01": [
+          0.0,
+          3.0
+        ],
+        "PLATE-INNER": [
+          3.0,
+          11.0
+        ],
+        "TRIM-OUTER": [
+          0.0,
+          16.0
+        ],
+        "VALVE-LOWER": [
+          -25.0,
+          33.40186167467328
+        ],
+        "HANDLE-LOWER": [
+          27.95,
+          107.95
+        ],
+        "VALVE-UPPER": [
+          -25.0,
+          31.95481637340469
+        ],
+        "HANDLE-UPPER": [
+          27.95,
+          107.95
+        ],
+        "DIVERTER-TRIM": [
+          0.0,
+          16.0
+        ],
+        "DIVERTER-HANDLE": [
+          27.950000000000003,
+          107.95
+        ],
+        "STUD-SW": [
+          -15.0,
+          26.611881221416702
+        ],
+        "STUD-SW-NUT": [
+          4.500000000000001,
+          8.5
+        ],
+        "STUD-NE": [
+          -15.0,
+          30.676418397046803
+        ],
+        "STUD-NE-NUT": [
+          4.500000000000001,
+          8.5
+        ]
+      },
+      "studs": [
+        {
+          "id": "STUD-SW",
+          "axis_xy_mm": [
+            -47.291356275538035,
+            18.462229374095184
+          ],
+          "tip_z_mm": 26.611881221416702,
+          "nut_z_mm": [
+            4.500000000000001,
+            8.5
+          ],
+          "cover_material_on_axis_z_mm": [
+            [
+              14.5,
+              16.0
+            ]
+          ],
+          "cover_rear_z_mm": 14.5,
+          "local_cavity_from_rim_mm": 14.5,
+          "tip_to_cover_rear_clearance_mm": -12.111881221416702,
+          "nut_to_cover_rear_clearance_mm": 6.0,
+          "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
+        },
+        {
+          "id": "STUD-NE",
+          "axis_xy_mm": [
+            51.23359848933067,
+            62.72282385788084
+          ],
+          "tip_z_mm": 30.676418397046803,
+          "nut_z_mm": [
+            4.500000000000001,
+            8.5
+          ],
+          "cover_material_on_axis_z_mm": [
+            [
+              14.5,
+              16.0
+            ]
+          ],
+          "cover_rear_z_mm": 14.5,
+          "local_cavity_from_rim_mm": 14.5,
+          "tip_to_cover_rear_clearance_mm": -16.176418397046803,
+          "nut_to_cover_rear_clearance_mm": 6.0,
+          "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
+        }
+      ],
+      "collisions": [
+        {
+          "part": "STUD-SW",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 29.452431127404317,
+          "model_result": "FAIL",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Observed tip; red flags cover interference. Envelope axis, diameter and hidden engagement unverified"
+        },
+        {
+          "part": "STUD-NE",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 29.452431127404317,
+          "model_result": "FAIL",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Observed tip; red flags cover interference. Envelope axis, diameter and hidden engagement unverified"
+        },
+        {
+          "part": "STUD-SW-NUT",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Assumed nut envelope; seating unknown"
+        },
+        {
+          "part": "STUD-NE-NUT",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Assumed nut envelope; seating unknown"
+        },
+        {
+          "part": "PLATE-INNER",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Factory guide form + current evidence; unconfirmed surfaces remain assumed"
+        },
+        {
+          "part": "VALVE-LOWER",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 2714.3360326624506,
+          "model_result": "FAIL",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction"
+        },
+        {
+          "part": "VALVE-UPPER",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction"
+        }
+      ],
+      "model_verdict": "FAIL",
+      "physical_fit": "UNRESOLVED",
+      "captured_hardware_adjusted": false,
+      "gasket_thickness_basis": "uncompressed placeholder; assembled compression and contact are unknown"
+    },
+    "proposed": {
+      "label": "Trial with added backing plate",
+      "cover_rim_z_mm": 4.175,
+      "ranges_z_mm": {
+        "CUSTOM-01": [
+          1.0,
+          4.175
+        ],
+        "GASKET-01": [
+          4.175,
+          7.175
+        ],
+        "PLATE-INNER": [
+          7.175,
+          15.175
+        ],
+        "TRIM-OUTER": [
+          4.175,
+          20.175
+        ],
+        "VALVE-LOWER": [
+          -25.0,
+          33.40186167467328
+        ],
+        "HANDLE-LOWER": [
+          32.125,
+          112.125
+        ],
+        "VALVE-UPPER": [
+          -25.0,
+          31.95481637340469
+        ],
+        "HANDLE-UPPER": [
+          32.125,
+          112.125
+        ],
+        "DIVERTER-TRIM": [
+          0.0,
+          16.0
+        ],
+        "DIVERTER-HANDLE": [
+          27.950000000000003,
+          107.95
+        ],
+        "STUD-SW": [
+          -15.0,
+          26.611881221416702
+        ],
+        "STUD-SW-NUT": [
+          8.675,
+          12.675
+        ],
+        "STUD-NE": [
+          -15.0,
+          30.676418397046803
+        ],
+        "STUD-NE-NUT": [
+          8.675,
+          12.675
+        ],
+        "NEW-SEAL-PATH": [
+          0.0,
+          1.0
+        ]
+      },
+      "studs": [
+        {
+          "id": "STUD-SW",
+          "axis_xy_mm": [
+            -47.291356275538035,
+            18.462229374095184
+          ],
+          "tip_z_mm": 26.611881221416702,
+          "nut_z_mm": [
+            8.675,
+            12.675
+          ],
+          "cover_material_on_axis_z_mm": [
+            [
+              18.674999999999997,
+              20.174999999999997
+            ]
+          ],
+          "cover_rear_z_mm": 18.674999999999997,
+          "local_cavity_from_rim_mm": 14.499999999999996,
+          "tip_to_cover_rear_clearance_mm": -7.936881221416705,
+          "nut_to_cover_rear_clearance_mm": 5.9999999999999964,
+          "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
+        },
+        {
+          "id": "STUD-NE",
+          "axis_xy_mm": [
+            51.23359848933067,
+            62.72282385788084
+          ],
+          "tip_z_mm": 30.676418397046803,
+          "nut_z_mm": [
+            8.675,
+            12.675
+          ],
+          "cover_material_on_axis_z_mm": [
+            [
+              18.674999999999997,
+              20.174999999999997
+            ]
+          ],
+          "cover_rear_z_mm": 18.674999999999997,
+          "local_cavity_from_rim_mm": 14.499999999999996,
+          "tip_to_cover_rear_clearance_mm": -12.001418397046805,
+          "nut_to_cover_rear_clearance_mm": 5.9999999999999964,
+          "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
+        }
+      ],
+      "collisions": [
+        {
+          "part": "STUD-SW",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 29.452431127404317,
+          "model_result": "FAIL",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Observed tip; red flags cover interference. Envelope axis, diameter and hidden engagement unverified"
+        },
+        {
+          "part": "STUD-NE",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 29.452431127404317,
+          "model_result": "FAIL",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Observed tip; red flags cover interference. Envelope axis, diameter and hidden engagement unverified"
+        },
+        {
+          "part": "STUD-SW-NUT",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Assumed nut envelope; seating unknown"
+        },
+        {
+          "part": "STUD-NE-NUT",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Assumed nut envelope; seating unknown"
+        },
+        {
+          "part": "PLATE-INNER",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Factory guide form + current evidence; unconfirmed surfaces remain assumed"
+        },
+        {
+          "part": "VALVE-LOWER",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 2714.336032662566,
+          "model_result": "FAIL",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction"
+        },
+        {
+          "part": "VALVE-UPPER",
+          "against": "TRIM-OUTER",
+          "intersection_mm3": 0.0,
+          "model_result": "NO_SOLID_INTERSECTION",
+          "physical_result": "UNRESOLVED",
+          "part_basis": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction"
+        }
+      ],
+      "model_verdict": "FAIL",
+      "physical_fit": "UNRESOLVED",
+      "captured_hardware_adjusted": false,
+      "gasket_thickness_basis": "uncompressed placeholder; assembled compression and contact are unknown"
+    }
+  },
+  "factory_guide": {
+    "source": "SRC-KOHLER-OLD-GUIDE p7; p8 adapter check; current guide steps8-12",
+    "stud_max_from_finished_wall_mm": 11.1125,
+    "datum_confirmed_in_text": "finished wall, not front of yellow plate",
+    "sequence": [
+      "Studs thread into valve",
+      "Inner plate and rear foam seat at finished wall",
+      "Nuts secure inner plate behind cover",
+      "Outer cover goes over inner plate with drain down",
+      "Handle assemblies secure cover via inner-plate hubs; correct adapters engage valve"
+    ],
+    "applicability": "Applicable arrangement reference; actual installed revision and adjustment range must be checked. Added backing plate is not a manufacturer-approved detail."
+  },
+  "limits": [
+    "All current Z values are conditional scan estimates or disclosed shape assumptions; no physical readings accepted.",
+    "Foam compression, rear cavity shape, nut seats, valve collars and handle engagement remain unmeasured.",
+    "A positive geometric gap is not a physical fit, support or water-performance pass.",
+    "The captured scan, stud tip landmarks and valve pose remain unchanged. No shortening or relocation is specified."
+  ]
+}
