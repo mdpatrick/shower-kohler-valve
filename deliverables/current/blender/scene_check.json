@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "version": "4.5.13 LTS",
+  "revision": "R001",
+  "saved_reopened": true,
+  "missing_images": [],
+  "CAD_custom_part_source": "data/derived/cad/CUSTOM-01.stl",
+  "views_rendered": [
+    "coverage",
+    "overview",
+    "assembled",
+    "exploded",
+    "inner_front",
+    "inner_back",
+    "outer_front",
+    "outer_back",
+    "gasket",
+    "section_controls",
+    "section_studs"
+  ],
+  "source_wall_mesh_copies": 1,
+  "notes": "Decimated display proxy plus one full source wall; source textures packed. Exploded/section copies display-only."
+}

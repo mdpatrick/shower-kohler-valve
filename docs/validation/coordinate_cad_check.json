@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "units": "mm",
+  "part_bounds": [
+    100,
+    60,
+    4
+  ],
+  "hole_center": [
+    20,
+    15
+  ],
+  "hole_diameter": 10,
+  "marker": "NE corner clipped from (100,50) to (90,60)",
+  "STEP_reimport_valid": true,
+  "hole_position_and_radius_reimported": true,
+  "STL_bounds_verified": true,
+  "tessellation_linear_tolerance_mm": 0.02,
+  "blender_mapping": "(X,-Z,Y)/1000 meters",
+  "browser_mapping": "(X,Y,Z)/1000 meters"
+}

@@ -1,0 +1,132 @@
+from pathlib import Path
+import json,html,shutil,sys,math
+import numpy as np
+from PIL import Image,ImageDraw,ImageFont
+ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(Path(__file__).parent))
+from requests import requests
+OUT=ROOT/'deliverables/current/review'
+FONT='/System/Library/Fonts/Supplemental/Arial.ttf'
+
+def manual_steps():
+    return [
+      dict(title='Record the current installation',view='overview',person='Homeowner + installer',prerequisite='Existing access is safe; no pressure parts disturbed.',tools='Camera, ruler, labels; measurement worksheet.',action='Record which plumbing, stud or wall changes occurred since the capture and photograph the opening with the same feature labels.',check='Current-state note and readings reference the worksheet revision; changed areas are identified.',stop='If a valve has moved or repairs hide a cut, the old scan cannot certify current fit.'),
+      dict(title='Check plumbing and factory adjustment',view='section_studs',person='Qualified plumber',prerequisite='Exact Kohler models recorded; applicable revision checked.',tools='Applicable Kohler guides, straightedge, depth gauge and correct hand tools.',action='Inspect stud/adapter adjustment and engagement and test any plumbing changes before establishing final hardware position.',check='Both actual stud projections, usable engagement and adapter selection recorded; supply/valve leakage checked separately.',stop='Do not shorten studs, force trim, or loosen pressure-containing parts for a homeowner measurement. No valve relocation target is approved.'),
+      dict(title='Resolve the support and water barrier',view='gasket',person='Qualified tile/waterproofing installer',prerequisite='Safe access through the existing opening; stone protected.',tools='Light, inspection mirror, straightedge; approved inspection method.',action='Identify sound substrate, possible backing access and the existing waterproofing system. Design supported local rebuilding or a retained plate detail from this evidence.',check='Complete gasket landing, backing/load path and compatible water-barrier connection are documented.',stop='No filler bridging the unsupported opening. Surface sealant or grout cannot establish an unseen membrane connection. No tile cutting is authorized.'),
+      dict(title='Dry fit the reviewed revision',view='exploded',person='Installer with homeowner review',prerequisite='Measurements accepted; repair option and trial geometry revised.',tools='Calibrated 1:1 paper template, thickness-accurate trial part or spacers, straightedge, original hardware.',action='Check the planar template first, then trial the actual layer thickness with the original inner plate, gasket, trim and handles.',check='Worst cuts concealed with sound overlap; no rocking; continuous foam support; trim seats; threads engage; drain down; full travel and tool/removal access.',stop='Paper proves no depth clearance. Prototype materials are not approved permanent wet-area materials. Record failures; do not force the fit.'),
+      dict(title='Install only the released material detail',view='assembled',person='Installer / fabricator as assigned',prerequisite='Selected design, material data, physical fit and explicit fabrication approval complete.',tools='Approved drawing, inspected finished part and named materials from the released schedule.',action='Protect service parts, prepare the verified substrates, place supported repairs and sealing layers in the approved order, and assemble the original Kohler components.',check='Incoming dimensions, flatness, thickness, edges and finish accepted; sealing path continuous; service parts remain removable; drain unobstructed.',stop='This draft has no selected mortar, backing, sealant, finish or cure schedule. Do not permanently install from it.'),
+      dict(title='Cure, test and preserve access',view='coverage',person='Installer; homeowner observes results',prerequisite='Selected product-specific cure and water-exposure requirements met.',tools='Approved test procedure, dry indicators and accessible inspection points.',action='First check supply/valve behavior with surfaces kept dry; then test controlled water exposure around the assembled trim while observing available access.',check='Record product cure conditions, test duration/conditions, observed locations and results. Retain a future removal procedure.',stop='Stop if moisture appears. Investigate supply leakage separately from surface-water entry. A local pass does not certify the concealed shower system.')]
+
+def annotations(d):
+    views=OUT/'views';views.mkdir(parents=True,exist_ok=True)
+    font=ImageFont.truetype(FONT,27);small=ImageFont.truetype(FONT,21)
+    def canvas(source):
+        im=Image.open(views/(source+'.png')).convert('RGB');return im,ImageDraw.Draw(im)
+    def label(draw,xy,text,color='#174e61'):
+        bounds=draw.textbbox(xy,text,font=font);draw.rounded_rectangle((bounds[0]-7,bounds[1]-5,bounds[2]+7,bounds[3]+5),5,fill='white',outline=color,width=2);draw.text(xy,text,font=font,fill=color)
+    def arrow(draw,p,q,color='#174e61',text=None):
+        draw.line([p,q],fill=color,width=4)
+        for v,w in [(p,q),(q,p)]:
+            dx,dy=w[0]-v[0],w[1]-v[1];l=max(1,math.hypot(dx,dy));ux,uy=dx/l,dy/l
+            draw.polygon([v,(v[0]+ux*14-uy*6,v[1]+uy*14+ux*6),(v[0]+ux*14+uy*6,v[1]+uy*14-ux*6)],fill=color)
+        if text:label(draw,((p[0]+q[0])/2+8,(p[1]+q[1])/2+8),text,color)
+    projections=json.loads((OUT/'view_geometry.json').read_text())
+    def projected(view,point):
+        v=projections[view];x,y,z=point;q=np.array(v['world_to_camera'])@np.array([x/1000,-z/1000,y/1000,1]);span=v['ortho_scale_m']
+        return ((.5+q[0]/span)*v['resolution'][0],(.5-q[1]/span)*v['resolution'][1])
+    def contact(draw,p,text,at):
+        draw.line([p,at],fill='#126b82',width=3);draw.ellipse((p[0]-6,p[1]-6,p[0]+6,p[1]+6),fill='#ffe345',outline='#174e61',width=2);label(draw,at,text)
+    cx,cy=d['trim_center_mm'];size=1300
+    def pix(x,y,span=300,center=(cx,cy)):return ((x-center[0])/span*size+size/2,(center[1]-y)/span*size+size/2)
+    im,dr=canvas('coverage')
+    top=d['controls_mm'][1];low=d['controls_mm'][0]
+    for x,y,text in [(top[0],top[1]+7,'A'),(top[0],top[1]-7,'B'),(low[0],low[1]+7,'C'),(low[0],low[1]-7,'D')]:
+        p=pix(x,y);dr.ellipse((p[0]-5,p[1]-5,p[0]+5,p[1]+5),fill='#f1ce3c');label(dr,(p[0]+18,p[1]-14),text)
+    arrow(dr,pix(-15,top[1]+7),pix(-15,low[1]-7),text='O')
+    arrow(dr,pix(18,top[1]-7),pix(18,low[1]+7),text='I')
+    byid={f['id']:f for f in d['features'] if 'contour_mm' in f}
+    P=min(byid['CUT-01']['contour_mm'],key=lambda p:p[0]);Q=max(byid['CUT-03']['contour_mm'],key=lambda p:p[0]);U=max(byid['CUT-01']['contour_mm'],key=lambda p:p[1]);V=min(byid['CUT-06']['contour_mm'],key=lambda p:p[1])
+    for p,text in [(P,'P'),(Q,'Q'),(U,'U'),(V,'V')]:label(dr,pix(*p),text,'#a43f22')
+    label(dr,(45,35),'M01: tips A-D / M08: damage P-Q, U-V');im.save(views/'wall_measure.png')
+    im,dr=canvas('inner_front');a=d['assumptions'];p=lambda x,y:pix(x,y,210,(0,40));ix,iy=d['inner_center_mm']
+    xl=ix-a['inner_width_mm']/2;xr=ix+a['inner_width_mm']/2;yb=iy-a['inner_height_mm']/2;yt=iy+a['inner_height_mm']/2
+    dr.line([p(xl,yb-5),p(xl,yt+5)],fill='#126b82',width=3);dr.line([p(xl-5,yb),p(xr+5,yb)],fill='#126b82',width=3)
+    label(dr,p(xl-16,cy),'A');label(dr,p(cx,yb-10),'B');arrow(dr,p(xl,yt+12),p(xr,yt+12),text='W')
+    for name,slot in zip(['SW','NE'],d['inner_slots']):
+        x,y=slot['center_mm'];label(dr,p(x-9,y+13),name);arrow(dr,p(xl,y),p(x-slot['width_mm']/2,y))
+        arrow(dr,p(x,yb),p(x,y-slot['height_mm']/2))
+        for u,v in [(x-slot['width_mm']/2,y),(x+slot['width_mm']/2,y),(x,y-slot['height_mm']/2),(x,y+slot['height_mm']/2)]:
+            px,py=p(u,v);dr.ellipse((px-4,py-4,px+4,py+4),fill='#ffe345',outline='#174e61',width=2)
+    label(dr,(30,30),'FRONT / amber geometry is provisional');im.save(views/'inner_measure.png')
+    c=d['candidate'];gasketz=c['seal_display_thickness_mm']+c['thickness_mm'];innerz=gasketz+a['gasket_free_thickness_mm']
+    im,dr=canvas('inner_back');label(dr,(30,30),'BACK / do not compress the foam')
+    gw=a.get('gasket_outer_width_mm',a['inner_width_mm']);gh=a.get('gasket_outer_height_mm',a['inner_height_mm']);pr=lambda x,y:projected('inner_back',(x,y,gasketz))
+    arrow(dr,pr(ix-gw/2,iy),pr(ix+gw/2,iy));arrow(dr,pr(ix,iy-gh/2),pr(ix,iy+gh/2));label(dr,(300,690),'OW');label(dr,(680,210),'OH')
+    contact(dr,pr(ix-gw/2+a['gasket_width_mm'],iy+10),'Inner foam edge',(860,390));contact(dr,pr(ix-gw/2,iy+10),'Outer foam edge',(930,520))
+    label(dr,(45,1180),'Map every foam edge, notch and missing segment');im.save(views/'gasket_measure.png')
+    im,dr=canvas('section_controls');pr=lambda x,y,z:projected('section_controls',(x,y,z))
+    label(dr,(30,30),'M04: R rear metal datum / F formed face / U hub end')
+    contact(dr,pr(ix,yt-5,innerz),'R',(350,170));contact(dr,pr(ix,yt-5,innerz+a['inner_formed_depth_mm']),'F',(700,170))
+    contact(dr,pr(ix,yt-1,innerz),'T1: rear sheet face',(60,280));contact(dr,pr(ix,yt-1,innerz+a['inner_sheet_thickness_mm']),'T2: front sheet face',(800,280))
+    contact(dr,pr(top[0],top[1]+22,innerz+a.get('hub_projection_envelope_mm',a['inner_formed_depth_mm']+3)),'U',(800,440))
+    label(dr,(30,1150),'M04-R: inspect the actual back for rear projections.');label(dr,(30,1200),'No hidden rear shape or compression is established.');im.save(views/'depth_measure.png')
+    im,dr=canvas('outer_front');r=d['nominal']['trim_diameter_mm']/2;pr=lambda x,y:projected('outer_front',(x,y,gasketz))
+    label(dr,(30,30),'M06: FRONT / measure opening edges from rim tangents')
+    arrow(dr,pr(cx-r,cy+r+10),pr(cx+r,cy+r+10),text='OD')
+    dr.line([pr(cx-r,cy-r),pr(cx-r,cy+r)],fill='#126b82',width=3);dr.line([pr(cx-r,cy-r),pr(cx+r,cy-r)],fill='#126b82',width=3)
+    arrow(dr,pr(cx-r,low[1]),pr(low[0]-18,low[1]),text='XN');arrow(dr,pr(low[0],cy-r),pr(low[0],low[1]-18),text='YN')
+    contact(dr,pr(low[0]+18,low[1]),'XF: far edge',(890,850));contact(dr,pr(low[0],low[1]+18),'YF: far edge',(870,610))
+    label(dr,(30,1190),'Cavity C: REAR rim plane to shell beside each stud.');im.save(views/'trim_measure.png')
+    im,dr=canvas('outer_back');label(dr,(30,30),'M06-C / BACK / cavity locations follow both studs')
+    for name,point in zip(['SW','NE'],d['studs_mm']):
+        p=projected('outer_back',(point[0],point[1],gasketz+a['outer_cavity_depth_mm']));contact(dr,p,name+' cavity',(p[0]+25,p[1]-70))
+    label(dr,(30,1190),'Reference the rear rim plane; report both clearances.');im.save(views/'trim_back_measure.png')
+    im,dr=canvas('section_studs');pr=lambda p:projected('section_studs',p);label(dr,(30,30),'M07: Z = reference height H minus gap G')
+    sw,ne=np.array(d['studs_mm'][0]),np.array(d['studs_mm'][1]);mid=(sw+ne)/2;v=ne-sw;v[2]=0;v/=np.linalg.norm(v);H=max(sw[2],ne[2])+20
+    ends=[]
+    for t in [-105,105]:
+        base=mid+v*t;base[2]=0;cap=base.copy();cap[2]=H;ends.append(cap);arrow(dr,pr(base),pr(cap),text='H')
+    dr.line([pr(ends[0]),pr(ends[1])],fill='#126b82',width=5)
+    for name,point in [('SW',sw),('NE',ne)]:
+        cap=point.copy();cap[2]=H;arrow(dr,pr(point),pr(cap),text='G '+name)
+    label(dr,(30,1140),'Blue reference is illustrative: use equal measured blocks.');label(dr,(30,1190),'Rest on intact tile; measure each gap without pushing tips.');im.save(views/'stud_measure.png')
+
+def build():
+    d=json.loads((ROOT/'data/derived/resolved.json').read_text());checks=json.loads((ROOT/'deliverables/current/analysis/checks.json').read_text());groups=requests(d);steps=manual_steps();OUT.mkdir(parents=True,exist_ok=True)
+    for f in ['style.css','form.js','viewer.js']:shutil.copy2(Path(__file__).parent/f,OUT/f)
+    shutil.copytree(Path(__file__).parent/'vendor',OUT/'vendor',dirs_exist_ok=True)
+    for number in [1,2]:
+        src=ROOT/f'data/evidence/scan_quality/plate_scan_{number}.png'
+        if src.exists():shutil.copy2(src,OUT/f'views/plate_scan_{number}.png')
+    annotations(d)
+    (OUT/'measurement_requests.json').write_text(json.dumps({'project_id':d['project_id'],'revision':d['revision'],'groups':groups},indent=2)+'\n')
+    (OUT/'manual_steps.json').write_text(json.dumps(steps,indent=2)+'\n')
+    esc=html.escape
+    figures=''.join(f'<figure><a href="views/{name}.png"><img loading="lazy" src="views/{name}.png" alt="{esc(title)}"></a><figcaption>{esc(title)}</figcaption></figure>' for name,title in [('coverage','Observed damage and nominal/proposed outlines'),('assembled','Proposed assembly; unapproved dimensions'),('exploded','Exploded display; offsets are not installed positions'),('inner_front','Inner plate front: assumed shape, scan-estimated stud relationships'),('inner_back','Inner plate back: assumed gasket, not verified landing'),('outer_front','Outer trim front: handles hidden for opening measurement'),('trim_back_measure','Outer trim back: provisional cavity and stud locations'),('gasket','Gasket over observed opening; support unresolved'),('section_controls','Section through the observed control line'),('section_studs','Section through the two diagonal stud tips'),('overview','Full capture including the separate lower diverter')])
+    measurement_html=''
+    for g in groups:
+        fields=''
+        for f in g['fields']:
+            id=f['id'];prediction='Unknown' if f['prediction_mm'] is None else f"Estimate {f['prediction_mm']:.1f} mm"
+            fields+=f'''<div class="field" data-measurement="{id}" data-group="{g['id']}"><strong>{id} · {esc(f['label'])}</strong><div class="field-meta">{esc(f['contacts'])}<br>{prediction}; useful accuracy ±{f['useful_accuracy_mm']} mm. Role: {f['role']}.</div><div class="input-grid"><label>Raw reading<input id="{id}-raw" class="raw" inputmode="decimal"></label><label>Units<select id="{id}-units" class="units"><option>mm</option><option>in</option><option>cm</option></select></label><label>Repeat readings, comma separated<input id="{id}-repeat" class="repeat"></label></div><div class="method-line"><label>Tool / method<input id="{id}-method" class="method" value="{esc(f['method'])}"></label><label>Notes / location<input id="{id}-notes" class="notes"></label></div></div>'''
+        measurement_html+=f'''<details {'open' if g['id']=='01' else ''}><summary>{g['id']} · {esc(g['title'])} {'<span class="badge">FIRST CHECK</span>' if g['first'] else '<span class="badge">INSTALLER / LATER</span>'}</summary><div class="measurement-layout"><figure><a href="views/{g['view']}.png"><img src="views/{g['view']}.png" loading="lazy" alt="Measurement contact points for check {g['id']}"></a><figcaption>Project render. Amber parts and assumed cavity/gasket details require comparison with the actual part.</figcaption></figure><div><p><strong>Resolves:</strong> {esc(g['purpose'])}</p><p>{esc(g['instructions'])}</p>{fields}<label>Photo / trace reference and group notes<textarea id="photo-{g['id']}"></textarea></label></div></div></details>'''
+    coverage_rows=''.join(f"<tr><td>{r['feature_id']}</td><td>{r['outer_margin_mm']['nominal_trim']:.1f}</td><td>{r['outer_margin_mm']['prior_8in']:.1f}</td><td>{r['outer_margin_mm']['prior_8_25in']:.1f}</td><td>{r['outer_margin_mm']['candidate']:.1f}</td><td>UNRESOLVED</td></tr>" for r in checks['coverage'])
+    check_rows=''.join(f"<tr><td>{r['id']}</td><td>{esc(r.get('conditional_result',r.get('criterion','')))}</td><td>{esc(r.get('needed',''))}</td><td><span class='badge unresolved'>{r['status']}</span></td></tr>" for r in checks['checks'])
+    manual_html=''.join(f'''<article class="card manual-step"><img src="views/{s['view']}.png" alt="{esc(s['title'])}" loading="lazy"><div><span class="step-number">{i:02d}</span><h3>{esc(s['title'])}</h3><p><strong>Who:</strong> {esc(s['person'])}<br><strong>Before:</strong> {esc(s['prerequisite'])}<br><strong>Tools:</strong> {esc(s['tools'])}</p><p>{esc(s['action'])}</p><p><strong>Check:</strong> {esc(s['check'])}</p><p class="notice"><strong>Stop:</strong> {esc(s['stop'])}</p></div></article>''' for i,s in enumerate(steps,1))
+    revision=d['revision'];data=json.dumps({'project_id':d['project_id'],'revision':revision}).replace('<','\\u003c')
+    page=f'''<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Shower repair study · {revision}</title><link rel="stylesheet" href="style.css"><script type="importmap">{{"imports":{{"three":"./vendor/three/three.module.js","three/addons/":"./vendor/three/addons/"}}}}</script></head><body>
+<header><div class="kicker">Private local project · {revision}</div><h1>Understand the opening.<br>Verify the fit.</h1><p>Your wall scan anchors this reconstruction. The existing travertine and Kohler components remain the constraints. Use this review to confirm the few dimensions that decide between adjustment, a supported repair, a custom plate, or a combination.</p><span class="badge unresolved">PROVISIONAL · NOT FOR FABRICATION</span></header>
+<nav><a href="#review">Findings</a><a href="#model">3D model</a><a href="#measurements">Measurement worksheet</a><a href="#checks">Checks</a><a href="#manual">Repair sequence</a><a href="#files">Files</a></nav><main>
+<section id="review"><h2>The current evidence</h2><div class="grid"><figure><img src="views/coverage.png" alt="Wall scan with damage outlines and plate circles"><figcaption>White: nominal 7¼-inch trim. Cyan: exploratory {d['candidate']['diameter_mm']:.0f} mm plate. Red: observed boundary/gouges and grout. Amber: uncertain marks. Outlines are a projection overlay, not repaired wall geometry.</figcaption></figure><div><div class="notice"><strong>No repair is selected.</strong> The 8-inch outline margin at the limiting cut is {min(r['outer_margin_mm']['prior_8in'] for r in checks['coverage']):.1f} mm before the 1.5 mm tracing allowance. Scale, placement and sound landing remain unverified.</div><p>The user identified K-T14489-4-BN stacked trim, K-T14491-4-BN smaller trim, K-2973-KS-NA main valve and K-737-K-NA diverter. Scale status: {esc(d['scale_status'])}. The fitting input is not an independent cross-check.</p><p>The single-aperture candidate conflicts with the assumed gasket footprint. The actual inner plate and foam path are therefore high-value next checks. The new outer land also crosses an existing grout recess.</p><p><strong>Keep these separate:</strong> geometric draft, physical dry fit, fabrication approval, and installed water testing. None of the latter three has occurred.</p></div></div>
+<div class="metrics"><div class="metric"><strong>3 original ZIPs</strong><small>Ordinary Git blobs; SHA-256 and local clone recovery verified.</small></div><div class="metric"><strong>{d['candidate']['diameter_mm']:.0f} mm draft</strong><small>Exploratory outer profile derived from traced damage and a trial land allowance.</small></div><div class="metric"><strong>8 first checks</strong><small>Grouped below; blank readings remain unknown.</small></div></div>
+<details><summary>Why the plate scans are not dimensional masters</summary><div class="grid"><figure><img src="views/plate_scan_1.png" alt="First warped plate scan"><figcaption>SCAN-PLATE-1: reflective metal fragments and reflected surroundings; large warp and incomplete component boundaries.</figcaption></figure><figure><img src="views/plate_scan_2.png" alt="Second warped plate scan"><figcaption>SCAN-PLATE-2: reflective plate/opening fragments, severe folding and missing surfaces. Exact face/component separation remains unreliable.</figcaption></figure></div><p>Both exports were inspected from three orthographic directions. Neither was registered into the wall or used to set a dimension. No complete flat plate, reliable rear gasket path or trustworthy thickness can be recovered from these meshes alone.</p></details></section>
+<section id="model"><h2>Inspect the installation</h2><div class="controls"><button data-state="observed">Observed scan</button><button data-state="proposed">Proposed assembly</button><button class="secondary" data-view="front">Front</button><button class="secondary" data-view="oblique">Oblique</button></div><div id="viewport"></div><p id="model-status" class="subtle">Loading the bundled local viewer. Static views are available below.</p><div class="controls">{''.join(f'<label><input type="checkbox" data-layer="{key}" {"checked" if key=="wall" else ""}> {title}</label>' for key,title in [('wall','Wall scan'),('inner','Inner plate'),('gasket','Foam gasket'),('outer','Trim / handles'),('custom','Candidate plate'),('seal','New seal path'),('hardware','Hardware envelopes')])}</div><div class="controls"><label>Explode <input id="explode" type="range" min="0" max="1" value="0" step=".01"></label><label><input type="checkbox" id="section"> Display section</label><button id="measure-mesh" class="secondary">Approximate mesh measure</button></div><p class="subtle">Amber = assumed reference reconstruction. Blue = unselected candidate. Pink = unverified foam path. Mesh picking is approximate and includes exploded offsets; use named CAD queries for exact draft-solid dimensions. The original full-resolution scan is retained in Blender.</p><div class="views">{figures}</div></section>
+<section id="measurements"><h2>The measurement worksheet</h2><p>Start with Checks 01-08. Each reading has a purpose, named contacts and an estimate where evidence permits one. Compare the illustrated assumed part with the real part before measuring. Do not bend the gasket or disturb pressure-containing plumbing.</p><div class="notice">Fields save only in this browser. Download or copy the JSON and return it for import. Entering a number here does not update the CAD. All requested readings remain blank until supplied.</div><div class="controls"><a href="../drawings/measurement_worksheet_{revision}.pdf">Printable worksheet PDF</a><button class="secondary" data-print>Print this review</button></div><label>Measurement date<input id="measurement-date" type="date"></label><label>Changes since scan / current piping / uncertain marks<textarea id="current-state" placeholder="Describe completed work, or say no changes / unknown."></textarea></label>{measurement_html}<div class="controls"><button id="export-json">Download response JSON</button><button class="secondary" id="copy-json">Copy response JSON</button></div><p id="form-status" class="subtle"></p><label>Copyable response block<textarea id="response" readonly></textarea></label></section>
+<section id="checks"><h2>What the model can and cannot establish</h2><p>Margins below are conditional millimeters in the fitted plane. Subtract the 1.5 mm tracing allowance; absolute scale, registration, fabrication and installation errors still have unknown bounds. A positive outline margin is not proven sound landing or waterproofing.</p><div class="table-wrap"><table><thead><tr><th>Feature</th><th>Trim</th><th>8 inch</th><th>8¼ inch</th><th>{d['candidate']['diameter_mm']:.0f} mm draft</th><th>Physical verdict</th></tr></thead><tbody>{coverage_rows}</tbody></table></div><div class="table-wrap"><table><thead><tr><th>Check</th><th>Result / criterion</th><th>Evidence needed</th><th>Status</th></tr></thead><tbody>{check_rows}</tbody></table></div><p><a href="../analysis/checks.json">Complete computed checks and error budget</a> · <a href="../analysis/registration.json">Coordinate transform and fitted-plane residuals</a></p></section>
+<section id="manual"><h2>Draft repair sequence</h2><p>This is a review sequence with hold points. It becomes an installation manual only after the repair, material interfaces, measured fit and cure requirements are resolved. No further travertine cutting, grinding, drilling or enlargement is authorized.</p>{manual_html}<p><a href="../manual/repair_manual_{revision}_DRAFT.pdf">Printable draft manual</a> · <a href="../analysis/contractor_schedule.json">Contractor adjustment schedule</a></p></section>
+<section id="files"><h2>Local project files</h2><ul><li><a href="../blender/installation_{revision}_DRAFT.blend">Blender scene with packed assets</a></li><li><a href="../drawings/candidate_drawing_{revision}_DRAFT.pdf">Dimensioned draft drawing</a></li><li><a href="../drawings/profile_template_{revision}_DRAFT.pdf">1:1 tiled paper template with calibration marks</a></li><li><a href="../cad/cad_manifest.json">Draft STEP / DXF manifest and export checks</a></li><li><a href="../analysis/source_register.json">Source register</a></li><li><a href="measurement_requests.json">Measurement IDs and instructions</a></li></ul><p>Use the template only for a measured planar trial. A thickness-accurate mockup and original hardware are required for depth checks. No manufacturer package is released.</p></section>
+</main><footer>{revision} · Private local review. No cloud dependencies or scan uploads. Draft geometry and hidden-surface assumptions are labeled; physical fit and water performance have not been verified.</footer><script type="application/json" id="review-data">{data}</script><script src="form.js"></script><script type="module" src="viewer.js"></script></body></html>'''
+    (OUT/'index.html').write_text(page)
+    (ROOT/'deliverables/current/manual/index.html').write_text('<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="stylesheet" href="../review/style.css"><title>Draft repair sequence</title></head><body><main><h1>Repair sequence · DRAFT</h1><p>No selected repair or installation approval. Follow the hold points.</p>'+manual_html.replace('src="views/','src="../review/views/')+'</main></body></html>')
+    print('HTML review, annotated views and',len(groups),'measurement groups generated')
+
+if __name__=='__main__':build()

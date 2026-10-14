@@ -1,0 +1,300 @@
+{
+  "project_id": "shower-kohler-valve",
+  "revision": "R001",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "source_commit": "1f817e17835d5bbc9fafc2730ecb0de3f8d91a1b",
+  "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
+  "source_tree_hash": "d5189a809888f304480284c8db3b193c00be9ea8e224db2a7d614c768a18eb5b",
+  "input_hashes": {
+    "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
+    "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
+    "SCAN-PLATE-2": "393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781"
+  },
+  "files": [
+    {
+      "path": "deliverables/current/analysis/checks.json",
+      "sha256": "e1df577b1d5f85689b291857bc72bb256b4db74ee6b487872f0c1eecd42b21f5",
+      "size_bytes": 17443
+    },
+    {
+      "path": "deliverables/current/analysis/contractor_schedule.json",
+      "sha256": "72bd24268de47e9f5643091cbb44a0c2837ed256b74b0e7c312afcf846d68d8d",
+      "size_bytes": 2645
+    },
+    {
+      "path": "deliverables/current/analysis/coordinate_test.glb",
+      "sha256": "53db8d8271471807af630c77af8b8086a1c8bbdcbb9bde0c0265b3a15b3540ad",
+      "size_bytes": 28936
+    },
+    {
+      "path": "deliverables/current/analysis/registration.json",
+      "sha256": "a3652ab95f613be70b88a929409e8a33ee67d9ee8b4cc8a64284922d1ebb79e5",
+      "size_bytes": 4517
+    },
+    {
+      "path": "deliverables/current/analysis/resolved.json",
+      "sha256": "bd3696dbe33756e221e7ca86121124a80d77204b4b43920bbdbc2a7179eaad2f",
+      "size_bytes": 37470
+    },
+    {
+      "path": "deliverables/current/analysis/source_register.json",
+      "sha256": "42a1624d408a324ab5217a7ac576354e5d8d539bcc891dcb63aa69dee76fdaf2",
+      "size_bytes": 5735
+    },
+    {
+      "path": "deliverables/current/blender/installation_R001_DRAFT.blend",
+      "sha256": "ccd48e4a2c9adc90a8cb7c4cf933fbd0fd9f6afa08a4c9f6d8a5bc3af2d9eea3",
+      "size_bytes": 91821639
+    },
+    {
+      "path": "deliverables/current/blender/scene_check.json",
+      "sha256": "00fc4d074ca3a923dcc2f1c2cb0f4e0204a791669ae46c0718866ce4dc532694",
+      "size_bytes": 567
+    },
+    {
+      "path": "deliverables/current/blender/wall_display_proxy.glb",
+      "sha256": "72b11cc2841bf52de30add0b3d8bca71eca145aa4854578f545577a8ac677143",
+      "size_bytes": 19599608
+    },
+    {
+      "path": "deliverables/current/cad/CUSTOM-01_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "285d134197e7d6db6f564577faaedf33210a468130d0ae91bd13491af0316157",
+      "size_bytes": 16745
+    },
+    {
+      "path": "deliverables/current/cad/CUSTOM-01_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "4c77433d1ac62210ad52cfa9b2e3008ca5059bb2d7cd5e92e878a8189677a177",
+      "size_bytes": 36576
+    },
+    {
+      "path": "deliverables/current/cad/PLATE-INNER_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "320f166fbd749e06c12175eee9fcc26789a4a50bd35fb22f8c96b953a878b48e",
+      "size_bytes": 100032
+    },
+    {
+      "path": "deliverables/current/cad/TRIM-OUTER_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "047c831498968b3bcb5db499e40ab38be9bc5c09a5120f94ff7d7a7899774db2",
+      "size_bytes": 47301
+    },
+    {
+      "path": "deliverables/current/cad/assembly_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "f6b2fe9d658027120a3ba5775fa57564716a1a38436df21177319b111a3113ee",
+      "size_bytes": 419870
+    },
+    {
+      "path": "deliverables/current/cad/cad_manifest.json",
+      "sha256": "f6110280f2a75c996449af23b55e9f5e2bf3e3396a97a76d495912818af1bac6",
+      "size_bytes": 11306
+    },
+    {
+      "path": "deliverables/current/drawings/candidate_drawing_R001_DRAFT.pdf",
+      "sha256": "e67ba29db852939dc80367fcc2c8c97dcb79d3e5dcff961b8edf87f0fff7b216",
+      "size_bytes": 64850
+    },
+    {
+      "path": "deliverables/current/drawings/measurement_worksheet_R001.pdf",
+      "sha256": "a53b11aba9b99404100398ea350cade995a464fc7c6de001cac34ab3edc15d0d",
+      "size_bytes": 14835508
+    },
+    {
+      "path": "deliverables/current/drawings/profile_template_R001_DRAFT.pdf",
+      "sha256": "cb13aae909c5f588079e1b758032ce9a7916a0a96326657904243b3677f74a92",
+      "size_bytes": 70653
+    },
+    {
+      "path": "deliverables/current/manual/index.html",
+      "sha256": "5d9c4fa4b77e78fb7e32166a806374ab367651f5d9b0bc1c48630931a29ac3a1",
+      "size_bytes": 6131
+    },
+    {
+      "path": "deliverables/current/manual/repair_manual_R001_DRAFT.pdf",
+      "sha256": "d588f92d608499305556eea24864a272f58de85bc2e50e353170438ba8dbe24b",
+      "size_bytes": 19386716
+    },
+    {
+      "path": "deliverables/current/review/form.js",
+      "sha256": "8ab64a5e6ca4afa186605c52b33205ea4ac28a0eee8f70ad5489f7dbd82eb38d",
+      "size_bytes": 3240
+    },
+    {
+      "path": "deliverables/current/review/index.html",
+      "sha256": "83c200bb15059d61e128ebc579bfcd7c2612b94f7d1747dfc289c7c3c596205c",
+      "size_bytes": 58020
+    },
+    {
+      "path": "deliverables/current/review/installation_DRAFT.glb",
+      "sha256": "454e27378232cc255dea1513a470ab112a3cdb26b63840a322c5b2df04f77294",
+      "size_bytes": 20704892
+    },
+    {
+      "path": "deliverables/current/review/manual_steps.json",
+      "sha256": "1eba733f2a82849c5e725cb2203336450e7284c969797408e3a8a547acf5864c",
+      "size_bytes": 4553
+    },
+    {
+      "path": "deliverables/current/review/measurement_requests.json",
+      "sha256": "aa023d4b4484f265e8d87c29995d0e2d48ef06120561a1868af56135bd4dada9",
+      "size_bytes": 17421
+    },
+    {
+      "path": "deliverables/current/review/style.css",
+      "sha256": "58afd039b79d020da89f616e988195bfeca7eb08857011a8d6551c6619945bc0",
+      "size_bytes": 4909
+    },
+    {
+      "path": "deliverables/current/review/vendor/three/LICENSE",
+      "sha256": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
+      "size_bytes": 1081
+    },
+    {
+      "path": "deliverables/current/review/vendor/three/addons/controls/OrbitControls.js",
+      "sha256": "3d79d07ecb686b4e5d93232eedab255331c1beef711e13164eaa1f68655a5f2b",
+      "size_bytes": 40755
+    },
+    {
+      "path": "deliverables/current/review/vendor/three/addons/loaders/GLTFLoader.js",
+      "sha256": "131c0f78c01d19368ae495caa65b3adaa10487810a36a05bb5901b769a35ac16",
+      "size_bytes": 117570
+    },
+    {
+      "path": "deliverables/current/review/vendor/three/addons/utils/BufferGeometryUtils.js",
+      "sha256": "9fb63427ce6641fa14fd0baff9cc4d1b5f9c3d85fd084bf2e90e803c44ec1797",
+      "size_bytes": 37712
+    },
+    {
+      "path": "deliverables/current/review/vendor/three/addons/utils/SkeletonUtils.js",
+      "sha256": "b1632a703206c3d830de9fcbe515696770d04b71a15ee6b50afa6d2c3298c86f",
+      "size_bytes": 11535
+    },
+    {
+      "path": "deliverables/current/review/vendor/three/three.core.js",
+      "sha256": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
+      "size_bytes": 1458113
+    },
+    {
+      "path": "deliverables/current/review/vendor/three/three.module.js",
+      "sha256": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea",
+      "size_bytes": 662772
+    },
+    {
+      "path": "deliverables/current/review/view_geometry.json",
+      "sha256": "18256e5755cae69289d4af8fdb6ace55ea14db6586cf39a4001e0d586029ec17",
+      "size_bytes": 6870
+    },
+    {
+      "path": "deliverables/current/review/viewer.js",
+      "sha256": "9c7b06746af7fcca9824d6b5dd534503ae3529e39f2f9849be867f2f4b9665cf",
+      "size_bytes": 4378
+    },
+    {
+      "path": "deliverables/current/review/views/assembled.png",
+      "sha256": "3d88cf30888e910836925979fe7a57b5b947e034589a66fa0809886795379ee5",
+      "size_bytes": 2594004
+    },
+    {
+      "path": "deliverables/current/review/views/coverage.png",
+      "sha256": "18a1d8ac935d746dfedd4243bca128418b481d45b77abeb9465225233b58cbe5",
+      "size_bytes": 2593149
+    },
+    {
+      "path": "deliverables/current/review/views/depth_measure.png",
+      "sha256": "83ee43b8730db4c45dec9c46d9d94b14faef3e1c36c38d4d659d1ed8960a4a18",
+      "size_bytes": 1670596
+    },
+    {
+      "path": "deliverables/current/review/views/exploded.png",
+      "sha256": "5a715a70782f95162da15facdbcd9f41bc313e0fbc0b80dcc061841321626108",
+      "size_bytes": 2504465
+    },
+    {
+      "path": "deliverables/current/review/views/gasket.png",
+      "sha256": "6700f39278832e9c92e4deeba74070eda6473b6af276db911c1df6dc46984a84",
+      "size_bytes": 2668395
+    },
+    {
+      "path": "deliverables/current/review/views/gasket_measure.png",
+      "sha256": "3d23584e20ab8f459090f37cd269358bc1415b2c00197d65caad071e7879e599",
+      "size_bytes": 1392899
+    },
+    {
+      "path": "deliverables/current/review/views/inner_back.png",
+      "sha256": "a45f628e1e1d5eb94cfcd14dd16b5ce9767f4129039bdeb3a644b1e6babc6a3f",
+      "size_bytes": 1943552
+    },
+    {
+      "path": "deliverables/current/review/views/inner_front.png",
+      "sha256": "ca7dec8b3c2a2b2da4a0167f017f4b8a4aa43254bbd709b87e1d54a29f8fcb93",
+      "size_bytes": 2151340
+    },
+    {
+      "path": "deliverables/current/review/views/inner_measure.png",
+      "sha256": "18109d811e21ef5f9050a2978edcba77b6c1b833debccd88861c6a7bf56b405c",
+      "size_bytes": 1638078
+    },
+    {
+      "path": "deliverables/current/review/views/outer_back.png",
+      "sha256": "c0d308ffa96bbf66edebba51bc7cd5a8404ccb91b46c4f36f2dda3ab3beab5a9",
+      "size_bytes": 1928114
+    },
+    {
+      "path": "deliverables/current/review/views/outer_front.png",
+      "sha256": "a38a0d48318b3b6c0bbf40ee776714b7366b2b9f9d56d41d9f3c9fa0584749e5",
+      "size_bytes": 1998973
+    },
+    {
+      "path": "deliverables/current/review/views/overview.png",
+      "sha256": "e230dd80fc1f2126eb34af55fd8c668018eda167f97aff9111193ac0f18fb135",
+      "size_bytes": 2292905
+    },
+    {
+      "path": "deliverables/current/review/views/plate_scan_1.png",
+      "sha256": "bd855ee4bb85e37f0b2d8880034132e745d82102fe2083f5d39549098187982e",
+      "size_bytes": 1438095
+    },
+    {
+      "path": "deliverables/current/review/views/plate_scan_2.png",
+      "sha256": "2805520d58d1e59c2afb2a0c6587dbf4eb7fa99f6806662613885a7bd4fffce3",
+      "size_bytes": 1686810
+    },
+    {
+      "path": "deliverables/current/review/views/section_controls.png",
+      "sha256": "845d013e0ecf3786d562865c6d372a8ae71b2aa7809926bb2ff7a3eff0a04f27",
+      "size_bytes": 2231004
+    },
+    {
+      "path": "deliverables/current/review/views/section_studs.png",
+      "sha256": "0c04f9ee387be34908ecce544a8fed98b529322534549d03190a134fbd9b7198",
+      "size_bytes": 2204249
+    },
+    {
+      "path": "deliverables/current/review/views/stud_measure.png",
+      "sha256": "ededc18b9ad191d0544ca94aeae88095153d95ef9e5f9d22b87a54da94b69be2",
+      "size_bytes": 1612917
+    },
+    {
+      "path": "deliverables/current/review/views/trim_back_measure.png",
+      "sha256": "79826a2389dd0a85fc5b921102f8b221ade51552ad6b1c59c61ec3bfe02b9bac",
+      "size_bytes": 1434411
+    },
+    {
+      "path": "deliverables/current/review/views/trim_measure.png",
+      "sha256": "65b00198d058180bea8d8c2e35c251b11760efdcac47b9f834b9d4bed5b7de03",
+      "size_bytes": 1549723
+    },
+    {
+      "path": "deliverables/current/review/views/wall_measure.png",
+      "sha256": "f75414b247b14d0d2fdf575eccc311b3affcf6c135a31ac4e0f1352bfbf55b2d",
+      "size_bytes": 1964870
+    }
+  ],
+  "readiness": {
+    "evidence_preserved": true,
+    "software_geometry_checks": "PASS - coordinate/export/browser checks only; physical fit unresolved",
+    "geometric_fit": "UNRESOLVED",
+    "materials_design_review": "UNRESOLVED",
+    "physical_fit": "NOT PERFORMED",
+    "fabrication_approval": "NOT GIVEN",
+    "received_part_inspection": "NOT APPLICABLE YET",
+    "installed_leak_test": "NOT PERFORMED"
+  }
+}

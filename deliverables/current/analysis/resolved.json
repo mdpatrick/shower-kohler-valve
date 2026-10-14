@@ -1,0 +1,1641 @@
+{
+  "project_id": "shower-kohler-valve",
+  "revision": "R001",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "units": "mm",
+  "frame": "installed",
+  "trim_center_mm": [
+    0.7991944036080083,
+    39.672855449655486
+  ],
+  "trim_in_plane_rotation_deg": -1.154045336994736,
+  "centering_status": "inferred midpoint of observed control tips; actual outer-trim relation and retention unverified",
+  "controls_mm": [
+    [
+      -4.496403249731884e-15,
+      -7.549516567451064e-15,
+      33.40186167467328
+    ],
+    [
+      1.598388807216021,
+      79.34571089931099,
+      31.95481637340469
+    ]
+  ],
+  "studs_mm": [
+    [
+      -47.291356275538035,
+      18.462229374095184,
+      26.61188122141667
+    ],
+    [
+      51.23359848933067,
+      62.72282385788084,
+      30.676418397046806
+    ]
+  ],
+  "studs_state": "current measured envelopes where available; raw as-capture scan preserved",
+  "inner_center_mm": [
+    0.7991944036080083,
+    39.672855449655486
+  ],
+  "inner_slots": [
+    {
+      "center_mm": [
+        -47.291356275538035,
+        18.462229374095184
+      ],
+      "width_mm": 7,
+      "height_mm": 11,
+      "status": "scan-driven provisional hole"
+    },
+    {
+      "center_mm": [
+        51.23359848933067,
+        62.72282385788084
+      ],
+      "width_mm": 7,
+      "height_mm": 11,
+      "status": "scan-driven provisional hole"
+    }
+  ],
+  "assumptions": {
+    "inner_width_mm": 116,
+    "inner_height_mm": 165,
+    "inner_sheet_thickness_mm": 1.5,
+    "inner_formed_depth_mm": 5,
+    "hub_outer_diameter_mm": 32,
+    "hub_bore_mm": 18,
+    "hub_length_mm": 18,
+    "gasket_width_mm": 6,
+    "gasket_free_thickness_mm": 3,
+    "outer_shell_thickness_mm": 1.5,
+    "outer_cavity_depth_mm": 14.5,
+    "drain_width_mm": 4,
+    "drain_height_mm": 2,
+    "stud_envelope_diameter_mm": 5,
+    "stud_clearance_slot_width_mm": 7,
+    "stud_clearance_slot_length_mm": 11,
+    "note": "Exploratory display only. Unknown physical values have no asserted tolerance. Scan stud positions constrain provisional hole locations; hidden shape is not known.",
+    "outer_cavity_basis": "nominal exterior center height approximately 16mm from official OBJ minus assumed 1.5mm shell; NOT an observed rear cavity"
+  },
+  "nominal": {
+    "trim_diameter_mm": 184.15,
+    "control_spacing_mm": 79.375,
+    "handle_lever_length_mm": 76.2,
+    "trim_total_projection_mm": 107.95,
+    "source": "SRC-KOHLER-SPEC; inch dimensions converted exactly; physical part not verified"
+  },
+  "candidate": {
+    "shape": "circular",
+    "thickness_mm": 3.175,
+    "thickness_status": "unvalidated prior design lead",
+    "target_sound_land_mm": 10,
+    "land_status": "exploratory allowance; not manufacturer approval, bond minimum or structural proof",
+    "diameter_rounding_mm": 5,
+    "aperture": "single clearance capsule around both control/valve envelopes; no screw holes unless outside aperture and justified",
+    "retention": "unresolved: repeatable registration and clamping require physical review",
+    "material": null,
+    "finish": null,
+    "manufacturing_tolerances": null,
+    "diameter_mm": 230,
+    "max_traced_damage_radius_mm": 101.09460666897742,
+    "center_mm": [
+      0.7991944036080083,
+      39.672855449655486
+    ],
+    "aperture_width_mm": 118,
+    "aperture_height_mm": 136,
+    "aperture_radius_mm": 14,
+    "aperture_center_mm": [
+      2,
+      35
+    ],
+    "aperture_purpose": "clear visible valve/body/stud envelope for axial installation; conservative draft requires full-mesh slice and gasket check",
+    "separate_fastener_holes": [],
+    "hole_policy": "no additional holes: both observed stud paths fall in the single aperture; verify thread/service paths before design release",
+    "seal_display_thickness_mm": 1,
+    "seal_thickness_status": "visual separator only; actual cured layer unknown"
+  },
+  "accepted_measurement_ids": [],
+  "scale_status": "inferred conditional scale; NOT physically calibrated",
+  "secondary_scans_used_to_fit": false,
+  "features": [
+    {
+      "id": "OPEN-MAIN",
+      "name": "Irregular stacked-valve wall opening",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "opening",
+      "status": "scan-derived",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          790,
+          435
+        ],
+        [
+          980,
+          425
+        ],
+        [
+          1190,
+          442
+        ],
+        [
+          1385,
+          452
+        ],
+        [
+          1500,
+          475
+        ],
+        [
+          1585,
+          562
+        ],
+        [
+          1650,
+          610
+        ],
+        [
+          1690,
+          750
+        ],
+        [
+          1680,
+          945
+        ],
+        [
+          1680,
+          1130
+        ],
+        [
+          1720,
+          1225
+        ],
+        [
+          1800,
+          1350
+        ],
+        [
+          1750,
+          1450
+        ],
+        [
+          1620,
+          1550
+        ],
+        [
+          1450,
+          1710
+        ],
+        [
+          940,
+          1710
+        ],
+        [
+          855,
+          1670
+        ],
+        [
+          735,
+          1590
+        ],
+        [
+          560,
+          1410
+        ],
+        [
+          550,
+          1380
+        ],
+        [
+          625,
+          1280
+        ],
+        [
+          635,
+          1120
+        ],
+        [
+          650,
+          990
+        ],
+        [
+          690,
+          805
+        ],
+        [
+          730,
+          610
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          -0.13450440790252988,
+          1.772411631100381,
+          0.1793021945735665
+        ],
+        [
+          -0.027566471895962258,
+          1.7783499412700357,
+          0.1433190585906137
+        ],
+        [
+          0.09059927981556776,
+          1.7682548139816228,
+          0.10346268718817896
+        ],
+        [
+          0.200330562430459,
+          1.7623165038119684,
+          0.06647084101206988
+        ],
+        [
+          0.26502631917131525,
+          1.7486583904217632,
+          0.04460298844350506
+        ],
+        [
+          0.31277303426247693,
+          1.696995091945769,
+          0.028226352034286487
+        ],
+        [
+          0.3493042572573557,
+          1.6684912031314274,
+          0.015759540935827557
+        ],
+        [
+          0.3716715694717438,
+          1.5853548607562644,
+          0.007750842542706776
+        ],
+        [
+          0.36584353891845556,
+          1.4695578124480018,
+          0.009051710891497644
+        ],
+        [
+          0.36565354995131266,
+          1.3596990743093935,
+          0.008487616734299694
+        ],
+        [
+          0.38806707569824905,
+          1.3032851276976758,
+          0.0006161304334703216
+        ],
+        [
+          0.43296088007246936,
+          1.2290562505769946,
+          -0.014928646923767538
+        ],
+        [
+          0.40471932377224473,
+          1.1696731488804495,
+          -0.005756292274147312
+        ],
+        [
+          0.3314555921740547,
+          1.1102900471839046,
+          0.018579695031901364
+        ],
+        [
+          0.23561915488348417,
+          1.0152770844694328,
+          0.050314549209775766
+        ],
+        [
+          -0.051397212641045714,
+          1.0152770844694328,
+          0.14698270739450708
+        ],
+        [
+          -0.09919219519953558,
+          1.0390303251480506,
+          0.16321603339622132
+        ],
+        [
+          -0.16664330075528683,
+          1.0865368065052867,
+          0.186205414989382
+        ],
+        [
+          -0.26494445508939324,
+          1.1934263895590675,
+          0.2199247097944848
+        ],
+        [
+          -0.2705414179799401,
+          1.211241320068031,
+          0.22191163860473262
+        ],
+        [
+          -0.22823043189910125,
+          1.2706244217645761,
+          0.20800064874997848
+        ],
+        [
+          -0.2224383452044617,
+          1.365637384479048,
+          0.20659305988496096
+        ],
+        [
+          -0.21386318157539816,
+          1.4428354166845565,
+          0.20414626925072243
+        ],
+        [
+          -0.19116210495927255,
+          1.5526941548231648,
+          0.19712854707970617
+        ],
+        [
+          -0.16845075866924727,
+          1.6684912031314274,
+          0.19014131648475463
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Visible projected boundary; concealed surfaces and soundness not established.",
+      "contour_mm": [
+        [
+          -39.45454545454545,
+          124.63636363636364
+        ],
+        [
+          -15.272727272727272,
+          125.9090909090909
+        ],
+        [
+          11.454545454545455,
+          123.74545454545452
+        ],
+        [
+          36.27272727272727,
+          122.47272727272724
+        ],
+        [
+          50.909090909090914,
+          119.5454545454546
+        ],
+        [
+          61.727272727272734,
+          108.47272727272728
+        ],
+        [
+          70.0,
+          102.36363636363637
+        ],
+        [
+          75.0909090909091,
+          84.54545454545453
+        ],
+        [
+          73.81818181818181,
+          59.72727272727272
+        ],
+        [
+          73.81818181818181,
+          36.18181818181818
+        ],
+        [
+          78.9090909090909,
+          24.090909090909104
+        ],
+        [
+          89.0909090909091,
+          8.181818181818208
+        ],
+        [
+          82.72727272727273,
+          -4.545454545454561
+        ],
+        [
+          66.18181818181819,
+          -17.272727272727302
+        ],
+        [
+          44.54545454545454,
+          -37.636363636363626
+        ],
+        [
+          -20.363636363636363,
+          -37.636363636363626
+        ],
+        [
+          -31.181818181818187,
+          -32.54545454545456
+        ],
+        [
+          -46.45454545454545,
+          -22.36363636363634
+        ],
+        [
+          -68.72727272727273,
+          0.5454545454545352
+        ],
+        [
+          -70.00000000000001,
+          4.363636363636329
+        ],
+        [
+          -60.45454545454545,
+          17.090909090909125
+        ],
+        [
+          -59.18181818181818,
+          37.45454545454545
+        ],
+        [
+          -57.272727272727266,
+          54.000000000000014
+        ],
+        [
+          -52.18181818181818,
+          77.54545454545456
+        ],
+        [
+          -47.09090909090909,
+          102.36363636363637
+        ]
+      ]
+    },
+    {
+      "id": "CUT-01",
+      "name": "Top-left raised cut / missing arris",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "damage",
+      "status": "scan-derived",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          778,
+          435
+        ],
+        [
+          790,
+          409
+        ],
+        [
+          818,
+          382
+        ],
+        [
+          849,
+          377
+        ],
+        [
+          870,
+          404
+        ],
+        [
+          919,
+          407
+        ],
+        [
+          902,
+          431
+        ],
+        [
+          827,
+          449
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          -0.1412577341972247,
+          1.772411631100381,
+          0.18157673947203076
+        ],
+        [
+          -0.13447770675039086,
+          1.7878512375414828,
+          0.17938147267133486
+        ],
+        [
+          -0.118692217276574,
+          1.8038846749995499,
+          0.17415652849695973
+        ],
+        [
+          -0.10124098951166256,
+          1.806853830084377,
+          0.1682958666306261
+        ],
+        [
+          -0.0894503966154756,
+          1.7908203926263098,
+          0.16423308580293877
+        ],
+        [
+          -0.06187739514764163,
+          1.7890388995754134,
+          0.15493621332805693
+        ],
+        [
+          -0.07146925461581838,
+          1.774786955168243,
+          0.15808530548499258
+        ],
+        [
+          -0.1136960293706803,
+          1.7640979968628647,
+          0.1722463262634777
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Visible projected boundary; concealed surfaces and soundness not established.",
+      "contour_mm": [
+        [
+          -40.981818181818184,
+          124.63636363636364
+        ],
+        [
+          -39.45454545454545,
+          127.94545454545455
+        ],
+        [
+          -35.89090909090909,
+          131.38181818181815
+        ],
+        [
+          -31.945454545454545,
+          132.01818181818183
+        ],
+        [
+          -29.272727272727273,
+          128.58181818181816
+        ],
+        [
+          -23.036363636363635,
+          128.19999999999996
+        ],
+        [
+          -25.200000000000003,
+          125.14545454545454
+        ],
+        [
+          -34.74545454545454,
+          122.85454545454546
+        ]
+      ]
+    },
+    {
+      "id": "CUT-02",
+      "name": "Upper horizontal overcut above opening",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "damage",
+      "status": "unknown",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          1025,
+          382
+        ],
+        [
+          1130,
+          389
+        ],
+        [
+          1200,
+          395
+        ],
+        [
+          1340,
+          401
+        ],
+        [
+          1340,
+          411
+        ],
+        [
+          1200,
+          408
+        ],
+        [
+          1120,
+          402
+        ],
+        [
+          1030,
+          394
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          -0.00219733869308833,
+          1.8038846749995499,
+          0.13492062899845114
+        ],
+        [
+          0.05688707761376162,
+          1.7997278578807916,
+          0.11499701703364348
+        ],
+        [
+          0.09627531919514164,
+          1.796164871778999,
+          0.10171054351362975
+        ],
+        [
+          0.17505796416224145,
+          1.7926018856772064,
+          0.07515589141924112
+        ],
+        [
+          0.17504769448834184,
+          1.7866635755075517,
+          0.07512539984317637
+        ],
+        [
+          0.09626196861907213,
+          1.788445068558448,
+          0.10167090446474557
+        ],
+        [
+          0.05124595512544644,
+          1.7920080546602408,
+          0.11685283206681286
+        ],
+        [
+          0.0006042236543549739,
+          1.7967587027959646,
+          0.13393631206614665
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Dark thin line may be a saw mark or texture/shadow; confirm at marked location.",
+      "contour_mm": [
+        [
+          -9.545454545454545,
+          131.38181818181815
+        ],
+        [
+          3.8181818181818192,
+          130.49090909090904
+        ],
+        [
+          12.727272727272727,
+          129.72727272727272
+        ],
+        [
+          30.545454545454547,
+          128.96363636363637
+        ],
+        [
+          30.545454545454547,
+          127.69090909090909
+        ],
+        [
+          12.727272727272727,
+          128.07272727272724
+        ],
+        [
+          2.5454545454545476,
+          128.83636363636361
+        ],
+        [
+          -8.909090909090908,
+          129.8545454545455
+        ]
+      ]
+    },
+    {
+      "id": "CUT-03",
+      "name": "Top-right cut extension",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "damage",
+      "status": "scan-derived",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          1385,
+          443
+        ],
+        [
+          1483,
+          455
+        ],
+        [
+          1588,
+          471
+        ],
+        [
+          1595,
+          488
+        ],
+        [
+          1515,
+          492
+        ],
+        [
+          1450,
+          471
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          0.20033980513696864,
+          1.7676609829646575,
+          0.06649828343052816
+        ],
+        [
+          0.2554796462682968,
+          1.760535010761072,
+          0.047886243535125605
+        ],
+        [
+          0.31455481986863715,
+          1.7510337144896249,
+          0.027935189151859663
+        ],
+        [
+          0.3184768017615798,
+          1.7409385872012122,
+          0.026556535615112092
+        ],
+        [
+          0.2734505185940544,
+          1.7385632631333503,
+          0.041707971641114644
+        ],
+        [
+          0.23689156747964665,
+          1.7510337144896249,
+          0.054092455484198734
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Visible projected boundary; concealed surfaces and soundness not established.",
+      "contour_mm": [
+        [
+          36.27272727272727,
+          123.61818181818182
+        ],
+        [
+          48.74545454545454,
+          122.0909090909091
+        ],
+        [
+          62.10909090909092,
+          120.05454545454545
+        ],
+        [
+          63.000000000000014,
+          117.89090909090912
+        ],
+        [
+          52.81818181818182,
+          117.38181818181815
+        ],
+        [
+          44.54545454545454,
+          120.05454545454545
+        ]
+      ]
+    },
+    {
+      "id": "CUT-04",
+      "name": "Left lower overcut / chipped cusp",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "damage",
+      "status": "scan-derived",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          575,
+          1328
+        ],
+        [
+          550,
+          1360
+        ],
+        [
+          540,
+          1391
+        ],
+        [
+          560,
+          1425
+        ],
+        [
+          602,
+          1461
+        ],
+        [
+          623,
+          1450
+        ],
+        [
+          572,
+          1405
+        ],
+        [
+          580,
+          1376
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          -0.2564185858950478,
+          1.2421205329502345,
+          0.21733155959513542
+        ],
+        [
+          -0.27052087863214086,
+          1.22311794040734,
+          0.2219726217568621
+        ],
+        [
+          -0.27618048653347527,
+          1.204709178881411,
+          0.22377355195311494
+        ],
+        [
+          -0.26495985960024265,
+          1.1845189243045857,
+          0.21987897243038768
+        ],
+        [
+          -0.2413601883948494,
+          1.1631410076938296,
+          0.2118082956119296
+        ],
+        [
+          -0.22953057073784386,
+          1.1696731488804495,
+          0.2078613827732884
+        ],
+        [
+          -0.2581859939577486,
+          1.1963955446438947,
+          0.2176654106840529
+        ],
+        [
+          -0.25365399437364317,
+          1.2136166441358929,
+          0.21623747298899784
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Visible projected boundary; concealed surfaces and soundness not established.",
+      "contour_mm": [
+        [
+          -66.81818181818181,
+          10.98181818181821
+        ],
+        [
+          -70.00000000000001,
+          6.909090909090877
+        ],
+        [
+          -71.27272727272727,
+          2.963636363636356
+        ],
+        [
+          -68.72727272727273,
+          -1.3636363636364042
+        ],
+        [
+          -63.38181818181819,
+          -5.945454545454562
+        ],
+        [
+          -60.709090909090904,
+          -4.545454545454561
+        ],
+        [
+          -67.2,
+          1.1818181818181723
+        ],
+        [
+          -66.18181818181819,
+          4.872727272727295
+        ]
+      ]
+    },
+    {
+      "id": "CUT-05",
+      "name": "Right lower overcut / chipped cusp",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "damage",
+      "status": "scan-derived",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          1730,
+          1260
+        ],
+        [
+          1760,
+          1297
+        ],
+        [
+          1807,
+          1345
+        ],
+        [
+          1810,
+          1373
+        ],
+        [
+          1772,
+          1416
+        ],
+        [
+          1730,
+          1445
+        ],
+        [
+          1715,
+          1420
+        ],
+        [
+          1750,
+          1371
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          0.3936589037518461,
+          1.282501042103885,
+          -0.001386044164809891
+        ],
+        [
+          0.41050422169515455,
+          1.2605292944761635,
+          -0.007185225242410123
+        ],
+        [
+          0.4369054552479912,
+          1.2320254056618218,
+          -0.016240218993172656
+        ],
+        [
+          0.43856503173474587,
+          1.2153981371867892,
+          -0.01689423163077003
+        ],
+        [
+          0.41713533887044396,
+          1.1898634034572748,
+          -0.009822619896044979
+        ],
+        [
+          0.3934689147847032,
+          1.172642303965277,
+          -0.0019501383220078272
+        ],
+        [
+          0.3850529311010837,
+          1.1874880793894131,
+          0.0009692717412344148
+        ],
+        [
+          0.4048004541960517,
+          1.21658579922072,
+          -0.005515408823235757
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Visible projected boundary; concealed surfaces and soundness not established.",
+      "contour_mm": [
+        [
+          80.18181818181819,
+          19.636363636363615
+        ],
+        [
+          84.0,
+          14.927272727272731
+        ],
+        [
+          89.9818181818182,
+          8.818181818181817
+        ],
+        [
+          90.36363636363636,
+          5.2545454545454495
+        ],
+        [
+          85.52727272727273,
+          -0.21818181818182905
+        ],
+        [
+          80.18181818181819,
+          -3.9090909090908954
+        ],
+        [
+          78.27272727272727,
+          -0.7272727272727102
+        ],
+        [
+          82.72727272727272,
+          5.509090909090904
+        ]
+      ]
+    },
+    {
+      "id": "CUT-06",
+      "name": "Bottom missing / recessed stone edge",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "damage",
+      "status": "scan-derived",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          838,
+          1660
+        ],
+        [
+          947,
+          1688
+        ],
+        [
+          1110,
+          1687
+        ],
+        [
+          1260,
+          1698
+        ],
+        [
+          1447,
+          1680
+        ],
+        [
+          1454,
+          1727
+        ],
+        [
+          1390,
+          1765
+        ],
+        [
+          1260,
+          1730
+        ],
+        [
+          1050,
+          1725
+        ],
+        [
+          920,
+          1736
+        ],
+        [
+          870,
+          1710
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          -0.10874913777645359,
+          1.0449686353177052,
+          0.16646879691177713
+        ],
+        [
+          -0.04743517901989458,
+          1.0283413668426726,
+          0.14572297100441206
+        ],
+        [
+          0.04429853011710005,
+          1.0289351978596382,
+          0.11483011862454558
+        ],
+        [
+          0.12870381215949572,
+          1.022403056673018,
+          0.08636476666007101
+        ],
+        [
+          0.23396163233150932,
+          1.0330920149783962,
+          0.050974660162586075
+        ],
+        [
+          0.23785280520275312,
+          1.00518195718102,
+          0.049504531897644255
+        ],
+        [
+          0.20179604020356218,
+          0.9826163785363329,
+          0.06151957003374094
+        ],
+        [
+          0.12867094920301697,
+          1.0034004641301237,
+          0.0862671936166638
+        ],
+        [
+          0.010492873882807396,
+          1.006369619214951,
+          0.12608697512782086
+        ],
+        [
+          -0.06267945761767608,
+          0.999837478028331,
+          0.15069433746084582
+        ],
+        [
+          -0.09079161602676551,
+          1.0152770844694328,
+          0.16025088596888198
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Visible projected boundary; concealed surfaces and soundness not established.",
+      "contour_mm": [
+        [
+          -33.345454545454544,
+          -31.27272727272726
+        ],
+        [
+          -19.472727272727276,
+          -34.83636363636362
+        ],
+        [
+          1.2727272727272743,
+          -34.7090909090909
+        ],
+        [
+          20.363636363636363,
+          -36.10909090909093
+        ],
+        [
+          44.163636363636364,
+          -33.818181818181806
+        ],
+        [
+          45.05454545454546,
+          -39.8
+        ],
+        [
+          36.90909090909091,
+          -44.63636363636366
+        ],
+        [
+          20.363636363636367,
+          -40.18181818181817
+        ],
+        [
+          -6.363636363636363,
+          -39.54545454545454
+        ],
+        [
+          -22.90909090909091,
+          -40.94545454545454
+        ],
+        [
+          -29.272727272727273,
+          -37.636363636363626
+        ]
+      ]
+    },
+    {
+      "id": "CUT-07",
+      "name": "Right edge line toward adjacent grout",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "damage",
+      "status": "unknown",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          1792,
+          1342
+        ],
+        [
+          1828,
+          1328
+        ],
+        [
+          1824,
+          1368
+        ],
+        [
+          1803,
+          1386
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          0.42846687828179253,
+          1.2338068987127182,
+          -0.013387890397272909
+        ],
+        [
+          0.4487412347093364,
+          1.2421205329502345,
+          -0.020168836886175046
+        ],
+        [
+          0.44644904724883966,
+          1.2183672922716164,
+          -0.019532621557612623
+        ],
+        [
+          0.4346122408201044,
+          1.2076783339662385,
+          -0.015607052822216708
+        ]
+      ],
+      "geometry": "polygon",
+      "include_in_coverage": true,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Possible cut/texture at grout; inspect rather than assume hidden damage ends at the opening.",
+      "contour_mm": [
+        [
+          88.07272727272729,
+          9.200000000000028
+        ],
+        [
+          92.65454545454546,
+          10.98181818181821
+        ],
+        [
+          92.14545454545454,
+          5.890909090909058
+        ],
+        [
+          89.47272727272727,
+          3.6000000000000214
+        ]
+      ]
+    },
+    {
+      "id": "GROUT-01",
+      "name": "Adjacent vertical grout recess",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "grout",
+      "status": "scan-derived",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          1817,
+          0
+        ],
+        [
+          1820,
+          600
+        ],
+        [
+          1817,
+          1200
+        ],
+        [
+          1810,
+          1800
+        ],
+        [
+          1810,
+          2200
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          0.44391449829973517,
+          2.0307281234803516,
+          -0.014034556094516842
+        ],
+        [
+          0.44498664943943195,
+          1.6744295133010818,
+          -0.016432686883018147
+        ],
+        [
+          0.4426821374317812,
+          1.318130903121812,
+          -0.017693545222287277
+        ],
+        [
+          0.43812651665923225,
+          0.9618322929425422,
+          -0.018196221928735004
+        ],
+        [
+          0.4377157297032476,
+          0.7242998861563623,
+          -0.019415884971325154
+        ]
+      ],
+      "geometry": "polyline",
+      "include_in_coverage": false,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Grout joint crosses candidate outer land. Width/depth, soundness and compatible sealing unresolved.",
+      "contour_mm": [
+        [
+          91.25454545454545,
+          179.99999999999997
+        ],
+        [
+          91.63636363636364,
+          103.63636363636364
+        ],
+        [
+          91.25454545454545,
+          27.272727272727263
+        ],
+        [
+          90.36363636363636,
+          -49.09090909090909
+        ],
+        [
+          90.36363636363636,
+          -100.00000000000003
+        ]
+      ]
+    },
+    {
+      "id": "MARK-01",
+      "name": "Former trim / residue arc below opening",
+      "component": "wall",
+      "state": "as_observed_at_capture",
+      "kind": "reference",
+      "status": "unknown",
+      "source": "SCAN-WALL",
+      "source_view": "build/scan_inspection/wall_detail.png",
+      "view_revision": "R001",
+      "annotation_pixels": [
+        [
+          650,
+          1570
+        ],
+        [
+          750,
+          1740
+        ],
+        [
+          1000,
+          1830
+        ],
+        [
+          1250,
+          1855
+        ],
+        [
+          1530,
+          1770
+        ],
+        [
+          1750,
+          1560
+        ]
+      ],
+      "projected_contour_raw": [
+        [
+          -0.2144588226615759,
+          1.0984134268445955,
+          0.20237775783896672
+        ],
+        [
+          -0.15835568799541255,
+          0.9974621539604692,
+          0.18290486022533037
+        ],
+        [
+          -0.017753817254366998,
+          0.9440173624335788,
+          0.1352440839894087
+        ],
+        [
+          0.12291480636702606,
+          0.9291715870094425,
+          0.08778150299790793
+        ],
+        [
+          0.280579712138052,
+          0.9796472234515057,
+          0.03496796709695879
+        ],
+        [
+          0.40460635735934897,
+          1.1043517370142502,
+          -0.006091699610859605
+        ]
+      ],
+      "geometry": "polyline",
+      "include_in_coverage": false,
+      "trace_allowance_mm_at_R001": 1.5,
+      "trace_basis": "approximately 12 pixels at conditional 280mm/2200px; edge blur/selection allowance only, not absolute scan accuracy",
+      "depth_mm": null,
+      "note": "Visible arc is not automatically a gouge; excluded from required damage coverage pending physical identification.",
+      "contour_mm": [
+        [
+          -57.272727272727266,
+          -19.81818181818185
+        ],
+        [
+          -44.54545454545454,
+          -41.45454545454545
+        ],
+        [
+          -12.727272727272728,
+          -52.909090909090885
+        ],
+        [
+          19.09090909090909,
+          -56.0909090909091
+        ],
+        [
+          54.72727272727274,
+          -45.27272727272727
+        ],
+        [
+          82.72727272727273,
+          -18.545454545454547
+        ]
+      ]
+    },
+    {
+      "id": "AXIS-UPPER-TIP",
+      "component": "valve",
+      "state": "as_observed_at_capture",
+      "kind": "landmark",
+      "source": "SCAN-WALL",
+      "status": "scan-derived",
+      "point_raw": [
+        0.094248,
+        1.560286,
+        0.258374
+      ],
+      "uncertainty_mm": null,
+      "note": "visible upper control tip reference",
+      "point_mm": [
+        1.598388807216021,
+        79.34571089931099,
+        31.95481637340469
+      ]
+    },
+    {
+      "id": "AXIS-LOWER-TIP",
+      "component": "valve",
+      "state": "as_observed_at_capture",
+      "kind": "landmark",
+      "source": "SCAN-WALL",
+      "status": "scan-derived",
+      "point_raw": [
+        0.088695,
+        1.190037,
+        0.265252
+      ],
+      "uncertainty_mm": null,
+      "note": "visible lower control tip / origin anchor",
+      "point_mm": [
+        -4.496403249731884e-15,
+        -7.549516567451064e-15,
+        33.40186167467328
+      ]
+    },
+    {
+      "id": "STUD-NE-TIP",
+      "component": "valve",
+      "state": "as_observed_at_capture",
+      "kind": "landmark",
+      "source": "SCAN-WALL",
+      "status": "scan-derived",
+      "point_raw": [
+        0.311688,
+        1.482759,
+        0.178402
+      ],
+      "uncertainty_mm": null,
+      "note": "upper-right visible stud tip; not hidden thread/axis",
+      "point_mm": [
+        51.23359848933067,
+        62.72282385788084,
+        30.676418397046806
+      ]
+    },
+    {
+      "id": "STUD-SW-TIP",
+      "component": "valve",
+      "state": "as_observed_at_capture",
+      "kind": "landmark",
+      "source": "SCAN-WALL",
+      "status": "scan-derived",
+      "point_raw": [
+        -0.130382,
+        1.27635,
+        0.306101
+      ],
+      "uncertainty_mm": null,
+      "note": "lower-left visible stud tip; not hidden thread/axis",
+      "point_mm": [
+        -47.291356275538035,
+        18.462229374095184,
+        26.61188122141667
+      ]
+    },
+    {
+      "id": "OPEN-LOWER-AUX",
+      "component": "separate lower control",
+      "state": "as_observed_at_capture",
+      "kind": "context opening",
+      "source": "SCAN-WALL",
+      "status": "scan-derived",
+      "include_in_coverage": false,
+      "note": "Separate lower opening/control visible in overview. Outside stacked-trim repair scope; retain as nearby obstruction/context, not the lower stacked control."
+    },
+    {
+      "id": "PLATE-INNER",
+      "component": "inner plate",
+      "state": "manufacturer_intended",
+      "kind": "reference reconstruction",
+      "status": "inferred",
+      "source": [
+        "SRC-KOHLER-OLD-GUIDE",
+        "SCAN-PLATE-1",
+        "SCAN-PLATE-2"
+      ],
+      "note": "Form lead only. Plate scans cannot establish outline, back face, thickness or hole coordinates."
+    },
+    {
+      "id": "GASKET-01",
+      "component": "factory gasket",
+      "state": "manufacturer_intended",
+      "kind": "contact path",
+      "status": "unknown",
+      "source": "SRC-KOHLER-OLD-GUIDE",
+      "note": "Contact path/free thickness/notches/condition require inspection. Rendered capsule is an assumption."
+    },
+    {
+      "id": "TRIM-OUTER",
+      "component": "outer trim",
+      "state": "manufacturer_intended",
+      "kind": "reference reconstruction",
+      "status": "manufacturer nominal",
+      "source": "SRC-KOHLER-SPEC",
+      "note": "Candidate 7.25in diameter; actual identity not yet verified."
+    },
+    {
+      "id": "CUSTOM-01",
+      "component": "custom candidate",
+      "state": "proposed_provisional",
+      "kind": "design candidate",
+      "status": "inferred",
+      "note": "Diameter computed from traced damage + exploratory land. Aperture derived conservatively from visible protrusion envelope; requires gasket and service checks."
+    }
+  ]
+}

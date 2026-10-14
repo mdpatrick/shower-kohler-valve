@@ -1,6 +1,6 @@
 """Byte-preserving initial copy and reproducible, defensive local extraction."""
 from pathlib import Path, PurePosixPath
-import argparse, datetime, hashlib, json, os, shutil, stat, zipfile
+import argparse, datetime, hashlib, json, os, shutil, stat, zipfile, zlib
 
 ROOT = Path(__file__).resolve().parents[1]
 NAMES = ['shower-hole-valve-polycam.zip', 'plates-side-1-polycam.zip', 'plates-side-2-polycam.zip']
@@ -26,6 +26,14 @@ def members(z):
                     'zip_timestamp_raw':list(i.date_time),'crc32':f'{i.CRC:08x}'})
     return out
 
+def cached_member_ok(path,entry,root):
+    if path.is_symlink() or not path.resolve().is_relative_to(root.resolve()):return False
+    if not path.is_file() or path.stat().st_size!=entry['size_bytes']:return False
+    crc=0
+    with path.open('rb') as f:
+        for chunk in iter(lambda:f.read(1024*1024),b''):crc=zlib.crc32(chunk,crc)
+    return f'{crc:08x}'==entry['crc32']
+
 def ingest(source_dir=None):
     dest=ROOT/'data/raw/polycam'; dest.mkdir(parents=True,exist_ok=True)
     mp=ROOT/'canon/inputs.json'
@@ -48,9 +56,10 @@ def ingest(source_dir=None):
             required=sum(i['size_bytes'] for i in inventory)
             if shutil.disk_usage(ROOT).free < required*2: raise OSError('Insufficient extraction space')
             extracted=ROOT/'data/extracted'/target.stem
+            if extracted.is_symlink():raise ValueError('Extraction root must not be a symlink')
             stamp=extracted/'.input-sha256'
             reuse=stamp.exists() and stamp.read_text().strip()==h and all(
-                (extracted/i['name']).is_file() and (extracted/i['name']).stat().st_size==i['size_bytes']
+                cached_member_ok(extracted/i['name'],i,extracted)
                 for i in inventory if not i['name'].endswith('/'))
             if not reuse:
                 extracted.mkdir(parents=True,exist_ok=True)

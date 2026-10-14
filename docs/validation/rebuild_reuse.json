@@ -1,0 +1,6 @@
+{
+  "status": "PASS",
+  "unchanged_stages_reused": true,
+  "canon_unchanged": true,
+  "output": "shower-hole-valve-polycam.zip 36799744 bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5 extraction reused\nplates-side-1-polycam.zip 4072620 3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f extraction reused\nplates-side-2-polycam.zip 4448807 393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781 extraction reused\nregistration: unchanged\nparameters: unchanged\ncad: unchanged\nanalysis: unchanged\nblender: unchanged\nreview: unchanged\npdf: unchanged\nBuild finished. Physical fit and fabrication remain UNRESOLVED.\n"
+}

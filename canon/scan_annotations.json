@@ -1,0 +1,14 @@
+{
+  "schema_version": 1,
+  "source": "SCAN-WALL",
+  "method": "Manual identification in raw +Z orthographic textured render; vertices sampled near visible tips. These are estimated tip centers, not measured hole axes.",
+  "raw_view": {"pixels": 1200, "ortho_scale": 2.95459024, "center": [0, 1.3190135, 0]},
+  "plane_regions_px": [[300,320,450,380],[300,780,460,820],[795,320,830,450],[790,700,850,800]],
+  "provisional_scale_anchor_mm": 79.375,
+  "landmarks_raw": {
+    "AXIS-UPPER-TIP": {"point": [0.094248,1.560286,0.258374], "status": "scan-derived", "uncertainty_mm": null, "purpose": "visible upper control tip reference"},
+    "AXIS-LOWER-TIP": {"point": [0.088695,1.190037,0.265252], "status": "scan-derived", "uncertainty_mm": null, "purpose": "visible lower control tip / origin anchor"},
+    "STUD-NE-TIP": {"point": [0.311688,1.482759,0.178402], "status": "scan-derived", "uncertainty_mm": null, "purpose": "upper-right visible stud tip; not hidden thread/axis"},
+    "STUD-SW-TIP": {"point": [-0.130382,1.27635,0.306101], "status": "scan-derived", "uncertainty_mm": null, "purpose": "lower-left visible stud tip; not hidden thread/axis"}
+  }
+}

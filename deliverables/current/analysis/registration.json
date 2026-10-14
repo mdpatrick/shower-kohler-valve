@@ -1,0 +1,203 @@
+{
+  "schema_version": 1,
+  "units": "mm",
+  "source_units": "OBJ unit unspecified",
+  "state": "as_observed_at_capture",
+  "installed_frame": "+X right, +Y up, +Z out of wall",
+  "origin": "orthogonal projection of AXIS-LOWER-TIP onto fitted intact-tile plane",
+  "orientation_note": "Y is scan Y projected into fitted plane. Grout appears near vertical; true plumb is not verified. Valve pose is preserved, not straightened.",
+  "scale_status": "inferred conditional scale; NOT physically calibrated",
+  "scale_anchor": "user-identified K-T14489-4 nominal 3-1/8 inch control spacing; actual spacing unmeasured",
+  "scale_anchor_mm": 79.375,
+  "uniform_mm_per_source_unit": 214.32167663416558,
+  "source_separation_units": 0.3703545121825844,
+  "raw_to_installed_mm": [
+    [
+      203.11094803898035,
+      -4.647360548349962e-17,
+      -68.40850723401635,
+      0.1305678245199422
+    ],
+    [
+      0.3706410342010321,
+      214.31853087072807,
+      1.1004662268275007,
+      -255.37175639593553
+    ],
+    [
+      68.40750314994865,
+      -1.1612065675931937,
+      203.10796682399484,
+      -25.158457453130797
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "installed_mm_to_blender_m": [
+    [
+      0.001,
+      0.0,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      -0.001,
+      0.0
+    ],
+    [
+      0.0,
+      0.001,
+      0.0,
+      0.0
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "raw_to_blender_m": [
+    [
+      0.20311094803898036,
+      -4.647360548349962e-20,
+      -0.06840850723401636,
+      0.0001305678245199422
+    ],
+    [
+      -0.06840750314994866,
+      0.0011612065675931937,
+      -0.20310796682399485,
+      0.0251584574531308
+    ],
+    [
+      0.00037064103420103215,
+      0.21431853087072808,
+      0.0011004662268275008,
+      -0.25537175639593557
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "raw_to_installed_determinant": 9844604.974200698,
+  "plane": {
+    "raw_origin": [
+      -0.01951602629716962,
+      1.5052696879716974,
+      0.1390463878537738
+    ],
+    "raw_normal": [
+      0.3191814482989334,
+      -0.005418054700903188,
+      0.9476781350991768
+    ],
+    "regions_px": [
+      [
+        300,
+        320,
+        450,
+        380
+      ],
+      [
+        300,
+        780,
+        460,
+        820
+      ],
+      [
+        795,
+        320,
+        830,
+        450
+      ],
+      [
+        790,
+        700,
+        850,
+        800
+      ]
+    ],
+    "points_count": 10415,
+    "fit_retained": 8056,
+    "method": "5 iterations PCA plane with 95% residual retention per iteration",
+    "all_selected_rms_mm": 0.2300625798286748,
+    "all_selected_p95_abs_mm": 0.44914722215357944,
+    "note": "Residual is local consistency of selected stone patches, not absolute scan accuracy or stone soundness."
+  },
+  "landmarks_installed_mm": {
+    "AXIS-UPPER-TIP": {
+      "point": [
+        0.094248,
+        1.560286,
+        0.258374
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "visible upper control tip reference",
+      "point_mm": [
+        1.598388807216021,
+        79.34571089931099,
+        31.95481637340469
+      ]
+    },
+    "AXIS-LOWER-TIP": {
+      "point": [
+        0.088695,
+        1.190037,
+        0.265252
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "visible lower control tip / origin anchor",
+      "point_mm": [
+        -4.496403249731884e-15,
+        -7.549516567451064e-15,
+        33.40186167467328
+      ]
+    },
+    "STUD-NE-TIP": {
+      "point": [
+        0.311688,
+        1.482759,
+        0.178402
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "upper-right visible stud tip; not hidden thread/axis",
+      "point_mm": [
+        51.23359848933067,
+        62.72282385788084,
+        30.676418397046806
+      ]
+    },
+    "STUD-SW-TIP": {
+      "point": [
+        -0.130382,
+        1.27635,
+        0.306101
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "lower-left visible stud tip; not hidden thread/axis",
+      "point_mm": [
+        -47.291356275538035,
+        18.462229374095184,
+        26.61188122141667
+      ]
+    }
+  },
+  "secondary_registration": {
+    "SCAN-PLATE-1": "excluded from dimensional registration due severe warp; no correspondence asserted",
+    "SCAN-PLATE-2": "excluded from dimensional registration due severe warp; no correspondence asserted"
+  }
+}

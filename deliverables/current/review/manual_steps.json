@@ -1,0 +1,62 @@
+[
+  {
+    "title": "Record the current installation",
+    "view": "overview",
+    "person": "Homeowner + installer",
+    "prerequisite": "Existing access is safe; no pressure parts disturbed.",
+    "tools": "Camera, ruler, labels; measurement worksheet.",
+    "action": "Record which plumbing, stud or wall changes occurred since the capture and photograph the opening with the same feature labels.",
+    "check": "Current-state note and readings reference the worksheet revision; changed areas are identified.",
+    "stop": "If a valve has moved or repairs hide a cut, the old scan cannot certify current fit."
+  },
+  {
+    "title": "Check plumbing and factory adjustment",
+    "view": "section_studs",
+    "person": "Qualified plumber",
+    "prerequisite": "Exact Kohler models recorded; applicable revision checked.",
+    "tools": "Applicable Kohler guides, straightedge, depth gauge and correct hand tools.",
+    "action": "Inspect stud/adapter adjustment and engagement and test any plumbing changes before establishing final hardware position.",
+    "check": "Both actual stud projections, usable engagement and adapter selection recorded; supply/valve leakage checked separately.",
+    "stop": "Do not shorten studs, force trim, or loosen pressure-containing parts for a homeowner measurement. No valve relocation target is approved."
+  },
+  {
+    "title": "Resolve the support and water barrier",
+    "view": "gasket",
+    "person": "Qualified tile/waterproofing installer",
+    "prerequisite": "Safe access through the existing opening; stone protected.",
+    "tools": "Light, inspection mirror, straightedge; approved inspection method.",
+    "action": "Identify sound substrate, possible backing access and the existing waterproofing system. Design supported local rebuilding or a retained plate detail from this evidence.",
+    "check": "Complete gasket landing, backing/load path and compatible water-barrier connection are documented.",
+    "stop": "No filler bridging the unsupported opening. Surface sealant or grout cannot establish an unseen membrane connection. No tile cutting is authorized."
+  },
+  {
+    "title": "Dry fit the reviewed revision",
+    "view": "exploded",
+    "person": "Installer with homeowner review",
+    "prerequisite": "Measurements accepted; repair option and trial geometry revised.",
+    "tools": "Calibrated 1:1 paper template, thickness-accurate trial part or spacers, straightedge, original hardware.",
+    "action": "Check the planar template first, then trial the actual layer thickness with the original inner plate, gasket, trim and handles.",
+    "check": "Worst cuts concealed with sound overlap; no rocking; continuous foam support; trim seats; threads engage; drain down; full travel and tool/removal access.",
+    "stop": "Paper proves no depth clearance. Prototype materials are not approved permanent wet-area materials. Record failures; do not force the fit."
+  },
+  {
+    "title": "Install only the released material detail",
+    "view": "assembled",
+    "person": "Installer / fabricator as assigned",
+    "prerequisite": "Selected design, material data, physical fit and explicit fabrication approval complete.",
+    "tools": "Approved drawing, inspected finished part and named materials from the released schedule.",
+    "action": "Protect service parts, prepare the verified substrates, place supported repairs and sealing layers in the approved order, and assemble the original Kohler components.",
+    "check": "Incoming dimensions, flatness, thickness, edges and finish accepted; sealing path continuous; service parts remain removable; drain unobstructed.",
+    "stop": "This draft has no selected mortar, backing, sealant, finish or cure schedule. Do not permanently install from it."
+  },
+  {
+    "title": "Cure, test and preserve access",
+    "view": "coverage",
+    "person": "Installer; homeowner observes results",
+    "prerequisite": "Selected product-specific cure and water-exposure requirements met.",
+    "tools": "Approved test procedure, dry indicators and accessible inspection points.",
+    "action": "First check supply/valve behavior with surfaces kept dry; then test controlled water exposure around the assembled trim while observing available access.",
+    "check": "Record product cure conditions, test duration/conditions, observed locations and results. Retain a future removal procedure.",
+    "stop": "Stop if moisture appears. Investigate supply leakage separately from surface-water entry. A local pass does not certify the concealed shower system."
+  }
+]

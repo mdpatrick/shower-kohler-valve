@@ -388,3 +388,15 @@ Verify current APIs, instructions, and applicability. These references are not p
 - Candidate Kohler stacked-trim guide: https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf
 - Candidate oversized-plate supplier: https://designerdrains.com/product/oversized-escutcheon-plates/
 - Example fabrication-file guidance: https://sendcutsend.com/guidelines/sheet-cutting/
+
+
+## Confirmed component identities (user goal update, 2026-10-14)
+
+- Large faceplate and two handles: K-T14489-4-BN, Purist MasterShower temperature and volume control trim.
+- Small faceplate and one handle: K-T14491-4-BN, Purist MasterShower transfer/diverter trim.
+- Main concealed valve: K-2973-KS-NA, MasterShower 1/2 inch thermostatic valve with integrated volume control and stops.
+- Separate diverter purchased: K-737-K-NA, MasterShower 3/4 inch two-/three-way diverter. Purchase does not prove installed state.
+
+This resolves the model leads above; dimensions remain nominal until physically checked.
+
+2026-10-14 further goal correction: the K-737-K-NA is identified as the separate diverter valve, not merely a purchased item. Post-scan plumbing changes still unknown.

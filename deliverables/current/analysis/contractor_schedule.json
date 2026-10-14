@@ -1,0 +1,64 @@
+{
+  "project_id": "shower-kohler-valve",
+  "revision": "R001",
+  "status": "DRAFT / inspection schedule, no adjustment authorized",
+  "units": "mm",
+  "items": [
+    {
+      "id": "STUD-SW",
+      "datum": "intact-stone reference plane; verify factory plate datum in applicable guide",
+      "current_model_tip_z_mm": 26.61188122141667,
+      "current_status": "conditional scan estimate",
+      "proposed_target_mm": null,
+      "guide_comparison_mm": 11.1125,
+      "guide_context": "7/16 inch maximum shown in applicable trim guides; establish exact reference surface with actual hardware",
+      "responsible": "qualified plumber",
+      "prerequisites": [
+        "M07 depth readings",
+        "usable thread/adapter arrangement",
+        "selected final layer thickness"
+      ],
+      "on_site_check": "Verify reversible factory adjustment, engagement and free outer-trim seating. No shortening or valve movement approved."
+    },
+    {
+      "id": "STUD-NE",
+      "datum": "intact-stone reference plane; verify factory plate datum in applicable guide",
+      "current_model_tip_z_mm": 30.676418397046806,
+      "current_status": "conditional scan estimate",
+      "proposed_target_mm": null,
+      "guide_comparison_mm": 11.1125,
+      "guide_context": "7/16 inch maximum shown in applicable trim guides; establish exact reference surface with actual hardware",
+      "responsible": "qualified plumber",
+      "prerequisites": [
+        "M07 depth readings",
+        "usable thread/adapter arrangement",
+        "selected final layer thickness"
+      ],
+      "on_site_check": "Verify reversible factory adjustment, engagement and free outer-trim seating. No shortening or valve movement approved."
+    },
+    {
+      "id": "VALVE-POSE",
+      "current": "scan pose retained; post-scan changes unknown",
+      "proposed_translation_mm": null,
+      "proposed_rotation_deg": null,
+      "responsible": "qualified plumber",
+      "prerequisites": [
+        "current piping/state record",
+        "physical access and pressure test"
+      ],
+      "on_site_check": "Record any real change before new fit assessment; no proposed move."
+    },
+    {
+      "id": "LANDING",
+      "current": "opening interrupts assumed factory gasket path",
+      "proposed": "continuous supported landing, detail unselected",
+      "responsible": "tile/waterproofing installer",
+      "prerequisites": [
+        "actual gasket trace",
+        "backing access and soundness",
+        "waterproofing-system identification"
+      ],
+      "on_site_check": "Demonstrate full contact, rigid support and compatible sealing without cutting travertine."
+    }
+  ]
+}

@@ -1,0 +1,131 @@
+{
+  "schema_version": 1,
+  "sources": [
+    {
+      "id": "SRC-KOHLER-OLD-GUIDE",
+      "path": "data/evidence/kohler-1041504_2.pdf",
+      "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf",
+      "title": "Stacked thermostatic valve trim installation",
+      "revision": "1041504-2-F",
+      "pages": "pp 3,7,8",
+      "applicability": "Factory layer order, gasket covers opening, stud adjustment; compare physical revision",
+      "retrieved_date": "2026-10-14",
+      "sha256": "7256f5693a6221c5e8e9369be3fe5d5ff2aeda0773e41a837193e4617f39cbe4",
+      "size_bytes": 1318029
+    },
+    {
+      "id": "SRC-KOHLER-CURRENT-GUIDE",
+      "path": "data/evidence/kohler-1216755-2.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/1216755-2.pdf",
+      "title": "Trim installation linked by current T14489 product page",
+      "revision": "1216755-2-A",
+      "pages": "steps 8-12",
+      "applicability": "Stud adjustment, drain down, assembly interfaces; current link does not date actual installed revision",
+      "retrieved_date": "2026-10-14",
+      "sha256": "15b15b448b6747f76cdf47d56e8ca62869843838d7baee3954d24e8cb167067f",
+      "size_bytes": 331107
+    },
+    {
+      "id": "SRC-KOHLER-SPEC",
+      "path": "data/evidence/kohler-T14489-4-spec.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/K-T14489-4_spec_US-CA_Kohler_en.pdf",
+      "title": "Purist T14489-4 specification",
+      "revision": "10-09-2026 01:11 US-CA",
+      "pages": "p3",
+      "applicability": "Nominal diameter 7.25in and control spacing 3.125in; actual dimensions not verified",
+      "retrieved_date": "2026-10-14",
+      "sha256": "4bf4b5db5fec96d5f5f3158c212cbeac36389ef08dab9e4de69de29c9ecb5a75",
+      "size_bytes": 282614
+    },
+    {
+      "id": "SRC-KOHLER-TRIM-CAD",
+      "path": "data/evidence/kohler-T14489-4.obj",
+      "url": "https://techcomm.kohler.com/techcomm/cad/T14489-4.obj",
+      "title": "Official T14489-4 OBJ",
+      "revision": "OBJ comment 2022-11-11 export",
+      "pages": "whole model",
+      "applicability": "Nominal exterior form only; raw units inferred inches by documented 7.25in span; no hidden mating certification",
+      "retrieved_date": "2026-10-14",
+      "sha256": "a508966062cad80c22df16dc363821c2bdb999737e916ff32a96a2e4de26c7e1",
+      "size_bytes": 338806
+    },
+    {
+      "id": "SRC-KOHLER-FRONT-DXF",
+      "path": "data/evidence/kohler-T14489-4-front.dxf",
+      "url": "https://techcomm.kohler.com/techcomm/cad/t14489_4frt.dxf",
+      "title": "Official T14489-4 front DXF",
+      "revision": "undated",
+      "pages": "modelspace",
+      "applicability": "Unitless header; nominal illustration only",
+      "retrieved_date": "2026-10-14",
+      "sha256": "2698ac0873a8bf525ce0d8b16cc9350f30b0455a09d0a6ab0077ebc8ddf354fa",
+      "size_bytes": 13153
+    },
+    {
+      "id": "SRC-KOHLER-SIDE-DXF",
+      "path": "data/evidence/kohler-T14489-4-side.dxf",
+      "url": "https://techcomm.kohler.com/techcomm/cad/t14489_4sde.dxf",
+      "title": "Official T14489-4 side DXF",
+      "revision": "undated",
+      "pages": "modelspace",
+      "applicability": "Unitless header; nominal illustration only",
+      "retrieved_date": "2026-10-14",
+      "sha256": "811511ceed4116646290125b58ed9500f87305b70f224c772247e573a506d2c2",
+      "size_bytes": 25724
+    },
+    {
+      "id": "SRC-VALVE-SPEC",
+      "path": "data/evidence/kohler-2973-KS-spec.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/K-2973-KS_spec_US-CA_Kohler_en.pdf",
+      "title": "K-2973-KS specification",
+      "revision": "saved 2026-10-14",
+      "pages": "dimensioned page",
+      "applicability": "User-confirmed model; nominal rough-in reference, not installed pose",
+      "retrieved_date": "2026-10-14",
+      "sha256": "2c4841107bb8db596d95b2268201a19b7ff4a7a55b124ffbc13ed8dc85e26a2c",
+      "size_bytes": 245804
+    },
+    {
+      "id": "SRC-VALVE-CAD",
+      "path": "data/evidence/kohler-2973-KS.obj",
+      "url": "https://techcomm.kohler.com/techcomm/cad/2973-KS.obj",
+      "title": "K-2973-KS official OBJ",
+      "revision": "OBJ comment 2016-11-10 export",
+      "pages": "whole model",
+      "applicability": "Nominal manufacturer reference, not substituted for as-observed scan",
+      "retrieved_date": "2026-10-14",
+      "sha256": "791bb34fb3916693f6b3fd164da482e5f395e40ad055d5d8ec330cf007ad887d",
+      "size_bytes": 2411966
+    },
+    {
+      "id": "SRC-VALVE-INSTALL",
+      "path": "data/evidence/kohler-2973-install-1205551-2.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/1205551-2.pdf",
+      "title": "K-2973 installation guide",
+      "revision": "see document",
+      "pages": "whole document",
+      "applicability": "Installer reference; review relevant pages before specifying plumbing changes",
+      "retrieved_date": "2026-10-14",
+      "sha256": "4c4ae445314db1a28f882a73ada04ea75c2f9a015ff81c261e6d4b5663f16562",
+      "size_bytes": 2779170
+    },
+    {
+      "id": "SRC-SMALL-TRIM-SPEC",
+      "path": "data/evidence/kohler-T14491-4-spec.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/K-T14491-4_spec_US-CA_Kohler_en.pdf",
+      "title": "T14491-4 specification",
+      "revision": "saved 2026-10-14",
+      "pages": "dimensioned page",
+      "applicability": "User-confirmed smaller trim context; not main plate dimensions",
+      "retrieved_date": "2026-10-14",
+      "sha256": "d9cad3550b03e41def7b865cfc326e66e3837ebfe57467cff2eb1cbfcd6e739e",
+      "size_bytes": 273670
+    },
+    {
+      "id": "SRC-USER-MODELS",
+      "source": "user goal updates 2026-10-14",
+      "path": "docs/project_request.md",
+      "claim": "Exact Kohler identities supplied by user; no physical dimensions supplied"
+    }
+  ]
+}

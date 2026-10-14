@@ -1,0 +1,62 @@
+{
+  "status": "PASS",
+  "revision": "R001",
+  "desktop": [
+    1440,
+    1000
+  ],
+  "mobile": [
+    390,
+    844
+  ],
+  "model_nodes": [
+    "WALL_DISPLAY_PROXY_0",
+    "WALL_DISPLAY_PROXY_1",
+    "CUSTOM-01",
+    "GASKET-01",
+    "PLATE-INNER",
+    "STUD-SW-NUT",
+    "STUD-NE-NUT",
+    "TRIM-OUTER",
+    "HANDLE-LOWER",
+    "HANDLE-UPPER",
+    "VALVE-LOWER",
+    "VALVE-UPPER",
+    "STUD-SW",
+    "STUD-NE",
+    "NEW-SEAL-PATH"
+  ],
+  "checks": [
+    "GLB loading",
+    "local controls",
+    "responsive page",
+    "JSON download and persistence",
+    "linked asset HTTP success",
+    "known-size asymmetric part + hole in browser",
+    "CAD-to-browser custom placement/bounds"
+  ],
+  "coordinate": {
+    "dims_m": [
+      0.10000000149011612,
+      0.06000000238418579,
+      0.004000000189989805
+    ],
+    "marker": true,
+    "hole_ring_vertices": 968,
+    "custom_bounds_m": [
+      [
+        -0.11420080770039931,
+        -0.07530441507697105,
+        0.0010000000474974513
+      ],
+      [
+        0.11579919647192582,
+        0.15465012565255165,
+        0.004175000241957605
+      ]
+    ]
+  },
+  "errors": [],
+  "failed": [],
+  "note": "Isolated synthetic browser values were never imported. No physical measurements or fit established."
+}

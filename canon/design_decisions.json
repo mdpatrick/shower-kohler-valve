@@ -1,0 +1,61 @@
+{
+  "revision": "R001",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "candidate_identity": {
+    "trim": "K-T14489-4-BN",
+    "small_trim": "K-T14491-4-BN",
+    "valve": "K-2973-KS-NA",
+    "status": "user-confirmed exact model names on 2026-10-14",
+    "diverter_installation_status": "user identifies separate valve as K-737-K-NA; post-scan work status unknown",
+    "physical_revision_and_dimensions": "not verified",
+    "diverter": "K-737-K-NA"
+  },
+  "nominal_parameters": {
+    "trim_diameter_mm": 184.15,
+    "control_spacing_mm": 79.375,
+    "handle_lever_length_mm": 76.2,
+    "trim_total_projection_mm": 107.95,
+    "source": "SRC-KOHLER-SPEC; inch dimensions converted exactly; physical part not verified"
+  },
+  "visualization_assumptions": {
+    "inner_width_mm": 116,
+    "inner_height_mm": 165,
+    "inner_sheet_thickness_mm": 1.5,
+    "inner_formed_depth_mm": 5,
+    "hub_outer_diameter_mm": 32,
+    "hub_bore_mm": 18,
+    "hub_length_mm": 18,
+    "gasket_width_mm": 6,
+    "gasket_free_thickness_mm": 3,
+    "outer_shell_thickness_mm": 1.5,
+    "outer_cavity_depth_mm": 14.5,
+    "drain_width_mm": 4,
+    "drain_height_mm": 2,
+    "stud_envelope_diameter_mm": 5,
+    "stud_clearance_slot_width_mm": 7,
+    "stud_clearance_slot_length_mm": 11,
+    "note": "Exploratory display only. Unknown physical values have no asserted tolerance. Scan stud positions constrain provisional hole locations; hidden shape is not known.",
+    "outer_cavity_basis": "nominal exterior center height approximately 16mm from official OBJ minus assumed 1.5mm shell; NOT an observed rear cavity"
+  },
+  "candidate": {
+    "shape": "circular",
+    "thickness_mm": 3.175,
+    "thickness_status": "unvalidated prior design lead",
+    "target_sound_land_mm": 10,
+    "land_status": "exploratory allowance; not manufacturer approval, bond minimum or structural proof",
+    "diameter_rounding_mm": 5,
+    "aperture": "single clearance capsule around both control/valve envelopes; no screw holes unless outside aperture and justified",
+    "retention": "unresolved: repeatable registration and clamping require physical review",
+    "material": null,
+    "finish": null,
+    "manufacturing_tolerances": null
+  },
+  "rejected_assumptions": [
+    "8 inch plate assumed sufficient",
+    "plate-side scans averaged into primary registration",
+    "studs cut to resolve interference",
+    "outer trim substituted for gasket support",
+    "surface seal assumed to restore hidden waterproofing"
+  ],
+  "selection": null
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "version": "4.5.13 LTS",
+  "dims_m": [
+    0.10000000149011612,
+    0.004000000189989805,
+    0.06000000238418579
+  ],
+  "hole_ring_vertex_count": 316,
+  "NE_marker_verified": true,
+  "save_reopen_verified": true,
+  "CPU_render_saved": true
+}

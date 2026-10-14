@@ -1,0 +1,12 @@
+{
+  "OS": "macOS-26.5-arm64-arm-64bit-Mach-O",
+  "architecture": "arm64",
+  "python": "3.12.14",
+  "cadquery": "2.8.0",
+  "OCP": "7.9.3.1.1",
+  "blender": "4.5.13 LTS",
+  "blender_build": "daeeeca98fb0",
+  "cad_coordinate_test": "PASS",
+  "blender_coordinate_test": "PASS",
+  "note": "Native Blender must be launched outside the Codex filesystem sandbox on this Mac; sandbox attempt crashed at startup. No security settings changed."
+}

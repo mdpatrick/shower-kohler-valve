@@ -1,0 +1,488 @@
+{
+  "project_id": "shower-kohler-valve",
+  "revision": "R001",
+  "units": "mm",
+  "state": "proposed_provisional",
+  "fit_verdict": "UNRESOLVED / candidate not selected",
+  "readiness": "DRAFT_NOT_FOR_FABRICATION",
+  "coverage": [
+    {
+      "feature_id": "OPEN-MAIN",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        50.909090909090914,
+        119.5454545454546
+      ],
+      "max_radius_mm": 94.29015756752376,
+      "outer_margin_mm": {
+        "nominal_trim": -2.215157567523761,
+        "prior_8in": 7.309842432476231,
+        "prior_8_25in": 10.484842432476242,
+        "candidate": 20.709842432476236
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 19.209842432476236,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    },
+    {
+      "feature_id": "CUT-01",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        -35.89090909090909,
+        131.38181818181815
+      ],
+      "max_radius_mm": 98.77599677982286,
+      "outer_margin_mm": {
+        "nominal_trim": -6.700996779822859,
+        "prior_8in": 2.824003220177133,
+        "prior_8_25in": 5.999003220177144,
+        "candidate": 16.22400322017714
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 14.724003220177138,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    },
+    {
+      "feature_id": "CUT-02",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        30.545454545454547,
+        128.96363636363637
+      ],
+      "max_radius_mm": 94.11526735155641,
+      "outer_margin_mm": {
+        "nominal_trim": -2.040267351556409,
+        "prior_8in": 7.4847326484435825,
+        "prior_8_25in": 10.659732648443594,
+        "candidate": 20.88473264844359
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 19.38473264844359,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    },
+    {
+      "feature_id": "CUT-03",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        62.10909090909092,
+        120.05454545454545
+      ],
+      "max_radius_mm": 101.09460666897742,
+      "outer_margin_mm": {
+        "nominal_trim": -9.019606668977417,
+        "prior_8in": 0.5053933310225744,
+        "prior_8_25in": 3.680393331022586,
+        "candidate": 13.90539333102258
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 12.40539333102258,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    },
+    {
+      "feature_id": "CUT-04",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        -71.27272727272727,
+        2.963636363636356
+      ],
+      "max_radius_mm": 80.8821900051251,
+      "outer_margin_mm": {
+        "nominal_trim": 11.192809994874906,
+        "prior_8in": 20.717809994874898,
+        "prior_8_25in": 23.89280999487491,
+        "candidate": 34.117809994874904
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 32.617809994874904,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    },
+    {
+      "feature_id": "CUT-05",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        90.36363636363636,
+        5.2545454545454495
+      ],
+      "max_radius_mm": 95.95003557336901,
+      "outer_margin_mm": {
+        "nominal_trim": -3.8750355733690043,
+        "prior_8in": 5.649964426630987,
+        "prior_8_25in": 8.824964426630999,
+        "candidate": 19.049964426630993
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 17.549964426630993,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    },
+    {
+      "feature_id": "CUT-06",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        36.90909090909091,
+        -44.63636363636366
+      ],
+      "max_radius_mm": 91.71678716860431,
+      "outer_margin_mm": {
+        "nominal_trim": 0.35821283139569005,
+        "prior_8in": 9.883212831395682,
+        "prior_8_25in": 13.058212831395693,
+        "candidate": 23.283212831395687
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 21.783212831395687,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    },
+    {
+      "feature_id": "CUT-07",
+      "state": "as_observed_at_capture",
+      "revision": "R001",
+      "units": "mm",
+      "status": "UNRESOLVED",
+      "result_type": "conditional projected geometry",
+      "limiting_point_mm": [
+        92.14545454545454,
+        5.890909090909058
+      ],
+      "max_radius_mm": 97.39280847006683,
+      "outer_margin_mm": {
+        "nominal_trim": -5.317808470066822,
+        "prior_8in": 4.207191529933169,
+        "prior_8_25in": 7.382191529933181,
+        "candidate": 17.607191529933175
+      },
+      "candidate_margin_after_1_5mm_trace_allowance": 16.107191529933175,
+      "criterion": "conceal all damage and provide reviewed sound support/seal land; 10 mm exploratory allowance only",
+      "source": "SCAN-WALL",
+      "unknowns": [
+        "absolute scale error",
+        "unseen defects",
+        "physical trim registration",
+        "sound stone and grout",
+        "installation placement"
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "id": "INDEPENDENT-M08-X",
+      "status": "UNRESOLVED",
+      "prediction_mm": 103.9818181818182,
+      "physical_value_mm": null,
+      "physical_minus_model_mm": null,
+      "used_to_fit": false,
+      "conditional_result": "No physical cross-check supplied",
+      "criterion": "independent horizontal/vertical dimensions agree within justified measurement and tracing bounds",
+      "needed": "M08 raw observations and uncertainty; do not silently rescale to erase disagreement"
+    },
+    {
+      "id": "INDEPENDENT-M08-Y",
+      "status": "UNRESOLVED",
+      "prediction_mm": 176.65454545454548,
+      "physical_value_mm": null,
+      "physical_minus_model_mm": null,
+      "used_to_fit": false,
+      "conditional_result": "No physical cross-check supplied",
+      "criterion": "independent horizontal/vertical dimensions agree within justified measurement and tracing bounds",
+      "needed": "M08 raw observations and uncertainty; do not silently rescale to erase disagreement"
+    },
+    {
+      "id": "COVERAGE-01",
+      "status": "UNRESOLVED",
+      "feature_ids": [
+        "OPEN-MAIN",
+        "CUT-01",
+        "CUT-02",
+        "CUT-03",
+        "CUT-04",
+        "CUT-05",
+        "CUT-06",
+        "CUT-07"
+      ],
+      "conditional_result": "8-inch outline covers traced points but sound landing unproven",
+      "limiting_feature": "CUT-03",
+      "candidate_diameter_mm": 230,
+      "minimum_outline_margin_mm": 13.90539333102258,
+      "needed": "M01 scale, M08 damage extents, outer trim relationship and sound land verification"
+    },
+    {
+      "id": "GASKET-WALL",
+      "status": "UNRESOLVED",
+      "conditional_result": "FAIL under provisional gasket outline",
+      "unsupported_projected_area_mm2": 2390.9682748739506,
+      "criterion": "entire actual foam contact path lands on suitable continuous surface",
+      "feature_ids": [
+        "GASKET-01",
+        "OPEN-MAIN"
+      ],
+      "needed": "M02 actual inner outline; M05 actual gasket footprint, notches and condition; physical support check",
+      "note": "Area is of an assumed contact band, not an observed gasket or demonstrated compression."
+    },
+    {
+      "id": "GASKET-CANDIDATE",
+      "status": "UNRESOLVED",
+      "conditional_result": "FAIL under provisional gasket/aperture dimensions",
+      "unsupported_projected_area_mm2": 1800.9032280727029,
+      "criterion": "aperture must not remove actual gasket landing",
+      "feature_ids": [
+        "GASKET-01",
+        "CUSTOM-01"
+      ],
+      "needed": "Measure before choosing single large aperture; contouring/rebuilding may be necessary. Candidate is not selected."
+    },
+    {
+      "id": "CENTERING-01",
+      "status": "UNRESOLVED",
+      "trim_center_inferred_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "mount_midpoint_mm": [
+        1.971121106896316,
+        40.592526615988014
+      ],
+      "trim_minus_mount_midpoint_mm": [
+        -1.1719267032883076,
+        -0.9196711663325274
+      ],
+      "opening_centroid_mm": [
+        9.113494339330002,
+        42.064322116370064
+      ],
+      "candidate_minus_trim_center_mm": [
+        0,
+        0
+      ],
+      "inferred_control_line_rotation_deg": -1.154045336994736,
+      "nominal_visible_border_min_max_mm": [
+        22.924999999999997,
+        22.924999999999997
+      ],
+      "criterion": "repeatable physically retained position with adequate border and seal land",
+      "needed": "M03/M06 datums; removable registration method; physical centering/retention test",
+      "note": "Concentric placement is a design assumption, not proof of how the part is located."
+    },
+    {
+      "id": "DEPTH-STUD-SW",
+      "feature_ids": [
+        "STUD-SW-TIP"
+      ],
+      "status": "UNRESOLVED",
+      "observed_tip_z_mm": 26.61188122141667,
+      "guide_nominal_max_mm": 11.1125,
+      "guide_sources": [
+        "SRC-KOHLER-OLD-GUIDE p7",
+        "SRC-KOHLER-CURRENT-GUIDE step10"
+      ],
+      "tip_minus_original_wall_limit_mm": 15.49938122141667,
+      "conditional_result": "apparent excess; confirm datum and depth before adjustment",
+      "needed": "M07 physical straightedge-to-tip depth and thread/adjustment inspection by installer; no cutting authorized"
+    },
+    {
+      "id": "DEPTH-STUD-NE",
+      "feature_ids": [
+        "STUD-NE-TIP"
+      ],
+      "status": "UNRESOLVED",
+      "observed_tip_z_mm": 30.676418397046806,
+      "guide_nominal_max_mm": 11.1125,
+      "guide_sources": [
+        "SRC-KOHLER-OLD-GUIDE p7",
+        "SRC-KOHLER-CURRENT-GUIDE step10"
+      ],
+      "tip_minus_original_wall_limit_mm": 19.563918397046805,
+      "conditional_result": "apparent excess; confirm datum and depth before adjustment",
+      "needed": "M07 physical straightedge-to-tip depth and thread/adjustment inspection by installer; no cutting authorized"
+    },
+    {
+      "id": "MESH-PLATE-SLICE",
+      "status": "UNRESOLVED",
+      "method": "full-resolution vertex sample inside opening at proposed plate depth; triangle crossings/hidden geometry not certified",
+      "vertices_in_slice": 2889,
+      "vertices_in_candidate_material": 0,
+      "example_points_mm": [],
+      "conditional_result": "no sampled vertex penetration; not a clearance pass",
+      "needed": "physical clearance / thickness mockup; triangle-level check after accepted scale and aperture decisions"
+    },
+    {
+      "id": "NEW-SEAL-GROUT",
+      "status": "UNRESOLVED",
+      "crossings": "MULTIPOINT ((91.61791168756706 99.94597387704745), (90.67979765099429 -21.991370174515534))",
+      "criterion": "continuous compatible surface seal and support over actual substrate topography",
+      "needed": "grout recess width/depth/soundness and selected compatible sealing detail",
+      "note": "Candidate land crosses GROUT-01. A planar annulus in CAD is not a continuous real landing."
+    },
+    {
+      "id": "STRUCTURAL-SUPPORT",
+      "status": "UNRESOLVED",
+      "criterion": "plate span stiffness and load path",
+      "needed": "supported contact map, retaining/clamping force, material/process, physical rocking/load check"
+    },
+    {
+      "id": "INSTALLATION-PATH",
+      "status": "UNRESOLVED",
+      "criterion": "axial installation, removal and tools",
+      "needed": "thickness mockup; hubs/stud/nut envelope, handle removal and wrench access"
+    },
+    {
+      "id": "THREAD-ENGAGEMENT",
+      "status": "UNRESOLVED",
+      "criterion": "correct stud, nut and handle engagement",
+      "needed": "installer observes threads and adapter selection; do not infer from tip"
+    },
+    {
+      "id": "WATERPROOFING",
+      "status": "UNRESOLVED",
+      "criterion": "concealed water barrier continuity",
+      "needed": "qualified inspection through existing access and compatible repair detail"
+    },
+    {
+      "id": "POST-SCAN-STATE",
+      "status": "UNRESOLVED",
+      "criterion": "current piping and hardware pose",
+      "needed": "user/installer states completed changes with new photos if altered"
+    },
+    {
+      "id": "CAD-CLASH-STUD-SW",
+      "status": "UNRESOLVED",
+      "conditional_result": "FAIL in provisional geometry",
+      "intersection_mm3": 29.452431127404317,
+      "method": "exact OCCT solid intersection of assumed stud envelope and reference trim cavity",
+      "needed": "M07 actual depths/cavity; installer adjustment feasibility"
+    },
+    {
+      "id": "CAD-CLASH-STUD-NE",
+      "status": "UNRESOLVED",
+      "conditional_result": "FAIL in provisional geometry",
+      "intersection_mm3": 29.452431127404314,
+      "method": "exact OCCT solid intersection of assumed stud envelope and reference trim cavity",
+      "needed": "M07 actual depths/cavity; installer adjustment feasibility"
+    }
+  ],
+  "error_budget": {
+    "scan_scale": {
+      "bound_mm": null,
+      "note": "nominal control spacing used as fit input, not independent scale check"
+    },
+    "feature_tracing": {
+      "bound_mm": 1.5,
+      "note": "conditional R001 projection selection allowance"
+    },
+    "registration": {
+      "absolute_bound_mm": null,
+      "plane_consistency_rms_mm": 0.2300625798286748
+    },
+    "physical_measurement": {
+      "bound_mm": null
+    },
+    "fabrication": {
+      "bound_mm": null
+    },
+    "installation_placement": {
+      "bound_mm": null
+    },
+    "CAD_tessellation": {
+      "linear_tolerance_mm": 0.04,
+      "note": "export setting, not a physical tolerance; analytic STEP/DXF checked separately"
+    },
+    "combination": "No probabilistic RSS: scale is shared; unresolved bounds prevent a demonstrated fit pass."
+  },
+  "alternatives": [
+    {
+      "id": "ALT-FACTORY",
+      "name": "Factory stud/adapter adjustment",
+      "viability": "may resolve seating only; does not repair oversized opening or missing gasket support"
+    },
+    {
+      "id": "ALT-REBUILD",
+      "name": "Supported local rebuilding",
+      "viability": "potentially avoids added stack depth; backing access, sound substrate and waterproofing detail must be established"
+    },
+    {
+      "id": "ALT-PLATE",
+      "name": "Custom backing plate",
+      "viability": "conditional coverage; current assumed aperture/gasket conflict prevents selection; support/retention/sealing unverified"
+    },
+    {
+      "id": "ALT-COMBINATION",
+      "name": "Supported local repair plus shaped plate",
+      "viability": "may provide gasket landing with smaller apertures; no selected materials or permanent instructions yet"
+    }
+  ]
+}

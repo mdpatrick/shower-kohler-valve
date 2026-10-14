@@ -1,0 +1,25 @@
+{
+  "status": "PASS",
+  "scope": "evidence/revision/export snapshot integrity only",
+  "revision": "R001",
+  "input_checks": [
+    {
+      "id": "SCAN-WALL",
+      "status": "PASS",
+      "committed_bytes_checked": true
+    },
+    {
+      "id": "SCAN-PLATE-1",
+      "status": "PASS",
+      "committed_bytes_checked": true
+    },
+    {
+      "id": "SCAN-PLATE-2",
+      "status": "PASS",
+      "committed_bytes_checked": true
+    }
+  ],
+  "errors": [],
+  "physical_fit": "UNRESOLVED",
+  "fabrication_approval": "NOT GIVEN"
+}

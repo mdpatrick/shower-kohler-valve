@@ -1,0 +1,209 @@
+{
+  "project_id": "shower-kohler-valve",
+  "model_revision": null,
+  "date": null,
+  "observer": null,
+  "purpose": "blank form; no physical results recorded",
+  "checks": [
+    {
+      "id": "P01",
+      "check": "template calibration X/Y",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P02",
+      "check": "valve registration",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P03",
+      "check": "repeatable centering and retention",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P04",
+      "check": "all gouges including CUT-03",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P05",
+      "check": "sound overlap and support",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P06",
+      "check": "rocking or deflection",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P07",
+      "check": "entire gasket contact",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P08",
+      "check": "outer trim seating",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P09",
+      "check": "stud and nut engagement",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P10",
+      "check": "adapter and handle engagement",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P11",
+      "check": "drain at six oclock and unobstructed",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P12",
+      "check": "handle travel and diverter clearance",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P13",
+      "check": "tool and removal access",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P14",
+      "check": "cartridge access",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P15",
+      "check": "incoming part revision and material",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P16",
+      "check": "incoming dimensions and thickness",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P17",
+      "check": "incoming flatness edges and finish",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P18",
+      "check": "product cure conditions",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P19",
+      "check": "supply and valve leak test",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    },
+    {
+      "id": "P20",
+      "check": "surface-water entry test",
+      "status": "NOT PERFORMED",
+      "method": null,
+      "raw_observation": null,
+      "unit": null,
+      "photo_ref": null,
+      "notes": null
+    }
+  ]
+}

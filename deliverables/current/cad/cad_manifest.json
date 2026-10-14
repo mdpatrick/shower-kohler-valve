@@ -1,0 +1,484 @@
+{
+  "revision": "R001",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "units": "mm",
+  "parts": [
+    {
+      "id": "CUSTOM-01",
+      "stl": "data/derived/cad/CUSTOM-01.stl",
+      "step": "deliverables/current/cad/CUSTOM-01_DRAFT_NOT_FOR_FABRICATION.step",
+      "location_mm": [
+        0.7991944036080083,
+        39.672855449655486,
+        1.0
+      ],
+      "color": [
+        0.18,
+        0.52,
+        0.64
+      ],
+      "collection": "04_CUSTOM_CANDIDATE",
+      "evidence": "Computed draft profile / material and thickness unapproved",
+      "status": "unselected candidate",
+      "bounds_local_mm": [
+        [
+          -115.0,
+          -115.0,
+          0.0
+        ],
+        [
+          115.0,
+          115.0,
+          3.175
+        ]
+      ],
+      "volume_mm3": 81495.29892049797,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "GASKET-01",
+      "stl": "data/derived/cad/GASKET-01.stl",
+      "step": null,
+      "location_mm": [
+        0.7991944036080083,
+        39.672855449655486,
+        4.175
+      ],
+      "color": [
+        0.64,
+        0.22,
+        0.45
+      ],
+      "collection": "02_INNER_AND_GASKET",
+      "evidence": "Contact path topology provisional; use accepted dimensions where available",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -58.0,
+          -82.5,
+          0.0
+        ],
+        [
+          58.0,
+          82.5,
+          3.0
+        ]
+      ],
+      "volume_mm3": 7984.35345410779,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "PLATE-INNER",
+      "stl": "data/derived/cad/PLATE-INNER.stl",
+      "step": "deliverables/current/cad/PLATE-INNER_DRAFT_NOT_FOR_FABRICATION.step",
+      "location_mm": [
+        0.7991944036080083,
+        39.672855449655486,
+        7.175
+      ],
+      "color": [
+        0.9,
+        0.55,
+        0.16
+      ],
+      "collection": "02_INNER_AND_GASKET",
+      "evidence": "Factory guide form + current evidence; unconfirmed surfaces remain assumed",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -58.0,
+          -82.5,
+          0.0
+        ],
+        [
+          58.0,
+          82.5,
+          8.0
+        ]
+      ],
+      "volume_mm3": 28707.909175682238,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "TRIM-OUTER",
+      "stl": "data/derived/cad/TRIM-OUTER.stl",
+      "step": "deliverables/current/cad/TRIM-OUTER_DRAFT_NOT_FOR_FABRICATION.step",
+      "location_mm": [
+        0.7991944036080083,
+        39.672855449655486,
+        4.175
+      ],
+      "color": [
+        0.63,
+        0.67,
+        0.68
+      ],
+      "collection": "03_OUTER_TRIM",
+      "evidence": "User identified K-T14489-4-BN; nominal exterior; cavity/shell/drain detail assumed",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -92.075,
+          -92.075,
+          0.0
+        ],
+        [
+          92.075,
+          92.075,
+          16.0
+        ]
+      ],
+      "volume_mm3": 46271.37569210722,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "VALVE-LOWER",
+      "stl": "data/derived/cad/VALVE-LOWER.stl",
+      "step": null,
+      "location_mm": [
+        -4.496403249731884e-15,
+        -7.549516567451064e-15,
+        0.0
+      ],
+      "color": [
+        0.46,
+        0.34,
+        0.15
+      ],
+      "collection": "01_OBSERVED_ENVELOPES",
+      "evidence": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -30.0,
+          -30.0,
+          -25.0
+        ],
+        [
+          30.0,
+          30.0,
+          33.40186167467328
+        ]
+      ],
+      "volume_mm3": 132555.3410013898,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "HANDLE-LOWER",
+      "stl": "data/derived/cad/HANDLE-LOWER.stl",
+      "step": null,
+      "location_mm": [
+        -4.496403249731884e-15,
+        -7.549516567451064e-15,
+        32.125
+      ],
+      "color": [
+        0.48,
+        0.51,
+        0.52
+      ],
+      "collection": "03_OUTER_TRIM",
+      "evidence": "Nominal form only; engagement and travel require dry fit",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -21.0,
+          -38.1,
+          0.0
+        ],
+        [
+          21.0,
+          38.1,
+          80.0
+        ]
+      ],
+      "volume_mm3": 45447.55325106004,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "VALVE-UPPER",
+      "stl": "data/derived/cad/VALVE-UPPER.stl",
+      "step": null,
+      "location_mm": [
+        1.598388807216021,
+        79.34571089931099,
+        0.0
+      ],
+      "color": [
+        0.46,
+        0.34,
+        0.15
+      ],
+      "collection": "01_OBSERVED_ENVELOPES",
+      "evidence": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -18.0,
+          -18.0,
+          -25.0
+        ],
+        [
+          18.0,
+          18.0,
+          31.95481637340469
+        ]
+      ],
+      "volume_mm3": 47115.59758569269,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "HANDLE-UPPER",
+      "stl": "data/derived/cad/HANDLE-UPPER.stl",
+      "step": null,
+      "location_mm": [
+        1.598388807216021,
+        79.34571089931099,
+        32.125
+      ],
+      "color": [
+        0.48,
+        0.51,
+        0.52
+      ],
+      "collection": "03_OUTER_TRIM",
+      "evidence": "Nominal form only; engagement and travel require dry fit",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -21.0,
+          -38.1,
+          0.0
+        ],
+        [
+          21.0,
+          38.1,
+          80.0
+        ]
+      ],
+      "volume_mm3": 45447.55325106004,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "STUD-SW",
+      "stl": "data/derived/cad/STUD-SW.stl",
+      "step": null,
+      "location_mm": [
+        -47.291356275538035,
+        18.462229374095184,
+        0.0
+      ],
+      "color": [
+        0.65,
+        0.55,
+        0.23
+      ],
+      "collection": "01_OBSERVED_ENVELOPES",
+      "evidence": "Observed tip; envelope axis, diameter and hidden engagement unverified",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -2.5,
+          -2.5,
+          -15.0
+        ],
+        [
+          2.5,
+          2.5,
+          26.611881221416667
+        ]
+      ],
+      "volume_mm3": 817.0473771703355,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "STUD-SW-NUT",
+      "stl": "data/derived/cad/STUD-SW-NUT.stl",
+      "step": null,
+      "location_mm": [
+        -47.291356275538035,
+        18.462229374095184,
+        8.675
+      ],
+      "color": [
+        0.48,
+        0.48,
+        0.5
+      ],
+      "collection": "02_INNER_AND_GASKET",
+      "evidence": "Assumed nut envelope; seating unknown",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -5.0,
+          -4.330127018922195,
+          0.0
+        ],
+        [
+          5.0,
+          4.330127018922194,
+          4.0
+        ]
+      ],
+      "volume_mm3": 181.26780479558676,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "STUD-NE",
+      "stl": "data/derived/cad/STUD-NE.stl",
+      "step": null,
+      "location_mm": [
+        51.23359848933067,
+        62.72282385788084,
+        0.0
+      ],
+      "color": [
+        0.65,
+        0.55,
+        0.23
+      ],
+      "collection": "01_OBSERVED_ENVELOPES",
+      "evidence": "Observed tip; envelope axis, diameter and hidden engagement unverified",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -2.5,
+          -2.5,
+          -15.0
+        ],
+        [
+          2.5,
+          2.5,
+          30.676418397046803
+        ]
+      ],
+      "volume_mm3": 896.8543779903495,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "STUD-NE-NUT",
+      "stl": "data/derived/cad/STUD-NE-NUT.stl",
+      "step": null,
+      "location_mm": [
+        51.23359848933067,
+        62.72282385788084,
+        8.675
+      ],
+      "color": [
+        0.48,
+        0.48,
+        0.5
+      ],
+      "collection": "02_INNER_AND_GASKET",
+      "evidence": "Assumed nut envelope; seating unknown",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -5.0,
+          -4.330127018922195,
+          0.0
+        ],
+        [
+          5.0,
+          4.330127018922194,
+          4.0
+        ]
+      ],
+      "volume_mm3": 181.26780479558676,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    },
+    {
+      "id": "NEW-SEAL-PATH",
+      "stl": "data/derived/cad/NEW-SEAL-PATH.stl",
+      "step": null,
+      "location_mm": [
+        0.7991944036080083,
+        39.672855449655486,
+        0.0
+      ],
+      "color": [
+        0.27,
+        0.58,
+        0.35
+      ],
+      "collection": "05_PROPOSED_MATERIALS",
+      "evidence": "Illustrative location; thickness/chemistry/adhesion/continuity unverified",
+      "status": "provisional reference",
+      "bounds_local_mm": [
+        [
+          -112.0,
+          -112.0,
+          0.0
+        ],
+        [
+          112.0,
+          112.0,
+          1.0
+        ]
+      ],
+      "volume_mm3": 4109.203190895449,
+      "tessellation_tolerance_mm": 0.04,
+      "angular_tolerance_radians": 0.08
+    }
+  ],
+  "checks": [
+    {
+      "id": "CUSTOM-01",
+      "status": "PASS",
+      "check": "STEP reimport validity, solid count, bounds and volume",
+      "physical_fit": "UNRESOLVED"
+    },
+    {
+      "id": "PLATE-INNER",
+      "status": "PASS",
+      "check": "STEP reimport validity, solid count, bounds and volume",
+      "physical_fit": "UNRESOLVED"
+    },
+    {
+      "id": "TRIM-OUTER",
+      "status": "PASS",
+      "check": "STEP reimport validity, solid count, bounds and volume",
+      "physical_fit": "UNRESOLVED"
+    },
+    {
+      "id": "ASSEMBLY",
+      "status": "PASS",
+      "check": "non-fused STEP solid count",
+      "expected": 15,
+      "actual": 15
+    },
+    {
+      "id": "DXF",
+      "status": "PASS",
+      "units": "mm",
+      "contours": 2,
+      "internal_apertures": 1,
+      "separate_fastener_holes": 0,
+      "entity_types": [
+        "ARC",
+        "CIRCLE",
+        "LINE"
+      ],
+      "reimport_volume_agrees": true
+    }
+  ],
+  "warnings": [
+    "Reference solids are not replacement Kohler parts.",
+    "Hidden cavity, gasket, slots and engagement unknown.",
+    "No physical fit or material approval."
+  ],
+  "assembly_state": "proposed_provisional",
+  "wall": "irregular mesh accompanies STEP in Blender/GLB; not converted to faceted STEP"
+}

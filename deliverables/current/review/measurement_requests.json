@@ -1,0 +1,392 @@
+{
+  "project_id": "shower-kohler-valve",
+  "revision": "R001",
+  "groups": [
+    {
+      "id": "01",
+      "title": "Check the wall scale",
+      "view": "wall_measure",
+      "purpose": "Calibrates the wall and valve scan; no CAD grid can establish physical scale.",
+      "instructions": "With the trim removed only if safely accessible, touch the two visible brass stem tips lightly. Measure along the line joining the tips: outside span O, then inside gap I. The center spacing is (O + I) / 2, even if tip diameters differ. Repeat both readings. If access risks turning hardware, have the installer take the readings. A straight-on photograph with a ruler beside both tips is the fallback, with lower accuracy.",
+      "fields": [
+        {
+          "id": "M01-O",
+          "label": "O: farthest tip edges",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "caliper",
+          "contacts": "A upper outside tangent to D lower outside tangent",
+          "role": "fitting input"
+        },
+        {
+          "id": "M01-I",
+          "label": "I: gap between nearest tip edges",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "caliper",
+          "contacts": "B upper inside tangent to C lower inside tangent",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "02",
+      "title": "Identify the inner plate datums",
+      "view": "inner_measure",
+      "purpose": "Replaces the assumed outline and prevents misleading hole coordinates.",
+      "instructions": "Place the loose factory inner plate on a padded surface. FRONT has the hubs facing you; BACK has the wall-facing foam. Do not remove or compress the gasket. Use the leftmost tangent as datum A and bottommost tangent as datum B. Record the overall width and height; photograph front and back with those labels. If the part is not capsule-shaped, trace its actual outline and describe the difference. For a span beyond the caliper range, use two square blocks and a steel ruler.",
+      "fields": [
+        {
+          "id": "M02-W",
+          "label": "Maximum metal outline width",
+          "prediction_mm": 116,
+          "useful_accuracy_mm": 0.5,
+          "method": "caliper or blocks/ruler",
+          "contacts": "A left tangent to opposite right tangent",
+          "role": "fitting input"
+        },
+        {
+          "id": "M02-H",
+          "label": "Maximum metal outline height",
+          "prediction_mm": 165,
+          "useful_accuracy_mm": 0.5,
+          "method": "blocks and steel ruler",
+          "contacts": "B bottom tangent to top tangent",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "03",
+      "title": "Locate the two mounting openings",
+      "view": "inner_measure",
+      "purpose": "Resolves hole/slot centers, size, and alignment with the actual diagonal studs.",
+      "instructions": "Use the same A and B tangent datums as Check 02. Measure to both the near and far edges of each opening, not an eyeballed center. X center from A = (XN + XF)/2; Y center from B = (YN + YF)/2. Opening width = XF - XN; height = YF - YN. Do not use a curved edge as a moving datum: square blocks against the outline can transfer A/B to a ruler. If these are round holes or different slots, record that and photograph them. Take the plate off only using the applicable factory procedure.",
+      "fields": [
+        {
+          "id": "M03-SW-XN",
+          "label": "SW slot: near X edge",
+          "prediction_mm": 6.409449320853959,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum A to left edge of this opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M03-SW-XF",
+          "label": "SW slot: far X edge",
+          "prediction_mm": 13.409449320853959,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum A to right edge of this opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M03-SW-YN",
+          "label": "SW slot: near Y edge",
+          "prediction_mm": 55.7893739244397,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum B to bottom edge of this opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M03-SW-YF",
+          "label": "SW slot: far Y edge",
+          "prediction_mm": 66.7893739244397,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum B to top edge of this opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M03-NE-XN",
+          "label": "NE slot: near X edge",
+          "prediction_mm": 104.93440408572266,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum A to left edge of this opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M03-NE-XF",
+          "label": "NE slot: far X edge",
+          "prediction_mm": 111.93440408572266,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum A to right edge of this opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M03-NE-YN",
+          "label": "NE slot: near Y edge",
+          "prediction_mm": 100.04996840822535,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum B to bottom edge of this opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M03-NE-YF",
+          "label": "NE slot: far Y edge",
+          "prediction_mm": 111.04996840822535,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper / tangent blocks",
+          "contacts": "datum B to top edge of this opening",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "04",
+      "title": "Separate sheet thickness from formed depth",
+      "view": "depth_measure",
+      "purpose": "Controls the stack and rear interference; thin sheet can have a much larger formed envelope.",
+      "instructions": "Support the metal rear contact lands on equal blocks without loading the foam. Measure sheet thickness at an accessible unbent edge. Bridge the rear metal datum with a straightedge and measure to the frontmost formed metal face. Separately measure anything projecting toward the wall beyond that metal datum, and the forward hub projection. Mark the exact contact lands in the back photo. Do not flatten or bend the plate to measure it.",
+      "fields": [
+        {
+          "id": "M04-T",
+          "label": "Metal sheet thickness",
+          "prediction_mm": 1.5,
+          "useful_accuracy_mm": 0.1,
+          "method": "caliper",
+          "contacts": "opposite metal faces at same accessible edge",
+          "role": "fitting input"
+        },
+        {
+          "id": "M04-D",
+          "label": "Rear metal datum to front formed face",
+          "prediction_mm": 5,
+          "useful_accuracy_mm": 0.2,
+          "method": "straightedge / depth gauge",
+          "contacts": "rear metal lands to forward formed face",
+          "role": "fitting input"
+        },
+        {
+          "id": "M04-R",
+          "label": "Largest rear metal projection",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "straightedge / depth gauge",
+          "contacts": "rear land plane toward wall",
+          "role": "fitting input"
+        },
+        {
+          "id": "M04-H",
+          "label": "Forward hub projection from rear datum",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "depth gauge",
+          "contacts": "rear metal datum to front hub end",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "05",
+      "title": "Map the actual foam contact path",
+      "view": "gasket_measure",
+      "purpose": "Determines whether a plate aperture would remove gasket support.",
+      "instructions": "Photograph the BACK face straight on, with A/B labels and a ruler alongside it. Mark the inner and outer foam edges and every notch, joint, tear or missing segment. Measure overall contact-path width/height, band width at left/right/top/bottom, and free thickness without squeezing the foam. Record the smallest band width below and the other readings in notes. A single width does not confirm a continuous seal; the photo/trace remains necessary.",
+      "fields": [
+        {
+          "id": "M05-OW",
+          "label": "Outer foam footprint width",
+          "prediction_mm": 116,
+          "useful_accuracy_mm": 0.5,
+          "method": "ruler or light caliper contact",
+          "contacts": "left to right outer foam edges",
+          "role": "fitting input"
+        },
+        {
+          "id": "M05-OH",
+          "label": "Outer foam footprint height",
+          "prediction_mm": 165,
+          "useful_accuracy_mm": 0.5,
+          "method": "ruler",
+          "contacts": "bottom to top outer foam edges",
+          "role": "fitting input"
+        },
+        {
+          "id": "M05-W",
+          "label": "Smallest observed contact band width",
+          "prediction_mm": 6,
+          "useful_accuracy_mm": 0.5,
+          "method": "ruler",
+          "contacts": "inner to outer foam edge at named location",
+          "role": "fitting input"
+        },
+        {
+          "id": "M05-T",
+          "label": "Uncompressed foam thickness",
+          "prediction_mm": 3,
+          "useful_accuracy_mm": 0.5,
+          "method": "ruler / noncompressing depth comparison",
+          "contacts": "rear foam surface to metal backing",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "06",
+      "title": "Place the real outer trim",
+      "view": "trim_measure",
+      "purpose": "Separates trim center from valve axes and mounting midpoint; replaces nominal diameter.",
+      "instructions": "Protect the brushed finish. Measure the circular outer rim diameter in two directions and report any difference. Using left and bottom rim tangent blocks as datums, measure near/far edges of the LOWER control opening. Its center follows from the paired edges, so no center mark is needed. Measure the rear rim-contact plane to the inner cavity surface beside EACH stud location; report the smaller clearance and both locations in notes. Keep the drain notch at 6 oclock. Do not use the decorative front face as the rear contact datum.",
+      "fields": [
+        {
+          "id": "M06-OD",
+          "label": "Outer rim diameter",
+          "prediction_mm": 184.15,
+          "useful_accuracy_mm": 0.5,
+          "method": "blocks/ruler or large caliper",
+          "contacts": "opposite rim tangents",
+          "role": "fitting input"
+        },
+        {
+          "id": "M06-XN",
+          "label": "Left rim tangent to lower opening near edge",
+          "prediction_mm": 73.27580559639199,
+          "useful_accuracy_mm": 0.3,
+          "method": "caliper / blocks",
+          "contacts": "left tangent to left edge of lower bore",
+          "role": "fitting input"
+        },
+        {
+          "id": "M06-XF",
+          "label": "Left rim tangent to lower opening far edge",
+          "prediction_mm": 109.27580559639199,
+          "useful_accuracy_mm": 0.3,
+          "method": "caliper / blocks",
+          "contacts": "left tangent to right edge of lower bore",
+          "role": "fitting input"
+        },
+        {
+          "id": "M06-YN",
+          "label": "Bottom rim tangent to lower opening near edge",
+          "prediction_mm": 34.40214455034452,
+          "useful_accuracy_mm": 0.3,
+          "method": "caliper / blocks",
+          "contacts": "bottom tangent to bottom edge of lower bore",
+          "role": "fitting input"
+        },
+        {
+          "id": "M06-YF",
+          "label": "Bottom rim tangent to lower opening far edge",
+          "prediction_mm": 70.40214455034452,
+          "useful_accuracy_mm": 0.3,
+          "method": "caliper / blocks",
+          "contacts": "bottom tangent to top edge of lower bore",
+          "role": "fitting input"
+        },
+        {
+          "id": "M06-C",
+          "label": "Minimum rear cavity depth at stud locations",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "straightedge / depth gauge",
+          "contacts": "rear rim plane to inside shell next to each stud",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "07",
+      "title": "Measure both stud projections",
+      "view": "stud_measure",
+      "purpose": "Tests apparent seating interference without shortening studs or moving the valve.",
+      "instructions": "Have the installer establish a straightedge plane on two equal-height blocks resting on intact tile. Choose blocks taller than both studs. Measure block height H, then gap G from the straightedge underside to each stud tip. Tip projection is H - G. Record any local tile lippage and do not rest the reference on a cut or grout recess. The installer also records adjustment range, engaged threads, nuts and adapters; visible tips cannot establish these. Do not cut studs or force the outer trim.",
+      "fields": [
+        {
+          "id": "M07-H",
+          "label": "Reference-block height H",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "caliper",
+          "contacts": "tile-contact face to straightedge-contact face",
+          "role": "fitting input"
+        },
+        {
+          "id": "M07-GSW",
+          "label": "Gap G to lower-left stud tip",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "depth gauge",
+          "contacts": "straightedge underside to SW tip",
+          "role": "fitting input"
+        },
+        {
+          "id": "M07-GNE",
+          "label": "Gap G to upper-right stud tip",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "depth gauge",
+          "contacts": "straightedge underside to NE tip",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "08",
+      "title": "Check the worst cuts and current state",
+      "view": "wall_measure",
+      "purpose": "Independently checks scale/coverage and identifies changes since capture.",
+      "instructions": "Measure the horizontal span P-Q from the leftmost upper cut end to the rightmost upper cut end, and the vertical span U-V from the highest upper damage to the lowest bottom chipped edge, using the labeled scan view. Do not add these as calibration inputs until their independent-check role is reviewed. Identify whether CUT-02/CUT-07 are real cuts or texture/shadow, and whether MARK-01 is only residue. At GROUT-01 record recess width/depth. In notes state whether plastic piping was replaced with copper, either valve moved, studs adjusted, or any wall repairs occurred after the scan. Photograph altered areas.",
+      "fields": [
+        {
+          "id": "M08-X",
+          "label": "P-Q upper damage span",
+          "prediction_mm": 103.9818181818182,
+          "useful_accuracy_mm": 0.75,
+          "method": "steel ruler / straightedge",
+          "contacts": "leftmost CUT-01 end to farthest CUT-03 end",
+          "role": "independent cross-check"
+        },
+        {
+          "id": "M08-Y",
+          "label": "U-V damage height",
+          "prediction_mm": 176.65454545454548,
+          "useful_accuracy_mm": 1,
+          "method": "steel ruler / straightedge",
+          "contacts": "highest CUT-01 to lowest CUT-06",
+          "role": "independent cross-check"
+        },
+        {
+          "id": "M08-GW",
+          "label": "Adjacent grout recess width",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.5,
+          "method": "ruler",
+          "contacts": "stone edge to stone edge at marked seam",
+          "role": "fitting input"
+        },
+        {
+          "id": "M08-GD",
+          "label": "Adjacent grout recess depth",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "straightedge / depth gauge",
+          "contacts": "intact stone plane to grout surface",
+          "role": "fitting input"
+        }
+      ],
+      "first": true
+    },
+    {
+      "id": "09",
+      "title": "Installer checks before selecting a repair",
+      "view": "section_studs",
+      "purpose": "Resolves inaccessible and hidden conditions without asking the homeowner to probe plumbing.",
+      "instructions": "Record in notes: exact adapter/stud/nut arrangement and usable thread engagement; access behind the opening; soundness of stone/substrate; visible waterproofing and a feasible local connection; cartridge and tool-removal paths; lower diverter trim/handle clearance. Do not loosen pressure-containing parts or infer an unseen membrane from the scan. No numeric target is authorized for valve relocation. The current pose remains the reference until a justified, measured adjustment is approved.",
+      "fields": [],
+      "first": false
+    }
+  ]
+}
