@@ -384,8 +384,45 @@
       "title": "Installer checks before selecting a repair",
       "view": "section_studs",
       "purpose": "Resolves inaccessible and hidden conditions without asking the homeowner to probe plumbing.",
-      "instructions": "Record in notes: actual nut thickness and bearing-seat position, any washers or rear stops, foam compression when correctly seated, and adapter/stud thread engagement. Check access behind the opening, sound substrate, visible waterproofing and feasible local connection; cartridge/tool-removal paths and lower diverter clearance. The original guide limits stud tips to 7/16 inch from the finished wall; it does not approve this custom plate stack. Do not loosen pressure parts, cut studs or infer an unseen membrane from the scan. No valve relocation is approved.",
+      "instructions": "The user reports rear bolt contact with wood. Trace those fasteners to confirm whether they are the diagonal trim studs. Record whether the wood is structural framing or added blocking, rear clearance, usable threads, nut bearing seats, washers and stops. Trim studs thread into the valve; wood is not their required anchor. Separately identify the plaster guard, installed adapters and available alternatives; verify valve depth from the documented datum. Inspect foam compression, support and visible waterproofing through existing access. Keep cartridge/tool access and the lower diverter clear. The 7/16-inch limit applies to trim studs, not control stems. No stud cutting, wood drilling, valve move or unseen waterproofing detail is selected.",
       "fields": [],
+      "first": false
+    },
+    {
+      "id": "10",
+      "title": "Identify and measure the control tips",
+      "view": "control_depth_measure",
+      "purpose": "Separates bare-stem projection, adapter length and valve rough-in depth; the upper scan tip currently triggers a conditional depth flag.",
+      "instructions": "Identify the actual exposed upper tip U and lower tip L in a photo; record any attached spline/stem adapter, number or unknown identity. Do not remove a pressure-containing part to identify it. Use equal measured blocks on intact tile and a straightedge above both tips, as in Check 07. Record block height H and the gap from the straightedge UNDERSIDE to each as-found tip. Projection = H - G; a negative result means recessed behind tile. Read H again for this setup. These readings remain diagnostic until tip identity is resolved. The installer checks the plaster guard or manufacturer rough-in datum separately. Do not apply the 7/16-inch stud limit to these tips.",
+      "fields": [
+        {
+          "id": "M10-H",
+          "label": "Control setup block height H",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "caliper",
+          "contacts": "tile-contact face to straightedge underside",
+          "role": "diagnostic cross-check; tip identity required"
+        },
+        {
+          "id": "M10-GU",
+          "label": "Gap G to upper as-found tip U",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "depth gauge",
+          "contacts": "straightedge underside to identified upper tip U",
+          "role": "diagnostic cross-check; tip identity required"
+        },
+        {
+          "id": "M10-GL",
+          "label": "Gap G to lower as-found tip L",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.25,
+          "method": "depth gauge",
+          "contacts": "straightedge underside to identified lower tip L",
+          "role": "diagnostic cross-check; tip identity required"
+        }
+      ],
       "first": false
     }
   ]

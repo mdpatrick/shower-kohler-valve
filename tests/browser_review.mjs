@@ -34,6 +34,8 @@ try {
   await page.locator('[data-depth-case="proposed"]').click();
   assert((await page.locator('#depth-image').getAttribute('src')).endsWith('depth_proposed.svg'));
   await page.locator('#depth-image').screenshot({path:path.join(root,'build/browser-qa/depth-diagram.png')});
+  assert((await page.locator('#control-depth').textContent()).includes('not the 7/16-inch trim-stud limit'));
+  await page.locator('#control-depth').screenshot({path:path.join(root,'build/browser-qa/control-depth-desktop.png')});
   await page.locator('#show-depth-3d').click();
   assert(await page.locator('#section').isChecked());
   display=await page.evaluate(()=>window.reviewDisplay);
@@ -50,13 +52,21 @@ try {
   await page.locator('#current-state').fill('TEST ONLY — no real observations submitted');
   let packet=JSON.parse(await page.locator('#response').inputValue());
   assert.equal(packet.observations.length,1);assert.equal(packet.observations[0].unit,'in');assert.deepEqual(packet.observations[0].raw_readings,[4,4.01,4]);
+  for (const [id,value] of [['M10-H','50'],['M10-GU','18'],['M10-GL','16.6']])await page.locator(`[data-measurement="${id}"] .raw`).fill(value);
+  await page.locator('#photo-10').fill('TEST ONLY: adapter identity unknown');
+  packet=JSON.parse(await page.locator('#response').inputValue());
+  assert.equal(packet.observations.length,4);
+  assert.equal(packet.group_notes['10'],'TEST ONLY: adapter identity unknown');
   const [download]=await Promise.all([page.waitForEvent('download'),page.locator('#export-json').click()]);
   const downloaded=JSON.parse(await readFile(await download.path(),'utf8'));assert.deepEqual(downloaded,packet);
   await page.reload();await page.waitForFunction(()=>window.reviewFormReady);
   assert.equal(await first.locator('.raw').inputValue(),'4');
+  assert.equal(await page.locator('#M10-GU-raw').inputValue(),'18');
+  assert.equal(await page.locator('#photo-10').inputValue(),'TEST ONLY: adapter identity unknown');
   await page.setViewportSize({width:390,height:844});
   assert(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth+1),'Horizontal page overflow');
   await page.locator('#depth').screenshot({path:path.join(root,'build/browser-qa/depth-mobile.png')});
+  await page.locator('#check-10').screenshot({path:path.join(root,'build/browser-qa/control-measure-mobile.png')});
   await page.locator('#measurements').screenshot({path:path.join(root,'build/browser-qa/worksheet-mobile.png')});
   await page.setViewportSize({width:1440,height:1000});
   const assets=await page.evaluate(()=>[...new Set([...document.querySelectorAll('img[src],a[href]')].map(el=>el.src||el.href).filter(u=>u.startsWith(location.origin)&&!u.includes('#')))]);
@@ -79,7 +89,7 @@ try {
   for(let side=0;side<2;side++)for(let axis=0;axis<3;axis++)assert(Math.abs(coordinate.custom_bounds_m[side][axis]*1000-(cad.bounds_local_mm[side][axis]+cad.location_mm[axis]))<.05);
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
   const report={status:'PASS',revision:resolved.revision,desktop:[1440,1000],mobile:[390,844],model_nodes:nodes,
-    checks:['GLB loading','original-wall/added-plate per-part positions, visibility and round-trip restoration','fit warnings and visible unchanged studs','depth diagram switching and stud-section navigation','local controls','responsive page','JSON download and persistence','linked asset HTTP success','known-size asymmetric part + hole in browser','CAD-to-browser custom placement/bounds'],coordinate,errors,failed,
+    checks:['GLB loading','original-wall/added-plate per-part positions, visibility and round-trip restoration','fit warnings and visible unchanged studs','depth diagram switching and stud-section navigation','control-depth explanation and separate stud limit','Check 10 raw fields and tip-identity notes export and reload','local controls','responsive page','JSON download and persistence','linked asset HTTP success','known-size asymmetric part + hole in browser','CAD-to-browser custom placement/bounds'],coordinate,errors,failed,
     note:'Isolated synthetic browser values were never imported. No physical measurements or fit established.'};
   await writeFile(path.join(root,'docs/validation/browser_check.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }catch(e){

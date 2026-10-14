@@ -1,6 +1,22 @@
 """Readable axial envelope diagram generated from the CAD depth report."""
 from html import escape
 
+def rough_in_html(report):
+    r=report['rough_in'];low,high=r['nominal_bare_upper_tip_from_tile_mm']
+    return f'''<article id="control-depth" class="card">
+<h3>Stud obstruction, valve depth and handle adapters are separate checks</h3>
+<p><strong>New on-site report:</strong> you confirm excessive stud projection and report rear bolt contact with wood. The identity of those rear fasteners and the available adjustment remain unverified. The valve is plumbed in; no later relocation was reported.</p>
+<div class="table-wrap"><table><thead><tr><th>Part</th><th>What establishes its position</th><th>What still needs checking</th></tr></thead><tbody>
+<tr><td>Diagonal trim studs</td><td>Threads in the valve retain them; their rear ends do not require wood anchorage.</td><td>Trace the same fasteners, identify framing or added blocking, rear clearance and retained thread engagement.</td></tr>
+<tr><td>Valve body</td><td>Manufacturer rough-in datum and plaster-guard MIN/MAX relative to the finished wall.</td><td>Check actual depth independently of the stud projection. No valve move is selected.</td></tr>
+<tr><td>Control adapters / handles</td><td>Correct factory adapter and screw length, hub seating and engagement.</td><td>Identify what is on each stem; verify full seating and operation with the final complete stack.</td></tr>
+</tbody></table></div>
+<p><strong>Upper-control depth flag:</strong> the nominal drawing puts the bare upper tip {r['upper_bare_tip_from_axis_mm']:.1f} mm forward of the shower-outlet axis. Its permitted finished-wall positions imply a bare-tip projection from {low:.1f} to {high:.1f} mm relative to tile. Negative means recessed. This interval is for the upper bare stem, <strong>not the 7/16-inch trim-stud limit</strong>.</p>
+<div class="table-wrap"><table><caption>Conditional upper-tip comparison; no relocation target</caption><thead><tr><th>Basis</th><th>Tip from tile, mm</th><th>Meaning</th></tr></thead><tbody><tr><td>Nominal bare upper stem maximum</td><td>{high:.1f}</td><td>Derived from labeled dimensions; actual revision must match.</td></tr><tr><td>{escape(r['comparison_basis'])}</td><td>{r['comparison_tip_mm']:.1f}</td><td>{escape(r['conditional_result'])}.</td></tr></tbody></table></div>
+<p>The original scan estimate is {r['scan_upper_tip_from_tile_mm']:.1f} mm. A fitted adapter or a mismatched tip, scan error or valve tilt can invalidate the comparison. It does not establish a lower-stem or separate-diverter limit. <a href="#check-10">Check 10 records the as-found tip depths and identity</a>. The installer verifies the plaster guard or documented axis datum separately.</p>
+<p><strong>Water paths:</strong> the internal valve seals contain supply water. A projected stem alone does not diagnose a leak. Incorrect depth can prevent the cover or handle bonnets from seating and compromise protection against shower water entering behind the trim. A larger outer profile does not establish either result. Supply/valve testing and assembled surface-water testing remain separate.</p>
+<p>No stud cutting, wood drilling, control-stem modification or valve relocation is selected. Sources: <a href="https://techcomm.kohler.com/techcomm/pdf/K-2973-KS_spec_US-CA_Kohler_en.pdf">valve specification p3</a>; <a href="https://techcomm.kohler.com/techcomm/pdf/1205551-2.pdf">valve guide pp10-13 and25</a>; <a href="https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf">trim guide pp3,7-8</a>.</p></article>'''
+
 def depth_svg(report, case):
     d=report['cases'][case];out=[]
     def put(s):out.append(s)
@@ -65,4 +81,5 @@ def depth_html(report):
     shift=trial['cover_rim_z_mm']-original['cover_rim_z_mm']
     plate=trial['ranges_z_mm']['CUSTOM-01'];seal=trial['ranges_z_mm']['NEW-SEAL-PATH'];foam=trial['ranges_z_mm']['GASKET-01']
     numeric=''.join(f'<tr><td>{s["id"]}</td><td>{s["tip_z_mm"]:.1f}</td><td>{s["cover_rear_z_mm"]:.1f}</td><td>{s["tip_to_cover_rear_clearance_mm"]:+.1f}</td></tr>' for s in trial['studs'])
+    markup=markup.replace('<div class="controls"><button data-depth-case=',rough_in_html(report)+'<div class="controls"><button data-depth-case=',1)
     return markup.replace('DEPTH_ROWS',numeric).replace('4.175 mm (3.175 mm plate + 1 mm illustrative seal layer)',f'{shift:.3f} mm ({plate[1]-plate[0]:.3f} mm plate + {seal[1]-seal[0]:g} mm illustrative seal layer)').replace("shown 3 mm",f"shown {foam[1]-foam[0]:g} mm")

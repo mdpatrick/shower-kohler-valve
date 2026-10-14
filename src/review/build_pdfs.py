@@ -31,7 +31,8 @@ def build():
     story=[]
     for n,g in enumerate(groups):
         if n:story.append(PageBreak())
-        story+=[Paragraph(f"{g['id']} / {g['title']}",styles['ProjectTitle']),Paragraph(f"Measurement worksheet | {rev} | {'First checks' if g['first'] else 'Installer checks after first readings'}",styles['BodyText']),Paragraph(g['purpose'],styles['BodyText'])]
+        phase='First checks' if g['first'] else 'Control-depth follow-up' if g['id']=='10' else 'Installer checks after first readings'
+        story+=[Paragraph(f"{g['id']} / {g['title']}",styles['ProjectTitle']),Paragraph(f"Measurement worksheet | {rev} | {phase}",styles['BodyText']),Paragraph(g['purpose'],styles['BodyText'])]
         picture_size=145 if g['id']=='03' else 205
         picture=Image(str(views/(g['view']+'.png')),width=picture_size,height=picture_size)
         pair=Table([[picture,Paragraph(g['instructions'],styles['BodyText'])]],colWidths=[220,290]);pair.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),10)]));story+=[pair,Spacer(1,12)]
@@ -103,6 +104,14 @@ def build():
         Paragraph('Negative gap means interference. The assumed nut envelopes clear the cover, but real nut seats, formed metal, rear cavity and compressed foam remain unmeasured. A thicker backing plate also changes hub/adapter engagement and the cover landing.',styles['BodyText']),
         Paragraph('Kohler 1041504-2-F, page 7: the inner plate lies flat at the wall; the studs project at most 7/16 inch from the finished wall; the foam covers the opening; nuts stay behind the outer cover; its drain faces down. Page 8 requires appropriate adapters for engagement and seating. Current guide 1216755-2-A, steps 8-12, shows the same assembly order. Check the actual revision.',styles['BodyText']),
         Paragraph('Four separate questions remain: conceal all cuts; provide continuous supported foam landing; resolve surface-water seals and drainage; inspect concealed waterproofing through existing access. The current trial aperture conflicts with the assumed gasket path. Coverage alone is not a waterproof repair.',styles['BodyText'])]
+    r=depth['rough_in'];lo,hi=r['nominal_bare_upper_tip_from_tile_mm']
+    story += [PageBreak(),Paragraph('Control depth / diagnostic follow-up',styles['ProjectTitle']),
+        Paragraph('The user confirms excessive stud projection and reports rear bolt contact with wood. Trim studs thread into the valve; they do not need wood anchorage. Identify the same rear fasteners, framing/blocking and usable travel before selecting a remedy.',styles['BodyText']),
+        Image(str(views/'control_depth_measure.png'),width=245,height=245),
+        Paragraph(f"K-2973-KS specification p3: the labeled upper bare-tip and finished-wall dimensions imply a nominal upper-tip interval {lo:.1f} to {hi:.1f} mm from tile. Current comparison: {r['comparison_tip_mm']:.1f} mm ({r['comparison_basis']}). This is {r['conditional_result']}. It is not a valve-relocation target.",styles['BodyText']),
+        Paragraph('Check 10 identifies the as-found tips/adapters and records block height H and both underside-to-tip gaps. H - G gives signed projection. The installer separately checks the plaster guard or documented axis datum. The 7/16-inch trim-stud limit does not apply to control stems.',styles['BodyText']),
+        Paragraph('Correct adapter and screw lengths must permit handle engagement and full cover/bonnet seating. An added backing plate changes that relationship again. Internal valve seals contain supply water; improper trim seating concerns external shower-water entry. Test these separately after the complete assembly is resolved.',styles['BodyText']),
+        Paragraph('Sources: K-2973-KS specification p3; Kohler 1205551-2-D pp10-13 and25; 1041504-2-F pp3,7-8. No stud cutting, wood drilling, control-stem modification or valve relocation is selected.',styles['SmallCell'])]
     manual=ROOT/f'deliverables/current/manual/repair_manual_{rev}_DRAFT.pdf';SimpleDocTemplate(str(manual),pagesize=A4,leftMargin=40,rightMargin=40,topMargin=36,bottomMargin=42).build(story,onFirstPage=footer,onLaterPages=footer)
     print('Generated worksheet, drawing, calibrated tiled profile and six-step draft manual PDFs')
 

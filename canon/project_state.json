@@ -20,7 +20,7 @@
     "received_part_inspection": "NOT APPLICABLE YET",
     "installed_leak_test": "NOT PERFORMED"
   },
-  "current_piping": "Unchanged since capture, per user 2026-10-14; no replacement reported.",
+  "current_piping": "User reports the valve is plumbed in; no new relocation or post-scan change stated. Earlier no-change confirmation remains in force.",
   "constraints": [
     "preserve travertine; no further cutting/drilling/grinding",
     "retain original plate/gasket/drain/service functions",
@@ -34,5 +34,6 @@
     "K-737-K-NA"
   ],
   "post_scan_state_observation": "OBS-POST-SCAN-01",
-  "depth_review_observation": "OBS-DEPTH-REVIEW-01"
+  "depth_review_observation": "OBS-DEPTH-REVIEW-01",
+  "depth_inquiry_record": "docs/physical_checks/depth_inquiry_2026-10-14.json"
 }

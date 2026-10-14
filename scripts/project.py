@@ -70,10 +70,10 @@ def build(force=False):
       ('registration',['src/analysis/register.py','canon/scan_annotations.json','canon/measurements.json','canon/inputs.json'],['data/derived/registration.json'],[sys.executable,'src/analysis/register.py']),
       ('parameters',['src/analysis/resolve.py','canon/*.json','data/derived/registration.json'],['data/derived/resolved.json'],[sys.executable,'src/analysis/resolve.py']),
       ('cad',['src/cad/build_parts.py','data/derived/resolved.json'],['data/derived/cad/parts.json','deliverables/current/cad/CUSTOM-01_DRAFT_NOT_FOR_FABRICATION.step'],[sys.executable,'src/cad/build_parts.py']),
-      ('analysis',['src/analysis/checks.py','src/analysis/depth.py','data/derived/resolved.json','data/derived/cad/parts.json'],['deliverables/current/analysis/checks.json','deliverables/current/analysis/depth_stack.json'],[sys.executable,'src/analysis/checks.py']),
+      ('analysis',['src/analysis/checks.py','src/analysis/depth.py','src/analysis/rough_in.py','data/derived/resolved.json','data/derived/cad/parts.json'],['deliverables/current/analysis/checks.json','deliverables/current/analysis/depth_stack.json'],[sys.executable,'src/analysis/checks.py']),
       ('blender',['src/blender/build_scene.py','src/blender/user_notes.py','data/derived/resolved.json','data/derived/registration.json','data/derived/cad/*','canon/inputs.json','deliverables/current/blender/user_notes.blend'],[f'deliverables/current/blender/installation_{rev}_DRAFT.blend','deliverables/current/review/views/coverage.png','deliverables/current/review/installation_DRAFT.glb'],[BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/blender/build_scene.py']),
       ('review',['src/review/build_review.py','src/review/depth_view.py','src/review/requests.py','src/review/*.css','src/review/*.js','src/review/vendor/**/*','data/evidence/scan_quality/*','deliverables/current/review/views/coverage.png','deliverables/current/review/view_geometry.json','deliverables/current/analysis/checks.json','deliverables/current/analysis/depth_stack.json'],['deliverables/current/review/index.html','deliverables/current/review/measurement_requests.json'],[sys.executable,'src/review/build_review.py']),
-      ('pdf',['src/review/build_pdfs.py','src/review/requests.py','src/review/build_review.py','data/derived/resolved.json','deliverables/current/review/views/*.png'],[f'deliverables/current/drawings/measurement_worksheet_{rev}.pdf',f'deliverables/current/drawings/profile_template_{rev}_DRAFT.pdf',f'deliverables/current/manual/repair_manual_{rev}_DRAFT.pdf'],[sys.executable,'src/review/build_pdfs.py'])]
+      ('pdf',['src/review/build_pdfs.py','src/review/requests.py','src/review/build_review.py','data/derived/resolved.json','deliverables/current/analysis/depth_stack.json','deliverables/current/review/views/*.png'],[f'deliverables/current/drawings/measurement_worksheet_{rev}.pdf',f'deliverables/current/drawings/profile_template_{rev}_DRAFT.pdf',f'deliverables/current/manual/repair_manual_{rev}_DRAFT.pdf'],[sys.executable,'src/review/build_pdfs.py'])]
     for name,inputs,outputs,cmd in stages:
         digest=fingerprint(inputs)
         prior=state.get(name,{}).get('outputs',{});expected=set(outputs)|set(prior)
@@ -84,7 +84,7 @@ def build(force=False):
         extra={'registration':['data/derived/*-vertices.npy'], 'parameters':[],
           'cad':['data/derived/cad/*','deliverables/current/cad/*'],
           'analysis':['deliverables/current/analysis/checks.json','deliverables/current/analysis/registration.json','deliverables/current/analysis/resolved.json','deliverables/current/analysis/contractor_schedule.json'],
-          'blender':['deliverables/current/blender/scene_check.json','deliverables/current/blender/wall_display_proxy.glb','deliverables/current/review/view_geometry.json']+[f'deliverables/current/review/views/{v}.png' for v in ['coverage','overview','assembled','factory','neighbor','exploded','inner_front','inner_back','outer_front','outer_back','gasket','section_controls','section_studs']],
+          'blender':['deliverables/current/blender/scene_check.json','deliverables/current/blender/wall_display_proxy.glb','deliverables/current/review/view_geometry.json']+[f'deliverables/current/review/views/{v}.png' for v in ['coverage','overview','control_depth','assembled','factory','neighbor','exploded','inner_front','inner_back','outer_front','outer_back','gasket','section_controls','section_studs']],
           'review':['deliverables/current/review/*.js','deliverables/current/review/*.css','deliverables/current/review/*.json','deliverables/current/review/vendor/**/*','deliverables/current/review/views/*measure.png','deliverables/current/review/views/depth_*.svg','deliverables/current/review/views/plate_scan_*.png','deliverables/current/manual/index.html'],
           'pdf':[f'deliverables/current/drawings/candidate_drawing_{rev}_DRAFT.pdf']}[name]
         owned=set(outputs)
@@ -185,10 +185,10 @@ def handoff():
         for base in ['canon','docs','deliverables/current/analysis']:
             for p in (ROOT/base).rglob('*'):
                 if p.is_file():z.write(p,str(p.relative_to(ROOT)))
-        for name in ['coverage','inner_front','inner_back','section_studs','assembled','exploded','factory','neighbor_measure']:
+        for name in ['coverage','control_depth_measure','inner_front','inner_back','section_studs','assembled','exploded','factory','neighbor_measure']:
             p=ROOT/f'deliverables/current/review/views/{name}.png';z.write(p,str(p.relative_to(ROOT)))
         for name in ['deliverables/current/review/manual_steps.json','deliverables/current/review/measurement_requests.json',
-                     'data/evidence/kohler-1041504_2.pdf','data/evidence/kohler-1216755-2.pdf','data/evidence/kohler-T14489-4-spec.pdf','data/evidence/kohler-T14491-4-spec.pdf']:
+                     'data/evidence/user/depth-side-view-2026-10-14.png','data/evidence/kohler-2973-KS-spec.pdf','data/evidence/kohler-2973-install-1205551-2.pdf','data/evidence/kohler-1041504_2.pdf','data/evidence/kohler-1216755-2.pdf','data/evidence/kohler-T14489-4-spec.pdf','data/evidence/kohler-T14491-4-spec.pdf']:
             z.write(ROOT/name,name)
         for case in ['factory','proposed']:
             name=f'deliverables/current/review/views/depth_{case}.svg';z.write(ROOT/name,name)

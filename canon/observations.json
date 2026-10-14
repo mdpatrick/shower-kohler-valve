@@ -23,6 +23,32 @@
       "observation": "User correctly identified studs passing through the decorative cover; no bolt/nut holes exist in that cover. Requested meaningful Z depth and sealing relationships.",
       "classification": "model-review correction; not a physical depth reading",
       "resolution": "Seated-cover trial rejected; preserve captured hardware, expose exact provisional collisions and sealing/depth uncertainty."
+    },
+    {
+      "id": "OBS-STUD-PROJECTION-REPORTED-01",
+      "status": "user-confirmed qualitative observation",
+      "raw": "I can confirm that they protrude too far.",
+      "accepted_numeric_readings": [],
+      "date": "2026-10-14",
+      "source": "direct user report; docs/physical_checks/depth_inquiry_2026-10-14.json",
+      "classification": "qualitative observation; no accepted numeric dimension or completed fit check"
+    },
+    {
+      "id": "OBS-STUD-WOOD-CONTACT-01",
+      "status": "user-reported; fastener identity and available adjustment still unverified",
+      "raw": "When I look at the back I can see the bolts sitting on the surface of a wooden stud.",
+      "date": "2026-10-14",
+      "source": "direct user report; docs/physical_checks/depth_inquiry_2026-10-14.json",
+      "classification": "qualitative observation; no accepted numeric dimension or completed fit check"
+    },
+    {
+      "id": "OBS-VALVE-PLUMBED-01",
+      "status": "user-reported",
+      "raw": "Note that the valve is now plumbed in",
+      "interpretation": "Connected plumbing; no new relocation or post-scan alteration stated.",
+      "date": "2026-10-14",
+      "source": "direct user report; docs/physical_checks/depth_inquiry_2026-10-14.json",
+      "classification": "qualitative observation; no accepted numeric dimension or completed fit check"
     }
   ]
 }

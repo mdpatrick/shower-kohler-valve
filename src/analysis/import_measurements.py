@@ -41,13 +41,13 @@ def import_response(path,root=ROOT,dry_run=False):
         if m['status']=='conflicting' and m['id'] not in conflicts:conflicts.append(m['id'])
         out['measurements'].append(m);added.append(m['id'])
         if m['status']=='user-confirmed':accepted[m['id']]=m
-    def derived(id,value,inputs,formula):
+    def derived(id,value,inputs,formula,role='fitting input'):
         old=accepted.get(id)
         if old and abs(old['value_mm']-value)<1e-9:return
         if old:old['status']='superseded';old['superseded_reason']='Derived inputs revised'
         record=dict(id=id,component='derived',state='current_physical_observation',status='user-confirmed',value_mm=value,raw_unit='mm',raw_readings=[],
             source='derived from accepted raw observations',inputs=inputs,method=formula,date=max(accepted[x]['date'] for x in inputs),uncertainty_mm=None,
-            note='Derived relation, not an independent second piece of evidence',role='fitting input')
+            note='Derived relation, not an independent second piece of evidence',role=role)
         out['measurements'].append(record);accepted[id]=record;added.append(id)
     if all(x in accepted for x in ['M01-O','M01-I']):
         if accepted['M01-O']['value_mm']<=accepted['M01-I']['value_mm']:raise ValueError('Outer tip span must exceed inner gap')
@@ -57,6 +57,11 @@ def import_response(path,root=ROOT,dry_run=False):
             z=accepted['M07-H']['value_mm']-accepted['M07-G'+which]['value_mm']
             if z<0:raise ValueError('Tip behind reference wall; verify block/gap measurement before import')
             derived('M07-'+which,z,['M07-H','M07-G'+which],'block height - underside-to-tip gap')
+    for which,gap in [('UPPER','M10-GU'),('LOWER','M10-GL')]:
+        if all(x in accepted for x in ['M10-H',gap]):
+            z=accepted['M10-H']['value_mm']-accepted[gap]['value_mm']
+            # A control tip can legitimately be recessed; its identity remains a separate check.
+            derived('M10-'+which,z,['M10-H',gap],'block height - underside-to-as-found-tip gap',role='diagnostic cross-check; tip identity required')
     for prefix in ['M03-SW','M03-NE','M06']:
         for axis in ['X','Y']:
             near=prefix+'-'+axis+'N';far=prefix+'-'+axis+'F'

@@ -128,7 +128,8 @@ cams={
  'inner_back':camera('CAM_05_Inner_back',(0,40,-600),(0,40,0),210),
  'outer_front':camera('CAM_05B_Outer_front',(center[0],center[1],600),(center[0],center[1],0),230),
  'outer_back':camera('CAM_05C_Outer_back',(center[0],center[1],-600),(center[0],center[1],0),230),
- 'gasket':camera('CAM_06_Gasket',(0,40,800),(0,40,0),260)
+ 'gasket':camera('CAM_06_Gasket',(0,40,800),(0,40,0),260),
+ 'control_depth':camera('CAM_07_Observed_control_depth',(650,45,30),(0,45,30),280)
 }
 for loc,power,size in [((250,300,450),1.2,.5),((-300,150,200),.6,.5)]:
     ld=bpy.data.lights.new('Soft light','AREA');lo=bpy.data.objects.new('Soft light',ld);coll('07_CAMERAS_AND_LIGHTS').objects.link(lo);lo.location=xyz(loc);lo.rotation_euler=(xyz((0,40,0))-lo.location).to_track_quat('-Z','Y').to_euler();ld.energy=power;ld.shape='DISK';ld.size=size
@@ -179,7 +180,7 @@ def render(name,layer):
     scene.render.stamp_foreground=(1,1,1,1);scene.render.stamp_background=(.48,.02,.01,.93)
     scene.render.stamp_note_text='FIT CONFLICT | unchanged hardware + assumed seated cover | NOT AN INSTALLABLE ASSEMBLY'
     scene.render.filepath=str(VIEWS/(name+'.png'));bpy.ops.render.render(write_still=True)
-for name,layer in [('coverage','Coverage'),('overview','Observed'),('assembled','Trial_fit_CONFLICT'),('factory','Original_wall_trial'),('neighbor','Coverage'),('exploded','Exploded'),('inner_front','Inner'),('inner_back','Inner'),('outer_front','Trial_fit_CONFLICT'),('outer_back','Trial_fit_CONFLICT'),('gasket','Gasket'),('section_controls','Section_controls'),('section_studs','Section_studs')]:
+for name,layer in [('coverage','Coverage'),('overview','Observed'),('control_depth','Observed'),('assembled','Trial_fit_CONFLICT'),('factory','Original_wall_trial'),('neighbor','Coverage'),('exploded','Exploded'),('inner_front','Inner'),('inner_back','Inner'),('outer_front','Trial_fit_CONFLICT'),('outer_back','Trial_fit_CONFLICT'),('gasket','Gasket'),('section_controls','Section_controls'),('section_studs','Section_studs')]:
     hidden=[]
     if name.startswith('inner_'):hidden=[o for id,o in objects.items() if id.endswith('NUT')]
     if name.startswith('outer_'):hidden=wall+[o for id,o in objects.items() if id!='TRIM-OUTER']
@@ -207,6 +208,7 @@ bpy.ops.export_scene.gltf(filepath=str(OUT/'wall_display_proxy.glb'),export_form
 bpy.context.window.view_layer=scene.view_layers['Coverage'];scene.view_layers.remove(vl)
 for vl in scene.view_layers:vl.use=vl.name=='Coverage'
 scene.camera=cams['coverage']
+scene.render.use_stamp=False
 scene['revision']=d['revision'];scene['readiness']='DRAFT / NOT FOR FABRICATION. No physical fit.';scene['scale']=reg['scale_status']
 scene['instructions']='View Layers: Observed/Coverage/Original_wall_trial/Trial_fit_CONFLICT/Exploded/Inner/Sections. Both seated-cover trials have clashes. Red studs flag interference. Captured hardware unchanged. See local HTML Depth & sealing for axial relationships.'
 for screen in bpy.data.screens:

@@ -18,7 +18,7 @@
         "usable thread/adapter arrangement",
         "selected final layer thickness"
       ],
-      "on_site_check": "Verify reversible factory adjustment, engagement and free outer-trim seating. No shortening or valve movement approved."
+      "on_site_check": "Trace reported rear wood contact to the same trim stud; record available rear travel, framing/blocking identity and retained thread engagement. Verify factory adjustment and free trim seating. No cut/drill selection."
     },
     {
       "id": "STUD-NE",
@@ -34,18 +34,32 @@
         "usable thread/adapter arrangement",
         "selected final layer thickness"
       ],
-      "on_site_check": "Verify reversible factory adjustment, engagement and free outer-trim seating. No shortening or valve movement approved."
+      "on_site_check": "Trace reported rear wood contact to the same trim stud; record available rear travel, framing/blocking identity and retained thread engagement. Verify factory adjustment and free trim seating. No cut/drill selection."
     },
     {
       "id": "VALVE-POSE",
-      "current": "scan pose retained; user confirms no post-scan changes 2026-10-14 (OBS-POST-SCAN-01)",
+      "current": "scan pose retained; upper-tip nominal comparison flags depth only if it is the same bare stem; valve is plumbed in by user report",
       "proposed_translation_mm": null,
       "proposed_rotation_deg": null,
       "responsible": "qualified plumber",
       "prerequisites": [
-        "physical access and pressure test"
+        "Check 10 tip/adapter identity and raw depths",
+        "plaster guard or documented shower-outlet-axis datum",
+        "independent support and pressure test"
       ],
-      "on_site_check": "Record any future real change before new fit assessment; no proposed move."
+      "on_site_check": "Verify actual valve depth independently of stud length and adapter selection. Record any real change; no proposed move."
+    },
+    {
+      "id": "CONTROL-ADAPTERS",
+      "current": "upper and lower exposed tip identities unresolved",
+      "proposed_adapter": null,
+      "responsible": "qualified plumber",
+      "prerequisites": [
+        "applicable installed revision",
+        "number/length of current and available factory adapters",
+        "final seating surface and complete layer thickness"
+      ],
+      "on_site_check": "Record correct screw/adapter engagement, fully seated bonnets/cover, unobstructed control operation and drainage. No cutting of control stems."
     },
     {
       "id": "LANDING",

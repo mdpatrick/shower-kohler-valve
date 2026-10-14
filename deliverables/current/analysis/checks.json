@@ -466,6 +466,23 @@
       "needed": "report any future piping, valve, stud or wall changes before relying on this state"
     },
     {
+      "id": "UPPER-CONTROL-ROUGH-IN",
+      "status": "UNRESOLVED",
+      "physical_fit": "UNRESOLVED",
+      "conditional_result": "32.0 mm as-found upper tip versus nominal bare-tip interval -6.3 to 27.0 mm; outside nominal interval if same bare tip",
+      "method": "Subtract labeled manufacturer dimensions; compare without moving scan or valve",
+      "source": "SRC-VALVE-SPEC p3; labeled dimensions, not drawing scale",
+      "needed": "Check 10: identify each exposed tip/adapter, read H and both gaps; installer checks plaster guard or documented axis datum and final handle engagement."
+    },
+    {
+      "id": "STUD-REAR-CONTACT",
+      "status": "UNRESOLVED",
+      "physical_fit": "UNRESOLVED",
+      "conditional_result": "User confirms excessive stud projection and reports rear bolt contact with wood; fastener identity and obstruction mechanism remain unverified.",
+      "source": "OBS-STUD-PROJECTION-REPORTED-01; OBS-STUD-WOOD-CONTACT-01",
+      "needed": "Installer traces same studs, identifies framing/blocking, rear clearance and usable thread engagement; no cut/drill selection."
+    },
+    {
       "id": "CAD-CLASH-FACTORY-STUD-SW",
       "status": "FAIL",
       "conditional_result": "FAIL in original-wall trial",

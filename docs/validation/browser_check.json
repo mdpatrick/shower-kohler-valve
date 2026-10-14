@@ -33,6 +33,8 @@
     "original-wall/added-plate per-part positions, visibility and round-trip restoration",
     "fit warnings and visible unchanged studs",
     "depth diagram switching and stud-section navigation",
+    "control-depth explanation and separate stud limit",
+    "Check 10 raw fields and tip-identity notes export and reload",
     "local controls",
     "responsive page",
     "JSON download and persistence",

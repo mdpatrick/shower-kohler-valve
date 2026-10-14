@@ -80,7 +80,7 @@
       "title": "K-2973-KS specification",
       "revision": "saved 2026-10-14",
       "pages": "dimensioned page",
-      "applicability": "User-confirmed model; nominal rough-in reference, not installed pose",
+      "applicability": "Nominal K-2973-KS p3 rough-in: wall 2-7/16 to 3-3/4in from shower-outlet axis; upper bare tip 3-1/2in from same axis. Installed revision/feature identity and scale must be checked.",
       "retrieved_date": "2026-10-14",
       "sha256": "2c4841107bb8db596d95b2268201a19b7ff4a7a55b124ffbc13ed8dc85e26a2c",
       "size_bytes": 245804
@@ -102,9 +102,9 @@
       "path": "data/evidence/kohler-2973-install-1205551-2.pdf",
       "url": "https://techcomm.kohler.com/techcomm/pdf/1205551-2.pdf",
       "title": "K-2973 installation guide",
-      "revision": "see document",
-      "pages": "whole document",
-      "applicability": "Installer reference; review relevant pages before specifying plumbing changes",
+      "revision": "1205551-2-D",
+      "pages": "pp10-13,25",
+      "applicability": "Plaster-guard MIN-MAX positioning, independent pipe/valve support, and distinction between valve seal leakage and trim water-entry checks.",
       "retrieved_date": "2026-10-14",
       "sha256": "4c4ae445314db1a28f882a73ada04ea75c2f9a015ff81c261e6d4b5663f16562",
       "size_bytes": 2779170
@@ -138,6 +138,16 @@
       "source": "direct browser review/comment 2026-10-14",
       "path": "docs/decisions/depth_review_2026-10-14.md",
       "claim": "User flagged impossible seated-cover/stud intersection and requested Z-depth/sealing explanation; no dimensions supplied."
+    },
+    {
+      "id": "SRC-USER-DEPTH-SIDE",
+      "path": "data/evidence/user/depth-side-view-2026-10-14.png",
+      "title": "User-supplied side view and rear-contact report",
+      "retrieved_date": "2026-10-14",
+      "sha256": "9b093e02da9956bf804ffff8efe1031171e42c2f157362e51b075abc7f8dcf13",
+      "size_bytes": 161906,
+      "applicability": "Uncalibrated side view. User confirms excessive stud projection and reports wood contact behind. Does not prove rough-in error or stem identity.",
+      "observation_record": "docs/physical_checks/depth_inquiry_2026-10-14.json"
     }
   ]
 }

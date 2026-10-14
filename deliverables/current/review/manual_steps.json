@@ -15,8 +15,8 @@
     "person": "Qualified plumber",
     "prerequisite": "Exact Kohler models recorded; applicable revision checked.",
     "tools": "Applicable Kohler guides, straightedge, depth gauge and correct hand tools.",
-    "action": "Inspect stud/adapter adjustment and engagement and test any plumbing changes before establishing final hardware position.",
-    "check": "Both actual stud projections, usable engagement and adapter selection recorded; supply/valve leakage checked separately.",
+    "action": "Trace reported rear stud contact with wood; verify valve rough-in depth and identify the stem adapters separately. Check available adjustment, final seating and supply/valve leakage before selecting a repair.",
+    "check": "Stud rear travel and engagement, Check 10 tip identity/depths, plaster-guard or axis-datum check, and correct adapter/handle seating recorded.",
     "stop": "Do not shorten studs, force trim, or loosen pressure-containing parts for a homeowner measurement. No valve relocation target is approved."
   },
   {

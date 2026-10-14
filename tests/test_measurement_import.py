@@ -47,6 +47,19 @@ class ImportTests(unittest.TestCase):
         self.assertAlmostEqual(self.accepted()['M07-SW']['value_mm'],26.5)
         self.assertAlmostEqual(self.accepted()['M07-NE']['value_mm'],30.8)
 
+    def test_control_depth_is_signed_and_diagnostic(self):
+        self.submit([self.observation('M10-H',2,'in'),self.observation('M10-GU',2.25,'in',notes='Adapter identity unknown'),self.observation('M10-GL',1.5,'in')])
+        upper=self.accepted()['M10-UPPER'];lower=self.accepted()['M10-LOWER']
+        self.assertAlmostEqual(upper['value_mm'],-6.35)
+        self.assertAlmostEqual(lower['value_mm'],12.7)
+        self.assertEqual(upper['role'],'diagnostic cross-check; tip identity required')
+        self.assertEqual(self.accepted()['M10-GU']['notes'],'Adapter identity unknown')
+        self.assertNotIn('M07-SW',self.accepted())
+
+    def test_control_setup_cannot_borrow_stud_reference_height(self):
+        self.submit([self.observation('M07-H',50),self.observation('M10-GU',18)])
+        self.assertNotIn('M10-UPPER',self.accepted())
+
     def test_conflicting_repeat_does_not_calibrate(self):
         r=self.submit([self.observation('M01-O',[90,94])])
         self.assertIn('M01-O',r['conflicts']);self.assertNotIn('M01-O',self.accepted())

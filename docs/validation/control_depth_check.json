@@ -1,0 +1,80 @@
+{
+  "status": "PASS",
+  "baseline_commit": "a2b285b",
+  "measurement_canon_unchanged": true,
+  "registration_unchanged": true,
+  "resolved_geometry_unchanged": [
+    "controls_mm",
+    "studs_mm",
+    "diverter_tip_mm",
+    "candidate",
+    "assumptions",
+    "trim_center_mm",
+    "trim_in_plane_rotation_deg",
+    "inner_center_mm",
+    "inner_slots"
+  ],
+  "CAD_parts_checked": 15,
+  "bounds_and_installed_poses_unchanged": true,
+  "max_volume_difference_mm3": 0,
+  "accepted_control_depths": {},
+  "scope": "Software/evidence comparison only; no physical fit or water performance established.",
+  "date": "2026-10-14",
+  "unit_tests": {
+    "count": 21,
+    "status": "PASS",
+    "command": ".venv/bin/python -m unittest discover -s tests -v"
+  },
+  "browser": {
+    "status": "PASS",
+    "report": "docs/validation/browser_check.json",
+    "isolated_synthetic_inputs_only": true
+  },
+  "saved_blender": {
+    "status": "PASS",
+    "report": "docs/validation/scene_state_check.json"
+  },
+  "pdf": {
+    "pdfs": [
+      {
+        "path": "deliverables/current/drawings/candidate_drawing_R001_DRAFT.pdf",
+        "pages": 1,
+        "sha256": "dd15bfe26753a7ff787cae8f70fc975c3d5a3a8cb717b2e4b2b24ebdd4b124a8"
+      },
+      {
+        "path": "deliverables/current/drawings/measurement_worksheet_R001.pdf",
+        "pages": 10,
+        "sha256": "bca7a1f75f99f38be3037e5acba77420f6a2a04af00ff9d4b584ff72130e57b5"
+      },
+      {
+        "path": "deliverables/current/drawings/profile_template_R001_DRAFT.pdf",
+        "pages": 4,
+        "sha256": "5cbf01f8038e11ff62dc0d531b35f6eab107641312ebdf0fb67b196d46c94b1b"
+      },
+      {
+        "path": "deliverables/current/manual/repair_manual_R001_DRAFT.pdf",
+        "pages": 8,
+        "sha256": "6a828d420b0146f7c4a0805fe833c885da777b9b32b69e94d426daf15d6e1100"
+      }
+    ],
+    "total_pages": 23,
+    "changed_raster_pages_since_visual_review": [
+      "measurement_worksheet_R001-10.png"
+    ]
+  },
+  "visual_review": {
+    "all_23_pages_contact_sheet_inspected": true,
+    "focused_full_page_checks": [
+      "worksheet 9",
+      "worksheet 10",
+      "manual 2",
+      "manual 8"
+    ],
+    "final_rebuild_22_pages_pixel_identical": true,
+    "final_worksheet_page_10_inspected": true,
+    "control_depth_view_and_browser_desktop_mobile_inspected": true
+  },
+  "physical_readings_accepted": false,
+  "physical_fit": "UNRESOLVED",
+  "fabrication_approval": "NOT GIVEN"
+}

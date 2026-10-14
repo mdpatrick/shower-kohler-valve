@@ -6,6 +6,7 @@ not proof of the dimensions or condition of the physical installation.
 from pathlib import Path
 import json
 import cadquery as cq
+from rough_in import analyze_rough_in
 
 ROOT=Path(__file__).resolve().parents[2]
 
@@ -43,7 +44,7 @@ def analyze_depth(d, manifest):
             'gasket_thickness_basis':'uncompressed placeholder; assembled compression and contact are unknown'}
     return {'revision':d['revision'],'units':'mm','datum':'Intact-stone fitted reference plane Z=0; +Z toward shower',
         'purpose':'Explain why the prior seated-cover visualization is not an assemblable repair',
-        'cases':cases,'factory_guide':{'source':'SRC-KOHLER-OLD-GUIDE p7; p8 adapter check; current guide steps8-12',
+        'cases':cases,'rough_in':analyze_rough_in(d),'factory_guide':{'source':'SRC-KOHLER-OLD-GUIDE p7; p8 adapter check; current guide steps8-12',
             'stud_max_from_finished_wall_mm':11.1125,'datum_confirmed_in_text':'finished wall, not front of yellow plate',
             'sequence':['Studs thread into valve','Inner plate and rear foam seat at finished wall','Nuts secure inner plate behind cover','Outer cover goes over inner plate with drain down','Handle assemblies secure cover via inner-plate hubs; correct adapters engage valve'],
             'applicability':'Applicable arrangement reference; actual installed revision and adjustment range must be checked. Added backing plate is not a manufacturer-approved detail.'},

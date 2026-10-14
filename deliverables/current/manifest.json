@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R001",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "dbaa4388de309a848a61f4bc109c92870c256bca",
+  "source_commit": "a2b285b4dea609c812c07ee1e44f35b99c465214",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "7c5b4890642d5290c5b790250179136303645d9c4b535883627164d8b73fb77a",
+  "source_tree_hash": "19e54a051c73b8dc9f89e02ff3e15bc57327360fc88b8b50158829e2c46e65ee",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -13,13 +13,13 @@
   "files": [
     {
       "path": "deliverables/current/analysis/checks.json",
-      "sha256": "864da9cea91ced48730050749bb60643ded9865eea7453f68fc942b15636f28a",
-      "size_bytes": 25466
+      "sha256": "cb9081aa2a36bf16e12502dc86fb5e02be39a7b4624a96fe1b4c0182839c05a8",
+      "size_bytes": 26586
     },
     {
       "path": "deliverables/current/analysis/contractor_schedule.json",
-      "sha256": "22ac037f9cca0604b2764cca433a378549a822e440763b1a7bd8d4bbae64a405",
-      "size_bytes": 2736
+      "sha256": "dc597e531552cd098aa83d287183234c136e210baf6d7e174843d38e3efb1363",
+      "size_bytes": 3704
     },
     {
       "path": "deliverables/current/analysis/coordinate_test.glb",
@@ -28,8 +28,8 @@
     },
     {
       "path": "deliverables/current/analysis/depth_stack.json",
-      "sha256": "33d6b8568ffaed088bb381f99dc9972ec6ea5bf0f953dcecdcf93e91c8a838eb",
-      "size_bytes": 11718
+      "sha256": "3e71668a4c4f112a0fe2682e998f0d0b6c743ede27b657c6476db5ca4c4f3521",
+      "size_bytes": 13170
     },
     {
       "path": "deliverables/current/analysis/registration.json",
@@ -38,23 +38,23 @@
     },
     {
       "path": "deliverables/current/analysis/resolved.json",
-      "sha256": "5bd262eaf4349400959995330df93416c026f90b7a1d9d0102f8efb1c2c733a9",
-      "size_bytes": 40574
+      "sha256": "577e05f0550937ebbb7a215db2cd26959f64f0e12e33eeb30f30006152bad865",
+      "size_bytes": 42425
     },
     {
       "path": "deliverables/current/analysis/source_register.json",
-      "sha256": "2fae5ff996f29dd854a018173cb0b0e291023a8ca3ce88c93e0c85d487fa5c24",
-      "size_bytes": 6522
+      "sha256": "9ac23cf270ae4db86b4b377103aabfc12d6d7cb6ae20c00ede483c300b795d37",
+      "size_bytes": 7273
     },
     {
       "path": "deliverables/current/blender/installation_R001_DRAFT.blend",
-      "sha256": "78c5f06de8f84bfb1e89b4623b83a4a1fc89e3b2cad30ab964049f295b940c50",
-      "size_bytes": 91909897
+      "sha256": "2ccbae3598046e0aebeb9168fcd701506760d790dafae3be96a0dd27d0752cdc",
+      "size_bytes": 91912625
     },
     {
       "path": "deliverables/current/blender/scene_check.json",
-      "sha256": "f8b9fcb769f74ee2db2b9edb36da10e798971b8dd0a864aabdbe6b3ebe8fd165",
-      "size_bytes": 598
+      "sha256": "b753f440d3aa6489a8afaccba9ba53329310623faec2d6afc50cc4a5b2b3083b",
+      "size_bytes": 619
     },
     {
       "path": "deliverables/current/blender/wall_display_proxy.glb",
@@ -63,27 +63,27 @@
     },
     {
       "path": "deliverables/current/cad/CUSTOM-01_DRAFT_NOT_FOR_FABRICATION.dxf",
-      "sha256": "7c48e5db01ba723bf56ac2d8bb90b42b38c6275ecb01eb9bf45845e59de65cb5",
+      "sha256": "6aed65eb287b17605167f363f4f65ddef3e5eb215f21bcf9989189ec98d029bc",
       "size_bytes": 16745
     },
     {
       "path": "deliverables/current/cad/CUSTOM-01_DRAFT_NOT_FOR_FABRICATION.step",
-      "sha256": "fbd6ccf49e0048f39540a2eb689a2d1236fca997f444c79d6f2e401e027beb4c",
+      "sha256": "0e28fa0a2876fa17246de1d3a7d6c2fc399bebe27a9f85a34af1dcffcfd17799",
       "size_bytes": 36576
     },
     {
       "path": "deliverables/current/cad/PLATE-INNER_DRAFT_NOT_FOR_FABRICATION.step",
-      "sha256": "90bc50ee008cc583223fac9a2940f3f1a9eac67ef5049bb8a91c04429e88d0b1",
+      "sha256": "5cad418a3615bdeb613029912a31d2e0dad2664d0feb6f5faa9492b96cf4031c",
       "size_bytes": 100032
     },
     {
       "path": "deliverables/current/cad/TRIM-OUTER_DRAFT_NOT_FOR_FABRICATION.step",
-      "sha256": "ac8c6e6b6137077e741dd5253caf930624bc2a2b6a62f50951223cabba330fd2",
+      "sha256": "856360a6c0ee90db89fd9e093dd6c8e883f7899d8556d4a71ee492ed5cfa938e",
       "size_bytes": 47301
     },
     {
       "path": "deliverables/current/cad/assembly_DRAFT_NOT_FOR_FABRICATION.step",
-      "sha256": "9500e8cc5d5e430f872c4bd3e001eb91db2e18809f5be95876f5df5e9470c7dd",
+      "sha256": "b111123ff3cbae5da2cd0de6ac3ad4a839f2bf8b9897d8d9fc3a6d2e1fbeff9b",
       "size_bytes": 482464
     },
     {
@@ -93,28 +93,28 @@
     },
     {
       "path": "deliverables/current/drawings/candidate_drawing_R001_DRAFT.pdf",
-      "sha256": "d2b7e1db222b493a2ee8ea9efd94dc9d320c3cb09517197ba34e80355a9a07e4",
+      "sha256": "dd15bfe26753a7ff787cae8f70fc975c3d5a3a8cb717b2e4b2b24ebdd4b124a8",
       "size_bytes": 64850
     },
     {
       "path": "deliverables/current/drawings/measurement_worksheet_R001.pdf",
-      "sha256": "c917b0254dc7daf76d5e728f12837408c17ac0b16ba6d8f3ef8aadebdffb2353",
-      "size_bytes": 14934727
+      "sha256": "bca7a1f75f99f38be3037e5acba77420f6a2a04af00ff9d4b584ff72130e57b5",
+      "size_bytes": 16646025
     },
     {
       "path": "deliverables/current/drawings/profile_template_R001_DRAFT.pdf",
-      "sha256": "3a80d00cbe2a2b9011a01461f0df9a0cc5e82fc96dd60669fd9537b992414ef5",
+      "sha256": "5cbf01f8038e11ff62dc0d531b35f6eab107641312ebdf0fb67b196d46c94b1b",
       "size_bytes": 70653
     },
     {
       "path": "deliverables/current/manual/index.html",
-      "sha256": "b843d3cefa7c43ad99e0ad8c9413126eeec45e0b0c920a6eabb006bb017a40de",
-      "size_bytes": 6447
+      "sha256": "e54f91b74d89a3f27996dc0e075f2d61c30938873a957eda80629046c08d6aac",
+      "size_bytes": 6556
     },
     {
       "path": "deliverables/current/manual/repair_manual_R001_DRAFT.pdf",
-      "sha256": "8a744b261824dd515c729fd4456fda04145d8d41aeced2ae05e4f552d8b84333",
-      "size_bytes": 18162085
+      "sha256": "6a828d420b0146f7c4a0805fe833c885da777b9b32b69e94d426daf15d6e1100",
+      "size_bytes": 19872927
     },
     {
       "path": "deliverables/current/review/depth.js",
@@ -128,8 +128,8 @@
     },
     {
       "path": "deliverables/current/review/index.html",
-      "sha256": "5a6c8278275e622089cabfa026f968c35005b09215822f6ba90c520e81edd689",
-      "size_bytes": 78228
+      "sha256": "405076f43a2757b6ed2414e78d7803d089676bde74867e83a731662d8d11912a",
+      "size_bytes": 87065
     },
     {
       "path": "deliverables/current/review/installation_DRAFT.glb",
@@ -138,13 +138,13 @@
     },
     {
       "path": "deliverables/current/review/manual_steps.json",
-      "sha256": "04f12ec9baf28ddfcc2172267a44973bf2d381436065e59686c688304b70ea69",
-      "size_bytes": 4683
+      "sha256": "05f6d365177e2a78e110e1949cac94703db73a2ae91ecec701f82a717eea3b15",
+      "size_bytes": 4792
     },
     {
       "path": "deliverables/current/review/measurement_requests.json",
-      "sha256": "5e6c8be7ea933e7aad48307172daee0f2cc2b8ef07c781eae3ec4de412dbe84a",
-      "size_bytes": 17479
+      "sha256": "06df00bc486f8572425fd26d66f4c5fe5bdf00e4f2fae63c090e7dc7796930d5",
+      "size_bytes": 19712
     },
     {
       "path": "deliverables/current/review/style.css",
@@ -188,8 +188,8 @@
     },
     {
       "path": "deliverables/current/review/view_geometry.json",
-      "sha256": "c97eab10b9d1eed5053d20e88fac1590468288842dfd9cdcba290f761f092d81",
-      "size_bytes": 8108
+      "sha256": "7f89bdcdb009d931b67c010fc9e778cbd6163dbb99cfa26bd4af1e8bcd737d44",
+      "size_bytes": 8759
     },
     {
       "path": "deliverables/current/review/viewer.js",
@@ -198,12 +198,22 @@
     },
     {
       "path": "deliverables/current/review/views/assembled.png",
-      "sha256": "1387846d8ce517e90674815a0162b752b15c37e944fcc0921c365ffb39babb27",
+      "sha256": "217f2de4d2daa06abc139ffcad0cddf9723569e60f1711562dfbc47b3ffdebf3",
       "size_bytes": 2465189
     },
     {
+      "path": "deliverables/current/review/views/control_depth.png",
+      "sha256": "5d8cf22bf9752ef4a35f05f2576d0c642e489a802e2352790baed1f3b7f29676",
+      "size_bytes": 1916714
+    },
+    {
+      "path": "deliverables/current/review/views/control_depth_measure.png",
+      "sha256": "44da04668ac44bc439030ffdf87e400cc061856e79799b4e4125c4683544ab21",
+      "size_bytes": 1299988
+    },
+    {
       "path": "deliverables/current/review/views/coverage.png",
-      "sha256": "2370adc94b6a49e551f398c7fcecda3d8bfda9346b2c177cb12d17a74806e185",
+      "sha256": "69ba5c716b0911d311e359092a327ddc0fcf40e7af4cae2a65d076434e43574a",
       "size_bytes": 2598107
     },
     {
@@ -223,17 +233,17 @@
     },
     {
       "path": "deliverables/current/review/views/exploded.png",
-      "sha256": "da2b9eb4419edbf462820c582355c9f949e4ed4085b610717a5bceca11a4baf4",
+      "sha256": "019027d90843f0e86a2f9e7d5ea212fc4877e875c5def001d3106cfd5d7486cb",
       "size_bytes": 2541998
     },
     {
       "path": "deliverables/current/review/views/factory.png",
-      "sha256": "386bca09ada8be3022da44fe02ec69138aeaf348f91eaa76210dfa6588d5b7a2",
+      "sha256": "d0f53aef6bd6637f3cfa44f3b5dc2a75b584b75e8a24f54d873441a7cc63992d",
       "size_bytes": 2402763
     },
     {
       "path": "deliverables/current/review/views/gasket.png",
-      "sha256": "45fcae47859102e4b0b2ec52a79bb4c15ff21b9b76c1771e07c1c72b7e95728f",
+      "sha256": "d66971124a74e9587cf432f72f9e562a31e27efedcc277f036b143025ca8511c",
       "size_bytes": 2670430
     },
     {
@@ -243,12 +253,12 @@
     },
     {
       "path": "deliverables/current/review/views/inner_back.png",
-      "sha256": "29e4e1bfd41e2974ef6bd6f77d7a5a0a9266924cc2cf627a6d18f305715ae186",
+      "sha256": "1b372e8096a67182628fde19aae23d2fb2307a52e9f34413524e1385a28227a7",
       "size_bytes": 1943427
     },
     {
       "path": "deliverables/current/review/views/inner_front.png",
-      "sha256": "46351836d2c9eb632b5ebc9f2daeecb7deced134423ed03b5d897aad12e5c0e9",
+      "sha256": "a73973b2b04940973c329442e539869ce35cec077789987f99da003d5365ff49",
       "size_bytes": 2151214
     },
     {
@@ -258,7 +268,7 @@
     },
     {
       "path": "deliverables/current/review/views/neighbor.png",
-      "sha256": "595165ddd8001271850296a9b9975cde9b32eae273805c31f78a0a623f6bb046",
+      "sha256": "525949ac7e68fb9792dfd57102788e76d07c6a30289f0474f739a019e6580df4",
       "size_bytes": 2558552
     },
     {
@@ -268,17 +278,17 @@
     },
     {
       "path": "deliverables/current/review/views/outer_back.png",
-      "sha256": "cb58357f4dcef7e945172600ac56c2f308b9041b8ed6f02e4b76d5081291af96",
+      "sha256": "a4ffa784ba11580c40b84513dcffc57addbd1c78b4549ae8f63184f20f23b768",
       "size_bytes": 1928024
     },
     {
       "path": "deliverables/current/review/views/outer_front.png",
-      "sha256": "6d38f6b2af5fd4693d1b22aaa9586d62f195d4bbef7c0e24357747414f448c24",
+      "sha256": "74138edb8de23ee640b8b7945cd41e231c280e62506d0567721876bba854c325",
       "size_bytes": 1998882
     },
     {
       "path": "deliverables/current/review/views/overview.png",
-      "sha256": "915c573ece95bc2ac902ad3e1627d369f7d14fcf7aac3cff3daa292c4494358e",
+      "sha256": "5ee44b5283b22ddab8fd2d8e36b57f7fd269707089d1e56c717c43b9cf813d86",
       "size_bytes": 2292782
     },
     {
@@ -293,12 +303,12 @@
     },
     {
       "path": "deliverables/current/review/views/section_controls.png",
-      "sha256": "d25f9860fcbe54b190680b5620458e0d808e36475961d62c490dbddd55e2fe01",
+      "sha256": "f6904b772900062ec712e27bb9bc787e17811709584e17f8b1c44446c065bb86",
       "size_bytes": 2274676
     },
     {
       "path": "deliverables/current/review/views/section_studs.png",
-      "sha256": "d50a80b7affab12556ffef322bfa7d2ff4af46bf2dae71b8160936f54cb1a44a",
+      "sha256": "8469547dbad728e413ac817191da990c7a7491a4aaf51e9a2d9627d13878c4e7",
       "size_bytes": 2225074
     },
     {

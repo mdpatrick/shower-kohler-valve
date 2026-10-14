@@ -349,6 +349,36 @@
       "gasket_thickness_basis": "uncompressed placeholder; assembled compression and contact are unknown"
     }
   },
+  "rough_in": {
+    "status": "UNRESOLVED",
+    "physical_fit": "UNRESOLVED",
+    "nominal_source": "SRC-VALVE-SPEC p3; labeled dimensions, not drawing scale",
+    "nominal_axis_datum": "shower-outlet centerline in manufacturer side elevation",
+    "upper_bare_tip_from_axis_mm": 88.9,
+    "finished_wall_from_axis_mm": [
+      61.9125,
+      95.25
+    ],
+    "nominal_bare_upper_tip_from_tile_mm": [
+      -6.349999999999994,
+      26.987500000000004
+    ],
+    "scan_upper_tip_from_tile_mm": 31.95481637340469,
+    "measured_as_found_tip_depths_mm": {},
+    "comparison_tip_mm": 31.95481637340469,
+    "comparison_basis": "conditional scan tip; identity and physical scale unverified",
+    "conditional_excess_above_nominal_max_mm": 4.967316373404685,
+    "conditional_result": "outside nominal interval if same bare tip",
+    "same_bare_tip_verified": false,
+    "valve_move_target_mm": null,
+    "needed": "Check 10: identify each exposed tip/adapter, read H and both gaps; installer checks plaster guard or documented axis datum and final handle engagement.",
+    "limits": [
+      "The 7/16-inch stud limit does not apply to the control stems.",
+      "No lower-control or separate-diverter depth limit is inferred from the upper-stem dimension.",
+      "A removable adapter, different revision, tilt or scan error can invalidate this comparison.",
+      "The added backing plate is not automatically an approved rough-in correction."
+    ]
+  },
   "factory_guide": {
     "source": "SRC-KOHLER-OLD-GUIDE p7; p8 adapter check; current guide steps8-12",
     "stud_max_from_finished_wall_mm": 11.1125,

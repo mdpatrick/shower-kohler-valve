@@ -45,3 +45,12 @@ Executed after this correction: 17 unit/snapshot tests; desktop/mobile browser t
 The existing in-app browser was refreshed and visibly opened at Depth & sealing. Its response still contained no physical readings. The native Blender scene was reloaded from the latest saved file without an unsaved-change prompt. No user data or measurements were imported by the isolated UI tests.
 
 The first warning-stamp render attempt exposed a Blender property-name error. It was corrected to `stamp_note_text`; all 13 views then rendered and the saved file reopened. The command wrapper now supplies `--python-exit-code 1` so Python exceptions cannot silently yield a successful stage exit.
+
+
+## Control-depth inquiry, 2026-10-14
+
+The user's excessive-stud-projection, rear wood-contact and connected-plumbing reports are preserved as qualitative observations. The nominal upper bare-stem comparison is conditional on identifying the same tip and applicable revision. Check 10 records separate control block/gap readings and tip/adapter identity; signed projections remain diagnostic and do not move the valve geometry. Check 09 and the contractor schedule now include rear fastener identity, usable stud travel, independent rough-in datum and adapter/handle seating.
+
+Executed: 21 unit/import/snapshot tests passed, including recessed control tips, independent setup heights, and protection against treating a plausible unidentified tip as a fit pass. The isolated browser verified all new fields and identity notes in JSON download and local persistence, desktop/mobile layout and linked assets, with no page errors or failed requests. The saved Blender file reopened and passed component-placement and view-state checks. No synthetic values were imported into the actual canon.
+
+All 23 PDF pages were rendered and visually inspected as a contact sheet, with full-page checks of worksheet 09/10 and manual 02/08. After the final caption edit, 22 raster pages were pixel-identical to the inspected set and the remaining worksheet page 10 was inspected again. The new observed side-view annotation and browser explanation were visually checked. The accepted measurements, registration, all resolved component positions, and all 15 CAD solids' bounds, volumes and trial poses match checkpoint `a2b285b`. See `control_depth_check.json`. The build reused unchanged CAD/Blender stages after review-only corrections. Physical depth, repair choice, fit, fabrication approval and water performance remain unresolved.

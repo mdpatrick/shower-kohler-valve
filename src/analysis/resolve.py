@@ -52,6 +52,7 @@ def resolve():
         'frame':'installed','trim_center_mm':center.tolist(),'trim_in_plane_rotation_deg':angle,
         'centering_status':'inferred midpoint of observed control tips; actual outer-trim relation and retention unverified',
         'controls_mm':[bottom.tolist(),top.tolist()],'diverter_tip_mm':diverter,'observations':observations,
+        'diagnostic_control_depths_mm':{name:accepted[id] for name,id in [('upper','M10-UPPER'),('lower','M10-LOWER')] if id in accepted},
         'studs_mm':studs,'studs_state':'current measured envelopes where available; raw as-capture scan preserved',
         'inner_center_mm':inner_center.tolist(),'inner_slots':slots,
         'assumptions':a,'nominal':nom,'candidate':candidate,'accepted_measurement_ids':list(accepted),

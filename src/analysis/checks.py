@@ -115,6 +115,15 @@ def run():
     import cadquery as cq
     cm=json.loads((ROOT/'data/derived/cad/parts.json').read_text());parts={p['id']:p for p in cm['parts']}
     depth=analyze_depth(d,cm)
+    rough=depth['rough_in']
+    checks.append({'id':'UPPER-CONTROL-ROUGH-IN','status':'UNRESOLVED','physical_fit':'UNRESOLVED',
+        'conditional_result':f"{rough['comparison_tip_mm']:.1f} mm as-found upper tip versus nominal bare-tip interval {rough['nominal_bare_upper_tip_from_tile_mm'][0]:.1f} to {rough['nominal_bare_upper_tip_from_tile_mm'][1]:.1f} mm; {rough['conditional_result']}",
+        'method':'Subtract labeled manufacturer dimensions; compare without moving scan or valve',
+        'source':rough['nominal_source'],'needed':rough['needed']})
+    checks.append({'id':'STUD-REAR-CONTACT','status':'UNRESOLVED','physical_fit':'UNRESOLVED',
+        'conditional_result':'User confirms excessive stud projection and reports rear bolt contact with wood; fastener identity and obstruction mechanism remain unverified.',
+        'source':'OBS-STUD-PROJECTION-REPORTED-01; OBS-STUD-WOOD-CONTACT-01',
+        'needed':'Installer traces same studs, identifies framing/blocking, rear clearance and usable thread engagement; no cut/drill selection.'})
     for case,record in depth['cases'].items():
         for clash in record['collisions']:
             checks.append({'id':'CAD-CLASH-'+('FACTORY-' if case=='factory' else '')+clash['part'],
@@ -144,9 +153,10 @@ def run():
            'current_model_tip_z_mm':p[2],'current_status':'accepted M07 depth' if 'M07-'+name in accepted else 'conditional scan estimate',
            'proposed_target_mm':None,'guide_comparison_mm':11.1125,'guide_context':'7/16 inch maximum from finished wall, explicit in 1041504-2-F p7. Not a stud-cut length or automatic target above a custom backing plate.',
            'responsible':'qualified plumber','prerequisites':['M07 depth readings','usable thread/adapter arrangement','selected final layer thickness'],
-           'on_site_check':'Verify reversible factory adjustment, engagement and free outer-trim seating. No shortening or valve movement approved.'}
+           'on_site_check':'Trace reported rear wood contact to the same trim stud; record available rear travel, framing/blocking identity and retained thread engagement. Verify factory adjustment and free trim seating. No cut/drill selection.'}
           for name,p in zip(['SW','NE'],studs)]+
-          [{'id':'VALVE-POSE','current':'new state report requires reconciliation: '+new_state_note if new_state_note else 'scan pose retained; user confirms no post-scan changes 2026-10-14 (OBS-POST-SCAN-01)','proposed_translation_mm':None,'proposed_rotation_deg':None,'responsible':'qualified plumber','prerequisites':['physical access and pressure test'],'on_site_check':'Record any future real change before new fit assessment; no proposed move.'},
+          [{'id':'VALVE-POSE','current':'new state report requires reconciliation: '+new_state_note if new_state_note else 'scan pose retained; upper-tip nominal comparison flags depth only if it is the same bare stem; valve is plumbed in by user report','proposed_translation_mm':None,'proposed_rotation_deg':None,'responsible':'qualified plumber','prerequisites':['Check 10 tip/adapter identity and raw depths','plaster guard or documented shower-outlet-axis datum','independent support and pressure test'],'on_site_check':'Verify actual valve depth independently of stud length and adapter selection. Record any real change; no proposed move.'},
+           {'id':'CONTROL-ADAPTERS','current':'upper and lower exposed tip identities unresolved','proposed_adapter':None,'responsible':'qualified plumber','prerequisites':['applicable installed revision','number/length of current and available factory adapters','final seating surface and complete layer thickness'],'on_site_check':'Record correct screw/adapter engagement, fully seated bonnets/cover, unobstructed control operation and drainage. No cutting of control stems.'},
            {'id':'LANDING','current':'opening interrupts assumed factory gasket path','proposed':'continuous supported landing, detail unselected','responsible':'tile/waterproofing installer','prerequisites':['actual gasket trace','backing access and soundness','waterproofing-system identification'],'on_site_check':'Demonstrate full contact, rigid support and compatible sealing without cutting travertine.'} ]}
     (OUT/'contractor_schedule.json').write_text(json.dumps(schedule,indent=2)+'\n')
     for filename,data in [('registration.json',reg),('resolved.json',d)]: (OUT/filename).write_text(json.dumps(data,indent=2)+'\n')

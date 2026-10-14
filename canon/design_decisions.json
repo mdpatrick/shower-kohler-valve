@@ -23,6 +23,17 @@
       "lever_long_reach_mm": 76.2,
       "lever_short_reach_mm": 31.75,
       "source": "SRC-SMALL-TRIM-SPEC p3; exact inch conversion; actual part unchecked"
+    },
+    "main_valve_rough_in": {
+      "source": "SRC-VALVE-SPEC p3; labeled dimensions, not drawing scale",
+      "axis_datum": "shower-outlet centerline in manufacturer side elevation",
+      "upper_bare_tip_from_axis_mm": 88.9,
+      "finished_wall_from_axis_mm": [
+        61.9125,
+        95.25
+      ],
+      "scope": "Main K-2973-KS upper bare stem only; same-tip and installed-revision identity must be checked",
+      "nominal_only": true
     }
   },
   "visualization_assumptions": {

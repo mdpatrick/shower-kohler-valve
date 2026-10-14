@@ -17,6 +17,7 @@
     "outer_front",
     "outer_back",
     "gasket",
+    "control_depth",
     "section_controls",
     "section_studs"
   ],

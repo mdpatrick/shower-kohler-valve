@@ -47,3 +47,14 @@ Component identities were supplied by the user, who confirmed on 2026-10-14 that
 ## Is the over-cut the only concern?
 
 Not established. Concealing the cuts, supporting the foam/inner plate, resolving surface-water seals and drainage, and connecting concealed waterproofing are separate questions. The candidate does not yet provide demonstrated foam landing and its added depth changes seating and engagement. The [depth and sealing correction](decisions/depth_review_2026-10-14.md) explains the common datum and factory sequence.
+
+
+## Could the valve or control adapters also be at the wrong depth?
+
+Yes; that question is separate from stud length. The user confirms excessive stud projection and reports rear bolt contact with wood. The trim studs engage valve threads; rear wood anchorage is not their retaining mechanism. Check 09 now asks the installer to trace the same fasteners, distinguish structural framing from added blocking and establish usable rear travel/thread engagement. No cut/drill choice follows from the report.
+
+The labeled K-2973-KS side-elevation dimensions place the upper bare tip 88.9 mm forward of the shower-outlet axis and the finished wall 61.9125–95.25 mm forward of that axis. Subtraction gives a nominal bare-upper-tip projection of −6.35 to +26.9875 mm from tile. The current scan estimate is about +31.95 mm. This is a conditional flag of about 4.97 mm beyond the nominal maximum only if the same bare tip is being compared. An attached adapter, revision mismatch, valve tilt or scan error can invalidate that comparison. No lower-stem or separate-diverter limit is inferred.
+
+Check 10 records as-found upper/lower tip identity and separate block/gap readings. The import preserves signed projection and classifies it as a diagnostic cross-check. Those readings do not silently relocate the scan or CAD valve. A physically confirmed depth still needs the plaster-guard or manufacturer-axis check, correct adapter/screw selection, full handle/bonnet and cover seating, operation and drainage at the final layer thickness. See `deliverables/current/analysis/depth_stack.json` and [the preserved inquiry](physical_checks/depth_inquiry_2026-10-14.json).
+
+Internal valve seals contain supply water. The wall plane is not a seal against the bare stem. Incorrect trim depth can compromise seating and protection against exterior water entry; it does not by itself diagnose a damaged cartridge seal. These remain separate tests. Sources: preserved `kohler-1041504_2.pdf` pp3,7–8; `kohler-2973-KS-spec.pdf` p3; `kohler-2973-install-1205551-2.pdf` pp10–13,25.
