@@ -1,0 +1,119 @@
+{
+  "project_id": "shower-kohler-valve",
+  "model_revision": "R001",
+  "date": "2026-10-14",
+  "record_type": "user observation and research; not a completed physical-fit check",
+  "reference_commit": "5bd5a8f1ff357f37b72f4c0dde069b63c5489d79",
+  "user_reports": [
+    {
+      "id": "OBS-STUD-PROJECTION-REPORTED-01",
+      "status": "user-confirmed qualitative observation",
+      "raw": "I can confirm that they protrude too far.",
+      "accepted_numeric_readings": []
+    },
+    {
+      "id": "OBS-STUD-WOOD-CONTACT-01",
+      "status": "user-reported; fastener identity and available adjustment still unverified",
+      "raw": "When I look at the back I can see the bolts sitting on the surface of a wooden stud."
+    },
+    {
+      "id": "OBS-VALVE-PLUMBED-01",
+      "status": "user-reported",
+      "raw": "Note that the valve is now plumbed in",
+      "interpretation": "Connected plumbing; no new relocation or post-scan alteration stated."
+    }
+  ],
+  "image": {
+    "repository_path": "data/evidence/user/depth-side-view-2026-10-14.png",
+    "original_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/codex-clipboard-302a8bbd-7853-434b-b94b-4d871584085c.png",
+    "sha256": "9b093e02da9956bf804ffff8efe1031171e42c2f157362e51b075abc7f8dcf13",
+    "size_bytes": 161906,
+    "role": "User-supplied side view, apparently a scan rendering; no independent scale or hidden rear construction is established."
+  },
+  "sources": [
+    {
+      "id": "SRC-KOHLER-OLD-GUIDE",
+      "path": "data/evidence/kohler-1041504_2.pdf",
+      "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf",
+      "pages": [
+        3,
+        7,
+        8
+      ],
+      "supported_claims": [
+        "Trim studs engage threaded valve holes, not wood.",
+        "Different stem adapters and screws are provided.",
+        "Inner plate flat at wall; foam covers opening; outer drain downward.",
+        "Wrong adapter length can prevent engagement or cover seating."
+      ]
+    },
+    {
+      "id": "SRC-VALVE-SPEC",
+      "path": "data/evidence/kohler-2973-KS-spec.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/K-2973-KS_spec_US-CA_Kohler_en.pdf",
+      "pages": [
+        3
+      ],
+      "supported_claims": [
+        "Finished wall lies 2-7/16 to 3-3/4 inches forward of the indicated shower-outlet centerline.",
+        "Upper bare stem tip is nominally 3-1/2 inches forward of that same axis."
+      ]
+    },
+    {
+      "id": "SRC-VALVE-INSTALL",
+      "path": "data/evidence/kohler-2973-install-1205551-2.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/1205551-2.pdf",
+      "revision": "1205551-2-D",
+      "pages": [
+        10,
+        11,
+        13,
+        25
+      ],
+      "supported_claims": [
+        "Use plaster guard MIN-MAX depth and secure piping to framing.",
+        "Rear backing is configuration-dependent and may not fit in 2x4 framing.",
+        "Valve-body or temperature-spindle leakage calls for seal/cartridge diagnosis."
+      ]
+    }
+  ],
+  "upper_stem_screen": {
+    "nominal_upper_tip_from_shower_outlet_axis_mm": 88.89999999999999,
+    "finished_wall_from_same_axis_mm": [
+      61.912499999999994,
+      95.25
+    ],
+    "nominal_bare_upper_tip_from_wall_mm": [
+      -6.3500000000000085,
+      26.987499999999997
+    ],
+    "conditional_scan_upper_tip_mm": 31.95481637340469,
+    "conditional_excess_above_nominal_max_mm": 4.967316373404692,
+    "implied_wall_from_outlet_axis_if_same_bare_tip_mm": 56.9451836265953,
+    "method": "Subtract labeled inch dimensions; do not scale the drawing. Compare to existing AXIS-UPPER-TIP in original-wall frame.",
+    "result": "CONDITIONAL DEPTH FLAG; NOT AN ACCEPTED PHYSICAL FAILURE",
+    "conditions": [
+      "The scan landmark must be the same bare upper stem tip, without a removable adapter.",
+      "Actual installed valve revision must match the nominal drawing.",
+      "Scan scale and tip reconstruction remain uncalibrated.",
+      "No numerical lower-stem diagnosis is inferred from this upper-stem dimension."
+    ]
+  },
+  "assessment": {
+    "stud_rear_support": "The valve threads retain the trim studs. The rear ends do not require wood anchorage; actual through-hole/rear travel must be inspected.",
+    "cut_or_drill": "No selection. First verify same studs, wood contact, usable valve threads, and whether the wood is structural framing or added blocking. The inspected guides do not authorize stud cutting or a particular wood recess.",
+    "handle_depth": "A wrong removable adapter can affect engagement/seating even with correct body rough-in. Correcting studs alone cannot establish handle fit.",
+    "water_paths": "Internal supply/valve leakage and exterior water passing behind improperly seated trim are different checks. Bare stem projection alone is not a leak diagnosis.",
+    "new_backing_plate": "Any added stack changes trim/adapter depth and adds a sealing interface; it is not automatically an approved remedy for shallow rough-in."
+  },
+  "next_evidence": [
+    "Identify the exposed upper and lower stem parts and available numbered adapters.",
+    "Check finished tile against the correct plaster guard, or measure the documented rough-in datum.",
+    "Read both actual stud projections and inspect their rear contact and retained thread engagement.",
+    "Dry-fit the final complete stack without forcing: original foam/inner plate, cover, adapters and handles; verify seating, operation and drainage."
+  ],
+  "physical_fit": "UNRESOLVED",
+  "fabrication_approval": "NOT GIVEN",
+  "geometry_changed": false,
+  "dimensions_imported": false
+}
