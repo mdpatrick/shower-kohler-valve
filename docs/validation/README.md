@@ -27,4 +27,6 @@ Source limits: the primary mesh preserves the actual opening, visible cuts and h
 
 Coverage uses traced projected contours. The mesh/plate slice uses full-resolution vertices but does not certify triangle crossings or hidden geometry. Provisional exact-solid intersections test the assumed geometry, not the installation. All physical checks remain UNRESOLVED; there is no selected repair, material system, independent fabrication review, physical dry fit, manufacture or water-performance result.
 
-The final clean-checkout rebuild and bundle restoration record is stored separately in `restore_check.json` when executed. Local cloning and bundles protect recoverability on this machine; they are not off-machine backup or remote publication.
+The clean-checkout rebuild passed at commit `8899909`: all three full committed archive blobs and 55 snapshot files matched their hashes, a fresh environment installed all 49 locked packages from the local cache, and the complete CAD/Blender/HTML/PDF build ran without Downloads. Recomputed resolved geometry exactly matched the source checkpoint and accepted canon stayed unchanged. See `restore_check.json`.
+
+The final handoff's bundle-clone receipt is saved beside the bundle as `build/handoff/bundle-restore-receipt.json`, with its bundle hash and source commit. Keeping that receipt outside the bundle avoids a circular requirement that a bundle contain the result of restoring itself. Local cloning and bundles protect recoverability on this machine; they are not off-machine backup or remote publication.

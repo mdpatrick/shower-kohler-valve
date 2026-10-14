@@ -10,7 +10,7 @@ def run(args,cwd=ROOT,env=None,log=None):
     else:subprocess.run(args,cwd=cwd,env=env,check=True)
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--bundle');p.add_argument('--rebuild',action='store_true');a=p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--bundle');p.add_argument('--rebuild',action='store_true');p.add_argument('--report',help='Optional receipt path outside the committed snapshot');a=p.parse_args()
     kind='bundle' if a.bundle else 'clone';destination=ROOT/'build'/('restore-'+kind+'-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
     source=Path(a.bundle).resolve() if a.bundle else ROOT
     run(['git','clone','--no-hardlinks',str(source),str(destination)])
@@ -40,8 +40,10 @@ def main():
     report={'status':'PASS','kind':kind,'source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=destination,text=True).strip(),
         'destination':str(destination.relative_to(ROOT)),'archives':archive_results,'snapshot_files_checked':len(manifest['files']),
         'extraction_from_repository_only':True,'Downloads_accessed':False,'fresh_environment_and_full_rebuild':rebuild,
-        'resolved_geometry_agrees':True if rebuild else None,'physical_fit':'NOT PERFORMED','off_machine_backup':False}
-    out=ROOT/'docs/validation/restore_check.json';reports=json.loads(out.read_text()) if out.exists() else {'runs':[]};reports['runs'].append(report)
+        'resolved_geometry_agrees':True if rebuild else None,'physical_fit':'NOT PERFORMED','off_machine_backup':False,
+        'bundle_sha256':hashlib.sha256(source.read_bytes()).hexdigest() if a.bundle else None}
+    out=ROOT/(a.report or 'docs/validation/restore_check.json');out.parent.mkdir(parents=True,exist_ok=True)
+    reports=json.loads(out.read_text()) if out.exists() else {'runs':[]};reports['runs'].append(report)
     out.write_text(json.dumps(reports,indent=2)+'\n');print(json.dumps(report,indent=2))
 
 if __name__=='__main__':main()

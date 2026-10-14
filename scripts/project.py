@@ -171,18 +171,24 @@ def handoff():
     if bundle.exists():bundle=bundle.with_name('shower-kohler-valve-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S')+'.git.bundle')
     run(['git','bundle','create',str(bundle),'--all']);run(['git','bundle','verify',str(bundle)])
     changes=subprocess.check_output(['git','status','--porcelain'],text=True).strip()
-    if changes:
+    notes=ROOT/'deliverables/current/blender/user_notes.blend'
+    if changes or notes.exists():
         paths=subprocess.check_output(['git','ls-files','--modified','--others','--exclude-standard','-z']).decode().split('\0')
-        with zipfile.ZipFile(dest/'uncommitted-files.zip','w',zipfile.ZIP_DEFLATED) as z:
+        if notes.exists():paths.append(str(notes.relative_to(ROOT)))
+        stamp=datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
+        with zipfile.ZipFile(dest/('uncommitted-files-'+stamp+'.zip'),'w',zipfile.ZIP_DEFLATED) as z:
             for name in paths:
                 if name and (ROOT/name).is_file():z.write(ROOT/name,name)
-        (dest/'uncommitted-status.txt').write_text(changes+'\n')
+        (dest/('uncommitted-status-'+stamp+'.txt')).write_text(changes+'\n'+('Separate ignored user_notes.blend included.\n' if notes.exists() else ''))
     with zipfile.ZipFile(dest/'analysis-review.zip','w',zipfile.ZIP_DEFLATED) as z:
         for base in ['canon','docs','deliverables/current/analysis']:
             for p in (ROOT/base).rglob('*'):
                 if p.is_file():z.write(p,str(p.relative_to(ROOT)))
         for name in ['coverage','inner_front','inner_back','section_studs','exploded']:
             p=ROOT/f'deliverables/current/review/views/{name}.png';z.write(p,str(p.relative_to(ROOT)))
+        for name in ['deliverables/current/review/manual_steps.json','deliverables/current/review/measurement_requests.json',
+                     'data/evidence/kohler-1041504_2.pdf','data/evidence/kohler-1216755-2.pdf','data/evidence/kohler-T14489-4-spec.pdf']:
+            z.write(ROOT/name,name)
     print('Private local handoff:',bundle.relative_to(ROOT),'(contains complete committed originals). Not an off-machine backup.')
 
 def main():
