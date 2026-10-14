@@ -5,8 +5,8 @@
   "selected_state": null,
   "working_state": "proposed_provisional",
   "states": {
-    "as_observed_at_capture": "preserved scan; capture date unknown",
-    "manufacturer_intended": "user-identified K-T14489-4-BN and K-2973-KS-NA; physical dimensions/revision unchecked",
+    "as_observed_at_capture": "preserved scan; capture date unknown; user reports no changes since capture on 2026-10-14",
+    "manufacturer_intended": "Factory reference at original stone plane; nominal arrangement from Kohler guides, main and separate diverter trim; unmeasured mating details provisional",
     "proposed_provisional": "conditional no-cutting alternatives; no selected repair",
     "selected_arrangement": null
   },
@@ -20,7 +20,7 @@
     "received_part_inspection": "NOT APPLICABLE YET",
     "installed_leak_test": "NOT PERFORMED"
   },
-  "current_piping": "unknown since capture; ask installer/homeowner",
+  "current_piping": "Unchanged since capture, per user 2026-10-14; no replacement reported.",
   "constraints": [
     "preserve travertine; no further cutting/drilling/grinding",
     "retain original plate/gasket/drain/service functions",
@@ -32,5 +32,6 @@
     "K-T14491-4-BN",
     "K-2973-KS-NA",
     "K-737-K-NA"
-  ]
+  ],
+  "post_scan_state_observation": "OBS-POST-SCAN-01"
 }

@@ -2,13 +2,109 @@
   "schema_version": 1,
   "source": "SCAN-WALL",
   "method": "Manual identification in raw +Z orthographic textured render; vertices sampled near visible tips. These are estimated tip centers, not measured hole axes.",
-  "raw_view": {"pixels": 1200, "ortho_scale": 2.95459024, "center": [0, 1.3190135, 0]},
-  "plane_regions_px": [[300,320,450,380],[300,780,460,820],[795,320,830,450],[790,700,850,800]],
+  "raw_view": {
+    "pixels": 1200,
+    "ortho_scale": 2.95459024,
+    "center": [
+      0,
+      1.3190135,
+      0
+    ]
+  },
+  "plane_regions_px": [
+    [
+      300,
+      320,
+      450,
+      380
+    ],
+    [
+      300,
+      780,
+      460,
+      820
+    ],
+    [
+      795,
+      320,
+      830,
+      450
+    ],
+    [
+      790,
+      700,
+      850,
+      800
+    ]
+  ],
   "provisional_scale_anchor_mm": 79.375,
   "landmarks_raw": {
-    "AXIS-UPPER-TIP": {"point": [0.094248,1.560286,0.258374], "status": "scan-derived", "uncertainty_mm": null, "purpose": "visible upper control tip reference"},
-    "AXIS-LOWER-TIP": {"point": [0.088695,1.190037,0.265252], "status": "scan-derived", "uncertainty_mm": null, "purpose": "visible lower control tip / origin anchor"},
-    "STUD-NE-TIP": {"point": [0.311688,1.482759,0.178402], "status": "scan-derived", "uncertainty_mm": null, "purpose": "upper-right visible stud tip; not hidden thread/axis"},
-    "STUD-SW-TIP": {"point": [-0.130382,1.27635,0.306101], "status": "scan-derived", "uncertainty_mm": null, "purpose": "lower-left visible stud tip; not hidden thread/axis"}
+    "AXIS-UPPER-TIP": {
+      "point": [
+        0.094248,
+        1.560286,
+        0.258374
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "visible upper control tip reference"
+    },
+    "AXIS-LOWER-TIP": {
+      "point": [
+        0.088695,
+        1.190037,
+        0.265252
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "visible lower control tip / origin anchor"
+    },
+    "STUD-NE-TIP": {
+      "point": [
+        0.311688,
+        1.482759,
+        0.178402
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "upper-right visible stud tip; not hidden thread/axis"
+    },
+    "STUD-SW-TIP": {
+      "point": [
+        -0.130382,
+        1.27635,
+        0.306101
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "lower-left visible stud tip; not hidden thread/axis"
+    },
+    "AXIS-DIVERTER-TIP": {
+      "point": [
+        0.100489,
+        0.557302,
+        0.30125
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "visible separate lower diverter tip reference; not hidden axis; not used for registration",
+      "selection": {
+        "view": "build/scan_inspection/wall_aligned.png",
+        "view_pixels": 1800,
+        "span_mm_at_R001": 620,
+        "center_installed_mm_at_R001": [
+          0,
+          40,
+          0
+        ],
+        "picked_pixel": [
+          900,
+          1410
+        ],
+        "method": "nearest full-resolution mesh vertex in projected XY",
+        "zero_based_OBJ_vertex": 373047
+      },
+      "limitations": "Reflective tip can be distorted. Finite pixel picking is not a bounded physical center accuracy."
+    }
   }
 }

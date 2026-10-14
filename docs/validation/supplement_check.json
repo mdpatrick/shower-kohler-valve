@@ -1,0 +1,46 @@
+{
+  "revision": "R001",
+  "date": "2026-10-14",
+  "status": "PASS - software and source interpretation checks only",
+  "base_commit": "7bfd2a9b1b4f42e0ea2de1cd176bd0785340f8d9",
+  "original_transform_unchanged_exactly": true,
+  "original_landmarks_unchanged_exactly": [
+    "AXIS-UPPER-TIP",
+    "AXIS-LOWER-TIP",
+    "STUD-NE-TIP",
+    "STUD-SW-TIP"
+  ],
+  "new_landmark": "AXIS-DIVERTER-TIP (context only, not fitting input)",
+  "tests_passed": 16,
+  "browser_report": "docs/validation/browser_check.json",
+  "pdf_rendered_page_counts": {
+    "worksheet": 9,
+    "candidate_drawing": 1,
+    "tiled_profile": 4,
+    "manual": 6
+  },
+  "visually_reviewed": [
+    "factory.png",
+    "assembled.png",
+    "neighbor_measure.png",
+    "all 20 rendered PDF pages"
+  ],
+  "review_findings": [
+    "Factory and proposed per-part positions match CAD metadata; custom/seal hidden in factory state; separate diverter does not move",
+    "Nominal handle axis-to-tip dimension previously treated as centered total length; corrected",
+    "Existing raw registration unchanged, no physical dimensions accepted",
+    "Neighbor trim gap and handle reach circles are conditional projections only"
+  ],
+  "remaining": [
+    "physical scale and independent cross-checks",
+    "actual gasket/plate shape and rear cavity",
+    "thread/adapter engagement",
+    "support, retaining method, material and water barrier detail",
+    "actual installation/removal/handle travel",
+    "fresh pre-fabrication review after measurements",
+    "physical dry fit and explicit fabrication approval"
+  ],
+  "saved_scene_state_check": "docs/validation/scene_state_check.json",
+  "no_op_rebuild": "PASS - all seven stages reused",
+  "full_committed_archive_verification": "PASS - original three blobs hashed again"
+}

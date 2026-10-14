@@ -46,10 +46,13 @@ def resolve():
                       'aperture_purpose':'clear visible valve/body/stud envelope for axial installation; conservative draft requires full-mesh slice and gasket check',
                       'separate_fastener_holes':[],'hole_policy':'no additional holes: both observed stud paths fall in the single aperture; verify thread/service paths before design release',
                       'seal_display_thickness_mm':1,'seal_thickness_status':'visual separator only; actual cured layer unknown'})
+    diverter=reg['landmarks_installed_mm']['AXIS-DIVERTER-TIP']['point_mm']
+    observations=json.loads((ROOT/'canon/observations.json').read_text())['observations']
     parameters={'project_id':'shower-kohler-valve','revision':mc['revision'],'status':'DRAFT_NOT_FOR_FABRICATION','units':'mm',
         'frame':'installed','trim_center_mm':center.tolist(),'trim_in_plane_rotation_deg':angle,
         'centering_status':'inferred midpoint of observed control tips; actual outer-trim relation and retention unverified',
-        'controls_mm':[bottom.tolist(),top.tolist()],'studs_mm':studs,'studs_state':'current measured envelopes where available; raw as-capture scan preserved',
+        'controls_mm':[bottom.tolist(),top.tolist()],'diverter_tip_mm':diverter,'observations':observations,
+        'studs_mm':studs,'studs_state':'current measured envelopes where available; raw as-capture scan preserved',
         'inner_center_mm':inner_center.tolist(),'inner_slots':slots,
         'assumptions':a,'nominal':nom,'candidate':candidate,'accepted_measurement_ids':list(accepted),
         'scale_status':reg['scale_status'],'secondary_scans_used_to_fit':False,'features':resolved}

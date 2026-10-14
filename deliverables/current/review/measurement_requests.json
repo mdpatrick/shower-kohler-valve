@@ -338,7 +338,7 @@
       "title": "Check the worst cuts and current state",
       "view": "wall_measure",
       "purpose": "Independently checks scale/coverage and identifies changes since capture.",
-      "instructions": "Measure the horizontal span P-Q from the leftmost upper cut end to the rightmost upper cut end, and the vertical span U-V from the highest upper damage to the lowest bottom chipped edge, using the labeled scan view. Do not add these as calibration inputs until their independent-check role is reviewed. Identify whether CUT-02/CUT-07 are real cuts or texture/shadow, and whether MARK-01 is only residue. At GROUT-01 record recess width/depth. In notes state whether plastic piping was replaced with copper, either valve moved, studs adjusted, or any wall repairs occurred after the scan. Photograph altered areas.",
+      "instructions": "Measure the horizontal span P-Q from the leftmost upper cut end to the rightmost upper cut end, and the vertical span U-V from the highest upper damage to the lowest bottom chipped edge, using the labeled scan view. Do not add these as calibration inputs until their independent-check role is reviewed. Identify whether CUT-02/CUT-07 are real cuts or texture/shadow, and whether MARK-01 is only residue. At GROUT-01 record recess width/depth. No changes since capture were confirmed on 2026-10-14. Report only subsequent changes to piping, valve pose, studs or wall, with photographs of altered areas.",
       "fields": [
         {
           "id": "M08-X",

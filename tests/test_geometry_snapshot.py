@@ -47,6 +47,29 @@ class SnapshotTests(unittest.TestCase):
         self.assertIsNone(state['selected_state'])
         self.assertEqual(state['readiness']['fabrication_approval'],'NOT GIVEN')
         checks=json.loads((ROOT/'deliverables/current/analysis/checks.json').read_text())
-        self.assertTrue(all(c['status']=='UNRESOLVED' for c in checks['coverage']+checks['checks']))
+        self.assertTrue(all(c['status']=='UNRESOLVED' for c in checks['coverage']+checks['checks'] if c['id' if 'id' in c else 'feature_id']!='POST-SCAN-STATE'))
+
+    def test_factory_comparison_preserves_captured_hardware(self):
+        parts=json.loads((ROOT/'deliverables/current/cad/cad_manifest.json').read_text())['parts']
+        d=json.loads((ROOT/'deliverables/current/analysis/resolved.json').read_text())
+        shift=d['candidate']['thickness_mm']+d['candidate']['seal_display_thickness_mm']
+        for p in parts:
+            factory=p['factory_location_mm'];placed=p['location_mm']
+            if p['id'] in ('CUSTOM-01','NEW-SEAL-PATH'):
+                self.assertIsNone(factory);continue
+            expected=np.array(placed)
+            if p['collection'] in ('02_INNER_AND_GASKET','03_OUTER_TRIM'):expected[2]-=shift
+            np.testing.assert_allclose(factory,expected,atol=1e-10)
+        for id in ('HANDLE-LOWER','HANDLE-UPPER'):
+            p=next(p for p in parts if p['id']==id);side=0 if id=='HANDLE-LOWER' else 1
+            self.assertAlmostEqual(abs(p['bounds_local_mm'][side][1]),76.2)
+
+    def test_neighbor_clearance_uses_separate_diverter(self):
+        d=json.loads((ROOT/'deliverables/current/analysis/resolved.json').read_text())
+        checks=json.loads((ROOT/'deliverables/current/analysis/checks.json').read_text())['checks']
+        c=next(c for c in checks if c['id']=='NEIGHBOR-TRIM-CLEARANCE')
+        separation=np.linalg.norm(np.array(d['trim_center_mm'])-np.array(d['diverter_tip_mm'][:2]))
+        self.assertAlmostEqual(c['candidate_to_diverter_gap_mm'],separation-d['candidate']['diameter_mm']/2-d['nominal']['diverter_trim']['diameter_mm']/2)
+        self.assertEqual(c['status'],'UNRESOLVED')
 
 if __name__=='__main__':unittest.main()

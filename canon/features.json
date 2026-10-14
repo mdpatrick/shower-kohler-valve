@@ -1113,7 +1113,7 @@
       "kind": "reference reconstruction",
       "status": "manufacturer nominal",
       "source": "SRC-KOHLER-SPEC",
-      "note": "Candidate 7.25in diameter; actual identity not yet verified."
+      "note": "User identified K-T14489-4-BN. Manufacturer nominal 7.25in OD; physical revision and dimensions unverified."
     },
     {
       "id": "CUSTOM-01",
@@ -1122,6 +1122,30 @@
       "kind": "design candidate",
       "status": "inferred",
       "note": "Diameter computed from traced damage + exploratory land. Aperture derived conservatively from visible protrusion envelope; requires gasket and service checks."
+    },
+    {
+      "id": "AXIS-DIVERTER-TIP",
+      "component": "separate K-737-K diverter",
+      "state": "as_observed_at_capture",
+      "kind": "landmark",
+      "source": "SCAN-WALL",
+      "status": "scan-derived",
+      "point_raw": [
+        0.100489,
+        0.557302,
+        0.30125
+      ],
+      "uncertainty_mm": null,
+      "note": "Visible separate lower diverter tip. Context only; excluded from scale/plane fitting."
+    },
+    {
+      "id": "DIVERTER-TRIM",
+      "component": "K-T14491-4-BN",
+      "state": "manufacturer_intended",
+      "kind": "nominal trim envelope",
+      "source": "SRC-SMALL-TRIM-SPEC",
+      "status": "manufacturer nominal",
+      "note": "3-7/8 inch nominal OD; center inferred from visible tip. Rear detail and physical placement unverified."
     }
   ]
 }

@@ -194,6 +194,38 @@
         18.462229374095184,
         26.61188122141667
       ]
+    },
+    "AXIS-DIVERTER-TIP": {
+      "point": [
+        0.100489,
+        0.557302,
+        0.30125
+      ],
+      "status": "scan-derived",
+      "uncertainty_mm": null,
+      "purpose": "visible separate lower diverter tip reference; not hidden axis; not used for registration",
+      "selection": {
+        "view": "build/scan_inspection/wall_aligned.png",
+        "view_pixels": 1800,
+        "span_mm_at_R001": 620,
+        "center_installed_mm_at_R001": [
+          0,
+          40,
+          0
+        ],
+        "picked_pixel": [
+          900,
+          1410
+        ],
+        "method": "nearest full-resolution mesh vertex in projected XY",
+        "zero_based_OBJ_vertex": 373047
+      },
+      "limitations": "Reflective tip can be distorted. Finite pixel picking is not a bounded physical center accuracy.",
+      "point_mm": [
+        -0.06707892223839187,
+        -135.56284970689944,
+        42.25487639410002
+      ]
     }
   },
   "secondary_registration": {

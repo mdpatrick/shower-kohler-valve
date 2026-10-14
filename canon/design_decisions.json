@@ -6,16 +6,24 @@
     "small_trim": "K-T14491-4-BN",
     "valve": "K-2973-KS-NA",
     "status": "user-confirmed exact model names on 2026-10-14",
-    "diverter_installation_status": "user identifies separate valve as K-737-K-NA; post-scan work status unknown",
+    "diverter_installation_status": "User identified K-737-K-NA; no changes since capture reported 2026-10-14 (OBS-POST-SCAN-01).",
     "physical_revision_and_dimensions": "not verified",
     "diverter": "K-737-K-NA"
   },
   "nominal_parameters": {
     "trim_diameter_mm": 184.15,
     "control_spacing_mm": 79.375,
-    "handle_lever_length_mm": 76.2,
     "trim_total_projection_mm": 107.95,
-    "source": "SRC-KOHLER-SPEC; inch dimensions converted exactly; physical part not verified"
+    "source": "SRC-KOHLER-SPEC; inch dimensions converted exactly; physical part not verified",
+    "handle_lever_long_reach_mm": 76.2,
+    "handle_lever_basis": "3in from control axis to long tip, main specification p3; not total lever length",
+    "diverter_trim": {
+      "diameter_mm": 98.425,
+      "total_projection_mm": 107.95,
+      "lever_long_reach_mm": 76.2,
+      "lever_short_reach_mm": 31.75,
+      "source": "SRC-SMALL-TRIM-SPEC p3; exact inch conversion; actual part unchecked"
+    }
   },
   "visualization_assumptions": {
     "inner_width_mm": 116,
@@ -35,7 +43,14 @@
     "stud_clearance_slot_width_mm": 7,
     "stud_clearance_slot_length_mm": 11,
     "note": "Exploratory display only. Unknown physical values have no asserted tolerance. Scan stud positions constrain provisional hole locations; hidden shape is not known.",
-    "outer_cavity_basis": "nominal exterior center height approximately 16mm from official OBJ minus assumed 1.5mm shell; NOT an observed rear cavity"
+    "outer_cavity_basis": "nominal exterior center height approximately 16mm from official OBJ minus assumed 1.5mm shell; NOT an observed rear cavity",
+    "main_lever_short_reach_mm": 38.1,
+    "lever_width_mm": 16,
+    "lever_depth_mm": 8,
+    "diverter_trim_body_depth_mm": 16,
+    "diverter_trim_shell_mm": 1.5,
+    "diverter_trim_opening_diameter_mm": 36,
+    "handle_note": "Long lever reach corrected from official dimensioned drawings; short main lever reach, cross-section, rear interfaces and housing remain display assumptions. Upper main lever points up; lower main and diverter point down in reference pose, not an operating-range claim."
   },
   "candidate": {
     "shape": "circular",

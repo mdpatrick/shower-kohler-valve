@@ -3,11 +3,11 @@
     "title": "Record the current installation",
     "view": "overview",
     "person": "Homeowner + installer",
-    "prerequisite": "Existing access is safe; no pressure parts disturbed.",
+    "prerequisite": "Existing access is safe; no pressure parts disturbed. User reported no changes since capture on 2026-10-14.",
     "tools": "Camera, ruler, labels; measurement worksheet.",
-    "action": "Record which plumbing, stud or wall changes occurred since the capture and photograph the opening with the same feature labels.",
-    "check": "Current-state note and readings reference the worksheet revision; changed areas are identified.",
-    "stop": "If a valve has moved or repairs hide a cut, the old scan cannot certify current fit."
+    "action": "Take the requested dimensional readings and label the matching locations. Report any future plumbing, stud or wall change before using the model for fit.",
+    "check": "Readings reference the worksheet revision; any newly changed areas are identified.",
+    "stop": "If a valve moves or repairs hide a cut, the old scan cannot certify current fit."
   },
   {
     "title": "Check plumbing and factory adjustment",

@@ -74,6 +74,17 @@ for p in cad['parts']:
     for k in ['id','evidence','status','tessellation_tolerance_mm']:o[k]=p[k]
     o['state']='proposed_provisional';o['CAD_source']=p['step'] or p['stl'];objects[p['id']]=o
 
+# Factory comparison shares the reference meshes, but omits the custom plate/seal.
+# Captured hardware never moves. Rear details and factory mating remain unverified.
+factory=[]
+for p in cad['parts']:
+    if p['collection'] not in ('02_INNER_AND_GASKET','03_OUTER_TRIM'):continue
+    source=objects[p['id']];cp=source.copy();cp.data=source.data
+    cp.name='FACTORY_REFERENCE__'+p['id'];coll('10_FACTORY_REFERENCE').objects.link(cp)
+    cp.location=xyz(p['factory_location_mm']);cp['state']='manufacturer_intended';cp['display_only']=True
+    cp['limitation']='Original stone plane reference; assumed mating geometry; no hardware adjustment or fit approval'
+    factory.append(cp)
+
 red=material('Observed damage',(0.82,.12,.10),True);amber=material('Uncertain feature',(.95,.57,.05),True)
 teal=material('Candidate outline',(.04,.68,.78),True);white=material('Nominal trim outline',(.94,.95,.91),True)
 def line(name,points,mat,width=.0005,collection='06_DATUMS_AND_COVERAGE',closed=False):
@@ -87,6 +98,8 @@ for f in d['features']:
 center=d['trim_center_mm']
 for name,r,mat in [('NOMINAL_TRIM',d['nominal']['trim_diameter_mm']/2,white),('CUSTOM_DRAFT',d['candidate']['diameter_mm']/2,teal)]:
     line(name,[xyz((center[0]+r*math.cos(t*2*math.pi/256),center[1]+r*math.sin(t*2*math.pi/256),66)) for t in range(256)],mat,.0006,closed=True)
+dx,dy,_=d['diverter_tip_mm'];radius=d['nominal']['diverter_trim']['diameter_mm']/2
+line('SEPARATE_DIVERTER_NOMINAL',[xyz((dx+radius*math.cos(t*2*math.pi/256),dy+radius*math.sin(t*2*math.pi/256),66)) for t in range(256)],amber,.0006,closed=True)
 for id,p in reg['landmarks_installed_mm'].items():
     x,y,z=p['point_mm'];line(id+' cross X',[xyz((x-2,y,70)),xyz((x+2,y,70))],white)
     line(id+' cross Y',[xyz((x,y-2,70)),xyz((x,y+2,70))],white)
@@ -95,6 +108,7 @@ coll('USER_NOTES')
 # Exploded duplicates share CAD mesh data and can never enter assembly exports.
 exploded=[]
 for id,o in objects.items():
+    if id.startswith('DIVERTER'):continue
     if id.startswith(('VALVE','STUD-')) and not id.endswith('NUT'):continue
     cp=o.copy();cp.data=o.data;cp.name='EXPLODED_ONLY__'+id;coll('08_EXPLODED_DISPLAY_ONLY').objects.link(cp)
     off=30 if id=='CUSTOM-01' or id=='NEW-SEAL-PATH' else 65 if id=='GASKET-01' else 100 if id=='PLATE-INNER' or id.endswith('NUT') else 150 if id=='TRIM-OUTER' else 205
@@ -106,7 +120,9 @@ def camera(name,loc,target,span):
 cams={
  'coverage':camera('CAM_01_Coverage',(center[0],center[1],900),(center[0],center[1],0),300),
  'overview':camera('CAM_00_Overview',(0,0,1000),(0,0,0),620),
- 'assembled':camera('CAM_02_Assembled',(300,240,650),(0,40,20),350),
+ 'assembled':camera('CAM_02_Assembled',(300,240,650),(0,-25,20),450),
+ 'factory':camera('CAM_02B_Factory_reference',(300,240,650),(0,-25,20),450),
+ 'neighbor':camera('CAM_02C_Neighbor_clearance',(0,-30,900),(0,-30,0),430),
  'exploded':camera('CAM_03_Exploded',(470,300,700),(0,40,100),460),
  'inner_front':camera('CAM_04_Inner_front',(0,40,600),(0,40,0),210),
  'inner_back':camera('CAM_05_Inner_back',(0,40,-600),(0,40,0),210),
@@ -139,13 +155,14 @@ restore_user_notes(notes,coll('USER_NOTES'))
 layers={
  'Observed':['01_OBSERVED_WALL'],
  'Coverage':['01_OBSERVED_WALL','06_DATUMS_AND_COVERAGE'],
- 'Assembled':['01_OBSERVED_WALL','02_INNER_AND_GASKET','02B_FACTORY_GASKET','03_OUTER_TRIM','04_CUSTOM_CANDIDATE','05_PROPOSED_MATERIALS'],
- 'Exploded':['01_OBSERVED_WALL','08_EXPLODED_DISPLAY_ONLY'],
+ 'Assembled':['01_OBSERVED_WALL','02_INNER_AND_GASKET','02B_FACTORY_GASKET','03_OUTER_TRIM','03B_DIVERTER_REFERENCE','04_CUSTOM_CANDIDATE','05_PROPOSED_MATERIALS'],
+ 'Factory_reference':['01_OBSERVED_WALL','10_FACTORY_REFERENCE','03B_DIVERTER_REFERENCE'],
+ 'Exploded':['01_OBSERVED_WALL','08_EXPLODED_DISPLAY_ONLY','03B_DIVERTER_REFERENCE'],
  'Inner':['02_INNER_AND_GASKET','02B_FACTORY_GASKET'],
  'Gasket':['01_OBSERVED_WALL','02B_FACTORY_GASKET','06_DATUMS_AND_COVERAGE'],
  'Section_controls':[sec_controls], 'Section_studs':[sec_studs],
  'Full_source':['00A_SOURCE_WALL_FULL'],
- 'CAD_only':['01_OBSERVED_ENVELOPES','02_INNER_AND_GASKET','02B_FACTORY_GASKET','03_OUTER_TRIM','04_CUSTOM_CANDIDATE','05_PROPOSED_MATERIALS']}
+ 'CAD_only':['01_OBSERVED_ENVELOPES','02_INNER_AND_GASKET','02B_FACTORY_GASKET','03_OUTER_TRIM','03B_DIVERTER_REFERENCE','04_CUSTOM_CANDIDATE','05_PROPOSED_MATERIALS']}
 default=scene.view_layers[0];default.name='Coverage'
 for name,visible in layers.items():
     vl=default if name=='Coverage' else scene.view_layers.new(name)
@@ -155,7 +172,7 @@ def render(name,layer):
     for vl in scene.view_layers:vl.use=vl.name==layer
     bpy.context.window.view_layer=scene.view_layers[layer];scene.camera=cams[name]
     scene.render.filepath=str(VIEWS/(name+'.png'));bpy.ops.render.render(write_still=True)
-for name,layer in [('coverage','Coverage'),('overview','Observed'),('assembled','Assembled'),('exploded','Exploded'),('inner_front','Inner'),('inner_back','Inner'),('outer_front','Assembled'),('outer_back','Assembled'),('gasket','Gasket'),('section_controls','Section_controls'),('section_studs','Section_studs')]:
+for name,layer in [('coverage','Coverage'),('overview','Observed'),('assembled','Assembled'),('factory','Factory_reference'),('neighbor','Coverage'),('exploded','Exploded'),('inner_front','Inner'),('inner_back','Inner'),('outer_front','Assembled'),('outer_back','Assembled'),('gasket','Gasket'),('section_controls','Section_controls'),('section_studs','Section_studs')]:
     hidden=[]
     if name.startswith('inner_'):hidden=[o for id,o in objects.items() if id.endswith('NUT')]
     if name.startswith('outer_'):hidden=wall+[o for id,o in objects.items() if id!='TRIM-OUTER']
@@ -184,7 +201,7 @@ bpy.context.window.view_layer=scene.view_layers['Coverage'];scene.view_layers.re
 for vl in scene.view_layers:vl.use=vl.name=='Coverage'
 scene.camera=cams['coverage']
 scene['revision']=d['revision'];scene['readiness']='DRAFT / NOT FOR FABRICATION. No physical fit.';scene['scale']=reg['scale_status']
-scene['instructions']='View Layers select Observed/Coverage/Assembled/Exploded/Inner/Sections. Select a named camera and View > Cameras > Set Active Object as Camera. See local HTML for easy review.'
+scene['instructions']='View Layers select Observed/Coverage/Factory_reference/Assembled/Exploded/Inner/Sections. Factory comparison uses original stone plane with provisional mating details; no repaired support or adjusted hardware. See local HTML for easy review.'
 for screen in bpy.data.screens:
     for area in screen.areas:
         if area.type=='VIEW_3D':

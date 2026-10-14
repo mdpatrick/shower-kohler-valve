@@ -31,7 +31,11 @@ def build():
             assert abs(re.val().Volume()-shape.Volume())<max(1e-5,shape.Volume()*1e-8)
             checks.append({'id':id,'status':'PASS','check':'STEP reimport validity, solid count, bounds and volume','physical_fit':'UNRESOLVED'})
         assembly.add(shape,name=id,loc=cq.Location(cq.Vector(*xyz)),color=cq.Color(*color))
+        factory_xyz=None if id in ('CUSTOM-01','NEW-SEAL-PATH') else list(map(float,xyz))
+        if factory_xyz and collection in ('02_INNER_AND_GASKET','03_OUTER_TRIM'):
+            factory_xyz[2]-=newwall
         meta.append({'id':id,'stl':str(stl.relative_to(ROOT)),'step':str(step.relative_to(ROOT)) if step else None,
+            'factory_location_mm':factory_xyz,
             'location_mm':list(map(float,xyz)),'color':color,'collection':collection,'evidence':evidence,
             'status':'provisional reference' if id!='CUSTOM-01' else 'unselected candidate',
             'bounds_local_mm':[[bb.xmin,bb.ymin,bb.zmin],[bb.xmax,bb.ymax,bb.zmax]],'volume_mm3':shape.Volume(),
@@ -86,9 +90,22 @@ def build():
         # Nominal display handle, not fit authority. Length from dimensioned manufacturer drawing.
         handle=cq.Workplane('XY').circle(21).circle(16).extrude(58)
         handle=handle.union(cq.Workplane('XY').circle(12).extrude(16).translate((0,0,58)))
-        lever=cq.Workplane('XY').box(8,76.2,8).translate((0,0,76))
+        long=d['nominal']['handle_lever_long_reach_mm'];short=a['main_lever_short_reach_mm']
+        sign=-1 if i==0 else 1
+        lever=cq.Workplane('XY').box(a['lever_width_mm'],long+short,a['lever_depth_mm']).translate((0,sign*(long-short)/2,76))
         handle=handle.union(lever)
-        add('HANDLE-LOWER' if i==0 else 'HANDLE-UPPER',handle,(x,y,newwall+27.95),(.48,.51,.52),'03_OUTER_TRIM','Nominal form only; engagement and travel require dry fit')
+        add('HANDLE-LOWER' if i==0 else 'HANDLE-UPPER',handle,(x,y,newwall+27.95),(.48,.51,.52),'03_OUTER_TRIM','Nominal 3in long reach; short reach/cross-section/housing assumed. Reference direction only; engagement/travel require dry fit')
+    # Separate lower diverter stays at the original wall plane in both display states.
+    dx,dy,dz=d['diverter_tip_mm'];dn=d['nominal']['diverter_trim'];dr=dn['diameter_mm']/2
+    dt=a['diverter_trim_shell_mm'];dd=a['diverter_trim_body_depth_mm'];bore=a['diverter_trim_opening_diameter_mm']/2
+    small=cq.Workplane('XY').circle(dr).extrude(dd)
+    small=small.cut(cq.Workplane('XY').circle(dr-dt).extrude(dd-dt+1).translate((0,0,-1)))
+    small=small.cut(cq.Workplane('XY').circle(bore).extrude(dd+2).translate((0,0,-1)))
+    add('DIVERTER-TRIM',small,(dx,dy,0),(.68,.55,.28),'03B_DIVERTER_REFERENCE','K-T14491-4 nominal OD only; simplified rear cavity/shell/bore assumed; center from captured tip')
+    smallhandle=cq.Workplane('XY').circle(21).circle(16).extrude(58)
+    smallhandle=smallhandle.union(cq.Workplane('XY').circle(12).extrude(16).translate((0,0,58)))
+    smallhandle=smallhandle.union(cq.Workplane('XY').box(a['lever_width_mm'],dn['lever_long_reach_mm']+dn['lever_short_reach_mm'],a['lever_depth_mm']).translate((0,(dn['lever_short_reach_mm']-dn['lever_long_reach_mm'])/2,76)))
+    add('DIVERTER-HANDLE',smallhandle,(dx,dy,dn['total_projection_mm']-80),(.68,.55,.28),'03B_DIVERTER_REFERENCE','Documented lever reaches/projection; cross-section/housing/engagement assumed; shown down, travel unverified')
     for id,point in zip(['STUD-SW','STUD-NE'],d['studs_mm']):
         x,y,z=point
         stud=cq.Workplane('XY').circle(a['stud_envelope_diameter_mm']/2).extrude(z+15).translate((0,0,-15))

@@ -64,6 +64,26 @@ def run():
             'guide_nominal_max_mm':11.1125,'guide_sources':['SRC-KOHLER-OLD-GUIDE p7','SRC-KOHLER-CURRENT-GUIDE step10'],
             'tip_minus_original_wall_limit_mm':float(p[2]-11.1125),'conditional_result':'apparent excess; confirm datum and depth before adjustment',
             'needed':'M07 physical straightedge-to-tip depth and thread/adjustment inspection by installer; no cutting authorized'})
+    diverter=np.array(d['diverter_tip_mm']);dn=d['nominal']['diverter_trim']
+    separation=float(np.linalg.norm(center-diverter[:2]));direction=(diverter[:2]-center)/separation
+    gap=separation-c['diameter_mm']/2-dn['diameter_mm']/2
+    checks.append({'id':'NEIGHBOR-TRIM-CLEARANCE','status':'UNRESOLVED','feature_ids':['CUSTOM-01','DIVERTER-TRIM','AXIS-DIVERTER-TIP'],
+        'method':'projected circle separation in fitted stone plane; scan-derived center and nominal diameters',
+        'center_separation_mm':separation,'candidate_to_diverter_gap_mm':gap,
+        'factory_main_to_diverter_gap_mm':separation-d['nominal']['trim_diameter_mm']/2-dn['diameter_mm']/2,
+        'gap_endpoints_xy_mm':[(center+direction*c['diameter_mm']/2).tolist(),(diverter[:2]-direction*dn['diameter_mm']/2).tolist()],
+        'conditional_result':f'{gap:.1f} mm projected gap between candidate and separate diverter trim; no clearance certification',
+        'criterion':'space for both actual trim rims, centering error, seal access, full handle operation and removal tools',
+        'needed':'physical lower trim center/OD, registration, real handle travel and tool-access dry fit; scale/placement bounds unknown'})
+    lower_separation=float(np.linalg.norm(np.array(d['controls_mm'][0][:2])-diverter[:2]))
+    reach=d['nominal']['handle_lever_long_reach_mm']+dn['lever_long_reach_mm']
+    checks.append({'id':'NEIGHBOR-HANDLE-ENVELOPE','status':'UNRESOLVED','center_separation_mm':lower_separation,
+        'sum_nominal_long_reaches_mm':reach,'full_circle_projection_gap_mm':lower_separation-reach,
+        'conditional_result':'Projected full-rotation reach circles overlap; this is not proof of actual collision',
+        'criterion':'all actual permitted handle positions have physical clearance and tool/removal access',
+        'needed':'on-site operating range, handle profiles and depth offsets; do not assume both rotate through full circles',
+        'sources':['SRC-KOHLER-SPEC p3','SRC-SMALL-TRIM-SPEC p3','SCAN-WALL'],
+        'note':'Uses centerline tip reaches only; section width and fingers/tools require additional space.'})
     # Full-resolution raw mesh vertex test in the proposed plate slice. No proxy use.
     v=np.load(ROOT/'data/derived/shower-hole-valve-polycam-vertices.npy');T=np.array(reg['raw_to_installed_mm']);v=v@T[:3,:3].T+T[:3,3]
     from shapely import contains_xy
@@ -83,9 +103,13 @@ def run():
         ('STRUCTURAL-SUPPORT','plate span stiffness and load path','supported contact map, retaining/clamping force, material/process, physical rocking/load check'),
         ('INSTALLATION-PATH','axial installation, removal and tools','thickness mockup; hubs/stud/nut envelope, handle removal and wrench access'),
         ('THREAD-ENGAGEMENT','correct stud, nut and handle engagement','installer observes threads and adapter selection; do not infer from tip'),
-        ('WATERPROOFING','concealed water barrier continuity','qualified inspection through existing access and compatible repair detail'),
-        ('POST-SCAN-STATE','current piping and hardware pose','user/installer states completed changes with new photos if altered')]:
+        ('WATERPROOFING','concealed water barrier continuity','qualified inspection through existing access and compatible repair detail')]:
         checks.append({'id':id,'status':'UNRESOLVED','criterion':purpose,'needed':need})
+    new_state_note=json.loads((ROOT/'canon/project_state.json').read_text()).get('latest_user_state_note','').strip()
+    checks.append({'id':'POST-SCAN-STATE','status':'UNRESOLVED' if new_state_note else 'PASS','result_type':'user report only; not a physical fit check',
+        'conditional_result':'New current-state note requires reconciliation: '+new_state_note if new_state_note else 'User reports nothing has changed since capture (2026-10-14)',
+        'criterion':'obtain explicit current-state report','source':'OBS-POST-SCAN-01',
+        'needed':'report any future piping, valve, stud or wall changes before relying on this state'})
     # Exact checks on provisional reference solids, distinguished from physical fit.
     import cadquery as cq
     cm=json.loads((ROOT/'data/derived/cad/parts.json').read_text());parts={p['id']:p for p in cm['parts']}
@@ -117,7 +141,7 @@ def run():
            'responsible':'qualified plumber','prerequisites':['M07 depth readings','usable thread/adapter arrangement','selected final layer thickness'],
            'on_site_check':'Verify reversible factory adjustment, engagement and free outer-trim seating. No shortening or valve movement approved.'}
           for name,p in zip(['SW','NE'],studs)]+
-          [{'id':'VALVE-POSE','current':'scan pose retained; post-scan changes unknown','proposed_translation_mm':None,'proposed_rotation_deg':None,'responsible':'qualified plumber','prerequisites':['current piping/state record','physical access and pressure test'],'on_site_check':'Record any real change before new fit assessment; no proposed move.'},
+          [{'id':'VALVE-POSE','current':'new state report requires reconciliation: '+new_state_note if new_state_note else 'scan pose retained; user confirms no post-scan changes 2026-10-14 (OBS-POST-SCAN-01)','proposed_translation_mm':None,'proposed_rotation_deg':None,'responsible':'qualified plumber','prerequisites':['physical access and pressure test'],'on_site_check':'Record any future real change before new fit assessment; no proposed move.'},
            {'id':'LANDING','current':'opening interrupts assumed factory gasket path','proposed':'continuous supported landing, detail unselected','responsible':'tile/waterproofing installer','prerequisites':['actual gasket trace','backing access and soundness','waterproofing-system identification'],'on_site_check':'Demonstrate full contact, rigid support and compatible sealing without cutting travertine.'} ]}
     (OUT/'contractor_schedule.json').write_text(json.dumps(schedule,indent=2)+'\n')
     for filename,data in [('registration.json',reg),('resolved.json',d)]: (OUT/filename).write_text(json.dumps(data,indent=2)+'\n')

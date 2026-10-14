@@ -13,8 +13,17 @@ try {
   await page.goto(process.env.PROJECT_REVIEW_URL||'http://127.0.0.1:8765/review/index.html');
   await page.waitForFunction(()=>window.reviewFormReady&&window.reviewModelLoaded,{},{timeout:45000});
   const nodes=await page.evaluate(()=>window.reviewModelNodes);
-  assert(nodes.includes('CUSTOM-01'));assert(nodes.includes('PLATE-INNER'));assert(nodes.some(n=>n.startsWith('WALL')));
+  assert(nodes.includes('CUSTOM-01'));assert(nodes.includes('PLATE-INNER'));assert(nodes.includes('DIVERTER-TRIM'));assert(nodes.some(n=>n.startsWith('WALL')));
+  const cadParts=JSON.parse(await readFile(path.join(root,'deliverables/current/cad/cad_manifest.json'),'utf8')).parts;
+  await page.locator('[data-state="factory"]').click();
+  let display=await page.evaluate(()=>window.reviewDisplay);
+  assert.equal(display.state,'factory');assert(!display.parts['CUSTOM-01'].visible);assert(!display.parts['NEW-SEAL-PATH'].visible);assert(display.parts['DIVERTER-TRIM'].visible);
+  for(const p of cadParts.filter(p=>p.factory_location_mm))for(let axis=0;axis<3;axis++)assert(Math.abs(display.parts[p.id].position_m[axis]*1000-p.factory_location_mm[axis])<.001);
+  assert(await page.locator('[data-layer="custom"]').isDisabled());
   await page.locator('[data-state="proposed"]').click();await page.locator('[data-view="oblique"]').click();
+  display=await page.evaluate(()=>window.reviewDisplay);
+  assert(display.parts['CUSTOM-01'].visible);assert(!(await page.locator('[data-layer="custom"]').isDisabled()));
+  for(const p of cadParts)for(let axis=0;axis<3;axis++)assert(Math.abs(display.parts[p.id].position_m[axis]*1000-p.location_mm[axis])<.001);
   await page.locator('#explode').fill('0.35');await page.locator('#section').check();await page.locator('#section').uncheck();
   await page.locator('#explode').fill('0');await page.locator('[data-view="front"]').click();
   await mkdir(path.join(root,'build/browser-qa'),{recursive:true});
@@ -53,7 +62,7 @@ try {
   for(let side=0;side<2;side++)for(let axis=0;axis<3;axis++)assert(Math.abs(coordinate.custom_bounds_m[side][axis]*1000-(cad.bounds_local_mm[side][axis]+cad.location_mm[axis]))<.05);
   assert.deepEqual(errors,[]);assert.deepEqual(failed,[]);
   const report={status:'PASS',revision:resolved.revision,desktop:[1440,1000],mobile:[390,844],model_nodes:nodes,
-    checks:['GLB loading','local controls','responsive page','JSON download and persistence','linked asset HTTP success','known-size asymmetric part + hole in browser','CAD-to-browser custom placement/bounds'],coordinate,errors,failed,
+    checks:['GLB loading','factory/proposed per-part positions, visibility and round-trip restoration','local controls','responsive page','JSON download and persistence','linked asset HTTP success','known-size asymmetric part + hole in browser','CAD-to-browser custom placement/bounds'],coordinate,errors,failed,
     note:'Isolated synthetic browser values were never imported. No physical measurements or fit established.'};
   await writeFile(path.join(root,'docs/validation/browser_check.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report));
 }catch(e){

@@ -114,9 +114,9 @@
       "path": "data/evidence/kohler-T14491-4-spec.pdf",
       "url": "https://techcomm.kohler.com/techcomm/pdf/K-T14491-4_spec_US-CA_Kohler_en.pdf",
       "title": "T14491-4 specification",
-      "revision": "saved 2026-10-14",
-      "pages": "dimensioned page",
-      "applicability": "User-confirmed smaller trim context; not main plate dimensions",
+      "revision": "10-08-2026 23:45 US-CA",
+      "pages": "p3 visually inspected",
+      "applicability": "Separate trim nominal OD3.875in, total projection4.25in, lever reach3in below and1.25in above center. 1.25in is NOT a center bore diameter.",
       "retrieved_date": "2026-10-14",
       "sha256": "d9cad3550b03e41def7b865cfc326e66e3837ebfe57467cff2eb1cbfcd6e739e",
       "size_bytes": 273670
@@ -126,6 +126,12 @@
       "source": "user goal updates 2026-10-14",
       "path": "docs/project_request.md",
       "claim": "Exact Kohler identities supplied by user; no physical dimensions supplied"
+    },
+    {
+      "id": "SRC-USER-POST-SCAN",
+      "source": "direct user reply 2026-10-14",
+      "path": "docs/decisions/current_state_2026-10-14.md",
+      "claim": "Nothing has changed since capture: piping, valve pose, studs and wall opening."
     }
   ]
 }

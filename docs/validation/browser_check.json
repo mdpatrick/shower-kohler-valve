@@ -24,10 +24,13 @@
     "VALVE-UPPER",
     "STUD-SW",
     "STUD-NE",
+    "DIVERTER-TRIM",
+    "DIVERTER-HANDLE",
     "NEW-SEAL-PATH"
   ],
   "checks": [
     "GLB loading",
+    "factory/proposed per-part positions, visibility and round-trip restoration",
     "local controls",
     "responsive page",
     "JSON download and persistence",

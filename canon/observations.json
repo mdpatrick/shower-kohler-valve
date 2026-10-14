@@ -1,0 +1,20 @@
+{
+  "project_id": "shower-kohler-valve",
+  "observations": [
+    {
+      "id": "OBS-POST-SCAN-01",
+      "date": "2026-10-14",
+      "status": "user-confirmed",
+      "source": "direct user reply in project chat",
+      "question": "Since these scans were taken, has the piping, valve position, stud adjustment, or wall opening changed?",
+      "raw_reply": "Nothing has changed",
+      "scope": [
+        "piping",
+        "valve position",
+        "stud adjustment",
+        "wall opening"
+      ],
+      "interpretation": "No changes since capture reported. Captured state remains current; no dimensional calibration or physical fit follows from this report."
+    }
+  ]
+}

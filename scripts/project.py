@@ -84,7 +84,7 @@ def build(force=False):
         extra={'registration':['data/derived/*-vertices.npy'], 'parameters':[],
           'cad':['data/derived/cad/*','deliverables/current/cad/*'],
           'analysis':['deliverables/current/analysis/checks.json','deliverables/current/analysis/registration.json','deliverables/current/analysis/resolved.json','deliverables/current/analysis/contractor_schedule.json'],
-          'blender':['deliverables/current/blender/scene_check.json','deliverables/current/blender/wall_display_proxy.glb','deliverables/current/review/view_geometry.json']+[f'deliverables/current/review/views/{v}.png' for v in ['coverage','overview','assembled','exploded','inner_front','inner_back','outer_front','outer_back','gasket','section_controls','section_studs']],
+          'blender':['deliverables/current/blender/scene_check.json','deliverables/current/blender/wall_display_proxy.glb','deliverables/current/review/view_geometry.json']+[f'deliverables/current/review/views/{v}.png' for v in ['coverage','overview','assembled','factory','neighbor','exploded','inner_front','inner_back','outer_front','outer_back','gasket','section_controls','section_studs']],
           'review':['deliverables/current/review/*.js','deliverables/current/review/*.css','deliverables/current/review/*.json','deliverables/current/review/vendor/**/*','deliverables/current/review/views/*measure.png','deliverables/current/review/views/plate_scan_*.png','deliverables/current/manual/index.html'],
           'pdf':[f'deliverables/current/drawings/candidate_drawing_{rev}_DRAFT.pdf']}[name]
         owned=set(outputs)
@@ -131,12 +131,12 @@ def query(args):
     elif op=='measure':
         a,b=(next(f for f in r['features'] if f['id']==id) for id in args[1:3]);pa=a['point_mm'];pb=b['point_mm'];result={'distance_mm':sum((x-y)**2 for x,y in zip(pa,pb))**.5,'method':'approximate scan-landmark Euclidean distance','a':args[1],'b':args[2],'independent':False}
     elif op=='coverage':result=checks['coverage'] if len(args)==1 else [x for x in checks['coverage'] if x['feature_id']==args[1]]
-    elif op=='clearance':result=[x for x in checks['checks'] if any(k in x['id'] for k in ['DEPTH','CLASH','SLICE','ENGAGEMENT'])]
+    elif op=='clearance':result=[x for x in checks['checks'] if any(k in x['id'] for k in ['DEPTH','CLASH','SLICE','ENGAGEMENT','NEIGHBOR'])]
     elif op=='section':
         axis=args[1] if len(args)>1 else 'controls'
         if axis not in ['controls','studs']:raise ValueError('section must be controls or studs')
         result={'path':f'deliverables/current/review/views/section_{axis}.png','type':'saved generated display section; not an exact solid query','regenerate':'./project build'}
-    elif op=='compare-states':result={'states':read('canon/project_state.json')['states'],'changes':['candidate outer plate and illustrative wall seal added','factory reference components placed provisionally','raw wall/valve pose preserved'],'selected_arrangement':None}
+    elif op=='compare-states':result={'states':read('canon/project_state.json')['states'],'changes':['candidate outer plate and illustrative wall seal added','main factory reference at original stone plane; proposed stack shifts those reference parts outward','separate diverter trim remains at original wall plane','raw wall/valve pose preserved; no changes since capture reported 2026-10-14'],'part_poses':[{k:p[k] for k in ['id','location_mm','factory_location_mm']} for p in read('deliverables/current/cad/cad_manifest.json')['parts']],'selected_arrangement':None}
     elif op=='validate':return validate()
     elif op=='solid':
         import cadquery as cq
@@ -184,10 +184,10 @@ def handoff():
         for base in ['canon','docs','deliverables/current/analysis']:
             for p in (ROOT/base).rglob('*'):
                 if p.is_file():z.write(p,str(p.relative_to(ROOT)))
-        for name in ['coverage','inner_front','inner_back','section_studs','exploded']:
+        for name in ['coverage','inner_front','inner_back','section_studs','exploded','factory','neighbor_measure']:
             p=ROOT/f'deliverables/current/review/views/{name}.png';z.write(p,str(p.relative_to(ROOT)))
         for name in ['deliverables/current/review/manual_steps.json','deliverables/current/review/measurement_requests.json',
-                     'data/evidence/kohler-1041504_2.pdf','data/evidence/kohler-1216755-2.pdf','data/evidence/kohler-T14489-4-spec.pdf']:
+                     'data/evidence/kohler-1041504_2.pdf','data/evidence/kohler-1216755-2.pdf','data/evidence/kohler-T14489-4-spec.pdf','data/evidence/kohler-T14491-4-spec.pdf']:
             z.write(ROOT/name,name)
     print('Private local handoff:',bundle.relative_to(ROOT),'(contains complete committed originals). Not an off-machine backup.')
 

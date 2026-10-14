@@ -371,6 +371,48 @@
       "needed": "M07 physical straightedge-to-tip depth and thread/adjustment inspection by installer; no cutting authorized"
     },
     {
+      "id": "NEIGHBOR-TRIM-CLEARANCE",
+      "status": "UNRESOLVED",
+      "feature_ids": [
+        "CUSTOM-01",
+        "DIVERTER-TRIM",
+        "AXIS-DIVERTER-TIP"
+      ],
+      "method": "projected circle separation in fitted stone plane; scan-derived center and nominal diameters",
+      "center_separation_mm": 175.237846343734,
+      "candidate_to_diverter_gap_mm": 11.025346343733993,
+      "factory_main_to_diverter_gap_mm": 33.95034634373399,
+      "gap_endpoints_xy_mm": [
+        [
+          0.23070172607917272,
+          -75.32573939426248
+        ],
+        [
+          0.17619886813454572,
+          -86.35095102206193
+        ]
+      ],
+      "conditional_result": "11.0 mm projected gap between candidate and separate diverter trim; no clearance certification",
+      "criterion": "space for both actual trim rims, centering error, seal access, full handle operation and removal tools",
+      "needed": "physical lower trim center/OD, registration, real handle travel and tool-access dry fit; scale/placement bounds unknown"
+    },
+    {
+      "id": "NEIGHBOR-HANDLE-ENVELOPE",
+      "status": "UNRESOLVED",
+      "center_separation_mm": 135.56286630282355,
+      "sum_nominal_long_reaches_mm": 152.4,
+      "full_circle_projection_gap_mm": -16.837133697176455,
+      "conditional_result": "Projected full-rotation reach circles overlap; this is not proof of actual collision",
+      "criterion": "all actual permitted handle positions have physical clearance and tool/removal access",
+      "needed": "on-site operating range, handle profiles and depth offsets; do not assume both rotate through full circles",
+      "sources": [
+        "SRC-KOHLER-SPEC p3",
+        "SRC-SMALL-TRIM-SPEC p3",
+        "SCAN-WALL"
+      ],
+      "note": "Uses centerline tip reaches only; section width and fingers/tools require additional space."
+    },
+    {
       "id": "MESH-PLATE-SLICE",
       "status": "UNRESOLVED",
       "method": "full-resolution vertex sample inside opening at proposed plate depth; triangle crossings/hidden geometry not certified",
@@ -414,9 +456,12 @@
     },
     {
       "id": "POST-SCAN-STATE",
-      "status": "UNRESOLVED",
-      "criterion": "current piping and hardware pose",
-      "needed": "user/installer states completed changes with new photos if altered"
+      "status": "PASS",
+      "result_type": "user report only; not a physical fit check",
+      "conditional_result": "User reports nothing has changed since capture (2026-10-14)",
+      "criterion": "obtain explicit current-state report",
+      "source": "OBS-POST-SCAN-01",
+      "needed": "report any future piping, valve, stud or wall changes before relying on this state"
     },
     {
       "id": "CAD-CLASH-STUD-SW",

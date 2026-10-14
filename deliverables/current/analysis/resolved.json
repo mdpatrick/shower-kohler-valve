@@ -22,6 +22,28 @@
       31.95481637340469
     ]
   ],
+  "diverter_tip_mm": [
+    -0.06707892223839187,
+    -135.56284970689944,
+    42.25487639410002
+  ],
+  "observations": [
+    {
+      "id": "OBS-POST-SCAN-01",
+      "date": "2026-10-14",
+      "status": "user-confirmed",
+      "source": "direct user reply in project chat",
+      "question": "Since these scans were taken, has the piping, valve position, stud adjustment, or wall opening changed?",
+      "raw_reply": "Nothing has changed",
+      "scope": [
+        "piping",
+        "valve position",
+        "stud adjustment",
+        "wall opening"
+      ],
+      "interpretation": "No changes since capture reported. Captured state remains current; no dimensional calibration or physical fit follows from this report."
+    }
+  ],
   "studs_mm": [
     [
       -47.291356275538035,
@@ -77,14 +99,29 @@
     "stud_clearance_slot_width_mm": 7,
     "stud_clearance_slot_length_mm": 11,
     "note": "Exploratory display only. Unknown physical values have no asserted tolerance. Scan stud positions constrain provisional hole locations; hidden shape is not known.",
-    "outer_cavity_basis": "nominal exterior center height approximately 16mm from official OBJ minus assumed 1.5mm shell; NOT an observed rear cavity"
+    "outer_cavity_basis": "nominal exterior center height approximately 16mm from official OBJ minus assumed 1.5mm shell; NOT an observed rear cavity",
+    "main_lever_short_reach_mm": 38.1,
+    "lever_width_mm": 16,
+    "lever_depth_mm": 8,
+    "diverter_trim_body_depth_mm": 16,
+    "diverter_trim_shell_mm": 1.5,
+    "diverter_trim_opening_diameter_mm": 36,
+    "handle_note": "Long lever reach corrected from official dimensioned drawings; short main lever reach, cross-section, rear interfaces and housing remain display assumptions. Upper main lever points up; lower main and diverter point down in reference pose, not an operating-range claim."
   },
   "nominal": {
     "trim_diameter_mm": 184.15,
     "control_spacing_mm": 79.375,
-    "handle_lever_length_mm": 76.2,
     "trim_total_projection_mm": 107.95,
-    "source": "SRC-KOHLER-SPEC; inch dimensions converted exactly; physical part not verified"
+    "source": "SRC-KOHLER-SPEC; inch dimensions converted exactly; physical part not verified",
+    "handle_lever_long_reach_mm": 76.2,
+    "handle_lever_basis": "3in from control axis to long tip, main specification p3; not total lever length",
+    "diverter_trim": {
+      "diameter_mm": 98.425,
+      "total_projection_mm": 107.95,
+      "lever_long_reach_mm": 76.2,
+      "lever_short_reach_mm": 31.75,
+      "source": "SRC-SMALL-TRIM-SPEC p3; exact inch conversion; actual part unchecked"
+    }
   },
   "candidate": {
     "shape": "circular",
@@ -1627,7 +1664,7 @@
       "kind": "reference reconstruction",
       "status": "manufacturer nominal",
       "source": "SRC-KOHLER-SPEC",
-      "note": "Candidate 7.25in diameter; actual identity not yet verified."
+      "note": "User identified K-T14489-4-BN. Manufacturer nominal 7.25in OD; physical revision and dimensions unverified."
     },
     {
       "id": "CUSTOM-01",
@@ -1636,6 +1673,35 @@
       "kind": "design candidate",
       "status": "inferred",
       "note": "Diameter computed from traced damage + exploratory land. Aperture derived conservatively from visible protrusion envelope; requires gasket and service checks."
+    },
+    {
+      "id": "AXIS-DIVERTER-TIP",
+      "component": "separate K-737-K diverter",
+      "state": "as_observed_at_capture",
+      "kind": "landmark",
+      "source": "SCAN-WALL",
+      "status": "scan-derived",
+      "point_raw": [
+        0.100489,
+        0.557302,
+        0.30125
+      ],
+      "uncertainty_mm": null,
+      "note": "Visible separate lower diverter tip. Context only; excluded from scale/plane fitting.",
+      "point_mm": [
+        -0.06707892223839187,
+        -135.56284970689944,
+        42.25487639410002
+      ]
+    },
+    {
+      "id": "DIVERTER-TRIM",
+      "component": "K-T14491-4-BN",
+      "state": "manufacturer_intended",
+      "kind": "nominal trim envelope",
+      "source": "SRC-SMALL-TRIM-SPEC",
+      "status": "manufacturer nominal",
+      "note": "3-7/8 inch nominal OD; center inferred from visible tip. Rear detail and physical placement unverified."
     }
   ]
 }

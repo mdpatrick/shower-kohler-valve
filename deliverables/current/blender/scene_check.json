@@ -9,6 +9,8 @@
     "coverage",
     "overview",
     "assembled",
+    "factory",
+    "neighbor",
     "exploded",
     "inner_front",
     "inner_back",

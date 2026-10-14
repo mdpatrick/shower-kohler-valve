@@ -38,15 +38,14 @@
     },
     {
       "id": "VALVE-POSE",
-      "current": "scan pose retained; post-scan changes unknown",
+      "current": "scan pose retained; user confirms no post-scan changes 2026-10-14 (OBS-POST-SCAN-01)",
       "proposed_translation_mm": null,
       "proposed_rotation_deg": null,
       "responsible": "qualified plumber",
       "prerequisites": [
-        "current piping/state record",
         "physical access and pressure test"
       ],
-      "on_site_check": "Record any real change before new fit assessment; no proposed move."
+      "on_site_check": "Record any future real change before new fit assessment; no proposed move."
     },
     {
       "id": "LANDING",

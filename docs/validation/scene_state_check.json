@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "revision": "R001",
+  "saved_scene_reopened": true,
+  "checked_factory_parts": [
+    "GASKET-01",
+    "PLATE-INNER",
+    "TRIM-OUTER",
+    "HANDLE-LOWER",
+    "HANDLE-UPPER",
+    "STUD-SW-NUT",
+    "STUD-NE-NUT"
+  ],
+  "all_installed_part_positions_match_CAD": true,
+  "factory_uses_shared_reference_meshes": true,
+  "factory_view_hides_new_plate_and_seal": true,
+  "factory_view_retains_wall_and_separate_diverter": true,
+  "GLB_excludes_factory_exploded_section_copies": true,
+  "physical_fit": "UNRESOLVED"
+}
