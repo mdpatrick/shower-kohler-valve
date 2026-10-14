@@ -1,0 +1,253 @@
+{
+  "project_id": "shower-kohler-valve",
+  "schema_version": 1,
+  "inputs": [
+    {
+      "id": "SCAN-WALL",
+      "source_path": "/Users/mdpatrick/Downloads/shower-hole-valve-polycam.zip",
+      "repository_path": "data/raw/polycam/shower-hole-valve-polycam.zip",
+      "sha256": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
+      "size_bytes": 36799744,
+      "role": "primary installed spatial reference",
+      "user_quality_assessment": "best and most accurate of supplied scans",
+      "calibrated_accuracy_mm": null,
+      "capture_date": null,
+      "export_name_date": "2026-10-14 (filename only; not established capture date)",
+      "filesystem_mtime_utc": "2026-10-14T21:07:01.628635+00:00",
+      "timestamp_note": "ZIP member date 1980-01-00 is invalid and not capture evidence.",
+      "archive_members": [
+        {
+          "name": "10_14_2026.mtl",
+          "size_bytes": 158,
+          "compressed_bytes": 112,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "8a7d4b44"
+        },
+        {
+          "name": "10_14_2026.obj",
+          "size_bytes": 88182001,
+          "compressed_bytes": 21757530,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "6a9ab0f3"
+        },
+        {
+          "name": "textures/6dd45d4c3692f2ee8598a843e6bf7529.jpg",
+          "size_bytes": 7554256,
+          "compressed_bytes": 7537988,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "8f4123d4"
+        },
+        {
+          "name": "textures/8d315f2f146e544a4090fd648b387e65.jpg",
+          "size_bytes": 7518712,
+          "compressed_bytes": 7503552,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "abf138d8"
+        }
+      ],
+      "extraction_path": "data/extracted/shower-hole-valve-polycam"
+    },
+    {
+      "id": "SCAN-PLATE-1",
+      "source_path": "/Users/mdpatrick/Downloads/plates-side-1-polycam.zip",
+      "repository_path": "data/raw/polycam/plates-side-1-polycam.zip",
+      "sha256": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
+      "size_bytes": 4072620,
+      "role": "secondary component reference",
+      "user_quality_assessment": "looks distorted; reflective metal suspected",
+      "calibrated_accuracy_mm": null,
+      "capture_date": null,
+      "export_name_date": "2026-10-14 (filename only; not established capture date)",
+      "filesystem_mtime_utc": "2026-10-14T21:14:02.109013+00:00",
+      "timestamp_note": "ZIP member date 1980-01-00 is invalid and not capture evidence.",
+      "archive_members": [
+        {
+          "name": "10_14_2026.obj",
+          "size_bytes": 4944115,
+          "compressed_bytes": 1296180,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "3575a3a3"
+        },
+        {
+          "name": "textures/213a65c2ee60ea51279b42c95f6c124a.jpg",
+          "size_bytes": 1487364,
+          "compressed_bytes": 1483363,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "7dc04d60"
+        },
+        {
+          "name": "10_14_2026.mtl",
+          "size_bytes": 181,
+          "compressed_bytes": 134,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "cb74100d"
+        },
+        {
+          "name": "textures/46de0f05b2126689c08cfe615a38b6d7.jpg",
+          "size_bytes": 1105972,
+          "compressed_bytes": 1046058,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "2ce0780c"
+        },
+        {
+          "name": "textures/d0e2aca65d219b1536b66cc1a0facc9f.jpg",
+          "size_bytes": 371160,
+          "compressed_bytes": 246157,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "811b881b"
+        }
+      ],
+      "extraction_path": "data/extracted/plates-side-1-polycam"
+    },
+    {
+      "id": "SCAN-PLATE-2",
+      "source_path": "/Users/mdpatrick/Downloads/plates-side-2-polycam.zip",
+      "repository_path": "data/raw/polycam/plates-side-2-polycam.zip",
+      "sha256": "393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781",
+      "size_bytes": 4448807,
+      "role": "secondary component reference",
+      "user_quality_assessment": "looks distorted; reflective metal suspected",
+      "calibrated_accuracy_mm": null,
+      "capture_date": null,
+      "export_name_date": "2026-10-14 (filename only; not established capture date)",
+      "filesystem_mtime_utc": "2026-10-14T21:13:54.669044+00:00",
+      "timestamp_note": "ZIP member date 1980-01-00 is invalid and not capture evidence.",
+      "archive_members": [
+        {
+          "name": "10_14_2026.obj",
+          "size_bytes": 5099486,
+          "compressed_bytes": 1330128,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "f9997374"
+        },
+        {
+          "name": "textures/42d94f60d9ec88a227831ecc2dc9322b.jpg",
+          "size_bytes": 374268,
+          "compressed_bytes": 271655,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "9b6b2d95"
+        },
+        {
+          "name": "textures/c73bc3f5cad9c4a04cca350fabbdc412.jpg",
+          "size_bytes": 916860,
+          "compressed_bytes": 879118,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "1effdd50"
+        },
+        {
+          "name": "10_14_2026.mtl",
+          "size_bytes": 181,
+          "compressed_bytes": 135,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "51f3589e"
+        },
+        {
+          "name": "textures/6eb2841eeb4478119c0641e106c9d07c.jpg",
+          "size_bytes": 1967572,
+          "compressed_bytes": 1967043,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "e07bae9e"
+        }
+      ],
+      "extraction_path": "data/extracted/plates-side-2-polycam"
+    }
+  ]
+}

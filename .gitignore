@@ -1,0 +1,12 @@
+.venv/
+build/
+data/extracted/
+data/derived/
+__pycache__/
+*.pyc
+*.blend1
+*.blend2
+.DS_Store
+environment/local.json
+deliverables/current/blender/user_notes.blend
+
