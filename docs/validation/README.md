@@ -11,6 +11,7 @@ These results distinguish software/evidence checks from the unperformed physical
 | Blender dimensions, hole/marker orientation, CPU render, save and reopen | `coordinate_blender_check.json` |
 | CAD solids and exported STEP validity, bounds/volume; nonfused assembly count; clean mm DXF with one aperture | `deliverables/current/cad/cad_manifest.json` |
 | Packed scene assets, source/proxy separation, saved scene reopened | `deliverables/current/blender/scene_check.json` |
+| Separate Blender annotations remain visible through duplicate-name import, save and reopen | `annotation_check.json`; `tests/blender_notes.py` uses a disposable fixture |
 | Local browser GLB, controls, desktop/mobile layout, JSON download/persistence, linked assets; known-part orientation and CAD/display placement | `browser_check.json` |
 | Import validation, explicit corrections/history, rejection without writes, inch conversion, derived relations; uniform transform; actual PDF two-axis calibration; DXF content | `tests/test_measurement_import.py`, `tests/test_geometry_snapshot.py` — 14 tests passed |
 | PDF render/visual inspection | All worksheet, drawing, tiled-template and draft-manual pages rendered; overflowing worksheet fixed; nine-page final worksheet |

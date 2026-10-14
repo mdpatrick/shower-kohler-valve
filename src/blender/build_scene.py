@@ -132,10 +132,9 @@ sec_controls=section('controls',d['controls_mm']);sec_studs=section('studs',d['s
 
 # Restore only a dedicated user-authored collection, never generated fit-critical edits.
 notes=OUT/'user_notes.blend'
-if notes.exists():
-    with bpy.data.libraries.load(str(notes),link=False) as (src,dst):dst.collections=[x for x in src.collections if x=='USER_NOTES']
-    for c in dst.collections:
-        if c:scene.collection.children.link(c)
+sys.path.insert(0,str(ROOT/'src/blender'))
+from user_notes import restore_user_notes
+restore_user_notes(notes,coll('USER_NOTES'))
 
 layers={
  'Observed':['01_OBSERVED_WALL'],

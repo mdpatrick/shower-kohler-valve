@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R001",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "889990999ae11f87e8b3433fcb8eceaab14114c7",
+  "source_commit": "aa60d69cc9b00248330a38dbd892eb9e542ed7ae",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "896849da11e15180e4271a9914404d46d399f486e9cdbd8b355d17f273b629e8",
+  "source_tree_hash": "30af1c4fee3fc2c988caa65723572a8a4262b9aa9749d3dd1814ce0083d81bbe",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -43,8 +43,8 @@
     },
     {
       "path": "deliverables/current/blender/installation_R001_DRAFT.blend",
-      "sha256": "ccd48e4a2c9adc90a8cb7c4cf933fbd0fd9f6afa08a4c9f6d8a5bc3af2d9eea3",
-      "size_bytes": 91821639
+      "sha256": "fb2a69a756de3babbd95694a640a8d644d82050f105f89ef1b06fb4b944c18fc",
+      "size_bytes": 91821994
     },
     {
       "path": "deliverables/current/blender/scene_check.json",
@@ -88,17 +88,17 @@
     },
     {
       "path": "deliverables/current/drawings/candidate_drawing_R001_DRAFT.pdf",
-      "sha256": "e67ba29db852939dc80367fcc2c8c97dcb79d3e5dcff961b8edf87f0fff7b216",
+      "sha256": "3e30ae67f6efb4afbfe6a3d7c557982b2d382502ecd094a0287c10813162604c",
       "size_bytes": 64850
     },
     {
       "path": "deliverables/current/drawings/measurement_worksheet_R001.pdf",
-      "sha256": "a53b11aba9b99404100398ea350cade995a464fc7c6de001cac34ab3edc15d0d",
+      "sha256": "62a58b9f0eb08048534e80073747a12d897fb3d25fc2159b1118278fdd03e6e0",
       "size_bytes": 14835508
     },
     {
       "path": "deliverables/current/drawings/profile_template_R001_DRAFT.pdf",
-      "sha256": "cb13aae909c5f588079e1b758032ce9a7916a0a96326657904243b3677f74a92",
+      "sha256": "c7b2357ad05b024abdbb295cb46d65eeeaa4cf772f504ef43b14faead3f942e0",
       "size_bytes": 70653
     },
     {
@@ -108,7 +108,7 @@
     },
     {
       "path": "deliverables/current/manual/repair_manual_R001_DRAFT.pdf",
-      "sha256": "d588f92d608499305556eea24864a272f58de85bc2e50e353170438ba8dbe24b",
+      "sha256": "6f6b99478b1c868143608070d4697db02dfc93930b63b6f102526c5dd15ac548",
       "size_bytes": 19386716
     },
     {
@@ -188,12 +188,12 @@
     },
     {
       "path": "deliverables/current/review/views/assembled.png",
-      "sha256": "3d88cf30888e910836925979fe7a57b5b947e034589a66fa0809886795379ee5",
+      "sha256": "0872a1b005cf0f2d50bf82c7f360c3cc6a0f4ca14f66ea6a658dccf188b6d9f8",
       "size_bytes": 2594004
     },
     {
       "path": "deliverables/current/review/views/coverage.png",
-      "sha256": "18a1d8ac935d746dfedd4243bca128418b481d45b77abeb9465225233b58cbe5",
+      "sha256": "428d79b4d5cc5376235b48516f21f4b42e3ecf76f46dd6f6d56db23972672fdd",
       "size_bytes": 2593149
     },
     {
@@ -203,12 +203,12 @@
     },
     {
       "path": "deliverables/current/review/views/exploded.png",
-      "sha256": "5a715a70782f95162da15facdbcd9f41bc313e0fbc0b80dcc061841321626108",
+      "sha256": "456c0ac0715f11981defbe13d4027a7c39089b7c3f156e8c994259c1b65ffecf",
       "size_bytes": 2504465
     },
     {
       "path": "deliverables/current/review/views/gasket.png",
-      "sha256": "6700f39278832e9c92e4deeba74070eda6473b6af276db911c1df6dc46984a84",
+      "sha256": "30b27fb6aebf34c15ec34fc18b5ad3bb4baf73dc1299f789daa7b271aa05a6dc",
       "size_bytes": 2668395
     },
     {
@@ -218,12 +218,12 @@
     },
     {
       "path": "deliverables/current/review/views/inner_back.png",
-      "sha256": "a45f628e1e1d5eb94cfcd14dd16b5ce9767f4129039bdeb3a644b1e6babc6a3f",
+      "sha256": "7d08532831782ffa9eb055dea946cc7c2fc8f29215599ff9cdd165d209132c0f",
       "size_bytes": 1943552
     },
     {
       "path": "deliverables/current/review/views/inner_front.png",
-      "sha256": "ca7dec8b3c2a2b2da4a0167f017f4b8a4aa43254bbd709b87e1d54a29f8fcb93",
+      "sha256": "7437af202def89c9b5f30d70abd6606ff5720b96c68feff6a9b92f93f4867ef9",
       "size_bytes": 2151340
     },
     {
@@ -233,17 +233,17 @@
     },
     {
       "path": "deliverables/current/review/views/outer_back.png",
-      "sha256": "c0d308ffa96bbf66edebba51bc7cd5a8404ccb91b46c4f36f2dda3ab3beab5a9",
+      "sha256": "5feb58e585dc7c6a4acfc17ff1f35bf658c5b0e85ff19a519857e86c00a3d464",
       "size_bytes": 1928114
     },
     {
       "path": "deliverables/current/review/views/outer_front.png",
-      "sha256": "a38a0d48318b3b6c0bbf40ee776714b7366b2b9f9d56d41d9f3c9fa0584749e5",
+      "sha256": "5970d8cc0f87ad21d8004574e6a8f9e51221be0ab87de23da9b6836ed82077a2",
       "size_bytes": 1998973
     },
     {
       "path": "deliverables/current/review/views/overview.png",
-      "sha256": "e230dd80fc1f2126eb34af55fd8c668018eda167f97aff9111193ac0f18fb135",
+      "sha256": "194a77c84facf559a5f52bc87e81ce2ec7fc4dbf30e41e67b98dace79256a9cc",
       "size_bytes": 2292905
     },
     {
@@ -258,12 +258,12 @@
     },
     {
       "path": "deliverables/current/review/views/section_controls.png",
-      "sha256": "845d013e0ecf3786d562865c6d372a8ae71b2aa7809926bb2ff7a3eff0a04f27",
+      "sha256": "b38efa3824dee3f4583f5e8e5497045a56d100e2d8b4761303028cda0bed7444",
       "size_bytes": 2231004
     },
     {
       "path": "deliverables/current/review/views/section_studs.png",
-      "sha256": "0c04f9ee387be34908ecce544a8fed98b529322534549d03190a134fbd9b7198",
+      "sha256": "ec647b3b0cb58c24c181f2072f8b8e2723ee2c1400788c1c19e90b11c9a2c9d8",
       "size_bytes": 2204249
     },
     {
