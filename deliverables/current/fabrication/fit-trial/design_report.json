@@ -17,9 +17,9 @@
         "dxf": "cad/FT01_MAIN_220_T1524_FIT_TRIAL.dxf"
       },
       "sha256": {
-        "step": "a8963165b7dc3f817a9f22435fcf784c61bd7c83e78a548e2d88e3002f1adae3",
+        "step": "be0075d386e743c089170e0ae39c570ebe94963f04d08023327b49cba656e7f8",
         "stl": "5ba2c9132c540482c678ef536f4f493d0e57fd1329a51b60aed5fb0289ec8f26",
-        "dxf": "6277a825c92e429a16176854e3deb2330d681616e7e0f6e620051027b9cb50c9"
+        "dxf": "57c5c5070c898bc3cb82ff4b540331d83f9d854c0d401f6c53dd68f2007c5e6b"
       },
       "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
     },
@@ -38,9 +38,9 @@
         "dxf": "cad/FT01_MAIN_220_T3000_FIT_TRIAL.dxf"
       },
       "sha256": {
-        "step": "a277940a93a8c7c2a02adbf83b4c86b566cf084b1f847fad85a10149ae0038fc",
+        "step": "93e85e028119bd2e2744c4838397c905c98b6d1456023a710ae56a4d9d685613",
         "stl": "f8bc630d2ea60830ba7f19727026135ef2021674f802d862065804d841243618",
-        "dxf": "c41c6e5437337123a0734352ccdee1b8a0129518587d1ffe883d0d65f20baddb"
+        "dxf": "89d721992401bbc004440dbcf688a5b0a32521c21194537cd461c178788c8fc2"
       },
       "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
     },
@@ -59,9 +59,9 @@
         "dxf": "cad/FT01_DIV_124_T1524_FIT_TRIAL.dxf"
       },
       "sha256": {
-        "step": "d42e68e6675c738e926e086085b6f0a125c9dd36fa334bbb9a34992dd67bfcf4",
+        "step": "823c271f9e3e3bb182da54a4fc6e4a9d6f62a1c1b08ec2f54090b52e1bb084d0",
         "stl": "f7a306f40b8da5d5dee9a9d70ff6eae942ebe20283fb70535670c180f7e70796",
-        "dxf": "cf0281301c4a01ae6e481cb157039154406a2c550ba99d8006d333a6b2da4ce2"
+        "dxf": "1c8753d575628a723397f072f879c888daef9f7dc3e2839bd23114a74e2b5c53"
       },
       "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
     },
@@ -80,9 +80,9 @@
         "dxf": "cad/FT01_DIV_124_T3000_FIT_TRIAL.dxf"
       },
       "sha256": {
-        "step": "870df72e8ebacbf97fbd41be6c8b64b4a4b74d7d5ec74e41ea155ca044b3f63b",
+        "step": "cf540a6993db712b5e4221fd9eb03d716cbe1f7c5256989568737c2363f6568f",
         "stl": "9ffad454c651738d8414b10c3c21ca8dc165d690bf5ca4fc659d9d489e5e3629",
-        "dxf": "9dc7be22cbff1df0b279eac1e4ab0c759a3b246a73759a12b6a4e49d6a1346cb"
+        "dxf": "f72b231178896635bbff517fa812275a53b2c98623f37ac30a66fae7b3b501e9"
       },
       "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
     },
@@ -101,9 +101,9 @@
         "dxf": "cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.dxf"
       },
       "sha256": {
-        "step": "a666b916902115e30ddf73680461a589be5df0733be9e2342a2c6c0de24141a4",
+        "step": "eafb71a5a918007cf8d3439638024320ece2200e7766f25866e62621868ae9c5",
         "stl": "74ce6e71ffdf6c45c20545ad505b1e458518c39a8bccd48893ee742adc405609",
-        "dxf": "1abb814fce91bbf4588144f76db75177c65354fc3ed9b2647ec6da3d83774b86"
+        "dxf": "9d760cd13054a33af2c84db9fb5ff79ceb0159c56c562bb01931f8ea8b9fcfc4"
       },
       "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
     },
@@ -122,9 +122,9 @@
         "dxf": "cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.dxf"
       },
       "sha256": {
-        "step": "5a832640247151d954cbd54114b36610edba93b45aa1ee7d861c61e6eb037b65",
+        "step": "f41718a65b2b049364ceace2065730d115785bc6a2f002e7683ac6c43654b1d6",
         "stl": "0edecdde79f94742143658b7c313627ff228d661dde65193350718bd839cb1e6",
-        "dxf": "09c9c718e3a8bd5e708a0d06a65497b56a8f82e6bdcfca13b125df5a7adc7143"
+        "dxf": "a9f274bc56ced96dcceb959659b7d4bcc66752f52ac1dd577910543b91b99e9a"
       },
       "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
     }
@@ -205,8 +205,9 @@
     {
       "state": "ORIGINAL",
       "main_margin_after_trace_mm": 7.40539333102258,
-      "gap_220_124_mm": 3.2378463437339917,
-      "gap_220_120_mm": 5.237846343733992,
+      "gap_main_diverter_mm": 3.2378463437339917,
+      "gap_main_fallback_mm": 5.237846343733992,
+      "center_separation_mm": 175.237846343734,
       "main_center_mm": [
         0.7991944036080083,
         39.672855449655486
@@ -219,8 +220,9 @@
     {
       "state": "RIGID",
       "main_margin_after_trace_mm": 8.277708858928861,
-      "gap_220_124_mm": 3.057887344612084,
-      "gap_220_120_mm": 5.057887344612084,
+      "gap_main_diverter_mm": 3.057887344612084,
+      "gap_main_fallback_mm": 5.057887344612084,
+      "center_separation_mm": 175.05788734461208,
       "main_center_mm": [
         4.016137549054136,
         39.447410748902
@@ -233,8 +235,9 @@
     {
       "state": "CALIPER",
       "main_margin_after_trace_mm": 7.032878745104586,
-      "gap_220_124_mm": 5.210407517260279,
-      "gap_220_120_mm": 7.210407517260279,
+      "gap_main_diverter_mm": 5.210407517260279,
+      "gap_main_fallback_mm": 7.210407517260279,
+      "center_separation_mm": 177.21040751726028,
       "main_center_mm": [
         4.06542352965739,
         39.935534698998445
@@ -246,41 +249,64 @@
     }
   ],
   "nominal_foam_extra_land_mm": 0.9999999999999999,
-  "diverter_damage_margin_original_pose_124_mm": 10.949156432344793,
+  "diverter_damage_margin_original_pose_mm": 10.949156432344793,
   "diverter_nominal_cover_overlap_radial_mm": 9.212499999999999,
-  "diverter_visible_border_124_mm": 12.787500000000001,
-  "main_visible_border_mm": 17.924999999999997,
-  "inner_opening_envelopes": {
-    "upper_diameter_measured_mm": 48.46,
-    "lower_diameter_assumed_mm": 50,
-    "extra_custom_clearance_upper_mm": 11,
-    "extra_custom_clearance_lower_mm": 10.87714455
-  },
-  "geometric_check_scope": "New capsule profile checked against 51,929 primary captured projected triangle pieces in each of three recorded placement hypotheses. Z >= 0.5 mm, inside OPEN-MAIN eroded 3 mm; excludes stone border/hidden geometry. No new attached-plate insertion proof; inner plate must be removed to install backing.",
+  "diverter_visible_border_mm": 12.787500000000001,
+  "main_visible_border_mm": 17.92500000000001,
+  "inner_opening_envelopes": [
+    {
+      "control": "L",
+      "center_local_mm": [
+        -0.7991944036080127,
+        -39.67285544965549
+      ],
+      "diameter_mm": 50,
+      "status": "unmeasured display reference",
+      "extra_custom_clearance_mm": 10.862718964078404,
+      "inside_custom_aperture": true
+    },
+    {
+      "control": "U",
+      "center_local_mm": [
+        0.7991944036080127,
+        40.31999999999999
+      ],
+      "diameter_mm": 48.46,
+      "status": "upper diameter/top gap measured; horizontal centering provisional",
+      "extra_custom_clearance_mm": 10.985939271126197,
+      "inside_custom_aperture": true
+    }
+  ],
+  "geometric_check_scope": "Capsule profile checked against 51,929 primary captured projected triangle pieces in each of 3 recorded placement hypotheses. Z >= 0.5 mm, inside OPEN-MAIN eroded 3 mm; excludes stone border/hidden geometry. No new attached-plate insertion proof; inner plate must be removed to install backing.",
   "foam_corner_sensitivity": [
     {
-      "outer_radius_mm": 40,
+      "outer_radius_mm": 40.0,
       "extra_land_mm": 0.9999999999999999,
       "aperture_foam_overlap_mm2": 0.0
     },
     {
-      "outer_radius_mm": 45,
+      "outer_radius_mm": 45.0,
       "extra_land_mm": 1.0,
       "aperture_foam_overlap_mm2": 0.0
     },
     {
-      "outer_radius_mm": 50,
+      "outer_radius_mm": 50.0,
       "extra_land_mm": 0.9999999999999859,
       "aperture_foam_overlap_mm2": 0.0
     },
     {
-      "outer_radius_mm": 55,
+      "outer_radius_mm": 55.0,
       "extra_land_mm": 0.9999999999999999,
       "aperture_foam_overlap_mm2": 0.0
     },
     {
-      "outer_radius_mm": 60,
+      "outer_radius_mm": 60.0,
       "extra_land_mm": 0.9999999999999857,
+      "aperture_foam_overlap_mm2": 0.0
+    },
+    {
+      "outer_radius_mm": 65.0,
+      "extra_land_mm": 1.0,
       "aperture_foam_overlap_mm2": 0.0
     },
     {
@@ -298,10 +324,13 @@
   },
   "physical_checks": "Not performed; on-site checklist governs permanent installation.",
   "sources_sha256": {
+    "src/fabrication/fit_trial.py": "cdbb41a83a69dbf6aa0bda49c8086ad591ef123a98f462ec8099e3dd262500e2",
+    "src/fabrication/fit_trial_spec.py": "28f3235a10a1e72aa5469f983a658df058dddf305de88f55b7bbe451523ad9e4",
     "canon/fit_trial_design.json": "c02f3bca1306becb64afa0ad7b9ade8c79370402ad665960f3558c43d9c90139",
     "canon/measurements.json": "01ac17be55e8a9cc3008f2726aef9becafdd76db12ce4b316f4134a7a3196308",
     "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883",
     "deliverables/current/fabrication/control-registration/registration_trial.json": "597383be29cd49d5208fd4498a57161bbb39f060d6669b69c47043f630f224ee",
+    "deliverables/current/fabrication/concentric-border-study/analysis.json": "d888b206d3b855ebb5ae687de66318c3447b969ed6aff31cdc9dae92c0368c02",
     "data/raw/polycam/polycam-inner-plate-attached.zip": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91"
   }
 }

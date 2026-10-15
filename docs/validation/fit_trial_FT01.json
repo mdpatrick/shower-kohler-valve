@@ -98,33 +98,79 @@
       "outside_vertices": 0
     }
   ],
-  "capture_scope": "New capsule profile checked against 51,929 primary captured projected triangle pieces in each of three recorded placement hypotheses. Z >= 0.5 mm, inside OPEN-MAIN eroded 3 mm; excludes stone border/hidden geometry. No new attached-plate insertion proof; inner plate must be removed to install backing.",
+  "capture_scope": "Capsule profile checked against 51,929 primary captured projected triangle pieces in each of 3 recorded placement hypotheses. Z >= 0.5 mm, inside OPEN-MAIN eroded 3 mm; excludes stone border/hidden geometry. No new attached-plate insertion proof; inner plate must be removed to install backing.",
   "pdfs": {
     "project_handoff_FT01.pdf": {
       "pages": 7,
-      "sha256": "6c6de7e7eff6cc16b15f791e638b1ec21d74c132aa3ca537c0f92297e09636e5"
+      "sha256": "931064b7fccfa1bc02b46bf747047e9df0dafb0a55958dc5bd41737ef826f32f"
     },
     "shop_drawings_FT01.pdf": {
       "pages": 2,
-      "sha256": "e714efa486861bdc7a1e1fd1f058182d51e7f63c4bb7d62b3e2f8c6393a51c91"
+      "sha256": "38d57136d3d38f10c3b52c102805a31787540a5a09c93ae78e46163b8ad1de92"
     },
     "full_size_templates_FT01.pdf": {
       "pages": 2,
-      "sha256": "b73c47fca966a5a20a9cb348cdad2be326ecf32ba392f5a4d8fba78fc33484a9"
+      "sha256": "81cbd5d8ae33c4e88fa38f725e3266b2345ad5a5bfc33a0c8fb2b4dc323bb661"
     }
   },
   "paper_two_axis_100mm_bars": "PASS",
+  "paper_profile_dimensions": {
+    "shop_drawings_FT01.pdf": [
+      [
+        [
+          220,
+          220
+        ],
+        [
+          116.35,
+          151.1
+        ]
+      ],
+      [
+        [
+          124,
+          124
+        ],
+        [
+          80,
+          80
+        ]
+      ]
+    ],
+    "full_size_templates_FT01.pdf": [
+      [
+        [
+          220,
+          220
+        ],
+        [
+          116.35,
+          151.1
+        ]
+      ],
+      [
+        [
+          124,
+          124
+        ],
+        [
+          80,
+          80
+        ]
+      ]
+    ]
+  },
   "quote_packages": [
     {
       "file": "FT01_plastic_T3000_quote.zip",
       "members": 9,
-      "sha256": "792bc6654b836e24becedb57b7eeb47f99f072927f14bae15357261ff49a7c56",
+      "sha256": "d5be07341d13b753a6c5044482cfc9461bd27742deb65685c3c258e9504035b5",
       "private_scan_or_photo_included": false
     },
     {
       "file": "FT01_recommended_T1524_quote.zip",
       "members": 9,
-      "sha256": "3fb7c547c331b6d85243b75e3a50d2290f05d574a9d0548d3c8009e07aba6ae3",
+      "sha256": "477109941f2a36da730543bf6d8fae0fbace911062b3a2dcb084f4d790343244",
       "private_scan_or_photo_included": false
     }
   ],
@@ -134,7 +180,7 @@
   "remaining_physical_risks": [
     "Actual plate/control/adapter pose and axial engagement",
     "Scan scale and surface error are not bounded",
-    "Only 1 mm nominal extra foam land; actual band shape/contact unverified",
+    "Only 1.00 mm nominal extra foam land; actual band shape/contact unverified",
     "Diverter 80 mm aperture and rear seal/contact footprint",
     "Thin sheet support, deflection and retention",
     "Gap between both actual installed covers/backings",
@@ -142,6 +188,6 @@
   ],
   "physical_fit": "NOT PERFORMED",
   "permanent_installation_release": false,
-  "auditor_sha256": "f8b245dd3eaf25c30c1fb0f9a87ea7b31648e267677a07589f61b779f2419dbb",
+  "auditor_sha256": "efa61ca6ea1a98114d33d6699368ee6030b259000cfb97ea97401312513c310a",
   "capture_mesh_sha256": "2d2ebb65cab8bd23c7b94b23e57125c7388d4080c364f837e9f3a29776dfc625"
 }

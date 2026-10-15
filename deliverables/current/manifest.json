@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "5819ee5eb14a9fdcafbee9ec65165047b25209f0",
+  "source_commit": "a63e050a0e90fdb532a8c6df576a96cdd294c58f",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "a37c356e2c95c2cb5e624d5f30b6a39ee3611eb25c668ca16145e2d7389e162d",
+  "source_tree_hash": "650ae26fce0d95fb6a9826f6c7ee13c11faf4b914ae46c5f28ee76e68af84624",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1069,18 +1069,18 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/FT01_plastic_T3000_quote.zip",
-      "sha256": "792bc6654b836e24becedb57b7eeb47f99f072927f14bae15357261ff49a7c56",
-      "size_bytes": 62528
+      "sha256": "d5be07341d13b753a6c5044482cfc9461bd27742deb65685c3c258e9504035b5",
+      "size_bytes": 62527
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/FT01_recommended_T1524_quote.zip",
-      "sha256": "3fb7c547c331b6d85243b75e3a50d2290f05d574a9d0548d3c8009e07aba6ae3",
-      "size_bytes": 62589
+      "sha256": "477109941f2a36da730543bf6d8fae0fbace911062b3a2dcb084f4d790343244",
+      "size_bytes": 62602
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/access.png",
-      "sha256": "51ee37664fea6fb6b7c921a90d487055c3297283bed8ac1977d42193c99e8e72",
-      "size_bytes": 191755
+      "sha256": "1d040dd714c1b9b98f43721ac1a1371e11fb0990e82cba7381f61a2739bbdd9e",
+      "size_bytes": 194451
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/attached_scan_assessment.json",
@@ -1089,22 +1089,22 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/audit.json",
-      "sha256": "d726afc6f7c0717c8ee3fd600e6964f9801831bc85ae4351689d996df732456b",
-      "size_bytes": 4797
+      "sha256": "c875146c65259d8a6d8f53d42abc349c339eea1119bdf08629931a429d9ab6dd",
+      "size_bytes": 5380
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/blender_check.json",
-      "sha256": "50a957786fec35fdc663e34e8d1177467ba04e09eebe37e9fea857a281994925",
+      "sha256": "b881d73df2776e65c474bd8d1468a2226fe2a91ded9dd201fc63f9f68c128d5b",
       "size_bytes": 402
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.dxf",
-      "sha256": "1abb814fce91bbf4588144f76db75177c65354fc3ed9b2647ec6da3d83774b86",
-      "size_bytes": 15560
+      "sha256": "9d760cd13054a33af2c84db9fb5ff79ceb0159c56c562bb01931f8ea8b9fcfc4",
+      "size_bytes": 15562
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.step",
-      "sha256": "a666b916902115e30ddf73680461a589be5df0733be9e2342a2c6c0de24141a4",
+      "sha256": "eafb71a5a918007cf8d3439638024320ece2200e7766f25866e62621868ae9c5",
       "size_bytes": 10602
     },
     {
@@ -1114,12 +1114,12 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.dxf",
-      "sha256": "09c9c718e3a8bd5e708a0d06a65497b56a8f82e6bdcfca13b125df5a7adc7143",
-      "size_bytes": 15560
+      "sha256": "a9f274bc56ced96dcceb959659b7d4bcc66752f52ac1dd577910543b91b99e9a",
+      "size_bytes": 15562
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.step",
-      "sha256": "5a832640247151d954cbd54114b36610edba93b45aa1ee7d861c61e6eb037b65",
+      "sha256": "f41718a65b2b049364ceace2065730d115785bc6a2f002e7683ac6c43654b1d6",
       "size_bytes": 10578
     },
     {
@@ -1129,12 +1129,12 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T1524_FIT_TRIAL.dxf",
-      "sha256": "cf0281301c4a01ae6e481cb157039154406a2c550ba99d8006d333a6b2da4ce2",
-      "size_bytes": 15560
+      "sha256": "1c8753d575628a723397f072f879c888daef9f7dc3e2839bd23114a74e2b5c53",
+      "size_bytes": 15562
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T1524_FIT_TRIAL.step",
-      "sha256": "d42e68e6675c738e926e086085b6f0a125c9dd36fa334bbb9a34992dd67bfcf4",
+      "sha256": "823c271f9e3e3bb182da54a4fc6e4a9d6f62a1c1b08ec2f54090b52e1bb084d0",
       "size_bytes": 10602
     },
     {
@@ -1144,12 +1144,12 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T3000_FIT_TRIAL.dxf",
-      "sha256": "9dc7be22cbff1df0b279eac1e4ab0c759a3b246a73759a12b6a4e49d6a1346cb",
-      "size_bytes": 15560
+      "sha256": "f72b231178896635bbff517fa812275a53b2c98623f37ac30a66fae7b3b501e9",
+      "size_bytes": 15562
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T3000_FIT_TRIAL.step",
-      "sha256": "870df72e8ebacbf97fbd41be6c8b64b4a4b74d7d5ec74e41ea155ca044b3f63b",
+      "sha256": "cf540a6993db712b5e4221fd9eb03d716cbe1f7c5256989568737c2363f6568f",
       "size_bytes": 10578
     },
     {
@@ -1159,12 +1159,12 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T1524_FIT_TRIAL.dxf",
-      "sha256": "6277a825c92e429a16176854e3deb2330d681616e7e0f6e620051027b9cb50c9",
-      "size_bytes": 16065
+      "sha256": "57c5c5070c898bc3cb82ff4b540331d83f9d854c0d401f6c53dd68f2007c5e6b",
+      "size_bytes": 16067
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T1524_FIT_TRIAL.step",
-      "sha256": "a8963165b7dc3f817a9f22435fcf784c61bd7c83e78a548e2d88e3002f1adae3",
+      "sha256": "be0075d386e743c089170e0ae39c570ebe94963f04d08023327b49cba656e7f8",
       "size_bytes": 22938
     },
     {
@@ -1174,12 +1174,12 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T3000_FIT_TRIAL.dxf",
-      "sha256": "c41c6e5437337123a0734352ccdee1b8a0129518587d1ffe883d0d65f20baddb",
-      "size_bytes": 16065
+      "sha256": "89d721992401bbc004440dbcf688a5b0a32521c21194537cd461c178788c8fc2",
+      "size_bytes": 16067
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T3000_FIT_TRIAL.step",
-      "sha256": "a277940a93a8c7c2a02adbf83b4c86b566cf084b1f847fad85a10149ae0038fc",
+      "sha256": "93e85e028119bd2e2744c4838397c905c98b6d1456023a710ae56a4d9d685613",
       "size_bytes": 22881
     },
     {
@@ -1189,57 +1189,57 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/design_report.json",
-      "sha256": "f9be7d11374bc2e441465746eb9d62835a099c954dfe04cb8a97ec191d66dd0b",
-      "size_bytes": 13734
+      "sha256": "c1fdea7a88d2beb4010834dc5c688264ea71573275e2254c8367175a068e1d5e",
+      "size_bytes": 14830
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/document_check.json",
-      "sha256": "90c2b2cc9df925f073922ed79871f60f3820a265f497d2d26424ad5f58486588",
-      "size_bytes": 888
+      "sha256": "fb2a543b50697cc915560e734f377dcc4df7401e5ff5f6c8f25119cdf6d0bc4f",
+      "size_bytes": 1533
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/escutcheon_fit_trial_FT01.blend",
-      "sha256": "4b053e1ebbf31965dae419ca9294d266e359f3d37b291c4fd6eaa3289d82f4a2",
-      "size_bytes": 85953961
+      "sha256": "2dcc22ad090848e23868420a6a4aa14c2fc74b1ed0c5f348357d9c5cc0912b57",
+      "size_bytes": 85953966
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/exploded.png",
-      "sha256": "31ba8ce8733f1eaf8a2832bb87d0af683c75a95046df0d82fcb612d0d24ebae2",
+      "sha256": "1df59cc2406519004412d51840f0131c94e03b9e9369f67937dc2bd69e1fb55d",
       "size_bytes": 1437519
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/full_size_templates_FT01.pdf",
-      "sha256": "b73c47fca966a5a20a9cb348cdad2be326ecf32ba392f5a4d8fba78fc33484a9",
-      "size_bytes": 5524
+      "sha256": "81cbd5d8ae33c4e88fa38f725e3266b2345ad5a5bfc33a0c8fb2b4dc323bb661",
+      "size_bytes": 5487
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/index.html",
-      "sha256": "75145946dc08c605b1e2f6af273b162c645887bbf0d0b864455d379dda6d13ae",
-      "size_bytes": 23253
+      "sha256": "a6717d36c61ea26425177ec6b97f82ab2e4fcddcfbcec29734f2493aa5ce607f",
+      "size_bytes": 23263
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/paired_front.png",
-      "sha256": "902a0dc800fa68f0d287b920a39689f1075b30404bc93fb0c1f4b75426bad87c",
+      "sha256": "be0ca1b99bb72de45b871c6d7f3fba010e4503ce209297686dfd9b87972f3913",
       "size_bytes": 1501703
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/paired_oblique.png",
-      "sha256": "2bf389808be13d85a7c3ff3969108dce518363a012bde2960d2eb91307dd7579",
+      "sha256": "dd8ff351cd89b99062a95c200b7f1c62fe1c0d4157f9f0301ab7d7e9f84decea",
       "size_bytes": 1505182
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/plane_front.png",
-      "sha256": "669dd507975d02024496348ad5044da1a905791b1a12cf3aa9d2299c48b315d7",
+      "sha256": "d94005663a9a4ee7b390cfeef05efe8b221c4875e2fd3daf28b20ba641b610b6",
       "size_bytes": 4216338
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/project_handoff_FT01.pdf",
-      "sha256": "6c6de7e7eff6cc16b15f791e638b1ec21d74c132aa3ca537c0f92297e09636e5",
-      "size_bytes": 8105115
+      "sha256": "931064b7fccfa1bc02b46bf747047e9df0dafb0a55958dc5bd41737ef826f32f",
+      "size_bytes": 8108033
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/raw_front.png",
-      "sha256": "2eca061ea96fda8fbaea2948aeb198832b8e4036bba8147183a0889d593c3c13",
+      "sha256": "e60bdb6ba207bf1b02a0084c577a62f9d0a8a07debd7a98cc4b41ab37c81acff",
       "size_bytes": 2600636
     },
     {
@@ -1249,18 +1249,58 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/shop_drawings_FT01.pdf",
-      "sha256": "e714efa486861bdc7a1e1fd1f058182d51e7f63c4bb7d62b3e2f8c6393a51c91",
+      "sha256": "38d57136d3d38f10c3b52c102805a31787540a5a09c93ae78e46163b8ad1de92",
       "size_bytes": 6771
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/sizes.png",
-      "sha256": "00fa4766790363c119f17718700e856df7467154d4ab4c5e6114dfa01313d425",
-      "size_bytes": 163948
+      "sha256": "3b182cafa791645d22b2a1cb1e3c754219ebaf552dc49ac987482d850973bda0",
+      "size_bytes": 160682
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/stack.png",
       "sha256": "1777824d42818efb9fac2e3b03201992d7ca4e0713312b510f91d915fea9fa3e",
       "size_bytes": 78019
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/00_READ_ME_FIRST.txt",
+      "sha256": "41fa3591e1d21d25d9817a69bab8ee75b5a81834be9afb2a9e21ee3edef44a0f",
+      "size_bytes": 3160
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/01_PASTE_INTO_GPT_PRO.txt",
+      "sha256": "445fad8d2352053acbe9dd731ddc06393eeab2dcfe7e168c3dfa0152888f6214",
+      "size_bytes": 16125
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/02_PROJECT_BRIEF.txt",
+      "sha256": "9c5a9ac7166799108575de265de1dd2a4501a312a85d65e30c1c16d90c0cecf0",
+      "size_bytes": 16616
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/03_VISUAL_EVIDENCE.pdf",
+      "sha256": "d99ad381adda1aa0fd10077e4caa9e53b67e6e69438903c08fe9e956f7c735bf",
+      "size_bytes": 50846252
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/04_TECHNICAL_REFERENCE.zip",
+      "sha256": "20eefa2025057422cda2d4429e17fabda49fcf56eacebc494043710a9f92c1e4",
+      "size_bytes": 12786985
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/05_RETURN_TO_AGENT.txt",
+      "sha256": "be4e614e724486fa40c636f269d630dc3c231aa0fc85875f3e8fd32a4e0e5515",
+      "size_bytes": 1551
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01.zip",
+      "sha256": "d32efe4931199fe1fe014cd2b87633ade692cc837bb8b12a0d49265adcc5ed64",
+      "size_bytes": 54066598
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/MANIFEST.json",
+      "sha256": "834e8da5ab5d9370e8b3fdb4c31bb8fc53d2149cec916ca2de26f94f729d5a67",
+      "size_bytes": 8959
     },
     {
       "path": "deliverables/current/manual/index.html",

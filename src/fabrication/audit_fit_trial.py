@@ -42,14 +42,14 @@ def audit():
         b = solid.BoundingBox()
         assert solid.isValid() and len(solid.Solids()) == 1
         assert np.max(np.abs([b.xmin+od/2,b.xmax-od/2,b.ymin+od/2,b.ymax-od/2,b.zmin,b.zmax-t])) < 1e-5
-        area_removed = math.pi*radius**2 + w*straight if item['kind']=='MAIN' else math.pi*40**2
+        area_removed = math.pi*radius**2 + w*straight if item['kind']=='MAIN' else math.pi*(design['diverter']['aperture_diameter_mm']/2)**2
         expected_volume = (math.pi*(od/2)**2-area_removed)*t
         assert abs(solid.Volume()-expected_volume) < 1e-5
         top = cq.Workplane(obj=solid).faces('>Z').val()
         assert len(top.Wires()) == 2
         inner = min(top.Wires(),key=lambda wire:wire.BoundingBox().xlen)
         ib = inner.BoundingBox()
-        expect = [w,h] if item['kind']=='MAIN' else [80,80]
+        expect = [w,h] if item['kind']=='MAIN' else [design['diverter']['aperture_diameter_mm']]*2
         assert np.max(np.abs([ib.xlen-expect[0],ib.ylen-expect[1],ib.center.x,ib.center.y])) < 1e-5
         doc = ezdxf.readfile(OUT/item['files']['dxf'])
         entities = list(doc.modelspace())
@@ -116,7 +116,12 @@ def audit():
                 if abs(math.hypot(dx,dy)-100*72/25.4)<.001:bars.append((dx,dy))
                 start=end
         assert len(bars)==2 and any(abs(dx)<.001 for dx,dy in bars) and any(abs(dy)<.001 for dx,dy in bars)
-    assert 'R58.175' in ''.join(p.extract_text() for p in PdfReader(OUT/'shop_drawings_FT01.pdf').pages)
+    shop_text=''.join(p.extract_text() for p in PdfReader(OUT/'shop_drawings_FT01.pdf').pages)
+    for expected in [f'R{radius:g}',f'OUTSIDE DIAMETER {design["main"]["outer_diameter_mm"]:.2f}',
+                     f'OPENING WIDTH {w:.2f}',f'OPENING HEIGHT {h:.2f}',
+                     f'THROUGH DIAMETER {design["diverter"]["aperture_diameter_mm"]:.2f}']:
+        assert expected in shop_text, 'Stale shop label: '+expected
+    paper_profiles=check_paper_profiles(OUT,design)
 
     packages = []
     for path in sorted(OUT.glob('*_quote.zip')):
@@ -149,15 +154,53 @@ def audit():
         checked+=1
     output={'revision':'FT01','status':'PASS_SOFTWARE_CHECKS_ONLY','parts':results,'analytic_capture_checks':checks,
       'capture_scope':report['geometric_check_scope'],'pdfs':pdfs,'paper_two_axis_100mm_bars':'PASS',
+      'paper_profile_dimensions':paper_profiles,
       'quote_packages':packages,'local_links_checked':checked,'Blender_saved_reopened':'PASS',
       'fresh_review_method':'Separate read-back script, independent analytic capsule area/distance; same agent, not a second reviewer.',
       'remaining_physical_risks':['Actual plate/control/adapter pose and axial engagement','Scan scale and surface error are not bounded',
-          'Only 1 mm nominal extra foam land; actual band shape/contact unverified','Diverter 80 mm aperture and rear seal/contact footprint',
+          f'Only {report["nominal_foam_extra_land_mm"]:.2f} mm nominal extra foam land; actual band shape/contact unverified',f'Diverter {design["diverter"]["aperture_diameter_mm"]:g} mm aperture and rear seal/contact footprint',
           'Thin sheet support, deflection and retention','Gap between both actual installed covers/backings','Support, sealing, drain and cured water verification'],
       'physical_fit':'NOT PERFORMED','permanent_installation_release':False,
       'auditor_sha256':sha(Path(__file__)),'capture_mesh_sha256':sha(meshpath)}
     for path in [OUT/'audit.json',ROOT/'docs/validation/fit_trial_FT01.json']:
         path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(output,indent=2)+'\n')
     print('FT01 fresh audit PASS: 6 STEP/STL/DXF sets, 3 analytic clearance states, 11 PDF pages, 2 quote packages; physical checks remain open.')
+
+def check_paper_profiles(directory,design):
+    """Read actual PDF drawing paths, independently of printed dimension labels.
+
+    These profiles are drawn in page coordinates, without scaling transforms.
+    Axis extrema of ReportLab circular Beziers are endpoints; using every path
+    control point is exact for these axis-aligned circles and capsules.
+    """
+    expected=[[(design['main']['outer_diameter_mm'],)*2,
+               (design['main']['aperture_width_mm'],design['main']['aperture_height_mm'])],
+              [(design['diverter']['outer_diameter_mm'],)*2,
+               (design['diverter']['aperture_diameter_mm'],)*2]]
+    found={}
+    for filename in ['shop_drawings_FT01.pdf','full_size_templates_FT01.pdf']:
+        result=[]
+        for page,wanted in zip(PdfReader(directory/filename).pages,expected):
+            paths=[];points=[];curves=0
+            matrix=np.eye(3);stack=[]
+            for operands,op in page.get_contents().operations:
+                if op==b'q':stack.append(matrix.copy())
+                elif op==b'Q':matrix=stack.pop()
+                elif op==b'cm':
+                    a,b,c,d,e,f=map(float,operands);matrix=matrix@np.array([[a,c,e],[b,d,f],[0,0,1]])
+                elif op==b'n':points=[];curves=0
+                elif op in (b'm',b'l',b'c'):
+                    points.extend((matrix@np.array([x,y,1]))[:2] for x,y in zip(map(float,operands[::2]),map(float,operands[1::2])))
+                    if op==b'c':curves+=1
+                elif op in (b'S',b's',b'B',b'B*',b'b',b'b*',b'f',b'f*'):
+                    if curves>=4:
+                        xy=np.array(points);size=(xy.max(axis=0)-xy.min(axis=0))*25.4/72
+                        paths.append(size)
+                    points=[];curves=0
+            for wh in wanted:
+                assert any(np.max(np.abs(p-wh))<.002 for p in paths), f'Wrong PDF profile in {filename}: expected {wh}, got {paths}'
+            result.append([list(x) for x in wanted])
+        found[filename]=result
+    return found
 
 if __name__=='__main__':audit()

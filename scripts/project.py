@@ -216,16 +216,16 @@ def prepare_fit_trial(stage='all',force=False):
     state=read('build/fit_trial_stages.json') if (ROOT/'build/fit_trial_stages.json').exists() else {}
     blender=[BLENDER,'--background','--factory-startup','--threads','2','--python-exit-code','1','--python']
     stages=[
-      ('analysis',['src/analysis/attached_scan.py','src/fabrication/fit_trial.py','canon/fit_trial_design.json','canon/measurements.json','data/derived/resolved.json','data/raw/polycam/polycam-inner-plate-attached.zip','deliverables/current/fabrication/control-registration/registration_trial.json'],
+      ('analysis',['src/analysis/attached_scan.py','src/fabrication/fit_trial.py','src/fabrication/fit_trial_spec.py','deliverables/current/fabrication/concentric-border-study/analysis.json','canon/fit_trial_design.json','canon/measurements.json','data/derived/resolved.json','data/raw/polycam/polycam-inner-plate-attached.zip','deliverables/current/fabrication/control-registration/registration_trial.json'],
        [out+'/attached_scan_assessment.json',out+'/design_report.json',out+'/cad/*',out+'/access.png',out+'/stack.png',out+'/sizes.png','build/attached_scan/wall_frame.json'],
        [[sys.executable,'src/analysis/attached_scan.py'],[sys.executable,'src/fabrication/fit_trial.py']]),
-      ('blender',['src/blender/fit_trial.py','scripts/inspect_attached_scan.py','scripts/render_attached_plane.py',out+'/design_report.json',out+'/attached_scan_assessment.json',out+'/cad/*','build/attached_scan/wall_frame.json'],
+      ('blender',['src/fabrication/fit_trial_spec.py','src/blender/fit_trial.py','scripts/inspect_attached_scan.py','scripts/render_attached_plane.py',out+'/design_report.json',out+'/attached_scan_assessment.json',out+'/cad/*','build/attached_scan/wall_frame.json'],
        [out+'/*.blend',out+'/blender_check.json',out+'/paired_*.png',out+'/exploded.png',out+'/plane_front.png',out+'/raw_front.png'],
        [blender+['scripts/inspect_attached_scan.py'],blender+['scripts/render_attached_plane.py'],[sys.executable,'src/analysis/attached_scan.py'],blender+['src/blender/fit_trial.py']]),
-      ('documents',['src/fabrication/fit_trial_documents.py','canon/fit_trial_handoff.json','canon/fit_trial_design.json',out+'/design_report.json',out+'/*.png',out+'/cad/*'],
+      ('documents',['src/fabrication/fit_trial_spec.py','src/fabrication/fit_trial_documents.py','canon/fit_trial_handoff.json','canon/fit_trial_design.json',out+'/design_report.json',out+'/*.png',out+'/cad/*'],
        [out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/document_check.json'],
        [[sys.executable,'src/fabrication/fit_trial_documents.py']]),
-      ('audit',['src/fabrication/audit_fit_trial.py',out+'/design_report.json',out+'/cad/*',out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/blender_check.json'],
+      ('audit',['src/fabrication/fit_trial_spec.py','src/fabrication/audit_fit_trial.py',out+'/design_report.json',out+'/cad/*',out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/blender_check.json'],
        [out+'/audit.json','docs/validation/fit_trial_FT01.json'],
        [[sys.executable,'src/fabrication/audit_fit_trial.py']])]
     for name,inputs,patterns,commands in stages:
@@ -239,13 +239,16 @@ def prepare_fit_trial(stage='all',force=False):
         state[name]={'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in sorted(owned)}}
         write('build/fit_trial_stages.json',state)
     # Old pages remain available as evidence but identify the current recommendation.
-    banner='<aside id="ft01-current" style="padding:16px;background:#e5f1f3;border:2px solid #236679;margin:12px;color:#183e48">Current quote and dry-fit recommendation: <a href="/fabrication/fit-trial/index.html">FT01 main 220 / diverter 124, upright capsule opening</a>. This page is a historical study.</aside>'
+    d=read('canon/fit_trial_design.json')
+    banner=f'<aside id="ft01-current" style="padding:16px;background:#e5f1f3;border:2px solid #236679;margin:12px;color:#183e48">Current quote and dry-fit recommendation: <a href="/fabrication/fit-trial/index.html">{d["revision"]} main {d["main"]["outer_diameter_mm"]:g} / diverter {d["diverter"]["outer_diameter_mm"]:g}, upright capsule opening</a>. This page is a historical study.</aside>'
     for rel in ['review/index.html','review/rear/index.html','fabrication/F005/index.html','fabrication/concentric-border-study/index.html','fabrication/aperture-access/index.html','fabrication/control-registration/index.html']:
         p=ROOT/'deliverables/current'/rel
-        if p.exists() and 'id="ft01-current"' not in p.read_text():
+        if p.exists():
             import re
             text=p.read_text()
-            if re.search(r'<body\b',text):
+            if 'id="ft01-current"' in text:
+                text=re.sub(r'<aside id="ft01-current".*?</aside>',lambda m:banner,text,count=1)
+            elif re.search(r'<body\b',text):
                 text=re.sub(r'(<body\b[^>]*>)',lambda m:m.group(1)+banner,text,count=1)
             else:
                 text=re.sub(r'(<(?:main|header|nav)\b[^>]*>)',lambda m:banner+m.group(1),text,count=1)

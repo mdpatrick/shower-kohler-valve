@@ -4,6 +4,8 @@
 
 Open the [current illustrated review](deliverables/current/fabrication/fit-trial/index.html), or run `./project review`. The review includes individual upload files, prices and timing research, paired mockups, an exploded view, and the actual new scan with the inner plate attached.
 
+The [GP01 Pro review package](deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01.zip) is ready. Follow its `00_READ_ME_FIRST.txt`: attach the brief, visual evidence and technical archive, then paste the master prompt. It requests independent design review and concrete instructions back to the agent for CAD, optional locators and separate party-specific handoffs. No Pro response has been received. GP01 is a frozen review checkpoint; later software maintenance has not changed the nominal FT01 design.
+
 ## Choose the next part
 
 - Main: Ø220 mm, centered vertical capsule opening 116.35 × 151.10 mm, semicircular ends R58.175.
@@ -33,5 +35,7 @@ The user confirms the foam belongs to the inner plate, reaches its outer edge, a
 `canon/fit_trial_design.json` is the dimensional input. `canon/fit_trial_handoff.json` holds editable guide prose and research. `./project prepare-fit-trial` rebuilds stale analysis, Blender, documents and audit stages. Use `--stage analysis|blender|documents|audit` for a targeted stage or `--force` to rebuild it. Blender requires the documented unsandboxed desktop launch on this Mac. Start a restored checkout with `./project ingest` and `./project build` to recreate ignored prerequisite meshes. The current scene embeds the supplemental scan; CAD remains the authority for custom parts.
 
 Record real checks in `docs/physical_checks/` against FT01, preserve source evidence, revise dimensions with reasons and rebuild all dependent outputs. Run `./project validate --git-objects` for original archive and project checks. Use ordinary Git; no LFS or external upload. Local Git/bundles are not an off-machine backup.
+
+Design-dependent guide text uses `[[name:format]]` tokens resolved by `src/fabrication/fit_trial_spec.py`; keep measured facts and dated vendor evidence distinct from these design values. The helper checks the current centered capsule/ring family and stock identities. A different shape needs an explicit builder change. Run `.venv/bin/python -m unittest tests.test_fit_trial_parameters -v` after changing dimension propagation: it generates an unpublished variant under `build/` and checks actual CAD and PDF profiles, labels, HTML and shop packages without changing the selected dimensions. See [validation](docs/validation/parameter_propagation_FT01.json). The A3 layout currently rejects outside diameters above 230 mm rather than silently clipping them.
 
 [Complete continuing goal](docs/fabrication_goal_prompt.md) · [review instructions](docs/downstream_audit_prompt.md) · [original request](docs/project_request.md) · [historical studies and earlier starting page](START_HERE_history_pre_FT01.md).

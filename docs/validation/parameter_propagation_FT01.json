@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-15",
+  "design_revision": "FT01",
+  "status": "PASS_SOFTWARE_CHECKS_ONLY",
+  "purpose": "Make future dimensional changes propagate to CAD, scoped checks, figures, Blender, drawings, templates, HTML and shop package labels.",
+  "baseline_commit": "a63e050a0e90fdb532a8c6df576a96cdd294c58f",
+  "current_nominal_design_unchanged": true,
+  "all_six_STLs_byte_identical_to_baseline": true,
+  "STEP_DXF_validation": "All six pairs reimported and independently checked; exact analytic volumes, aperture dimensions, topology and mm units. Metadata timestamps changed.",
+  "existing_hardware_and_pair_gap_results_unchanged": true,
+  "opening_footprint_calculation": "Now uses recorded nonzero local X offsets instead of display X=0. Nominal extra clearance L=10.8627 mm and U=10.9859 mm; these are projected reference footprints, not actual adapter engagement.",
+  "report_schema_change": "Dimension-specific gap and diverter keys replaced with generic names; inner_opening_envelopes is now a provenance-bearing L/U list. GP01 retains its frozen older report.",
+  "tests": {
+    "command": ".venv/bin/python -m unittest tests.test_fit_trial_parameters -v",
+    "passed": 4,
+    "variant_output": "build/fit_trial/parameter-propagation/variant",
+    "variant_is_unpublished": true,
+    "covers": [
+      "changed diameters, aperture dimensions and both stock thicknesses",
+      "actual STEP dimensions and PDF profile paths, not just printed labels",
+      "HTML, quote filenames, notes and archive hashes",
+      "stale analysis rejection",
+      "inconsistent capsule geometry rejection before export",
+      "unknown dimension-token rejection"
+    ]
+  },
+  "fresh_audit": "deliverables/current/fabrication/fit-trial/audit.json",
+  "PDF_visual_review": "PASS: all 11 pages rendered at 1500 px and individually inspected; no clipped text, overlaps or missing diagrams. Shop and template profile paths independently checked in PDF page coordinates.",
+  "browser_review": "PASS: current local HTML opened; all eight image elements loaded, no unresolved tokens or horizontal overflow. Viewport visually inspected. Only console error was missing optional favicon.ico.",
+  "blender": "Three scenes rebuilt, saved and reopened; custom dimensions and 333573 original scan vertices checked.",
+  "GP01_archive_unchanged": "d32efe4931199fe1fe014cd2b87633ade692cc837bb8b12a0d49265adcc5ed64",
+  "PDF_sha256": {
+    "full_size_templates_FT01.pdf": "81cbd5d8ae33c4e88fa38f725e3266b2345ad5a5bfc33a0c8fb2b4dc323bb661",
+    "project_handoff_FT01.pdf": "931064b7fccfa1bc02b46bf747047e9df0dafb0a55958dc5bd41737ef826f32f",
+    "shop_drawings_FT01.pdf": "38d57136d3d38f10c3b52c102805a31787540a5a09c93ae78e46163b8ad1de92"
+  },
+  "physical_fit": "NOT PERFORMED",
+  "permanent_installation_release": false,
+  "goal_turn_classification": "PROGRESS: repaired dimensional propagation and validated unpublished mutation; no new physical evidence or Pro response received."
+}
