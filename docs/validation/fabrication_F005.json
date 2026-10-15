@@ -1,0 +1,62 @@
+{
+  "design_revision": "F005",
+  "evidence_revision": "R004",
+  "date": "2026-10-14",
+  "status": "PASS for immediate prototype/quote preparation; NOT manufacturing release",
+  "executed": {
+    "custom_exports": "12 STEP/STL pairs; valid closed solids, dimensions and volume independently recomputed from exported files",
+    "DXF": "4 mm-unit files, two closed contours each, no annotations",
+    "packages": "6 selected-pair/thickness ZIPs; member hashes and no image-bearing PDFs",
+    "mesh_insertion": "51929 forward triangles clipped to eroded main opening; zero aperture conflict",
+    "reference_fit": "5 provisional inner/cover poses; all detected point intersections near studs, none near controls",
+    "blender_source": "Saved R004/F005 full source and observed proxy: identical geometry, topology, UVs and evaluated world/local transforms",
+    "unit_tests": "27 passed; unittest discover -s tests -v",
+    "rebuild": "./project prepare-fabrication: all four stages unchanged after completed build",
+    "html": "Own local browser tab inspected; no visible broken images, no horizontal page overflow at 1280px, no console errors/warnings; all 28 local asset/download references exist"
+  },
+  "visual_review": {
+    "PDFs": {
+      "blueprint_specifications_F005_DRAFT.pdf": 8,
+      "fit_and_fabrication_report_F005_DRAFT.pdf": 9,
+      "full_size_templates_F005_DRAFT.pdf": 4
+    },
+    "result": "All 21 pages inspected; MAIN-A caption/dimension overlap repaired and affected drawing pages re-rendered; changed report page inspected after final text",
+    "Blender_views": "Eight generated views inspected, including pairs, exploded, depth and measured reference faces; official exterior models and conditional appearance labels present"
+  },
+  "fresh_adversarial_review": {
+    "reviewer": "Author, fresh pass with separately implemented export/source checks; NOT a separate independent reviewer",
+    "issues_resolved": [
+      "Replaced legacy rectangular aperture with captured forward-envelope profile",
+      "Old constant-radius valve cylinders no longer drive custom aperture or plate-fit conclusion",
+      "Original seated-cover claim remains rejected; cosmetic capture hiding is labeled",
+      "Foam outline sensitivity retained instead of presenting front dimensions as measured back path",
+      "CAD-only quote packages contain no house images or source scans",
+      "Published thin-316 rush exclusion separated from general 24-hour advertising",
+      "Blueprint dimension/caption collision removed",
+      "Blender excluded-object matrix caching resolved by activating the observed layer before comparison"
+    ],
+    "open": [
+      "Physical calibration and exact trim registration",
+      "Stud axes/depth, adjustment mechanism, cover cavities and adapter engagement",
+      "Actual rear foam path, compression and minimum supported landing",
+      "Diverter rear assembly and 80 mm trial opening",
+      "Sound backing, flatness and clamp-load stiffness",
+      "Permanent seal/support joint and drainage",
+      "Chosen alloy/thickness/finish and actual vendor quote",
+      "Separate independent design review and explicit final manufacturing release"
+    ]
+  },
+  "physical_tests": "NONE performed",
+  "orders_uploads_contacts": "NONE",
+  "pdf_sha256": {
+    "fit_and_fabrication_report_F005_DRAFT.pdf": "b312bacd105e8c9fd58efc9178ec5c3cdde796c3a81c90e4e2a760697983487a",
+    "full_size_templates_F005_DRAFT.pdf": "87b4c62f8637811b63a8e153a54bc09d55af891082291c8317aea2a7539c6a88",
+    "blueprint_specifications_F005_DRAFT.pdf": "1a3a5c338b18cab5af674ef3d58373f6172b21f53b01bbb1d245456019e22f0c"
+  },
+  "supporting_records": [
+    "docs/validation/fabrication_F005_exports.json",
+    "docs/validation/fabrication_F005_blender_source.json",
+    "deliverables/current/fabrication/F005/mesh_path_check.json",
+    "deliverables/current/fabrication/F005/reference_fit_check.json"
+  ]
+}

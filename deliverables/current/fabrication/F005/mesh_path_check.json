@@ -1,0 +1,9 @@
+{
+  "status": "PASS in captured surface",
+  "forward_triangles_considered": 51929,
+  "triangles_outside_aperture": 0,
+  "union_projected_conflict_area_mm2": 0.0,
+  "method": "Clip every primary mesh triangle to Z >= 0.5 mm, project XY, clip to OPEN-MAIN eroded 3 mm; compare to exact design aperture generating polygon plus 1.75 mm arc offset (128-segment analysis approximation).",
+  "limits": "Excludes wall edge by explicit mask; no hidden geometry or physically bounded scale; applies only to axial insertion at/outside Z=0.5. Physical fit remains unresolved.",
+  "conflict_bounds_mm": null
+}

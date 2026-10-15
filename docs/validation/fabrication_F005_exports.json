@@ -1,0 +1,111 @@
+{
+  "status": "PASS - exported geometry only",
+  "method": "Fresh process reading STEP/STL/DXF/ZIP; analytic outer area minus independent polygon offset; does not reuse builder solids",
+  "parts": [
+    {
+      "part": "MAIN-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 5.757246981374919e-06
+    },
+    {
+      "part": "MAIN-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 1.1994197848252952e-05
+    },
+    {
+      "part": "MAIN-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 1.1333191650919616e-05
+    },
+    {
+      "part": "MAIN-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 5.758389306720346e-06
+    },
+    {
+      "part": "MAIN-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 1.1996657121926546e-05
+    },
+    {
+      "part": "MAIN-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 1.1335461749695241e-05
+    },
+    {
+      "part": "DIV-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 2.0736479200422764e-10
+    },
+    {
+      "part": "DIV-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 4.4019543565809727e-10
+    },
+    {
+      "part": "DIV-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 4.18367562815547e-10
+    },
+    {
+      "part": "DIV-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 1.5279510989785194e-10
+    },
+    {
+      "part": "DIV-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 3.2741809263825417e-10
+    },
+    {
+      "part": "DIV-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION",
+      "STEP_exact_dimensions_and_analytic_volume": "PASS",
+      "STL_scale_closed_volume": "PASS",
+      "analytic_volume_error_mm3": 3.055902197957039e-10
+    }
+  ],
+  "DXF_two_closed_contours_mm": 4,
+  "packages": [
+    {
+      "file": "quote_package_B_SS060_F005_DRAFT.zip",
+      "hashes_selected_pair_thickness_and_no_images": "PASS"
+    },
+    {
+      "file": "quote_package_B_PROTO3_F005_DRAFT.zip",
+      "hashes_selected_pair_thickness_and_no_images": "PASS"
+    },
+    {
+      "file": "quote_package_A_SS125_F005_DRAFT.zip",
+      "hashes_selected_pair_thickness_and_no_images": "PASS"
+    },
+    {
+      "file": "quote_package_A_PROTO3_F005_DRAFT.zip",
+      "hashes_selected_pair_thickness_and_no_images": "PASS"
+    },
+    {
+      "file": "quote_package_B_SS125_F005_DRAFT.zip",
+      "hashes_selected_pair_thickness_and_no_images": "PASS"
+    },
+    {
+      "file": "quote_package_A_SS060_F005_DRAFT.zip",
+      "hashes_selected_pair_thickness_and_no_images": "PASS"
+    }
+  ],
+  "unchanged_evidence_sha256": {
+    "canon/measurements.json": "1278024f20ee5c9a0bdca4152a7a9bf613d4d13c8d2dd20af4468fcfb5ab2830",
+    "canon/scan_annotations.json": "31dd3126ef84a5dd0e62d6d664ac0367a776230d22010e1f4612234eeb13630b"
+  },
+  "physical_fit": "UNRESOLVED",
+  "independent_human_or_agent_design_review": "NOT PERFORMED"
+}

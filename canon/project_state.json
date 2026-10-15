@@ -3,18 +3,18 @@
   "revision": "R004",
   "date": "2026-10-14",
   "selected_state": null,
-  "working_state": "diagnostic_trial_with_unchanged_hardware",
+  "working_state": "F005_two_pairs_for_prototype_quote_review",
   "states": {
     "as_observed_at_capture": "preserved scan; capture date unknown; user reports no changes since capture on 2026-10-14",
     "manufacturer_intended": "Documented layer/fastener order and original-finished-wall stud limit only; no physically verified installed geometry",
-    "proposed_provisional": "Seated-cover placement rejected: unchanged stud envelopes intersect the assumed cover; candidate gasket landing also conflicts",
+    "proposed_provisional": "F005 A round and B rounded rectangular custom pairs, low/thick metal and plastic variants; no selected arrangement",
     "selected_arrangement": null
   },
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS - R004 CAD/export checks, saved-scene reopen and 27 automated tests; physical fit unresolved",
-    "geometric_fit": "FAIL in provisional assembly; twelve raw readings accepted, two outer-cover contact clarifications pending; installed placement and physical fit unresolved",
-    "materials_design_review": "UNRESOLVED",
+    "software_geometry_checks": "PASS: F005 fresh export audit, saved Blender source comparison, 21 PDF pages visually reviewed, local review and 27 unit tests; physical fit unresolved",
+    "geometric_fit": "F005 forward mesh aperture clears captured surface; stud pattern/depth and rear foam path remain conditional conflicts",
+    "materials_design_review": "F005 public vendor/stock/finish research prepared; no chosen vendor/quote or approved permanent seal detail",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
     "received_part_inspection": "NOT APPLICABLE YET",
@@ -39,5 +39,8 @@
   "latest_user_state_note": "",
   "inner_plate_measurement_record": "docs/physical_checks/inner_plate_2026-10-14.json",
   "inner_plate_foam_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
-  "outer_plate_measurement_record": "docs/physical_checks/outer_plate_2026-10-14.json"
+  "outer_plate_measurement_record": "docs/physical_checks/outer_plate_2026-10-14.json",
+  "fabrication_design_revision": "F005",
+  "current_goal_prompt": "docs/fabrication_goal_prompt.md",
+  "fabrication_preparation": "deliverables/current/fabrication/F005/index.html"
 }

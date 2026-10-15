@@ -1,0 +1,383 @@
+{
+  "design_revision": "F005",
+  "status": "CONDITIONAL reference-shape study",
+  "method": "Exact OCCT inside-solid test of full-resolution captured vertices at the trial SS060 surface. No legacy valve cylinders used.",
+  "rows": [
+    {
+      "reference": "REF-INNER",
+      "foam_trial_mm": 6,
+      "sampled_vertices": 12205,
+      "vertices_inside_reference_solid": 164,
+      "nearest_feature_zones": {
+        "SW stud": {
+          "count": 157,
+          "bounds_mm": [
+            [
+              -48.43168205617014,
+              16.185248353000276,
+              8.539268446576717
+            ],
+            [
+              -44.42239793236702,
+              19.822965536313433,
+              14.950945150264022
+            ]
+          ]
+        },
+        "NE stud": {
+          "count": 7,
+          "bounds_mm": [
+            [
+              54.18088178412678,
+              61.970752314116254,
+              8.822708561943802
+            ],
+            [
+              54.661771164868625,
+              62.530046811248184,
+              9.980055623672474
+            ]
+          ]
+        },
+        "Lower control": {
+          "count": 0,
+          "bounds_mm": null
+        },
+        "Upper control": {
+          "count": 0,
+          "bounds_mm": null
+        }
+      },
+      "example_installed_points_mm": [
+        [
+          -45.94545507719146,
+          19.63654519199534,
+          8.935486379777085
+        ],
+        [
+          -45.43055497672215,
+          19.54325864576944,
+          10.191111576623005
+        ],
+        [
+          -45.481464376680925,
+          19.58384997028648,
+          9.890147178911985
+        ],
+        [
+          -45.73132775642393,
+          19.60770959688952,
+          9.66564598127992
+        ],
+        [
+          -46.04952028541157,
+          19.646992933860844,
+          10.270423689511457
+        ]
+      ],
+      "interpretation": "Provisional shape conflict"
+    },
+    {
+      "reference": "REF-INNER",
+      "foam_trial_mm": 5,
+      "sampled_vertices": 11873,
+      "vertices_inside_reference_solid": 159,
+      "nearest_feature_zones": {
+        "SW stud": {
+          "count": 152,
+          "bounds_mm": [
+            [
+              -48.50303537363037,
+              16.131590546844535,
+              7.544431357825591
+            ],
+            [
+              -44.37841527868775,
+              19.823238728916493,
+              14.215380084784815
+            ]
+          ]
+        },
+        "NE stud": {
+          "count": 7,
+          "bounds_mm": [
+            [
+              54.18088178412678,
+              61.970752314116254,
+              7.720396007104203
+            ],
+            [
+              54.69629790038395,
+              62.75918866408679,
+              8.934459119507242
+            ]
+          ]
+        },
+        "Lower control": {
+          "count": 0,
+          "bounds_mm": null
+        },
+        "Upper control": {
+          "count": 0,
+          "bounds_mm": null
+        }
+      },
+      "example_installed_points_mm": [
+        [
+          -46.35521897720206,
+          19.61296434151697,
+          7.826947021698768
+        ],
+        [
+          -45.6117023631942,
+          19.491667456091392,
+          7.710299784246292
+        ],
+        [
+          -45.12284836819575,
+          19.41540085326804,
+          7.755953653029092
+        ],
+        [
+          -45.521767317727914,
+          19.478144347222866,
+          8.102058843900576
+        ],
+        [
+          -45.94545507719146,
+          19.63654519199534,
+          8.935486379777085
+        ]
+      ],
+      "interpretation": "Provisional shape conflict"
+    },
+    {
+      "reference": "REF-INNER",
+      "foam_trial_mm": 4,
+      "sampled_vertices": 11612,
+      "vertices_inside_reference_solid": 149,
+      "nearest_feature_zones": {
+        "SW stud": {
+          "count": 143,
+          "bounds_mm": [
+            [
+              -48.50303537363037,
+              16.124745863509958,
+              6.52426761403985
+            ],
+            [
+              -44.37841527868775,
+              19.823238728916493,
+              13.251472572822397
+            ]
+          ]
+        },
+        "NE stud": {
+          "count": 6,
+          "bounds_mm": [
+            [
+              54.330348282371915,
+              62.23188421050335,
+              6.629164362963223
+            ],
+            [
+              54.723982341860506,
+              62.762920841576005,
+              7.720396007104203
+            ]
+          ]
+        },
+        "Lower control": {
+          "count": 0,
+          "bounds_mm": null
+        },
+        "Upper control": {
+          "count": 0,
+          "bounds_mm": null
+        }
+      },
+      "example_installed_points_mm": [
+        [
+          -45.15360794033094,
+          19.36560169432724,
+          7.188166381779606
+        ],
+        [
+          -46.02254658659384,
+          19.570326907669397,
+          7.077802456866575
+        ],
+        [
+          -46.35521897720206,
+          19.61296434151697,
+          7.826947021698768
+        ],
+        [
+          -45.6117023631942,
+          19.491667456091392,
+          7.710299784246292
+        ],
+        [
+          -44.67988970140244,
+          19.18968535145072,
+          6.959007683813166
+        ]
+      ],
+      "interpretation": "Provisional shape conflict"
+    },
+    {
+      "reference": "REF-INNER",
+      "foam_trial_mm": 3,
+      "sampled_vertices": 11992,
+      "vertices_inside_reference_solid": 162,
+      "nearest_feature_zones": {
+        "SW stud": {
+          "count": 155,
+          "bounds_mm": [
+            [
+              -48.4886551617094,
+              16.06732688639576,
+              5.555357076378748
+            ],
+            [
+              -44.37841527868775,
+              19.77776128813312,
+              12.64250313012889
+            ]
+          ]
+        },
+        "NE stud": {
+          "count": 7,
+          "bounds_mm": [
+            [
+              54.340175612272915,
+              62.07376678867658,
+              5.688528891567508
+            ],
+            [
+              54.71273866187788,
+              62.762920841576005,
+              6.98846010428262
+            ]
+          ]
+        },
+        "Lower control": {
+          "count": 0,
+          "bounds_mm": null
+        },
+        "Upper control": {
+          "count": 0,
+          "bounds_mm": null
+        }
+      },
+      "example_installed_points_mm": [
+        [
+          -45.77321156669977,
+          19.47915812815151,
+          5.994865058225386
+        ],
+        [
+          -45.079496163190186,
+          19.301934492241656,
+          5.722210036403457
+        ],
+        [
+          -44.80463385052271,
+          19.20717380756801,
+          5.9937353515762055
+        ],
+        [
+          -45.653061960799086,
+          19.409207542854034,
+          6.217313543880753
+        ],
+        [
+          -45.416910628684185,
+          19.400076673346888,
+          6.470361315532642
+        ]
+      ],
+      "interpretation": "Provisional shape conflict"
+    },
+    {
+      "reference": "REF-COVER",
+      "foam_trial_mm": null,
+      "sampled_vertices": 20161,
+      "vertices_inside_reference_solid": 202,
+      "nearest_feature_zones": {
+        "SW stud": {
+          "count": 127,
+          "bounds_mm": [
+            [
+              -48.472138153709565,
+              17.120483684710308,
+              17.028496239759132
+            ],
+            [
+              -44.56488606613481,
+              20.0990046350681,
+              18.521452700617633
+            ]
+          ]
+        },
+        "NE stud": {
+          "count": 75,
+          "bounds_mm": [
+            [
+              50.22152342464469,
+              60.601051460721436,
+              17.0261932512005
+            ],
+            [
+              54.11028613204097,
+              63.7656165104182,
+              18.511778097854428
+            ]
+          ]
+        },
+        "Lower control": {
+          "count": 0,
+          "bounds_mm": null
+        },
+        "Upper control": {
+          "count": 0,
+          "bounds_mm": null
+        }
+      },
+      "example_installed_points_mm": [
+        [
+          -44.76908024634885,
+          19.04040080767956,
+          17.10401511899516
+        ],
+        [
+          -44.985384612086555,
+          19.218720108272095,
+          17.222879429034
+        ],
+        [
+          -44.85228861699189,
+          19.248249389240897,
+          17.965686256877294
+        ],
+        [
+          -44.70594133865255,
+          19.082963754829365,
+          17.72074119158133
+        ],
+        [
+          -45.830969840348686,
+          19.491724332837606,
+          17.056235621437967
+        ]
+      ],
+      "interpretation": "Provisional shape conflict"
+    }
+  ],
+  "limitations": [
+    "Local stamped profile/nut-seat depth and rear cavity are not measured.",
+    "Inside-solid sample is not a complete triangle/volume collision proof.",
+    "Foam trial values are sensitivity scenarios, not allowed compression specifications.",
+    "Stud axes differ from tip coordinates; scan scale and hidden surfaces remain unresolved."
+  ]
+}

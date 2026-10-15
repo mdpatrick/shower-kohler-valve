@@ -92,6 +92,29 @@ def build(force=False):
         state[name]={'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in sorted(owned)}};write('build/stages.json',state)
     shutil.copy2(ROOT/'canon/source_register.json',ROOT/'deliverables/current/analysis/source_register.json')
     publish_manifest();print('Build finished. Physical fit and fabrication remain UNRESOLVED.')
+def prepare_fabrication(stage='all',force=False):
+    """Supplemental design revision; accepted measurement revision stays R004."""
+    design=read('canon/fabrication_designs.json')
+    if design['evidence_revision'] != read('canon/measurements.json')['revision'] or design['evidence_revision'] != read('data/derived/resolved.json')['revision']:
+        raise ValueError('Fabrication design evidence is stale; reconcile accepted measurements and design before any stage.')
+    preserve_edits();state=read('build/fabrication_stages.json') if (ROOT/'build/fabrication_stages.json').exists() else {}
+    out='deliverables/current/fabrication/F005'
+    stages=[
+      ('cad',['src/fabrication/build.py','src/fabrication/mesh_check.py','canon/fabrication_designs.json','canon/measurements.json','data/derived/resolved.json','data/derived/registration.json','data/evidence/kohler-T14489-4.obj','data/evidence/kohler-T14491-4.obj'],[out+'/cad/*',out+'/reference/*',out+'/analysis.json',out+'/mesh_path_check.json','data/derived/fabrication_F005/*'],[sys.executable,'src/fabrication/build.py']),
+      ('fit',['src/fabrication/reference_fit.py','data/derived/fabrication_F005/REF-*.brep','data/derived/resolved.json','data/derived/registration.json'],[out+'/reference_fit_check.json'],[sys.executable,'src/fabrication/reference_fit.py']),
+      ('render',['src/fabrication/blender_scene.py','data/derived/fabrication_F005/*','deliverables/current/blender/installation_R004_DRAFT.blend'],[out+'/views/pair_*.png',out+'/views/exploded_A.png',out+'/views/as_found_depth.png',out+'/views/measured_*.png',out+'/paired_escutcheons_F005_DRAFT.blend',out+'/blender_validation.json'],[BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/fabrication/blender_scene.py']),
+      ('documents',['src/fabrication/documents.py','src/fabrication/build.py','canon/fabrication_research.json','canon/fabrication_designs.json',out+'/analysis.json',out+'/blender_validation.json',out+'/mesh_path_check.json',out+'/reference_fit_check.json',out+'/views/pair_*.png',out+'/views/exploded_A.png'],[out+'/*.pdf',out+'/index.html',out+'/views/*.svg',out+'/views/*_diagram.png',out+'/document_validation.json',out+'/fit_report.md',out+'/research.json',out+'/quote_package_*.zip'],[sys.executable,'src/fabrication/documents.py'])]
+    for name,inputs,patterns,cmd in stages:
+        if stage not in ('all',name):continue
+        digest=fingerprint(inputs);prior=state.get(name,{});files=prior.get('outputs',{})
+        unchanged=not force and prior.get('fingerprint')==digest and files and all((ROOT/f).exists() and sha(ROOT/f)==h for f,h in files.items())
+        if unchanged:print('fabrication '+name+': unchanged',flush=True);continue
+        print('fabrication '+name+': building',flush=True);run(cmd,'fabrication_'+name+'.log')
+        owned={str(p.relative_to(ROOT)) for pat in patterns for p in ROOT.glob(pat) if p.is_file() and not p.name.endswith('.blend1')}
+        state[name]={'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in sorted(owned)}};write('build/fabrication_stages.json',state)
+    publish_manifest()
+    print('F005 preparation checkpoint saved. Permanent manufacturing release remains HOLD.')
+
 def validate(git_objects=False):
     errors=[];input_results=[]
     for i in read('canon/inputs.json')['inputs']:
@@ -193,17 +216,28 @@ def handoff():
             z.write(ROOT/name,name)
         for case in ['factory','proposed']:
             name=f'deliverables/current/review/views/depth_{case}.svg';z.write(ROOT/name,name)
+        fab=ROOT/'deliverables/current/fabrication/F005'
+        if fab.exists():
+            for pattern in ['*.json','*.pdf','*.md','index.html','views/*','cad/*.csv','quote_package_*.zip']:
+                for p in sorted(fab.glob(pattern)):z.write(p,str(p.relative_to(ROOT)))
+            for name in ['inner_photo','outer_photo']:
+                p=ROOT/f'deliverables/current/review/views/{name}.png';z.write(p,str(p.relative_to(ROOT)))
+            z.writestr('READ_REVIEW_PACKAGE_FIRST.txt','Private compact review package. F005 drawings, images, analysis and six custom-only quote ZIPs are included. The complete Git bundle contains Blender, all source code, original scans and the full interactive measurement review. The F005 Blender and measurement-worksheet links require that complete checkout. No manufacturing release or physical fit is implied.\n')
     print('Private local handoff:',bundle.relative_to(ROOT),'(contains complete committed originals). Not an off-machine backup.')
 
 def main():
     p=argparse.ArgumentParser();sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('doctor');sub.add_parser('ingest');b=sub.add_parser('build');b.add_argument('--force',action='store_true')
+    fab=sub.add_parser('prepare-fabrication');fab.add_argument('--stage',choices=['all','cad','fit','render','documents'],default='all');fab.add_argument('--force',action='store_true')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
     if args.command=='doctor':doctor()
     elif args.command=='ingest':run([sys.executable,'scripts/ingest.py'])
-    elif args.command=='build':build(args.force)
+    elif args.command=='build':
+        build(args.force)
+        if (ROOT/'canon/fabrication_designs.json').exists():prepare_fabrication(force=args.force)
+    elif args.command=='prepare-fabrication':prepare_fabrication(args.stage,args.force)
     elif args.command=='review':review(args.no_open)
     elif args.command=='validate':validate(args.git_objects)
     elif args.command=='query':query(args.args)

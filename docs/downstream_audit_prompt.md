@@ -1,3 +1,11 @@
+# Current review priority: F005 fabrication preparation
+
+Read docs/fabrication_goal_prompt.md and START_HERE.md first. Review canon/fabrication_designs.json and canon/fabrication_research.json, then deliverables/current/fabrication/F005/analysis.json and mesh_path_check.json. Recompute custom STEP/DXF dimensions, wall-damage margins, the 112.05 vs 108.01 mm mounting conflict, the 1.5 mm foam-inset sensitivity, actual stud/cover depth, and the F005 screenshot state distinction. Verify manufacturer ZIPs include only their chosen pair/thickness and no home scan/photos. Cost ranges must remain assistant planning estimates, not quotes. Check that thin 316 stainless rush service is not incorrectly promised. Physical fit and manufacturing release remain open.
+
+This is a fresh-review request, not an instruction to overwrite accepted measurements or to release files. Distinguish independently recomputed checks from claims only read.
+
+---
+
 # Independent review request
 
 Audit this private shower repair study from the repository, not the prior chat. Start with `START_HERE.md`, `AGENTS.md`, `canon/project_state.json`, `canon/measurements.json`, `canon/source_register.json`, and `deliverables/current/manifest.json`. Preserve accepted observations, original scan bytes and Git history. Proposed corrections need evidence and a recorded revision. No uploads, trade messages, orders, tile cutting or hidden changes to the observed pose are authorized.

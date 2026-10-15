@@ -1,0 +1,14 @@
+{
+  "saved_reopened": true,
+  "missing_images": [],
+  "custom_CAD_dimensions_checked": [
+    "MAIN-A",
+    "MAIN-B",
+    "DIV-A",
+    "DIV-B"
+  ],
+  "source_scan_preserved": true,
+  "official_CAD_components": 10,
+  "rendered_images": 8,
+  "status": "PASS - software only; physical fit unresolved"
+}

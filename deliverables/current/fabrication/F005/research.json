@@ -1,0 +1,135 @@
+{
+  "revision": "F005",
+  "researched_on": "2026-10-14",
+  "scope": "Public primary-source research only. No geometry uploaded, no vendor contacted, no quote obtained, no order placed.",
+  "cost_basis": "USD planning allowances for one main plate plus one matching diverter plate, quantity one each. Ranges are assistant estimates, not published part prices or vendor quotes. No tax, shipping upgrade, installation, primer/sealant or separate cosmetic finishing included unless noted. Exact vendor totals require a later authorized quote using the chosen geometry and finish.",
+  "vendors": [
+    {
+      "name": "SendCutSend",
+      "process": "Clear acrylic laser prototype, 3.0 mm",
+      "planning_pair_usd": [
+        40,
+        100
+      ],
+      "published_price": "No price for this pair. Pricing depends on material, geometry, quantity and processing; published free US shipping threshold is $39.",
+      "lead": "Standard sheet cutting ships in 2-4 business days. 0.118 inch acrylic appears on rush eligibility list; 24-hour production is conditional on checkout eligibility and noon PT cutoff.",
+      "finishing": "Keep protective film; verify actual thickness. Prototype only; add a measured 0.175 mm spacer to imitate the 3.175 mm metal stack, if needed.",
+      "sources": [
+        "https://sendcutsend.com/materials/",
+        "https://sendcutsend.com/pricing/",
+        "https://sendcutsend.com/sendcutsend-processing-times/"
+      ]
+    },
+    {
+      "name": "Ponoko",
+      "process": "Clear acrylic laser prototype, stock near 3 mm",
+      "planning_pair_usd": [
+        50,
+        130
+      ],
+      "published_price": "Advertises acrylic parts from $50 for one; that is a starting offer, not a price for these plates.",
+      "lead": "Advertises same-day production/delivery options. Rush order cutoff 11 AM; same-day local Bay Area or next-day mainland-US options are conditional. Confirm material, destination and current cart date.",
+      "finishing": "Clear acrylic exposes the foam landing and valve interference during dry fit. Custom non-stock materials add fees/delay, so use standard stock.",
+      "sources": [
+        "https://www.ponoko.com/laser-cutting/acrylic",
+        "https://www.ponoko.com/laser-cutting",
+        "https://help.ponoko.com/en/articles/4468203-custom-material-orders"
+      ]
+    },
+    {
+      "name": "3D Printer on Demand",
+      "process": "FDM plastic dry-fit pair",
+      "planning_pair_usd": [
+        40,
+        120
+      ],
+      "published_price": "No fixed design price. Vendor states no tooling, setup fee or minimum order on its rapid-prototyping page.",
+      "lead": "Published typical production/ship lead time 3-5 business days; transit additional.",
+      "finishing": "PLA/PETG published instant-pricing size limit 250 mm; 230 mm plate fits that stated envelope. Ask for a single flat print, no scaling, and thickness/flatness inspection. Thin wide prints can warp. Published domestic shipping $7.95 per order, additional to the planning range.",
+      "sources": [
+        "https://www.3dprinterondemand.com/use-cases/rapid-prototyping",
+        "https://3dprinterondemand.com/",
+        "https://3dprinterondemand.com/pricing"
+      ]
+    },
+    {
+      "name": "Xometry",
+      "process": "Industrial FDM plastic prototype pair",
+      "planning_pair_usd": [
+        100,
+        300
+      ],
+      "published_price": "Design-specific quote required; reserve range is an assistant budget, not a published vendor rate.",
+      "lead": "US 3D-printing page advertises 1-day FDM expedites. Standard and actual delivery date depend on geometry/material/capacity; eligible domestic 3D printing has free 2-day or ground shipping.",
+      "finishing": "Use only if a confirmed expedited date justifies its quote. Check flatness, thickness and print orientation; a smooth appearance alone does not establish fit.",
+      "sources": [
+        "https://www.xometry.com/capabilities/3d-printing-service/",
+        "https://community.xometry.com/kb/articles/651-how-much-is-shipping",
+        "https://community.xometry.com/kb/articles/642-what-is-your-minimum-order-quantity"
+      ]
+    },
+    {
+      "name": "SendCutSend",
+      "process": "316 stainless laser pair, 0.060 or 0.125 inch",
+      "planning_pair_usd": [
+        65,
+        180
+      ],
+      "published_price": "No part-specific price. Published material options include 0.060 and 0.125 inch; laser tolerance +/-0.005 inch (0.127 mm).",
+      "lead": "Standard ships in 2-4 business days; deburring adds 0 days, detabbing +1 day. The current 316 rush list contains 0.187 and 0.250 inch ONLY, so do not assume 24-hour service for these thin plates.",
+      "finishing": "Request deburring and tab removal. Raw/deburred stainless is not Kohler BN. Reserve an additional $50-150 and 2-5 business days for separate cosmetic brushing only as an unquoted planning contingency.",
+      "sources": [
+        "https://sendcutsend.com/materials/stainless-steel-316/",
+        "https://sendcutsend.com/sendcutsend-processing-times/",
+        "https://sendcutsend.com/pricing/"
+      ]
+    },
+    {
+      "name": "OSH Cut",
+      "process": "304 #4 brushed stainless 0.060 inch, or 316 #2B 0.060 inch",
+      "planning_pair_usd": [
+        75,
+        220
+      ],
+      "published_price": "No geometry-specific price. Official materials list includes 304 #4 brushed with protective film and 316 #2B in 0.060 inch. No minimum order amount advertised.",
+      "lead": "Standard laser-cut prototype/short-run lead time 2 business days; same-day options depend on job size, stock and capacity. Confirm extra time for selected finishing and transit.",
+      "finishing": "304 #4 stock offers the simpler cosmetic route. 316 has greater chloride resistance but its listed #2B surface is not a matching brush. Deburring/graining offered; request finish protection, grain direction and edge treatment.",
+      "sources": [
+        "https://www.oshcut.com/",
+        "https://www.oshcut.com/services/deburring"
+      ]
+    },
+    {
+      "name": "Ponoko",
+      "process": "304 stainless laser-cut pair",
+      "planning_pair_usd": [
+        90,
+        250
+      ],
+      "published_price": "No part-specific price obtained; material page confirms 304 options.",
+      "lead": "Current service page advertises same-day cutting; verify stock/finish eligibility. Do not use the older 2019 blog's 15-day lead time as today's quote.",
+      "finishing": "Ask for stock thickness matching the chosen STEP and a protected cosmetic surface. Quoted alloy, finish, tolerance and delivered date must be reconciled before release.",
+      "sources": [
+        "https://www.ponoko.com/laser-cutting/stainless-steel",
+        "https://www.ponoko.com/sheet-metal-fabrication"
+      ]
+    }
+  ],
+  "recommendation": "First dry-fit the clear 3 mm acrylic pair using the same DXF. This exposes the critical narrow foam-to-aperture margin and costs less than remaking a finished metal pair. If direct-to-metal is chosen after fit reconciliation, compare 316 0.060 inch for low depth and 0.125 inch for stiffness; compare OSH Cut 304 #4 stock when a ready brushed cosmetic surface is more important. Exact Kohler BN color is not promised.",
+  "engineering": {
+    "material": "316 stainless preferred corrosion-resistance candidate; 304 brushed is a viable comparison, subject to environment/cleaner and finish acceptance. No coating or plating is assumed to match BN.",
+    "thickness": "0.060 inch = 1.524 mm and 0.125 inch = 3.175 mm. Plate bending stiffness scales approximately as thickness cubed for the same geometry/material: thick option about 9.04 times as stiff; this does not certify either support condition.",
+    "prototype": "3 mm STL supplied. Dry fit only: no water-sealing, structural or long-term wet-service approval of FDM/PMMA. A 230 mm one-piece main plate needs a print bed with usable width at least 230 mm plus brim allowance; a nominal 220 mm bed is too small.",
+    "files": "Millimeter STEP for solid/thickness; millimeter 1:1 DXF with one outer and one inner closed contour; no notes in cutting paths. Stock selection is a separate required quote input. Use one matching pair and one stock thickness only.",
+    "seal_candidate": "LATASIL neutral-cure silicone is a research candidate for stone/metal interfaces. Its data sheet specifies LATASIL 9118 Primer for stainless steel and porous stone, subject to testing/approval. Verify adhesion and nonstaining on this travertine. No generic 1 mm full-face adhesive layer or minimum foam compression is approved here.",
+    "cure": "LATASIL data sheet states protect from water until fully cured, generally 24 hours at 70 F / 21 C. Actual joint section, temperature, humidity, substrate and other repair materials can change the wait. This is not an installation release or a cure schedule for an unselected patch system.",
+    "seal_source": "https://cdnmdm.laticrete.com/Datasheet/NA/101/Datasheet_NA_en_101.pdf"
+  },
+  "uncertainties": [
+    "Unquoted costs may lie outside planning ranges.",
+    "No destination ZIP supplied; transit and tax not calculated.",
+    "Vendor rush eligibility and stock can change.",
+    "Cosmetic finishing, flatness requirements and remakes can dominate a small order.",
+    "No local vendor contacted and no files transmitted."
+  ]
+}

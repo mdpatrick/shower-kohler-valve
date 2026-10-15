@@ -1,0 +1,1076 @@
+{
+  "design_revision": "F005",
+  "evidence_revision": "R004",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "parts": [
+    {
+      "id": "MAIN-A-SS060",
+      "step": "cad/MAIN-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -115.0,
+          -115.0,
+          0.0
+        ],
+        [
+          115.0,
+          115.0,
+          1.5240000000000005
+        ]
+      ],
+      "volume_mm3": 51372.78966783338,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS060",
+        "thickness_mm": 1.524,
+        "material": "316 stainless steel",
+        "role": "Low added-depth metal trial; supported landing and stiffness must be proven",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        0.7991944036080083,
+        45.672855449655486
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "MAIN-A-SS125",
+      "step": "cad/MAIN-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -115.0,
+          -115.0,
+          0.0
+        ],
+        [
+          115.0,
+          115.0,
+          3.1750000000000003
+        ]
+      ],
+      "volume_mm3": 107026.64514131955,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS125",
+        "thickness_mm": 3.175,
+        "material": "316 stainless steel",
+        "role": "Stiffer metal alternative; requires 1.651 mm more adapter/trim stack allowance",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        0.7991944036080083,
+        45.672855449655486
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "MAIN-A-PROTO3",
+      "step": "cad/MAIN-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -115.0,
+          -115.0,
+          0.0
+        ],
+        [
+          115.0,
+          115.0,
+          3.0000000000000004
+        ]
+      ],
+      "volume_mm3": 101127.53871620749,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "PROTO3",
+        "thickness_mm": 3.0,
+        "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+        "role": "Planar/clearance mockup; 0.175 mm thinner than SS125 and 1.476 mm thicker than SS060",
+        "source": "https://sendcutsend.com/materials/"
+      },
+      "center_installed_mm": [
+        0.7991944036080083,
+        45.672855449655486
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "MAIN-B-SS060",
+      "step": "cad/MAIN-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -110.0,
+          -109.0,
+          0.0
+        ],
+        [
+          110.0,
+          109.0,
+          1.5240000000000005
+        ]
+      ],
+      "volume_mm3": 56116.57390644482,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS060",
+        "thickness_mm": 1.524,
+        "material": "316 stainless steel",
+        "role": "Low added-depth metal trial; supported landing and stiffness must be proven",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        0.7991944036080083,
+        44.672855449655486
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "MAIN-B-SS125",
+      "step": "cad/MAIN-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -110.0,
+          -109.0,
+          0.0
+        ],
+        [
+          110.0,
+          109.0,
+          3.1750000000000003
+        ]
+      ],
+      "volume_mm3": 116909.52897175992,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS125",
+        "thickness_mm": 3.175,
+        "material": "316 stainless steel",
+        "role": "Stiffer metal alternative; requires 1.651 mm more adapter/trim stack allowance",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        0.7991944036080083,
+        44.672855449655486
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "MAIN-B-PROTO3",
+      "step": "cad/MAIN-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -110.0,
+          -109.0,
+          0.0
+        ],
+        [
+          110.0,
+          109.0,
+          3.0000000000000004
+        ]
+      ],
+      "volume_mm3": 110465.69666622988,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "PROTO3",
+        "thickness_mm": 3.0,
+        "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+        "role": "Planar/clearance mockup; 0.175 mm thinner than SS125 and 1.476 mm thicker than SS060",
+        "source": "https://sendcutsend.com/materials/"
+      },
+      "center_installed_mm": [
+        0.7991944036080083,
+        44.672855449655486
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "DIV-A-SS060",
+      "step": "cad/DIV-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -60.0,
+          -60.0,
+          0.0
+        ],
+        [
+          60.0,
+          60.0,
+          1.524
+        ]
+      ],
+      "volume_mm3": 9575.574408141689,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS060",
+        "thickness_mm": 1.524,
+        "material": "316 stainless steel",
+        "role": "Low added-depth metal trial; supported landing and stiffness must be proven",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "DIV-A-SS125",
+      "step": "cad/DIV-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -60.0,
+          -60.0,
+          0.0
+        ],
+        [
+          60.0,
+          60.0,
+          3.175
+        ]
+      ],
+      "volume_mm3": 19949.113350295185,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS125",
+        "thickness_mm": 3.175,
+        "material": "316 stainless steel",
+        "role": "Stiffer metal alternative; requires 1.651 mm more adapter/trim stack allowance",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "DIV-A-PROTO3",
+      "step": "cad/DIV-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -60.0,
+          -60.0,
+          0.0
+        ],
+        [
+          60.0,
+          60.0,
+          3.0
+        ]
+      ],
+      "volume_mm3": 18849.555921538762,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "PROTO3",
+        "thickness_mm": 3.0,
+        "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+        "role": "Planar/clearance mockup; 0.175 mm thinner than SS125 and 1.476 mm thicker than SS060",
+        "source": "https://sendcutsend.com/materials/"
+      },
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "DIV-B-SS060",
+      "step": "cad/DIV-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -60.00000000000001,
+          -60.00000000000001,
+          0.0
+        ],
+        [
+          60.00000000000001,
+          60.00000000000001,
+          1.524
+        ]
+      ],
+      "volume_mm3": 12682.579798473436,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS060",
+        "thickness_mm": 1.524,
+        "material": "316 stainless steel",
+        "role": "Low added-depth metal trial; supported landing and stiffness must be proven",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "DIV-B-SS125",
+      "step": "cad/DIV-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -60.00000000000001,
+          -60.00000000000001,
+          0.0
+        ],
+        [
+          60.00000000000001,
+          60.00000000000001,
+          3.175
+        ]
+      ],
+      "volume_mm3": 26422.041246819655,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "SS125",
+        "thickness_mm": 3.175,
+        "material": "316 stainless steel",
+        "role": "Stiffer metal alternative; requires 1.651 mm more adapter/trim stack allowance",
+        "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+      },
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "DIV-B-PROTO3",
+      "step": "cad/DIV-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -60.00000000000001,
+          -60.00000000000001,
+          0.0
+        ],
+        [
+          60.00000000000001,
+          60.00000000000001,
+          3.0
+        ]
+      ],
+      "volume_mm3": 24965.708264711484,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "custom part",
+      "stock": {
+        "id": "PROTO3",
+        "thickness_mm": 3.0,
+        "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+        "role": "Planar/clearance mockup; 0.175 mm thinner than SS125 and 1.476 mm thicker than SS060",
+        "source": "https://sendcutsend.com/materials/"
+      },
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "position_z_mm": 1
+    },
+    {
+      "id": "REF-INNER",
+      "step": "reference/REF-INNER_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "reference/REF-INNER_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -65.17500000000001,
+          -82.55000000000001,
+          -1e-07
+        ],
+        [
+          65.17500000000001,
+          82.55000000000001,
+          9.44
+        ]
+      ],
+      "volume_mm3": 31480.211221110072,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "Kohler reference only",
+      "limitation": "Measured front envelope; uniform dish, recessed fastener-seat Z, sheet/corners/lower bore/NE bore and rear lands provisional"
+    },
+    {
+      "id": "REF-COVER",
+      "step": "reference/REF-COVER_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "reference/REF-COVER_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -92.075,
+          -92.075,
+          0.0
+        ],
+        [
+          92.075,
+          92.075,
+          16.0
+        ]
+      ],
+      "volume_mm3": 46634.78546987704,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "Kohler reference only",
+      "limitation": "OD and upper bore measured. Equal lower bore and inside-edge gaps scenario. Rear cavity and notch size unmeasured."
+    },
+    {
+      "id": "REF-FOAM-SCENARIO",
+      "step": "reference/REF-FOAM-SCENARIO_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "reference/REF-FOAM-SCENARIO_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "bounds_mm": [
+        [
+          -65.17500000000001,
+          -82.55000000000001,
+          0.0
+        ],
+        [
+          65.17500000000001,
+          82.55000000000001,
+          6.0
+        ]
+      ],
+      "volume_mm3": 18121.602829163232,
+      "step_reimport": "PASS",
+      "stl_watertight": true,
+      "role": "Foam footprint scenario only",
+      "limitation": "6 mm approximate width/free thickness; outline assumed flush to metal perimeter, NOT measured rear path."
+    }
+  ],
+  "export_checks": [
+    {
+      "id": "MAIN-A-DXF",
+      "status": "PASS",
+      "contours": 2,
+      "apertures": 1,
+      "annotations": 0,
+      "units": "mm",
+      "entity_count": 41,
+      "entity_types": [
+        "ARC",
+        "CIRCLE",
+        "LINE"
+      ],
+      "volume_difference_mm3": 1.4551915228366852e-11
+    },
+    {
+      "id": "MAIN-B-DXF",
+      "status": "PASS",
+      "contours": 2,
+      "apertures": 1,
+      "annotations": 0,
+      "units": "mm",
+      "entity_count": 48,
+      "entity_types": [
+        "ARC",
+        "LINE"
+      ],
+      "volume_difference_mm3": 1.4551915228366852e-11
+    },
+    {
+      "id": "DIV-A-DXF",
+      "status": "PASS",
+      "contours": 2,
+      "apertures": 1,
+      "annotations": 0,
+      "units": "mm",
+      "entity_count": 2,
+      "entity_types": [
+        "CIRCLE"
+      ],
+      "volume_difference_mm3": 0.0
+    },
+    {
+      "id": "DIV-B-DXF",
+      "status": "PASS",
+      "contours": 2,
+      "apertures": 1,
+      "annotations": 0,
+      "units": "mm",
+      "entity_count": 9,
+      "entity_types": [
+        "ARC",
+        "CIRCLE",
+        "LINE"
+      ],
+      "volume_difference_mm3": 5.4569682106375694e-12
+    },
+    {
+      "id": "ASSEMBLY-A",
+      "status": "PASS",
+      "separate_solids": 8,
+      "physical_fit": "CONFLICT / UNRESOLVED",
+      "limitation": "Simple valve cylinders retained only as labeled legacy reference envelopes, not collision authority. Irregular scan supplied in Blender."
+    },
+    {
+      "id": "ASSEMBLY-B",
+      "status": "PASS",
+      "separate_solids": 8,
+      "physical_fit": "CONFLICT / UNRESOLVED",
+      "limitation": "Simple valve cylinders retained only as labeled legacy reference envelopes, not collision authority. Irregular scan supplied in Blender."
+    }
+  ],
+  "coverage": [
+    {
+      "part": "MAIN-A",
+      "feature": "OPEN-MAIN",
+      "contains": true,
+      "outer_margin_mm": 18.905318469859594,
+      "after_trace_allowance_mm": 17.405318469859594,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-A",
+      "feature": "CUT-01",
+      "contains": true,
+      "outer_margin_mm": 21.767852023872212,
+      "after_trace_allowance_mm": 20.267852023872212,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-A",
+      "feature": "CUT-02",
+      "contains": true,
+      "outer_margin_mm": 26.556560572208642,
+      "after_trace_allowance_mm": 25.056560572208642,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-A",
+      "feature": "CUT-03",
+      "contains": true,
+      "outer_margin_mm": 18.606870086415842,
+      "after_trace_allowance_mm": 17.106870086415842,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-A",
+      "feature": "CUT-04",
+      "contains": true,
+      "outer_margin_mm": 31.057153915605113,
+      "after_trace_allowance_mm": 29.557153915605113,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-A",
+      "feature": "CUT-05",
+      "contains": true,
+      "outer_margin_mm": 16.737730979733232,
+      "after_trace_allowance_mm": 15.237730979733232,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-A",
+      "feature": "CUT-06",
+      "contains": true,
+      "outer_margin_mm": 17.73901635875665,
+      "after_trace_allowance_mm": 16.23901635875665,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-A",
+      "feature": "CUT-07",
+      "contains": true,
+      "outer_margin_mm": 15.366782119760614,
+      "after_trace_allowance_mm": 13.866782119760614,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "OPEN-MAIN",
+      "contains": true,
+      "outer_margin_mm": 21.70828531269892,
+      "after_trace_allowance_mm": 20.20828531269892,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "CUT-01",
+      "contains": true,
+      "outer_margin_mm": 21.654673631473656,
+      "after_trace_allowance_mm": 20.154673631473656,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "CUT-02",
+      "contains": true,
+      "outer_margin_mm": 22.29103726783734,
+      "after_trace_allowance_mm": 20.79103726783734,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "CUT-03",
+      "contains": true,
+      "outer_margin_mm": 30.054673631473662,
+      "after_trace_allowance_mm": 28.554673631473662,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "CUT-04",
+      "contains": true,
+      "outer_margin_mm": 37.92807832366472,
+      "after_trace_allowance_mm": 36.42807832366472,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "CUT-05",
+      "contains": true,
+      "outer_margin_mm": 20.435558039971653,
+      "after_trace_allowance_mm": 18.935558039971653,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "CUT-06",
+      "contains": true,
+      "outer_margin_mm": 19.690780913980852,
+      "after_trace_allowance_mm": 18.190780913980852,
+      "physical_sound_land": "UNRESOLVED"
+    },
+    {
+      "part": "MAIN-B",
+      "feature": "CUT-07",
+      "contains": true,
+      "outer_margin_mm": 18.144648949062557,
+      "after_trace_allowance_mm": 16.644648949062557,
+      "physical_sound_land": "UNRESOLVED"
+    }
+  ],
+  "diverter_coverage": [
+    {
+      "part": "DIV-A",
+      "contains": true,
+      "outer_margin_mm": 10.94890677314816,
+      "after_trace_allowance_mm": 8.94890677314816,
+      "physical_fit": "UNRESOLVED"
+    },
+    {
+      "part": "DIV-B",
+      "contains": true,
+      "outer_margin_mm": 18.7704836264339,
+      "after_trace_allowance_mm": 16.7704836264339,
+      "physical_fit": "UNRESOLVED"
+    }
+  ],
+  "neighbor_gaps": [
+    {
+      "pair": "A",
+      "gap_mm": 6.238333499247651,
+      "parts_overlap_area_mm2": 0.0
+    },
+    {
+      "pair": "B",
+      "gap_mm": 11.235705156554928,
+      "parts_overlap_area_mm2": 0.0
+    }
+  ],
+  "mounting_fit": {
+    "conditional_hole_center_distance_mm": 112.05,
+    "condition": "NE hole same 5.66 mm as measured SW",
+    "scan_tip_center_distance_mm": 108.01003164279484,
+    "mismatch_mm": 4.039968357205154,
+    "best_rigid_registration_error_per_hole_mm": 2.019984178602577,
+    "assumed_stud_diameter_mm": 5,
+    "available_radial_clearance_mm": 0.33000000000000007,
+    "model_result": "FAIL under equal-hole / normal-axis / 5 mm stud assumptions; not a proven actual mounting defect",
+    "scale_factor_to_force_match": 1.0374036401597022,
+    "scale_not_applied": true
+  },
+  "swept_aperture": {
+    "full_resolution_forward_vertices": 29790,
+    "outside_aperture_vertices": 0,
+    "min_projected_vertex_clearance_mm": 1.5472896189648522,
+    "method": "All captured forward vertex positions in eroded main opening, not just at final plate slice",
+    "limitations": [
+      "Scan surface not complete physical volume",
+      "Opening erosion masks stone border",
+      "Unbounded physical scale/registration/occlusion errors remain",
+      "Cartridge tool access requires backing plate removal"
+    ]
+  },
+  "foam_sensitivity": [
+    {
+      "inset_mm": 0,
+      "aperture_cuts_band_mm2": 0.0,
+      "conditional_continuous_land": true,
+      "min_gap_to_inner_band_mm": 1.4460087432473472
+    },
+    {
+      "inset_mm": 1.5,
+      "aperture_cuts_band_mm2": 0.033047451411537476,
+      "conditional_continuous_land": false,
+      "min_gap_to_inner_band_mm": null
+    },
+    {
+      "inset_mm": 3,
+      "aperture_cuts_band_mm2": 9.193770477593969,
+      "conditional_continuous_land": false,
+      "min_gap_to_inner_band_mm": null
+    },
+    {
+      "inset_mm": 6,
+      "aperture_cuts_band_mm2": 54.81778149253879,
+      "conditional_continuous_land": false,
+      "min_gap_to_inner_band_mm": null
+    }
+  ],
+  "sampled_control_sections": [
+    {
+      "control": "lower",
+      "z_mm": 6,
+      "vertices": 598,
+      "max_local_radius_mm": 24.981540612574793
+    },
+    {
+      "control": "lower",
+      "z_mm": 10,
+      "vertices": 1220,
+      "max_local_radius_mm": 22.75585570852407
+    },
+    {
+      "control": "lower",
+      "z_mm": 14,
+      "vertices": 813,
+      "max_local_radius_mm": 17.117553551303356
+    },
+    {
+      "control": "lower",
+      "z_mm": 18,
+      "vertices": 551,
+      "max_local_radius_mm": 14.245431767311949
+    },
+    {
+      "control": "lower",
+      "z_mm": 22,
+      "vertices": 197,
+      "max_local_radius_mm": 6.916763517231406
+    },
+    {
+      "control": "lower",
+      "z_mm": 26,
+      "vertices": 116,
+      "max_local_radius_mm": 7.056536270369154
+    },
+    {
+      "control": "upper",
+      "z_mm": 6,
+      "vertices": 288,
+      "max_local_radius_mm": 11.630150666702693
+    },
+    {
+      "control": "upper",
+      "z_mm": 10,
+      "vertices": 198,
+      "max_local_radius_mm": 11.947586083626954
+    },
+    {
+      "control": "upper",
+      "z_mm": 14,
+      "vertices": 166,
+      "max_local_radius_mm": 9.834035775853371
+    },
+    {
+      "control": "upper",
+      "z_mm": 18,
+      "vertices": 394,
+      "max_local_radius_mm": 10.198940457535
+    },
+    {
+      "control": "upper",
+      "z_mm": 22,
+      "vertices": 132,
+      "max_local_radius_mm": 6.60021084233371
+    },
+    {
+      "control": "upper",
+      "z_mm": 26,
+      "vertices": 91,
+      "max_local_radius_mm": 6.727368804904612
+    }
+  ],
+  "depth_scenarios": [
+    {
+      "stock": "SS060",
+      "trial_surface_z_mm": 2.524,
+      "stud_tip_minus_assumed_local_cover_rear_mm": [
+        9.58788122141667,
+        13.652418397046805
+      ],
+      "upper_tip_projection_from_trial_surface_mm": 29.43081637340469,
+      "warning": "14.5 mm cavity is a central placeholder, not measured at studs. Positive excess flags interference; no adjustment length specified."
+    },
+    {
+      "stock": "SS125",
+      "trial_surface_z_mm": 4.175,
+      "stud_tip_minus_assumed_local_cover_rear_mm": [
+        7.9368812214166695,
+        12.001418397046805
+      ],
+      "upper_tip_projection_from_trial_surface_mm": 27.77981637340469,
+      "warning": "14.5 mm cavity is a central placeholder, not measured at studs. Positive excess flags interference; no adjustment length specified."
+    },
+    {
+      "stock": "PROTO3",
+      "trial_surface_z_mm": 4.0,
+      "stud_tip_minus_assumed_local_cover_rear_mm": [
+        8.11188122141667,
+        12.176418397046806
+      ],
+      "upper_tip_projection_from_trial_surface_mm": 27.95481637340469,
+      "warning": "14.5 mm cavity is a central placeholder, not measured at studs. Positive excess flags interference; no adjustment length specified."
+    }
+  ],
+  "outer_photo_scenario": {
+    "center_distance_mm": 80.03999999999999,
+    "versus_nominal_mm": 0.664999999999992,
+    "lower_center_local_mm": [
+      0,
+      -39.95
+    ],
+    "upper_center_local_mm": [
+      0,
+      40.08999999999999
+    ],
+    "lower_aligned_upper_axis_error_mm": 1.7426658125897236,
+    "assumptions": {
+      "upper_bore_mm": 33.79,
+      "lower_bore_mm": 33.79,
+      "lower_bore_status": "Equal-bore visual hypothesis only; remains unmeasured",
+      "gap_mm": 46.25,
+      "bottom_gap_mm": 35.23,
+      "contact_assumption": "Both gaps contact inside opening edges. Alternate lip contact scenario retained; not accepted raw dimensions."
+    }
+  },
+  "readiness": {
+    "CAD_export_integrity": "PASS",
+    "physical_fit": "UNRESOLVED",
+    "water_performance": "NOT TESTED",
+    "manufacturing_release": "HOLD",
+    "design_selection": "A and B unselected alternatives"
+  },
+  "manufacturer_components": [
+    {
+      "model": "T14489-4",
+      "index": 0,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14489-4-0.stl",
+      "bounds_installed_local_mm": [
+        [
+          -92.07499999999999,
+          -92.05467999999999,
+          -0.0
+        ],
+        [
+          92.07499999999999,
+          92.05467999999999,
+          16.002
+        ]
+      ],
+      "face_count": 3624,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14489-4",
+      "index": 1,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14489-4-1.stl",
+      "bounds_installed_local_mm": [
+        [
+          -7.6174599999999995,
+          5.7861199999999995,
+          92.32646
+        ],
+        [
+          7.622539999999999,
+          107.13212,
+          107.56645999999999
+        ]
+      ],
+      "face_count": 2144,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14489-4",
+      "index": 2,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14489-4-2.stl",
+      "bounds_installed_local_mm": [
+        [
+          -20.01266,
+          20.11934,
+          67.68084
+        ],
+        [
+          20.01774,
+          60.14211999999999,
+          96.13646
+        ]
+      ],
+      "face_count": 2272,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14489-4",
+      "index": 3,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14489-4-3.stl",
+      "bounds_installed_local_mm": [
+        [
+          -20.002499999999998,
+          20.09902,
+          15.99946
+        ],
+        [
+          20.005039999999997,
+          60.15482,
+          68.19645999999999
+        ]
+      ],
+      "face_count": 384,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14489-4",
+      "index": 4,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14489-4-4.stl",
+      "bounds_installed_local_mm": [
+        [
+          -20.02028,
+          -59.900819999999996,
+          15.99946
+        ],
+        [
+          20.02282,
+          -19.845019999999998,
+          68.19645999999999
+        ]
+      ],
+      "face_count": 384,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14489-4",
+      "index": 5,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14489-4-5.stl",
+      "bounds_installed_local_mm": [
+        [
+          -7.64032,
+          -106.89336,
+          92.329
+        ],
+        [
+          7.59968,
+          -5.54736,
+          107.569
+        ]
+      ],
+      "face_count": 2144,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14489-4",
+      "index": 6,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14489-4-6.stl",
+      "bounds_installed_local_mm": [
+        [
+          -20.01266,
+          -59.88812,
+          67.68084
+        ],
+        [
+          20.01774,
+          -19.85772,
+          96.13646
+        ]
+      ],
+      "face_count": 2272,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14491-4",
+      "index": 0,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14491-4-0.stl",
+      "bounds_installed_local_mm": [
+        [
+          -49.23535999999999,
+          -49.23535999999999,
+          0.0
+        ],
+        [
+          49.25568,
+          49.23535999999999,
+          18.287999999999997
+        ]
+      ],
+      "face_count": 3322,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14491-4",
+      "index": 1,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14491-4-1.stl",
+      "bounds_installed_local_mm": [
+        [
+          -20.0279,
+          -20.0279,
+          15.82166
+        ],
+        [
+          20.0279,
+          20.0279,
+          68.199
+        ]
+      ],
+      "face_count": 1216,
+      "role": "Official nominal exterior; not hidden mating authority"
+    },
+    {
+      "model": "T14491-4",
+      "index": 2,
+      "stl": "data/derived/fabrication_F005/KOHLER-T14491-4-2.stl",
+      "bounds_installed_local_mm": [
+        [
+          -20.0279,
+          -67.00519999999999,
+          67.18299999999999
+        ],
+        [
+          20.0279,
+          34.3408,
+          107.569
+        ]
+      ],
+      "face_count": 6356,
+      "role": "Official nominal exterior; not hidden mating authority"
+    }
+  ]
+}

@@ -201,6 +201,34 @@
         "Lower opening diameter not supplied.",
         "46.25 mm and 35.23 mm contact edges awaiting clarification; raw annotations preserved, not applied as inside-edge dimensions."
       ]
+    },
+    {
+      "id": "SRC-DIVERTER-CAD",
+      "path": "data/evidence/kohler-T14491-4.obj",
+      "url": "https://techcomm.kohler.com/techcomm/cad/T14491-4.obj",
+      "retrieved_date": "2026-10-14",
+      "sha256": "4d8c3214f061b432671805ec581ccd3b7c06ac321123bbd69a892b9aaa180568",
+      "size_bytes": 281073,
+      "applicability": "Official exterior form, inch scale verified against nominal OD; not hidden plate/gasket mating geometry."
+    },
+    {
+      "id": "SRC-DIVERTER-INSTALL",
+      "path": "data/evidence/kohler-diverter-trim-install-1190382-2.pdf",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/1190382-2.pdf",
+      "retrieved_date": "2026-10-14",
+      "sha256": "45a32f1eccf96846ba9fa26fdeb693a76292630f76e2c5c28ac3792db7877c40",
+      "size_bytes": 210336,
+      "applicability": "1190382-2-A p1: adapters, plate assembly secured to valve, faceplate notch down, handle seating. Linked by official T14491-4 product page."
+    },
+    {
+      "id": "SRC-LATASIL-F005",
+      "path": "data/evidence/latasil-DS-6200.1-0926.pdf",
+      "url": "https://cdnmdm.laticrete.com/Datasheet/NA/101/Datasheet_NA_en_101.pdf",
+      "revision": "DS-6200.1-0926",
+      "retrieved_date": "2026-10-14",
+      "sha256": "4d1af2e103ab73b8db6f0e3542c5acb4dc100a826e5ae86ea96c81eacdeb2154",
+      "size_bytes": 305228,
+      "applicability": "Stone/metal sealant candidate only. Primer/testing, minimum joint width, cure and no structural-adhesive interpretation; does not approve illustrative lap layer."
     }
   ]
 }

@@ -1,4 +1,35 @@
-# Measured outer-cover update — R004
+# F005 - escutcheon fabrication preparation
+
+**Two complete custom plate pairs are prepared for prototype and quote review. Permanent manufacture remains on hold for the actual foam trace, hardware/cover fit, support and explicit release.** Accepted measurement evidence remains **R004**; **F005** is a design revision, not a new measurement import.
+
+- [Current illustrated design review](deliverables/current/fabrication/F005/index.html), served at `http://127.0.0.1:8765/fabrication/F005/index.html` by the existing local review server.
+- [Consolidated comprehensive goal prompt](docs/fabrication_goal_prompt.md), retaining the original complete scope and prioritizing this immediate preparation.
+- [Eight-sheet blueprint/specification PDF](deliverables/current/fabrication/F005/blueprint_specifications_F005_DRAFT.pdf).
+- [Fit and fabrication research PDF](deliverables/current/fabrication/F005/fit_and_fabrication_report_F005_DRAFT.pdf).
+- [Full-size templates](deliverables/current/fabrication/F005/full_size_templates_F005_DRAFT.pdf): A3, 100% printing, two 100 mm calibration bars.
+- [Paired Blender workspace](deliverables/current/fabrication/F005/paired_escutcheons_F005_DRAFT.blend): both cosmetic variants, unchanged observed source, measured reference plates and exploded order. Official Kohler exterior meshes replace generic handles. Cosmetic views explicitly hide captured hardware; they do not show a proven fit.
+- [Design canon](canon/fabrication_designs.json), [public vendor research](canon/fabrication_research.json), [computed results](deliverables/current/fabrication/F005/analysis.json), [triangle insertion check](deliverables/current/fabrication/F005/mesh_path_check.json).
+- Six `quote_package_{A|B}_{SS060|SS125|PROTO3}_F005_DRAFT.zip` files in the F005 folder. Choose one pair and one thickness. Each contains only that pair's custom CAD, selected drawing sheets, notes and hashes; no source scan or homeowner photos. Nothing has been uploaded or ordered.
+
+Validation: [F005 executed checks and remaining gates](docs/validation/fabrication_F005.json). Accepted measurement evidence and the saved original full scan/proxy geometry are unchanged. All custom exports pass; this is not a physical fit or manufacturing release.
+
+A uses a 230 mm circular main plate offset 6 mm upward and a 120 mm diverter companion, with a conditional 6.24 mm gap. B uses a 220 x 218 R62 main and 120 x 120 R35 diverter, with an 11.24 mm gap. The shaped main aperture clears the modeled forward insertion sweep, but its clearance to the real rear foam path is not established. Actual caliper readings are not changed to force fit. Conditional measured mounting centers (112.05 mm if both holes are 5.66 mm) disagree with captured tip centers (108.01 mm). Unchanged stud depths also conflict with the cover cavity assumption. Neither discrepancy authorizes cutting, wood drilling or valve relocation.
+
+Next physical step: trace both rear foam edges on the template; remeasure studs as planned; dry-fit a thickness-correct prototype with real factory parts and check support, seating, operation, drainage and removal. Finalize material/finish and qualified seal/support detail, then record release against the correct revision. Vendor costs are unquoted planning allowances; published production times are distinct from delivery dates.
+
+```sh
+./project prepare-fabrication
+./project validate --git-objects
+./project handoff
+```
+
+`prepare-fabrication` reads canon and reuses unchanged stages. It refuses a mismatched evidence revision. Preserve any manually changed generated file before rebuilding; the normal manifest backup mechanism applies. Reconcile new measurements rather than silently migrating a fabrication design.
+
+---
+
+## Preserved R004 diagnostic checkpoint (historical reference)
+
+### Measured outer-cover update — R004
 
 **The prior seated-cover assembly is rejected: unchanged stud envelopes intersect the assumed cover. The review now shows the depth conflict explicitly. No repair is selected. All geometry is DRAFT / NOT FOR FABRICATION.** Twelve physical plate/foam readings are accepted, with one derived upper-opening position. Dry fit, fabrication approval, incoming-part inspection and installed water testing remain unperformed.
 

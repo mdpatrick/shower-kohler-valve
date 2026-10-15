@@ -1,0 +1,300 @@
+{
+  "design_revision": "F005",
+  "evidence_revision": "R004",
+  "date": "2026-10-14",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "purpose": "Immediate prototype / quote package; manufacturing release and installed water performance not established",
+  "aperture": {
+    "id": "AP-MAIN",
+    "base_convex_polygon_installed_mm": [
+      [
+        -3.5066128830942307,
+        -21.421563252665322
+      ],
+      [
+        -5.310812187937562,
+        -20.823017436704788
+      ],
+      [
+        -11.192855251032043,
+        -17.361600286558087
+      ],
+      [
+        -49.792620695651905,
+        14.789093909665183
+      ],
+      [
+        -51.0939949430873,
+        17.103223085612257
+      ],
+      [
+        -51.76533680032148,
+        19.476571034034606
+      ],
+      [
+        -51.323336990222685,
+        20.57624994947915
+      ],
+      [
+        -5.0375984407632,
+        86.57009538934986
+      ],
+      [
+        -2.863740514718141,
+        88.50780262993979
+      ],
+      [
+        0.5491631511762142,
+        90.32173562803936
+      ],
+      [
+        2.5629182701250124,
+        90.97656468830425
+      ],
+      [
+        6.2717499926286475,
+        91.15587594089047
+      ],
+      [
+        10.632004893252823,
+        89.67476293863584
+      ],
+      [
+        54.68694573258706,
+        66.91276616623301
+      ],
+      [
+        55.66534500540369,
+        65.88711789923397
+      ],
+      [
+        56.4200719325505,
+        64.21456920027995
+      ],
+      [
+        56.77818643261898,
+        61.26828220257002
+      ],
+      [
+        19.052215094135587,
+        -16.44378515649379
+      ],
+      [
+        17.556635751857687,
+        -17.93619687297243
+      ],
+      [
+        14.635157555397129,
+        -19.114474279564377
+      ]
+    ],
+    "outward_radius_mm": 1.75,
+    "method": "Convex hull of full-resolution primary scan vertices at Z >= 0.5 mm within OPEN-MAIN eroded 3 mm, simplified 0.25 mm, then offset 1.75 mm. Sweeps all captured forward hardware for axial insertion; excludes opening edge stone. No fitted hardware is moved. Triangle check follows.",
+    "minimum_designed_sample_clearance_mm": 1.5,
+    "floor_z_mm": 0.5,
+    "not_claimed": "Hidden geometry, physically bounded scan accuracy, cartridge removal through installed plate, or actual foam footprint."
+  },
+  "parts": [
+    {
+      "id": "MAIN-A",
+      "name": "Offset round main plate",
+      "shape": "circle",
+      "diameter_mm": 230,
+      "center_mm": [
+        0.7991944036080083,
+        45.672855449655486
+      ],
+      "aperture": "AP-MAIN",
+      "note": "6 mm upward offset from inferred main trim center creates a gap to the matching diverter plate."
+    },
+    {
+      "id": "MAIN-B",
+      "name": "Rounded rectangular main plate",
+      "shape": "rounded_rectangle",
+      "width_mm": 220,
+      "height_mm": 218,
+      "radius_mm": 62,
+      "center_mm": [
+        0.7991944036080083,
+        44.672855449655486
+      ],
+      "aperture": "AP-MAIN",
+      "note": "Alternative softer rectangular outline; 5 mm upward offset from inferred trim center."
+    },
+    {
+      "id": "DIV-A",
+      "name": "Round diverter companion",
+      "shape": "circle",
+      "diameter_mm": 120,
+      "center_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "aperture_diameter_mm": 80,
+      "note": "Matching cosmetic/support ring. Factory diverter plate assembly and rear sealing footprint remain unmeasured; diameter 80 is a clearance trial."
+    },
+    {
+      "id": "DIV-B",
+      "name": "Rounded square diverter companion",
+      "shape": "rounded_rectangle",
+      "width_mm": 120,
+      "height_mm": 120,
+      "radius_mm": 35,
+      "center_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "aperture_diameter_mm": 80,
+      "note": "Companion to MAIN-B; same conditional 80 mm central aperture."
+    }
+  ],
+  "stock_options": [
+    {
+      "id": "SS060",
+      "thickness_mm": 1.524,
+      "material": "316 stainless steel",
+      "role": "Low added-depth metal trial; supported landing and stiffness must be proven",
+      "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+    },
+    {
+      "id": "SS125",
+      "thickness_mm": 3.175,
+      "material": "316 stainless steel",
+      "role": "Stiffer metal alternative; requires 1.651 mm more adapter/trim stack allowance",
+      "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+    },
+    {
+      "id": "PROTO3",
+      "thickness_mm": 3.0,
+      "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+      "role": "Planar/clearance mockup; 0.175 mm thinner than SS125 and 1.476 mm thicker than SS060",
+      "source": "https://sendcutsend.com/materials/"
+    }
+  ],
+  "seal_display_thickness_mm": 1,
+  "seal_display_status": "Illustration only, not a specified cured bead or approved lap-joint design",
+  "requested_shop_notes": {
+    "units": "mm",
+    "quantity": "One main plus one matching diverter; choose A or B, do not make all options by default",
+    "xy_cut_tolerance_mm": 0.13,
+    "xy_tolerance_basis": "Requested target consistent with published +/-0.005 inch laser cutting; vendor must confirm for chosen process",
+    "flatness_mm": 0.5,
+    "flatness_status": "Requested global maximum for quote review; not a factory foam specification or vendor promise",
+    "edges": "Deburr both faces and cutout; remove tabs and sharp edges. No resizing of critical contours without drawing revision.",
+    "finish": "Visible face uniform satin / directional brush, same direction on both parts; protect face during cutting and shipping. Stainless will not exactly match Kohler Vibrant Brushed Nickel. Obtain finish sample before cosmetic release.",
+    "thickness": "Use listed stock thickness, report actual range and final thickness after finishing; do not quietly substitute nominal gauge.",
+    "holes": "One central through aperture per plate; no mounting holes, threads, countersinks or decorative-cover stud holes.",
+    "retention": "Trial: clamped by retained factory plate assembly/foam with controlled support on stone; centering jig required. Adhesive alone is not a structural retention specification.",
+    "service": "Backing plate removable with trim. Preserve factory drain path. Cartridge/stop work may require backing-plate removal.",
+    "release": "Hold permanent manufacture until fit, support, foam path, hardware adjustment, material/finish and owner release are recorded."
+  },
+  "diverter_damage_trace": {
+    "id": "DIV-OPEN-01",
+    "source": "build/scan_inspection/wall_aligned.png",
+    "pixels": 1800,
+    "span_mm": 620,
+    "image_center_installed_mm": [
+      0,
+      40
+    ],
+    "pixels_outline": [
+      [
+        809,
+        1300
+      ],
+      [
+        844,
+        1307
+      ],
+      [
+        860,
+        1290
+      ],
+      [
+        900,
+        1298
+      ],
+      [
+        929,
+        1308
+      ],
+      [
+        970,
+        1303
+      ],
+      [
+        982,
+        1325
+      ],
+      [
+        990,
+        1380
+      ],
+      [
+        1000,
+        1434
+      ],
+      [
+        981,
+        1463
+      ],
+      [
+        996,
+        1498
+      ],
+      [
+        963,
+        1485
+      ],
+      [
+        940,
+        1489
+      ],
+      [
+        874,
+        1493
+      ],
+      [
+        842,
+        1502
+      ],
+      [
+        837,
+        1479
+      ],
+      [
+        814,
+        1466
+      ],
+      [
+        806,
+        1422
+      ],
+      [
+        813,
+        1357
+      ]
+    ],
+    "status": "New conservative manual projected damage trace, not measured physical boundary",
+    "trace_allowance_mm": 2.0
+  },
+  "foam_scenarios": {
+    "outer_outline_basis": "Front metal 130.35 x 165.1, provisional R40 corners; rear band follows outline inset by 0, 1.5, 3 or 6 mm",
+    "insets_mm": [
+      0,
+      1.5,
+      3,
+      6
+    ],
+    "band_width_mm": 6,
+    "not_measurement": true
+  },
+  "outer_photo_scenario": {
+    "upper_bore_mm": 33.79,
+    "lower_bore_mm": 33.79,
+    "lower_bore_status": "Equal-bore visual hypothesis only; remains unmeasured",
+    "gap_mm": 46.25,
+    "bottom_gap_mm": 35.23,
+    "contact_assumption": "Both gaps contact inside opening edges. Alternate lip contact scenario retained; not accepted raw dimensions."
+  }
+}

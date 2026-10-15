@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R004",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "61a61490af98ec3c5074bfa4ac1851cf2356c43c",
+  "source_commit": "bb39d4fe0d90d8b1aa5b4707d3b12a5e72fd744a",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "dc91b20521ef005773cb7f81aaa69acbdcb397ff69fcaf8479bb3f6cd1722098",
+  "source_tree_hash": "75fd8a011194a28262995618a4dae83764687ffd48d1f5794297e9e63022c9a1",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -43,8 +43,8 @@
     },
     {
       "path": "deliverables/current/analysis/source_register.json",
-      "sha256": "c40888716dce5f152284743c2da6e04d75f87f2641dad4df1cce1541e6513fbd",
-      "size_bytes": 9913
+      "sha256": "f5b422fa542c703a13a053c9c80ea4162c5ef3307e9cd365088bd789997470e6",
+      "size_bytes": 11429
     },
     {
       "path": "deliverables/current/blender/installation_R001_DRAFT.blend",
@@ -167,6 +167,366 @@
       "size_bytes": 70658
     },
     {
+      "path": "deliverables/current/fabrication/F005/analysis.json",
+      "sha256": "31421fb202803645f24d55cd1afd27234b40c811e915eae0ecc21c2077a2e6fd",
+      "size_bytes": 29358
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/blender_validation.json",
+      "sha256": "95845264e1d5e41f0225e14fa77075b5d0a725f15385f5530da4541c60afd039",
+      "size_bytes": 299
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/blueprint_specifications_F005_DRAFT.pdf",
+      "sha256": "1a3a5c338b18cab5af674ef3d58373f6172b21f53b01bbb1d245456019e22f0c",
+      "size_bytes": 2485254
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "75ecec95744c6272ebeb427c2f4730b08079be87cd9b0e58a1fef0505d1a8afb",
+      "size_bytes": 10578
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "0edecdde79f94742143658b7c313627ff228d661dde65193350718bd839cb1e6",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "9d9171621e252c1efa1bfd33dffa04c6d84bb76ed6e475f0c2e24c09af59bbda",
+      "size_bytes": 10602
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "74ce6e71ffdf6c45c20545ad505b1e458518c39a8bccd48893ee742adc405609",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "9900d6d51e2094592d6651c0fda0c6339fbfb72c392a0703990399c2cf18442c",
+      "size_bytes": 10602
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "4b9e761b9a35946b16eab3990fc22420f455792592e5d5cd2297aa38c1a0c897",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-A_F005_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "c620dda9477a5ed8007ba7e8983f11c3e0b4ecd1f29e7992f29ef2473f2a898e",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "f6667daf08fd5fd91112610f2c7f0fde9713180411e43e4d82517717a39d81db",
+      "size_bytes": 35433
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "70e5af35a3d36c00d4fdf7c5407fb82a9473304edce4ead27acdaffd6ac5a188",
+      "size_bytes": 101684
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "557ee732d73723df0046d03369da91e9cb84bdadf4c475d4e4ba03c22bfed256",
+      "size_bytes": 35517
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "eddc57c8e0299a1e91ddb3e17149cdd1c0cb892c09f7faa485aa7c95622d2bcb",
+      "size_bytes": 101684
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "01b30bedd3145b1deb0cdf5234d78ba87a321d7d4cc89f8897a39d21ad47ccd1",
+      "size_bytes": 35517
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "49492ca94993d2746799af56c190b1976783e196c99c657bddd93ef26affb927",
+      "size_bytes": 101684
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/DIV-B_F005_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "74894bfefea2f1ee8a1e6e7c981d04a7f5087f0efbe6994ce469de9061654a92",
+      "size_bytes": 16765
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "c6e6287797583535f11052a14580adc70b4ae07f8a4d2930402c945884f858ec",
+      "size_bytes": 194820
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-A-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "c9cb8ed2108025e7d54036393ecf6ba4d168dc8b74c32fd25e656000b27db9f1",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "675b1a7b396371173974c718d25325ae1107738e2e18b4ac4354df30ae462224",
+      "size_bytes": 195252
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-A-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "f7ef26ceaaddffdf438826ae14225976be5ddf386fde86ee0a58b6d520ea36cf",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "83b6bf9b16e7f66130c0bde9753a8d14924a6159421c1c976b632b3bf2b90827",
+      "size_bytes": 195252
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-A-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "5fbb233ef59a08181a332feefd16a300da474f4c6d1c4caee2d00988553c9ee3",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-A_F005_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "1d1a7cc2e39447bd37b0956016cc53aa97c288e5bdf87e37062050a42d1a9229",
+      "size_bytes": 22332
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "25e2693a7b2841839e2a0dc13f1412e6544705dcabf8adf3d82c26c43f2db8cc",
+      "size_bytes": 221039
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-B-PROTO3_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "47f664d3e85d45a39f4609cf67423c9ab676095601f0e75cd3fea83ec8379680",
+      "size_bytes": 107684
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "0ccef3e0639fcb0c000932946d779f9e2d81dc041f41644411344f97f31f18ed",
+      "size_bytes": 221534
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-B-SS060_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "c77775c470fb8b6b8df9aed54acf4cda0e0f76a476f101c7cb8d9f368b75b221",
+      "size_bytes": 107684
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "41155b5b5c6ee785f75722d00f172f4f890c4c58c21dc910344eb5d6701f6809",
+      "size_bytes": 221534
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-B-SS125_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "a6e2af2ab4a86a6476455b41db8d0931bd1e4550d481021d5cd859030183be6e",
+      "size_bytes": 107684
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/MAIN-B_F005_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "bde507d17d4e0bff75ad1009002d39149f79fd6cd3a66356699882608a0aad47",
+      "size_bytes": 23398
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/cad/main_aperture_generating_coordinates_F005.csv",
+      "sha256": "6afecc199d9475354320c332b325937f090c5a4cfabe5e60e6341bfcc493f379",
+      "size_bytes": 976
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/document_validation.json",
+      "sha256": "8215d443eb45b0fc61e666ca6acdf07368bf0ff7b9bcb7428b9b8c83f8918688",
+      "size_bytes": 551
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/fit_and_fabrication_report_F005_DRAFT.pdf",
+      "sha256": "b312bacd105e8c9fd58efc9178ec5c3cdde796c3a81c90e4e2a760697983487a",
+      "size_bytes": 5813353
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/fit_report.md",
+      "sha256": "e750644ef630dfd6b8b0a7692727d1814fbf54adf9c4e72a8429ee2f4be44db7",
+      "size_bytes": 6289
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/full_size_templates_F005_DRAFT.pdf",
+      "sha256": "87b4c62f8637811b63a8e153a54bc09d55af891082291c8317aea2a7539c6a88",
+      "size_bytes": 64085
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/index.html",
+      "sha256": "5e8efbb63facf7d7424f62f08503e47d74bf8aabc92f888b90d41b5b9d4671b0",
+      "size_bytes": 14889
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/mesh_path_check.json",
+      "sha256": "f8255b21dfa169062e879cad0d335f0e963e0474d7e5abe16acb09df48507eb5",
+      "size_bytes": 597
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/paired_escutcheons_F005_DRAFT.blend",
+      "sha256": "d8702b5f0171c49b4b09ad066c9c7b766e99a19d28e91e82e3b3f7556012e6f6",
+      "size_bytes": 96803723
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/quote_package_A_PROTO3_F005_DRAFT.zip",
+      "sha256": "72fb471035700e4b0c68187234a642c79117a326f1027397d41230b892ab63f8",
+      "size_bytes": 133041
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/quote_package_A_SS060_F005_DRAFT.zip",
+      "sha256": "297aeb840979cf9a7f2cf36a07e25d28bfdfc6527c6a4dd0dc1b45007723ca0b",
+      "size_bytes": 133334
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/quote_package_A_SS125_F005_DRAFT.zip",
+      "sha256": "c76c4002f167515c066db25ad4ac05be2df82ee88b818dde486bccb4e6362215",
+      "size_bytes": 133328
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/quote_package_B_PROTO3_F005_DRAFT.zip",
+      "sha256": "08274d8c2d7ed575c9b086339600a26f4465c35978e8a9be6a7403000d61a11b",
+      "size_bytes": 136072
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/quote_package_B_SS060_F005_DRAFT.zip",
+      "sha256": "2a1a33aed894430b62f526728890f552691aae6e5bc6056a0a11722da74945a0",
+      "size_bytes": 136221
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/quote_package_B_SS125_F005_DRAFT.zip",
+      "sha256": "de4e7edd62a7bfcb8042dcc22d3ae5a4b0db294c5d890e64cb5e3d80bd79d666",
+      "size_bytes": 136120
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/PAIR-A_F005_DIAGNOSTIC_ASSEMBLY_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "8ba1546df8e707152e1b46c39438189da75b6ec1d4281b9ff0e6a3b2d86f265a",
+      "size_bytes": 402955
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/PAIR-B_F005_DIAGNOSTIC_ASSEMBLY_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "42413dda222e1a82398b52ccd1cf7461c934c51cc0e321f051a145e57bf71405",
+      "size_bytes": 455303
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/REF-COVER_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "781a3c3bee70905ee15094994d30953c3df42eb64e14466ed8d91a078903003b",
+      "size_bytes": 46724
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/REF-COVER_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "4eef52ebd424606f0a984b58b289ac5c558d13eff5ff0a87e9389e50e921e4ad",
+      "size_bytes": 404084
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/REF-FOAM-SCENARIO_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "aace6ef46bfbca1d8e3b7aa5430da589109c4a00a9feb22c8b84bfb1dea05469",
+      "size_bytes": 60905
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/REF-FOAM-SCENARIO_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "52bbcf4ffe608d2c3391cb983a843e2ea2d33b5823a41539d07eae5eb60b1d96",
+      "size_bytes": 102484
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/REF-INNER_F005_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "fb329e17deb3c99ad5e7d402d42f21e6ffdc2bd63454b06c139c668b10f39248",
+      "size_bytes": 110485
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference/REF-INNER_F005_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "9c81a3ff5e04e6478bc702a1d25d47e5698afdc86cef2ab758ef1049f651a37c",
+      "size_bytes": 959684
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/reference_fit_check.json",
+      "sha256": "9527b494f74ca795dde155fdc270f393bfc70a084ffa34ba09a98976a9ce8910",
+      "size_bytes": 9141
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/research.json",
+      "sha256": "bb5892fd077f1226335336ae95afb4f0d4d49be7b6e9420404ce71194f223d12",
+      "size_bytes": 9350
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/as_found_depth.png",
+      "sha256": "44bc1e396b2410880610e6e10bf3513becf14a5b5222fc5d38fa22b17bef67e3",
+      "size_bytes": 2084260
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/coverage.svg",
+      "sha256": "76b04e9bda7d97623cc7fc12f2dfa0effa420a7200733990e85bb0879bd7f31e",
+      "size_bytes": 145972
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/coverage_diagram.png",
+      "sha256": "12e857382fe339cee497052e09077ba9d745e9c71a81cb6372122fea7e147378",
+      "size_bytes": 264297
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/depth_stack.svg",
+      "sha256": "7a7a2c38cd9025f7dbe720a4d12b2030fe756ef6e63080ad86e7bc420e077eb9",
+      "size_bytes": 12599
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/depth_stack_diagram.png",
+      "sha256": "7bc680ebdac698d6480accda02bf03ff2efeb282576f836fa4e762752a17c638",
+      "size_bytes": 53342
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/exploded_A.png",
+      "sha256": "7d5b9d48bc2df9dfa57c8600f01a4e91df644596e65e037e4fa7fc16b115b676",
+      "size_bytes": 2148656
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/exploded_annotated.svg",
+      "sha256": "c9aff6e6a5d6a262f0114c7894071dcc8cab422faefc7aebb225673a84bef9ca",
+      "size_bytes": 2867374
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/foam_sensitivity.svg",
+      "sha256": "587175acd71bff3d8e9c502ae298b1a81a69b028149b9f2b36ad2603580a245e",
+      "size_bytes": 124304
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/foam_sensitivity_diagram.png",
+      "sha256": "54140cb3fe25f8826bd2c04184a37ec2dffcc627713b2f2184b5e39a795778cd",
+      "size_bytes": 111488
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/measured_cover.png",
+      "sha256": "d679c77ddf75d340b76f7db3f0ec4a86e7db427707b392e7ce738d08b8794f57",
+      "size_bytes": 1779418
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/measured_inner.png",
+      "sha256": "69970bc874e966e820b64c4aa1bd534cfd6de0bc89ed0200532276405394f84b",
+      "size_bytes": 1765489
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/pair_A_front.png",
+      "sha256": "0a5f91300679934e870fd7dcb959e4892b79fc32627f2b3acd3e813e15f38ceb",
+      "size_bytes": 2288637
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/pair_A_oblique.png",
+      "sha256": "a4fd10df2dab6f1f8c612c60d7d94c0e9f8e823a41fd706abeea40cb619f5c11",
+      "size_bytes": 2265027
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/pair_B_front.png",
+      "sha256": "477429cb0f450503de41b55beb7096505e3bfa058d041fc006756c7ea754fca0",
+      "size_bytes": 2268869
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/pair_B_oblique.png",
+      "sha256": "f3c88028e64c38cc0a5db817b1737f4da0ef25bcfa471f3e9115a8bff0dd38de",
+      "size_bytes": 2249267
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/stud_fit.svg",
+      "sha256": "509fc183355953aaef5ad873ac4ea416ada2be3bdf9b472ef9a1550962e77165",
+      "size_bytes": 19730
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/views/stud_fit_diagram.png",
+      "sha256": "5e476d4f110a14be10f0c363381c4579ce1423428bbe572d8690faaffe80f9b2",
+      "size_bytes": 88058
+    },
+    {
       "path": "deliverables/current/manual/index.html",
       "sha256": "e54f91b74d89a3f27996dc0e075f2d61c30938873a957eda80629046c08d6aac",
       "size_bytes": 6556
@@ -203,8 +563,8 @@
     },
     {
       "path": "deliverables/current/review/index.html",
-      "sha256": "e7f6c657a60c93e5d70814654f7f0655d62a569640da4efdb4188948ced780f5",
-      "size_bytes": 95861
+      "sha256": "860d859b4c83484488210c761df50f966f1d8600756321c8d4044916fba81e82",
+      "size_bytes": 96245
     },
     {
       "path": "deliverables/current/review/installation_DRAFT.glb",
@@ -419,9 +779,9 @@
   ],
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS - R004 CAD/export checks, saved-scene reopen and 27 automated tests; physical fit unresolved",
-    "geometric_fit": "FAIL in provisional assembly; twelve raw readings accepted, two outer-cover contact clarifications pending; installed placement and physical fit unresolved",
-    "materials_design_review": "UNRESOLVED",
+    "software_geometry_checks": "PASS: F005 fresh export audit, saved Blender source comparison, 21 PDF pages visually reviewed, local review and 27 unit tests; physical fit unresolved",
+    "geometric_fit": "F005 forward mesh aperture clears captured surface; stud pattern/depth and rear foam path remain conditional conflicts",
+    "materials_design_review": "F005 public vendor/stock/finish research prepared; no chosen vendor/quote or approved permanent seal detail",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
     "received_part_inspection": "NOT APPLICABLE YET",

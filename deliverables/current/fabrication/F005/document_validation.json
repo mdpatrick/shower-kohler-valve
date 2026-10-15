@@ -1,0 +1,16 @@
+{
+  "page_counts": {
+    "blueprint_specifications_F005_DRAFT.pdf": 8,
+    "fit_and_fabrication_report_F005_DRAFT.pdf": 9,
+    "full_size_templates_F005_DRAFT.pdf": 4
+  },
+  "visual_review": "Required separately; generation does not imply visual QA",
+  "manufacturer_packages": [
+    "quote_package_A_SS060_F005_DRAFT.zip",
+    "quote_package_A_SS125_F005_DRAFT.zip",
+    "quote_package_A_PROTO3_F005_DRAFT.zip",
+    "quote_package_B_SS060_F005_DRAFT.zip",
+    "quote_package_B_SS125_F005_DRAFT.zip",
+    "quote_package_B_PROTO3_F005_DRAFT.zip"
+  ]
+}
