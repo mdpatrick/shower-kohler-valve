@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R003",
+  "revision": "R004",
   "units": "mm",
   "state": "diagnostic_trial_with_unchanged_hardware",
   "fit_verdict": "FAIL in provisional geometry / physical fit UNRESOLVED / candidate not selected",
@@ -9,7 +9,7 @@
     {
       "feature_id": "OPEN-MAIN",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -19,7 +19,7 @@
       ],
       "max_radius_mm": 94.29015756752376,
       "outer_margin_mm": {
-        "nominal_trim": -2.215157567523761,
+        "nominal_trim": -2.215157567523775,
         "prior_8in": 7.309842432476231,
         "prior_8_25in": 10.484842432476242,
         "candidate": 20.709842432476236
@@ -38,7 +38,7 @@
     {
       "feature_id": "CUT-01",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -48,7 +48,7 @@
       ],
       "max_radius_mm": 98.77599677982286,
       "outer_margin_mm": {
-        "nominal_trim": -6.700996779822859,
+        "nominal_trim": -6.700996779822873,
         "prior_8in": 2.824003220177133,
         "prior_8_25in": 5.999003220177144,
         "candidate": 16.22400322017714
@@ -67,7 +67,7 @@
     {
       "feature_id": "CUT-02",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -77,7 +77,7 @@
       ],
       "max_radius_mm": 94.11526735155641,
       "outer_margin_mm": {
-        "nominal_trim": -2.040267351556409,
+        "nominal_trim": -2.040267351556423,
         "prior_8in": 7.4847326484435825,
         "prior_8_25in": 10.659732648443594,
         "candidate": 20.88473264844359
@@ -96,7 +96,7 @@
     {
       "feature_id": "CUT-03",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -106,7 +106,7 @@
       ],
       "max_radius_mm": 101.09460666897742,
       "outer_margin_mm": {
-        "nominal_trim": -9.019606668977417,
+        "nominal_trim": -9.019606668977431,
         "prior_8in": 0.5053933310225744,
         "prior_8_25in": 3.680393331022586,
         "candidate": 13.90539333102258
@@ -125,7 +125,7 @@
     {
       "feature_id": "CUT-04",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -135,7 +135,7 @@
       ],
       "max_radius_mm": 80.8821900051251,
       "outer_margin_mm": {
-        "nominal_trim": 11.192809994874906,
+        "nominal_trim": 11.192809994874892,
         "prior_8in": 20.717809994874898,
         "prior_8_25in": 23.89280999487491,
         "candidate": 34.117809994874904
@@ -154,7 +154,7 @@
     {
       "feature_id": "CUT-05",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -164,7 +164,7 @@
       ],
       "max_radius_mm": 95.95003557336901,
       "outer_margin_mm": {
-        "nominal_trim": -3.8750355733690043,
+        "nominal_trim": -3.8750355733690185,
         "prior_8in": 5.649964426630987,
         "prior_8_25in": 8.824964426630999,
         "candidate": 19.049964426630993
@@ -183,7 +183,7 @@
     {
       "feature_id": "CUT-06",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -193,7 +193,7 @@
       ],
       "max_radius_mm": 91.71678716860431,
       "outer_margin_mm": {
-        "nominal_trim": 0.35821283139569005,
+        "nominal_trim": 0.35821283139567583,
         "prior_8in": 9.883212831395682,
         "prior_8_25in": 13.058212831395693,
         "candidate": 23.283212831395687
@@ -212,7 +212,7 @@
     {
       "feature_id": "CUT-07",
       "state": "as_observed_at_capture",
-      "revision": "R003",
+      "revision": "R004",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -222,7 +222,7 @@
       ],
       "max_radius_mm": 97.39280847006683,
       "outer_margin_mm": {
-        "nominal_trim": -5.317808470066822,
+        "nominal_trim": -5.317808470066836,
         "prior_8in": 4.207191529933169,
         "prior_8_25in": 7.382191529933181,
         "candidate": 17.607191529933175
@@ -354,8 +354,8 @@
       ],
       "inferred_control_line_rotation_deg": -1.154045336994736,
       "nominal_visible_border_min_max_mm": [
-        22.924999999999997,
-        22.924999999999997
+        22.92500000000001,
+        22.92500000000001
       ],
       "criterion": "repeatable physically retained position with adequate border and seal land",
       "needed": "M03/M06 datums; removable registration method; physical centering/retention test",
@@ -406,7 +406,7 @@
       "method": "projected circle separation in fitted stone plane; scan-derived center and nominal diameters",
       "center_separation_mm": 175.237846343734,
       "candidate_to_diverter_gap_mm": 11.025346343733993,
-      "factory_main_to_diverter_gap_mm": 33.95034634373399,
+      "factory_main_to_diverter_gap_mm": 33.950346343734005,
       "gap_endpoints_xy_mm": [
         [
           0.23070172607917272,
@@ -561,9 +561,9 @@
     },
     {
       "id": "CAD-CLASH-FACTORY-VALVE-UPPER",
-      "status": "UNRESOLVED",
-      "conditional_result": "NO_SOLID_INTERSECTION in original-wall trial",
-      "intersection_mm3": 0.0,
+      "status": "FAIL",
+      "conditional_result": "FAIL in original-wall trial",
+      "intersection_mm3": 181.70488888492844,
       "physical_fit": "UNRESOLVED",
       "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
       "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
@@ -624,9 +624,9 @@
     },
     {
       "id": "CAD-CLASH-VALVE-UPPER",
-      "status": "UNRESOLVED",
-      "conditional_result": "NO_SOLID_INTERSECTION in trial with added backing plate",
-      "intersection_mm3": 0.0,
+      "status": "FAIL",
+      "conditional_result": "FAIL in trial with added backing plate",
+      "intersection_mm3": 155.0325946150815,
       "physical_fit": "UNRESOLVED",
       "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
       "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"

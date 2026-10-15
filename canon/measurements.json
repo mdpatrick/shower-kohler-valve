@@ -1,7 +1,7 @@
 {
   "project_id": "shower-kohler-valve",
   "schema_version": 1,
-  "revision": "R003",
+  "revision": "R004",
   "measurements": [
     {
       "id": "M02-W",
@@ -297,6 +297,64 @@
       "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
       "role": "fitting input",
       "correction_reason": null
+    },
+    {
+      "id": "M06-OD",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "opposite rim tangents",
+      "purpose": "Outer rim diameter",
+      "raw_readings": [
+        7.25
+      ],
+      "raw_unit": "in",
+      "values_mm": [
+        184.14999999999998
+      ],
+      "value_mm": 184.14999999999998,
+      "method": "tape measure",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Opposite outer rim edges; the user expects the reading to be accurate. No repeat readings or instrument uncertainty supplied.",
+      "approximate": false,
+      "source_ref": "docs/physical_checks/outer_plate_2026-10-14.json",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M12-UD",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "left inside edge to right inside edge of upper cover opening",
+      "purpose": "Outer cover: upper opening inside diameter",
+      "raw_readings": [
+        33.79
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        33.79
+      ],
+      "value_mm": 33.79,
+      "method": "caliper inside jaws",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Upper opening diameter shown by red annotation. Lower opening diameter remains unknown. No repeat readings or instrument uncertainty supplied.",
+      "approximate": false,
+      "source_ref": "docs/physical_checks/outer_plate_2026-10-14.json",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
     }
   ],
   "history": [
@@ -338,6 +396,23 @@
         "05": "Foam approximately 6 mm deep and 6 mm wide. Minimum width, footprint, damage, continuous landing and installed compression remain unverified."
       },
       "date_utc": "2026-10-15T04:38:40.706782+00:00",
+      "physical_fit": "not established by measurement import"
+    },
+    {
+      "from_revision": "R003",
+      "to_revision": "R004",
+      "accepted_or_recorded_ids": [
+        "M06-OD",
+        "M12-UD"
+      ],
+      "conflicting_ids": [],
+      "response_sha256": "6adfb144584fcda96f030114b7a55986a3efd8c3d8e052331b1504031c5f2a46",
+      "current_state_note": "",
+      "group_notes": {
+        "06": "User-confirmed outward face. OD 7.25 inches measured by tape. Orange 35.23 mm annotation preserved pending exact edge clarification.",
+        "12": "Upper bore 33.79 mm by caliper. Blue 46.25 mm gap annotation preserved pending inside-edge versus raised-lip clarification. Lower diameter not supplied."
+      },
+      "date_utc": "2026-10-15T04:55:08.327304+00:00",
       "physical_fit": "not established by measurement import"
     }
   ],

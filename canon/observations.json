@@ -84,6 +84,23 @@
         "sheet thickness, rear metal datum and nut seats",
         "physical fit or water performance"
       ]
+    },
+    {
+      "id": "OBS-OUTER-PLATE-01",
+      "date": "2026-10-14",
+      "source": "SRC-USER-OUTER-PLATE-01",
+      "status": "user-confirmed outward face, instruments, outer diameter and upper bore",
+      "record": "docs/physical_checks/outer_plate_2026-10-14.json",
+      "pending_contact_readings": {
+        "M12-G": 46.25,
+        "M06-YN": 35.23
+      },
+      "not_established": [
+        "lower opening diameter",
+        "exact contact edges of blue/orange annotations",
+        "rear cavity and installed seating",
+        "physical fit or water performance"
+      ]
     }
   ]
 }

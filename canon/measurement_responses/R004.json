@@ -1,0 +1,38 @@
+{
+  "project_id": "shower-kohler-valve",
+  "review_revision": "R003",
+  "observations": [
+    {
+      "measurement_id": "M06-OD",
+      "raw_readings": [
+        7.25
+      ],
+      "unit": "in",
+      "method": "tape measure",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "source_ref": "docs/physical_checks/outer_plate_2026-10-14.json",
+      "uncertainty_mm": null,
+      "notes": "Opposite outer rim edges; the user expects the reading to be accurate. No repeat readings or instrument uncertainty supplied."
+    },
+    {
+      "measurement_id": "M12-UD",
+      "raw_readings": [
+        33.79
+      ],
+      "unit": "mm",
+      "method": "caliper inside jaws",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "source_ref": "docs/physical_checks/outer_plate_2026-10-14.json",
+      "uncertainty_mm": null,
+      "notes": "Upper opening diameter shown by red annotation. Lower opening diameter remains unknown. No repeat readings or instrument uncertainty supplied."
+    }
+  ],
+  "group_notes": {
+    "06": "User-confirmed outward face. OD 7.25 inches measured by tape. Orange 35.23 mm annotation preserved pending exact edge clarification.",
+    "12": "Upper bore 33.79 mm by caliper. Blue 46.25 mm gap annotation preserved pending inside-edge versus raised-lip clarification. Lower diameter not supplied."
+  }
+}

@@ -65,6 +65,14 @@ class ImportTests(unittest.TestCase):
         self.assertEqual(self.accepted()['M10-GU']['notes'],'Adapter identity unknown')
         self.assertNotIn('M07-SW',self.accepted())
 
+    def test_outer_opening_centers_require_independent_lower_diameter(self):
+        self.submit([self.observation('M06-OD',7.25,'in'),self.observation('M12-UD',33.79),self.observation('M12-G',46.25),self.observation('M06-YN',35.23)])
+        self.assertAlmostEqual(self.accepted()['M06-OD']['value_mm'],184.15)
+        self.assertNotIn('M12-CCY',self.accepted());self.assertNotIn('M12-LCB',self.accepted())
+        self.advance();self.submit([self.observation('M12-LD',34.0)])
+        self.assertAlmostEqual(self.accepted()['M12-CCY']['value_mm'],80.145)
+        self.assertAlmostEqual(self.accepted()['M12-LCB']['value_mm'],52.23)
+
     def test_free_envelope_does_not_become_sheet_or_rear_land_depth(self):
         self.submit([self.observation('M04-O',15.44),self.observation('M05-T',6,approximate=True),self.observation('M05-B',6,approximate=True)])
         records=self.accepted()

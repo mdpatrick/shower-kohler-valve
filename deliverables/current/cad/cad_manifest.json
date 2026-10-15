@@ -1,5 +1,5 @@
 {
-  "revision": "R003",
+  "revision": "R004",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "units": "mm",
   "parts": [
@@ -137,21 +137,21 @@
         0.68
       ],
       "collection": "03_OUTER_TRIM",
-      "evidence": "User identified K-T14489-4-BN; nominal exterior; cavity/shell/drain detail assumed",
+      "evidence": "User identified K-T14489-4-BN; accepted outer diameter and upper bore; lower bore and registration provisional; cavity/shell/drain profile assumed",
       "status": "provisional reference",
       "bounds_local_mm": [
         [
-          -92.075,
-          -92.075,
+          -92.07499999999999,
+          -92.07499999999999,
           0.0
         ],
         [
-          92.075,
-          92.075,
+          92.07499999999999,
+          92.07499999999999,
           16.0
         ]
       ],
-      "volume_mm3": 46271.37569210722,
+      "volume_mm3": 46453.08058099213,
       "tessellation_tolerance_mm": 0.04,
       "angular_tolerance_radians": 0.08
     },

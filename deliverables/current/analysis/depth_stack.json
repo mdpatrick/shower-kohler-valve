@@ -1,5 +1,5 @@
 {
-  "revision": "R003",
+  "revision": "R004",
   "units": "mm",
   "datum": "Intact-stone fitted reference plane Z=0; +Z toward shower",
   "purpose": "Explain why the prior seated-cover visualization is not an assemblable repair",
@@ -161,8 +161,8 @@
         {
           "part": "VALVE-UPPER",
           "against": "TRIM-OUTER",
-          "intersection_mm3": 0.0,
-          "model_result": "NO_SOLID_INTERSECTION",
+          "intersection_mm3": 181.70488888492844,
+          "model_result": "FAIL",
           "physical_result": "UNRESOLVED",
           "part_basis": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction"
         }
@@ -337,8 +337,8 @@
         {
           "part": "VALVE-UPPER",
           "against": "TRIM-OUTER",
-          "intersection_mm3": 0.0,
-          "model_result": "NO_SOLID_INTERSECTION",
+          "intersection_mm3": 155.0325946150815,
+          "model_result": "FAIL",
           "physical_result": "UNRESOLVED",
           "part_basis": "Visible collar/tip envelope; normal-axis approximation, not hidden valve reconstruction"
         }

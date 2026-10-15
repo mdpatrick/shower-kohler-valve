@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "scope": "evidence/revision/export snapshot integrity only",
-  "revision": "R003",
+  "revision": "R004",
   "input_checks": [
     {
       "id": "SCAN-WALL",

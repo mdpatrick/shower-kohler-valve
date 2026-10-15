@@ -179,6 +179,28 @@
         "Overall depth is free state, not installed compression or sheet thickness.",
         "Rear metal datum, foam footprint, minimum width and nut-seat depth remain unknown."
       ]
+    },
+    {
+      "id": "SRC-USER-OUTER-PLATE-01",
+      "source_path": "/Users/mdpatrick/Screenshots/Screenshot 2026-10-14 at 9.17.47\u202fPM.png",
+      "path": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "sha256": "60912be5e07c5821cada84ad21ec88d42ddafac48cf653f59b676ea2bd8b1c87",
+      "size_bytes": 6333123,
+      "reported_on": "2026-10-14",
+      "capture_date": null,
+      "measurement_date": null,
+      "face": "front toward handles; user-confirmed",
+      "role": "actual outer cover photograph with physical measurements",
+      "instruments": {
+        "mm": "caliper; user-confirmed",
+        "in": "tape measure; user-confirmed"
+      },
+      "user_accuracy_assessment": "User expects all readings to be accurate. No uncertainty bound or repeat readings supplied.",
+      "limitations": [
+        "Front-face measurements do not establish rear cavity or installed depth.",
+        "Lower opening diameter not supplied.",
+        "46.25 mm and 35.23 mm contact edges awaiting clarification; raw annotations preserved, not applied as inside-edge dimensions."
+      ]
     }
   ]
 }

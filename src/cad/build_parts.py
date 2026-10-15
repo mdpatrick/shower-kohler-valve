@@ -79,11 +79,11 @@ def build():
     radius=d['nominal']['trim_diameter_mm']/2;t=a['outer_shell_thickness_mm'];front=a['outer_cavity_depth_mm']+t
     meridian=[(0,front),(60,front),(71,13),(radius-2,13),(radius,11),(radius,0),(radius-t,0),(radius-t,10),(radius-3,11.5),(71,11.5),(60,front-t),(0,front-t)]
     outer=cq.Workplane('XZ').polyline(meridian).close().revolve(360,(0,0),(0,1))
-    for point in d['controls_mm']:
-        x,y=np.array(point[:2])-center
-        outer=outer.cut(cq.Workplane('XY').center(float(x),float(y)).circle(18).extrude(40).translate((0,0,-2)))
+    for hole in d['outer_control_openings']:
+        x,y=hole['center_local_mm']
+        outer=outer.cut(cq.Workplane('XY').center(float(x),float(y)).circle(hole['diameter_mm']/2).extrude(40).translate((0,0,-2)))
     outer=outer.cut(cq.Workplane('XY').box(a['drain_width_mm'],8,a['drain_height_mm'],centered=(True,True,False)).translate((0,-radius+2,0)))
-    add('TRIM-OUTER',outer,(*center,newwall),(.63,.67,.68),'03_OUTER_TRIM','User identified K-T14489-4-BN; nominal exterior; cavity/shell/drain detail assumed',True)
+    add('TRIM-OUTER',outer,(*center,newwall),(.63,.67,.68),'03_OUTER_TRIM','User identified K-T14489-4-BN; accepted outer diameter and upper bore; lower bore and registration provisional; cavity/shell/drain profile assumed',True)
     # Service/hardware envelopes retain measured tip positions. Their hidden axes remain unknown.
     for i,point in enumerate(d['controls_mm']):
         x,y,z=point

@@ -1,0 +1,111 @@
+{
+  "revision": "R004",
+  "status": "PASS for software/export integrity only",
+  "accepted_raw_count": 12,
+  "accepted_outer_ids": [
+    "M06-OD",
+    "M12-UD"
+  ],
+  "pending_contact_annotations": {
+    "M12-G": 46.25,
+    "M06-YN": 35.23
+  },
+  "unit_tests": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p 'test_*.py'",
+    "passed": 27
+  },
+  "capture_preservation": {
+    "registration_exactly_unchanged": true,
+    "controls_unchanged": true,
+    "studs_unchanged": true,
+    "trim_center_unchanged": true,
+    "cavity_depth_unchanged": true,
+    "outer_openings": [
+      {
+        "name": "lower",
+        "center_local_mm": [
+          -0.7991944036080127,
+          -39.67285544965549
+        ],
+        "diameter_mm": 36,
+        "diameter_status": "36 mm display assumption; independently measure this opening",
+        "placement_status": "scan-axis display alignment; actual cover opening registration unmeasured"
+      },
+      {
+        "name": "upper",
+        "center_local_mm": [
+          0.7991944036080127,
+          39.6728554496555
+        ],
+        "diameter_mm": 33.79,
+        "diameter_status": "user-confirmed",
+        "placement_status": "scan-axis display alignment; actual cover opening registration unmeasured"
+      }
+    ]
+  },
+  "saved_scene": {
+    "status": "PASS",
+    "revision": "R004",
+    "saved_scene_reopened": true,
+    "checked_factory_parts": [
+      "GASKET-01",
+      "PLATE-INNER",
+      "TRIM-OUTER",
+      "HANDLE-LOWER",
+      "HANDLE-UPPER",
+      "STUD-SW-NUT",
+      "STUD-NE-NUT"
+    ],
+    "all_installed_part_positions_match_CAD": true,
+    "factory_uses_shared_reference_meshes": true,
+    "factory_view_hides_new_plate_and_seal": true,
+    "factory_view_retains_wall_and_separate_diverter": true,
+    "GLB_excludes_factory_exploded_section_copies": true,
+    "physical_fit": "UNRESOLVED"
+  },
+  "pdf_visual_review": {
+    "pages": [
+      {
+        "file": "deliverables/current/drawings/measurement_worksheet_R004.pdf",
+        "pages": 12
+      },
+      {
+        "file": "deliverables/current/drawings/candidate_drawing_R004_DRAFT.pdf",
+        "pages": 1
+      },
+      {
+        "file": "deliverables/current/drawings/profile_template_R004_DRAFT.pdf",
+        "pages": 4
+      },
+      {
+        "file": "deliverables/current/manual/repair_manual_R004_DRAFT.pdf",
+        "pages": 8
+      }
+    ],
+    "reviewed": "All 25 pages as rendered contact sheet; changed worksheet pages 6 and 12 individually at 950 px; no clipping or overflow found.",
+    "final_rerender_pixel_comparison": {
+      "pages": 25,
+      "changed_pages": []
+    }
+  },
+  "interactive_guide": {
+    "revision": "R004",
+    "path": "/Users/mdpatrick/.codex/visualizations/2026/10/14/01a13c51-58ac-7a90-95ed-957781ad5347/shower-measurements.html",
+    "bytes": 673847,
+    "viewports_checked_px": [
+      736,
+      320
+    ],
+    "active_unanswered_inputs": 34,
+    "pending_contact_clarifications": 2,
+    "observed_blank_input_count": "0 / 34 entered",
+    "new_photo_lower_opening_contacts": "visually checked",
+    "cavity_selector_and_both_inputs": "verified",
+    "console_errors": [],
+    "numeric_test_readings_imported": false
+  },
+  "physical_fit": "NOT PERFORMED",
+  "installed_surface_water_test": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN",
+  "integrity": "./project validate --git-objects PASS"
+}

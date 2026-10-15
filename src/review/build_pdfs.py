@@ -29,20 +29,26 @@ def build():
     d=json.loads((ROOT/'data/derived/resolved.json').read_text());rev=d['revision'];groups=requests(d);out=ROOT/'deliverables/current/drawings';out.mkdir(parents=True,exist_ok=True)
     views=ROOT/'deliverables/current/review/views'
     accepted={m['id']:m for m in json.loads((ROOT/'canon/measurements.json').read_text())['measurements'] if m['status']=='user-confirmed'}
+    pending={k:v for o in d['observations'] for k,v in o.get('pending_contact_readings',{}).items() if k not in accepted}
     story=[]
     for n,g in enumerate(groups):
         if n:story.append(PageBreak())
-        phase='First checks' if g['first'] else 'Actual plate follow-up' if g['id']=='11' else 'Control-depth follow-up' if g['id']=='10' else 'Installer checks after first readings'
+        phase='First checks' if g['first'] else 'Actual plate follow-up' if g['id'] in ('11','12') else 'Control-depth follow-up' if g['id']=='10' else 'Installer checks after first readings'
         story+=[Paragraph(f"{g['id']} / {g['title']}",styles['ProjectTitle']),Paragraph(f"Measurement worksheet | {rev} | {phase}",styles['BodyText']),Paragraph(g['purpose'],styles['BodyText'])]
         picture_size=145 if g['id']=='03' else 205
         picture=Image(str(views/(g['view']+'.png')),width=picture_size,height=picture_size)
         if g['id']=='11':
             picture=Image(str(views/'inner_photo.png'),width=177,height=219)
-        pair=Table([[picture,Paragraph(g['instructions'],styles['SmallCell'] if g['id']=='11' else styles['BodyText'])]],colWidths=[220,290]);pair.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),10)]));story+=[pair,Spacer(1,12)]
+        if g['id']=='12':
+            picture=Image(str(views/'outer_photo.png'),width=205,height=210)
+        pair=Table([[picture,Paragraph(g['instructions'],styles['SmallCell'] if g['id'] in ('11','12') else styles['BodyText'])]],colWidths=[220,290]);pair.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),10)]));story+=[pair,Spacer(1,12)]
         rows=[[Paragraph(s,styles['SmallCell']) for s in ['ID / contact','Estimate mm','Raw reading','Unit','Repeat readings']]]
         recorded=[]
         for f in g['fields']:
-            if g['id'] in ('04','05','11') and f['id'] in accepted:
+            if f['id'] in pending:
+                recorded.append(f"{f['label']}: reported {pending[f['id']]:g} mm; contact clarification pending")
+                continue
+            if g['id'] in ('04','05','06','11','12') and f['id'] in accepted:
                 m=accepted[f['id']]
                 recorded.append(f"{f['label']}: {'approximately ' if m.get('approximate') else ''}{m['value_mm']:g} mm")
                 continue
@@ -51,6 +57,8 @@ def build():
             rows.append([Paragraph(f"<b>{f['id']}</b><br/>{f['label']}<br/>{f['contacts']}",styles['SmallCell']),Paragraph(f"{pred}<br/>Useful +/-{f['useful_accuracy_mm']}",styles['SmallCell']),'____________','______','_______________'])
         if recorded and g['id'] in ('04','05'):
             story.append(Paragraph('Already recorded: '+'; '.join(recorded)+'. Free state; installed compression remains unknown.',styles['SmallCell']))
+        if recorded and g['id']=='06':
+            story.append(Paragraph('Already reported: '+'; '.join(recorded)+'.',styles['SmallCell']))
         if len(rows)>1:
             t=Table(rows,colWidths=[222,66,80,44,98],repeatRows=1);t.setStyle(TableStyle([('FONTNAME',(0,0),(-1,-1),'Project'),('FONTSIZE',(0,0),(-1,-1),8),('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e6eff0')),('LINEBELOW',(0,0),(-1,-1),.4,colors.HexColor('#bacbd0')),('VALIGN',(0,0),(-1,-1),'TOP'),('TOPPADDING',(0,0),(-1,-1),4 if g['id']=='03' else 7),('BOTTOMPADDING',(0,0),(-1,-1),4 if g['id']=='03' else 7)]));story.append(t)
         story+=[Spacer(1,8),Paragraph('Date: __________________  Tool / method: ___________________________________',styles['BodyText']),Paragraph('Photo / trace reference: ___________________________________________________',styles['BodyText']),Paragraph('Notes, repeatability, condition and uncertainty: ______________________________',styles['BodyText']),Paragraph('_________________________________________________________________________',styles['BodyText']),Paragraph('Amber model geometry is assumed. Do not use estimates as your readings. Return raw values and units; do not round to match the model.',styles['SmallCell'])]

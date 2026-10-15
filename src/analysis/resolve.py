@@ -44,9 +44,23 @@ def resolve():
             depth_constraints['display_basis']='Rear-land formed depth measured independently; compare free envelope and reconcile foam backing offset before fit approval.'
     if 'M06-OD' in accepted:nom['trim_diameter_mm']=accepted['M06-OD']
     if 'M01' in accepted:nom['control_spacing_mm']=accepted['M01']
+    if all(k in accepted for k in ('M06-OD','M12-LCB')):
+        center[1]=bottom[1]+nom['trim_diameter_mm']/2-accepted['M12-LCB']
     for i,axis in enumerate(['X','Y']):
         if all(k in accepted for k in ['M06-OD','M06-'+axis+'N','M06-'+axis+'F']):
             center[i]=bottom[i]+nom['trim_diameter_mm']/2-(accepted['M06-'+axis+'N']+accepted['M06-'+axis+'F'])/2
+    outer_holes=[]
+    for name,point in [('lower',bottom),('upper',top)]:
+        id='M12-'+('LD' if name=='lower' else 'UD');local=point[:2]-center
+        if name=='upper' and 'M12-CCY' in accepted:
+            local[1]=bottom[1]-center[1]+accepted['M12-CCY']
+        outer_holes.append({'name':name,'center_local_mm':local.tolist(),'diameter_mm':accepted.get(id,36),
+            'diameter_status':'user-confirmed' if id in accepted else '36 mm display assumption; independently measure this opening',
+            'placement_status':'lower opening provisionally aligned with observed lower tip; upper vertical spacing measured' if 'M12-CCY' in accepted else 'scan-axis display alignment; actual cover opening registration unmeasured'})
+    outer_constraints={'source':'SRC-USER-OUTER-PLATE-01','photo_face':'front toward handles',
+        'vertical_center_spacing_mm':accepted.get('M12-CCY'),'lower_center_from_bottom_mm':accepted.get('M12-LCB'),
+        'rear_cavity_measured':'M06-C' in accepted,
+        'placement_note':'Loose-cover measurements do not rescale the primary scan or move captured control/stud geometry. Lower opening alignment with the lower tip is provisional; fit and retention remain unverified.'}
     maxrad=max(np.linalg.norm(np.array(f['contour_mm'])-center,axis=1).max() for f in resolved if f.get('include_in_coverage'))
     studs=[list(reg['landmarks_installed_mm'][id]['point_mm']) for id in ['STUD-SW-TIP','STUD-NE-TIP']]
     slots=[]
@@ -100,6 +114,7 @@ def resolve():
         'diagnostic_control_depths_mm':{name:accepted[id] for name,id in [('upper','M10-UPPER'),('lower','M10-LOWER')] if id in accepted},
         'studs_mm':studs,'studs_state':'current measured envelopes where available; raw as-capture scan preserved',
         'inner_center_mm':inner_center.tolist(),'inner_slots':slots,'inner_control_openings':holes,'inner_plate_constraints':plate_constraints,'inner_plate_depth':depth_constraints,
+        'outer_control_openings':outer_holes,'outer_plate_constraints':outer_constraints,
         'assumptions':a,'nominal':nom,'candidate':candidate,'accepted_measurement_ids':list(accepted),
         'scale_status':reg['scale_status'],'secondary_scans_used_to_fit':False,'features':resolved}
     out=ROOT/'data/derived/resolved.json';out.write_text(json.dumps(parameters,indent=2)+'\n');return parameters

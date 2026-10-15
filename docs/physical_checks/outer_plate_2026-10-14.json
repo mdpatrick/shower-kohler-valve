@@ -1,0 +1,48 @@
+{
+  "id": "OBS-OUTER-PLATE-01",
+  "report_date": "2026-10-14",
+  "measurement_date": null,
+  "source": "SRC-USER-OUTER-PLATE-01",
+  "user_report_verbatim": "This is the outer face plate. You're seeing the side that faces the nobs (e.g. facing outwards). I used a caliper for all of the measurements with `mm` units and inches for the tape measure one (the diameter) but expect it all to be accurate.",
+  "accepted_raw_ids": [
+    "M06-OD",
+    "M12-UD"
+  ],
+  "reported_annotations": [
+    {
+      "value": 7.25,
+      "unit": "in",
+      "description": "outer diameter",
+      "status": "accepted as M06-OD"
+    },
+    {
+      "value": 33.79,
+      "unit": "mm",
+      "description": "upper opening inside diameter",
+      "status": "accepted as M12-UD"
+    },
+    {
+      "value": 46.25,
+      "unit": "mm",
+      "description": "gap between openings",
+      "status": "contact clarification pending; not a center spacing"
+    },
+    {
+      "value": 35.23,
+      "unit": "mm",
+      "description": "lower opening to bottom rim",
+      "status": "contact clarification pending"
+    }
+  ],
+  "model_update": "Apply accepted OD and upper opening diameter. Keep scan registration, captured controls/studs and all cavity Z values unchanged. Lower bore size and opening placement remain provisional.",
+  "remaining": [
+    "lower opening inside diameter",
+    "blue/orange measurement contact edges",
+    "horizontal opening registration",
+    "rear cavity at both stud/nut locations",
+    "installed foam compression and seating"
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "installed_surface_water_test": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN"
+}

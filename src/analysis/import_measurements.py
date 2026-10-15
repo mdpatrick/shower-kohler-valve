@@ -62,6 +62,12 @@ def import_response(path,root=ROOT,dry_run=False):
     if all(x in accepted for x in ['M11-UT','M11-UD']):
         derived('M11-UC',accepted['M11-UT']['value_mm']+accepted['M11-UD']['value_mm']/2,
                 ['M11-UT','M11-UD'],'top edge gap + upper opening diameter/2')
+    if all(x in accepted for x in ['M12-G','M12-UD','M12-LD']):
+        derived('M12-CCY',accepted['M12-G']['value_mm']+(accepted['M12-UD']['value_mm']+accepted['M12-LD']['value_mm'])/2,
+                ['M12-G','M12-UD','M12-LD'],'vertical inside-edge gap + (upper diameter + lower diameter)/2')
+    if all(x in accepted for x in ['M06-YN','M12-LD']):
+        derived('M12-LCB',accepted['M06-YN']['value_mm']+accepted['M12-LD']['value_mm']/2,
+                ['M06-YN','M12-LD'],'bottom rim to lower bore inside edge + lower diameter/2')
     for which in ['SW','NE']:
         if all(x in accepted for x in ['M07-H','M07-G'+which]):
             z=accepted['M07-H']['value_mm']-accepted['M07-G'+which]['value_mm']

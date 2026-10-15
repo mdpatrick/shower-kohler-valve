@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R003",
+  "revision": "R004",
   "groups": [
     {
       "id": "01",
@@ -260,7 +260,7 @@
         {
           "id": "M06-OD",
           "label": "Outer rim diameter",
-          "prediction_mm": 184.15,
+          "prediction_mm": 184.14999999999998,
           "useful_accuracy_mm": 0.5,
           "method": "blocks/ruler or large caliper",
           "contacts": "opposite rim tangents",
@@ -269,7 +269,7 @@
         {
           "id": "M06-XN",
           "label": "Left rim tangent to lower opening near edge",
-          "prediction_mm": 73.27580559639199,
+          "prediction_mm": 73.27580559639198,
           "useful_accuracy_mm": 0.3,
           "method": "caliper / blocks",
           "contacts": "left tangent to left edge of lower bore",
@@ -278,7 +278,7 @@
         {
           "id": "M06-XF",
           "label": "Left rim tangent to lower opening far edge",
-          "prediction_mm": 109.27580559639199,
+          "prediction_mm": 109.27580559639198,
           "useful_accuracy_mm": 0.3,
           "method": "caliper / blocks",
           "contacts": "left tangent to right edge of lower bore",
@@ -287,7 +287,7 @@
         {
           "id": "M06-YN",
           "label": "Bottom rim tangent to lower opening near edge",
-          "prediction_mm": 34.40214455034452,
+          "prediction_mm": 34.4021445503445,
           "useful_accuracy_mm": 0.3,
           "method": "caliper / blocks",
           "contacts": "bottom tangent to bottom edge of lower bore",
@@ -296,7 +296,7 @@
         {
           "id": "M06-YF",
           "label": "Bottom rim tangent to lower opening far edge",
-          "prediction_mm": 70.40214455034452,
+          "prediction_mm": 70.4021445503445,
           "useful_accuracy_mm": 0.3,
           "method": "caliper / blocks",
           "contacts": "bottom tangent to top edge of lower bore",
@@ -511,6 +511,43 @@
           "useful_accuracy_mm": 0.2,
           "method": "caliper",
           "contacts": "right inside edge of NE hole to rightmost outer metal tangent",
+          "role": "fitting input"
+        }
+      ],
+      "first": false
+    },
+    {
+      "id": "12",
+      "title": "Complete the photographed outer cover",
+      "view": "outer_photo",
+      "purpose": "Separates measured opening diameters and edge gaps from cover placement and rear clearance.",
+      "instructions": "The supplied photo shows the FRONT toward the handles. Outer diameter 7.25 inches (184.15 mm) was measured by tape; the upper opening is 33.79 mm by caliper. The blue annotation reports a 46.25 mm gap and the orange annotation 35.23 mm to the bottom rim; their exact inside-edge versus raised-lip contacts await clarification. Do not repeat these readings unless correcting them. Measure the LOWER opening inside diameter independently. Both diameters and a confirmed inside-edge gap are needed for vertical center spacing. The photo does not establish rear cavity depth: use Check 06-C beside both studs.",
+      "fields": [
+        {
+          "id": "M12-UD",
+          "label": "Outer cover: upper opening inside diameter",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper inside jaws",
+          "contacts": "left inside edge to right inside edge of upper cover opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M12-LD",
+          "label": "Outer cover: lower opening inside diameter",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper inside jaws",
+          "contacts": "left inside edge to right inside edge of lower cover opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M12-G",
+          "label": "Outer cover: vertical gap between inside opening edges",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper",
+          "contacts": "bottom inside edge of upper opening to top inside edge of lower opening; vertical projection",
           "role": "fitting input"
         }
       ],

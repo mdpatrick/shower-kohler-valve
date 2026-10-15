@@ -7,6 +7,22 @@ from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 
 class SnapshotTests(unittest.TestCase):
+    def test_outer_step_uses_measured_upper_bore_without_copying_to_lower(self):
+        import cadquery as cq
+        records={m['id']:m for m in json.loads((ROOT/'canon/measurements.json').read_text())['measurements'] if m['status']=='user-confirmed'}
+        if 'M12-UD' not in records:self.skipTest('No outer-cover readings')
+        cover=cq.importers.importStep(str(ROOT/'deliverables/current/cad/TRIM-OUTER_DRAFT_NOT_FOR_FABRICATION.step')).val()
+        self.assertAlmostEqual(cover.BoundingBox().xlen,records['M06-OD']['value_mm'],places=5)
+        d=json.loads((ROOT/'deliverables/current/analysis/resolved.json').read_text())
+        circles=[e for e in cover.Edges() if e.geomType()=='CIRCLE']
+        for hole in d['outer_control_openings']:
+            self.assertTrue(any(abs(e.radius()*2-hole['diameter_mm'])<1e-5 and np.linalg.norm(np.array(e.arcCenter().toTuple()[:2])-hole['center_local_mm'])<1e-5 for e in circles))
+        if 'M12-LD' not in records:
+            self.assertEqual(d['outer_control_openings'][0]['diameter_mm'],36)
+            self.assertIsNone(d['outer_plate_constraints']['vertical_center_spacing_mm'])
+        self.assertEqual(records['M06-OD']['raw_unit'],'in')
+        self.assertIsNone(records['M06-OD']['uncertainty_mm'])
+
     def test_inner_step_carries_accepted_plate_dimensions(self):
         import cadquery as cq
         measurements=json.loads((ROOT/'canon/measurements.json').read_text())['measurements']
