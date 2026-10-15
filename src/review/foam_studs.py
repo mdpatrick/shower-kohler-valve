@@ -9,6 +9,8 @@ ROOT = Path(__file__).resolve().parents[2]
 def generate(out):
     record_path = ROOT / 'docs/physical_checks/foam_and_stud_research_2026-10-15.json'
     record = json.loads(record_path.read_text())
+    observation_path = ROOT / 'docs/physical_checks/foam_edge_and_access_2026-10-15.json'
+    latest_observation = json.loads(observation_path.read_text())
     resolved_path = ROOT / 'data/derived/resolved.json'
     resolved = json.loads(resolved_path.read_text())
     length = record['manufacturer_stud']['length_mm']
@@ -23,28 +25,29 @@ def generate(out):
                     nominal_stud_length_mm=length, original_wall_limit_mm=limit,
                     inferred_rear_depth_at_original_limit_mm=length-limit,
                     rows=rows, not_a_drilling_specification=True,
+                    current_user_observation=latest_observation['studs'],
                     input_sha256={str(p.relative_to(ROOT)): hashlib.sha256(p.read_bytes()).hexdigest()
-                                  for p in [record_path, resolved_path]})
+                                  for p in [record_path, resolved_path, observation_path]})
     (out / 'stud_rear_estimate.json').write_text(json.dumps(analysis, indent=2)+'\n')
     svg = '''<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="title desc">
 <title id="title">The foam belongs to the removable inner plate</title>
-<desc id="desc">Schematic rear view of an inner plate with a dark perimeter foam band, and a free foam cross-section approximately six millimeters by six millimeters. The rear footprint is not verified.</desc>
+<desc id="desc">Schematic rear view of an inner plate with its dark foam band extending to the outer metal edge, as confirmed by the user. Band section approximately six by six millimeters; exact corners and compression remain unmeasured.</desc>
 <defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#24515c"/></marker></defs>
 <rect width="1100" height="430" rx="14" fill="#f3f7f7"/>
 <g font-family="Arial, sans-serif" fill="#18343c">
 <text x="28" y="37" font-size="23" font-weight="bold">The foam is attached to the removable inner plate</text>
-<text x="28" y="64" font-size="16">Illustration of its function • exact rear outline and sealing path remain unmeasured</text>
+<text x="28" y="64" font-size="16">Outer foam edge meets outer metal edge — user confirmed; exact corner shape remains approximate</text>
 <text x="28" y="104" font-size="18" font-weight="bold">Wall-facing side, schematic</text>
-<rect x="65" y="128" width="175" height="240" rx="60" fill="#d5dcde" stroke="#89979c" stroke-width="3"/>
-<rect x="77" y="140" width="151" height="216" rx="50" fill="none" stroke="#34383e" stroke-width="14"/>
+<rect x="65" y="128" width="175" height="240" rx="60" fill="#34383e"/>
+<rect x="73" y="136" width="159" height="224" rx="52" fill="#d5dcde"/>
 <circle cx="153" cy="203" r="32" fill="#f3f7f7" stroke="#89979c" stroke-width="3"/>
 <circle cx="153" cy="294" r="36" fill="#f3f7f7" stroke="#89979c" stroke-width="3"/>
-<path d="M226 179L300 150" fill="none" stroke="#24515c" stroke-width="2"/>
+<path d="M237 191L300 150" fill="none" stroke="#24515c" stroke-width="2"/>
 <text x="306" y="149" font-size="18" font-weight="bold">Soft perimeter band</text>
 <text x="306" y="174" font-size="17">About 6 mm wide</text>
 <text x="306" y="199" font-size="17">About 6 mm deep, free</text>
-<text x="306" y="237" font-size="16">You measured these values</text>
-<text x="306" y="260" font-size="16">on the loose plate.</text>
+<text x="306" y="237" font-size="16">Foam reaches the metal edge.</text>
+<text x="306" y="260" font-size="16">No inset is intended here.</text>
 <text x="306" y="299" font-size="17" font-weight="bold">It leaves with the plate.</text>
 <text x="306" y="323" font-size="16">None is shown in your current</text>
 <text x="306" y="346" font-size="16">exposed-valve installation.</text>
@@ -69,7 +72,7 @@ def generate(out):
 <p>The foam is a compressible strip around the wall-facing side of the removable inner plate.
 Your approximate 6 × 6 mm measurements describe that strip. The 15.44 mm measurement includes the free foam and formed metal envelope.</p>
 <figure><img src="foam_gasket_schematic.svg" alt="Schematic explaining the inner plate perimeter foam and its roughly six by six millimeter free section">
-<figcaption>Schematic only. The exact rear gasket footprint has not been photographed or traced. The stock part is
+<figcaption>Corrected schematic: you confirm the outer foam edge meets the outer metal edge. The approximate 6 mm band and corner shape are not a traced minimum landing. The stock part is
 <a href="https://www.kohler.com/en/support/find-a-service-part/shop-parts/assembly-seal-front-plate-1035854">Kohler seal/front-plate assembly K-1035854</a>.
 <a href="https://resources.kohler.com/onlinecatalog/pdf/1041507_5.pdf#page=9">Kohler's two-control exploded diagram, page 9</a> identifies it and the studs.</figcaption></figure>
 <h3>Factory stud: 4.56 inches long = approximately 115.8 mm</h3>
@@ -84,13 +87,8 @@ limits its installed projection from the original finished wall to <b>7/16 inch 
 At the original-wall limit, a full-length rod would extend about <b>104.7 mm behind the tile</b>.
 The wood plane is unmeasured; the calculation cannot determine penetration. <b>These are not pocket-drilling dimensions.</b>
 The added plate/bedding and actual gasket, nut, cover and handle fit still require a complete depth check.</p>
-<h3>Surface contact is the leading interpretation of the close-up</h3>
-<p>The visible rod appears to terminate at the wood surface. A shallow indentation or obscured hole cannot be excluded,
-and the second stud's rear contact is not visible. The stock studs are machine-threaded trim hardware, not specified wood anchors.</p>
-<p>To settle it without guessing, trace each front stud to its rear end and inspect the contact with a mirror or borescope at a grazing angle.
-Look for the end face sitting on wood versus the shaft disappearing into a hole. A paper feeler passing underneath proves a gap;
-failure to pass does not distinguish contact from penetration.</p>
-<p>A dimensional cross-check is also possible once the actual rod length <b>L</b> is known: measure <b>D</b>, from its front tip to the near wood face <em>along that same rod</em>.
-If D is approximately L, it touches; if D is less than L, the implied penetration is L − D; if D is greater, the gap is D − L.
-The difference must exceed measurement uncertainty, and a cut or substituted rod invalidates using 115.8 mm for L.</p>
+<h3>You now confirm the rods meet the wood surface</h3>
+<p>This supersedes the earlier photo-only uncertainty about contact. Wood clearance holes are your authorized preferred approach if needed for inward trim-stud adjustment, provided the remaining valve and handle-stem depth checks pass.</p>
+<p>The rods retain the trim by threading into the valve; the wood is the reported rear obstruction. Relief would permit rod travel but would not move U, L or the valve body. Required travel, retained thread engagement, wood role and a clear drill path still determine the eventual relief dimensions.</p>
+<p><a href="../../fabrication/aperture-access/index.html">See the upright aperture and handle-attachment depth comparison</a>.</p>
 <p class="small"><a href="stud_rear_estimate.json">Calculation and input hashes</a> · manufacturer nominal data and conditional estimates only · no geometry or physical readiness changed.</p></section>'''

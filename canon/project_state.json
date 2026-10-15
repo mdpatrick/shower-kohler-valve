@@ -3,18 +3,18 @@
   "revision": "R005",
   "date": "2026-10-15",
   "selected_state": null,
-  "working_state": "CB01_circular_concentric_pairs_with_LOC01_diagnostic",
+  "working_state": "CB01_circular_pairs_with_AP01_upright_access_candidates",
   "states": {
     "as_observed_at_capture": "preserved scan; capture date unknown; user reports no changes since capture on 2026-10-14",
     "manufacturer_intended": "Documented layer/fastener order and original-finished-wall stud limit only; no physically verified installed geometry",
-    "proposed_provisional": "CB01 C1 circular 220/120 mm and C2 circular 214.15/128.425 mm pairs, with 1.524/3.175 mm metal and 3 mm prototype stock trials. F005 offset/rectangular appearances are superseded by circular-only user requirements. LOC01 upper locating tabs remain a separate diagnostic.",
+    "proposed_provisional": "CB01 C1 circular 220/120 mm and C2 circular 214.15/128.425 mm pairs, with 1.524/3.175 mm metal and 3 mm prototype stock trials. F005 offset/rectangular appearances are superseded by circular-only user requirements. LOC01 upper locating tabs remain a separate diagnostic. AP01 supplies separate upright-access main-plate alternatives for both circular sizes; CB01 quote files remain historical diagonal-aperture files.",
     "selected_arrangement": null,
     "current_exposed_installation": "Original front capture plus unscaled rear photos. Factory inner plate/foam and trim are removed. Rear construction has not been reconstructed metrically."
   },
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit.",
-    "geometric_fit": "CB01 preserves the F005 insertion aperture and original scan. Circular appearances have conditional positive gaps and traced damage margins; support/foam/depth remain unresolved. LOC01 added tabs intersect captured surfaces under its named fixed-scan-depth trial. RECON-001 revision 2 treats all six readings as 3D end-tip-center distances; exact free-depth embeddings do not determine wall-relative hole coordinates.",
+    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed.",
+    "geometric_fit": "AP01 upright opening encloses the historical F005 aperture and the measured upper inner-opening footprint at the provisional placement. All 51,929 selected forward triangle projections clear. Uniform 6 mm edge-flush foam scenario leaves 1 mm nominal extra land; corners, actual alignment, compression, hidden adapter geometry, axial engagement, support and sealing remain unverified. LOC01 tabs remain a separate conflicting diagnostic.",
     "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
@@ -26,7 +26,8 @@
     "preserve travertine; no further cutting/drilling/grinding",
     "retain original plate/gasket/drain/service functions",
     "no off-machine scan upload or publication",
-    "no fabrication order or trade contact without authorization"
+    "no fabrication order or trade contact without authorization",
+    "Wood clearance holes are conditionally authorized for trim-stud retraction if other valve/handle depth checks pass; this does not permit tile modification or establish relief dimensions."
   ],
   "confirmed_component_ids": [
     "K-T14489-4-BN",
@@ -37,7 +38,7 @@
   "post_scan_state_observation": "OBS-POST-SCAN-01",
   "depth_review_observation": "OBS-DEPTH-REVIEW-01",
   "depth_inquiry_record": "docs/physical_checks/depth_inquiry_2026-10-14.json",
-  "latest_user_state_note": "Rear photographs supplied. Foam is absent from the current exposed installation; previous foam measurements describe the removed factory plate. User reports over-projecting bolts resting against wood. No physical modification or numeric dimension is accepted from these photographs.",
+  "latest_user_state_note": "Foam is attached to the removed inner plate and meets its outer metal edge. User now confirms 4.56-inch rods contact the wood surface and prefers/authorizes wood clearance holes if needed for retraction, conditional on other valve/handle depth checks. User specifically requests upright aperture comparison and handle access. No new physical modification or numeric dimension reported.",
   "inner_plate_measurement_record": "docs/physical_checks/inner_plate_2026-10-14.json",
   "inner_plate_foam_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
   "outer_plate_measurement_record": "docs/physical_checks/outer_plate_2026-10-14.json",
@@ -51,9 +52,14 @@
   "controlling_requirements": [
     "canon/concentric_border_requirement.json",
     "canon/damage_visibility_requirement.json",
-    "canon/stud_locator_study.json"
+    "canon/stud_locator_study.json",
+    "canon/aperture_access_study.json"
   ],
   "rear_installation_record": "docs/physical_checks/rear_installation_2026-10-15.json",
   "current_blender_review": "deliverables/current/blender/installation_REAR01_DRAFT.blend",
-  "foam_and_stud_research": "docs/physical_checks/foam_and_stud_research_2026-10-15.json"
+  "foam_and_stud_research": "docs/physical_checks/foam_and_stud_research_2026-10-15.json",
+  "foam_edge_and_access_record": "docs/physical_checks/foam_edge_and_access_2026-10-15.json",
+  "aperture_access_study": "canon/aperture_access_study.json",
+  "aperture_access_review": "deliverables/current/fabrication/aperture-access/index.html",
+  "current_blender_access_study": "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.blend"
 }

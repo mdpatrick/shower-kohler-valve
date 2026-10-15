@@ -1,3 +1,9 @@
+# October 15 clarification: handle access takes priority
+
+Preserve the full scope below. Incorporate `docs/physical_checks/foam_edge_and_access_2026-10-15.json`: foam is attached to the removed inner plate and reaches its outside edge; the 4.56-inch rods meet the wood. The user prefers and authorizes clearance holes in the wood if needed to retract the trim studs, conditional on the valve and handle-stem depths being acceptable. This does not establish drill dimensions or authorize tile modification.
+
+Compare and prepare an upright centered inner-plate-shaped aperture, giving priority to actual U/L connection access, not only scan-tip centers. AP01 records a 116.35 x 151.10 R33 trial, both circular main diameters and both metal thicknesses. Retain the original scan and 3D tip-distance evidence. Separately check captured-hardware insertion, whole factory-opening footprints, rearward-reaching adapter/hub envelopes at each depth, and real spline/thread engagement with the added thickness. The whole handles install from the front; do not impose an artificial requirement that their complete bodies pass through the backing aperture. A clearance plot cannot certify axial reach. Keep foam support, locating/retention, support/sealing and physical tests explicit. AP01 supersedes the earlier aperture preference only as the recommended next dry-fit candidate; older quote ZIPs retain the diagonal aperture and must not be mistaken for this design.
+
 # Fabrication preparation goal - CB01 / measurement evidence R005
 
 Act as my local reverse-engineering, CAD and fabrication-preparation agent. Execute the work now. This consolidated prompt preserves the original project requirements below, with the following immediate priority from my latest direction on 2026-10-14. Do not stop at a plan or wait for bolt remeasurements before producing useful designs and hand-off files.

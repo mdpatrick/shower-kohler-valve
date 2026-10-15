@@ -1,0 +1,61 @@
+{
+  "id": "OBS-FOAM-EDGE-WOOD-ACCESS-01",
+  "revision": 1,
+  "date": "2026-10-15",
+  "source": "Direct user clarification in project chat",
+  "status": "ACCEPTED_QUALITATIVE_OBSERVATIONS",
+  "photos": [
+    {
+      "path": "data/evidence/user/aperture-question-2026-10-15.png",
+      "original_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/TemporaryItems/NSIRD_screencaptureui_UxCKKm/Screenshot 2026-10-15 at 12.57.20\u202fPM.png",
+      "sha256": "6fd79a7a86b3a2668aa60a6c4573de931619ad570f31d7d5c5811b658147dd08",
+      "size_bytes": 121059,
+      "role": "User-marked prior generated drawing; correction context, not physical dimensional evidence"
+    },
+    {
+      "path": "data/evidence/user/foam-edge-correction-2026-10-15.png",
+      "original_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/codex-clipboard-d62c5b65-6e01-4a3f-9c88-fcf5f18ca39f.png",
+      "sha256": "61892966c1000f5d68fddaceda7298c11e18ab96bc6a816cd8676f08a8cdb2a7",
+      "size_bytes": 140280,
+      "role": "User-marked prior generated drawing; correction context, not physical dimensional evidence"
+    }
+  ],
+  "foam": {
+    "attachment": "Attached to the removed factory inner plate, which is not installed.",
+    "outer_edge": "Meets the outer edge of the metal plate, user-confirmed.",
+    "width_mm": 6,
+    "width_status": "Previously reported approximate representative width, not a measured minimum everywhere.",
+    "free_thickness_mm": 6,
+    "overall_free_depth_mm": 15.44,
+    "remaining_unknowns": [
+      "Exact corner contour and local minimum band width",
+      "Continuity and condition",
+      "Installed compression and rear metal contacts"
+    ]
+  },
+  "studs": {
+    "contact": "User confirms the 4.56-inch rods meet the wood surface.",
+    "length_basis": "Manufacturer nominal 4.56 inches; user confirmation of contact uses this research. No new end-to-end caliper reading.",
+    "preferred_remedy": "Wood clearance holes to permit further inward stud adjustment, if needed and if valve/handle-stem depth has no other issue.",
+    "authorization": "User authorizes this conditional wood-relief approach; this does not authorize tile modification.",
+    "unresolved": [
+      "Required final travel",
+      "Wood dimensions, function and unobstructed drill path",
+      "Drill diameter/depth",
+      "Retained valve-thread engagement",
+      "Valve-body and handle engagement depths"
+    ]
+  },
+  "aperture_request": "Compare an upright centered inner-plate-shaped opening with the old diagonal aperture; specifically protect access to U/L and attachment of both handles.",
+  "physical_changes_reported": false,
+  "numeric_measurement_revision": "R005 unchanged",
+  "supersedes_qualitative_claims": [
+    "Rear foam outer-edge location wholly unknown",
+    "Whether rear stud contact with wood is user-confirmed",
+    "Wood relief is not an authorized option"
+  ],
+  "historical_records": [
+    "docs/physical_checks/rear_installation_2026-10-15.json",
+    "docs/physical_checks/foam_and_stud_research_2026-10-15.json"
+  ]
+}

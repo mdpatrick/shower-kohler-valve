@@ -2,6 +2,8 @@
 
 Read START_HERE.md, canon/project_state.json and docs/project_request.md first.
 
+Latest qualitative correction: read docs/physical_checks/foam_edge_and_access_2026-10-15.json and canon/aperture_access_study.json. Foam meets the removed inner plate's outer edge; rod/wood contact is user-confirmed. Conditional wood relief for trim-stud retraction is authorized if other valve/handle depths pass; tile restrictions remain. AP01 is a separate upright-aperture dry-fit candidate, not a manufacturing release. Rebuild with `./project prepare-aperture`; do not silently replace historic CB01 quote files or treat full opening footprints as measured adapter/hub diameters.
+
 Preserve the travertine: no additional cutting, grinding, drilling, enlargement or retiling without an explicit user exception. Retain factory inner plate, gasket, drainage and service functions. No uploads, publishing, orders or messages to trades without authorization.
 
 The wall-and-valve Polycam ZIP is the primary installed reference. The two plate-side scans are secondary and distorted; identify contents and local credible features before using them. Never average these into or straighten the installed wall/valve scan. Accepted physical observations outrank scan estimates. Manufacturer dimensions are nominal and conditional on identity. Keep all conflicting evidence.

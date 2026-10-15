@@ -18,8 +18,8 @@ for p in record['photos']:
     dest = OUT / source.name
     if not dest.exists() or hashlib.sha256(dest.read_bytes()).hexdigest() != p['sha256']:
         shutil.copy2(source, dest)
-    caption = ('The threaded rod appears to end at the wood surface. This supports the reported rear obstruction; '
-               'the photograph does not trace both front trim studs or establish adjustment travel.' if p['view']=='close' else
+    caption = ('The rod ends at the wood surface according to the user’s latest confirmation. '
+               'The photo does not establish required adjustment travel or relief dimensions.' if p['view']=='close' else
                'The wider view records the wood member, copper piping and nearby cable. Wood dimensions, function '
                'and clear drilling access are not established.')
     cards.append(f'<figure><a href="{dest.name}"><img src="{dest.name}" alt="Original rear installation photograph: {p["view"]}"></a>'
@@ -47,12 +47,11 @@ Seeing its back faces—or the older simplified valve envelopes—does not revea
 The original proposal and exploded scenes remain available as references. The photos are unscaled boards, not a measured 3D registration.</p>
 <p><a class="button" href="../../blender/installation_REAR01_DRAFT.blend">Updated Blender review</a> · <a href="rear_photos_REAR01.png">Photo board</a></p></section>
 <section><h2>What the wood contact means</h2><p>Kohler's trim studs thread into the valve. They do not obtain their trim retention by fastening into wood.
-If their rear ends already bear on the wood, that contact could prevent sufficient inward adjustment.
+You now confirm their rear ends meet the wood, which can prevent further inward adjustment.
 <a href="https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf">Kohler installation guide, page 7</a>.</p>
-<p>A clearance pocket is an option to evaluate after tracing the same two studs and determining the required retraction, remaining thread engagement and the wood member's role.
-The photos do not establish a pocket size or authorize choosing drilling over a suitable hardware correction. The nearby pipe and cable routes also need to be accounted for.</p>
+<p>Wood clearance holes are your authorized preferred approach if retraction is needed and other valve/handle depth checks pass. Required retraction, remaining thread engagement and the wood member's role determine the eventual relief dimensions. The nearby pipe and cable routes also need to be accounted for.</p>
 <p>Moving a trim stud inward would not by itself change valve-body or handle-stem depth. The U-handle engagement and final gasket/cover seating checks remain separate.</p></section>
-<p class="small">REAR-001 revision 1 · received October 15, 2026 · photographs preserved byte-for-byte · no CAD dimensions or physical readiness changed.
+<p class="small">REAR-001 photos plus OBS-FOAM-EDGE-WOOD-ACCESS-01 clarification · October 15, 2026 · photographs preserved byte-for-byte · no physical readiness changed.
 <a href="blender_validation.json">Saved-file checks</a>. No drilling, cutting, vendor upload or order performed.</p></main></html>'''
 (OUT / 'index.html').write_text(page)
 panel = '''<!-- REAR01 BEGIN --><section class="panel" id="rear-evidence"><h2>Current rear photographs — no installed foam</h2>

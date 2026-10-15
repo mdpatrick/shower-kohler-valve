@@ -1,0 +1,12 @@
+{
+  "status": "PASS",
+  "saved_reopened": true,
+  "scenes": [
+    "AP01 | four separate CAD alternatives",
+    "AP01 | nominal exterior and fixed scan tips",
+    "AP01 | upright access and captured hardware"
+  ],
+  "CAD_dimensions_checked": 4,
+  "source_sha256": "349a362b3fb7bab38a873caea9ac068907cf646fd97e75ecfdbda65807643f5b",
+  "limitations": "Nominal exterior and diagram overlays do not prove physical engagement. No full source scan modified."
+}

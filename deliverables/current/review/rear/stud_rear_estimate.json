@@ -25,8 +25,22 @@
     }
   ],
   "not_a_drilling_specification": true,
+  "current_user_observation": {
+    "contact": "User confirms the 4.56-inch rods meet the wood surface.",
+    "length_basis": "Manufacturer nominal 4.56 inches; user confirmation of contact uses this research. No new end-to-end caliper reading.",
+    "preferred_remedy": "Wood clearance holes to permit further inward stud adjustment, if needed and if valve/handle-stem depth has no other issue.",
+    "authorization": "User authorizes this conditional wood-relief approach; this does not authorize tile modification.",
+    "unresolved": [
+      "Required final travel",
+      "Wood dimensions, function and unobstructed drill path",
+      "Drill diameter/depth",
+      "Retained valve-thread engagement",
+      "Valve-body and handle engagement depths"
+    ]
+  },
   "input_sha256": {
     "docs/physical_checks/foam_and_stud_research_2026-10-15.json": "afb9e24ff2c595889e4b5c8ebafd9be8bbbab10393997750809a8849825ebc94",
-    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883"
+    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883",
+    "docs/physical_checks/foam_edge_and_access_2026-10-15.json": "746cffeda2d11a2314672951786468d6ad266e8e920fe089d28bdf6c73335889"
   }
 }

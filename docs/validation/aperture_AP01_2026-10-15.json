@@ -1,0 +1,53 @@
+{
+  "id": "AP01-READBACK-AUDIT",
+  "date": "2026-10-15",
+  "status": "PASS",
+  "parts": [
+    {
+      "id": "MAIN-C1-SS060_AP01_DRAFT_NOT_FOR_FABRICATION",
+      "CAD_bounds_local_center_and_aperture": "PASS",
+      "analytic_volume": "PASS",
+      "clean_DXF": true
+    },
+    {
+      "id": "MAIN-C1-SS125_AP01_DRAFT_NOT_FOR_FABRICATION",
+      "CAD_bounds_local_center_and_aperture": "PASS",
+      "analytic_volume": "PASS",
+      "clean_DXF": false
+    },
+    {
+      "id": "MAIN-C2-SS060_AP01_DRAFT_NOT_FOR_FABRICATION",
+      "CAD_bounds_local_center_and_aperture": "PASS",
+      "analytic_volume": "PASS",
+      "clean_DXF": true
+    },
+    {
+      "id": "MAIN-C2-SS125_AP01_DRAFT_NOT_FOR_FABRICATION",
+      "CAD_bounds_local_center_and_aperture": "PASS",
+      "analytic_volume": "PASS",
+      "clean_DXF": false
+    }
+  ],
+  "pdf_pages": 4,
+  "A3_template_scale": "Exact 72/25.4 transform and two calibration bars verified",
+  "local_links": "PASS",
+  "preserved_baseline": {
+    "canon/measurements.json": true,
+    "canon/transforms.json": true,
+    "canon/fabrication_designs.json": true,
+    "data/evidence/kohler-T14489-4.obj": true,
+    "deliverables/current/blender/installation_REAR01_DRAFT.blend": true
+  },
+  "visual_review": "Not performed by this automated script; see docs/validation/aperture_AP01_visual_review_2026-10-15.json for the separate dated inspection.",
+  "unresolved": [
+    "Actual corner and foam minimum-width geometry",
+    "Captured-surface mask excludes stone and unobserved geometry",
+    "Actual adapter/hub outside profiles and spline/thread engagement",
+    "Added bedding and compressed foam depths",
+    "Physical control-axis/cover registration",
+    "Lower reference opening diameter",
+    "Backing support and retention",
+    "Final sealing, material/finish, fabrication tolerance and user release"
+  ],
+  "adversarial_conclusion": "No geometric export error found. AP01 improves connection access but does not justify manufacturing or asserting that handles attach. The 1 mm foam-side remainder is smaller than unbounded registration/shape uncertainty and is not a demonstrated tolerance."
+}

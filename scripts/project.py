@@ -159,6 +159,10 @@ def prepare_rear(force=False,preserve=True):
         run([BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/blender/rear_review.py'],'rear_review.log')
         write('build/rear_stages.json',{'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in outputs}})
     run([sys.executable,'src/review/rear_evidence.py'])
+    if (ROOT/'deliverables/current/fabrication/aperture-access/index.html').exists():
+        sys.path.insert(0,str(ROOT/'src/fabrication'))
+        from aperture_access import attach_panel
+        attach_panel()
     # The existing documents stage owns this HTML; acknowledge the evidence panel
     # without invalidating its already-reviewed PDF or manufacturing ZIP outputs.
     cache=ROOT/'build/concentric_stages.json'
@@ -167,6 +171,18 @@ def prepare_rear(force=False,preserve=True):
         if page in stages.get('documents',{}).get('outputs',{}):
             stages['documents']['outputs'][page]=sha(ROOT/page)
             write(cache,stages)
+    publish_manifest()
+
+def prepare_aperture(stage='all'):
+    """Separate AP01 control-access candidates; never replace historical quote CAD."""
+    preserve_edits()
+    if stage in ('all','analysis'):
+        run([sys.executable,'src/fabrication/aperture_access.py'],'aperture_access.log')
+    if stage in ('all','blender'):
+        run([BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/blender/aperture_access.py'],'aperture_access_blender.log')
+    prepare_rear(force=False,preserve=False)
+    if stage in ('all','blender'):
+        run([sys.executable,'src/fabrication/audit_aperture.py'])
     publish_manifest()
 
 def validate(git_objects=False):
@@ -296,6 +312,8 @@ def main():
     fab=sub.add_parser('prepare-fabrication');fab.add_argument('--stage',choices=['all','cad','fit','render','documents'],default='all');fab.add_argument('--force',action='store_true')
     con=sub.add_parser('prepare-concentric');con.add_argument('--stage',choices=['all','base','stock','locator','damage','render','documents'],default='all');con.add_argument('--force',action='store_true')
     rear=sub.add_parser('prepare-rear');rear.add_argument('--force',action='store_true')
+    ap=sub.add_parser('prepare-aperture');ap.add_argument('--stage',choices=['all','analysis','blender'],default='all')
+    sub.add_parser('audit-aperture')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -305,9 +323,12 @@ def main():
         build(args.force)
         if (ROOT/'canon/fabrication_designs.json').exists():prepare_fabrication(force=args.force)
         if (ROOT/'canon/concentric_border_requirement.json').exists():prepare_concentric(force=args.force)
+        if (ROOT/'canon/aperture_access_study.json').exists():prepare_aperture()
     elif args.command=='prepare-fabrication':prepare_fabrication(args.stage,args.force)
     elif args.command=='prepare-concentric':prepare_concentric(args.stage,args.force)
     elif args.command=='prepare-rear':prepare_rear(args.force)
+    elif args.command=='prepare-aperture':prepare_aperture(args.stage)
+    elif args.command=='audit-aperture':run([sys.executable,'src/fabrication/audit_aperture.py'])
     elif args.command=='review':review(args.no_open)
     elif args.command=='validate':validate(args.git_objects)
     elif args.command=='query':query(args.args)

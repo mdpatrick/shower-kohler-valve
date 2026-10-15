@@ -275,6 +275,15 @@
       "retrieved_date": "2026-10-15",
       "sha256": "afb9e24ff2c595889e4b5c8ebafd9be8bbbab10393997750809a8849825ebc94",
       "size_bytes": 4036
+    },
+    {
+      "id": "SRC-USER-FOAM-EDGE-WOOD-ACCESS-01",
+      "path": "docs/physical_checks/foam_edge_and_access_2026-10-15.json",
+      "title": "User confirmation of edge-flush foam and rod/wood contact; upright aperture and handle-access request",
+      "date": "2026-10-15",
+      "applicability": "Accepted qualitative observations and conditional wood-relief authorization, no new dimensions or physical fit result.",
+      "sha256": "746cffeda2d11a2314672951786468d6ad266e8e920fe089d28bdf6c73335889",
+      "size_bytes": 3046
     }
   ]
 }

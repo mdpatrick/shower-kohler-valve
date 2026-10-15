@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "dc2a5a368e608f22cdebe7d9f4dafcdb326552e4",
+  "source_commit": "8911e341f988eb981f241c353d3045e983528e43",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "19798c238f7c91bc6a441b0b9fd1eb4f55dcb712d5ec701162a372ced1cc6390",
+  "source_tree_hash": "c5351d52a97fbe0dd7c82b4eb6f2c9c176eb7be066c3e7fd6fe217aa5fed7262",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -562,6 +562,111 @@
       "size_bytes": 88058
     },
     {
+      "path": "deliverables/current/fabrication/aperture-access/analysis.json",
+      "sha256": "0e2150939d369f46eec574c2b58337aaf56da8607e138dbf6c315e414a76deac",
+      "size_bytes": 6894
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.blend",
+      "sha256": "14a1e26827b427f9854bb1721820e0106addea167328c4376b719ab85b6b1161",
+      "size_bytes": 4426158
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.pdf",
+      "sha256": "9d2b23a8e1ccb98971d7ea634c98f3421c815b863957b652d3edad046615ad54",
+      "size_bytes": 922593
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/aperture_comparison.png",
+      "sha256": "09106f637ab4e36e134651f7fe41c577de696fcd03e10eb576315865c24a5bad",
+      "size_bytes": 578046
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/aperture_comparison.svg",
+      "sha256": "a8748bd6905a063b8be635d4579f7acfdb564996d93d22b905b73fc5700c83f4",
+      "size_bytes": 428549
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/blender_access_front.png",
+      "sha256": "4c4e8f37ec50cc215a521f3a3dd24cd188f6690a19a432d2103d9ba27a07d941",
+      "size_bytes": 1839618
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/blender_validation.json",
+      "sha256": "c46fe149a10c648d1955c6fa8cf55229f295e66d0b67d5b9ea40b32324e8ecfa",
+      "size_bytes": 454
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/browser_comparison_review.jpg",
+      "sha256": "a794b9935d78f1c3ffe5acc30626a0efad1ee4c69f562a5bf80440cad63d272a",
+      "size_bytes": 187583
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "7ccf41a4e58fa8583cbaacbef123c96ed56fc6ddf079a4c4a4d07631186a78f0",
+      "size_bytes": 35083
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "72591e7feb0bdf243201a3f9bcc7ee2f89ec438636d88e1f5760ed6091454c23",
+      "size_bytes": 101684
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "d9309519f20b5154f00e0442ce64f108a7fdf98a1c60f1f1fca7350b3c1f9232",
+      "size_bytes": 35083
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "a81a1d9beec3dd2721b7496f8896d29b841bd5cb2b28a701305eb2c0139b9d80",
+      "size_bytes": 101684
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C1_AP01_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "3b1529b0ae7216f1147038dfaa3ac81486a7f525dd247d20e29b3a57be6d425e",
+      "size_bytes": 16459
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "f0b86566f18fc2e78e945a69c851d60623d4ee521569f16ecfa0168217e0c600",
+      "size_bytes": 35107
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "ca6db925aa7ca8767338e9ebaff3f07b0f417fd3c4cbabc2e5bb39bd4c2e19db",
+      "size_bytes": 101684
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "a18ca6689ca0680cbd4d72c618758812df125d4994b9fe0657d3505820b8ef26",
+      "size_bytes": 35107
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "c6ba975a0cab39dd36434e9f832e8e1e9f21f9ae5575f54f6fb8f276e180c877",
+      "size_bytes": 101684
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/cad/MAIN-C2_AP01_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "fe1f393f3e610da1a88a4b95e0c40d75f90cc829fcdead0415a3294914ed74dc",
+      "size_bytes": 16462
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/index.html",
+      "sha256": "c2d073e1b42c07b9f24b43b62678e54501e4a635dc98fcd96649f5a648e18ff4",
+      "size_bytes": 8551
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/upper_connection_depth.png",
+      "sha256": "d1c97983b8b34613e7773e5f6970f4d220dd0f6076fcd820b4a914f4eadc6f39",
+      "size_bytes": 245960
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/upper_connection_depth.svg",
+      "sha256": "4dc5091a8b3d328eda2479b835d39d5195a20ec269cb86766dc9d8b288383be8",
+      "size_bytes": 1292730
+    },
+    {
       "path": "deliverables/current/fabrication/concentric-border-study/analysis.json",
       "sha256": "d888b206d3b855ebb5ae687de66318c3447b969ed6aff31cdc9dae92c0368c02",
       "size_bytes": 7199
@@ -788,8 +893,8 @@
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/index.html",
-      "sha256": "856cb083bf7255005670dc90526a2cddd31b853404cdae62f7f3fdf3e663caef",
-      "size_bytes": 9079
+      "sha256": "394d78975a8973d55635e130f8e77761b2b68093d1ef720e05421f62af3288ac",
+      "size_bytes": 9713
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/package_manifest.json",
@@ -988,18 +1093,13 @@
     },
     {
       "path": "deliverables/current/review/rear/foam_gasket_schematic.svg",
-      "sha256": "e3d2c95a29e5514f29355bb592d8621f55baba9cf3d955534abe42cd68667395",
-      "size_bytes": 3155
-    },
-    {
-      "path": "deliverables/current/review/rear/foam_studs_review.jpg",
-      "sha256": "824e0b9889757d158c7a5ded1aa11989d221012faac84fc2eaefb96b5f938495",
-      "size_bytes": 102225
+      "sha256": "f14f20a1d3c205da048e666a747eaf900b795f0a05e3f0cfbdf406c7bf48bb56",
+      "size_bytes": 3146
     },
     {
       "path": "deliverables/current/review/rear/index.html",
-      "sha256": "ce21f919d88919a23edfae6d8a25dd20797d098efc470e5e8b23204a13397d7e",
-      "size_bytes": 8171
+      "sha256": "35c73f6f983b2760ae394b3338a04602902622de45a1e8599444e692ebd59047",
+      "size_bytes": 7822
     },
     {
       "path": "deliverables/current/review/rear/rear-close-2026-10-15.jpeg",
@@ -1023,8 +1123,8 @@
     },
     {
       "path": "deliverables/current/review/rear/stud_rear_estimate.json",
-      "sha256": "d5b2a7a5847ec0370a453324d435b70b91649f7dca07cab61869c1adffcce711",
-      "size_bytes": 1362
+      "sha256": "4e54f6d31c40d067fba8f278a2a539cf35d319fca6167319ca414c4a39fe42d4",
+      "size_bytes": 2260
     },
     {
       "path": "deliverables/current/review/style.css",
@@ -1224,8 +1324,8 @@
   ],
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit.",
-    "geometric_fit": "CB01 preserves the F005 insertion aperture and original scan. Circular appearances have conditional positive gaps and traced damage margins; support/foam/depth remain unresolved. LOC01 added tabs intersect captured surfaces under its named fixed-scan-depth trial. RECON-001 revision 2 treats all six readings as 3D end-tip-center distances; exact free-depth embeddings do not determine wall-relative hole coordinates.",
+    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed.",
+    "geometric_fit": "AP01 upright opening encloses the historical F005 aperture and the measured upper inner-opening footprint at the provisional placement. All 51,929 selected forward triangle projections clear. Uniform 6 mm edge-flush foam scenario leaves 1 mm nominal extra land; corners, actual alignment, compression, hidden adapter geometry, axial engagement, support and sealing remain unverified. LOC01 tabs remain a separate conflicting diagnostic.",
     "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",

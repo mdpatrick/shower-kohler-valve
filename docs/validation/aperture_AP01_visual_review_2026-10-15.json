@@ -1,0 +1,23 @@
+{
+  "id": "AP01-MANUAL-VISUAL-REVIEW",
+  "date": "2026-10-15",
+  "status": "PASS for reviewed artifact layout",
+  "reviewed": [
+    "All four final PDF pages rendered with pdftoppm and visually inspected; template text no longer crosses calibration bars",
+    "Comparison and equal-scale depth figure inspected",
+    "Final Blender diagnostic render inspected with diagram shadows removed",
+    "1280-pixel browser comparison screenshot inspected and saved",
+    "Rear review accessibility text confirms current edge-flush foam and user-confirmed wood contact; SVG inspected as vector coordinates"
+  ],
+  "files_sha256": {
+    "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.pdf": "9d2b23a8e1ccb98971d7ea634c98f3421c815b863957b652d3edad046615ad54",
+    "deliverables/current/fabrication/aperture-access/aperture_comparison.png": "09106f637ab4e36e134651f7fe41c577de696fcd03e10eb576315865c24a5bad",
+    "deliverables/current/fabrication/aperture-access/upper_connection_depth.png": "d1c97983b8b34613e7773e5f6970f4d220dd0f6076fcd820b4a914f4eadc6f39",
+    "deliverables/current/fabrication/aperture-access/blender_access_front.png": "4c4e8f37ec50cc215a521f3a3dd24cd188f6690a19a432d2103d9ba27a07d941",
+    "deliverables/current/fabrication/aperture-access/browser_comparison_review.jpg": "a794b9935d78f1c3ffe5acc30626a0efad1ee4c69f562a5bf80440cad63d272a"
+  },
+  "browser_limit": "DOM layout evaluation and later rear screenshot capture timed out under memory pressure; no responsive-breakpoint claim. New review page and comparison screenshot succeeded.",
+  "source_preservation": "Original scan, measurements and prior Blender baseline unchanged by read-back audit",
+  "physical_fit": "NOT PERFORMED",
+  "recovery": "Git checkpoint and snapshot integrity checked this turn. New full bundle/clone verification deferred during measured system memory pressure; existing REAR01 bundle does not contain AP01."
+}

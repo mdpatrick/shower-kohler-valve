@@ -1,0 +1,64 @@
+{
+  "id": "AP01",
+  "revision": 1,
+  "date": "2026-10-15",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "observation": "docs/physical_checks/foam_edge_and_access_2026-10-15.json",
+  "purpose": "Compare the existing captured-hardware aperture with a centered upright rounded rectangle that preserves access around both controls and supports the now-confirmed edge-flush foam.",
+  "baseline": "F005 aperture retained historically in CB01 and LOC01. The old opening is a buffered convex hull of selected forward scan surfaces, not a factory-required contour or demonstrated handle fit.",
+  "evidence_revision": "R005",
+  "inner_outline": {
+    "width_mm": 130.35,
+    "height_mm": 165.1,
+    "corner_radius_mm": 40,
+    "corner_status": "Assumed reference shape; not physically measured",
+    "center": "Existing resolved inner_center_mm; physical alignment remains unverified",
+    "rotation_deg": 0,
+    "rotation_status": "Upright in installed XY, consistent with the existing inner reference; not an accepted physical registration"
+  },
+  "foam": {
+    "outer_inset_mm": 0,
+    "outer_inset_status": "User confirms foam meets outer metal edge",
+    "representative_width_mm": 6,
+    "width_status": "Approximate; no minimum local width or compression tolerance established"
+  },
+  "upright_trial": {
+    "id": "UPRIGHT-7",
+    "inward_offset_from_metal_outline_mm": 7,
+    "width_mm": 116.35,
+    "height_mm": 151.1,
+    "corner_radius_mm": 33,
+    "nominal_extra_land_inside_6mm_foam_mm": 1,
+    "land_status": "Geometric remainder under the assumed corner contour and uniform band, not an approved tolerance or sealing allowance",
+    "separate_stud_holes": false,
+    "locating_tabs": false,
+    "reason": "Encloses the entire previous buffered aperture while opening space around both controls. Keep locating and retaining the plate as a separate unresolved requirement."
+  },
+  "outputs": {
+    "main_outer_diameters_mm": [220, 214.15],
+    "thicknesses_mm": [1.524, 3.175],
+    "diverter": "Unchanged CB01 companion; no new diverter fit claim",
+    "export_frame": "Local origin at main circular outline/inner reference center; +X right, +Y up, +Z outward; rear metal face Z=0"
+  },
+  "control_checks": {
+    "upper_inner_opening_diameter_mm": 48.46,
+    "upper_cover_opening_diameter_mm": 33.79,
+    "interpretation": "Project these measured opening footprints at the existing reference placement. They are not measurements of adapter outside diameter, hub outside diameter or minimum engagement.",
+    "lower_opening": "Actual diameter remains unmeasured; show the existing 50 mm inner-reference assumption separately.",
+    "axis_note": "Original scan tip centers and reference opening centers remain distinct. Six caliper tip-to-tip distances remain 3D constraints, not XY hole coordinates."
+  },
+  "manufacturer_interface": {
+    "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf",
+    "pages": [7, 8],
+    "sequence": "Adapters attach to stems; inner plate fits over studs; decorative cover is retained by handle assemblies threaded onto inner-plate hubs. Correct adapter length is needed for engagement and seating.",
+    "implication": "The complete knobs install from the front, not through the custom backing aperture. Rearward-reaching adapters/hubs, axial insertion and engagement still require actual clearance."
+  },
+  "selection": "Recommended next dry-fit candidate; no physical design selection or fabrication release",
+  "limits": [
+    "Captured-surface clearance does not bound hidden hardware or scan error.",
+    "Full factory-opening footprint clearance is stronger than a center point but is not a physical handle fit.",
+    "Added plate and bedding shift the factory assembly relative to fixed stems; no unmeasured spline/thread overlap is inferred.",
+    "Wood relief permits stud retraction but does not correct valve or stem depth.",
+    "New aperture does not select material, finish, support, sealing, retention or machining tolerances."
+  ]
+}

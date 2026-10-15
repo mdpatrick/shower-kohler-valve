@@ -17,5 +17,6 @@
     "Rear footprint and installed foam compression unresolved",
     "No machining or installation change selected"
   ],
-  "screenshot": "deliverables/current/review/rear/foam_studs_review.jpg"
+  "screenshot": "deliverables/historical/STUD-REAR-RESEARCH-001/foam_studs_review_INSET_SUPERSEDED.jpg",
+  "superseded_visual_note": "Historical inset foam illustration; superseded by edge-flush SVG and OBS-FOAM-EDGE-WOOD-ACCESS-01. Original research validation retained as history."
 }
