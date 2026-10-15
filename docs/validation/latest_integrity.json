@@ -6,22 +6,22 @@
     {
       "id": "SCAN-WALL",
       "status": "PASS",
-      "committed_bytes_checked": false
+      "committed_bytes_checked": true
     },
     {
       "id": "SCAN-PLATE-1",
       "status": "PASS",
-      "committed_bytes_checked": false
+      "committed_bytes_checked": true
     },
     {
       "id": "SCAN-PLATE-2",
       "status": "PASS",
-      "committed_bytes_checked": false
+      "committed_bytes_checked": true
     },
     {
       "id": "SCAN-INNER-ATTACHED",
       "status": "PASS",
-      "committed_bytes_checked": false
+      "committed_bytes_checked": true
     }
   ],
   "errors": [],

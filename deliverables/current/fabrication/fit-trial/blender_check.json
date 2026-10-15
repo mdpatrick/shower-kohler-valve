@@ -1,0 +1,12 @@
+{
+  "saved_reopened": true,
+  "scenes": 3,
+  "custom_dimensions_verified": [
+    "FT01_MAIN_220_T1524_FIT_TRIAL",
+    "FT01_DIV_124_T1524_FIT_TRIAL"
+  ],
+  "source_vertex_count": 333573,
+  "original_scan_sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+  "physical_fit": "UNPERFORMED",
+  "script_sha256": "12b6454517d65538853d5f863fc914bdca4f826781b0e20f4056d29670ececea"
+}

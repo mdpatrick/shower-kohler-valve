@@ -1,39 +1,17 @@
-# Current review priority: F005 fabrication preparation
+# Fresh FT01 review request
 
-Read docs/fabrication_goal_prompt.md and START_HERE.md first. Review canon/fabrication_designs.json and canon/fabrication_research.json, then deliverables/current/fabrication/F005/analysis.json and mesh_path_check.json. Recompute custom STEP/DXF dimensions, wall-damage margins, the 112.05 vs 108.01 mm mounting conflict, the 1.5 mm foam-inset sensitivity, actual stud/cover depth, and the F005 screenshot state distinction. Verify manufacturer ZIPs include only their chosen pair/thickness and no home scan/photos. Cost ranges must remain assistant planning estimates, not quotes. Check that thin 316 stainless rush service is not incorrectly promised. Physical fit and manufacturing release remain open.
+Read START_HERE.md, canon/fit_trial_design.json, canon/fit_trial_handoff.json, canon/project_state.json and docs/fabrication_goal_prompt.md. The immediate goal is a useful real quote/physical trial, not permanent-installation certification. The full original request remains in docs/project_request.md. Historical F005/CB01/AP01 shapes are not the next quote design.
 
-This is a fresh-review request, not an instruction to overwrite accepted measurements or to release files. Distinguish independently recomputed checks from claims only read.
+Review deliverables/current/fabrication/fit-trial/index.html, design_report.json, attached_scan_assessment.json and audit.json. Separate claims you read, visually inspect, recompute or physically verify. The supplied fresh audit is a same-agent independent calculation, not a second reviewer.
 
----
+Recompute all six STEP/STL/DXF sets: mm, centered profiles, two contours, main220 capsule116.35x151.10 endR58.175 /straight34.75, diverter124 or120 with80 aperture, thickness1.524 or3.000. Check clean DXF entities, analytic volume, watertight STL and same geometry in Blender. Verify shop notes, printable100mm bars, private-free quote ZIPs, hashes and current source dependencies. Run `./project prepare-fit-trial --stage audit`.
 
-# Independent review request
+Challenge the claimed clearance scope: 51,929 primary-scan pieces aboveZ0.5 and inside OPEN-MAIN eroded3mm. It excludes stone-edge insertion and hidden geometry. About1.6mm minimum is not a field tolerance. Check the alternative capsule's foam land and corner sensitivity; only1mm nominal extra land is narrow and real foam footprint is unverified. Do not treat all three pose hypotheses as an error bound.
 
-Audit this private shower repair study from the repository, not the prior chat. Start with `START_HERE.md`, `AGENTS.md`, `canon/project_state.json`, `canon/measurements.json`, `canon/source_register.json`, and `deliverables/current/manifest.json`. Preserve accepted observations, original scan bytes and Git history. Proposed corrections need evidence and a recorded revision. No uploads, trade messages, orders, tile cutting or hidden changes to the observed pose are authorized.
+Inspect the newly attached scan directly without forcing concentricity. Its wall-normal view has stems high in hub rings, but reflective distortion and the width cross-check conflict with calipers. It is not globally registered to the original scan. Check the distinction between whole handle body and its rear connection, genuine factory engagement, added-depth loss, plate alignment and rod/wood adjustment. Six3D caliper readings do not define coplanar stud holes.
 
-State which checks you **read**, **visually inspected**, **recomputed**, or **physically verified**. Do not call a report recomputed merely because it exists. Inspect manageable annotated views and JSON first; the compact analysis-review ZIP is sufficient for initial critique but not complete raw evidence. The full Git bundle contains all original ZIPs and selected deliverables.
+Check both custom parts together: concentric visible borders, damage coverage versus sound support, actual cover centers, narrow neighbor gap, diverter rear footprint atØ80 opening, clamping/support stiffness, retention without fixed tabs, all gasket contact, bottom drain, service removal and water path. Demand recorded physical results before permanent release. User conditionally allows wood relief; no tile modification.
 
-Challenge: missed gouges/overcuts; uncertain CUT-02/CUT-07 and residue MARK-01; the use of nominal control spacing for scale; wrong tip/axis inference; distortion and occlusion; unverified physical plumb; trim center versus valve/stud/opening centers; secondary-scan component identification; hidden shell/slot/gasket assumptions; unsupported gasket segments; the candidate aperture; grout-crossing seals; rigidity/retention; studs/nuts/hubs/handles and depth stack; real installation/removal/tool paths; lower diverter clearance; current piping and post-scan movement; service access; blocked drainage; unsupported filler and unverified waterproofing/material claims.
+Review costs as planning allowances, not quotes. Finished sheet metal may be a sacrificial first trial at≤2×plastic; no metal3Dprinting is required. Verify current vendor options before purchase. No upload/order/trade message is authorized by this review.
 
-Recompute per-feature coverage and uncertainty where possible. Do not erase disagreements by using an independent dimension as a fitting input. Verify millimeters, right-handed installed coordinates, the single Blender/browser conversion, asymmetric calibration part, STEP validity/placements, DXF contour count and true-size template. Check source hashes, stale revisions, annotation retention and clean restoration. Inspect PDF/HTML legibility separately from numerical checks.
-
-Useful commands:
-
-```sh
-./project doctor
-./project validate --git-objects
-./project query features CUT-03
-./project query dimension candidate.diameter_mm
-./project query measure AXIS-LOWER-TIP AXIS-UPPER-TIP
-./project query coverage
-./project query clearance
-./project query section studs
-./project query compare-states
-./project query solid CUSTOM-01
-```
-
-`query solid` reimports and computes on exact provisional STEP; landmark measurement is approximate scan evidence; `section` returns a saved display section regenerated by `build`. None is a physical measurement. The full-resolution wall is a mesh, not a manufactured STEP solid. Separate factory reference solids must not be ordered as replacements.
-
-Return prioritized, evidence-linked findings and the smallest additional observation needed for each. Distinguish software PASS from physical UNRESOLVED and fabrication approval NOT GIVEN. A fabrication-ready recommendation requires accepted measurements, resolved support/sealing/materials, real dry fit, export agreement and explicit user approval. Do not infer approval from the existence of a cutting file.
-
-
-The control-depth supplement adds a conditional upper-stem comparison and Check 10. Recompute its interval from labeled manufacturer dimensions; do not scale the drawing. Confirm that the measured/scanned feature is the same bare upper stem before interpreting the flag. Do not apply the 7/16-inch trim-stud limit to a control stem, transfer the upper limit to the lower control/diverter, convert an as-found adapter-tip reading into a valve-movement target, or treat a nominal interval as proof of physical seating. Preserve the user-reported rear wood contact as an observation with unresolved fastener identity and mechanism.
+Preserve evidence and accepted canon. Record proposed corrections with source and consequence, then rerun dependent checks. The fuller historical audit checklist remains in docs/downstream_audit_prompt_pre_FT01.md.

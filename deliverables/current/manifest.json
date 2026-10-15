@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "3f8932c8dcc19dd2ac187ddffc5676222894c407",
+  "source_commit": "5819ee5eb14a9fdcafbee9ec65165047b25209f0",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "5978798e5aa78104793d106ba9163be364e1b63372b72b7e1e860b6330da4048",
+  "source_tree_hash": "a37c356e2c95c2cb5e624d5f30b6a39ee3611eb25c668ca16145e2d7389e162d",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -384,8 +384,8 @@
     },
     {
       "path": "deliverables/current/fabrication/F005/index.html",
-      "sha256": "10ca0f4430ae6bb3063b92e4c45643b4708922365db007cbf8a091c2c8973613",
-      "size_bytes": 15019
+      "sha256": "8edff850a9e3606f30e1e817df652464028c11ce3dee2fbec2c456ee67e8b694",
+      "size_bytes": 15320
     },
     {
       "path": "deliverables/current/fabrication/F005/mesh_path_check.json",
@@ -664,8 +664,8 @@
     },
     {
       "path": "deliverables/current/fabrication/aperture-access/index.html",
-      "sha256": "bf74004d13911cac3e04be8cc8dc2001307be1bb033cb24f5ced10d69e3c2213",
-      "size_bytes": 12350
+      "sha256": "da3ab7e3c20ae78eab3af3eed23ba92fd69295f243ace82debe0d4f6c1e06b63",
+      "size_bytes": 12651
     },
     {
       "path": "deliverables/current/fabrication/aperture-access/upper_connection_depth.png",
@@ -904,8 +904,8 @@
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/index.html",
-      "sha256": "ce301875b32f15ac418aff1819fcabb46303fe222a589d68b49398a0223c34c6",
-      "size_bytes": 13811
+      "sha256": "9afd529af1f0332397d7d80fbe92015760d6bb332d249731443e51534efe438e",
+      "size_bytes": 14112
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/package_manifest.json",
@@ -1049,8 +1049,8 @@
     },
     {
       "path": "deliverables/current/fabrication/control-registration/index.html",
-      "sha256": "86ae1aef9e4d7c806519b90b424fbd5d6d375d40b6742339edbf7d43ba6d60df",
-      "size_bytes": 7684
+      "sha256": "4cb85e608cb001ea0e3148f307278cc96ac5c5f3dc1a190e691b312d7e9df8bd",
+      "size_bytes": 7985
     },
     {
       "path": "deliverables/current/fabrication/control-registration/registration_caliper_front.png",
@@ -1066,6 +1066,201 @@
       "path": "deliverables/current/fabrication/control-registration/registration_trial.json",
       "sha256": "597383be29cd49d5208fd4498a57161bbb39f060d6669b69c47043f630f224ee",
       "size_bytes": 16384
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/FT01_plastic_T3000_quote.zip",
+      "sha256": "792bc6654b836e24becedb57b7eeb47f99f072927f14bae15357261ff49a7c56",
+      "size_bytes": 62528
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/FT01_recommended_T1524_quote.zip",
+      "sha256": "3fb7c547c331b6d85243b75e3a50d2290f05d574a9d0548d3c8009e07aba6ae3",
+      "size_bytes": 62589
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/access.png",
+      "sha256": "51ee37664fea6fb6b7c921a90d487055c3297283bed8ac1977d42193c99e8e72",
+      "size_bytes": 191755
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/attached_scan_assessment.json",
+      "sha256": "0e334ddd29c3aeccaeb62521add6d3d355f24cab0591db1f3259283921b59934",
+      "size_bytes": 3871
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/audit.json",
+      "sha256": "d726afc6f7c0717c8ee3fd600e6964f9801831bc85ae4351689d996df732456b",
+      "size_bytes": 4797
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/blender_check.json",
+      "sha256": "50a957786fec35fdc663e34e8d1177467ba04e09eebe37e9fea857a281994925",
+      "size_bytes": 402
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.dxf",
+      "sha256": "1abb814fce91bbf4588144f76db75177c65354fc3ed9b2647ec6da3d83774b86",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.step",
+      "sha256": "a666b916902115e30ddf73680461a589be5df0733be9e2342a2c6c0de24141a4",
+      "size_bytes": 10602
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.stl",
+      "sha256": "74ce6e71ffdf6c45c20545ad505b1e458518c39a8bccd48893ee742adc405609",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.dxf",
+      "sha256": "09c9c718e3a8bd5e708a0d06a65497b56a8f82e6bdcfca13b125df5a7adc7143",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.step",
+      "sha256": "5a832640247151d954cbd54114b36610edba93b45aa1ee7d861c61e6eb037b65",
+      "size_bytes": 10578
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.stl",
+      "sha256": "0edecdde79f94742143658b7c313627ff228d661dde65193350718bd839cb1e6",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T1524_FIT_TRIAL.dxf",
+      "sha256": "cf0281301c4a01ae6e481cb157039154406a2c550ba99d8006d333a6b2da4ce2",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T1524_FIT_TRIAL.step",
+      "sha256": "d42e68e6675c738e926e086085b6f0a125c9dd36fa334bbb9a34992dd67bfcf4",
+      "size_bytes": 10602
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T1524_FIT_TRIAL.stl",
+      "sha256": "f7a306f40b8da5d5dee9a9d70ff6eae942ebe20283fb70535670c180f7e70796",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T3000_FIT_TRIAL.dxf",
+      "sha256": "9dc7be22cbff1df0b279eac1e4ab0c759a3b246a73759a12b6a4e49d6a1346cb",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T3000_FIT_TRIAL.step",
+      "sha256": "870df72e8ebacbf97fbd41be6c8b64b4a4b74d7d5ec74e41ea155ca044b3f63b",
+      "size_bytes": 10578
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T3000_FIT_TRIAL.stl",
+      "sha256": "9ffad454c651738d8414b10c3c21ca8dc165d690bf5ca4fc659d9d489e5e3629",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T1524_FIT_TRIAL.dxf",
+      "sha256": "6277a825c92e429a16176854e3deb2330d681616e7e0f6e620051027b9cb50c9",
+      "size_bytes": 16065
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T1524_FIT_TRIAL.step",
+      "sha256": "a8963165b7dc3f817a9f22435fcf784c61bd7c83e78a548e2d88e3002f1adae3",
+      "size_bytes": 22938
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T1524_FIT_TRIAL.stl",
+      "sha256": "5ba2c9132c540482c678ef536f4f493d0e57fd1329a51b60aed5fb0289ec8f26",
+      "size_bytes": 101284
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T3000_FIT_TRIAL.dxf",
+      "sha256": "c41c6e5437337123a0734352ccdee1b8a0129518587d1ffe883d0d65f20baddb",
+      "size_bytes": 16065
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T3000_FIT_TRIAL.step",
+      "sha256": "a277940a93a8c7c2a02adbf83b4c86b566cf084b1f847fad85a10149ae0038fc",
+      "size_bytes": 22881
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T3000_FIT_TRIAL.stl",
+      "sha256": "f8bc630d2ea60830ba7f19727026135ef2021674f802d862065804d841243618",
+      "size_bytes": 101284
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/design_report.json",
+      "sha256": "f9be7d11374bc2e441465746eb9d62835a099c954dfe04cb8a97ec191d66dd0b",
+      "size_bytes": 13734
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/document_check.json",
+      "sha256": "90c2b2cc9df925f073922ed79871f60f3820a265f497d2d26424ad5f58486588",
+      "size_bytes": 888
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/escutcheon_fit_trial_FT01.blend",
+      "sha256": "4b053e1ebbf31965dae419ca9294d266e359f3d37b291c4fd6eaa3289d82f4a2",
+      "size_bytes": 85953961
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/exploded.png",
+      "sha256": "31ba8ce8733f1eaf8a2832bb87d0af683c75a95046df0d82fcb612d0d24ebae2",
+      "size_bytes": 1437519
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/full_size_templates_FT01.pdf",
+      "sha256": "b73c47fca966a5a20a9cb348cdad2be326ecf32ba392f5a4d8fba78fc33484a9",
+      "size_bytes": 5524
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/index.html",
+      "sha256": "75145946dc08c605b1e2f6af273b162c645887bbf0d0b864455d379dda6d13ae",
+      "size_bytes": 23253
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/paired_front.png",
+      "sha256": "902a0dc800fa68f0d287b920a39689f1075b30404bc93fb0c1f4b75426bad87c",
+      "size_bytes": 1501703
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/paired_oblique.png",
+      "sha256": "2bf389808be13d85a7c3ff3969108dce518363a012bde2960d2eb91307dd7579",
+      "size_bytes": 1505182
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/plane_front.png",
+      "sha256": "669dd507975d02024496348ad5044da1a905791b1a12cf3aa9d2299c48b315d7",
+      "size_bytes": 4216338
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/project_handoff_FT01.pdf",
+      "sha256": "6c6de7e7eff6cc16b15f791e638b1ec21d74c132aa3ca537c0f92297e09636e5",
+      "size_bytes": 8105115
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/raw_front.png",
+      "sha256": "2eca061ea96fda8fbaea2948aeb198832b8e4036bba8147183a0889d593c3c13",
+      "size_bytes": 2600636
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/review_screenshot.jpg",
+      "sha256": "5a73045060a17824b8d294f5b42f832b7c8b844181deeb27509bbd7bee1f6f93",
+      "size_bytes": 89074
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/shop_drawings_FT01.pdf",
+      "sha256": "e714efa486861bdc7a1e1fd1f058182d51e7f63c4bb7d62b3e2f8c6393a51c91",
+      "size_bytes": 6771
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/sizes.png",
+      "sha256": "00fa4766790363c119f17718700e856df7467154d4ab4c5e6114dfa01313d425",
+      "size_bytes": 163948
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/stack.png",
+      "sha256": "1777824d42818efb9fac2e3b03201992d7ca4e0713312b510f91d915fea9fa3e",
+      "size_bytes": 78019
     },
     {
       "path": "deliverables/current/manual/index.html",
@@ -1109,8 +1304,8 @@
     },
     {
       "path": "deliverables/current/review/index.html",
-      "sha256": "84aa98c0a3df817c64d7363e3a2b5faf172bcfb6ff6be489f9620d0118987034",
-      "size_bytes": 96502
+      "sha256": "ba4aac4187b0b8c5841cf60a455a022a845a7ae386a5619bf6c71819381bd2f9",
+      "size_bytes": 96803
     },
     {
       "path": "deliverables/current/review/installation_DRAFT.glb",
@@ -1139,8 +1334,8 @@
     },
     {
       "path": "deliverables/current/review/rear/index.html",
-      "sha256": "35c73f6f983b2760ae394b3338a04602902622de45a1e8599444e692ebd59047",
-      "size_bytes": 7822
+      "sha256": "961c7f371f96f60b3c87b2f083da808547495e1c1d6ed904eabd8fa25c33e6c2",
+      "size_bytes": 8123
     },
     {
       "path": "deliverables/current/review/rear/rear-close-2026-10-15.jpeg",
@@ -1366,11 +1561,15 @@
   "readiness": {
     "evidence_preserved": true,
     "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed. ALIGN02: three separate Blender scenes saved/reopened with unchanged CAD dimensions and checked placements; independent analytic clearance/rigid-transform checks and local browser review passed. These are diagnostic software checks only.",
-    "geometric_fit": "New attached-plate scan SCAN-INNER-ATTACHED has been preserved but not yet inspected or registered; prior geometric trials remain unverified against it. ALIGN02 tests rigid recentering and a separate 1.012273 uniform scan-scale trial calibrated to the 80 mm U\u2013L 3D reading with old tip depths assumed. Both clear 51,929 scoped captured projections. Caliper-conditioned projected main damage margins: 7.03 mm for \u00d8220, 4.11 mm for \u00d8214.15 after tracing allowance. Lower reference opening position/diameter, actual plate-plane axes, stud centers, factory interfaces, continuous foam support and axial engagement remain unverified. Small fit residuals are not physical accuracy or manufacturing tolerance. The closest scoped captured hardware has only about 1.68 mm model clearance in that trial before unresolved scan/axis/placement/manufacturing errors.",
-    "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
+    "geometric_fit": "FT01 capsule clears51,929 scoped primary-scan projected pieces in3historical placement scenarios; minimum about1.6mm. No bounded field error. Foam nominal extra land1mm; real contact, hidden engagement, support, diverter footprint and neighbor gap need physical trial. New attached scan inspected separately, with apparent3-4mm vertical stem/hub eccentricity; width cross-check differsabout4mm fromcalipers.",
+    "materials_design_review": "Current public vendor/stock/finish/timing research in FT01 guide; actual design-specific quote, final material/finish and support/seal detail not obtained.",
     "physical_fit": "NOT PERFORMED",
-    "fabrication_approval": "NOT GIVEN",
+    "fabrication_approval": "Quote and sacrificial fit-trial design prepared under latest user direction; no order or permanent-installation release.",
     "received_part_inspection": "NOT APPLICABLE YET",
-    "installed_leak_test": "NOT PERFORMED"
-  }
+    "installed_leak_test": "NOT PERFORMED",
+    "prototype_quote_files": "FT01 six custom STEP/STL/DXF sets and2custom-only quote ZIPs prepared for a sacrificial fit trial; no upload/order performed.",
+    "software_geometry_checks_FT01": "PASS: fresh read-back of all6 STEP/STL/DXF sets; independent analytic capsule-clearance check in3states;11PDF pages inspected with2-axis scale verified;2quote ZIP contents/hashes checked;Blender3scenes saved/reopened, source vertices and custom dimensions verified. No physical fit test."
+  },
+  "current_recommendation": "FT01",
+  "current_recommendation_scope": "FT01 files are for quotes and sacrificial dry fit; permanent installation remains unreleased."
 }

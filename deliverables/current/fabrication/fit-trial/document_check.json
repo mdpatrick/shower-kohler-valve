@@ -1,0 +1,17 @@
+{
+  "pdf_page_counts": {
+    "project_handoff_FT01.pdf": 7,
+    "shop_drawings_FT01.pdf": 2,
+    "full_size_templates_FT01.pdf": 2
+  },
+  "paragraphs_within_page_bounds": true,
+  "shop_and_template_units": "mm",
+  "templates_page_size": "A3 landscape",
+  "visual_review": "PASS: all 7 guide pages, 2 shop sheets and 2 templates rendered and inspected. Vendor link spacing repaired; revised pages6/7 re-inspected.",
+  "pdf_sha256": {
+    "shop_drawings_FT01.pdf": "e714efa486861bdc7a1e1fd1f058182d51e7f63c4bb7d62b3e2f8c6393a51c91",
+    "full_size_templates_FT01.pdf": "b73c47fca966a5a20a9cb348cdad2be326ecf32ba392f5a4d8fba78fc33484a9",
+    "project_handoff_FT01.pdf": "6c6de7e7eff6cc16b15f791e638b1ec21d74c132aa3ca537c0f92297e09636e5"
+  },
+  "browser_review": "PASS: 1078px viewport, all8images loaded, no horizontal overflow, local quote calculator2x and3x cases, test values cleared."
+}

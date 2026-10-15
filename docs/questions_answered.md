@@ -1,3 +1,13 @@
+# Current FT01 answers
+
+The next recommended part is a Ø220 mm main backing with centered upright capsule opening, plus Ø124/80 mm diverter with Ø120 fallback. See [the current guide](../deliverables/current/fabrication/fit-trial/project_handoff_FT01.pdf). No integral rod tabs: leave room to align the actual factory plate and cover, then verify retention under real clamping/support.
+
+The new opening surrounds both factory connection regions; handles attach from the front. It does not prove axial adapter engagement. The attached scan preserves apparent eccentricity and is not a precision drill jig. The expert should establish factory fit first, then added-depth and sealing checks. The user confirms rods touch wood; conditional wood clearance is preferred, with no tile modification. Foam belongs to the inner plate and reaches its edge. Full contact, sound support, compatible sealing and bottom drainage are still required.
+
+Actual CAD is ready for quote/sacrificial fit trial. Finished sheet metal can be the first trial if delivered cost is about twice plastic or less; actual quotes are still needed. The digital audit passes, but no physical dry fit or water test has been performed. Earlier study answers below are historical and must not supersede FT01.
+
+---
+
 ## 2026-10-15: does correcting the centers preserve access and coverage?
 
 The separate [ALIGN02 study](../deliverables/current/fabrication/control-registration/index.html) moves the existing factory pattern and backing together with one rigid transform. Its first trial keeps the scan scale and reduces estimated cap-center residuals to about 0.50 mm. Its second uses the reported 80 mm U–L 3D length, the separate cap-center XY estimates and the old assumed tip depths to test a uniformly scaled scan state (factor 1.012273). It reduces the same residual to about 0.011 mm without resizing the physical factory/CAD parts. The lower opening position/diameter remain assumptions, so this numerical agreement is not a new accuracy claim. The original scan and numeric canon are unchanged.

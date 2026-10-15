@@ -1,0 +1,307 @@
+{
+  "revision": "FT01",
+  "status": "FOR_QUOTE_AND_DRY_FIT_ONLY",
+  "parts": [
+    {
+      "id": "FT01_MAIN_220_T1524_FIT_TRIAL",
+      "kind": "MAIN",
+      "diameter_mm": 220,
+      "thickness_mm": 1.524,
+      "stock": "T1524",
+      "volume_mm3": 35566.99065853714,
+      "plastic_solid_mass_g_at_1_27": 45.17007813634218,
+      "steel_mass_g_at_8": 284.53592526829715,
+      "files": {
+        "step": "cad/FT01_MAIN_220_T1524_FIT_TRIAL.step",
+        "stl": "cad/FT01_MAIN_220_T1524_FIT_TRIAL.stl",
+        "dxf": "cad/FT01_MAIN_220_T1524_FIT_TRIAL.dxf"
+      },
+      "sha256": {
+        "step": "a8963165b7dc3f817a9f22435fcf784c61bd7c83e78a548e2d88e3002f1adae3",
+        "stl": "5ba2c9132c540482c678ef536f4f493d0e57fd1329a51b60aed5fb0289ec8f26",
+        "dxf": "6277a825c92e429a16176854e3deb2330d681616e7e0f6e620051027b9cb50c9"
+      },
+      "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
+    },
+    {
+      "id": "FT01_MAIN_220_T3000_FIT_TRIAL",
+      "kind": "MAIN",
+      "diameter_mm": 220,
+      "thickness_mm": 3.0,
+      "stock": "T3000",
+      "volume_mm3": 70013.76113885266,
+      "plastic_solid_mass_g_at_1_27": 88.91747664634288,
+      "steel_mass_g_at_8": 560.1100891108213,
+      "files": {
+        "step": "cad/FT01_MAIN_220_T3000_FIT_TRIAL.step",
+        "stl": "cad/FT01_MAIN_220_T3000_FIT_TRIAL.stl",
+        "dxf": "cad/FT01_MAIN_220_T3000_FIT_TRIAL.dxf"
+      },
+      "sha256": {
+        "step": "a277940a93a8c7c2a02adbf83b4c86b566cf084b1f847fad85a10149ae0038fc",
+        "stl": "f8bc630d2ea60830ba7f19727026135ef2021674f802d862065804d841243618",
+        "dxf": "c41c6e5437337123a0734352ccdee1b8a0129518587d1ffe883d0d65f20baddb"
+      },
+      "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
+    },
+    {
+      "id": "FT01_DIV_124_T1524_FIT_TRIAL",
+      "kind": "DIV",
+      "diameter_mm": 124,
+      "thickness_mm": 1.524,
+      "stock": "T1524",
+      "volume_mm3": 10743.794485934975,
+      "plastic_solid_mass_g_at_1_27": 13.64461899713742,
+      "steel_mass_g_at_8": 85.9503558874798,
+      "files": {
+        "step": "cad/FT01_DIV_124_T1524_FIT_TRIAL.step",
+        "stl": "cad/FT01_DIV_124_T1524_FIT_TRIAL.stl",
+        "dxf": "cad/FT01_DIV_124_T1524_FIT_TRIAL.dxf"
+      },
+      "sha256": {
+        "step": "d42e68e6675c738e926e086085b6f0a125c9dd36fa334bbb9a34992dd67bfcf4",
+        "stl": "f7a306f40b8da5d5dee9a9d70ff6eae942ebe20283fb70535670c180f7e70796",
+        "dxf": "cf0281301c4a01ae6e481cb157039154406a2c550ba99d8006d333a6b2da4ce2"
+      },
+      "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
+    },
+    {
+      "id": "FT01_DIV_124_T3000_FIT_TRIAL",
+      "kind": "DIV",
+      "diameter_mm": 124,
+      "thickness_mm": 3.0,
+      "stock": "T3000",
+      "volume_mm3": 21149.20174396649,
+      "plastic_solid_mass_g_at_1_27": 26.859486214837442,
+      "steel_mass_g_at_8": 169.19361395173192,
+      "files": {
+        "step": "cad/FT01_DIV_124_T3000_FIT_TRIAL.step",
+        "stl": "cad/FT01_DIV_124_T3000_FIT_TRIAL.stl",
+        "dxf": "cad/FT01_DIV_124_T3000_FIT_TRIAL.dxf"
+      },
+      "sha256": {
+        "step": "870df72e8ebacbf97fbd41be6c8b64b4a4b74d7d5ec74e41ea155ca044b3f63b",
+        "stl": "9ffad454c651738d8414b10c3c21ca8dc165d690bf5ca4fc659d9d489e5e3629",
+        "dxf": "9dc7be22cbff1df0b279eac1e4ab0c759a3b246a73759a12b6a4e49d6a1346cb"
+      },
+      "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
+    },
+    {
+      "id": "FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL",
+      "kind": "DIV-FALLBACK",
+      "diameter_mm": 120,
+      "thickness_mm": 1.524,
+      "stock": "T1524",
+      "volume_mm3": 9575.574408141689,
+      "plastic_solid_mass_g_at_1_27": 12.160979498339945,
+      "steel_mass_g_at_8": 76.60459526513351,
+      "files": {
+        "step": "cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.step",
+        "stl": "cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.stl",
+        "dxf": "cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.dxf"
+      },
+      "sha256": {
+        "step": "a666b916902115e30ddf73680461a589be5df0733be9e2342a2c6c0de24141a4",
+        "stl": "74ce6e71ffdf6c45c20545ad505b1e458518c39a8bccd48893ee742adc405609",
+        "dxf": "1abb814fce91bbf4588144f76db75177c65354fc3ed9b2647ec6da3d83774b86"
+      },
+      "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
+    },
+    {
+      "id": "FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL",
+      "kind": "DIV-FALLBACK",
+      "diameter_mm": 120,
+      "thickness_mm": 3.0,
+      "stock": "T3000",
+      "volume_mm3": 18849.55592153876,
+      "plastic_solid_mass_g_at_1_27": 23.938936020354223,
+      "steel_mass_g_at_8": 150.79644737231007,
+      "files": {
+        "step": "cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.step",
+        "stl": "cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.stl",
+        "dxf": "cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.dxf"
+      },
+      "sha256": {
+        "step": "5a832640247151d954cbd54114b36610edba93b45aa1ee7d861c61e6eb037b65",
+        "stl": "0edecdde79f94742143658b7c313627ff228d661dde65193350718bd839cb1e6",
+        "dxf": "09c9c718e3a8bd5e708a0d06a65497b56a8f82e6bdcfca13b125df5a7adc7143"
+      },
+      "checks": "Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS"
+    }
+  ],
+  "design": {
+    "revision": "FT01",
+    "date": "2026-10-15",
+    "purpose": "Recommended quote and physical dry-fit baseline; permanent installation remains unreleased",
+    "supersedes_for_next_quote": [
+      "F005",
+      "CB01",
+      "AP01"
+    ],
+    "status": "FOR_QUOTE_AND_DRY_FIT_ONLY",
+    "selection_basis": "Assistant recommendation responding to the user's request for a practical prototype now, broad upright access, larger useful coverage, and an evergreen handoff. Owner has not ordered a part or accepted final installation.",
+    "main": {
+      "outer_diameter_mm": 220,
+      "aperture_width_mm": 116.35,
+      "aperture_height_mm": 151.1,
+      "aperture_radius_mm": 58.175,
+      "aperture_center_mm": [
+        0,
+        0
+      ],
+      "shape": "vertical capsule / obround",
+      "straight_side_length_mm": 34.75
+    },
+    "diverter": {
+      "outer_diameter_mm": 124,
+      "aperture_diameter_mm": 80,
+      "fallback_outer_diameter_mm": 120,
+      "aperture_status": "Clearance trial; rear factory sealing and mounting footprint remains unmeasured"
+    },
+    "stocks": [
+      {
+        "id": "T1524",
+        "thickness_mm": 1.524,
+        "use": "First metal quote: 0.060 inch stainless. Same STL for a thickness-matched plastic dry-fit print; ask printer to report actual finished thickness."
+      },
+      {
+        "id": "T3000",
+        "thickness_mm": 3.0,
+        "use": "Clear acrylic / PETG shape trial only. Adds 1.476 mm more depth than T1524. Does not qualify metal stiffness or its exact installed stack."
+      }
+    ],
+    "preferred_material": "Quote 316 stainless with deburring and directional graining. Also price 304 #4 brushed protected sheet if cheaper/faster. Appearance need not exactly match Kohler BN; owner judges finish.",
+    "locator_decision": "No integral bolt tabs or threaded custom holes in FT01. They would constrain an uncertain factory plate pose, obstruct insertion and complicate stud retraction. Center with four equal exposed-border measurements, removable tape and the actual cover. Verify retention under factory clamping and the approved bedding; if it slides, stop and redesign retention, not overtighten.",
+    "outer_appearance": "Each backing circle concentric with its actual factory cover, constant visible border. Main and diverter border widths need not match each other.",
+    "requested_shop_targets": {
+      "metal_profile_mm": 0.13,
+      "plastic_profile_mm": 0.25,
+      "flatness_mm": 0.5,
+      "thickness": "Use stated stock, report actual thickness range and finishing loss; no silent gauge substitution",
+      "edge": "Deburr both faces and all aperture edges; remove cutting microtabs, sharp corners, burr and heat tint; preserve contour",
+      "finish": "Uniform directional satin grain, same direction on both parts, protect visible face. Confirm final cost and lead time. No exact BN match promised."
+    },
+    "support": "Thin metal is a supported facing/seal landing, not a structural patch spanning unsupported stone damage. Expert must establish firm continuous support at sealing and clamping zones. No tile alteration authorized.",
+    "foam": {
+      "outer_width_mm": 130.35,
+      "outer_height_mm": 165.1,
+      "outer_corner_radius_mm": 40,
+      "radius_status": "assumed",
+      "width_mm": 6,
+      "free_depth_mm": 6,
+      "free_total_plate_depth_mm": 15.44,
+      "nominal_aperture_inset_mm": 7,
+      "nominal_extra_land_mm": 1,
+      "status": "Edge-flush foam user-confirmed; actual rear outline, compression and corner radius require physical contact verification",
+      "evaluated_outer_corner_radius_range_mm": [
+        40,
+        65.175
+      ]
+    },
+    "depth": "Added height = actual custom thickness + effective support/bedding height. Do not infer permitted engagement from free foam height or a generic 5 mm tolerance.",
+    "manufacture_scope": "Upload custom-only files for pricing or purchase a sacrificial fit trial. No permanent-installation release, vendor upload or purchase has occurred."
+  },
+  "placement_scenarios": [
+    {
+      "state": "ORIGINAL",
+      "main_margin_after_trace_mm": 7.40539333102258,
+      "gap_220_124_mm": 3.2378463437339917,
+      "gap_220_120_mm": 5.237846343733992,
+      "main_center_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "triangles_checked": 51929,
+      "conflict_triangles": 0,
+      "minimum_projected_hardware_clearance_mm": 1.9043535030559016,
+      "limit": "Prior primary-scan placement hypothesis, not a registered result from the newly attached capture"
+    },
+    {
+      "state": "RIGID",
+      "main_margin_after_trace_mm": 8.277708858928861,
+      "gap_220_124_mm": 3.057887344612084,
+      "gap_220_120_mm": 5.057887344612084,
+      "main_center_mm": [
+        4.016137549054136,
+        39.447410748902
+      ],
+      "triangles_checked": 51929,
+      "conflict_triangles": 0,
+      "minimum_projected_hardware_clearance_mm": 2.30279551321446,
+      "limit": "Prior primary-scan placement hypothesis, not a registered result from the newly attached capture"
+    },
+    {
+      "state": "CALIPER",
+      "main_margin_after_trace_mm": 7.032878745104586,
+      "gap_220_124_mm": 5.210407517260279,
+      "gap_220_120_mm": 7.210407517260279,
+      "main_center_mm": [
+        4.06542352965739,
+        39.935534698998445
+      ],
+      "triangles_checked": 51929,
+      "conflict_triangles": 0,
+      "minimum_projected_hardware_clearance_mm": 1.6057345787900437,
+      "limit": "Prior primary-scan placement hypothesis, not a registered result from the newly attached capture"
+    }
+  ],
+  "nominal_foam_extra_land_mm": 0.9999999999999999,
+  "diverter_damage_margin_original_pose_124_mm": 10.949156432344793,
+  "diverter_nominal_cover_overlap_radial_mm": 9.212499999999999,
+  "diverter_visible_border_124_mm": 12.787500000000001,
+  "main_visible_border_mm": 17.924999999999997,
+  "inner_opening_envelopes": {
+    "upper_diameter_measured_mm": 48.46,
+    "lower_diameter_assumed_mm": 50,
+    "extra_custom_clearance_upper_mm": 11,
+    "extra_custom_clearance_lower_mm": 10.87714455
+  },
+  "geometric_check_scope": "New capsule profile checked against 51,929 primary captured projected triangle pieces in each of three recorded placement hypotheses. Z >= 0.5 mm, inside OPEN-MAIN eroded 3 mm; excludes stone border/hidden geometry. No new attached-plate insertion proof; inner plate must be removed to install backing.",
+  "foam_corner_sensitivity": [
+    {
+      "outer_radius_mm": 40,
+      "extra_land_mm": 0.9999999999999999,
+      "aperture_foam_overlap_mm2": 0.0
+    },
+    {
+      "outer_radius_mm": 45,
+      "extra_land_mm": 1.0,
+      "aperture_foam_overlap_mm2": 0.0
+    },
+    {
+      "outer_radius_mm": 50,
+      "extra_land_mm": 0.9999999999999859,
+      "aperture_foam_overlap_mm2": 0.0
+    },
+    {
+      "outer_radius_mm": 55,
+      "extra_land_mm": 0.9999999999999999,
+      "aperture_foam_overlap_mm2": 0.0
+    },
+    {
+      "outer_radius_mm": 60,
+      "extra_land_mm": 0.9999999999999857,
+      "aperture_foam_overlap_mm2": 0.0
+    },
+    {
+      "outer_radius_mm": 65.175,
+      "extra_land_mm": 0.9999952938095575,
+      "aperture_foam_overlap_mm2": 0.0
+    }
+  ],
+  "new_scan": "attached_scan_assessment.json",
+  "tolerance_budget": {
+    "metal_requested_profile_mm": 0.13,
+    "minimum_nominal_foam_extra_land_mm": 0.9999999999999999,
+    "remaining_nominal_land_after_profile_target_mm": 0.8699999999999999,
+    "scan_shape_placement_foam_errors": "not bounded; remaining nominal land is not an accepted tolerance"
+  },
+  "physical_checks": "Not performed; on-site checklist governs permanent installation.",
+  "sources_sha256": {
+    "canon/fit_trial_design.json": "c02f3bca1306becb64afa0ad7b9ade8c79370402ad665960f3558c43d9c90139",
+    "canon/measurements.json": "01ac17be55e8a9cc3008f2726aef9becafdd76db12ce4b316f4134a7a3196308",
+    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883",
+    "deliverables/current/fabrication/control-registration/registration_trial.json": "597383be29cd49d5208fd4498a57161bbb39f060d6669b69c47043f630f224ee",
+    "data/raw/polycam/polycam-inner-plate-attached.zip": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91"
+  }
+}

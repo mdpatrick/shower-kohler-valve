@@ -1,0 +1,149 @@
+"""FT01: simple, manufacturable fit-trial profiles and decision evidence.
+
+The existing factory parts are retained. No scan point becomes a mounting hole.
+"""
+from pathlib import Path
+import json, math, hashlib, os, sys
+ROOT=Path(__file__).resolve().parents[2]
+OUT=ROOT/'deliverables/current/fabrication/fit-trial'
+os.environ.setdefault('MPLCONFIGDIR',str(ROOT/'build/fit_trial/matplotlib'))
+import cadquery as cq
+import ezdxf
+import trimesh
+import numpy as np
+from shapely.geometry import Point,box,Polygon,LineString
+from shapely.affinity import translate,affine_transform,scale
+import matplotlib
+matplotlib.use('Agg')
+import matplotlib.pyplot as plt
+from matplotlib.patches import Circle,Polygon as PP,Rectangle,FancyArrowPatch
+
+def read(p):return json.loads((ROOT/p).read_text())
+def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
+def rr(w,h,r):
+    if abs(w/2-r)<1e-8:return LineString([(0,-h/2+r),(0,h/2-r)]).buffer(r,quad_segs=256)
+    return box(-w/2+r,-h/2+r,w/2-r,h/2-r).buffer(r,quad_segs=256)
+def run():
+    (OUT/'cad').mkdir(parents=True,exist_ok=True)
+    d=read('canon/fit_trial_design.json');m=d['main'];parts=[]
+    for kind,od in [('MAIN',m['outer_diameter_mm']),('DIV',d['diverter']['outer_diameter_mm']),('DIV-FALLBACK',d['diverter']['fallback_outer_diameter_mm'])]:
+        for stock in d['stocks']:
+            t=stock['thickness_mm'];solid=cq.Workplane('XY').circle(od/2).extrude(t)
+            if kind=='MAIN':
+                w,h=m['aperture_width_mm'],m['aperture_height_mm'];y=(h-w)/2
+                cutter=(cq.Workplane('XY').moveTo(-w/2,-y).lineTo(-w/2,y)
+                        .threePointArc((0,h/2),(w/2,y)).lineTo(w/2,-y)
+                        .threePointArc((0,-h/2),(-w/2,-y)).close().extrude(t+2).translate((0,0,-1)))
+                innerarea=m['aperture_width_mm']*m['aperture_height_mm']-(4-math.pi)*m['aperture_radius_mm']**2
+            else:
+                ir=d['diverter']['aperture_diameter_mm']/2
+                cutter=cq.Workplane('XY').circle(ir).extrude(t+2).translate((0,0,-1));innerarea=math.pi*ir**2
+            part=solid.cut(cutter);s=part.val()
+            ident=f'FT01_{kind}_{od}_{stock["id"]}_FIT_TRIAL'
+            files={x:OUT/'cad'/(ident+'.'+x) for x in ['step','stl','dxf']}
+            cq.exporters.export(s,str(files['step']))
+            cq.exporters.export(s,str(files['stl']),tolerance=.02,angularTolerance=.05)
+            wires=part.faces('>Z').wires().translate((0,0,-t))
+            cq.exporters.export(wires,str(files['dxf']),exportType='DXF')
+            doc=ezdxf.readfile(files['dxf']);doc.units=ezdxf.units.MM;doc.saveas(files['dxf'])
+            back=cq.importers.importStep(str(files['step'])).val()
+            dxfsolid=cq.importers.importDXF(str(files['dxf'])).wires().toPending().extrude(t).val()
+            mesh=trimesh.load(files['stl'],force='mesh')
+            volume=(math.pi*(od/2)**2-innerarea)*t
+            assert s.isValid() and back.isValid() and len(back.Solids())==1
+            assert abs(back.Volume()-volume)<.01 and abs(dxfsolid.Volume()-volume)<.02
+            assert mesh.is_watertight and len(mesh.split())==1 and len(wires.vals())==2
+            assert np.max(np.abs(mesh.extents-[od,od,t]))<.06
+            parts.append({'id':ident,'kind':kind,'diameter_mm':od,'thickness_mm':t,'stock':stock['id'],
+                'volume_mm3':volume,'plastic_solid_mass_g_at_1_27':volume*.00127,'steel_mass_g_at_8':volume*.008,
+                'files':{k:str(v.relative_to(OUT)) for k,v in files.items()},'sha256':{k:sha(v) for k,v in files.items()},
+                'checks':'Valid single STEP solid, analytic volume, DXF mm/two loops/volume, STL watertight/bounds PASS'})
+    ap=rr(m['aperture_width_mm'],m['aperture_height_mm'],m['aperture_radius_mm']);outer=rr(130.35,165.1,40);foamin=rr(118.35,153.1,34)
+    foam=outer.difference(foamin)
+    assert foam.intersection(ap).area<1e-6
+    nominal_land=ap.boundary.distance(foamin.boundary)
+    align=read('deliverables/current/fabrication/control-registration/registration_trial.json')
+    cb=read('deliverables/current/fabrication/concentric-border-study/analysis.json')
+    sys.path.insert(0,str(ROOT))
+    from src.analysis.registration_trial import clipped_capture,coeff
+    pieces,_=clipped_capture(read('data/derived/resolved.json'))
+    cases=[]
+    for c in align['cases']:
+        item=c['coverage'][0]
+        placed=affine_transform(ap,coeff(np.array(c['rigid_row_rotation']),c['main_center_installed_mm']))
+        ps=[scale(p,xfact=c['scan_scale_trial'],yfact=c['scan_scale_trial'],origin=(0,0)) for p in pieces]
+        conflicts=[p.difference(placed) for p in ps if not placed.covers(p)]
+        assert sum(p.area for p in conflicts)<1e-7
+        cases.append({'state':c['id'],'main_margin_after_trace_mm':item['minimum_margin_mm'],
+                      'gap_220_124_mm':item['diverter_gap_mm']-2,'gap_220_120_mm':item['diverter_gap_mm'],
+                      'main_center_mm':c['main_center_installed_mm'],
+                      'triangles_checked':len(ps),'conflict_triangles':len(conflicts),
+                      'minimum_projected_hardware_clearance_mm':min(placed.boundary.distance(p) for p in ps),
+                      'limit':'Prior primary-scan placement hypothesis, not a registered result from the newly attached capture'})
+    report={'revision':'FT01','status':d['status'],'parts':parts,'design':d,'placement_scenarios':cases,
+      'nominal_foam_extra_land_mm':nominal_land,
+      'diverter_damage_margin_original_pose_124_mm':cb['variants'][0]['minimum_diverter_margin_mm']+2,
+      'diverter_nominal_cover_overlap_radial_mm':(98.425-80)/2,
+      'diverter_visible_border_124_mm':(124-98.425)/2,
+      'main_visible_border_mm':(220-184.15)/2,
+      'inner_opening_envelopes':{'upper_diameter_measured_mm':48.46,'lower_diameter_assumed_mm':50,'extra_custom_clearance_upper_mm':11,'extra_custom_clearance_lower_mm':10.87714455},
+      'geometric_check_scope':'New capsule profile checked against 51,929 primary captured projected triangle pieces in each of three recorded placement hypotheses. Z >= 0.5 mm, inside OPEN-MAIN eroded 3 mm; excludes stone border/hidden geometry. No new attached-plate insertion proof; inner plate must be removed to install backing.',
+      'foam_corner_sensitivity':[{'outer_radius_mm':rad,'extra_land_mm':ap.boundary.distance(rr(118.35,153.1,rad-6).boundary),'aperture_foam_overlap_mm2':ap.intersection(rr(130.35,165.1,rad).difference(rr(118.35,153.1,rad-6))).area} for rad in [40,45,50,55,60,65.175]],
+      'new_scan':'attached_scan_assessment.json',
+      'tolerance_budget':{'metal_requested_profile_mm':.13,'minimum_nominal_foam_extra_land_mm':nominal_land,
+                         'remaining_nominal_land_after_profile_target_mm':nominal_land-.13,
+                         'scan_shape_placement_foam_errors':'not bounded; remaining nominal land is not an accepted tolerance'},
+      'physical_checks':'Not performed; on-site checklist governs permanent installation.',
+      'sources_sha256':{p:sha(ROOT/p) for p in ['canon/fit_trial_design.json','canon/measurements.json','data/derived/resolved.json','deliverables/current/fabrication/control-registration/registration_trial.json','data/raw/polycam/polycam-inner-plate-attached.zip']}}
+    (OUT/'design_report.json').write_text(json.dumps(report,indent=2)+'\n')
+    figures(report,ap,outer,foamin)
+    print('FT01: six valid STEP/STL/DXF part sets; no integral mounting tabs; report and figures saved.')
+
+def figures(report,ap,outer,foamin):
+    plt.rcParams.update({'font.family':'DejaVu Sans','font.size':10})
+    fig,ax=plt.subplots(figsize=(8,8))
+    ax.add_patch(Circle((0,0),110,facecolor='#b6d1d7',edgecolor='#1d5260',lw=1.5))
+    ax.add_patch(PP(np.array(ap.exterior.coords),facecolor='white',edgecolor='#16768c',lw=2))
+    for p in [outer,foamin]:ax.plot(*p.exterior.xy,color='#aa7624',lw=1.8)
+    ax.add_patch(Circle((0,0),92.075,fill=False,ls='--',edgecolor='#58636a'))
+    for y,r,label in [(40.32,24.23,'U: factory opening'),(-39.672855,25,'L: size provisional')]:
+        ax.add_patch(Circle((0,y),r,fill=False,edgecolor='#815fa1',lw=1.7))
+        ax.text(0,y,label,ha='center',va='center',fontsize=9)
+    ax.annotate('Vertical capsule opening\n116.35 x 151.10, end R58.175',xy=(52,40),xytext=(0,121),ha='center',arrowprops={'arrowstyle':'->','color':'#16768c'})
+    ax.annotate('Approximate foam band\n6 mm wide, flush to edge',xy=(-63,5),xytext=(-112,-115),ha='left',arrowprops={'arrowstyle':'->','color':'#aa7624'})
+    ax.annotate('220 mm outer circle',xy=(106,-26),xytext=(12,-119),arrowprops={'arrowstyle':'->','color':'#1d5260'})
+    ax.set_aspect('equal');ax.set(xlim=(-127,127),ylim=(-130,135));ax.axis('off')
+    fig.suptitle('The custom part leaves both factory openings clear',fontsize=16)
+    fig.text(.5,.035,'Gold is a nominal footprint, not a verified seal. Only 1 mm extra land inside the assumed foam.\nPurple circles belong to the factory inner plate; they are not extra holes cut in this part.',ha='center',fontsize=9)
+    fig.savefig(OUT/'access.png',dpi=170);plt.close(fig)
+
+    fig,axs=plt.subplots(1,2,figsize=(11.4,6.6))
+    for ax,div in zip(axs,[124,120]):
+        for cy,dia,cover in [(0,220,184.15),(-175.237846,div,98.425)]:
+            ax.add_patch(Circle((0,cy),dia/2,facecolor='#8fb6bf',edgecolor='#326674'))
+            ax.add_patch(Circle((0,cy),cover/2,facecolor='#dadcda',edgecolor='#69757a'))
+        ax.text(0,0,'MAIN\n220 mm',ha='center',va='center',fontsize=13)
+        ax.text(0,-175.237846,f'DIVERTER\n{div} mm',ha='center',va='center',fontsize=12)
+        gap=175.237846-(220+div)/2
+        ax.annotate(f'{gap:.2f} mm gap*',xy=(1,-111),xytext=(70,-132),arrowprops={'arrowstyle':'->'},fontsize=10)
+        ax.set_aspect('equal');ax.set(xlim=(-122,125),ylim=(-250,125));ax.axis('off')
+        ax.set_title('Recommended larger companion' if div==124 else 'Fallback: more space between plates',fontsize=12)
+    fig.text(.5,.035,'*Original placement estimate. Recentered scale trial gives 5.21 / 7.21 mm. These are scenarios, not bounds.\nIncreasing either diameter consumes half that increase from the gap. Verify with both real covers.',ha='center',fontsize=10)
+    fig.tight_layout(rect=[0,.1,1,.98]);fig.savefig(OUT/'sizes.png',dpi=165);plt.close(fig)
+
+    fig,ax=plt.subplots(figsize=(11,4.8));ax.set(xlim=(-8,118),ylim=(-8,58));ax.axis('off')
+    # Diagrammatic section: horizontal is outward depth; vertical is position around opening.
+    colors=['#c9bfa9','#6c99a5','#b18b48','#b4b8b7','#d5d8d7']
+    labels=['Travertine /\nsound support','Custom plate\n1.524 mm','Factory foam\n6 mm FREE','Factory\ninner plate','Factory cover\nand handle']
+    for x,w,col,lab in zip([0,26,45,64,86],[13,5,8,8,10],colors,labels):
+        ax.add_patch(Rectangle((x,12),w,30,facecolor=col,edgecolor='#4f646a'))
+        ax.text(x+w/2,52,lab,ha='center',va='top',fontsize=10)
+    ax.text(19,20,'Bedding /\nseal detail\nby expert',rotation=90,ha='center',va='center',fontsize=8)
+    ax.add_patch(FancyArrowPatch((12,5),(97,5),arrowstyle='->',mutation_scale=15,color='#2c6070'))
+    ax.text(57,0,'Toward shower / added thickness consumes engagement',ha='center',fontsize=11)
+    ax.text(110,26,'Handle\nconnects\nfrom front',ha='center',fontsize=10)
+    fig.suptitle('Keep the factory attachment and sealing sequence',fontsize=16)
+    fig.text(.5,.025,'Exploded section, not to scale. Effective bedding height and foam compression are not yet specified.\nPreserve the factory bottom drain. The backing does not repair concealed waterproofing by itself.',ha='center',fontsize=10)
+    fig.savefig(OUT/'stack.png',dpi=170);plt.close(fig)
+
+if __name__=='__main__':run()

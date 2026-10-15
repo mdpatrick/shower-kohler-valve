@@ -1,3 +1,5 @@
+**Current: FT01 quote and dry-fit package.** Start with [START_HERE.md](START_HERE.md) or the [current illustrated review](deliverables/current/fabrication/fit-trial/index.html). Older linked studies below remain historical.
+
 # Shower / Kohler installation
 
 Private local reconstruction and repair study, using a preserved Polycam wall scan, CadQuery geometry, Blender inspection and a browser measurement worksheet. **R001 is provisional and not for fabrication.**
