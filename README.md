@@ -13,9 +13,13 @@ cd ~/Code/shower-kohler-valve
 ./project review       # local review + measurement form
 ./project build        # reuse unchanged stages; never write accepted canon
 ./project validate     # evidence, revision and snapshot integrity
+./project query dimension main.outer_diameter_mm
 ./project query coverage CUT-03
-./project query solid CUSTOM-01
+./project query solid MAIN  # current FT01 STEP, default 1.524 mm stock
+./project query historical solid PLATE-INNER  # provisional factory reference
 ./project handoff      # full committed Git bundle + compact analysis review
 ```
 
 The three complete original archives are tracked directly in ordinary Git under `data/raw/polycam`. All normal processing uses those copies, independent of Downloads. No external hosting or scan uploads. See [setup and restoration](environment/README.md), [executed checks](docs/validation/README.md), and the [downstream audit prompt](docs/downstream_audit_prompt.md).
+
+Current design queries distinguish FT01 from the R005 measurement evidence and older reconstruction. Old candidate dimensions, sections and rejected trial assemblies are labeled historical; they cannot establish current fit. Run `./project query` for operation names and scope.

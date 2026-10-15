@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-15",
+  "design_revision": "FT01",
+  "evidence_revision": "R005",
+  "status": "PASS_SOFTWARE_CHECKS_ONLY",
+  "problem": "Default query labeled the old 230 mm / 3.175 mm reconstruction as FT01 and returned historical coverage and STEP results.",
+  "correction": "Default design/solid/coverage/clearance/depth/state queries use current FT01 sources. Older reconstruction queries explicitly carry historical scope. Evidence-registry queries retain observed/reference provenance.",
+  "executed_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_current_queries -v",
+    "count": 5,
+    "result": "PASS",
+    "scope": [
+      "actual CLI current/historical routing and error exits",
+      "real main and alternate diverter STEP read-back",
+      "eight documented main traces in all three placement hypotheses",
+      "rejection of changed parameters or stale source hashes",
+      "null unknown installed depths and historical section/landmark scope",
+      "accepted canon and project state unchanged"
+    ]
+  },
+  "current_main_mm": {
+    "diameter": 220,
+    "default_thickness": 1.524
+  },
+  "original_pose_CUT03_margin_after_trace_mm": 7.40539333102258,
+  "physical_fit": "NOT PERFORMED",
+  "permanent_installation_release": false,
+  "geometry_changed": false,
+  "sources_sha256": {
+    "scripts/project.py": "d3773d8a997f08668305b2138b6ec5d7a1a13a69e1fac1c29a3c06e79766702d",
+    "src/analysis/fit_trial_query.py": "7c179a0d62aadbac239f6e6b737e09a32e7cd153fe1551be1b6edf18a3e7043c",
+    "tests/test_current_queries.py": "e9ae585d7f4a58ccf61d30d03b76ddbae136b1fad4670b26b22015d489d31dc2"
+  }
+}

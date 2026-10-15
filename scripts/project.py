@@ -281,9 +281,13 @@ def validate(git_objects=False):
     write('docs/validation/latest_integrity.json',result);print(json.dumps(result,indent=2))
     if errors:raise SystemExit(1)
     return result
-def query(args):
+def historical_query(args,scope='historical_reconstruction'):
     op=args[0] if args else 'help';r=read('deliverables/current/analysis/resolved.json');checks=read('deliverables/current/analysis/checks.json')
-    header={'units':'mm','revision':r['revision'],'state':read('canon/project_state.json')['working_state'],'scale_status':r['scale_status']}
+    header={'units':'mm','evidence_revision':r['revision'],'state':scope,'scale_status':r['scale_status'],
+            'current_design_revision':read('canon/project_state.json')['fabrication_design_revision'],
+            'current_design_fit_result':False,
+            'source':'deliverables/current/analysis/resolved.json',
+            'scope_note':'Preserved evidence/reference reconstruction and old diagnostic assemblies. Historical candidate dimensions and clashes do not describe the current FT01 part.'}
     if op=='features':result=r['features'] if len(args)==1 else next((f for f in r['features'] if f['id']==args[1]),None)
     elif op=='dimension':
         id=args[1];accepted=[m for m in read('canon/measurements.json')['measurements'] if m['id']==id]
@@ -314,6 +318,28 @@ def query(args):
         s=cq.importers.importStep(str(ROOT/p['step'])).val();b=s.BoundingBox();result={'method':'recomputed exact OCCT solid query of provisional design','id':id,'bounds_local_mm':[[b.xmin,b.ymin,b.zmin],[b.xmax,b.ymax,b.zmax]],'volume_mm3':s.Volume(),'is_valid':s.isValid(),'provenance':p['evidence'],'physical_fit':'UNRESOLVED'}
     else:result={'operations':['features [ID]','dimension <M-ID or candidate.diameter_mm>','measure <landmark-ID> <landmark-ID>','coverage [feature-ID]','clearance','depth','reconcile-centers','section controls|studs','compare-states','solid CUSTOM-01|PLATE-INNER|TRIM-OUTER','validate']}
     print(json.dumps(dict(header,result=result),indent=2))
+
+def query(args):
+    # Historical reconstructions must never inherit the current design's label.
+    sys.path.insert(0,str(ROOT))
+    from src.analysis.fit_trial_query import CurrentQuery,QueryError
+    op=args[0] if args else 'help'
+    try:
+        if op=='historical':
+            if len(args)<2:raise QueryError('Specify a historical operation, e.g. historical solid PLATE-INNER.')
+            return historical_query(args[1:])
+        if op in ['features','measure']:
+            counts=(1,2) if op=='features' else (3,3)
+            if not counts[0]<=len(args)<=counts[1]:raise QueryError('Use features [ID] or measure <landmark-ID> <landmark-ID>.')
+            return historical_query(args,scope='preserved_evidence_registry')
+        if op in ['section','reconcile-centers']:
+            return historical_query(args)
+        if op=='validate':return validate()
+        print(json.dumps(CurrentQuery(ROOT).run(args),indent=2))
+    except (QueryError,KeyError,IndexError,StopIteration,FileNotFoundError) as error:
+        print(json.dumps({'status':'QUERY_ERROR','error':str(error) or 'Unknown historical feature or part; inspect query help.',
+                          'physical_fit':'NOT PERFORMED'},indent=2))
+        raise SystemExit(2)
 def review(no_open=False):
     port=int(os.environ.get('PROJECT_REVIEW_PORT','8765'))
     current=(ROOT/'deliverables/current/fabrication/fit-trial/index.html').exists()

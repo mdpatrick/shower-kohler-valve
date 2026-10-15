@@ -6,6 +6,8 @@ The new opening surrounds both factory connection regions; handles attach from t
 
 Actual CAD is ready for quote/sacrificial fit trial. Finished sheet metal can be the first trial if delivered cost is about twice plastic or less; actual quotes are still needed. The digital audit passes, but no physical dry fit or water test has been performed. Earlier study answers below are historical and must not supersede FT01.
 
+For machine-readable current answers, use `./project query dimension main.outer_diameter_mm`, `solid MAIN`, `coverage CUT-03`, `clearance` or `depth`. These identify the design revision, evidence revision, source hashes and calculation method. CUT-03's original-pose margin beyond the traced edge allowance is about 7.41 mm for FT01's 220 mm circle; it is not the historical 12.41 mm result for a 230 mm circle, and neither establishes sound support or sealing. The current thickness default is 1.524 mm. Query historical reconstructions explicitly with `./project query historical ...`; the old sections/assemblies remain diagnostics. No query or positive nominal margin completes a physical check.
+
 ---
 
 ## 2026-10-15: does correcting the centers preserve access and coverage?
