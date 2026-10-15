@@ -3,7 +3,7 @@
   "revision": "R005",
   "date": "2026-10-15",
   "selected_state": null,
-  "working_state": "CB01_circular_pairs_with_AP01_upright_access_candidates",
+  "working_state": "AP01_upright_candidates_with_ALIGN01_center_registration_hold",
   "states": {
     "as_observed_at_capture": "preserved scan; capture date unknown; user reports no changes since capture on 2026-10-14",
     "manufacturer_intended": "Documented layer/fastener order and original-finished-wall stud limit only; no physically verified installed geometry",
@@ -14,7 +14,7 @@
   "readiness": {
     "evidence_preserved": true,
     "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed.",
-    "geometric_fit": "AP01 upright opening encloses the historical F005 aperture and the measured upper inner-opening footprint at the provisional placement. All 51,929 selected forward triangle projections clear. Uniform 6 mm edge-flush foam scenario leaves 1 mm nominal extra land; corners, actual alignment, compression, hidden adapter geometry, axial engagement, support and sealing remain unverified. LOC01 tabs remain a separate conflicting diagnostic.",
+    "geometric_fit": "AP01 exported geometry checks remain valid for the original provisional placement. ALIGN01 identifies unverified U/L surface picks near tip-cap edges, roughly 3 mm from separately fitted cap centers. Actual rigid factory-plate registration, both control axes, studs, foam landing, wall coverage and neighbor spacing must be reconciled before selecting installed placement. Do not treat old point-based clearance, depth or caliper reconciliation as verified axis-center fit.",
     "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
@@ -38,7 +38,7 @@
   "post_scan_state_observation": "OBS-POST-SCAN-01",
   "depth_review_observation": "OBS-DEPTH-REVIEW-01",
   "depth_inquiry_record": "docs/physical_checks/depth_inquiry_2026-10-14.json",
-  "latest_user_state_note": "Foam is attached to the removed inner plate and meets its outer metal edge. User now confirms 4.56-inch rods contact the wood surface and prefers/authorizes wood clearance holes if needed for retraction, conditional on other valve/handle depth checks. User specifically requests upright aperture comparison and handle access. No new physical modification or numeric dimension reported.",
+  "latest_user_state_note": "User reports knob bodies appear similar in diameter to the inner-plate openings and flags off-center U/L in AP01. No new numeric reading. ALIGN01 finds original U/L landmarks near left tip-cap edges; approximately 3 mm lateral cap-center discrepancy requires registration reconciliation. Prior foam-edge and wood-contact corrections remain accepted.",
   "inner_plate_measurement_record": "docs/physical_checks/inner_plate_2026-10-14.json",
   "inner_plate_foam_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
   "outer_plate_measurement_record": "docs/physical_checks/outer_plate_2026-10-14.json",
@@ -61,5 +61,7 @@
   "foam_edge_and_access_record": "docs/physical_checks/foam_edge_and_access_2026-10-15.json",
   "aperture_access_study": "canon/aperture_access_study.json",
   "aperture_access_review": "deliverables/current/fabrication/aperture-access/index.html",
-  "current_blender_access_study": "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.blend"
+  "current_blender_access_study": "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.blend",
+  "control_alignment_observation": "docs/physical_checks/control_alignment_2026-10-15.json",
+  "control_alignment_audit": "deliverables/current/fabrication/aperture-access/control_alignment.json"
 }

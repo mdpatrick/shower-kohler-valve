@@ -1,3 +1,7 @@
+## Latest priority: reconcile actual control centers (ALIGN01)
+
+The user flags U/L appearing off-center and says knobs look similar in diameter to the inner openings. Preserve this qualitative observation without inventing knob measurements. The separate ALIGN01 audit finds the old U/L landmarks near left tip-cap edges, approximately 3 mm from fitted cap centers. Those fits are unselected scan diagnostics, not physical shaft axes. Reconcile both controls, studs, the rigid factory inner plate and cover together, including plate-plane axis tilt and actual rearward connection diameters. Preserve original scan/coordinates and all accepted measurements. Recheck custom-aperture clearance, continuous foam landing, circular border registration, wall damage coverage, diverter spacing and axial handle engagement after a justified placement is selected. Do not relax machining tolerances to absorb this model error or call a large backing aperture proof of factory-interface fit.
+
 # October 15 clarification: handle access takes priority
 
 Preserve the full scope below. Incorporate `docs/physical_checks/foam_edge_and_access_2026-10-15.json`: foam is attached to the removed inner plate and reaches its outside edge; the 4.56-inch rods meet the wood. The user prefers and authorizes clearance holes in the wood if needed to retract the trim studs, conditional on the valve and handle-stem depths being acceptable. This does not establish drill dimensions or authorize tile modification.

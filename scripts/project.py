@@ -163,6 +163,10 @@ def prepare_rear(force=False,preserve=True):
         sys.path.insert(0,str(ROOT/'src/fabrication'))
         from aperture_access import attach_panel
         attach_panel()
+    if (ROOT/'deliverables/current/fabrication/aperture-access/control_alignment.json').exists():
+        sys.path.insert(0,str(ROOT/'src/analysis'))
+        from control_alignment import attach_panel as attach_alignment_panel
+        attach_alignment_panel()
     # The existing documents stage owns this HTML; acknowledge the evidence panel
     # without invalidating its already-reviewed PDF or manufacturing ZIP outputs.
     cache=ROOT/'build/concentric_stages.json'
@@ -183,6 +187,8 @@ def prepare_aperture(stage='all'):
     prepare_rear(force=False,preserve=False)
     if stage in ('all','blender'):
         run([sys.executable,'src/fabrication/audit_aperture.py'])
+    if (ROOT/'docs/physical_checks/control_alignment_2026-10-15.json').exists():
+        run([sys.executable,'src/analysis/control_alignment.py'])
     publish_manifest()
 
 def validate(git_objects=False):
@@ -314,6 +320,7 @@ def main():
     rear=sub.add_parser('prepare-rear');rear.add_argument('--force',action='store_true')
     ap=sub.add_parser('prepare-aperture');ap.add_argument('--stage',choices=['all','analysis','blender'],default='all')
     sub.add_parser('audit-aperture')
+    sub.add_parser('audit-control-alignment')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -329,6 +336,9 @@ def main():
     elif args.command=='prepare-rear':prepare_rear(args.force)
     elif args.command=='prepare-aperture':prepare_aperture(args.stage)
     elif args.command=='audit-aperture':run([sys.executable,'src/fabrication/audit_aperture.py'])
+    elif args.command=='audit-control-alignment':
+        run([sys.executable,'src/analysis/control_alignment.py'])
+        publish_manifest()
     elif args.command=='review':review(args.no_open)
     elif args.command=='validate':validate(args.git_objects)
     elif args.command=='query':query(args.args)

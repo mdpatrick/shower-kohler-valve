@@ -1,0 +1,41 @@
+{
+  "id": "ALIGN01-VALIDATION",
+  "date": "2026-10-15",
+  "status": "PASS for diagnostic computation and reviewed figure",
+  "executed": [
+    "Original primary vertices transformed in bounded chunks; no full mesh load",
+    "Seven front-depth-band cap fits per control",
+    "Independent algebraic circle centers agree within 0.03 mm",
+    "Separate existing STL crop centers agree with original-vertex fits within 0.001 mm",
+    "Input SHA-256 records verified",
+    "Existing numeric evidence, CAD, PDF and Blender bytes unchanged in Git",
+    "Both review pages have one correction panel and valid local panel links",
+    "Python syntax compilation passed",
+    "Final plotted PNG visually inspected for labels, scale and legibility"
+  ],
+  "local_review": "PASS: localhost response matches saved review bytes and includes the alignment correction",
+  "browser_visual_layout": "Not newly inspected; static PNG inspected directly. No new browser tabs or Blender process launched.",
+  "figure_sha256": "994af63db1a02167e64ec59f891ac945a606854fc20b8b084330f65fa14cb0d5",
+  "analysis_sha256": "5db0818f7e566342bb8d2019b2f6db96c2c947f5d0f80e70629f4922a46ef14f",
+  "preserved_git_blobs": {
+    "canon/features.json": "59ed98fe72f2b6a0414b82f2cb8cb7738b18ef02",
+    "canon/measurements.json": "88b87fcc942ecfb23389b08946341098d8d6a5fc",
+    "canon/transforms.json": "42f84caed53f1a60b20d1cf1d0fee5e44a21b1a8",
+    "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.blend": "266ba2a109576d3b0f560a8c54d8dcf5223de0d6",
+    "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.pdf": "34fe52f11c73bdfed63f4d7374fedbc2b0a11ac5",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "5d83f740835756a649e8e9316b7f07f76b1c0cc2",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "5ea67444df9517209d8e1f5f1ea0d2637431048f",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.step": "62836c8d0ed387dde7732ad28b8b032b6a09758b",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "44798c3bb5c4613aa9bdeffc5f94958c522b2a59",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.step": "5332becddb7ff951aed5eb970ac1d2d85d12bd07",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "9d7933da379680b8e959d13aaa0a74b594853650",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2_AP01_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf": "453e07cd543a37a7404a159deafd069b065ef21f",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.step": "aaa29769dae0339edbc62896b387bd9b7e9663cd",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1_AP01_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf": "fb6901cd322d9a882e7cf74e54b478770ac8ca7f",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.step": "d8a72347415c14e9bd398428031c8518735b04be"
+  },
+  "physical_axis_registration": "UNRESOLVED",
+  "physical_fit": "UNPERFORMED",
+  "fabrication_release": "HOLD",
+  "recovery": "Ordinary Git checkpoint; no new full bundle/clone due ongoing memory pressure."
+}

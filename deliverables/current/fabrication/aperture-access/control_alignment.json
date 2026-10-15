@@ -1,0 +1,251 @@
+{
+  "id": "ALIGN01",
+  "status": "DIAGNOSTIC_ONLY_NOT_A_REGISTERED_CORRECTION",
+  "date": "2026-10-15",
+  "method": "For each unchanged tip neighborhood (12 mm radius), take the top 0.35\u20133 mm of captured vertices, fit a circle to the projected convex hull, and independently compare an algebraic circle fit. Show the 2 mm-band result. No shaft-axis angle or center at the plate plane is inferred.",
+  "controls": [
+    {
+      "control": "L",
+      "stored_surface_point_mm": [
+        -4.496403249731884e-15,
+        -7.549516567451064e-15,
+        33.40186167467328
+      ],
+      "reference_opening_center_xy_mm": [
+        -4.440892098500626e-15,
+        -7.105427357601002e-15
+      ],
+      "reference_opening_diameter_mm": 50,
+      "reference_opening_status": "unmeasured display reference",
+      "stored_point_to_reference_offset_mm": 4.47545209131181e-16,
+      "diagnostic_cap_center_xy_mm": [
+        3.2816814588510472,
+        0.26940842901302303
+      ],
+      "cap_frontmost_sample_z_mm": 33.668031153135885,
+      "fit_to_stored_delta_xy_mm": [
+        3.2816814588510517,
+        0.2694084290130306
+      ],
+      "fit_to_reference_opening_offset_mm": 3.2927213819256003,
+      "display_crop_center_readback_difference_mm": 2.830400155560689e-08,
+      "cap_center_band_sensitivity_span_xy_mm": [
+        0.11322266700886985,
+        0.03723295217173375
+      ],
+      "trials": [
+        {
+          "depth_band_mm": 0.35,
+          "vertices": 289,
+          "center_xy_mm": [
+            3.391289504506361,
+            0.24615800705717064
+          ],
+          "radius_mm": 3.3942452917313877,
+          "radial_residual_rms_mm": 0.07181680907082803,
+          "algebraic_center_difference_mm": 0.00041741975153687487
+        },
+        {
+          "depth_band_mm": 0.5,
+          "vertices": 366,
+          "center_xy_mm": [
+            3.3523890260237326,
+            0.2716789696226591
+          ],
+          "radius_mm": 3.5849366065394603,
+          "radial_residual_rms_mm": 0.08389208853667277,
+          "algebraic_center_difference_mm": 0.0010785287083469573
+        },
+        {
+          "depth_band_mm": 1,
+          "vertices": 498,
+          "center_xy_mm": [
+            3.3081551041972888,
+            0.2748837685762353
+          ],
+          "radius_mm": 3.7855330052706893,
+          "radial_residual_rms_mm": 0.05623397507508429,
+          "algebraic_center_difference_mm": 0.0008281810614374884
+        },
+        {
+          "depth_band_mm": 1.5,
+          "vertices": 559,
+          "center_xy_mm": [
+            3.2917826997336386,
+            0.2833909592289044
+          ],
+          "radius_mm": 3.8028126988176902,
+          "radial_residual_rms_mm": 0.06747482883566139,
+          "algebraic_center_difference_mm": 0.0013423721565596874
+        },
+        {
+          "depth_band_mm": 2,
+          "vertices": 607,
+          "center_xy_mm": [
+            3.2816814588510472,
+            0.26940842901302303
+          ],
+          "radius_mm": 3.8229334787847806,
+          "radial_residual_rms_mm": 0.07818418976280873,
+          "algebraic_center_difference_mm": 0.001965025868877217
+        },
+        {
+          "depth_band_mm": 2.5,
+          "vertices": 652,
+          "center_xy_mm": [
+            3.2780668374974913,
+            0.2694168437651948
+          ],
+          "radius_mm": 3.829518687321444,
+          "radial_residual_rms_mm": 0.08305483929331582,
+          "algebraic_center_difference_mm": 0.0023475653675066113
+        },
+        {
+          "depth_band_mm": 3,
+          "vertices": 711,
+          "center_xy_mm": [
+            3.2795522860658304,
+            0.26460893426481646
+          ],
+          "radius_mm": 3.828927426346555,
+          "radial_residual_rms_mm": 0.08328903384633903,
+          "algebraic_center_difference_mm": 0.002583062021566022
+        }
+      ]
+    },
+    {
+      "control": "U",
+      "stored_surface_point_mm": [
+        1.598388807216021,
+        79.34571089931099,
+        31.95481637340469
+      ],
+      "reference_opening_center_xy_mm": [
+        1.598388807216021,
+        79.99285544965548
+      ],
+      "reference_opening_diameter_mm": 48.46,
+      "reference_opening_status": "upper diameter/top gap measured; horizontal centering provisional",
+      "stored_point_to_reference_offset_mm": 0.6471445503444926,
+      "diagnostic_cap_center_xy_mm": [
+        4.749687958248851,
+        79.27255698538335
+      ],
+      "cap_frontmost_sample_z_mm": 32.11723757760042,
+      "fit_to_stored_delta_xy_mm": [
+        3.1512991510328296,
+        -0.0731539139276407
+      ],
+      "fit_to_reference_opening_offset_mm": 3.23257114646113,
+      "display_crop_center_readback_difference_mm": 7.538194482932839e-07,
+      "cap_center_band_sensitivity_span_xy_mm": [
+        0.17473057306103978,
+        0.2530596924414823
+      ],
+      "trials": [
+        {
+          "depth_band_mm": 0.35,
+          "vertices": 303,
+          "center_xy_mm": [
+            4.589862340853841,
+            79.0267870899389
+          ],
+          "radius_mm": 3.1489702696141983,
+          "radial_residual_rms_mm": 0.1348752324664689,
+          "algebraic_center_difference_mm": 0.002880285344805191
+        },
+        {
+          "depth_band_mm": 0.5,
+          "vertices": 364,
+          "center_xy_mm": [
+            4.638811173067138,
+            79.18500916153714
+          ],
+          "radius_mm": 3.363949973393141,
+          "radial_residual_rms_mm": 0.11651930614407675,
+          "algebraic_center_difference_mm": 0.002747525602725268
+        },
+        {
+          "depth_band_mm": 1,
+          "vertices": 512,
+          "center_xy_mm": [
+            4.741986002105767,
+            79.26258326860975
+          ],
+          "radius_mm": 3.645510250730516,
+          "radial_residual_rms_mm": 0.04455629390909077,
+          "algebraic_center_difference_mm": 0.0009421369399762111
+        },
+        {
+          "depth_band_mm": 1.5,
+          "vertices": 586,
+          "center_xy_mm": [
+            4.738557457532127,
+            79.26855937464771
+          ],
+          "radius_mm": 3.6807213594052715,
+          "radial_residual_rms_mm": 0.03601079276962463,
+          "algebraic_center_difference_mm": 0.00024086882937688578
+        },
+        {
+          "depth_band_mm": 2,
+          "vertices": 638,
+          "center_xy_mm": [
+            4.749687958248851,
+            79.27255698538335
+          ],
+          "radius_mm": 3.690438161571259,
+          "radial_residual_rms_mm": 0.03417965565434453,
+          "algebraic_center_difference_mm": 0.00018056542850211982
+        },
+        {
+          "depth_band_mm": 2.5,
+          "vertices": 695,
+          "center_xy_mm": [
+            4.7600776540454195,
+            79.27724668454536
+          ],
+          "radius_mm": 3.6968576058152136,
+          "radial_residual_rms_mm": 0.03502683333253163,
+          "algebraic_center_difference_mm": 0.000181434335879902
+        },
+        {
+          "depth_band_mm": 3,
+          "vertices": 746,
+          "center_xy_mm": [
+            4.764592913914881,
+            79.27984678238039
+          ],
+          "radius_mm": 3.6994531987257773,
+          "radial_residual_rms_mm": 0.03589679687392442,
+          "algebraic_center_difference_mm": 0.00020229102444036613
+        }
+      ]
+    }
+  ],
+  "interpretation": "Original picks lie near the left edge of both cap footprints. L reference circle reused its pick and is not independent evidence. U measured top-gap placement differs by 0.647 mm from its pick. Neither pick is a demonstrated axis center.",
+  "input_sha256": {
+    "data/derived/shower-hole-valve-polycam-vertices.npy": "d46fd5e1203d9ed6d577f293e0e46954a687a42f85ce40a783840ab736a844c5",
+    "data/derived/registration.json": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3",
+    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883",
+    "canon/features.json": "bc2a80a67c9114721891d66cd5c606725f4c4851a9259d429096470303f0cce9",
+    "src/analysis/control_alignment.py": "132b84181fa3176bf05c104b14ae2e27226eb7f12905b2a2a0b286826135c629"
+  },
+  "unchanged": [
+    "Original scans and transforms",
+    "R005 numeric measurements",
+    "AP01 CAD",
+    "Factory-opening reference positions",
+    "Existing Blender snapshots"
+  ],
+  "limits": [
+    "Unbounded scan scale/distortion and physical registration uncertainty",
+    "Cap fit is not a measured shaft axis, hidden mating profile or engagement depth",
+    "Tiny residuals and band sensitivity do not bound real-world error",
+    "The lower inner opening diameter and placement remain unmeasured",
+    "User knob-size observation is qualitative; no numerical diameter accepted",
+    "Moving the factory plate alone invalidates the current nominal foam-land relation; moving the whole assembly needs new coverage and diverter-spacing checks"
+  ],
+  "physical_fit": "UNPERFORMED",
+  "fabrication_release": "HOLD"
+}

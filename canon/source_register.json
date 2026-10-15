@@ -284,6 +284,15 @@
       "applicability": "Accepted qualitative observations and conditional wood-relief authorization, no new dimensions or physical fit result.",
       "sha256": "746cffeda2d11a2314672951786468d6ad266e8e920fe089d28bdf6c73335889",
       "size_bytes": 3046
+    },
+    {
+      "id": "SRC-USER-CONTROL-ALIGNMENT-01",
+      "path": "docs/physical_checks/control_alignment_2026-10-15.json",
+      "date": "2026-10-15",
+      "title": "User flags nonconcentric opening references and reports similar apparent knob size",
+      "applicability": "Qualitative observation and model-review concern only; no measured knob diameter or accepted axis correction.",
+      "sha256": "c7616ecf097e1faed891ab16b422a35ebfae713f1403246e0f70a7ec9ca0827a",
+      "size_bytes": 1882
     }
   ]
 }

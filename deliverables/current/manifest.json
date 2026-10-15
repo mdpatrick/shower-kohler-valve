@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "8911e341f988eb981f241c353d3045e983528e43",
+  "source_commit": "d5458aeb49e253c92cfd3c337256b98829401eaa",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "c5351d52a97fbe0dd7c82b4eb6f2c9c176eb7be066c3e7fd6fe217aa5fed7262",
+  "source_tree_hash": "0b36489e14d09dde03c8889549d26a77e70dd0373b22a8e60f1e55f1cee6ae5f",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -652,9 +652,19 @@
       "size_bytes": 16462
     },
     {
+      "path": "deliverables/current/fabrication/aperture-access/control_alignment.json",
+      "sha256": "5db0818f7e566342bb8d2019b2f6db96c2c947f5d0f80e70629f4922a46ef14f",
+      "size_bytes": 8951
+    },
+    {
+      "path": "deliverables/current/fabrication/aperture-access/control_alignment.png",
+      "sha256": "994af63db1a02167e64ec59f891ac945a606854fc20b8b084330f65fa14cb0d5",
+      "size_bytes": 259600
+    },
+    {
       "path": "deliverables/current/fabrication/aperture-access/index.html",
-      "sha256": "c2d073e1b42c07b9f24b43b62678e54501e4a635dc98fcd96649f5a648e18ff4",
-      "size_bytes": 8551
+      "sha256": "b8a9a3ec7a6cd01efd1f7832b415ac7d54ad5983516bcea3dcaa27f5dde6f4b4",
+      "size_bytes": 11558
     },
     {
       "path": "deliverables/current/fabrication/aperture-access/upper_connection_depth.png",
@@ -893,8 +903,8 @@
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/index.html",
-      "sha256": "394d78975a8973d55635e130f8e77761b2b68093d1ef720e05421f62af3288ac",
-      "size_bytes": 9713
+      "sha256": "dc8ad61e125925bf5fb59728121f723681587faf4af00070a805d30f7c2100a5",
+      "size_bytes": 13019
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/package_manifest.json",
@@ -1325,7 +1335,7 @@
   "readiness": {
     "evidence_preserved": true,
     "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed.",
-    "geometric_fit": "AP01 upright opening encloses the historical F005 aperture and the measured upper inner-opening footprint at the provisional placement. All 51,929 selected forward triangle projections clear. Uniform 6 mm edge-flush foam scenario leaves 1 mm nominal extra land; corners, actual alignment, compression, hidden adapter geometry, axial engagement, support and sealing remain unverified. LOC01 tabs remain a separate conflicting diagnostic.",
+    "geometric_fit": "AP01 exported geometry checks remain valid for the original provisional placement. ALIGN01 identifies unverified U/L surface picks near tip-cap edges, roughly 3 mm from separately fitted cap centers. Actual rigid factory-plate registration, both control axes, studs, foam landing, wall coverage and neighbor spacing must be reconciled before selecting installed placement. Do not treat old point-based clearance, depth or caliper reconciliation as verified axis-center fit.",
     "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",

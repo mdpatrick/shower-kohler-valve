@@ -1,3 +1,5 @@
+**Latest ALIGN01 correction:** read `docs/physical_checks/control_alignment_2026-10-15.json` and the control-alignment panel on the AP01 review. Original U/L landmarks are surface picks near the left tip-cap edges, not verified shaft centers. Separate cap-outline fits estimate a roughly 3 mm lateral discrepancy; do not silently replace the preserved scan or promote these fits to physical axes. Reconcile the rigid factory plate, both controls and studs together, then recheck foam land, coverage and neighbor spacing. User reports knobs look about as wide as inner openings; no measured knob diameter. Run `./project audit-control-alignment` for the lightweight diagnostic.
+
 # Shower installation reconstruction
 
 Read START_HERE.md, canon/project_state.json and docs/project_request.md first.

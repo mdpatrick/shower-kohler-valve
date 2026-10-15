@@ -1,0 +1,21 @@
+{
+  "id": "OBS-CONTROL-ALIGNMENT-01",
+  "date": "2026-10-15",
+  "baseline": "R005 / AP01",
+  "user_observation": "User is concerned that U and L are off-center to the displayed inner-plate opening circles and reports that the knobs look similar in size to the full diameters of those openings.",
+  "accepted_qualitative": "Visible knob size appears comparable to factory inner-plate openings. This is not a caliper reading of knob, hub, bonnet or passing-section diameter.",
+  "new_numeric_measurements": [],
+  "interpretation": "Factory mating axes must align. A large custom backing aperture does not independently validate concentric factory interfaces. The image prompted an audit of the original scan picks.",
+  "assistant_finding": "The original U/L points are near the left edges of the captured tip caps. A separate projected cap-outline fit estimates centers about 3.1\u20133.4 mm farther right; it does not establish physical shaft axes, angular tilt or alignment at the plate plane.",
+  "controlling_diagnostic": "deliverables/current/fabrication/aperture-access/control_alignment.json",
+  "physical_fit": "UNPERFORMED",
+  "manufacturing_release": "HOLD",
+  "preservation": "No scan, transform, accepted R005 number, factory-hole coordinate or custom CAD coordinate was moved. Prior numeric fit calculations retain their original state but may not be interpreted as verified axis-center measurements.",
+  "screenshot": {
+    "original_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/codex-clipboard-7ac7c292-9a6b-4aa6-82f5-509830a9f133.png",
+    "path": "data/evidence/user/control-alignment-question-2026-10-15.png",
+    "sha256": "105945368a04b102414c835aba2386e070587b3796aebe6e54aa2c0bafd6b92f",
+    "size_bytes": 1839045,
+    "role": "User-selected prior AP01 render; supplied as evidence of the modeling concern, not evidence of an installed plate."
+  }
+}
