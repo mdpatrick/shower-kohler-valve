@@ -1,0 +1,67 @@
+{
+  "project_id": "shower-kohler-valve",
+  "model_revision": "R001",
+  "date": "2026-10-14",
+  "record_type": "user clarification and measurement interpretation; no physical readings supplied",
+  "prior_record": "docs/physical_checks/depth_inquiry_2026-10-14.json",
+  "user_clarifications": [
+    {
+      "subject": "plaster guard and spare adapters",
+      "status": "availability unknown; not readily located; prior use by plumber unknown",
+      "raw": "If I have it, I'm not sure where it is or have the ability to readily or easily determine whether my plumber used it. I will look for it, but for now I'd like to understand how much or whether the projections (G U and GL) should protrude from the plane of the tile face and by how much and to use a caliper to make a determination."
+    },
+    {
+      "subject": "rear fastener identity",
+      "status": "not confirmed as the diagonal trim studs",
+      "raw": "I’m not certain"
+    },
+    {
+      "subject": "primary concern",
+      "status": "external shower-water entry behind trim",
+      "raw": "My concern I was voicing was predominantly the \"shower water getting behind the trim\" issue. 5mm of tolerance seems reasonable overall, but what do you think?"
+    }
+  ],
+  "interpretation": {
+    "GU_GL": "Underside-of-straightedge to upper/lower as-found tip gaps, not projections from tile.",
+    "projection_formula": {
+      "upper": "P_U = H - G_U",
+      "lower": "P_L = H - G_L",
+      "units": "same units for H and G; mm preferred",
+      "positive": "toward the shower",
+      "negative": "recessed behind tile"
+    },
+    "upper_nominal_screen_mm": [
+      -6.35,
+      26.9875
+    ],
+    "upper_scope": "Bare upper K-2973-KS stem only, matching installed revision and labeled nominal datum; no adapter length silently included.",
+    "lower_nominal_screen_mm": null,
+    "lower_scope": "No independently dimensioned lower-tip limit established in the reviewed specification. Record it without assigning the upper limit.",
+    "five_mm": "Approximately 4.97 mm conditional excess above the upper nominal maximum in the scan; not an allowed tolerance, measured physical excess, water-leak diagnosis or valve-movement target.",
+    "guard_unavailable": "Does not prevent taking H and both tip gaps. As-found tip identity remains necessary to interpret the upper numerical screen.",
+    "water_entry_check": "Check full intended inner-plate seating, continuous supported foam contact/coverage, correct adapter and handle/cover seating, and unobstructed downward drain. A protruding stem alone does not establish a path into the wall cavity."
+  },
+  "sources": [
+    {
+      "id": "SRC-VALVE-SPEC",
+      "path": "data/evidence/kohler-2973-KS-spec.pdf",
+      "pages": [
+        3
+      ],
+      "method": "Rechecked labeled dimension endpoints visually; 88.9 minus [61.9125,95.25] mm."
+    },
+    {
+      "id": "SRC-KOHLER-OLD-GUIDE",
+      "path": "data/evidence/kohler-1041504_2.pdf",
+      "pages": [
+        3,
+        7,
+        8
+      ]
+    }
+  ],
+  "accepted_numeric_readings": [],
+  "geometry_changed": false,
+  "repair_selected": false,
+  "physical_fit": "UNRESOLVED"
+}
