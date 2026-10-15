@@ -229,6 +229,28 @@
       "sha256": "4d1af2e103ab73b8db6f0e3542c5acb4dc100a826e5ae86ea96c81eacdeb2154",
       "size_bytes": 305228,
       "applicability": "Stone/metal sealant candidate only. Primer/testing, minimum joint width, cure and no structural-adhesive interpretation; does not approve illustrative lap layer."
+    },
+    {
+      "id": "SRC-USER-REAR-4022",
+      "original_path": "/Users/mdpatrick/Downloads/IMG_4022 (1).jpeg",
+      "path": "data/evidence/user/rear-close-2026-10-15.jpeg",
+      "sha256": "809f61e96bf5b636c1d5364ee0f40388ea23a1857904555ac147254b7c4242aa",
+      "size_bytes": 1167389,
+      "view": "close",
+      "capture_date": "not established; received 2026-10-15",
+      "title": "User rear installation photograph",
+      "applicability": "Current qualitative rear context; no measured scale or 3D registration."
+    },
+    {
+      "id": "SRC-USER-REAR-4023",
+      "original_path": "/Users/mdpatrick/Downloads/IMG_4023 (1).jpeg",
+      "path": "data/evidence/user/rear-context-2026-10-15.jpeg",
+      "sha256": "08e9d5589e405ced95386715aa7bad8a3fbe6051001f31f3c193eb7578727b99",
+      "size_bytes": 1406179,
+      "view": "context",
+      "capture_date": "not established; received 2026-10-15",
+      "title": "User rear installation photograph",
+      "applicability": "Current qualitative rear context; no measured scale or 3D registration."
     }
   ]
 }

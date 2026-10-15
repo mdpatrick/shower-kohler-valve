@@ -1,0 +1,29 @@
+{
+  "status": "PASS - source preservation and scene-content checks",
+  "saved_and_reopened": true,
+  "source_file": "deliverables/current/fabrication/concentric-border-study/paired_concentric_CB01_DRAFT.blend",
+  "source_sha256": "3adb130427ef8e408fd345f27ba4fc06f2174470a123821dc2800dd2dd2d7f9a",
+  "original_mesh_objects_preserved": 128,
+  "original_mesh_geometry_uv_and_placement_unchanged": true,
+  "no_foam_in_current_front_scene": true,
+  "foam_reference_objects_labeled": [
+    "CAM_06_Gasket",
+    "CB01 EXPLODED foam path UNKNOWN",
+    "EXPLODED_ONLY__GASKET-01",
+    "F005 EXPLODED foam path UNKNOWN",
+    "FACTORY_REFERENCE__GASKET-01",
+    "GASKET-01",
+    "SECTION_ONLY_controls_GASKET-01",
+    "SECTION_ONLY_studs_GASKET-01"
+  ],
+  "photo_hashes": {
+    "data/evidence/user/rear-close-2026-10-15.jpeg": "809f61e96bf5b636c1d5364ee0f40388ea23a1857904555ac147254b7c4242aa",
+    "data/evidence/user/rear-context-2026-10-15.jpeg": "08e9d5589e405ced95386715aa7bad8a3fbe6051001f31f3c193eb7578727b99"
+  },
+  "missing_images": [],
+  "default_scene": "REAR01 | current rear photos",
+  "physically_registered_rear_model": false,
+  "dimensional_changes": false,
+  "physical_fit": "NOT PERFORMED",
+  "fabrication_release": "NOT GIVEN"
+}

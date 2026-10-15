@@ -1,0 +1,38 @@
+{
+  "id": "REAR01-executed-checks",
+  "date": "2026-10-15",
+  "source_record": "docs/physical_checks/rear_installation_2026-10-15.json",
+  "blender_check_record": "deliverables/current/review/rear/blender_validation.json",
+  "photo_board_visual_review": "PASS: both photographs and all text readable, no overlap or clipping",
+  "browser_review": {
+    "url": "http://127.0.0.1:8765/review/rear/index.html",
+    "viewport_width": 1280,
+    "photos_loaded": [
+      4032,
+      4032
+    ],
+    "horizontal_overflow": false,
+    "screenshot": "deliverables/current/review/rear/review_screenshot.jpg"
+  },
+  "local_link_checks": [
+    {
+      "page": "deliverables/current/review/rear/index.html",
+      "local_links": "PASS"
+    },
+    {
+      "page": "deliverables/current/fabrication/concentric-border-study/index.html",
+      "local_links": "PASS"
+    }
+  ],
+  "unchanged_from_previous_commit": [
+    "accepted measurement canon",
+    "fabrication design canon",
+    "transform canon",
+    "original CB01 Blender file"
+  ],
+  "rebuild_cache": "Second prepare-rear reported rear Blender unchanged; HTML rebuilt successfully",
+  "initial_background_attempt": "Blender crashed during Metal initialization under sandbox, before executing the scene script. Authorized local background retry succeeded.",
+  "gui_blender_modified": false,
+  "physical_fit": "NOT PERFORMED",
+  "manufacturing_status": "DRAFT_NOT_FOR_FABRICATION"
+}

@@ -1,5 +1,7 @@
 # CB01 - concentric circular escutcheon preparation
 
+**Current rear evidence (REAR01, October 15):** the foam-backed factory inner plate is removed; no foam is installed at this exposed-valve stage. Open [the updated Blender review](deliverables/current/blender/installation_REAR01_DRAFT.blend), which opens to the supplied rear photographs and includes a separate front-scan-only scene. [Rear photo review](deliverables/current/review/rear/index.html) explains the apparent rod/wood contact. The back faces of the front scan and older simplified envelopes are not a reconstruction of the real rear installation. No drilling/cutting remedy, numeric dimension, or CAD change follows from the photographs. Rebuild with `./project prepare-rear`; the original CB01 and earlier scenes remain preserved.
+
 **Current appearance candidates are circular and concentric with each actual cover.** The prior F005 offset/rectangular appearances are historical and do not meet the accepted border requirement. R005 remains the accepted plate/foam measurement baseline; the six installed center readings are preserved in RECON-001, with a separate fitted diagnostic state. No scan, valve or stud was moved to force fit.
 
 - [Current CB01 illustrated review](deliverables/current/fabrication/concentric-border-study/index.html), served at `http://127.0.0.1:8765/fabrication/concentric-border-study/index.html`.

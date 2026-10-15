@@ -138,8 +138,36 @@ def prepare_concentric(stage='all',force=False):
         print('concentric '+name+': building',flush=True);run(cmd,'concentric_'+name+'.log')
         owned={str(p.relative_to(ROOT)) for pat in patterns for p in ROOT.glob(pat) if p.is_file() and not p.name.endswith('.blend1')}
         state[name]={'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in sorted(owned)}};write('build/concentric_stages.json',state)
+    if stage in ('all','render','documents') and (ROOT/'docs/physical_checks/rear_installation_2026-10-15.json').exists():
+        prepare_rear(force=False,preserve=False)
     publish_manifest()
     print('CB01 prepared as an unselected draft; LOC01 remains diagnostic. Physical checks and release remain open.')
+
+def prepare_rear(force=False,preserve=True):
+    """Add current rear photo evidence without rebuilding or altering manufactured parts."""
+    if preserve:preserve_edits()
+    base='deliverables/current/fabrication/concentric-border-study/paired_concentric_CB01_DRAFT.blend'
+    record='docs/physical_checks/rear_installation_2026-10-15.json'
+    inputs=['src/blender/rear_review.py',record,base]+[p['path'] for p in read(record)['photos']]
+    target='deliverables/current/blender/installation_REAR01_DRAFT.blend'
+    outputs=[target,'deliverables/current/review/rear/rear_photos_REAR01.png','deliverables/current/review/rear/blender_validation.json']
+    state=read('build/rear_stages.json') if (ROOT/'build/rear_stages.json').exists() else {}
+    digest=fingerprint(inputs)
+    unchanged=not force and state.get('fingerprint')==digest and all((ROOT/p).exists() and state.get('outputs',{}).get(p)==sha(ROOT/p) for p in outputs)
+    if unchanged:print('rear Blender: unchanged',flush=True)
+    else:
+        run([BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/blender/rear_review.py'],'rear_review.log')
+        write('build/rear_stages.json',{'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in outputs}})
+    run([sys.executable,'src/review/rear_evidence.py'])
+    # The existing documents stage owns this HTML; acknowledge the evidence panel
+    # without invalidating its already-reviewed PDF or manufacturing ZIP outputs.
+    cache=ROOT/'build/concentric_stages.json'
+    if cache.exists():
+        stages=read(cache);page='deliverables/current/fabrication/concentric-border-study/index.html'
+        if page in stages.get('documents',{}).get('outputs',{}):
+            stages['documents']['outputs'][page]=sha(ROOT/page)
+            write(cache,stages)
+    publish_manifest()
 
 def validate(git_objects=False):
     errors=[];input_results=[]
@@ -267,6 +295,7 @@ def main():
     sub.add_parser('doctor');sub.add_parser('ingest');b=sub.add_parser('build');b.add_argument('--force',action='store_true')
     fab=sub.add_parser('prepare-fabrication');fab.add_argument('--stage',choices=['all','cad','fit','render','documents'],default='all');fab.add_argument('--force',action='store_true')
     con=sub.add_parser('prepare-concentric');con.add_argument('--stage',choices=['all','base','stock','locator','damage','render','documents'],default='all');con.add_argument('--force',action='store_true')
+    rear=sub.add_parser('prepare-rear');rear.add_argument('--force',action='store_true')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -278,6 +307,7 @@ def main():
         if (ROOT/'canon/concentric_border_requirement.json').exists():prepare_concentric(force=args.force)
     elif args.command=='prepare-fabrication':prepare_fabrication(args.stage,args.force)
     elif args.command=='prepare-concentric':prepare_concentric(args.stage,args.force)
+    elif args.command=='prepare-rear':prepare_rear(args.force)
     elif args.command=='review':review(args.no_open)
     elif args.command=='validate':validate(args.git_objects)
     elif args.command=='query':query(args.args)

@@ -8,7 +8,8 @@
     "as_observed_at_capture": "preserved scan; capture date unknown; user reports no changes since capture on 2026-10-14",
     "manufacturer_intended": "Documented layer/fastener order and original-finished-wall stud limit only; no physically verified installed geometry",
     "proposed_provisional": "CB01 C1 circular 220/120 mm and C2 circular 214.15/128.425 mm pairs, with 1.524/3.175 mm metal and 3 mm prototype stock trials. F005 offset/rectangular appearances are superseded by circular-only user requirements. LOC01 upper locating tabs remain a separate diagnostic.",
-    "selected_arrangement": null
+    "selected_arrangement": null,
+    "current_exposed_installation": "Original front capture plus unscaled rear photos. Factory inner plate/foam and trim are removed. Rear construction has not been reconstructed metrically."
   },
   "readiness": {
     "evidence_preserved": true,
@@ -36,7 +37,7 @@
   "post_scan_state_observation": "OBS-POST-SCAN-01",
   "depth_review_observation": "OBS-DEPTH-REVIEW-01",
   "depth_inquiry_record": "docs/physical_checks/depth_inquiry_2026-10-14.json",
-  "latest_user_state_note": "The six caliper distances are straight-line 3D center-tip to center-tip readings, measured at the end of each projection and therefore at differing depths. No physical hardware change reported.",
+  "latest_user_state_note": "Rear photographs supplied. Foam is absent from the current exposed installation; previous foam measurements describe the removed factory plate. User reports over-projecting bolts resting against wood. No physical modification or numeric dimension is accepted from these photographs.",
   "inner_plate_measurement_record": "docs/physical_checks/inner_plate_2026-10-14.json",
   "inner_plate_foam_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
   "outer_plate_measurement_record": "docs/physical_checks/outer_plate_2026-10-14.json",
@@ -51,5 +52,7 @@
     "canon/concentric_border_requirement.json",
     "canon/damage_visibility_requirement.json",
     "canon/stud_locator_study.json"
-  ]
+  ],
+  "rear_installation_record": "docs/physical_checks/rear_installation_2026-10-15.json",
+  "current_blender_review": "deliverables/current/blender/installation_REAR01_DRAFT.blend"
 }

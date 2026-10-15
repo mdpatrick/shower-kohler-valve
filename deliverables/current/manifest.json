@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "07ab4570bbefd7dd5b94e022336f62f0ea1b5eb6",
+  "source_commit": "e6f7b1fab4e52fe0cd8e45f56079ca07812febb9",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "5573d6c61089fa3487627a51e6690f66fc6540962498273c944d49e0ad165982",
+  "source_tree_hash": "29a81edd934358faf145ac5d0e3c52848c0f6ecacd321560b1ba810a11adb327",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -80,6 +80,11 @@
       "path": "deliverables/current/blender/installation_R005_DRAFT.blend",
       "sha256": "b779f44c9d446ff18b342e05dae62adc3ec60d3c9e8556e6a17266a4c6787c88",
       "size_bytes": 91935490
+    },
+    {
+      "path": "deliverables/current/blender/installation_REAR01_DRAFT.blend",
+      "sha256": "9097ecdd7bd023b77c6f94468db738404cba1a20266267da5285e96f5ddf83d7",
+      "size_bytes": 99602400
     },
     {
       "path": "deliverables/current/blender/scene_check.json",
@@ -783,8 +788,8 @@
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/index.html",
-      "sha256": "dca9ae93787fb869fcba8d8117c72d773da3c8da7a4b9ec14d0f1ea0b5c7cbcb",
-      "size_bytes": 8611
+      "sha256": "856cb083bf7255005670dc90526a2cddd31b853404cdae62f7f3fdf3e663caef",
+      "size_bytes": 9079
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/package_manifest.json",
@@ -975,6 +980,36 @@
       "path": "deliverables/current/review/measurement_requests.json",
       "sha256": "2a5aa49386e36cd0e07cdaab715a6f5b9a8643ad80dd1920bedf281d46273745",
       "size_bytes": 25646
+    },
+    {
+      "path": "deliverables/current/review/rear/blender_validation.json",
+      "sha256": "8c3a15c0247e9ad6a217c58fa6f83903dbae11f89bcafff04ed56520044cb283",
+      "size_bytes": 1238
+    },
+    {
+      "path": "deliverables/current/review/rear/index.html",
+      "sha256": "f0b21fed08b9a0d0923714eb948d0ea78b5d81a30a1a262b00c133f2d883c8f8",
+      "size_bytes": 4183
+    },
+    {
+      "path": "deliverables/current/review/rear/rear-close-2026-10-15.jpeg",
+      "sha256": "809f61e96bf5b636c1d5364ee0f40388ea23a1857904555ac147254b7c4242aa",
+      "size_bytes": 1167389
+    },
+    {
+      "path": "deliverables/current/review/rear/rear-context-2026-10-15.jpeg",
+      "sha256": "08e9d5589e405ced95386715aa7bad8a3fbe6051001f31f3c193eb7578727b99",
+      "size_bytes": 1406179
+    },
+    {
+      "path": "deliverables/current/review/rear/rear_photos_REAR01.png",
+      "sha256": "0618776930dd809ff091bc2764990facdca6e95a5e4d72512575dae10ae5f2b0",
+      "size_bytes": 3269193
+    },
+    {
+      "path": "deliverables/current/review/rear/review_screenshot.jpg",
+      "sha256": "43d5aae4d3dc78666b3a4037b981abdecaf40b8cc435fbaa3b7aa3a574795918",
+      "size_bytes": 99804
     },
     {
       "path": "deliverables/current/review/style.css",

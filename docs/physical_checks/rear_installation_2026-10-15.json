@@ -1,0 +1,64 @@
+{
+  "id": "REAR-001",
+  "revision": 1,
+  "date": "2026-10-15",
+  "status": "PHOTO_AND_USER_OBSERVATION_NOT_DIMENSIONAL_CALIBRATION",
+  "photos": [
+    {
+      "id": "SRC-USER-REAR-4022",
+      "original_path": "/Users/mdpatrick/Downloads/IMG_4022 (1).jpeg",
+      "path": "data/evidence/user/rear-close-2026-10-15.jpeg",
+      "sha256": "809f61e96bf5b636c1d5364ee0f40388ea23a1857904555ac147254b7c4242aa",
+      "size_bytes": 1167389,
+      "view": "close",
+      "capture_date": "not established; received 2026-10-15"
+    },
+    {
+      "id": "SRC-USER-REAR-4023",
+      "original_path": "/Users/mdpatrick/Downloads/IMG_4023 (1).jpeg",
+      "path": "data/evidence/user/rear-context-2026-10-15.jpeg",
+      "sha256": "08e9d5589e405ced95386715aa7bad8a3fbe6051001f31f3c193eb7578727b99",
+      "size_bytes": 1406179,
+      "view": "context",
+      "capture_date": "not established; received 2026-10-15"
+    }
+  ],
+  "user_reports": [
+    "No foam is installed at the current exposed-valve stage.",
+    "The over-projecting bolts rest against the wood rather than being drilled into it.",
+    "A clearance cavity in the wood could be considered if needed; no physical modification is reported or selected."
+  ],
+  "image_observations": [
+    "IMG_4022 shows a threaded rod ending at the surface of a wood member; the apparent contact is consistent with the user report.",
+    "IMG_4023 shows a substantial horizontal wood member in front of the rear valve view, visible copper piping and a cable crossing the area.",
+    "The photos show only part of the installation. They do not resolve both diagonal trim-stud identities, retained engagement, rear dimensions or the role of the wood."
+  ],
+  "foam_state": {
+    "current_installation": "Absent, per user clarification",
+    "removed_factory_part": "Earlier approximate 6 mm foam section and 15.44 mm free overall plate depth remain measurements of the removed part.",
+    "future_assembly": "Show only with reinstalled factory inner plate, explicitly as a proposed assembly or exploded reference. No cavity foam is specified."
+  },
+  "model_correction": {
+    "front_scan": "Surface capture; its rear-facing appearance does not reconstruct rear plumbing, wood, wall layers or unseen valve surfaces. Preserve original mesh.",
+    "new_rear_photos": "Unscaled reference planes in a separate Blender scene; not a metrically registered 3D reconstruction.",
+    "dimension_changes": null,
+    "CAD_changes": null
+  },
+  "mechanical_interpretation": {
+    "source": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf",
+    "pages": [
+      7,
+      8
+    ],
+    "documented": "Trim studs thread into the valve. The inner plate must seat flat, and the original finished-wall stud limit is 7/16 inch.",
+    "inference": "If these are the same trim studs and rear ends already bear on wood, inward adjustment could be limited by rear clearance.",
+    "not_established": [
+      "Whether either rod can retract sufficiently without modification",
+      "Which NE/SW front stud corresponds to the visible rear rod",
+      "Required retraction and allowable remaining thread engagement",
+      "Suitability or dimensions of a wood clearance pocket or shortened replacement stud",
+      "Valve depth, handle engagement or waterproofing"
+    ]
+  },
+  "next_check": "Trace each diagonal trim stud to its rear end, record each front projection from tile and available rear clearance, and select any adjustment against the final trim stack. Do not infer a drilling depth from these photos."
+}

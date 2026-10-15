@@ -120,6 +120,19 @@
         "horizontal opening registration",
         "rear cavity and physical fit"
       ]
+    },
+    {
+      "id": "OBS-REAR-INSTALLATION-01",
+      "date": "2026-10-15",
+      "status": "user-confirmed current foam absence; photo-supported qualitative rear contact",
+      "source": "docs/physical_checks/rear_installation_2026-10-15.json",
+      "classification": "qualitative observations; no accepted numerical dimensions",
+      "foam_installed": false,
+      "rear_stud_contact": "User reports bolts rest against wood; one apparent contact visible in supplied close view.",
+      "prior_records_retained": [
+        "OBS-STUD-WOOD-CONTACT-01",
+        "OBS-INNER-PLATE-FOAM-01"
+      ]
     }
   ]
 }
