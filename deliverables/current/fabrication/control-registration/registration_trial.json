@@ -1,0 +1,542 @@
+{
+  "id": "ALIGN02",
+  "date": "2026-10-15",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "selected": false,
+  "previous_goal_turn": "PROGRESS: commit 9bc94aa established the cap-center discrepancy; this turn tests dependent registration and clearance.",
+  "cases": [
+    {
+      "id": "ORIGINAL",
+      "short_label": "Original provisional placement",
+      "scan_scale_trial": 1.0,
+      "rigid_row_rotation": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "rigid_translation_mm": [
+        0.0,
+        0.0
+      ],
+      "rotation_deg": 0.0,
+      "main_center_installed_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "placed_reference_hole_centers_mm": [
+        [
+          -4.440892098500626e-15,
+          -7.105427357601002e-15
+        ],
+        [
+          1.598388807216021,
+          79.99285544965548
+        ]
+      ],
+      "control_cap_targets_xy_mm": [
+        [
+          3.2816814588510472,
+          0.26940842901302303
+        ],
+        [
+          4.749687958248851,
+          79.27255698538335
+        ]
+      ],
+      "reference_center_residual_mm": [
+        3.2927213819256003,
+        3.23257114646113
+      ],
+      "reference_opening_aperture_margins": [
+        {
+          "control": "L",
+          "reference_diameter_mm": 50,
+          "extra_aperture_margin_mm": 10.877144550344497,
+          "diameter_status": "assumed",
+          "placement_status": "unverified rigid reference"
+        },
+        {
+          "control": "U",
+          "reference_diameter_mm": 48.46,
+          "extra_aperture_margin_mm": 11.000000000000004,
+          "diameter_status": "measured",
+          "placement_status": "unverified rigid reference"
+        }
+      ],
+      "coverage": [
+        {
+          "main_diameter_mm": 220,
+          "diverter_diameter_mm": 120,
+          "per_feature": [
+            {
+              "feature": "OPEN-MAIN",
+              "margin_mm": 14.209842432476236
+            },
+            {
+              "feature": "CUT-01",
+              "margin_mm": 9.724003220177138
+            },
+            {
+              "feature": "CUT-02",
+              "margin_mm": 14.384732648443588
+            },
+            {
+              "feature": "CUT-03",
+              "margin_mm": 7.40539333102258
+            },
+            {
+              "feature": "CUT-04",
+              "margin_mm": 27.617809994874904
+            },
+            {
+              "feature": "CUT-05",
+              "margin_mm": 12.549964426630993
+            },
+            {
+              "feature": "CUT-06",
+              "margin_mm": 16.783212831395687
+            },
+            {
+              "feature": "CUT-07",
+              "margin_mm": 11.107191529933175
+            }
+          ],
+          "minimum_margin_mm": 7.40539333102258,
+          "limiting_feature": "CUT-03",
+          "diverter_gap_mm": 5.237846343733992
+        },
+        {
+          "main_diameter_mm": 214.15,
+          "diverter_diameter_mm": 128.425,
+          "per_feature": [
+            {
+              "feature": "OPEN-MAIN",
+              "margin_mm": 11.284842432476239
+            },
+            {
+              "feature": "CUT-01",
+              "margin_mm": 6.799003220177141
+            },
+            {
+              "feature": "CUT-02",
+              "margin_mm": 11.459732648443591
+            },
+            {
+              "feature": "CUT-03",
+              "margin_mm": 4.480393331022583
+            },
+            {
+              "feature": "CUT-04",
+              "margin_mm": 24.692809994874906
+            },
+            {
+              "feature": "CUT-05",
+              "margin_mm": 9.624964426630996
+            },
+            {
+              "feature": "CUT-06",
+              "margin_mm": 13.85821283139569
+            },
+            {
+              "feature": "CUT-07",
+              "margin_mm": 8.182191529933178
+            }
+          ],
+          "minimum_margin_mm": 4.480393331022583,
+          "limiting_feature": "CUT-03",
+          "diverter_gap_mm": 3.950346343733983
+        }
+      ],
+      "capture_triangles_checked": 51929,
+      "capture_conflict_triangles": 0,
+      "capture_conflict_area_mm2": 0.0,
+      "foam_overlap_area_mm2": 0.0
+    },
+    {
+      "id": "RIGID",
+      "short_label": "Rigid recentering only",
+      "scan_scale_trial": 1.0,
+      "rigid_row_rotation": [
+        [
+          0.999999020694615,
+          0.0013995034152614202
+        ],
+        [
+          -0.0013995034152613063,
+          0.9999990206946155
+        ]
+      ],
+      "rigid_translation_mm": [
+        3.2724662247964718,
+        -0.2265243242098336
+      ],
+      "rotation_deg": 0.08018566528404371,
+      "main_center_installed_mm": [
+        4.016137549054136,
+        39.447410748902
+      ],
+      "placed_reference_hole_centers_mm": [
+        [
+          3.2724662247964673,
+          -0.2265243242098407
+        ],
+        [
+          4.75890319230343,
+          79.7684897386062
+        ]
+      ],
+      "control_cap_targets_xy_mm": [
+        [
+          3.2816814588510472,
+          0.26940842901302303
+        ],
+        [
+          4.749687958248851,
+          79.27255698538335
+        ]
+      ],
+      "reference_center_residual_mm": [
+        0.49601836282328354,
+        0.4960183628232797
+      ],
+      "reference_opening_aperture_margins": [
+        {
+          "control": "L",
+          "reference_diameter_mm": 50,
+          "extra_aperture_margin_mm": 10.877144550344504,
+          "diameter_status": "assumed",
+          "placement_status": "unverified rigid reference"
+        },
+        {
+          "control": "U",
+          "reference_diameter_mm": 48.46,
+          "extra_aperture_margin_mm": 10.99999999999999,
+          "diameter_status": "measured",
+          "placement_status": "unverified rigid reference"
+        }
+      ],
+      "coverage": [
+        {
+          "main_diameter_mm": 220,
+          "diverter_diameter_mm": 120,
+          "per_feature": [
+            {
+              "feature": "OPEN-MAIN",
+              "margin_mm": 12.860792690123148
+            },
+            {
+              "feature": "CUT-01",
+              "margin_mm": 8.277708858928861
+            },
+            {
+              "feature": "CUT-02",
+              "margin_mm": 15.135342293759109
+            },
+            {
+              "feature": "CUT-03",
+              "margin_mm": 9.140544508611782
+            },
+            {
+              "feature": "CUT-04",
+              "margin_mm": 24.837111216815856
+            },
+            {
+              "feature": "CUT-05",
+              "margin_mm": 15.628892606083937
+            },
+            {
+              "feature": "CUT-06",
+              "margin_mm": 18.211421012301827
+            },
+            {
+              "feature": "CUT-07",
+              "margin_mm": 14.19827510710681
+            }
+          ],
+          "minimum_margin_mm": 8.277708858928861,
+          "limiting_feature": "CUT-01",
+          "diverter_gap_mm": 5.057887344612084
+        },
+        {
+          "main_diameter_mm": 214.15,
+          "diverter_diameter_mm": 128.425,
+          "per_feature": [
+            {
+              "feature": "OPEN-MAIN",
+              "margin_mm": 9.93579269012315
+            },
+            {
+              "feature": "CUT-01",
+              "margin_mm": 5.352708858928864
+            },
+            {
+              "feature": "CUT-02",
+              "margin_mm": 12.210342293759112
+            },
+            {
+              "feature": "CUT-03",
+              "margin_mm": 6.215544508611785
+            },
+            {
+              "feature": "CUT-04",
+              "margin_mm": 21.91211121681586
+            },
+            {
+              "feature": "CUT-05",
+              "margin_mm": 12.70389260608394
+            },
+            {
+              "feature": "CUT-06",
+              "margin_mm": 15.28642101230183
+            },
+            {
+              "feature": "CUT-07",
+              "margin_mm": 11.273275107106812
+            }
+          ],
+          "minimum_margin_mm": 5.352708858928864,
+          "limiting_feature": "CUT-01",
+          "diverter_gap_mm": 3.7703873446120753
+        }
+      ],
+      "capture_triangles_checked": 51929,
+      "capture_conflict_triangles": 0,
+      "capture_conflict_area_mm2": 0.0,
+      "foam_overlap_area_mm2": 0.0
+    },
+    {
+      "id": "CALIPER",
+      "short_label": "Rigid + 80 mm scale trial",
+      "scan_scale_trial": 1.0122733690965122,
+      "rigid_row_rotation": [
+        [
+          0.9999990206946161,
+          0.0013995034152615162
+        ],
+        [
+          -0.00139950341526143,
+          0.9999990206946159
+        ]
+      ],
+      "rigid_translation_mm": [
+        3.32175220539973,
+        0.26159962588659624
+      ],
+      "rotation_deg": 0.08018566528404912,
+      "main_center_installed_mm": [
+        4.06542352965739,
+        39.935534698998445
+      ],
+      "placed_reference_hole_centers_mm": [
+        [
+          3.3217522053997257,
+          0.26159962588658914
+        ],
+        [
+          4.80818917290668,
+          80.25661368870266
+        ]
+      ],
+      "control_cap_targets_xy_mm": [
+        [
+          3.3219587466527067,
+          0.2727149781000114
+        ],
+        [
+          4.807982631653698,
+          80.24549833648925
+        ]
+      ],
+      "reference_center_residual_mm": [
+        0.011117270983366997,
+        0.01111727098335363
+      ],
+      "reference_opening_aperture_margins": [
+        {
+          "control": "L",
+          "reference_diameter_mm": 50,
+          "extra_aperture_margin_mm": 10.87714455034451,
+          "diameter_status": "assumed",
+          "placement_status": "unverified rigid reference"
+        },
+        {
+          "control": "U",
+          "reference_diameter_mm": 48.46,
+          "extra_aperture_margin_mm": 11.000000000000018,
+          "diameter_status": "measured",
+          "placement_status": "unverified rigid reference"
+        }
+      ],
+      "coverage": [
+        {
+          "main_diameter_mm": 220,
+          "diverter_diameter_mm": 120,
+          "per_feature": [
+            {
+              "feature": "OPEN-MAIN",
+              "margin_mm": 11.672107236727232
+            },
+            {
+              "feature": "CUT-01",
+              "margin_mm": 7.032878745104586
+            },
+            {
+              "feature": "CUT-02",
+              "margin_mm": 13.974839372315376
+            },
+            {
+              "feature": "CUT-03",
+              "margin_mm": 7.9058777108252976
+            },
+            {
+              "feature": "CUT-04",
+              "margin_mm": 23.790148760203895
+            },
+            {
+              "feature": "CUT-05",
+              "margin_mm": 14.46917379112023
+            },
+            {
+              "feature": "CUT-06",
+              "margin_mm": 17.081165465920538
+            },
+            {
+              "feature": "CUT-07",
+              "margin_mm": 13.021046750019881
+            }
+          ],
+          "minimum_margin_mm": 7.032878745104586,
+          "limiting_feature": "CUT-01",
+          "diverter_gap_mm": 7.210407517260279
+        },
+        {
+          "main_diameter_mm": 214.15,
+          "diverter_diameter_mm": 128.425,
+          "per_feature": [
+            {
+              "feature": "OPEN-MAIN",
+              "margin_mm": 8.747107236727235
+            },
+            {
+              "feature": "CUT-01",
+              "margin_mm": 4.107878745104589
+            },
+            {
+              "feature": "CUT-02",
+              "margin_mm": 11.049839372315379
+            },
+            {
+              "feature": "CUT-03",
+              "margin_mm": 4.9808777108253
+            },
+            {
+              "feature": "CUT-04",
+              "margin_mm": 20.865148760203898
+            },
+            {
+              "feature": "CUT-05",
+              "margin_mm": 11.544173791120233
+            },
+            {
+              "feature": "CUT-06",
+              "margin_mm": 14.156165465920541
+            },
+            {
+              "feature": "CUT-07",
+              "margin_mm": 10.096046750019884
+            }
+          ],
+          "minimum_margin_mm": 4.107878745104589,
+          "limiting_feature": "CUT-01",
+          "diverter_gap_mm": 5.9229075172602705
+        }
+      ],
+      "capture_triangles_checked": 51929,
+      "capture_conflict_triangles": 0,
+      "capture_conflict_area_mm2": 0.0,
+      "foam_overlap_area_mm2": 0.0
+    }
+  ],
+  "capture_aperture_minimum_clearance_mm": {
+    "ORIGINAL": 2.1590508184029247,
+    "RIGID": 2.3656327353819364,
+    "CALIPER": 1.680663771900413
+  },
+  "caliper_comparison": [
+    {
+      "pair": "U\u2013L",
+      "reported_3d_mm": 80,
+      "old_pick_distance_mm": 79.37499999999999,
+      "control_cap_xy_scaled_trial_distance_mm": 80.0,
+      "trial_minus_reported_mm": 0.0,
+      "role": "Calibration input; not a check"
+    },
+    {
+      "pair": "NE\u2013SW",
+      "reported_3d_mm": 109.8,
+      "old_pick_distance_mm": 108.08648110624021,
+      "control_cap_xy_scaled_trial_distance_mm": 109.41306638320029,
+      "trial_minus_reported_mm": -0.38693361679970906,
+      "role": "Held out; scan endpoints still provisional"
+    },
+    {
+      "pair": "U\u2013NE",
+      "reported_3d_mm": 51.4,
+      "old_pick_distance_mm": 52.360373520111466,
+      "control_cap_xy_scaled_trial_distance_mm": 49.96450411157754,
+      "trial_minus_reported_mm": -1.4354958884224587,
+      "role": "Held out; scan endpoints still provisional"
+    },
+    {
+      "pair": "L\u2013NE",
+      "reported_3d_mm": 80.25,
+      "old_pick_distance_mm": 81.03371081181123,
+      "control_cap_xy_scaled_trial_distance_mm": 79.75303191249192,
+      "trial_minus_reported_mm": -0.49696808750807975,
+      "role": "Held out; scan endpoints still provisional"
+    },
+    {
+      "pair": "U\u2013SW",
+      "reported_3d_mm": 81.14,
+      "old_pick_distance_mm": 78.26590862518825,
+      "control_cap_xy_scaled_trial_distance_mm": 81.2011927368541,
+      "trial_minus_reported_mm": 0.0611927368540961,
+      "role": "Held out; scan endpoints still provisional"
+    },
+    {
+      "pair": "L\u2013SW",
+      "reported_3d_mm": 54.7,
+      "old_pick_distance_mm": 51.21943114089788,
+      "control_cap_xy_scaled_trial_distance_mm": 54.83789255997173,
+      "trial_minus_reported_mm": 0.1378925599717249,
+      "role": "Held out; scan endpoints still provisional"
+    }
+  ],
+  "factory_plate_only_foam_overlap_mm2": 309.9440531465075,
+  "factory_plate_only_max_overhang_mm": 2.2746159166938957,
+  "source_frame": "Preserved installed frame. Uniform scale applies only to a separate hypothetical source-scan state; actual part dimensions and original registration are unchanged.",
+  "cap_depth_assumption": "Keep old U/L tip Z values while replacing their XY with ALIGN01 cap fits. No measured end-face plane or shaft axis.",
+  "capture_scope": "Same 51,929 baseline clipped triangle projections. Z floor 0.5 mm and OPEN-MAIN eroded-3-mm mask both scale with the hypothetical source scan; excludes stone edges and unobserved hardware.",
+  "limits": [
+    "Lower inner opening position/diameter, plate horizontal datums and rear profiles remain provisional",
+    "User measurement uncertainty is unknown; calibration is not independent validation",
+    "Rigid fit does not fix holes independently, infer shaft tilt or verify axes at the plate plane",
+    "Circular trim/backing centers remain assumed equal to the inner-reference center",
+    "Stud endpoints and physical body surfaces remain uncertain",
+    "Nominal foam overlap is not validated continuous support or water sealing"
+  ],
+  "input_sha256": {
+    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883",
+    "deliverables/current/fabrication/aperture-access/control_alignment.json": "5db0818f7e566342bb8d2019b2f6db96c2c947f5d0f80e70629f4922a46ef14f",
+    "docs/physical_checks/installed_center_distances_2026-10-15.json": "ea3f2f81fa63e53334a8700538d7eefff1ebe82545cf2a67c080e8483a38524e",
+    "src/analysis/registration_trial.py": "90b74cc714145ea4502317a360ebc253f2d15740e7b69c0a365bce70dfc80c4f",
+    "build/aperture_access/captured_forward_display.stl": "2d2ebb65cab8bd23c7b94b23e57125c7388d4080c364f837e9f3a29776dfc625"
+  },
+  "physical_fit": "UNPERFORMED",
+  "fabrication_release": "HOLD"
+}

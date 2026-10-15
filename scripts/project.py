@@ -167,6 +167,10 @@ def prepare_rear(force=False,preserve=True):
         sys.path.insert(0,str(ROOT/'src/analysis'))
         from control_alignment import attach_panel as attach_alignment_panel
         attach_alignment_panel()
+    if (ROOT/'deliverables/current/fabrication/control-registration/registration_trial.json').exists():
+        sys.path.insert(0,str(ROOT/'src/analysis'))
+        from registration_trial import attach_panel as attach_registration_panel
+        attach_registration_panel()
     # The existing documents stage owns this HTML; acknowledge the evidence panel
     # without invalidating its already-reviewed PDF or manufacturing ZIP outputs.
     cache=ROOT/'build/concentric_stages.json'
@@ -189,6 +193,18 @@ def prepare_aperture(stage='all'):
         run([sys.executable,'src/fabrication/audit_aperture.py'])
     if (ROOT/'docs/physical_checks/control_alignment_2026-10-15.json').exists():
         run([sys.executable,'src/analysis/control_alignment.py'])
+    publish_manifest()
+
+def prepare_registration(stage='all'):
+    """Small independent pose study; original source and AP01 cutting shapes stay fixed."""
+    preserve_edits()
+    if stage in ('all','analysis'):
+        run([sys.executable,'src/analysis/registration_trial.py'],'control_registration_analysis.log')
+    if stage in ('all','blender'):
+        run([BLENDER,'--background','--factory-startup','--threads','2','--python-exit-code','1','--python','src/blender/control_registration.py'],'control_registration_blender.log')
+    sys.path.insert(0,str(ROOT/'src/analysis'))
+    from registration_trial import page,attach_panel
+    page(read('deliverables/current/fabrication/control-registration/registration_trial.json'));attach_panel()
     publish_manifest()
 
 def validate(git_objects=False):
@@ -321,6 +337,7 @@ def main():
     ap=sub.add_parser('prepare-aperture');ap.add_argument('--stage',choices=['all','analysis','blender'],default='all')
     sub.add_parser('audit-aperture')
     sub.add_parser('audit-control-alignment')
+    align=sub.add_parser('prepare-registration');align.add_argument('--stage',choices=['all','analysis','blender'],default='all')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -331,6 +348,7 @@ def main():
         if (ROOT/'canon/fabrication_designs.json').exists():prepare_fabrication(force=args.force)
         if (ROOT/'canon/concentric_border_requirement.json').exists():prepare_concentric(force=args.force)
         if (ROOT/'canon/aperture_access_study.json').exists():prepare_aperture()
+        if (ROOT/'docs/physical_checks/control_alignment_2026-10-15.json').exists():prepare_registration()
     elif args.command=='prepare-fabrication':prepare_fabrication(args.stage,args.force)
     elif args.command=='prepare-concentric':prepare_concentric(args.stage,args.force)
     elif args.command=='prepare-rear':prepare_rear(args.force)
@@ -339,6 +357,7 @@ def main():
     elif args.command=='audit-control-alignment':
         run([sys.executable,'src/analysis/control_alignment.py'])
         publish_manifest()
+    elif args.command=='prepare-registration':prepare_registration(args.stage)
     elif args.command=='review':review(args.no_open)
     elif args.command=='validate':validate(args.git_objects)
     elif args.command=='query':query(args.args)

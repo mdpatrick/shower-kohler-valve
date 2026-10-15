@@ -1,0 +1,67 @@
+{
+  "id": "ALIGN02-VALIDATION",
+  "date": "2026-10-15",
+  "status": "PASS for diagnostic computation and saved separate states",
+  "executed": [
+    "Independent two-vector angle agrees with SVD rigid rotation",
+    "Rigid factory-hole spacing preserved in all states",
+    "80 mm 3D calibration reproduced; identified as input, not validation",
+    "Analytic rounded-rectangle signed-distance check of all clipped polygon vertices independently confirms aperture containment",
+    "Independent scalar damage-margin and reference-circle clearance calculations agree",
+    "All analysis input hashes and Blender placement/source hashes verified",
+    "Blender saved/reopened with three scenes and CAD dimensions/placements checked",
+    "Original accepted numeric evidence, original AP01 CAD/PDF/Blender blobs unchanged",
+    "Local HTML asset/link targets and one attached panel on each review checked",
+    "Python syntax compilation passed"
+  ],
+  "capture_scope": "Same 51,929 baseline clipped triangle projections. Z floor 0.5 mm and OPEN-MAIN eroded-3-mm mask both scale with the hypothetical source scan; excludes stone edges and unobserved hardware.",
+  "analytic_checks": [
+    {
+      "case": "ORIGINAL",
+      "analytic_clipped_projection_vertex_count": 26587,
+      "minimum_analytic_aperture_clearance_mm": 2.1590508184029247
+    },
+    {
+      "case": "RIGID",
+      "analytic_clipped_projection_vertex_count": 26587,
+      "minimum_analytic_aperture_clearance_mm": 2.3656327353819364
+    },
+    {
+      "case": "CALIPER",
+      "analytic_clipped_projection_vertex_count": 26587,
+      "minimum_analytic_aperture_clearance_mm": 1.680663771900413
+    }
+  ],
+  "preserved_git_blobs": {
+    "canon/features.json": "59ed98fe72f2b6a0414b82f2cb8cb7738b18ef02",
+    "canon/measurements.json": "88b87fcc942ecfb23389b08946341098d8d6a5fc",
+    "canon/transforms.json": "42f84caed53f1a60b20d1cf1d0fee5e44a21b1a8",
+    "docs/physical_checks/installed_center_distances_2026-10-15.json": "ce4d49a5abe82187f7bd520b1ea56deab11fe644",
+    "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.blend": "266ba2a109576d3b0f560a8c54d8dcf5223de0d6",
+    "deliverables/current/fabrication/aperture-access/aperture_access_AP01_DRAFT.pdf": "34fe52f11c73bdfed63f4d7374fedbc2b0a11ac5",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "5d83f740835756a649e8e9316b7f07f76b1c0cc2",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "5ea67444df9517209d8e1f5f1ea0d2637431048f",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.step": "62836c8d0ed387dde7732ad28b8b032b6a09758b",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "44798c3bb5c4613aa9bdeffc5f94958c522b2a59",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.step": "5332becddb7ff951aed5eb970ac1d2d85d12bd07",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.stl": "9d7933da379680b8e959d13aaa0a74b594853650",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2_AP01_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf": "453e07cd543a37a7404a159deafd069b065ef21f",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1-SS060_AP01_DRAFT_NOT_FOR_FABRICATION.step": "aaa29769dae0339edbc62896b387bd9b7e9663cd",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C1_AP01_CUT_ONLY_DRAFT_NOT_FOR_FABRICATION.dxf": "fb6901cd322d9a882e7cf74e54b478770ac8ca7f",
+    "deliverables/current/fabrication/aperture-access/cad/MAIN-C2-SS125_AP01_DRAFT_NOT_FOR_FABRICATION.step": "d8a72347415c14e9bd398428031c8518735b04be"
+  },
+  "artifact_sha256": {
+    "index.html": "86ae1aef9e4d7c806519b90b424fbd5d6d375d40b6742339edbf7d43ba6d60df",
+    "control_registration_ALIGN02_DRAFT.blend": "94ef03a051141b452f084faa3869130fb1b03cd86c7d5637adfa69fc02df98cc",
+    "registration_comparison.png": "4edbcd8564cc4051f44af541b41a2ad79381c2030795ec438c3fbd29fac1601a",
+    "registration_caliper_front.png": "144662e0051a59bcaec57d59966198a4b366a873055aeb4dbbd87755e92be714",
+    "blender_validation.json": "045cc6d3b925ab529f0dee8a2cf9e67a961d5644853d254c71b817689897bc49",
+    "registration_trial.json": "597383be29cd49d5208fd4498a57161bbb39f060d6669b69c47043f630f224ee"
+  },
+  "visual_review": "Final comparison plot and updated Blender render inspected directly. Existing IAB tab navigated to ALIGN02; title, tables, explanations and image loaded, top viewport screenshot visually checked without overlap. No extra browser tab or GUI Blender change.",
+  "local_http": "PASS: final ALIGN02 served and reloaded successfully in the existing in-app browser; DOM includes the 1.68 mm limiting-clearance note, expected state values, images and saved Blender link.",
+  "physical_fit": "UNPERFORMED",
+  "fabrication_release": "HOLD",
+  "recovery": "New artifacts are intended for the ordinary Git checkpoint. Existing raw archive recovery evidence retained. No fresh full bundle or clone this turn; that recovery check was not repeated under recent memory pressure.",
+  "previous_goal_turn": "PROGRESS: ALIGN01 commit 9bc94aa found cap-reference discrepancy. ALIGN02 adds rigid and caliper-conditioned state checks rather than repeating that finding."
+}

@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "d5458aeb49e253c92cfd3c337256b98829401eaa",
+  "source_commit": "9bc94aaf75abc8e9c84c31763f0487659e302953",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "0b36489e14d09dde03c8889549d26a77e70dd0373b22a8e60f1e55f1cee6ae5f",
+  "source_tree_hash": "fdc18f4a039b9dfc217884bfa6f2c6976120c65bbbfb3161faf9b0c73209ad9d",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -663,8 +663,8 @@
     },
     {
       "path": "deliverables/current/fabrication/aperture-access/index.html",
-      "sha256": "b8a9a3ec7a6cd01efd1f7832b415ac7d54ad5983516bcea3dcaa27f5dde6f4b4",
-      "size_bytes": 11558
+      "sha256": "bf74004d13911cac3e04be8cc8dc2001307be1bb033cb24f5ced10d69e3c2213",
+      "size_bytes": 12350
     },
     {
       "path": "deliverables/current/fabrication/aperture-access/upper_connection_depth.png",
@@ -903,8 +903,8 @@
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/index.html",
-      "sha256": "dc8ad61e125925bf5fb59728121f723681587faf4af00070a805d30f7c2100a5",
-      "size_bytes": 13019
+      "sha256": "ce301875b32f15ac418aff1819fcabb46303fe222a589d68b49398a0223c34c6",
+      "size_bytes": 13811
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/package_manifest.json",
@@ -1035,6 +1035,36 @@
       "path": "deliverables/current/fabrication/concentric-border-study/views/wall_detail_source.png",
       "sha256": "9df7c6feaab6adc1b2464438789e5db3af9701380931cb215be261ae69850434",
       "size_bytes": 6798098
+    },
+    {
+      "path": "deliverables/current/fabrication/control-registration/blender_validation.json",
+      "sha256": "045cc6d3b925ab529f0dee8a2cf9e67a961d5644853d254c71b817689897bc49",
+      "size_bytes": 370
+    },
+    {
+      "path": "deliverables/current/fabrication/control-registration/control_registration_ALIGN02_DRAFT.blend",
+      "sha256": "94ef03a051141b452f084faa3869130fb1b03cd86c7d5637adfa69fc02df98cc",
+      "size_bytes": 8299558
+    },
+    {
+      "path": "deliverables/current/fabrication/control-registration/index.html",
+      "sha256": "86ae1aef9e4d7c806519b90b424fbd5d6d375d40b6742339edbf7d43ba6d60df",
+      "size_bytes": 7684
+    },
+    {
+      "path": "deliverables/current/fabrication/control-registration/registration_caliper_front.png",
+      "sha256": "144662e0051a59bcaec57d59966198a4b366a873055aeb4dbbd87755e92be714",
+      "size_bytes": 1031794
+    },
+    {
+      "path": "deliverables/current/fabrication/control-registration/registration_comparison.png",
+      "sha256": "4edbcd8564cc4051f44af541b41a2ad79381c2030795ec438c3fbd29fac1601a",
+      "size_bytes": 356205
+    },
+    {
+      "path": "deliverables/current/fabrication/control-registration/registration_trial.json",
+      "sha256": "597383be29cd49d5208fd4498a57161bbb39f060d6669b69c47043f630f224ee",
+      "size_bytes": 16384
     },
     {
       "path": "deliverables/current/manual/index.html",
@@ -1334,8 +1364,8 @@
   ],
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed.",
-    "geometric_fit": "AP01 exported geometry checks remain valid for the original provisional placement. ALIGN01 identifies unverified U/L surface picks near tip-cap edges, roughly 3 mm from separately fitted cap centers. Actual rigid factory-plate registration, both control axes, studs, foam landing, wall coverage and neighbor spacing must be reconciled before selecting installed placement. Do not treat old point-based clearance, depth or caliper reconciliation as verified axis-center fit.",
+    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed. ALIGN02: three separate Blender scenes saved/reopened with unchanged CAD dimensions and checked placements; independent analytic clearance/rigid-transform checks and local browser review passed. These are diagnostic software checks only.",
+    "geometric_fit": "ALIGN02 tests rigid recentering and a separate 1.012273 uniform scan-scale trial calibrated to the 80 mm U\u2013L 3D reading with old tip depths assumed. Both clear 51,929 scoped captured projections. Caliper-conditioned projected main damage margins: 7.03 mm for \u00d8220, 4.11 mm for \u00d8214.15 after tracing allowance. Lower reference opening position/diameter, actual plate-plane axes, stud centers, factory interfaces, continuous foam support and axial engagement remain unverified. Small fit residuals are not physical accuracy or manufacturing tolerance. The closest scoped captured hardware has only about 1.68 mm model clearance in that trial before unresolved scan/axis/placement/manufacturing errors.",
     "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",

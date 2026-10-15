@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "saved_reopened": true,
+  "scenes": 3,
+  "default": "ALIGN02 | CALIPER",
+  "CAD_local_dimensions_and_placements_checked": true,
+  "source_sha256": "65f280529d28ee9da71bcb426da646fed050e332bb69960339ee30a0ca922181",
+  "placement_inputs_sha256": "8274ff4e3d18541072841d91d24331bcb3c9e9d1b9c8519ed47b466f2d398c0a",
+  "physical_fit": "UNPERFORMED"
+}
