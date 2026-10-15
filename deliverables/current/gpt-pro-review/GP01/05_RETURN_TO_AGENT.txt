@@ -1,0 +1,9 @@
+Use the attached GPT Pro response as independent review advice for the Kohler shower project. Evaluate its conclusions against our preserved evidence and current user constraints, then implement the supported CAD and document work. Do not accept new dimensions, material claims or source applicability merely because Pro asserted them.
+
+Work in /Users/mdpatrick/Code/shower-kohler-valve. Start with the GP01 package manifest and compare its FT01 source snapshot with the current repository, so later work is not overwritten. Preserve raw scans, accepted measurements, original installed geometry and historical studies. Record the reasons for adopted and rejected recommendations.
+
+Prepare the preferred custom backing CAD and, if justified, a separately identified bolt-notch/locator variant. Produce the fabricator packet, expert repair/diagnosis brief, illustrated installation manual and concise owner handoff described in Pro's instructions. Keep geometry, schematics, Blender and document dimensions synchronized. Verify exports, visible layouts and source consistency before delivery.
+
+Continue useful quote and sacrificial fit-trial work even when final physical checks remain open. Do not mark permanent installation, factory engagement, sealing or water performance as passed without real evidence. No upload, order, trade message, tile modification or guessed wood drilling is authorized by this review response. Ask only for information essential to an otherwise blocked step, while completing independent work.
+
+GPT PRO RESPONSE FOLLOWS:

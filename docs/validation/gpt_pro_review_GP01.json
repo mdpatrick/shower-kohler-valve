@@ -1,0 +1,51 @@
+{
+  "package": "GP01",
+  "zip_crc": "PASS",
+  "all_member_hashes": "PASS",
+  "baseline_commit_byte_comparison": "PASS",
+  "baseline_files_checked": 82,
+  "outer_archive_members": 7,
+  "evidence_pages": 14,
+  "archive_sha256": "d32efe4931199fe1fe014cd2b87633ade692cc837bb8b12a0d49265adcc5ed64",
+  "archive_size_bytes": 54066598,
+  "CAD_modified": false,
+  "physical_fit": "NOT PERFORMED",
+  "PDF_visual_review": "PASS: all 14 rendered pages inspected individually at 1500 px; readable photos/annotations/captions, no clipping/overlap.",
+  "rendering_note": "Poppler completed with fontconfig cache warnings; rendered pages visually verified.",
+  "source_manifest": "deliverables/current/gpt-pro-review/GP01/MANIFEST.json",
+  "CAD_scope": "No FT01 CAD or canon changes; all 18 exported CAD files are exact committed baseline bytes.",
+  "external_transmission": "NONE",
+  "current_task": "Prompt package for independent Pro review, not final repair design or physical release.",
+  "payload_files": [
+    {
+      "path": "00_READ_ME_FIRST.txt",
+      "sha256": "41fa3591e1d21d25d9817a69bab8ee75b5a81834be9afb2a9e21ee3edef44a0f",
+      "size_bytes": 3160
+    },
+    {
+      "path": "01_PASTE_INTO_GPT_PRO.txt",
+      "sha256": "445fad8d2352053acbe9dd731ddc06393eeab2dcfe7e168c3dfa0152888f6214",
+      "size_bytes": 16125
+    },
+    {
+      "path": "02_PROJECT_BRIEF.txt",
+      "sha256": "9c5a9ac7166799108575de265de1dd2a4501a312a85d65e30c1c16d90c0cecf0",
+      "size_bytes": 16616
+    },
+    {
+      "path": "05_RETURN_TO_AGENT.txt",
+      "sha256": "be4e614e724486fa40c636f269d630dc3c231aa0fc85875f3e8fd32a4e0e5515",
+      "size_bytes": 1551
+    },
+    {
+      "path": "03_VISUAL_EVIDENCE.pdf",
+      "sha256": "d99ad381adda1aa0fd10077e4caa9e53b67e6e69438903c08fe9e956f7c735bf",
+      "size_bytes": 50846252
+    },
+    {
+      "path": "04_TECHNICAL_REFERENCE.zip",
+      "sha256": "20eefa2025057422cda2d4429e17fabda49fcf56eacebc494043710a9f92c1e4",
+      "size_bytes": 12786985
+    }
+  ]
+}
