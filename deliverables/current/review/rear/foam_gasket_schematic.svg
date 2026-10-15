@@ -1,0 +1,35 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1100" height="430" viewBox="0 0 1100 430" role="img" aria-labelledby="title desc">
+<title id="title">The foam belongs to the removable inner plate</title>
+<desc id="desc">Schematic rear view of an inner plate with a dark perimeter foam band, and a free foam cross-section approximately six millimeters by six millimeters. The rear footprint is not verified.</desc>
+<defs><marker id="arrow" viewBox="0 0 10 10" refX="5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="#24515c"/></marker></defs>
+<rect width="1100" height="430" rx="14" fill="#f3f7f7"/>
+<g font-family="Arial, sans-serif" fill="#18343c">
+<text x="28" y="37" font-size="23" font-weight="bold">The foam is attached to the removable inner plate</text>
+<text x="28" y="64" font-size="16">Illustration of its function • exact rear outline and sealing path remain unmeasured</text>
+<text x="28" y="104" font-size="18" font-weight="bold">Wall-facing side, schematic</text>
+<rect x="65" y="128" width="175" height="240" rx="60" fill="#d5dcde" stroke="#89979c" stroke-width="3"/>
+<rect x="77" y="140" width="151" height="216" rx="50" fill="none" stroke="#34383e" stroke-width="14"/>
+<circle cx="153" cy="203" r="32" fill="#f3f7f7" stroke="#89979c" stroke-width="3"/>
+<circle cx="153" cy="294" r="36" fill="#f3f7f7" stroke="#89979c" stroke-width="3"/>
+<path d="M226 179L300 150" fill="none" stroke="#24515c" stroke-width="2"/>
+<text x="306" y="149" font-size="18" font-weight="bold">Soft perimeter band</text>
+<text x="306" y="174" font-size="17">About 6 mm wide</text>
+<text x="306" y="199" font-size="17">About 6 mm deep, free</text>
+<text x="306" y="237" font-size="16">You measured these values</text>
+<text x="306" y="260" font-size="16">on the loose plate.</text>
+<text x="306" y="299" font-size="17" font-weight="bold">It leaves with the plate.</text>
+<text x="306" y="323" font-size="16">None is shown in your current</text>
+<text x="306" y="346" font-size="16">exposed-valve installation.</text>
+<path d="M582 100V367" stroke="#c5d1d4"/>
+<text x="615" y="104" font-size="18" font-weight="bold">Small section through that band</text>
+<rect x="718" y="164" width="83" height="83" fill="#34383e"/>
+<rect x="801" y="148" width="10" height="115" fill="#a8b3b8"/>
+<path d="M718 278H801" stroke="#24515c" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<path d="M845 164V247" stroke="#24515c" stroke-width="1.6" marker-start="url(#arrow)" marker-end="url(#arrow)"/>
+<text x="738" y="302" font-size="16">~6 mm</text><text x="860" y="212" font-size="16">~6 mm</text>
+<text x="616" y="202" font-size="16">To wall</text><path d="M700 207H674" stroke="#24515c" stroke-width="2" marker-end="url(#arrow)"/>
+<path d="M810 151L901 136" stroke="#24515c" stroke-width="1.5"/>
+<text x="902" y="135" font-size="16">Metal plate</text>
+<text x="615" y="343" font-size="16">Compression in the installed assembly is unknown.</text>
+<text x="28" y="405" font-size="16">Layer order: tile / proposed backing → factory foam → inner plate → decorative cover and handles</text>
+</g></svg>

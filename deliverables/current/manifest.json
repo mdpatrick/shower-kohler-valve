@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "e6f7b1fab4e52fe0cd8e45f56079ca07812febb9",
+  "source_commit": "dc2a5a368e608f22cdebe7d9f4dafcdb326552e4",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "29a81edd934358faf145ac5d0e3c52848c0f6ecacd321560b1ba810a11adb327",
+  "source_tree_hash": "19798c238f7c91bc6a441b0b9fd1eb4f55dcb712d5ec701162a372ced1cc6390",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -987,9 +987,19 @@
       "size_bytes": 1238
     },
     {
+      "path": "deliverables/current/review/rear/foam_gasket_schematic.svg",
+      "sha256": "e3d2c95a29e5514f29355bb592d8621f55baba9cf3d955534abe42cd68667395",
+      "size_bytes": 3155
+    },
+    {
+      "path": "deliverables/current/review/rear/foam_studs_review.jpg",
+      "sha256": "824e0b9889757d158c7a5ded1aa11989d221012faac84fc2eaefb96b5f938495",
+      "size_bytes": 102225
+    },
+    {
       "path": "deliverables/current/review/rear/index.html",
-      "sha256": "f0b21fed08b9a0d0923714eb948d0ea78b5d81a30a1a262b00c133f2d883c8f8",
-      "size_bytes": 4183
+      "sha256": "ce21f919d88919a23edfae6d8a25dd20797d098efc470e5e8b23204a13397d7e",
+      "size_bytes": 8171
     },
     {
       "path": "deliverables/current/review/rear/rear-close-2026-10-15.jpeg",
@@ -1010,6 +1020,11 @@
       "path": "deliverables/current/review/rear/review_screenshot.jpg",
       "sha256": "43d5aae4d3dc78666b3a4037b981abdecaf40b8cc435fbaa3b7aa3a574795918",
       "size_bytes": 99804
+    },
+    {
+      "path": "deliverables/current/review/rear/stud_rear_estimate.json",
+      "sha256": "d5b2a7a5847ec0370a453324d435b70b91649f7dca07cab61869c1adffcce711",
+      "size_bytes": 1362
     },
     {
       "path": "deliverables/current/review/style.css",

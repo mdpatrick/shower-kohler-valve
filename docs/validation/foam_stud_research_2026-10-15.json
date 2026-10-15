@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-15",
+  "research": "STUD-REAR-RESEARCH-001",
+  "scope": "Manufacturer source cross-reference, conditional arithmetic, local review; no physical test",
+  "checks": {
+    "manufacturer_diagram": "Visually inspected printed page 9: two-control plate 1035854 and studs 1038645; title page includes K-T14489",
+    "manufacturer_product": "Official K-1038645 title: 10-24 X 4.56 L",
+    "arithmetic": "PASS; full length, projection limit, rear depths and travel recomputed",
+    "SVG_and_local_links": "PASS",
+    "browser": "1280px viewport, no horizontal overflow; schematic and both rear photographs loaded; screenshot visually inspected",
+    "accepted_geometry_preserved": "Measurements, transforms, fabrication design and REAR01 Blender match HEAD byte-for-byte",
+    "project_snapshot_integrity": "PASS"
+  },
+  "limitations": [
+    "Factory nominal rod length is not a physical measurement of installed hardware",
+    "Wood face depth and penetration unresolved",
+    "Rear footprint and installed foam compression unresolved",
+    "No machining or installation change selected"
+  ],
+  "screenshot": "deliverables/current/review/rear/foam_studs_review.jpg"
+}

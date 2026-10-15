@@ -251,6 +251,30 @@
       "capture_date": "not established; received 2026-10-15",
       "title": "User rear installation photograph",
       "applicability": "Current qualitative rear context; no measured scale or 3D registration."
+    },
+    {
+      "id": "SRC-KOHLER-PURIST-SERVICE",
+      "path": "data/evidence/kohler-1041507_5.pdf",
+      "url": "https://resources.kohler.com/onlinecatalog/pdf/1041507_5.pdf",
+      "title": "Purist thermostatic trim service parts",
+      "revision": "1041507-5-F",
+      "pages": "cover and printed p9",
+      "applicability": "Cover lists K-T14489. Two-control exploded drawing identifies 1038645 studs and 1035854 seal/front plate. Does not verify actual rod length or later substitution.",
+      "retrieved_date": "2026-10-15",
+      "sha256": "29bf424c7973625537aa24fe3d99445b93f61fcb4a6bfea46be2e4fd9a16e866",
+      "size_bytes": 629673
+    },
+    {
+      "id": "SRC-KOHLER-STUD-1038645",
+      "path": "docs/physical_checks/foam_and_stud_research_2026-10-15.json",
+      "url": "https://www.kohler.com/en/support/find-a-service-part/shop-parts/stud-10-24-x-4-56-l-1038645",
+      "title": "K-1038645 manufacturer nominal stud specification",
+      "revision": "web product title retrieved 2026-10-15",
+      "pages": "product title",
+      "applicability": "Title: Stud, 10-24 X 4.56 L. Length nominal 4.56 in = 115.824 mm. Local record preserves the sourced transcription, not a full page archive; actual installed rods unmeasured.",
+      "retrieved_date": "2026-10-15",
+      "sha256": "afb9e24ff2c595889e4b5c8ebafd9be8bbbab10393997750809a8849825ebc94",
+      "size_bytes": 4036
     }
   ]
 }

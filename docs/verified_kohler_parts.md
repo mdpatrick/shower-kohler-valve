@@ -48,7 +48,7 @@ Email and Slack links require the user's account access. This document preserves
 
 ## What this does not establish
 
-- These are assembly/product model numbers. Individual service-part numbers for the inner plate, gasket, escutcheon alone, cartridges, fasteners, and adapters have not been independently identified here.
+- These are assembly/product model numbers. Subsequent October 15 manufacturer research identifies **1038645 trim studs** and **1035854 seal/front-plate assembly** in the stacked two-control drawing, printed page 9 of [1041507-5-F](https://resources.kohler.com/onlinecatalog/pdf/1041507_5.pdf#page=9). The [stud product page](https://www.kohler.com/en/support/find-a-service-part/shop-parts/stud-10-24-x-4-56-l-1038645) specifies 10-24 × 4.56 in. This does not establish that the installed rods are uncut originals. Other service-part identities and revision applicability still require their own evidence. See [the research record](physical_checks/foam_and_stud_research_2026-10-15.json).
 - Oversized backing plates are proposed custom pieces with no Kohler model number. No custom diameter, aperture, thickness, material, or fabrication tolerance is selected or approved by this document.
 - Physical dimensions, installation/clearance checks, gasket support, waterproofing, fabrication approval, and installed leak testing are not completed by receipt or model verification. Preserve the travertine and factory plate, gasket, drainage, and service functions.
 - This documentation adds provenance; it does not modify the canon, accepted measurements, reconstruction geometry, selected repair, or readiness flags.

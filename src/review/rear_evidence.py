@@ -4,11 +4,13 @@ import hashlib
 import json
 import re
 import shutil
+from foam_studs import generate
 
 ROOT = Path(__file__).resolve().parents[2]
 OUT = ROOT / 'deliverables/current/review/rear'
 record = json.loads((ROOT / 'docs/physical_checks/rear_installation_2026-10-15.json').read_text())
 OUT.mkdir(parents=True, exist_ok=True)
+foam_stud_section = generate(OUT)
 cards = []
 for p in record['photos']:
     source = ROOT / p['path']
@@ -29,14 +31,16 @@ main{max-width:1200px;margin:auto;padding:28px}h1{font-size:34px;line-height:1.2
 a{color:#076b80}section{background:white;padding:24px;margin:22px 0;border-radius:10px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:22px}
 figure{margin:0}img{display:block;width:100%;height:auto;border-radius:6px}figcaption{padding:12px 0;font-size:15px}
 .status{border-left:5px solid #19838b}.small{font-size:14px;color:#51676f}.button{display:inline-block;padding:10px 16px;background:#dcebed;border-radius:7px}
+th,td{padding:10px;border-bottom:1px solid #dce4e7}h3{font-size:20px}
 @media(max-width:700px){.grid{grid-template-columns:1fr}main{padding:18px}h1{font-size:28px}}
 </style><main><p><a href="../../fabrication/concentric-border-study/index.html">← Circular plate review</a></p>
 <h1>The rear installation, as photographed</h1>
 <section class="status"><h2>No foam is installed at this stage</h2>
 <p>Your clarification is recorded: the valve is exposed and the foam-backed factory inner plate is removed.
 The earlier approximately 6 mm foam thickness/width and 15.44 mm free overall depth describe that removed part.
-Foam in an exploded or future assembly view belongs to its eventual reinstallation. It is not cavity filling.</p></section>
-<div class="grid">'''+''.join(cards)+'''</div>
+Foam in an exploded or future assembly view belongs to its eventual reinstallation. It is not cavity filling.</p>
+<p><a href="#foam-and-studs">See the gasket illustration and factory stud dimensions</a></p></section>
+'''+foam_stud_section+'''<div class="grid">'''+''.join(cards)+'''</div>
 <section><h2>Why the old rear view was misleading</h2><p>The front Polycam capture contains visible surfaces, not a complete solid reconstruction of the plumbing and framing behind them.
 Seeing its back faces—or the older simplified valve envelopes—does not reveal the real rear assembly.</p>
 <p>The updated Blender review opens to these packed photographs. Its <b>REAR01 | current front scan ONLY</b> scene contains the preserved scan without factory trim, gasket or proposed parts.

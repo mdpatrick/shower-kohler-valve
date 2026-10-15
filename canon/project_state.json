@@ -54,5 +54,6 @@
     "canon/stud_locator_study.json"
   ],
   "rear_installation_record": "docs/physical_checks/rear_installation_2026-10-15.json",
-  "current_blender_review": "deliverables/current/blender/installation_REAR01_DRAFT.blend"
+  "current_blender_review": "deliverables/current/blender/installation_REAR01_DRAFT.blend",
+  "foam_and_stud_research": "docs/physical_checks/foam_and_stud_research_2026-10-15.json"
 }

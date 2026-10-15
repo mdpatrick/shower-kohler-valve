@@ -1,0 +1,54 @@
+{
+  "id": "STUD-REAR-RESEARCH-001",
+  "revision": 1,
+  "date": "2026-10-15",
+  "status": "MANUFACTURER_NOMINAL_AND_CONDITIONAL_SCAN_ESTIMATE",
+  "manufacturer_stud": {
+    "part": "K-1038645",
+    "title_verbatim": "Stud, 10-24 X 4.56 L",
+    "thread": "10-24",
+    "length_in": 4.56,
+    "length_mm": 115.824,
+    "product_url": "https://www.kohler.com/en/support/find-a-service-part/shop-parts/stud-10-24-x-4-56-l-1038645",
+    "cross_reference": "Kohler 1041507-5-F, cover lists K-T14489; printed page 9 shows the two-control trim, stud 1038645, and seal/front plate 1035854.",
+    "diagram_path": "data/evidence/kohler-1041507_5.pdf",
+    "diagram_url": "https://resources.kohler.com/onlinecatalog/pdf/1041507_5.pdf",
+    "installed_identity": "Applicable documented service part; actual rods have not been removed/measured to establish uncut original length or exclude substituted hardware."
+  },
+  "manufacturer_installation": {
+    "wall_projection_limit_in": 0.4375,
+    "wall_projection_limit_mm": 11.1125,
+    "datum": "Original finished wall; not the valve casting or the front of the decorative cover",
+    "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf",
+    "page": 7,
+    "retention": "The two trim studs thread into the valve. Wood anchorage is not the specified trim retention.",
+    "custom_stack": "Do not automatically reinterpret the original-wall limit as approval of the added custom plate/bedding stack. Final gasket compression, nut seating, cover clearance and handle engagement remain to be checked."
+  },
+  "foam": {
+    "description": "Compressible perimeter gasket on the wall-facing side of the removable inner plate; absent from the exposed installation when that plate is removed.",
+    "documented_assembly_part": "K-1035854",
+    "product_url": "https://www.kohler.com/en/support/find-a-service-part/shop-parts/assembly-seal-front-plate-1035854",
+    "manufacturer_illustration_url": "https://kohler.scene7.com/is/image/PAWEB/1035854",
+    "user_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+    "user_approx_free_thickness_mm": 6,
+    "user_approx_band_width_mm": 6,
+    "user_overall_free_depth_mm": 15.44,
+    "unverified": "Exact rear footprint, continuity, material grade, condition and installed compression. The explanatory rear-view drawing is schematic, not a gasket template."
+  },
+  "conditional_scan_estimate": {
+    "input": "data/derived/resolved.json",
+    "stud_order": ["SW", "NE"],
+    "assumptions": [
+      "Both installed rods are uncut 115.824 mm factory studs.",
+      "Rod axes are perpendicular to the finished tile plane for this calculation.",
+      "Existing scan scale, tile datum and tip locations are sufficiently representative; none is newly physically verified.",
+      "The wood face is not registered to the scan. Rear-photo contact does not supply its depth."
+    ],
+    "formula_rear_depth_behind_tile_mm": "nominal_stud_length_mm - scan_front_tip_z_mm",
+    "formula_inward_travel_to_original_limit_mm": "scan_front_tip_z_mm - original_wall_projection_limit_mm",
+    "not_a_drilling_specification": true
+  },
+  "photo_inference": "The visible rod appears to meet the wood surface. Surface contact is the leading interpretation, but a shallow indentation or obscured hole cannot be excluded; the second stud's rear end is not resolved.",
+  "decisive_inspection": "Trace each diagonal front trim stud to its rear end. A grazing-angle mirror/borescope view can show whether its end face sits above wood or disappears into a hole. If actual rod length L is known, compare the front-tip-to-near-wood-face distance D measured along that rod: D approximately L suggests contact; D less than L implies penetration L-D; D greater than L implies a gap D-L. Differences must exceed measurement uncertainty. A paper feeler passing establishes a gap; failure to pass does not distinguish contact from penetration.",
+  "physical_work": "None. No stud rotation, cutting, drilling, valve movement or fabrication release."
+}

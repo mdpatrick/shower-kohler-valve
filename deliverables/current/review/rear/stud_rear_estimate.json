@@ -1,0 +1,32 @@
+{
+  "record_id": "STUD-REAR-RESEARCH-001",
+  "status": "MANUFACTURER_NOMINAL_AND_CONDITIONAL_SCAN_ESTIMATE",
+  "assumptions": [
+    "Both installed rods are uncut 115.824 mm factory studs.",
+    "Rod axes are perpendicular to the finished tile plane for this calculation.",
+    "Existing scan scale, tile datum and tip locations are sufficiently representative; none is newly physically verified.",
+    "The wood face is not registered to the scan. Rear-photo contact does not supply its depth."
+  ],
+  "nominal_stud_length_mm": 115.824,
+  "original_wall_limit_mm": 11.1125,
+  "inferred_rear_depth_at_original_limit_mm": 104.7115,
+  "rows": [
+    {
+      "stud": "SW",
+      "front_tip_z_mm": 26.61188122141667,
+      "inferred_rear_depth_behind_tile_mm": 89.21211877858333,
+      "inward_travel_to_original_wall_limit_mm": 15.49938122141667
+    },
+    {
+      "stud": "NE",
+      "front_tip_z_mm": 30.676418397046806,
+      "inferred_rear_depth_behind_tile_mm": 85.1475816029532,
+      "inward_travel_to_original_wall_limit_mm": 19.563918397046805
+    }
+  ],
+  "not_a_drilling_specification": true,
+  "input_sha256": {
+    "docs/physical_checks/foam_and_stud_research_2026-10-15.json": "afb9e24ff2c595889e4b5c8ebafd9be8bbbab10393997750809a8849825ebc94",
+    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883"
+  }
+}
