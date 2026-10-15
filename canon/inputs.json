@@ -248,6 +248,71 @@
         }
       ],
       "extraction_path": "data/extracted/plates-side-2-polycam"
+    },
+    {
+      "id": "SCAN-INNER-ATTACHED",
+      "source_path": "/Users/mdpatrick/Downloads/polycam-inner-plate-attached.zip",
+      "repository_path": "data/raw/polycam/polycam-inner-plate-attached.zip",
+      "sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+      "size_bytes": 23654985,
+      "role": "supplemental capture of inner plate attached; plate-to-controls relationship evidence pending visual and geometric inspection",
+      "user_description": "Polycam with the inner plate attached; knob attachments still seem off-center to the user.",
+      "user_quality_assessment": null,
+      "calibrated_accuracy_mm": null,
+      "capture_date": null,
+      "received_date": "2026-10-15",
+      "export_name_date": "2026-10-15 (OBJ/MTL filenames only; not established capture date)",
+      "filesystem_mtime_utc": "2026-10-15T21:05:44.873803+00:00",
+      "timestamp_note": "ZIP member date 1980-01-00 is invalid and not capture evidence. Source filesystem time is not capture time.",
+      "archive_members": [
+        {
+          "name": "10_15_2026.mtl",
+          "size_bytes": 77,
+          "compressed_bytes": 79,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "87abbfe0"
+        },
+        {
+          "name": "10_15_2026.obj",
+          "size_bytes": 64172475,
+          "compressed_bytes": 15972429,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "e841ecd1"
+        },
+        {
+          "name": "textures/0d630c10162ef4d3889cebe53165c43f.jpg",
+          "size_bytes": 7705560,
+          "compressed_bytes": 7682081,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "53c231a5"
+        }
+      ],
+      "extraction_path": "data/extracted/polycam-inner-plate-attached",
+      "extraction_status": "not extracted; original archive preserved and CRC-tested",
+      "registration_status": "UNREGISTERED",
+      "source_priority_note": "Preserve the original SCAN-WALL as the primary bare-installation reference. Assess this new capture separately for observed plate/hardware relationships; do not force its controls concentric or overwrite the original scan transform.",
+      "observation_record": "docs/physical_checks/inner_plate_attached_scan_2026-10-15.json"
     }
   ]
 }

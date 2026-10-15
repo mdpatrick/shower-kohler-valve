@@ -1,0 +1,28 @@
+{
+  "id": "OBS-INNER-ATTACHED-SCAN-01",
+  "date": "2026-10-15",
+  "source": "direct user message and supplied Polycam ZIP",
+  "status": "user-described attached inner plate; apparent eccentricity is qualitative",
+  "raw_user_message": "Heres a polycam with the innerplate attached. The nob attachments do still seem sort of off-center to my eye. I am not sure what the implications are for the escutcheon plate we're designing, but I wanted to share it. Save the polycam down.",
+  "scan_id": "SCAN-INNER-ATTACHED",
+  "repository_path": "data/raw/polycam/polycam-inner-plate-attached.zip",
+  "sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+  "accepted_numeric_readings": [],
+  "capture_state": "Inner plate attached, as stated by the user. No claim of final nut tightness, foam compression, cover/handle assembly or successful fit.",
+  "changes_since_prior_state": "Inner plate attachment is newly documented for this capture. No additional valve, piping, stud or wall change is established.",
+  "implications_pending": [
+    "Inspect the captured inner plate and both control connections directly; do not assume the earlier reference-point error explains this new observation.",
+    "Register unchanged stone and credible installed features to the primary scan without forcing controls to the opening centers.",
+    "Measure apparent offsets in the actual plate frame with scan quality and perspective considered; establish whether fit-critical mating surfaces share those offsets.",
+    "Reassess custom aperture, foam landing, depth and engagement before any manufacturing release."
+  ],
+  "executed_this_turn": [
+    "Original ZIP copied without repacking",
+    "Source and repository SHA-256 and size matched",
+    "Archive members checked for unsafe paths/links/duplicates",
+    "All ZIP member CRCs verified"
+  ],
+  "geometry_inspected": false,
+  "physical_fit": "UNPERFORMED",
+  "fabrication_release": "HOLD"
+}

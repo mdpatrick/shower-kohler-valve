@@ -9,13 +9,13 @@
     "manufacturer_intended": "Documented layer/fastener order and original-finished-wall stud limit only; no physically verified installed geometry",
     "proposed_provisional": "CB01 C1 circular 220/120 mm and C2 circular 214.15/128.425 mm pairs, with 1.524/3.175 mm metal and 3 mm prototype stock trials. F005 offset/rectangular appearances are superseded by circular-only user requirements. LOC01 upper locating tabs remain a separate diagnostic. AP01 supplies separate upright-access main-plate alternatives for both circular sizes; CB01 quote files remain historical diagonal-aperture files.",
     "selected_arrangement": null,
-    "current_exposed_installation": "Original front capture plus unscaled rear photos. Factory inner plate/foam and trim are removed. Rear construction has not been reconstructed metrically.",
+    "current_exposed_installation": "Earlier bare-front and rear records show the factory inner plate removed. The newly received SCAN-INNER-ATTACHED is described by the user as showing it attached. Preserve these distinct capture states; no measured valve/stud/piping change or successful trim fit is established.",
     "control_registration_trials": "ALIGN02: separate original, rigid-only, and caliper-conditioned uniform scan-scale states; actual CAD sizes and source evidence preserved; no physical pose selected."
   },
   "readiness": {
     "evidence_preserved": true,
     "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed. ALIGN02: three separate Blender scenes saved/reopened with unchanged CAD dimensions and checked placements; independent analytic clearance/rigid-transform checks and local browser review passed. These are diagnostic software checks only.",
-    "geometric_fit": "ALIGN02 tests rigid recentering and a separate 1.012273 uniform scan-scale trial calibrated to the 80 mm U\u2013L 3D reading with old tip depths assumed. Both clear 51,929 scoped captured projections. Caliper-conditioned projected main damage margins: 7.03 mm for \u00d8220, 4.11 mm for \u00d8214.15 after tracing allowance. Lower reference opening position/diameter, actual plate-plane axes, stud centers, factory interfaces, continuous foam support and axial engagement remain unverified. Small fit residuals are not physical accuracy or manufacturing tolerance. The closest scoped captured hardware has only about 1.68 mm model clearance in that trial before unresolved scan/axis/placement/manufacturing errors.",
+    "geometric_fit": "New attached-plate scan SCAN-INNER-ATTACHED has been preserved but not yet inspected or registered; prior geometric trials remain unverified against it. ALIGN02 tests rigid recentering and a separate 1.012273 uniform scan-scale trial calibrated to the 80 mm U\u2013L 3D reading with old tip depths assumed. Both clear 51,929 scoped captured projections. Caliper-conditioned projected main damage margins: 7.03 mm for \u00d8220, 4.11 mm for \u00d8214.15 after tracing allowance. Lower reference opening position/diameter, actual plate-plane axes, stud centers, factory interfaces, continuous foam support and axial engagement remain unverified. Small fit residuals are not physical accuracy or manufacturing tolerance. The closest scoped captured hardware has only about 1.68 mm model clearance in that trial before unresolved scan/axis/placement/manufacturing errors.",
     "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
@@ -39,7 +39,7 @@
   "post_scan_state_observation": "OBS-POST-SCAN-01",
   "depth_review_observation": "OBS-DEPTH-REVIEW-01",
   "depth_inquiry_record": "docs/physical_checks/depth_inquiry_2026-10-14.json",
-  "latest_user_state_note": "User reports knob bodies appear similar in diameter to the inner-plate openings and flags off-center U/L in AP01. No new numeric reading. ALIGN01 finds original U/L landmarks near left tip-cap edges; approximately 3 mm lateral cap-center discrepancy requires registration reconciliation. Prior foam-edge and wood-contact corrections remain accepted.",
+  "latest_user_state_note": "User supplied a new Polycam with the inner plate attached and reports that knob attachments still look off-center. Saved as SCAN-INNER-ATTACHED; direct visual/geometric analysis is pending. This observation must not be dismissed as only the earlier modeled reference-point error.",
   "inner_plate_measurement_record": "docs/physical_checks/inner_plate_2026-10-14.json",
   "inner_plate_foam_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
   "outer_plate_measurement_record": "docs/physical_checks/outer_plate_2026-10-14.json",
@@ -68,5 +68,13 @@
   "control_registration_study": "deliverables/current/fabrication/control-registration/registration_trial.json",
   "control_registration_review": "deliverables/current/fabrication/control-registration/index.html",
   "current_blender_registration_study": "deliverables/current/fabrication/control-registration/control_registration_ALIGN02_DRAFT.blend",
-  "control_registration_selected": false
+  "control_registration_selected": false,
+  "latest_received_scan": "SCAN-INNER-ATTACHED",
+  "pending_evidence": [
+    {
+      "id": "SCAN-INNER-ATTACHED",
+      "record": "docs/physical_checks/inner_plate_attached_scan_2026-10-15.json",
+      "status": "preserved and archive-verified; geometry uninspected, unregistered, not incorporated in existing CAD or clearance trials"
+    }
+  ]
 }

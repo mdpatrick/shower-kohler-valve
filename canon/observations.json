@@ -133,6 +133,16 @@
         "OBS-STUD-WOOD-CONTACT-01",
         "OBS-INNER-PLATE-FOAM-01"
       ]
+    },
+    {
+      "id": "OBS-INNER-ATTACHED-SCAN-01",
+      "date": "2026-10-15",
+      "source": "direct user message and supplied Polycam ZIP",
+      "status": "user-described attached inner plate; apparent eccentricity is qualitative",
+      "scan_id": "SCAN-INNER-ATTACHED",
+      "capture_state": "Inner plate attached, as stated by the user. No claim of final nut tightness, foam compression, cover/handle assembly or successful fit.",
+      "changes_since_prior_state": "Inner plate attachment is newly documented for this capture. No additional valve, piping, stud or wall change is established.",
+      "record": "docs/physical_checks/inner_plate_attached_scan_2026-10-15.json"
     }
   ]
 }

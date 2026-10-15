@@ -1,3 +1,7 @@
+## New attached-plate evidence: preserve first, then reconcile
+
+The user provided `SCAN-INNER-ATTACHED` (`data/raw/polycam/polycam-inner-plate-attached.zip`) on October 15 and reports that the knob attachments still appear off-center with the real inner plate attached. The archive has been copied intact and verified; this turn records receipt, not a dimensional finding. Read `docs/physical_checks/inner_plate_attached_scan_2026-10-15.json`. The next geometric comparison should use visible unchanged stone and credible installed features to register this capture to the primary bare-wall scan, retain the observed plate/control offsets, and assess their uncertainty and actual fit implications. Do not force concentricity, overwrite original transforms or assume the previous point-selection error explains the new observation. Preserve the full design, physical-fit and release goals below.
+
 ## Latest executed continuation: ALIGN02 placement sensitivity
 
 Keep the full goal below active. ALIGN02 now compares the unchanged source pose, one rigid recentering of the factory/backing pattern, and a separate uniform scan-scale trial using the accepted 80 mm 3D U–L reading. It preserves actual part sizes and all original evidence. Two small scenes and the original state are saved in `deliverables/current/fabrication/control-registration/control_registration_ALIGN02_DRAFT.blend`; the adjacent review/report show scoped hardware clearance, damage margins, neighbor gaps, foam support and the other five caliper residuals. Rebuild with `./project prepare-registration`.

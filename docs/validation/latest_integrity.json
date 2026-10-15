@@ -17,6 +17,11 @@
       "id": "SCAN-PLATE-2",
       "status": "PASS",
       "committed_bytes_checked": false
+    },
+    {
+      "id": "SCAN-INNER-ATTACHED",
+      "status": "PASS",
+      "committed_bytes_checked": false
     }
   ],
   "errors": [],

@@ -1,0 +1,23 @@
+{
+  "id": "SCAN-INNER-ATTACHED-PRESERVATION",
+  "date": "2026-10-15",
+  "status": "PASS",
+  "source_id": "SCAN-INNER-ATTACHED",
+  "repository_path": "data/raw/polycam/polycam-inner-plate-attached.zip",
+  "sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+  "size_bytes": 23654985,
+  "git_blob_oid": "e058913f6fc4b7f84f41ad0dc3704ba18311e106",
+  "ordinary_git_filter": "unset; no LFS",
+  "checks": [
+    "Source and repository bytes match by SHA-256 and size",
+    "All three ZIP member paths/types checked by existing defensive archive validator",
+    "All ZIP member CRCs passed",
+    "Actual staged Git blob restored into isolated temporary directory without using Downloads or working-tree archive",
+    "Restored Git-blob SHA-256, size and all member CRCs passed",
+    "Original three input records preserved; new capture is a separate input identity"
+  ],
+  "geometry_inspected": false,
+  "registration": "NOT PERFORMED",
+  "physical_fit": "NOT PERFORMED",
+  "scope": "New archive preservation and targeted Git-object recovery only; no new full-repository clone or geometric fit validation."
+}
