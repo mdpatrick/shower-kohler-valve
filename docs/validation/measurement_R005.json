@@ -1,0 +1,69 @@
+{
+  "revision": "R005",
+  "design_revision": "F005",
+  "date": "2026-10-15",
+  "accepted_raw_ids": [
+    "M12-G",
+    "M06-YN"
+  ],
+  "raw_measurement_count": 14,
+  "derived_measurement_count": 1,
+  "unknowns_preserved": [
+    "M12-LD",
+    "M12-CCY",
+    "M12-LCB"
+  ],
+  "numerical_comparison": "PASS: baseline geometry keys unchanged; all 15 F005 solid bounds/volumes and all numerical fit/coverage findings exactly unchanged.",
+  "source_preservation": "PASS: accepted evidence SHA-256 snapshot unchanged by build; saved Blender full-source/proxy geometry, topology, UVs and transforms identical to R004.",
+  "tests": "27 passed after the complete R005 baseline existed. An earlier run during build had one missing-PDF error; no assertion failure; rerun passed.",
+  "PDF_review": "46 pages rendered; layout contact sheets inspected. Changed worksheet pages 6/12 and F005 fit-report page 2 inspected at full size; no clipping/overlap found.",
+  "pdfs": [
+    {
+      "path": "deliverables/current/drawings/measurement_worksheet_R005.pdf",
+      "pages": 12,
+      "sha256": "582a22b6d12480bfbcc629a4bf8dc1b3aa9b371b9d5cd22f7b658549b4b2df20"
+    },
+    {
+      "path": "deliverables/current/drawings/profile_template_R005_DRAFT.pdf",
+      "pages": 4,
+      "sha256": "9699a17ab926943a52d5913a144a4fdeed9a0d754e7a0d139e31f0f18aac5afd"
+    },
+    {
+      "path": "deliverables/current/drawings/candidate_drawing_R005_DRAFT.pdf",
+      "pages": 1,
+      "sha256": "b9e98c215ace877c2e196a1158998dd8377e8d8fa164f61be1c30eb41992569a"
+    },
+    {
+      "path": "deliverables/current/manual/repair_manual_R005_DRAFT.pdf",
+      "pages": 8,
+      "sha256": "224f514f7081cf1c75ca587fdd5342d1d3c5b273795795047303e6d65f3b8baf"
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/fit_and_fabrication_report_F005_DRAFT.pdf",
+      "pages": 9,
+      "sha256": "60e3f7c81519638b7f29aa2ace5e4c800d53803662d519a2dc8931e9432f99de"
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/full_size_templates_F005_DRAFT.pdf",
+      "pages": 4,
+      "sha256": "e6ed2c6a640b504378755550dadac6cb499e4d9861bf141192eb4f73e5a30cc9"
+    },
+    {
+      "path": "deliverables/current/fabrication/F005/blueprint_specifications_F005_DRAFT.pdf",
+      "pages": 8,
+      "sha256": "02b77c7e909c706dba84d538368c923045a2164b0278f459fb77dc8c6e49833e"
+    }
+  ],
+  "inline_view": {
+    "path": "/Users/mdpatrick/.codex/visualizations/2026/10/14/01a13c51-58ac-7a90-95ed-957781ad5347/shower-measurements.html",
+    "revision": "R005",
+    "accepted_gaps_removed_from_pending": true,
+    "raw_user_inputs_modified": false,
+    "old_draft_revision_restore_supported": true,
+    "diagram_selection": "PASS; tested lower bore and cavity contacts",
+    "temporary_preview_closed": true
+  },
+  "physical_fit": "NOT PERFORMED",
+  "manufacturing_release": "NOT GIVEN",
+  "water_test": "NOT PERFORMED"
+}

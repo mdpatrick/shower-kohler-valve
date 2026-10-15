@@ -6,7 +6,7 @@
   <rdf:RDF xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:cc="http://creativecommons.org/ns#" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#">
    <cc:Work>
     <dc:type rdf:resource="http://purl.org/dc/dcmitype/StillImage"/>
-    <dc:date>2026-10-14T23:01:12.009906</dc:date>
+    <dc:date>2026-10-15T10:24:17.862860</dc:date>
     <dc:format>image/svg+xml</dc:format>
     <dc:creator>
      <cc:Agent>
@@ -547,7 +547,7 @@ L 159.043034 319.799564
 L 158.297478 319.813289 
 L 157.55181 319.817865 
 z
-" clip-path="url(#pa91f68b2dd)" style="fill: #d3a1b9; stroke: #8c4771; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pbd032381e3)" style="fill: #d3a1b9; stroke: #8c4771; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_3">
     <path d="M 158.185626 310.699197 
@@ -1067,7 +1067,7 @@ L 80.431252 310.699197
 L 81.093032 310.703258 
 L 157.523847 310.703258 
 z
-" clip-path="url(#pa91f68b2dd)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+" clip-path="url(#pbd032381e3)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
    </g>
    <g id="patch_4">
     <path d="M 113.102854 289.861855 
@@ -1605,7 +1605,7 @@ L 140.726446 286.348161
 L 140.694269 286.352854 
 L 140.662037 286.357153 
 z
-" clip-path="url(#pa91f68b2dd)" style="fill: #dfeff1; stroke: #087e8b; stroke-linejoin: miter"/>
+" clip-path="url(#pbd032381e3)" style="fill: #dfeff1; stroke: #087e8b; stroke-linejoin: miter"/>
    </g>
    <g id="text_1">
     <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #152e37" x="119.613483" y="333.008" transform="rotate(-0 119.613483 333.008)">Gap to foam: 1.45 mm</text>
@@ -2133,7 +2133,7 @@ L 419.387113 317.521598
 L 418.669516 317.534809 
 L 417.95181 317.539213 
 z
-" clip-path="url(#p59db8449f4)" style="fill: #d3a1b9; stroke: #8c4771; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#p68aed565ac)" style="fill: #d3a1b9; stroke: #8c4771; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_6">
     <path d="M 418.557663 308.420717 
@@ -2653,7 +2653,7 @@ L 340.859215 308.420717
 L 341.493032 308.424606 
 L 417.923847 308.424606 
 z
-" clip-path="url(#p59db8449f4)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+" clip-path="url(#p68aed565ac)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
    </g>
    <g id="patch_7">
     <path d="M 373.502854 289.861855 
@@ -3191,7 +3191,7 @@ L 401.126446 286.348161
 L 401.094269 286.352854 
 L 401.062037 286.357153 
 z
-" clip-path="url(#p59db8449f4)" style="fill: #dfeff1; stroke: #087e8b; stroke-linejoin: miter"/>
+" clip-path="url(#p68aed565ac)" style="fill: #dfeff1; stroke: #087e8b; stroke-linejoin: miter"/>
    </g>
    <g id="patch_8">
     <path d="M 467.322596 160.774668 
@@ -3228,7 +3228,7 @@ L 467.333063 162.223058
 L 467.325404 162.254544 
 L 467.322596 162.265502 
 z
-" clip-path="url(#p59db8449f4)" style="fill: #b73d27; stroke: #b73d27; stroke-linejoin: miter"/>
+" clip-path="url(#p68aed565ac)" style="fill: #b73d27; stroke: #b73d27; stroke-linejoin: miter"/>
    </g>
    <g id="text_3">
     <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #b73d27" x="380.013483" y="333.008" transform="rotate(-0 380.013483 333.008)">Aperture crosses foam: 0.03 mm²</text>
@@ -3756,7 +3756,7 @@ L 679.731192 315.243633
 L 679.041553 315.256329 
 L 678.35181 315.260561 
 z
-" clip-path="url(#p714ab3dfc3)" style="fill: #d3a1b9; stroke: #8c4771; stroke-width: 0.8; stroke-linejoin: miter"/>
+" clip-path="url(#pe681c598cc)" style="fill: #d3a1b9; stroke: #8c4771; stroke-width: 0.8; stroke-linejoin: miter"/>
    </g>
    <g id="patch_10">
     <path d="M 678.929701 306.142237 
@@ -4276,7 +4276,7 @@ L 601.287178 306.142237
 L 601.893032 306.145954 
 L 678.323847 306.145954 
 z
-" clip-path="url(#p714ab3dfc3)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
+" clip-path="url(#pe681c598cc)" style="fill: #ffffff; stroke: #ffffff; stroke-linejoin: miter"/>
    </g>
    <g id="patch_11">
     <path d="M 633.902854 289.861855 
@@ -4814,7 +4814,7 @@ L 661.526446 286.348161
 L 661.494269 286.352854 
 L 661.462037 286.357153 
 z
-" clip-path="url(#p714ab3dfc3)" style="fill: #dfeff1; stroke: #087e8b; stroke-linejoin: miter"/>
+" clip-path="url(#pe681c598cc)" style="fill: #dfeff1; stroke: #087e8b; stroke-linejoin: miter"/>
    </g>
    <g id="patch_12">
     <path d="M 725.443945 152.829305 
@@ -4920,7 +4920,7 @@ L 727.55168 162.742175
 L 727.537706 162.771412 
 L 725.443945 167.084369 
 z
-" clip-path="url(#p714ab3dfc3)" style="fill: #b73d27; stroke: #b73d27; stroke-linejoin: miter"/>
+" clip-path="url(#pe681c598cc)" style="fill: #b73d27; stroke: #b73d27; stroke-linejoin: miter"/>
    </g>
    <g id="text_5">
     <text style="font-size: 9px; font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Computer Modern Sans Serif', 'Lucida Grande', 'Verdana', 'Geneva', 'Lucid', 'Arial', 'Helvetica', 'Avant Garde', sans-serif; text-anchor: middle; fill: #b73d27" x="640.413483" y="333.008" transform="rotate(-0 640.413483 333.008)">Aperture crosses foam: 9.19 mm²</text>
@@ -4937,13 +4937,13 @@ z
   </g>
  </g>
  <defs>
-  <clipPath id="pa91f68b2dd">
+  <clipPath id="pbd032381e3">
    <rect x="7.2" y="57.2" width="224.826966" height="270.4"/>
   </clipPath>
-  <clipPath id="p59db8449f4">
+  <clipPath id="p68aed565ac">
    <rect x="267.6" y="57.2" width="224.826966" height="270.4"/>
   </clipPath>
-  <clipPath id="p714ab3dfc3">
+  <clipPath id="pe681c598cc">
    <rect x="528" y="57.2" width="224.826966" height="270.4"/>
   </clipPath>
  </defs>

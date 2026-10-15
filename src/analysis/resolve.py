@@ -58,6 +58,7 @@ def resolve():
             'diameter_status':'user-confirmed' if id in accepted else '36 mm display assumption; independently measure this opening',
             'placement_status':'lower opening provisionally aligned with observed lower tip; upper vertical spacing measured' if 'M12-CCY' in accepted else 'scan-axis display alignment; actual cover opening registration unmeasured'})
     outer_constraints={'source':'SRC-USER-OUTER-PLATE-01','photo_face':'front toward handles',
+        'inside_opening_edge_gap_mm':accepted.get('M12-G'),'bottom_rim_to_lower_inside_edge_mm':accepted.get('M06-YN'),
         'vertical_center_spacing_mm':accepted.get('M12-CCY'),'lower_center_from_bottom_mm':accepted.get('M12-LCB'),
         'rear_cavity_measured':'M06-C' in accepted,
         'placement_note':'Loose-cover measurements do not rescale the primary scan or move captured control/stud geometry. Lower opening alignment with the lower tip is provisional; fit and retention remain unverified.'}

@@ -1,7 +1,7 @@
 {
   "project_id": "shower-kohler-valve",
   "schema_version": 1,
-  "revision": "R004",
+  "revision": "R005",
   "measurements": [
     {
       "id": "M02-W",
@@ -355,6 +355,64 @@
       "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
       "role": "fitting input",
       "correction_reason": null
+    },
+    {
+      "id": "M12-G",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "bottom inside edge of upper opening to top inside edge of lower opening; vertical projection",
+      "purpose": "Outer cover: vertical gap between inside opening edges",
+      "raw_readings": [
+        46.25
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        46.25
+      ],
+      "value_mm": 46.25,
+      "method": "caliper; nearest inside opening edges, confirmed by user",
+      "source": "user measurement response",
+      "date": "2026-10-15",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "date_basis": "endpoint clarification reported in chat; reading reported 2026-10-14; actual measurement date unspecified",
+      "notes": "User answered 'Inside opening edges' to the nearest inside edges versus outside raised lips question. Blue annotation between the upper and lower openings. This is an edge gap, not center spacing. Lower opening diameter and horizontal registration remain unknown.",
+      "approximate": false,
+      "source_ref": "docs/physical_checks/outer_plate_contacts_2026-10-15.json",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M06-YN",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "bottom tangent to bottom edge of lower bore",
+      "purpose": "Bottom rim tangent to lower opening near edge",
+      "raw_readings": [
+        35.23
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        35.23
+      ],
+      "value_mm": 35.23,
+      "method": "caliper; lower opening bottom inside edge to bottommost outside metal rim",
+      "source": "user measurement response",
+      "date": "2026-10-15",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "date_basis": "endpoint clarification reported in chat; reading reported 2026-10-14; actual measurement date unspecified",
+      "notes": "User answered 'Yes, those two edges' to bottom inside opening edge versus bottommost outside rim. Orange annotation. No repeat readings or numeric uncertainty supplied.",
+      "approximate": false,
+      "source_ref": "docs/physical_checks/outer_plate_contacts_2026-10-15.json",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
     }
   ],
   "history": [
@@ -413,6 +471,23 @@
         "12": "Upper bore 33.79 mm by caliper. Blue 46.25 mm gap annotation preserved pending inside-edge versus raised-lip clarification. Lower diameter not supplied."
       },
       "date_utc": "2026-10-15T04:55:08.327304+00:00",
+      "physical_fit": "not established by measurement import"
+    },
+    {
+      "from_revision": "R004",
+      "to_revision": "R005",
+      "accepted_or_recorded_ids": [
+        "M12-G",
+        "M06-YN"
+      ],
+      "conflicting_ids": [],
+      "response_sha256": "2616cdcfef7a405c3611c518a7e91b2bc7d0f7d5e053793b95bbaa53dee26104",
+      "current_state_note": "",
+      "group_notes": {
+        "06": "35.23 mm orange gap endpoints now confirmed. Rear cavity and lower-opening diameter remain unmeasured.",
+        "12": "46.25 mm blue gap is between inside opening edges. Do not ask these endpoint questions again. Exact center spacing is not derived without the lower diameter."
+      },
+      "date_utc": "2026-10-15T17:14:31.660610+00:00",
       "physical_fit": "not established by measurement import"
     }
   ],

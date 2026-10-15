@@ -93,7 +93,7 @@ def build(force=False):
     shutil.copy2(ROOT/'canon/source_register.json',ROOT/'deliverables/current/analysis/source_register.json')
     publish_manifest();print('Build finished. Physical fit and fabrication remain UNRESOLVED.')
 def prepare_fabrication(stage='all',force=False):
-    """Supplemental design revision; accepted measurement revision stays R004."""
+    """Supplemental design revision reconciled explicitly with accepted measurements."""
     design=read('canon/fabrication_designs.json')
     if design['evidence_revision'] != read('canon/measurements.json')['revision'] or design['evidence_revision'] != read('data/derived/resolved.json')['revision']:
         raise ValueError('Fabrication design evidence is stale; reconcile accepted measurements and design before any stage.')
@@ -102,7 +102,7 @@ def prepare_fabrication(stage='all',force=False):
     stages=[
       ('cad',['src/fabrication/build.py','src/fabrication/mesh_check.py','canon/fabrication_designs.json','canon/measurements.json','data/derived/resolved.json','data/derived/registration.json','data/evidence/kohler-T14489-4.obj','data/evidence/kohler-T14491-4.obj'],[out+'/cad/*',out+'/reference/*',out+'/analysis.json',out+'/mesh_path_check.json','data/derived/fabrication_F005/*'],[sys.executable,'src/fabrication/build.py']),
       ('fit',['src/fabrication/reference_fit.py','data/derived/fabrication_F005/REF-*.brep','data/derived/resolved.json','data/derived/registration.json'],[out+'/reference_fit_check.json'],[sys.executable,'src/fabrication/reference_fit.py']),
-      ('render',['src/fabrication/blender_scene.py','data/derived/fabrication_F005/*','deliverables/current/blender/installation_R004_DRAFT.blend'],[out+'/views/pair_*.png',out+'/views/exploded_A.png',out+'/views/as_found_depth.png',out+'/views/measured_*.png',out+'/paired_escutcheons_F005_DRAFT.blend',out+'/blender_validation.json'],[BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/fabrication/blender_scene.py']),
+      ('render',['src/fabrication/blender_scene.py','data/derived/fabrication_F005/*',f"deliverables/current/blender/installation_{design['evidence_revision']}_DRAFT.blend"],[out+'/views/pair_*.png',out+'/views/exploded_A.png',out+'/views/as_found_depth.png',out+'/views/measured_*.png',out+'/paired_escutcheons_F005_DRAFT.blend',out+'/blender_validation.json'],[BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/fabrication/blender_scene.py']),
       ('documents',['src/fabrication/documents.py','src/fabrication/build.py','canon/fabrication_research.json','canon/fabrication_designs.json',out+'/analysis.json',out+'/blender_validation.json',out+'/mesh_path_check.json',out+'/reference_fit_check.json',out+'/views/pair_*.png',out+'/views/exploded_A.png'],[out+'/*.pdf',out+'/index.html',out+'/views/*.svg',out+'/views/*_diagram.png',out+'/document_validation.json',out+'/fit_report.md',out+'/research.json',out+'/quote_package_*.zip'],[sys.executable,'src/fabrication/documents.py'])]
     for name,inputs,patterns,cmd in stages:
         if stage not in ('all',name):continue

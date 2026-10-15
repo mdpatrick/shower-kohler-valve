@@ -1,4 +1,4 @@
-"""F005 prototype/quote geometry. Read-only canon; preserve installed scan and R004 evidence."""
+"""F005 prototype/quote geometry. Read-only canon; preserve installed scan and accepted evidence."""
 from pathlib import Path
 import json,math,hashlib,csv
 import numpy as np
@@ -85,7 +85,7 @@ def build():
  cover=cq.Workplane('XZ').polyline(profile).close().revolve(360,(0,0),(0,1))
  for y,di in [(yl,ld),(yu,ud)]:cover=cover.cut(cq.Workplane('XY').center(0,y).circle(di/2).extrude(40).translate((0,0,-2)))
  cover=cover.cut(cq.Workplane('XY').box(4,8,2,centered=(True,True,False)).translate((0,-radius+2,0)))
- cover_shape=export_solid('REF-COVER',cover,OUT/'reference',meta,role='Kohler reference only',limitation='OD and upper bore measured. Equal lower bore and inside-edge gaps scenario. Rear cavity and notch size unmeasured.')
+ cover_shape=export_solid('REF-COVER',cover,OUT/'reference',meta,role='Kohler reference only',limitation='OD, upper bore and inside-edge gaps measured. Equal lower bore remains a hypothesis. Rear cavity, horizontal registration and notch size unmeasured.')
  foam3=rect3(130.35,165.1,40,6).cut(rect3(118.35,153.1,34,8).translate((0,0,-1)))
  export_solid('REF-FOAM-SCENARIO',foam3,OUT/'reference',meta,role='Foam footprint scenario only',limitation='6 mm approximate width/free thickness; outline assumed flush to metal perimeter, NOT measured rear path.')
  # Nonfused CAD assembly in unchanged installed coordinates, with diagnostics retained.

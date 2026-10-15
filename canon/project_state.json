@@ -1,7 +1,7 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R004",
-  "date": "2026-10-14",
+  "revision": "R005",
+  "date": "2026-10-15",
   "selected_state": null,
   "working_state": "F005_two_pairs_for_prototype_quote_review",
   "states": {
@@ -12,8 +12,8 @@
   },
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS: F005 fresh export audit, saved Blender source comparison, 21 PDF pages visually reviewed, local review and 27 unit tests; physical fit unresolved",
-    "geometric_fit": "F005 forward mesh aperture clears captured surface; stud pattern/depth and rear foam path remain conditional conflicts",
+    "software_geometry_checks": "PASS: R005 27 unit tests, fresh STEP/STL/DXF/package audit, saved Blender source comparison, exact prior/new numerical comparison, updated HTML and PDF checks",
+    "geometric_fit": "F005 geometry unchanged under R005 contacts; forward mesh aperture clears captured surface; stud pattern/depth and rear foam path remain conditional conflicts",
     "materials_design_review": "F005 public vendor/stock/finish research prepared; no chosen vendor/quote or approved permanent seal detail",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
@@ -42,5 +42,6 @@
   "outer_plate_measurement_record": "docs/physical_checks/outer_plate_2026-10-14.json",
   "fabrication_design_revision": "F005",
   "current_goal_prompt": "docs/fabrication_goal_prompt.md",
-  "fabrication_preparation": "deliverables/current/fabrication/F005/index.html"
+  "fabrication_preparation": "deliverables/current/fabrication/F005/index.html",
+  "outer_plate_contact_record": "docs/physical_checks/outer_plate_contacts_2026-10-15.json"
 }

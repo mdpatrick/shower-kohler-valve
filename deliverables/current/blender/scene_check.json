@@ -1,7 +1,7 @@
 {
   "status": "PASS",
   "version": "4.5.13 LTS",
-  "revision": "R004",
+  "revision": "R005",
   "saved_reopened": true,
   "missing_images": [],
   "CAD_custom_part_source": "data/derived/cad/CUSTOM-01.stl",

@@ -1,0 +1,25 @@
+{
+  "id": "OBS-OUTER-PLATE-CONTACTS-02",
+  "report_date": "2026-10-15",
+  "measurement_date": null,
+  "clarifies": "docs/physical_checks/outer_plate_2026-10-14.json",
+  "source": "direct user answers to call_112551891d6d4650a5b1eab6f9ad9fa1",
+  "answers_verbatim": {
+    "46.25 mm: nearest inside edges or outside raised lips": "Inside opening edges",
+    "35.23 mm: lower opening bottom inside edge to bottommost outside rim": "Yes, those two edges"
+  },
+  "accepted_raw_ids": ["M12-G", "M06-YN"],
+  "measurement_revision": "R005",
+  "design_revision": "F005",
+  "geometry_effect": "No F005 geometry changes: both contacts match the previously explicit inside-edge trial. Promote the two raw gaps to accepted observations, retaining equal lower bore as an unmeasured hypothesis. Do not rescale or reposition captured hardware.",
+  "remaining": ["lower opening inside diameter", "horizontal opening registration", "rear cavity at both stud/nut locations", "rear foam footprint and installed compression", "physical assembly fit"],
+  "center_relations_mm": {
+    "dL": "unmeasured lower opening inside diameter",
+    "vertical_spacing_if_openings_collinear": "46.25 + (33.79 + dL) / 2",
+    "lower_center_above_bottom_rim": "35.23 + dL / 2",
+    "equal_bore_trial_only": {"dL": 33.79, "spacing": 80.04, "lower_center_above_bottom": 52.125}
+  },
+  "physical_fit": "NOT PERFORMED",
+  "installed_surface_water_test": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN"
+}

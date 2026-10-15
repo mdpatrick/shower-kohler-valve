@@ -1,6 +1,6 @@
 {
   "design_revision": "F005",
-  "evidence_revision": "R004",
+  "evidence_revision": "R005",
   "date": "2026-10-14",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "purpose": "Immediate prototype / quote package; manufacturing release and installed water performance not established",
@@ -295,6 +295,23 @@
     "lower_bore_status": "Equal-bore visual hypothesis only; remains unmeasured",
     "gap_mm": 46.25,
     "bottom_gap_mm": 35.23,
-    "contact_assumption": "Both gaps contact inside opening edges. Alternate lip contact scenario retained; not accepted raw dimensions."
-  }
+    "gap_source": "M12-G",
+    "bottom_gap_source": "M06-YN",
+    "contact_status": "User-confirmed inside opening edges on 2026-10-15; lower rim gap ends at bottommost outside metal rim."
+  },
+  "evidence_reconciled_date": "2026-10-15",
+  "reconciliation_history": [
+    {
+      "from_evidence_revision": "R004",
+      "to_evidence_revision": "R005",
+      "date": "2026-10-15",
+      "accepted_ids": [
+        "M12-G",
+        "M06-YN"
+      ],
+      "design_revision_retained": "F005",
+      "geometry_change": "None: confirmed edge contacts match the previous explicit scenario.",
+      "remaining": "Lower bore, rear cavity, installed registration and physical fit remain unmeasured/unverified."
+    }
+  ]
 }

@@ -1,12 +1,15 @@
 """Read the released-format files in a fresh process; no geometry-builder import."""
 from pathlib import Path
-import hashlib,io,json,math,subprocess,zipfile
+import argparse,hashlib,io,json,math,subprocess,zipfile
 import numpy as np
 import cadquery as cq
 import ezdxf,trimesh
 from shapely.geometry import Polygon
 from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[2];OUT=ROOT/'deliverables/current/fabrication/F005'
+parser=argparse.ArgumentParser()
+parser.add_argument('--evidence-baseline',type=Path,help='SHA-256 map captured after a deliberate measurement import, before generators run; otherwise compare HEAD.')
+args=parser.parse_args()
 d=json.loads((ROOT/'canon/fabrication_designs.json').read_text())
 a=json.loads((OUT/'analysis.json').read_text())
 results=[]
@@ -48,11 +51,16 @@ for f in OUT.glob('quote_package_*.zip'):
    digest,name=line.split('  ',1);assert hashlib.sha256(z.read(name)).hexdigest()==digest
  packages.append({'file':f.name,'hashes_selected_pair_thickness_and_no_images':'PASS'})
 unchanged={}
-for p in ['canon/measurements.json','canon/scan_annotations.json','data/derived/registration.json']:
- try:old=subprocess.check_output(['git','show','HEAD:'+p],cwd=ROOT,stderr=subprocess.DEVNULL)
- except subprocess.CalledProcessError:continue
- assert old==(ROOT/p).read_bytes(),p
- unchanged[p]=hashlib.sha256(old).hexdigest()
-r={'status':'PASS - exported geometry only','method':'Fresh process reading STEP/STL/DXF/ZIP; analytic outer area minus independent polygon offset; does not reuse builder solids','parts':results,'DXF_two_closed_contours_mm':4,'packages':packages,'unchanged_evidence_sha256':unchanged,'physical_fit':'UNRESOLVED','independent_human_or_agent_design_review':'NOT PERFORMED'}
+if args.evidence_baseline:
+ for p,digest in json.loads(args.evidence_baseline.read_text()).items():
+  assert hashlib.sha256((ROOT/p).read_bytes()).hexdigest()==digest,p
+  unchanged[p]=digest
+else:
+ for p in ['canon/measurements.json','canon/scan_annotations.json','data/derived/registration.json']:
+  try:old=subprocess.check_output(['git','show','HEAD:'+p],cwd=ROOT,stderr=subprocess.DEVNULL)
+  except subprocess.CalledProcessError:continue
+  assert old==(ROOT/p).read_bytes(),p
+  unchanged[p]=hashlib.sha256(old).hexdigest()
+r={'status':'PASS - exported geometry only','evidence_revision':d['evidence_revision'],'method':'Fresh process reading STEP/STL/DXF/ZIP; analytic outer area minus independent polygon offset; does not reuse builder solids','parts':results,'DXF_two_closed_contours_mm':4,'packages':packages,'unchanged_evidence_sha256':unchanged,'evidence_comparison_basis':'post-import, pre-build snapshot' if args.evidence_baseline else 'HEAD','physical_fit':'UNRESOLVED','independent_human_or_agent_design_review':'NOT PERFORMED'}
 (ROOT/'docs/validation/fabrication_F005_exports.json').write_text(json.dumps(r,indent=2)+'\n')
 print('PASS:',len(results),'custom STEP/STL pairs; 4 DXFs; 6 package contents/hashes; accepted measurements unchanged')

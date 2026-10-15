@@ -1,6 +1,6 @@
 # F005 - escutcheon fabrication preparation
 
-**Two complete custom plate pairs are prepared for prototype and quote review. Permanent manufacture remains on hold for the actual foam trace, hardware/cover fit, support and explicit release.** Accepted measurement evidence remains **R004**; **F005** is a design revision, not a new measurement import.
+**Two complete custom plate pairs are prepared for prototype and quote review. Permanent manufacture remains on hold for the actual foam trace, hardware/cover fit, support and explicit release.** Accepted measurement evidence is now **R005**; **F005** remains the design revision because the two confirmed edge contacts match its prior trial geometry. The 46.25 mm gap is between inside opening edges; 35.23 mm runs from the lower opening bottom inside edge to the bottommost outside rim. The lower bore and rear cavity remain unmeasured.
 
 - [Current illustrated design review](deliverables/current/fabrication/F005/index.html), served at `http://127.0.0.1:8765/fabrication/F005/index.html` by the existing local review server.
 - [Consolidated comprehensive goal prompt](docs/fabrication_goal_prompt.md), retaining the original complete scope and prioritizing this immediate preparation.
@@ -11,7 +11,7 @@
 - [Design canon](canon/fabrication_designs.json), [public vendor research](canon/fabrication_research.json), [computed results](deliverables/current/fabrication/F005/analysis.json), [triangle insertion check](deliverables/current/fabrication/F005/mesh_path_check.json).
 - Six `quote_package_{A|B}_{SS060|SS125|PROTO3}_F005_DRAFT.zip` files in the F005 folder. Choose one pair and one thickness. Each contains only that pair's custom CAD, selected drawing sheets, notes and hashes; no source scan or homeowner photos. Nothing has been uploaded or ordered.
 
-Validation: [F005 executed checks and remaining gates](docs/validation/fabrication_F005.json). Accepted measurement evidence and the saved original full scan/proxy geometry are unchanged. All custom exports pass; this is not a physical fit or manufacturing release.
+Validation: [F005 executed checks and remaining gates](docs/validation/fabrication_F005.json). Prior accepted readings are preserved, two contact-defined gaps are added, and the saved original full scan/proxy geometry is unchanged. All custom exports pass; this is not a physical fit or manufacturing release.
 
 A uses a 230 mm circular main plate offset 6 mm upward and a 120 mm diverter companion, with a conditional 6.24 mm gap. B uses a 220 x 218 R62 main and 120 x 120 R35 diverter, with an 11.24 mm gap. The shaped main aperture clears the modeled forward insertion sweep, but its clearance to the real rear foam path is not established. Actual caliper readings are not changed to force fit. Conditional measured mounting centers (112.05 mm if both holes are 5.66 mm) disagree with captured tip centers (108.01 mm). Unchanged stud depths also conflict with the cover cavity assumption. Neither discrepancy authorizes cutting, wood drilling or valve relocation.
 
@@ -26,6 +26,14 @@ Next physical step: trace both rear foam edges on the template; remeasure studs 
 `prepare-fabrication` reads canon and reuses unchanged stages. It refuses a mismatched evidence revision. Preserve any manually changed generated file before rebuilding; the normal manifest backup mechanism applies. Reconcile new measurements rather than silently migrating a fabrication design.
 
 ---
+
+## R005 measurement update
+
+The current measurement review and Blender baseline use R005. New readings should use R005; the R004 instructions below are a preserved historical checkpoint. See [the endpoint clarification record](docs/physical_checks/outer_plate_contacts_2026-10-15.json). Exact center spacing and cover registration remain unresolved until the lower bore is measured.
+
+- [Current measurement review](deliverables/current/review/index.html)
+- [Current baseline Blender workspace](deliverables/current/blender/installation_R005_DRAFT.blend)
+- [Current worksheet](deliverables/current/drawings/measurement_worksheet_R005.pdf)
 
 ## Preserved R004 diagnostic checkpoint (historical reference)
 

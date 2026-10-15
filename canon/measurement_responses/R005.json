@@ -1,0 +1,38 @@
+{
+  "project_id": "shower-kohler-valve",
+  "review_revision": "R004",
+  "observations": [
+    {
+      "measurement_id": "M12-G",
+      "raw_readings": [
+        46.25
+      ],
+      "unit": "mm",
+      "method": "caliper; nearest inside opening edges, confirmed by user",
+      "date": "2026-10-15",
+      "date_basis": "endpoint clarification reported in chat; reading reported 2026-10-14; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "source_ref": "docs/physical_checks/outer_plate_contacts_2026-10-15.json",
+      "uncertainty_mm": null,
+      "notes": "User answered 'Inside opening edges' to the nearest inside edges versus outside raised lips question. Blue annotation between the upper and lower openings. This is an edge gap, not center spacing. Lower opening diameter and horizontal registration remain unknown."
+    },
+    {
+      "measurement_id": "M06-YN",
+      "raw_readings": [
+        35.23
+      ],
+      "unit": "mm",
+      "method": "caliper; lower opening bottom inside edge to bottommost outside metal rim",
+      "date": "2026-10-15",
+      "date_basis": "endpoint clarification reported in chat; reading reported 2026-10-14; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "source_ref": "docs/physical_checks/outer_plate_contacts_2026-10-15.json",
+      "uncertainty_mm": null,
+      "notes": "User answered 'Yes, those two edges' to bottom inside opening edge versus bottommost outside rim. Orange annotation. No repeat readings or numeric uncertainty supplied."
+    }
+  ],
+  "group_notes": {
+    "06": "35.23 mm orange gap endpoints now confirmed. Rear cavity and lower-opening diameter remain unmeasured.",
+    "12": "46.25 mm blue gap is between inside opening edges. Do not ask these endpoint questions again. Exact center spacing is not derived without the lower diameter."
+  }
+}

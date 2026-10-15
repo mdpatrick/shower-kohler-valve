@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R004",
+  "revision": "R005",
   "groups": [
     {
       "id": "01",
@@ -521,7 +521,7 @@
       "title": "Complete the photographed outer cover",
       "view": "outer_photo",
       "purpose": "Separates measured opening diameters and edge gaps from cover placement and rear clearance.",
-      "instructions": "The supplied photo shows the FRONT toward the handles. Outer diameter 7.25 inches (184.15 mm) was measured by tape; the upper opening is 33.79 mm by caliper. The blue annotation reports a 46.25 mm gap and the orange annotation 35.23 mm to the bottom rim; their exact inside-edge versus raised-lip contacts await clarification. Do not repeat these readings unless correcting them. Measure the LOWER opening inside diameter independently. Both diameters and a confirmed inside-edge gap are needed for vertical center spacing. The photo does not establish rear cavity depth: use Check 06-C beside both studs.",
+      "instructions": "The supplied photo shows the FRONT toward the handles. Outer diameter 7.25 inches (184.15 mm) was measured by tape; the upper opening is 33.79 mm by caliper. Confirmed contacts: blue 46.25 mm between nearest inside opening edges; orange 35.23 mm from the lower opening bottom inside edge to the bottommost outside rim. Do not repeat these readings unless correcting them. Measure the LOWER opening inside diameter independently. Both diameters plus the inside-edge gap determine center spacing for aligned openings. The photo does not establish rear cavity depth: use Check 06-C beside both studs.",
       "fields": [
         {
           "id": "M12-UD",

@@ -1,7 +1,7 @@
 {
   "design_revision": "F005",
-  "evidence_revision": "R004",
-  "date": "2026-10-14",
+  "evidence_revision": "R005",
+  "date": "2026-10-15",
   "status": "PASS for immediate prototype/quote preparation; NOT manufacturing release",
   "executed": {
     "custom_exports": "12 STEP/STL pairs; valid closed solids, dimensions and volume independently recomputed from exported files",
@@ -11,8 +11,9 @@
     "reference_fit": "5 provisional inner/cover poses; all detected point intersections near studs, none near controls",
     "blender_source": "Saved R004/F005 full source and observed proxy: identical geometry, topology, UVs and evaluated world/local transforms",
     "unit_tests": "27 passed; unittest discover -s tests -v",
-    "rebuild": "./project prepare-fabrication: all four stages unchanged after completed build",
-    "html": "Own local browser tab inspected; no visible broken images, no horizontal page overflow at 1280px, no console errors/warnings; all 28 local asset/download references exist"
+    "rebuild": "./project build: complete R005 baseline and F005 supplement regenerated; accepted canon and primary registration remain unchanged by generators",
+    "html": "R005 accepted labels and remaining lower-bore request verified in browser; 34 active measurement fields; selection still changes contact diagram; no console errors. Temporary viewport restored and preview server stopped.",
+    "numerical_reconciliation": "PASS: all 15 solid bounds and volumes, numerical coverage/fit/depth findings, reference point tests and triangle checks equal F005/R004; accepted gap contacts match prior scenario"
   },
   "visual_review": {
     "PDFs": {
@@ -20,8 +21,8 @@
       "fit_and_fabrication_report_F005_DRAFT.pdf": 9,
       "full_size_templates_F005_DRAFT.pdf": 4
     },
-    "result": "All 21 pages inspected; MAIN-A caption/dimension overlap repaired and affected drawing pages re-rendered; changed report page inspected after final text",
-    "Blender_views": "Eight generated views inspected, including pairs, exploded, depth and measured reference faces; official exterior models and conditional appearance labels present"
+    "result": "All 21 F005 pages rendered at 1100 px and reviewed as layout contact sheets; changed fit-report page 2 read at full rendered size. Same layout as prior detailed review, with R005/date headers and corrected measurement provenance.",
+    "Blender_views": "Updated measured-cover annotation inspected at full resolution; paired/assembly images inspected in PDF layouts; full source/proxy saved-file audit passed."
   },
   "fresh_adversarial_review": {
     "reviewer": "Author, fresh pass with separately implemented export/source checks; NOT a separate independent reviewer",
@@ -49,14 +50,16 @@
   "physical_tests": "NONE performed",
   "orders_uploads_contacts": "NONE",
   "pdf_sha256": {
-    "fit_and_fabrication_report_F005_DRAFT.pdf": "b312bacd105e8c9fd58efc9178ec5c3cdde796c3a81c90e4e2a760697983487a",
-    "full_size_templates_F005_DRAFT.pdf": "87b4c62f8637811b63a8e153a54bc09d55af891082291c8317aea2a7539c6a88",
-    "blueprint_specifications_F005_DRAFT.pdf": "1a3a5c338b18cab5af674ef3d58373f6172b21f53b01bbb1d245456019e22f0c"
+    "fit_and_fabrication_report_F005_DRAFT.pdf": "60e3f7c81519638b7f29aa2ace5e4c800d53803662d519a2dc8931e9432f99de",
+    "full_size_templates_F005_DRAFT.pdf": "e6ed2c6a640b504378755550dadac6cb499e4d9861bf141192eb4f73e5a30cc9",
+    "blueprint_specifications_F005_DRAFT.pdf": "02b77c7e909c706dba84d538368c923045a2164b0278f459fb77dc8c6e49833e"
   },
   "supporting_records": [
     "docs/validation/fabrication_F005_exports.json",
     "docs/validation/fabrication_F005_blender_source.json",
     "deliverables/current/fabrication/F005/mesh_path_check.json",
-    "deliverables/current/fabrication/F005/reference_fit_check.json"
-  ]
+    "deliverables/current/fabrication/F005/reference_fit_check.json",
+    "docs/validation/measurement_R005.json"
+  ],
+  "prior_validation_commit": "9543778044eadcd771f530c15aa5b361f8783b8a"
 }

@@ -83,7 +83,7 @@ def ring_mesh(name,points,width,height,pos,where,material):
   for v,p in zip(sp.points,coords):v.co=(p[0]/1000,p[1]/1000,0,1)
   sp.use_cyclic_u=True
  ob=bpy.data.objects.new(name,cu);coll(where).objects.link(ob);ob.rotation_euler[0]=math.pi/2;ob.location=xyz(pos);ob.data.materials.append(material);return ob
-# Use base R004 foam object only in exploded view and label its footprint as legacy placeholder.
+# Use an explicit foam scenario only in the exploded view; rear footprint remains unmeasured.
 fm=next(m for m in a['parts'] if m['id']=='REF-FOAM-SCENARIO')
 foam=stl(OUT/fm['stl'],'EXPLODED foam path UNKNOWN','Exploded A',(*r['inner_center_mm'],48),foamMat);foam['status']=fm['limitation']
 # Exploded custom, measured plate, nuts, official cover, bonnets and handles.
@@ -119,7 +119,7 @@ for fname,layer,cam,note in [
  ('exploded_A','Exploded A','exploded','EXPLODED | Display offsets only. Foam/rear interfaces provisional.'),
  ('as_found_depth','Depth diagnostic','depth','AS FOUND | Captured hardware unchanged; no stud trimming or valve move'),
  ('measured_inner','Measured inner','inner','MEASURED ENVELOPE | Local formed depths and rear shape remain provisional'),
- ('measured_cover','Measured cover','cover','COVER SCENARIO | OD/upper bore measured; lower bore/gap contacts provisional')]:
+ ('measured_cover','Measured cover','cover','COVER SCENARIO | OD, upper bore, edge gaps measured; lower bore/cavity provisional')]:
  for vl in scene.view_layers:vl.use=vl.name==layer
  bpy.context.window.view_layer=scene.view_layers[layer];scene.camera=cams[cam]
  scene.render.use_stamp=True
@@ -129,7 +129,7 @@ for fname,layer,cam,note in [
 # Default is a conditional cosmetic view with explicit scene properties.
 for vl in scene.view_layers:vl.use=vl.name=='A round appearance'
 bpy.context.window.view_layer=scene.view_layers['A round appearance'];scene.camera=cams['oblique'];scene['readiness']='DRAFT / NOT FOR FABRICATION. Corrected appearance only; source hardware remains unchanged in Observed layer.'
-scene['design_revision']='F005';scene['evidence_revision']='R004';scene['coordinate_conversion']='CAD (X,Y,Z) mm -> Blender (X,-Z,Y)/1000'
+scene['design_revision']=d['design_revision'];scene['evidence_revision']=d['evidence_revision'];scene['coordinate_conversion']='CAD (X,Y,Z) mm -> Blender (X,-Z,Y)/1000'
 for screen in bpy.data.screens:
  for area in screen.areas:
   if area.type=='VIEW_3D':area.spaces.active.region_3d.view_perspective='CAMERA'

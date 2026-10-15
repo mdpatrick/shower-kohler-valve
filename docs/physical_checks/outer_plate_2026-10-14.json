@@ -44,5 +44,10 @@
   ],
   "physical_fit": "NOT PERFORMED",
   "installed_surface_water_test": "NOT PERFORMED",
-  "fabrication_approval": "NOT GIVEN"
+  "fabrication_approval": "NOT GIVEN",
+  "subsequent_clarification": {
+    "date": "2026-10-15",
+    "record": "docs/physical_checks/outer_plate_contacts_2026-10-15.json",
+    "note": "The above pending statuses describe the initial report. Both contact questions are resolved in R005."
+  }
 }
