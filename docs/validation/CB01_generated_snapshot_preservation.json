@@ -1,0 +1,30 @@
+{
+  "scope": "Only known generated intermediate CB01/RECON files automatically backed up by this work; no user annotation files. Preserved byte-for-byte in build cache; selected current versions are versioned.",
+  "files": [
+    {
+      "from": "deliverables/manual_edits/20261015-105835/fabrication/concentric-border-study/damage.html",
+      "preserved_at": "build/preserved_generated_edits_CB01/20261015-105835/fabrication/concentric-border-study/damage.html",
+      "sha256": "639004d09af42a193437d216982b23ab727fb88640c235496a91575e55210a15"
+    },
+    {
+      "from": "deliverables/manual_edits/20261015-105835/fabrication/concentric-border-study/damage_mapping.json",
+      "preserved_at": "build/preserved_generated_edits_CB01/20261015-105835/fabrication/concentric-border-study/damage_mapping.json",
+      "sha256": "774c8a113e0854d38a39d9ebcd162db986555948b550479ad01a0c0665c3d57f"
+    },
+    {
+      "from": "deliverables/manual_edits/20261015-110410/fabrication/concentric-border-study/index.html",
+      "preserved_at": "build/preserved_generated_edits_CB01/20261015-110410/fabrication/concentric-border-study/index.html",
+      "sha256": "5a19097b77408cee698f5913dee25c35202ddb832bfd973748a4f9c2eec51585"
+    },
+    {
+      "from": "deliverables/manual_edits/20261015-112032/analysis/center_reconciliation_DRAFT.json",
+      "preserved_at": "build/preserved_generated_edits_CB01/20261015-112032/analysis/center_reconciliation_DRAFT.json",
+      "sha256": "c224a1bc40a3db14b429057ee21b003245ee56c993d1622b2b683b0eb2a7e4e3"
+    },
+    {
+      "from": "deliverables/manual_edits/20261015-112032/analysis/center_reconciliation_DRAFT.txt",
+      "preserved_at": "build/preserved_generated_edits_CB01/20261015-112032/analysis/center_reconciliation_DRAFT.txt",
+      "sha256": "c005caf3bd541ced2c9fca73f5cca9daccd448869e615ae1c065e8e20051f0c7"
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "status": "PASS - software exports and packaging only",
+  "part_checks": [
+    {
+      "id": "MAIN-C1-SS060",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "MAIN-C1-SS125",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "MAIN-C1-PROTO3",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "DIV-C1-SS060",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "DIV-C1-SS125",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "DIV-C1-PROTO3",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "MAIN-C2-SS060",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "MAIN-C2-SS125",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "MAIN-C2-PROTO3",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "DIV-C2-SS060",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "DIV-C2-SS125",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    },
+    {
+      "id": "DIV-C2-PROTO3",
+      "solid_mesh_profile_units": "PASS",
+      "installed_aperture_preserved": "PASS"
+    }
+  ],
+  "package_checks": [
+    {
+      "file": "quote_C1_PROTO3_CB01_DRAFT.zip",
+      "hashes_contents_privacy": "PASS"
+    },
+    {
+      "file": "quote_C1_SS060_CB01_DRAFT.zip",
+      "hashes_contents_privacy": "PASS"
+    },
+    {
+      "file": "quote_C1_SS125_CB01_DRAFT.zip",
+      "hashes_contents_privacy": "PASS"
+    },
+    {
+      "file": "quote_C2_PROTO3_CB01_DRAFT.zip",
+      "hashes_contents_privacy": "PASS"
+    },
+    {
+      "file": "quote_C2_SS060_CB01_DRAFT.zip",
+      "hashes_contents_privacy": "PASS"
+    },
+    {
+      "file": "quote_C2_SS125_CB01_DRAFT.zip",
+      "hashes_contents_privacy": "PASS"
+    }
+  ],
+  "pdfs": {
+    "full_size_templates_CB01_DRAFT.pdf": {
+      "pages": 4,
+      "sha256": "40da1114ade0459a07380b5cee6e4e164c69690be29d450286fb55d5b5fa69be"
+    },
+    "concentric_blueprints_CB01_DRAFT.pdf": {
+      "pages": 11,
+      "sha256": "7a377d0453a85cdeadf74b240a1357c79d427d63c725b0041fc3848de76597e9"
+    }
+  },
+  "damage_source_bytes_preserved": true,
+  "broken_local_links": [],
+  "source_and_measurements": "No raw observation or scan changed by this audit",
+  "locator_trial": "Separate diagnostic CAD excluded from all quote ZIPs; conflicts and physical gates remain open",
+  "physical_fit": "NOT PERFORMED",
+  "manufacturing_release": "NOT GIVEN"
+}

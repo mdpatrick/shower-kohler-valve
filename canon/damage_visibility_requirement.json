@@ -1,0 +1,21 @@
+{
+  "id": "REQ-DAMAGE-VISIBILITY-001",
+  "date": "2026-10-15",
+  "status": "ACCEPTED_USER_REQUIREMENT",
+  "source": "Direct user instruction in the concentric-border side conversation",
+  "instruction": "Show where the underlying tile over-cut, especially the gouges at the top of the tile, lands underneath the exposed custom escutcheon border. Make the adjustment before reporting the work to thread 01a13c51-58ac-7a90-95ed-957781ad5347.",
+  "required_view": "Front-facing overlay of existing scan-derived opening and damage traces on the unchanged primary scan render, with both the factory-cover perimeter and the concentric custom-plate perimeter visible. Include a top-gouge close-up and a transparent/reveal control.",
+  "required_dimensions": [
+    "Distance the limiting gouge extends radially beyond the factory-cover edge",
+    "Remaining projected distance from the gouge trace to the custom-plate outer edge",
+    "The same remaining distance after the documented tracing allowance"
+  ],
+  "evidence_rules": [
+    "Use existing registered primary-scan coordinates and the original render bytes; do not paint invented defects into the image or shift traces to improve coverage.",
+    "Keep CUT-02 and CUT-07 identified as uncertain marks; do not reclassify them as confirmed gouges.",
+    "The overlay reveals retained evidence for inspection; it does not mean damage remains visible after the actual opaque plate is fitted.",
+    "Projected margins are not verified sound-stone support, a sealing width, a damage-depth measurement or a fabrication release."
+  ],
+  "review_page": "deliverables/current/fabrication/concentric-border-study/damage.html",
+  "builder": "scripts/concentric_damage_overlay.py"
+}

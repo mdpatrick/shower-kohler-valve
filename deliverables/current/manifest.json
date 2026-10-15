@@ -2,15 +2,25 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "9543778044eadcd771f530c15aa5b361f8783b8a",
+  "source_commit": "07ab4570bbefd7dd5b94e022336f62f0ea1b5eb6",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "433d099e4b1e786ca6e07755113a0c2d886dfbec53a809be4eeb74709b20ccc1",
+  "source_tree_hash": "5573d6c61089fa3487627a51e6690f66fc6540962498273c944d49e0ad165982",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
     "SCAN-PLATE-2": "393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781"
   },
   "files": [
+    {
+      "path": "deliverables/current/analysis/center_reconciliation_DRAFT.json",
+      "sha256": "c224a1bc40a3db14b429057ee21b003245ee56c993d1622b2b683b0eb2a7e4e3",
+      "size_bytes": 46971
+    },
+    {
+      "path": "deliverables/current/analysis/center_reconciliation_DRAFT.txt",
+      "sha256": "c005caf3bd541ced2c9fca73f5cca9daccd448869e615ae1c065e8e20051f0c7",
+      "size_bytes": 6368
+    },
     {
       "path": "deliverables/current/analysis/checks.json",
       "sha256": "1e7ee43e392e6ba219c9104fe14aa0e5b174d58bba797e0db78c20fa61c1f21c",
@@ -547,6 +557,366 @@
       "size_bytes": 88058
     },
     {
+      "path": "deliverables/current/fabrication/concentric-border-study/analysis.json",
+      "sha256": "d888b206d3b855ebb5ae687de66318c3447b969ed6aff31cdc9dae92c0368c02",
+      "size_bytes": 7199
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/blender_validation.json",
+      "sha256": "3595ff4568102210e8f5f259956f44ff6ed3f186d818dd3ea0466310237f082e",
+      "size_bytes": 4465
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "0180d9d80e8b6858bd0fce99271d7415e7300a112c9d3784b4a9cef9e8af42ac",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "269de3368ff6028ddc79868795c8e3d28a07f499e173bd578a7f323b75c53354",
+      "size_bytes": 9431
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "52ab726a0cc0d18ee08a0eac74b7ecc6663196ec5949437accec729d49978fb9",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "0180d9d80e8b6858bd0fce99271d7415e7300a112c9d3784b4a9cef9e8af42ac",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "88b534d4a891df7dd7f61b106970a6634702f54ddd8413f36310e2aa352ccaf9",
+      "size_bytes": 10602
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "74ce6e71ffdf6c45c20545ad505b1e458518c39a8bccd48893ee742adc405609",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "0180d9d80e8b6858bd0fce99271d7415e7300a112c9d3784b4a9cef9e8af42ac",
+      "size_bytes": 15560
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "ee63c99ca2d35f4745c752969ff4ba387a4687512d3ccaa76159d5b83366fb95",
+      "size_bytes": 9455
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "c386acde90155b69ae9545cbf0ca627b22743a210052d1b4c9751b770b5a8241",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "7bd67dac60ab739136d0c60f8b53c8518252ef61cb80b35497f4b98225f0de6c",
+      "size_bytes": 15565
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "cd36bce700bba7048d62db668b8f161bc2c9d2fa5d5d83f7fa79a51caeebcd02",
+      "size_bytes": 9457
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "f7b459deca59e514640f0e21654290b00e3b4c7f600aefff81ebd51e4b5ad5cd",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "7bd67dac60ab739136d0c60f8b53c8518252ef61cb80b35497f4b98225f0de6c",
+      "size_bytes": 15565
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "d558baa8b8fa1f411a528b8b7d64a4648c465053bf799aedbbdfa034e55226b6",
+      "size_bytes": 10627
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "520e1bf1e6ddfbb4a813d4093cc026fbd47ef77a978eacb816d0e07d68f57eee",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "7bd67dac60ab739136d0c60f8b53c8518252ef61cb80b35497f4b98225f0de6c",
+      "size_bytes": 15565
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "ad9e98d53bfaac17be26dedcb9e546e17d46183ead89b23b2e0b126ded822a6e",
+      "size_bytes": 9478
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/DIV-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "159a95ffd962f34bb1bc272710763270ddf4b00e2a6d8a3d0bd3d43661dae088",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "0d445df66fc7d951800455c05e940353a97de6ba42abcbf17b884c9bc7a300cd",
+      "size_bytes": 22329
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "4bc9b78242552b1150ae0616520ecc8a76c696f355d4e305907a9d375b5bf290",
+      "size_bytes": 158750
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "925f7e527bc3e0e9a7a11e470f8b4ab32598d4d58d178b51c31f5aff6a0997b8",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "0d445df66fc7d951800455c05e940353a97de6ba42abcbf17b884c9bc7a300cd",
+      "size_bytes": 22329
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "cb97bc7ffeee98c62819c448998a1bb23eb235c410327059e53efe65dae11561",
+      "size_bytes": 195350
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "1f980b56a120ab9a40427739479758b00de8f6e3bb667e5ec0be3a02af4a186f",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "0d445df66fc7d951800455c05e940353a97de6ba42abcbf17b884c9bc7a300cd",
+      "size_bytes": 22329
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "4cdf94dfbd24abf571be60fc12b7005628e0b2587764f82f2b9f39fc390b9609",
+      "size_bytes": 159125
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "e087b1ccb569f4ecf98797791b45cb131f8a19f6adb6db5e19425fc2d1a6c436",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "d77e9116a80a54cd4f014f5fec886c131388877e7db9d894866f7fd0b72250f5",
+      "size_bytes": 22332
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "d9f5520c5bc5ab2528201d9ceb3e0a39f6df4ad932ade1002f8c0e789a964fa9",
+      "size_bytes": 158774
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "bb427fb0fb3bd109642bb5b8373935115be5d34edc62cdc06ed7e6457f0aaad9",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "d77e9116a80a54cd4f014f5fec886c131388877e7db9d894866f7fd0b72250f5",
+      "size_bytes": 22332
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "8e92cc9150ba1f884a25e8f3a5acbcc56d93b63120b32742f7efa59eea2f0aad",
+      "size_bytes": 195374
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "84649f64a42aa7c878f729ca49264f73bd52ded793f99ca70e04b4e71753a814",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": "d77e9116a80a54cd4f014f5fec886c131388877e7db9d894866f7fd0b72250f5",
+      "size_bytes": 22332
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "sha256": "798c6357de57d0101853a81c01a877fab4861fcaeec89628cf76c2817fff362d",
+      "size_bytes": 159149
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/cad/MAIN-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "sha256": "bfa8c3ca71896060a58214285ed999b8221b694de6891a14d8b85a5888dfdae1",
+      "size_bytes": 106884
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/concentric_blueprints_CB01_DRAFT.pdf",
+      "sha256": "7a377d0453a85cdeadf74b240a1357c79d427d63c725b0041fc3848de76597e9",
+      "size_bytes": 18342975
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/damage.html",
+      "sha256": "639004d09af42a193437d216982b23ab727fb88640c235496a91575e55210a15",
+      "size_bytes": 860050
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/damage_mapping.json",
+      "sha256": "d8cab78e3dc2a4425cb57184b5a11d11b8b817eb815e3c51d3d88ae59b9579f8",
+      "size_bytes": 27898
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/diagnostic/MAIN-C1_LOC01_TAB_TRIAL_NOT_FOR_FABRICATION.step",
+      "sha256": "392979b3310a8d4ef0392f5f142ff2604727fc7b024297b4dfdb89cc2ace1316",
+      "size_bytes": 5216483
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/diagnostic/MAIN-C1_LOC01_TAB_TRIAL_NOT_FOR_FABRICATION.stl",
+      "sha256": "4e2a7a5bb3e30957339a4fc28e47ae56d4195f97ed4e4db245bcff6b5078e617",
+      "size_bytes": 299284
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/document_validation.json",
+      "sha256": "d26ce884b11da496d40b751d98bebde076e7b44690e8f475d781a765c03ff666",
+      "size_bytes": 2686
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/full_size_templates_CB01_DRAFT.pdf",
+      "sha256": "40da1114ade0459a07380b5cee6e4e164c69690be29d450286fb55d5b5fa69be",
+      "size_bytes": 10862
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/index.html",
+      "sha256": "dca9ae93787fb869fcba8d8117c72d773da3c8da7a4b9ec14d0f1ea0b5c7cbcb",
+      "size_bytes": 8611
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/package_manifest.json",
+      "sha256": "99e1299d5a6bf5a6b13f0bb35967f1b6ad85619367ad72951aecc2462ef3f4f4",
+      "size_bytes": 18274
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/paired_concentric_CB01_DRAFT.blend",
+      "sha256": "3adb130427ef8e408fd345f27ba4fc06f2174470a123821dc2800dd2dd2d7f9a",
+      "size_bytes": 96995840
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/quote_C1_PROTO3_CB01_DRAFT.zip",
+      "sha256": "724106511d1d3c034dd5f9f4e60220786f2be5d43fc123ceb21d3f49798e0b99",
+      "size_bytes": 92588
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/quote_C1_SS060_CB01_DRAFT.zip",
+      "sha256": "1b9c3af8de7fb37416d6ef731e888770ef899320664e8f79e08fd67a10b76957",
+      "size_bytes": 103555
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/quote_C1_SS125_CB01_DRAFT.zip",
+      "sha256": "5eb2b5b23c0fa7f8900729bea77569ecf28ab32c30be6cc91a431e5f79c8bc54",
+      "size_bytes": 92599
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/quote_C2_PROTO3_CB01_DRAFT.zip",
+      "sha256": "cc3d18e98d81940cd608bf6abc02e0aca3dc066bf82c825a5c02200b833242dc",
+      "size_bytes": 92789
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/quote_C2_SS060_CB01_DRAFT.zip",
+      "sha256": "f1619c26aae7feeb8cfeacc0374c15363c887d3bc3e9f1c933ac7b0ff2ef4803",
+      "size_bytes": 103701
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/quote_C2_SS125_CB01_DRAFT.zip",
+      "sha256": "8f83a761b2f16d5a229e34e0dbf62574aaff123c75a24e6d3b50bbf6940cbe39",
+      "size_bytes": 92741
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/reconciled_model_state.json",
+      "sha256": "9f48f38c98deeaf12d09fc4071680cd42571a311b319b4205bfef4ba94443cf7",
+      "size_bytes": 1534
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/stud_locator_analysis.json",
+      "sha256": "c99003632701ad1565a08d83a14f4818f271c10154049740a19a9153307ebdce",
+      "size_bytes": 6881
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C1_damage_overlay.svg",
+      "sha256": "a27143ea7cce1ca55eddbd5dd167e23a97e6344a4fe7df1c71508be5468b01b4",
+      "size_bytes": 213350
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C1_exploded.png",
+      "sha256": "6d6d5c51d27372289d8968cd2653af1ee4de795336fa8f37de9bc1b163abf5af",
+      "size_bytes": 2151952
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C1_front.png",
+      "sha256": "5e16df48aa0ffd24ccbd13af6d365c7637f1abc00500949b9a360cf62f8997eb",
+      "size_bytes": 2298114
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C1_front.svg",
+      "sha256": "e49e4d5de50df17524aacd88dd9161782bc15075e30d808b3a8f22ab915b3bcd",
+      "size_bytes": 3019
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C1_oblique.png",
+      "sha256": "91ad2cb19f518877773573dc0e46a3468fa21b83365ac0f577af2f015edea3ae",
+      "size_bytes": 2273289
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C1_top_gouges.svg",
+      "sha256": "17b1cc6759d0769494a31c888877ac3251cd5305840e8c0787b06962eaaca902",
+      "size_bytes": 212910
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C2_damage_overlay.svg",
+      "sha256": "652dfa36bc86578c1a696f3aee327926926fc1f03c592ef69161a866693f588a",
+      "size_bytes": 213358
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C2_front.png",
+      "sha256": "834160ff179ceb036ff76ce7ed6e042552ab77dd1432809bffb1a69f6ebfbc6e",
+      "size_bytes": 2299868
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C2_front.svg",
+      "sha256": "29a94da38b95f13f1bd39d4b94ee840e2c4450d64d8fc779db50b78abb039881",
+      "size_bytes": 3023
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C2_oblique.png",
+      "sha256": "6a3d53b72c76d242cbced3f813679ef007d2e45b596bede89980ecc296221655",
+      "size_bytes": 2275962
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/C2_top_gouges.svg",
+      "sha256": "a21956234e88d6e7b4f4f31986a23a236632114a51175b03811a738a08c020d3",
+      "size_bytes": 212918
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/LOC01_tabs.png",
+      "sha256": "9b5c3e557fb19589890990ccd376af1a51851830625f046eb900f7783b701201",
+      "size_bytes": 1719746
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/stud_locator_trial.png",
+      "sha256": "f332c2367221ded3cf38c32e86e5b932088d945f41ce923ea03addeab5fd4c36",
+      "size_bytes": 123214
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/stud_locator_trial.svg",
+      "sha256": "dac2558e0da441f294836a30f0db3d3426811b6445941e4c3bc1d65906d54dcf",
+      "size_bytes": 295986
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/tip_depth_review.jpg",
+      "sha256": "b9d7c7c2b4173684aa4a526947643c51e6fd76b5eb5f52ed2a143015f3d3d854",
+      "size_bytes": 94939
+    },
+    {
+      "path": "deliverables/current/fabrication/concentric-border-study/views/wall_detail_source.png",
+      "sha256": "9df7c6feaab6adc1b2464438789e5db3af9701380931cb215be261ae69850434",
+      "size_bytes": 6798098
+    },
+    {
       "path": "deliverables/current/manual/index.html",
       "sha256": "e54f91b74d89a3f27996dc0e075f2d61c30938873a957eda80629046c08d6aac",
       "size_bytes": 6556
@@ -804,9 +1174,9 @@
   ],
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS: R005 27 unit tests, fresh STEP/STL/DXF/package audit, saved Blender source comparison, exact prior/new numerical comparison, updated HTML and PDF checks",
-    "geometric_fit": "F005 geometry unchanged under R005 contacts; forward mesh aperture clears captured surface; stud pattern/depth and rear foam path remain conditional conflicts",
-    "materials_design_review": "F005 public vendor/stock/finish research prepared; no chosen vendor/quote or approved permanent seal detail",
+    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit.",
+    "geometric_fit": "CB01 preserves the F005 insertion aperture and original scan. Circular appearances have conditional positive gaps and traced damage margins; support/foam/depth remain unresolved. LOC01 added tabs intersect captured surfaces under its named fixed-scan-depth trial. RECON-001 revision 2 treats all six readings as 3D end-tip-center distances; exact free-depth embeddings do not determine wall-relative hole coordinates.",
+    "materials_design_review": "Public vendor/stock/finish research retained in historical F005; CB01 stock-specific quote packages prepared locally. No vendor quote, chosen material/finish, approved support/seal detail, or manufacturing tolerance.",
     "physical_fit": "NOT PERFORMED",
     "fabrication_approval": "NOT GIVEN",
     "received_part_inspection": "NOT APPLICABLE YET",

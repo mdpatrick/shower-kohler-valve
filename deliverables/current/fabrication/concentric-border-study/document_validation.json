@@ -1,0 +1,89 @@
+{
+  "status": "PASS_RENDER_AND_VISUAL_LAYOUT_ONLY",
+  "pdf_pages": {
+    "concentric_blueprints_CB01_DRAFT.pdf": 11,
+    "full_size_templates_CB01_DRAFT.pdf": 4
+  },
+  "quote_packages": [
+    {
+      "variant": "C1",
+      "stock": "SS060",
+      "file": "quote_C1_SS060_CB01_DRAFT.zip",
+      "sha256": "1b9c3af8de7fb37416d6ef731e888770ef899320664e8f79e08fd67a10b76957",
+      "CAD_parts": 2,
+      "drawing_pages": 3
+    },
+    {
+      "variant": "C1",
+      "stock": "SS125",
+      "file": "quote_C1_SS125_CB01_DRAFT.zip",
+      "sha256": "5eb2b5b23c0fa7f8900729bea77569ecf28ab32c30be6cc91a431e5f79c8bc54",
+      "CAD_parts": 2,
+      "drawing_pages": 3
+    },
+    {
+      "variant": "C1",
+      "stock": "PROTO3",
+      "file": "quote_C1_PROTO3_CB01_DRAFT.zip",
+      "sha256": "724106511d1d3c034dd5f9f4e60220786f2be5d43fc123ceb21d3f49798e0b99",
+      "CAD_parts": 2,
+      "drawing_pages": 3
+    },
+    {
+      "variant": "C2",
+      "stock": "SS060",
+      "file": "quote_C2_SS060_CB01_DRAFT.zip",
+      "sha256": "f1619c26aae7feeb8cfeacc0374c15363c887d3bc3e9f1c933ac7b0ff2ef4803",
+      "CAD_parts": 2,
+      "drawing_pages": 3
+    },
+    {
+      "variant": "C2",
+      "stock": "SS125",
+      "file": "quote_C2_SS125_CB01_DRAFT.zip",
+      "sha256": "8f83a761b2f16d5a229e34e0dbf62574aaff123c75a24e6d3b50bbf6940cbe39",
+      "CAD_parts": 2,
+      "drawing_pages": 3
+    },
+    {
+      "variant": "C2",
+      "stock": "PROTO3",
+      "file": "quote_C2_PROTO3_CB01_DRAFT.zip",
+      "sha256": "cc3d18e98d81940cd608bf6abc02e0aca3dc066bf82c825a5c02200b833242dc",
+      "CAD_parts": 2,
+      "drawing_pages": 3
+    }
+  ],
+  "quote_package_privacy": "PASS: no raster photos or scan assets",
+  "raw_measurements_modified": false,
+  "visual_QA": {
+    "date": "2026-10-15",
+    "blueprint_pages_inspected": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11
+    ],
+    "template_pages_inspected": [
+      1,
+      2,
+      3,
+      4
+    ],
+    "method": "Poppler PNG renders inspected visually. Latest four template renders are pixel-identical to reviewed renders. Updated sheets 8 and 11 inspected after the 3D definition change. Representative three-page stock-specific quote PDF also rendered and inspected; all six quote PDFs checked for correct cross-references and contents.",
+    "issues_remaining": []
+  },
+  "pdf_sha256": {
+    "full_size_templates_CB01_DRAFT.pdf": "40da1114ade0459a07380b5cee6e4e164c69690be29d450286fb55d5b5fa69be",
+    "concentric_blueprints_CB01_DRAFT.pdf": "7a377d0453a85cdeadf74b240a1357c79d427d63c725b0041fc3848de76597e9"
+  },
+  "physical_fit": "NOT PERFORMED",
+  "manufacturing_release": "NOT GIVEN"
+}

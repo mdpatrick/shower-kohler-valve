@@ -1,0 +1,963 @@
+{
+  "id": "CB01-DAMAGE",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "requirement": "REQ-DAMAGE-VISIBILITY-001",
+  "source_sha256": {
+    "canon/damage_visibility_requirement.json": "483e1659b0954a85e0a8b94f22eb84d1dfb67a64c77bba6f4a4a7f1fcc1bd34b",
+    "canon/concentric_border_requirement.json": "073fada815ccfa6d0d3927c861c7e2c29eb58a19e48d02b79d3ee1d2ecf8849d",
+    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883",
+    "data/evidence/scan_quality/wall_detail_registered.json": "02c4d026c32b56a72bbce47f5be25d458fdd08aff08ad5f66e504aadca0711a4",
+    "data/evidence/scan_quality/wall_detail_registered.png": "9df7c6feaab6adc1b2464438789e5db3af9701380931cb215be261ae69850434",
+    "deliverables/current/fabrication/concentric-border-study/analysis.json": "d888b206d3b855ebb5ae687de66318c3447b969ed6aff31cdc9dae92c0368c02"
+  },
+  "image_metadata": {
+    "center_installed_mm": [
+      0,
+      40,
+      0
+    ],
+    "span_mm": 280,
+    "pixels": 2200
+  },
+  "original_render_bytes_preserved": true,
+  "max_source_annotation_reprojection_error_pixels": 4.547473508864641e-13,
+  "cover_center_installed_mm": [
+    0.7991944036080083,
+    39.672855449655486
+  ],
+  "cover_registration_status": "Inferred, not physically verified",
+  "cover_diameter_mm": 184.15,
+  "variants": [
+    {
+      "id": "C1",
+      "name": "Uniform around each cover",
+      "outer_diameter_mm": 220,
+      "visible_border_mm": 17.924999999999997,
+      "CAD_source": "cad/MAIN-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "CAD_sha256": "cb97bc7ffeee98c62819c448998a1bb23eb235c410327059e53efe65dae11561",
+      "features": [
+        {
+          "id": "OPEN-MAIN",
+          "name": "Irregular stacked-valve wall opening",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -39.45454545454545,
+              124.63636363636364
+            ],
+            [
+              -15.272727272727272,
+              125.9090909090909
+            ],
+            [
+              11.454545454545455,
+              123.74545454545452
+            ],
+            [
+              36.27272727272727,
+              122.47272727272724
+            ],
+            [
+              50.909090909090914,
+              119.5454545454546
+            ],
+            [
+              61.727272727272734,
+              108.47272727272728
+            ],
+            [
+              70.0,
+              102.36363636363637
+            ],
+            [
+              75.0909090909091,
+              84.54545454545453
+            ],
+            [
+              73.81818181818181,
+              59.72727272727272
+            ],
+            [
+              73.81818181818181,
+              36.18181818181818
+            ],
+            [
+              78.9090909090909,
+              24.090909090909104
+            ],
+            [
+              89.0909090909091,
+              8.181818181818208
+            ],
+            [
+              82.72727272727273,
+              -4.545454545454561
+            ],
+            [
+              66.18181818181819,
+              -17.272727272727302
+            ],
+            [
+              44.54545454545454,
+              -37.636363636363626
+            ],
+            [
+              -20.363636363636363,
+              -37.636363636363626
+            ],
+            [
+              -31.181818181818187,
+              -32.54545454545456
+            ],
+            [
+              -46.45454545454545,
+              -22.36363636363634
+            ],
+            [
+              -68.72727272727273,
+              0.5454545454545352
+            ],
+            [
+              -70.00000000000001,
+              4.363636363636329
+            ],
+            [
+              -60.45454545454545,
+              17.090909090909125
+            ],
+            [
+              -59.18181818181818,
+              37.45454545454545
+            ],
+            [
+              -57.272727272727266,
+              54.000000000000014
+            ],
+            [
+              -52.18181818181818,
+              77.54545454545456
+            ],
+            [
+              -47.09090909090909,
+              102.36363636363637
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            50.909090909090914,
+            119.5454545454546
+          ],
+          "max_extension_beyond_cover_mm": 2.215157567523761,
+          "remaining_to_outer_edge_mm": 15.709842432476236,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 14.209842432476236,
+          "area_under_exposed_border_mm2": 51.25986793758024,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-01",
+          "name": "Top-left raised cut / missing arris",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -40.981818181818184,
+              124.63636363636364
+            ],
+            [
+              -39.45454545454545,
+              127.94545454545455
+            ],
+            [
+              -35.89090909090909,
+              131.38181818181815
+            ],
+            [
+              -31.945454545454545,
+              132.01818181818183
+            ],
+            [
+              -29.272727272727273,
+              128.58181818181816
+            ],
+            [
+              -23.036363636363635,
+              128.19999999999996
+            ],
+            [
+              -25.200000000000003,
+              125.14545454545454
+            ],
+            [
+              -34.74545454545454,
+              122.85454545454546
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            -35.89090909090909,
+            131.38181818181815
+          ],
+          "max_extension_beyond_cover_mm": 6.700996779822859,
+          "remaining_to_outer_edge_mm": 11.224003220177138,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 9.724003220177138,
+          "area_under_exposed_border_mm2": 65.69235697551694,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-02",
+          "name": "Upper horizontal overcut above opening",
+          "source_status": "unknown",
+          "trace_contour_installed_mm": [
+            [
+              -9.545454545454545,
+              131.38181818181815
+            ],
+            [
+              3.8181818181818192,
+              130.49090909090904
+            ],
+            [
+              12.727272727272727,
+              129.72727272727272
+            ],
+            [
+              30.545454545454547,
+              128.96363636363637
+            ],
+            [
+              30.545454545454547,
+              127.69090909090909
+            ],
+            [
+              12.727272727272727,
+              128.07272727272724
+            ],
+            [
+              2.5454545454545476,
+              128.83636363636361
+            ],
+            [
+              -8.909090909090908,
+              129.8545454545455
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            30.545454545454547,
+            128.96363636363637
+          ],
+          "max_extension_beyond_cover_mm": 2.040267351556409,
+          "remaining_to_outer_edge_mm": 15.884732648443588,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 14.384732648443588,
+          "area_under_exposed_border_mm2": 7.675861710691259,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-03",
+          "name": "Top-right cut extension",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              36.27272727272727,
+              123.61818181818182
+            ],
+            [
+              48.74545454545454,
+              122.0909090909091
+            ],
+            [
+              62.10909090909092,
+              120.05454545454545
+            ],
+            [
+              63.000000000000014,
+              117.89090909090912
+            ],
+            [
+              52.81818181818182,
+              117.38181818181815
+            ],
+            [
+              44.54545454545454,
+              120.05454545454545
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            62.10909090909092,
+            120.05454545454545
+          ],
+          "max_extension_beyond_cover_mm": 9.019606668977403,
+          "remaining_to_outer_edge_mm": 8.905393331022594,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 7.405393331022594,
+          "area_under_exposed_border_mm2": 61.74820096630499,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-04",
+          "name": "Left lower overcut / chipped cusp",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -66.81818181818181,
+              10.98181818181821
+            ],
+            [
+              -70.00000000000001,
+              6.909090909090877
+            ],
+            [
+              -71.27272727272727,
+              2.963636363636356
+            ],
+            [
+              -68.72727272727273,
+              -1.3636363636364042
+            ],
+            [
+              -63.38181818181819,
+              -5.945454545454562
+            ],
+            [
+              -60.709090909090904,
+              -4.545454545454561
+            ],
+            [
+              -67.2,
+              1.1818181818181723
+            ],
+            [
+              -66.18181818181819,
+              4.872727272727295
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            -71.27272727272727,
+            2.963636363636356
+          ],
+          "max_extension_beyond_cover_mm": 0,
+          "remaining_to_outer_edge_mm": 29.117809994874904,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 27.617809994874904,
+          "area_under_exposed_border_mm2": 0.0,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-05",
+          "name": "Right lower overcut / chipped cusp",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              80.18181818181819,
+              19.636363636363615
+            ],
+            [
+              84.0,
+              14.927272727272731
+            ],
+            [
+              89.9818181818182,
+              8.818181818181817
+            ],
+            [
+              90.36363636363636,
+              5.2545454545454495
+            ],
+            [
+              85.52727272727273,
+              -0.21818181818182905
+            ],
+            [
+              80.18181818181819,
+              -3.9090909090908954
+            ],
+            [
+              78.27272727272727,
+              -0.7272727272727102
+            ],
+            [
+              82.72727272727272,
+              5.509090909090904
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            90.36363636363636,
+            5.2545454545454495
+          ],
+          "max_extension_beyond_cover_mm": 3.8750355733690043,
+          "remaining_to_outer_edge_mm": 14.049964426630993,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 12.549964426630993,
+          "area_under_exposed_border_mm2": 31.48530243981892,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-06",
+          "name": "Bottom missing / recessed stone edge",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -33.345454545454544,
+              -31.27272727272726
+            ],
+            [
+              -19.472727272727276,
+              -34.83636363636362
+            ],
+            [
+              1.2727272727272743,
+              -34.7090909090909
+            ],
+            [
+              20.363636363636363,
+              -36.10909090909093
+            ],
+            [
+              44.163636363636364,
+              -33.818181818181806
+            ],
+            [
+              45.05454545454546,
+              -39.8
+            ],
+            [
+              36.90909090909091,
+              -44.63636363636366
+            ],
+            [
+              20.363636363636367,
+              -40.18181818181817
+            ],
+            [
+              -6.363636363636363,
+              -39.54545454545454
+            ],
+            [
+              -22.90909090909091,
+              -40.94545454545454
+            ],
+            [
+              -29.272727272727273,
+              -37.636363636363626
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            36.90909090909091,
+            -44.63636363636366
+          ],
+          "max_extension_beyond_cover_mm": 0,
+          "remaining_to_outer_edge_mm": 18.283212831395687,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 16.783212831395687,
+          "area_under_exposed_border_mm2": 0.0,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-07",
+          "name": "Right edge line toward adjacent grout",
+          "source_status": "unknown",
+          "trace_contour_installed_mm": [
+            [
+              88.07272727272729,
+              9.200000000000028
+            ],
+            [
+              92.65454545454546,
+              10.98181818181821
+            ],
+            [
+              92.14545454545454,
+              5.890909090909058
+            ],
+            [
+              89.47272727272727,
+              3.6000000000000214
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            92.14545454545454,
+            5.890909090909058
+          ],
+          "max_extension_beyond_cover_mm": 5.317808470066822,
+          "remaining_to_outer_edge_mm": 12.607191529933175,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 11.107191529933175,
+          "area_under_exposed_border_mm2": 20.296528925619867,
+          "trace_fully_covered_in_model": true
+        }
+      ]
+    },
+    {
+      "id": "C2",
+      "name": "Matching 15 mm borders",
+      "outer_diameter_mm": 214.15,
+      "visible_border_mm": 15.0,
+      "CAD_source": "cad/MAIN-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "CAD_sha256": "8e92cc9150ba1f884a25e8f3a5acbcc56d93b63120b32742f7efa59eea2f0aad",
+      "features": [
+        {
+          "id": "OPEN-MAIN",
+          "name": "Irregular stacked-valve wall opening",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -39.45454545454545,
+              124.63636363636364
+            ],
+            [
+              -15.272727272727272,
+              125.9090909090909
+            ],
+            [
+              11.454545454545455,
+              123.74545454545452
+            ],
+            [
+              36.27272727272727,
+              122.47272727272724
+            ],
+            [
+              50.909090909090914,
+              119.5454545454546
+            ],
+            [
+              61.727272727272734,
+              108.47272727272728
+            ],
+            [
+              70.0,
+              102.36363636363637
+            ],
+            [
+              75.0909090909091,
+              84.54545454545453
+            ],
+            [
+              73.81818181818181,
+              59.72727272727272
+            ],
+            [
+              73.81818181818181,
+              36.18181818181818
+            ],
+            [
+              78.9090909090909,
+              24.090909090909104
+            ],
+            [
+              89.0909090909091,
+              8.181818181818208
+            ],
+            [
+              82.72727272727273,
+              -4.545454545454561
+            ],
+            [
+              66.18181818181819,
+              -17.272727272727302
+            ],
+            [
+              44.54545454545454,
+              -37.636363636363626
+            ],
+            [
+              -20.363636363636363,
+              -37.636363636363626
+            ],
+            [
+              -31.181818181818187,
+              -32.54545454545456
+            ],
+            [
+              -46.45454545454545,
+              -22.36363636363634
+            ],
+            [
+              -68.72727272727273,
+              0.5454545454545352
+            ],
+            [
+              -70.00000000000001,
+              4.363636363636329
+            ],
+            [
+              -60.45454545454545,
+              17.090909090909125
+            ],
+            [
+              -59.18181818181818,
+              37.45454545454545
+            ],
+            [
+              -57.272727272727266,
+              54.000000000000014
+            ],
+            [
+              -52.18181818181818,
+              77.54545454545456
+            ],
+            [
+              -47.09090909090909,
+              102.36363636363637
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            50.909090909090914,
+            119.5454545454546
+          ],
+          "max_extension_beyond_cover_mm": 2.215157567523761,
+          "remaining_to_outer_edge_mm": 12.784842432476239,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 11.284842432476239,
+          "area_under_exposed_border_mm2": 51.25986793758024,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-01",
+          "name": "Top-left raised cut / missing arris",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -40.981818181818184,
+              124.63636363636364
+            ],
+            [
+              -39.45454545454545,
+              127.94545454545455
+            ],
+            [
+              -35.89090909090909,
+              131.38181818181815
+            ],
+            [
+              -31.945454545454545,
+              132.01818181818183
+            ],
+            [
+              -29.272727272727273,
+              128.58181818181816
+            ],
+            [
+              -23.036363636363635,
+              128.19999999999996
+            ],
+            [
+              -25.200000000000003,
+              125.14545454545454
+            ],
+            [
+              -34.74545454545454,
+              122.85454545454546
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            -35.89090909090909,
+            131.38181818181815
+          ],
+          "max_extension_beyond_cover_mm": 6.700996779822859,
+          "remaining_to_outer_edge_mm": 8.299003220177141,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 6.799003220177141,
+          "area_under_exposed_border_mm2": 65.69235697551694,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-02",
+          "name": "Upper horizontal overcut above opening",
+          "source_status": "unknown",
+          "trace_contour_installed_mm": [
+            [
+              -9.545454545454545,
+              131.38181818181815
+            ],
+            [
+              3.8181818181818192,
+              130.49090909090904
+            ],
+            [
+              12.727272727272727,
+              129.72727272727272
+            ],
+            [
+              30.545454545454547,
+              128.96363636363637
+            ],
+            [
+              30.545454545454547,
+              127.69090909090909
+            ],
+            [
+              12.727272727272727,
+              128.07272727272724
+            ],
+            [
+              2.5454545454545476,
+              128.83636363636361
+            ],
+            [
+              -8.909090909090908,
+              129.8545454545455
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            30.545454545454547,
+            128.96363636363637
+          ],
+          "max_extension_beyond_cover_mm": 2.040267351556409,
+          "remaining_to_outer_edge_mm": 12.959732648443591,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 11.459732648443591,
+          "area_under_exposed_border_mm2": 7.675861710691259,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-03",
+          "name": "Top-right cut extension",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              36.27272727272727,
+              123.61818181818182
+            ],
+            [
+              48.74545454545454,
+              122.0909090909091
+            ],
+            [
+              62.10909090909092,
+              120.05454545454545
+            ],
+            [
+              63.000000000000014,
+              117.89090909090912
+            ],
+            [
+              52.81818181818182,
+              117.38181818181815
+            ],
+            [
+              44.54545454545454,
+              120.05454545454545
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            62.10909090909092,
+            120.05454545454545
+          ],
+          "max_extension_beyond_cover_mm": 9.019606668977403,
+          "remaining_to_outer_edge_mm": 5.980393331022597,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 4.480393331022597,
+          "area_under_exposed_border_mm2": 61.74820096630499,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-04",
+          "name": "Left lower overcut / chipped cusp",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -66.81818181818181,
+              10.98181818181821
+            ],
+            [
+              -70.00000000000001,
+              6.909090909090877
+            ],
+            [
+              -71.27272727272727,
+              2.963636363636356
+            ],
+            [
+              -68.72727272727273,
+              -1.3636363636364042
+            ],
+            [
+              -63.38181818181819,
+              -5.945454545454562
+            ],
+            [
+              -60.709090909090904,
+              -4.545454545454561
+            ],
+            [
+              -67.2,
+              1.1818181818181723
+            ],
+            [
+              -66.18181818181819,
+              4.872727272727295
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            -71.27272727272727,
+            2.963636363636356
+          ],
+          "max_extension_beyond_cover_mm": 0,
+          "remaining_to_outer_edge_mm": 26.192809994874906,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 24.692809994874906,
+          "area_under_exposed_border_mm2": 0.0,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-05",
+          "name": "Right lower overcut / chipped cusp",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              80.18181818181819,
+              19.636363636363615
+            ],
+            [
+              84.0,
+              14.927272727272731
+            ],
+            [
+              89.9818181818182,
+              8.818181818181817
+            ],
+            [
+              90.36363636363636,
+              5.2545454545454495
+            ],
+            [
+              85.52727272727273,
+              -0.21818181818182905
+            ],
+            [
+              80.18181818181819,
+              -3.9090909090908954
+            ],
+            [
+              78.27272727272727,
+              -0.7272727272727102
+            ],
+            [
+              82.72727272727272,
+              5.509090909090904
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            90.36363636363636,
+            5.2545454545454495
+          ],
+          "max_extension_beyond_cover_mm": 3.8750355733690043,
+          "remaining_to_outer_edge_mm": 11.124964426630996,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 9.624964426630996,
+          "area_under_exposed_border_mm2": 31.48530243981892,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-06",
+          "name": "Bottom missing / recessed stone edge",
+          "source_status": "scan-derived",
+          "trace_contour_installed_mm": [
+            [
+              -33.345454545454544,
+              -31.27272727272726
+            ],
+            [
+              -19.472727272727276,
+              -34.83636363636362
+            ],
+            [
+              1.2727272727272743,
+              -34.7090909090909
+            ],
+            [
+              20.363636363636363,
+              -36.10909090909093
+            ],
+            [
+              44.163636363636364,
+              -33.818181818181806
+            ],
+            [
+              45.05454545454546,
+              -39.8
+            ],
+            [
+              36.90909090909091,
+              -44.63636363636366
+            ],
+            [
+              20.363636363636367,
+              -40.18181818181817
+            ],
+            [
+              -6.363636363636363,
+              -39.54545454545454
+            ],
+            [
+              -22.90909090909091,
+              -40.94545454545454
+            ],
+            [
+              -29.272727272727273,
+              -37.636363636363626
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            36.90909090909091,
+            -44.63636363636366
+          ],
+          "max_extension_beyond_cover_mm": 0,
+          "remaining_to_outer_edge_mm": 15.35821283139569,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 13.85821283139569,
+          "area_under_exposed_border_mm2": 0.0,
+          "trace_fully_covered_in_model": true
+        },
+        {
+          "id": "CUT-07",
+          "name": "Right edge line toward adjacent grout",
+          "source_status": "unknown",
+          "trace_contour_installed_mm": [
+            [
+              88.07272727272729,
+              9.200000000000028
+            ],
+            [
+              92.65454545454546,
+              10.98181818181821
+            ],
+            [
+              92.14545454545454,
+              5.890909090909058
+            ],
+            [
+              89.47272727272727,
+              3.6000000000000214
+            ]
+          ],
+          "limiting_point_installed_mm": [
+            92.14545454545454,
+            5.890909090909058
+          ],
+          "max_extension_beyond_cover_mm": 5.317808470066822,
+          "remaining_to_outer_edge_mm": 9.682191529933178,
+          "trace_allowance_mm": 1.5,
+          "remaining_after_trace_allowance_mm": 8.182191529933178,
+          "area_under_exposed_border_mm2": 20.296528925619867,
+          "trace_fully_covered_in_model": true
+        }
+      ]
+    }
+  ],
+  "uncertain_features": [
+    "CUT-02",
+    "CUT-07"
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "support_and_seal_design": "UNRESOLVED",
+  "limits": "XY projection of prior scan-derived traces; 1.5 mm trace allowance does not bound scale/placement error. Revealed damage does not describe an opaque assembled appearance or establish sound supporting stone.",
+  "executed_checks": [
+    "Original source PNG byte hash unchanged",
+    "Every trace vertex maps back to its annotation pixel",
+    "Current STEP outer-circle dimensions and local origin checked",
+    "All eight retained feature traces covered by both circles in the model",
+    "Current per-feature margins agree with prior CB01 analysis",
+    "Input fingerprints unchanged during generation"
+  ]
+}

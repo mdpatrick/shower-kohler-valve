@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 600" role="img">
+<title>Matching 15 mm borders — concentric front elevation</title>
+<rect width="420" height="600" fill="#f4f1e9"/>
+<g font-family="Arial,sans-serif" fill="#18343c">
+<text x="20" y="25" font-size="14">FRONT ELEVATION · DRAFT</text>
+<circle cx="210.0000" cy="222.6318" r="141.3390" fill="#8cb6c2" stroke="#235365" stroke-width="1"/>
+<circle cx="210.0000" cy="222.6318" r="121.5390" fill="#d4d8d8" stroke="#5c6a6c" stroke-width="1"/>
+<path d="M331.539,222.632 L351.339,222.632" stroke="#235365" stroke-width="1.5"/>
+<path d="M295.941,308.573 L309.942,322.574" stroke="#235365" stroke-width="1.5"/>
+<path d="M210.000,344.171 L210.000,363.971" stroke="#235365" stroke-width="1.5"/>
+<path d="M124.059,308.573 L110.058,322.574" stroke="#235365" stroke-width="1.5"/>
+<path d="M88.461,222.632 L68.661,222.632" stroke="#235365" stroke-width="1.5"/>
+<path d="M124.059,136.691 L110.058,122.690" stroke="#235365" stroke-width="1.5"/>
+<path d="M210.000,101.093 L210.000,81.293" stroke="#235365" stroke-width="1.5"/>
+<path d="M295.941,136.691 L309.942,122.690" stroke="#235365" stroke-width="1.5"/>
+<text x="210.0" y="206.63183080645476" text-anchor="middle" font-size="15">Main Ø214.15 mm</text>
+<text x="210.0" y="227.63183080645476" text-anchor="middle" font-size="17" font-weight="bold">15.00 mm border</text>
+<text x="210.0" y="246.63183080645476" text-anchor="middle" font-size="12">constant through 360°</text>
+<circle cx="208.8565" cy="453.9430" r="84.7605" fill="#8cb6c2" stroke="#235365" stroke-width="1"/>
+<circle cx="208.8565" cy="453.9430" r="64.9605" fill="#d4d8d8" stroke="#5c6a6c" stroke-width="1"/>
+<path d="M273.817,453.943 L293.617,453.943" stroke="#235365" stroke-width="1.5"/>
+<path d="M254.791,499.877 L268.791,513.878" stroke="#235365" stroke-width="1.5"/>
+<path d="M208.857,518.903 L208.857,538.703" stroke="#235365" stroke-width="1.5"/>
+<path d="M162.923,499.877 L148.922,513.878" stroke="#235365" stroke-width="1.5"/>
+<path d="M143.896,453.943 L124.096,453.943" stroke="#235365" stroke-width="1.5"/>
+<path d="M162.923,408.009 L148.922,394.008" stroke="#235365" stroke-width="1.5"/>
+<path d="M208.857,388.982 L208.857,369.182" stroke="#235365" stroke-width="1.5"/>
+<path d="M254.791,408.009 L268.791,394.008" stroke="#235365" stroke-width="1.5"/>
+<text x="208.85651920988275" y="437.9429616131073" text-anchor="middle" font-size="15">Diverter Ø128.425 mm</text>
+<text x="208.85651920988275" y="458.9429616131073" text-anchor="middle" font-size="17" font-weight="bold">15.00 mm border</text>
+<text x="208.85651920988275" y="477.9429616131073" text-anchor="middle" font-size="12">constant through 360°</text>
+<path d="M214,366.5766 H338" stroke="#18343c" fill="none"/>
+<text x="400" y="358.5766" text-anchor="end" font-size="13">Gap 3.95 mm</text>
+<text x="20" y="570" font-size="12">Outline study; hidden hardware omitted.</text>
+<text x="20" y="588" font-size="12">Centers and diverter diameter remain provisional.</text>
+</g></svg>

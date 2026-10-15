@@ -1,0 +1,47 @@
+{
+  "id": "RECON-001-WEAK-DEPTH-TRIAL",
+  "status": "HYPOTHETICAL_DERIVED_MODEL_STATE",
+  "tip_centers_installed_mm": {
+    "L": [
+      -4.5318079997297735e-15,
+      -7.608961579793201e-15,
+      33.66486845951323
+    ],
+    "U": [
+      1.6139427457932132,
+      80.11782486064503,
+      32.20642910075434
+    ],
+    "NE": [
+      49.93542779965556,
+      62.694142058508255,
+      30.91796499859836
+    ],
+    "SW": [
+      -50.726821327876394,
+      18.608024144801266,
+      26.821423593238855
+    ]
+  },
+  "source_report_sha256": "c224a1bc40a3db14b429057ee21b003245ee56c993d1622b2b683b0eb2a7e4e3",
+  "assumptions": {
+    "id": "RECON-001-WEAK-DEPTH-TRIAL",
+    "source": "deliverables/current/analysis/center_reconciliation_DRAFT.json",
+    "mode": "scan_relative_depths",
+    "scan_coordinate_penalty_weight": 0.0625,
+    "loss": "linear",
+    "use": "Separate derived tip-center state for diagnostic locator trials only; not physical calibration or accepted axis coordinates.",
+    "projection_assumption": "Trial stud axes normal to the tile plane, using fitted tip X/Y at every Z. Actual inclination and plate-plane centers unknown.",
+    "original_scan_and_R005_placements": "Preserve unchanged."
+  },
+  "raw_observations": "docs/physical_checks/installed_center_distances_2026-10-15.json",
+  "trial_residuals_mm": [
+    0.14735003074567032,
+    0.1693404708803854,
+    -0.017018576744078473,
+    -0.052444696795049595,
+    -0.19551623344348457,
+    -0.23623496083346396
+  ],
+  "residuals_are_not_accuracy_bounds": true
+}

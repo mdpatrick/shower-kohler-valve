@@ -1,4 +1,20 @@
-# F005 - escutcheon fabrication preparation
+# CB01 - concentric circular escutcheon preparation
+
+**Current appearance candidates are circular and concentric with each actual cover.** The prior F005 offset/rectangular appearances are historical and do not meet the accepted border requirement. R005 remains the accepted plate/foam measurement baseline; the six installed center readings are preserved in RECON-001, with a separate fitted diagnostic state. No scan, valve or stud was moved to force fit.
+
+- [Current CB01 illustrated review](deliverables/current/fabrication/concentric-border-study/index.html), served at `http://127.0.0.1:8765/fabrication/concentric-border-study/index.html`.
+- C1: main diameter 220 mm / diverter 120 mm; ideal borders 17.925 / 10.7875 mm; conditional gap 5.238 mm.
+- C2: main diameter 214.15 mm / diverter 128.425 mm; both borders 15 mm; conditional gap 3.950 mm.
+- Worst projected main damage margins are 7.405 / 4.480 mm after the prior trace allowance. Neither proves continuous sound support or satisfies the earlier exploratory 10 mm target. Actual cover registration, scale and supported seal detail remain open.
+- [Blueprints](deliverables/current/fabrication/concentric-border-study/concentric_blueprints_CB01_DRAFT.pdf), [1:1 templates](deliverables/current/fabrication/concentric-border-study/full_size_templates_CB01_DRAFT.pdf), [Blender workspace](deliverables/current/fabrication/concentric-border-study/paired_concentric_CB01_DRAFT.blend), and six stock-specific quote ZIPs are in that folder. The 3 mm prototype is not thickness-matched to either 1.524 or 3.175 mm metal option.
+- [LOC01 upper locating-tab study](deliverables/current/fabrication/concentric-border-study/stud_locator_analysis.json) compares a round hole and slot at fitted stud positions with unchanged captured surfaces. It has conditional insertion/seated conflicts and unverified bearing/depth. Its diagnostic STEP/STL is excluded from quote packages. Threaded engagement is unselected.
+- [Controlling locating requirements](canon/stud_locator_study.json) supplement [constant-border requirements](canon/concentric_border_requirement.json). The lower companion stays circular with its ordinary aperture.
+
+Run `./project prepare-concentric` to rebuild stale stages. It preserves modified deliverables and does not overwrite accepted measurements. Final release still requires real foam tracing, actual stud/cover fit, repeatable concentric placement, support/sealing review and a thickness-correct physical dry fit. No physical test, vendor upload, order or manufacturing release has occurred.
+
+## F005 - historical fabrication preparation
+
+**2026-10-15 design correction:** The user rejects unequal exposed borders. Each backing plate must be concentric with its actual circular Kohler cover and show constant border width all the way around. F005's offset main plates and rounded rectangular alternatives do not satisfy this requirement. Read [the accepted requirement](canon/concentric_border_requirement.json), [the separate concentric draft comparison](deliverables/current/fabrication/concentric-border-study/index.html), and [where the top gouges sit beneath the exposed border](deliverables/current/fabrication/concentric-border-study/damage.html). F005 files below remain a historical preparation package, not an accepted appearance.
 
 **Two complete custom plate pairs are prepared for prototype and quote review. Permanent manufacture remains on hold for the actual foam trace, hardware/cover fit, support and explicit release.** Accepted measurement evidence is now **R005**; **F005** remains the design revision because the two confirmed edge contacts match its prior trial geometry. The 46.25 mm gap is between inside opening edges; 35.23 mm runs from the lower opening bottom inside edge to the bottommost outside rim. The lower bore and rear cavity remain unmeasured.
 
@@ -26,6 +42,10 @@ Next physical step: trace both rear foam edges on the template; remeasure studs 
 `prepare-fabrication` reads canon and reuses unchanged stages. It refuses a mismatched evidence revision. Preserve any manually changed generated file before rebuilding; the normal manifest backup mechanism applies. Reconcile new measurements rather than silently migrating a fabrication design.
 
 ---
+
+## Supplemental installed-center reconciliation — 2026-10-15
+
+Six newly reported center distances and the user's permission to smooth their imperfect caliper readings against the weaker primary scan are preserved in [the evidence record](docs/physical_checks/installed_center_distances_2026-10-15.json). See [the readable reconciliation](deliverables/current/analysis/center_reconciliation_DRAFT.txt) and [numeric sensitivity study](deliverables/current/analysis/center_reconciliation_DRAFT.json); rerun with `./project query reconcile-centers`. The user now confirms these are straight-line 3D distances between end-tip centers at unequal depths. RECON-001 revision 2 preserves every number, compares like-for-like 3D lengths, and shows conditional wall-plane reductions of 0.013–0.423 mm using the current scan depths. All six lengths admit an exact free-depth 3D arrangement; its orientation/depth relative to the wall remains unknown. Planar trials are retained only as counterfactual sensitivity checks. Fixed-depth fits and both free-depth mirror branches remain separate from raw evidence. Measurement uncertainty, assembly clearance, machining tolerance and sealing/support requirements are distinct. It is a supplemental DRAFT: no derived dimensions have been selected for the R005/F005 CAD baseline, and fit residuals are not accuracy bounds. Actual stud diameters, axes at the plate plane, and physical fit remain unverified.
 
 ## R005 measurement update
 

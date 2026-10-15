@@ -1,0 +1,168 @@
+{
+  "status": "PASS - software checks only",
+  "saved_and_reopened": true,
+  "source_scan_and_proxy_signatures_unchanged": true,
+  "source_signatures": {
+    "SCAN-WALL_FULL_0": {
+      "vertices": "2ecf27ddeae81d82cd5f33ff18a34ba3f48318b21f04b11ae4ef741212776dc0",
+      "topology": "167f39b7fc9f390957a4f7071a934e12ff205affe17db5cdd73472983c5049f7",
+      "uv": "8d43c4ff691b07433fe9c709c9ab79531cb5d5d9f2a6320063edf3723fe6cbb8",
+      "basis": [
+        [
+          0.2031109631061554,
+          6.057220947042197e-09,
+          -0.06840851157903671,
+          0.00013056783063802868
+        ],
+        [
+          -0.06840750575065613,
+          0.0011612270027399063,
+          -0.20310798287391663,
+          0.025158457458019257
+        ],
+        [
+          0.0003706418501678854,
+          0.21431852877140045,
+          0.0011004876578226686,
+          -0.25537174940109253
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null
+    },
+    "SCAN-WALL_FULL_1": {
+      "vertices": "c4788b71d47b349813a1a1d13276296b12efb712820ed19d389bab63007b1323",
+      "topology": "77ac307865c406eca1c0ab0cd02ad23e2997f930fa7c4245209c11359ca6dcfb",
+      "uv": "1a45aec19b08ca3a451c1865d21112c9ec46d739570dba77b8bc75e0fca2d153",
+      "basis": [
+        [
+          0.2031109631061554,
+          6.057220947042197e-09,
+          -0.06840851157903671,
+          0.00013056783063802868
+        ],
+        [
+          -0.06840750575065613,
+          0.0011612270027399063,
+          -0.20310798287391663,
+          0.025158457458019257
+        ],
+        [
+          0.0003706418501678854,
+          0.21431852877140045,
+          0.0011004876578226686,
+          -0.25537174940109253
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null
+    },
+    "WALL_DISPLAY_PROXY_0": {
+      "vertices": "ffa6472460cbfde93d4e5b3b718a2d4bcfb99e2dcd2741bd7d9443212039eebd",
+      "topology": "3769cea240cba3c3059aff7701b09a90a7282602a8c94fefe297a3552efa7253",
+      "uv": "5afe2bc9e5be4a28a154b5f74e4f8dba1555a34f497b2a32842d85e765fd0222",
+      "basis": [
+        [
+          0.2031109631061554,
+          6.057220947042197e-09,
+          -0.06840851157903671,
+          0.00013056783063802868
+        ],
+        [
+          -0.06840750575065613,
+          0.0011612270027399063,
+          -0.20310798287391663,
+          0.025158457458019257
+        ],
+        [
+          0.0003706418501678854,
+          0.21431852877140045,
+          0.0011004876578226686,
+          -0.25537174940109253
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null
+    },
+    "WALL_DISPLAY_PROXY_1": {
+      "vertices": "6fa45b63b97cebb5ad0817f0f46088ac194d3d5c06d2117b47420c558d7dc182",
+      "topology": "0d7e38bf3e5b3ab80c8d6e0c44c072204da1e3562b53c64847f046ddf3ab3ac3",
+      "uv": "9f59c396e23de67c334be220b9962b7d7a702df9f2b204fd434cbb5cf9fdc15f",
+      "basis": [
+        [
+          0.2031109631061554,
+          6.057220947042197e-09,
+          -0.06840851157903671,
+          0.00013056783063802868
+        ],
+        [
+          -0.06840750575065613,
+          0.0011612270027399063,
+          -0.20310798287391663,
+          0.025158457458019257
+        ],
+        [
+          0.0003706418501678854,
+          0.21431852877140045,
+          0.0011004876578226686,
+          -0.25537174940109253
+        ],
+        [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ]
+      ],
+      "parent": null
+    }
+  },
+  "missing_images": [],
+  "custom_checks": [
+    {
+      "part": "MAIN-C1-SS060",
+      "CAD_bounds_and_placement": "PASS",
+      "cover_origin_shared": true
+    },
+    {
+      "part": "DIV-C1-SS060",
+      "CAD_bounds_and_placement": "PASS",
+      "cover_origin_shared": true
+    },
+    {
+      "part": "MAIN-C2-SS060",
+      "CAD_bounds_and_placement": "PASS",
+      "cover_origin_shared": true
+    },
+    {
+      "part": "DIV-C2-SS060",
+      "CAD_bounds_and_placement": "PASS",
+      "cover_origin_shared": true
+    }
+  ],
+  "rendered_views": [
+    "C1_front",
+    "C1_oblique",
+    "C2_front",
+    "C2_oblique",
+    "C1_exploded",
+    "LOC01_tabs"
+  ],
+  "appearance_limit": "Official exterior tessellation; ideal circles define the border. No physical fit proven.",
+  "input_package_sha256": "99e1299d5a6bf5a6b13f0bb35967f1b6ad85619367ad72951aecc2462ef3f4f4"
+}

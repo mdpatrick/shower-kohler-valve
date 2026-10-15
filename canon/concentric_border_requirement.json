@@ -1,0 +1,41 @@
+{
+  "id": "REQ-VISIBLE-BORDER-001",
+  "date": "2026-10-15",
+  "source": "Direct user instruction in side conversation after review of F005 pair_A_oblique/front",
+  "user_instruction": "That's not acceptable. We must build this so that when everything is put together the border of the escutcheon is equidistant all the way around.",
+  "requirement_status": "ACCEPTED_USER_REQUIREMENT",
+  "requirement": "The visible custom backing-plate border must have constant width around the entire actual assembled decorative-cover perimeter. For the circular Kohler covers, use circular outer outlines concentric with the actual cover, with zero intentional X/Y offset. Maintain this relationship when later measurements reconcile cover registration.",
+  "applies_to": ["main thermostatic trim", "separate diverter trim"],
+  "same_width_between_both_plates": "Not explicitly required; include a comparison with matching widths on both.",
+  "rejected_F005_appearances": [
+    "MAIN-A: 6 mm upward offset produces unequal top and bottom exposure",
+    "MAIN-B: rounded rectangle and 5 mm upward offset cannot give constant-width exposure around a circular cover",
+    "DIV-B: rounded-square outline cannot give constant-width exposure around a circular cover"
+  ],
+  "implementation_constraints": [
+    "Resolve spacing by evaluating diameters and coverage, never by offsetting the backing outline from its cover.",
+    "Retain the installed-coordinate insertion aperture, original scan, valves, studs, factory inner plates, foam, drainage and service functions.",
+    "Installed concentricity needs a repeatable locating method and physical verification; exact CAD concentricity is not proof of installed alignment.",
+    "Evaluate full 360-degree border variation and inter-plate clearance after cover registration is measured.",
+    "Keep rejected F005 files as historical evidence; new concentric study files are separate unselected drafts."
+  ],
+  "study": {
+    "id": "CB01",
+    "status": "DRAFT_NOT_FOR_FABRICATION",
+    "source_design_revision": "F005",
+    "source_evidence_revision": "R005",
+    "main_cover_diameter_mm": 184.15,
+    "main_cover_basis": "User tape measurement; installed center remains inferred",
+    "diverter_cover_diameter_mm": 98.425,
+    "diverter_cover_basis": "Manufacturer nominal value already recorded in canon/design_decisions.json; actual part unmeasured",
+    "thickness_mm": 1.524,
+    "thickness_basis": "Existing SS060 stock trial, not a selected material or thickness",
+    "aperture_basis": "Reuse F005 main insertion contour in installed coordinates and 80 mm diverter aperture trial",
+    "variants": [
+      {"id": "C1", "name": "Uniform around each cover", "main_diameter_mm": 220, "diverter_diameter_mm": 120},
+      {"id": "C2", "name": "Matching 15 mm borders", "main_diameter_mm": 214.15, "diverter_diameter_mm": 128.425}
+    ],
+    "selection": null,
+    "limits": "Projected damage coverage only. Physical scale, exact cover centers, rear foam, minimum supported seal land, stud/cover fit and installed water performance remain unresolved. Smaller main plates reduce the previous exploratory 10 mm sound-land allowance; this is explicitly not accepted as a seal design."
+  }
+}

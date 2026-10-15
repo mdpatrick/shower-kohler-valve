@@ -1,0 +1,460 @@
+{
+  "study": "CB01",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "evidence_revision": "R005",
+  "parts": [
+    {
+      "id": "MAIN-C1-SS060",
+      "kind": "MAIN",
+      "variant": "C1",
+      "stock": "SS060",
+      "material": "316 stainless steel",
+      "diameter_mm": 220,
+      "thickness_mm": 1.524,
+      "center_installed_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 45986.52906325368,
+      "step": "cad/MAIN-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/MAIN-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "cb97bc7ffeee98c62819c448998a1bb23eb235c410327059e53efe65dae11561",
+        "stl": "1f980b56a120ab9a40427739479758b00de8f6e3bb667e5ec0be3a02af4a186f",
+        "dxf": "0d445df66fc7d951800455c05e940353a97de6ba42abcbf17b884c9bc7a300cd"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "MAIN-C1-SS125",
+      "kind": "MAIN",
+      "variant": "C1",
+      "stock": "SS125",
+      "material": "316 stainless steel",
+      "diameter_mm": 220,
+      "thickness_mm": 3.175,
+      "center_installed_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 95805.26888177848,
+      "step": "cad/MAIN-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/MAIN-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "4cdf94dfbd24abf571be60fc12b7005628e0b2587764f82f2b9f39fc390b9609",
+        "stl": "e087b1ccb569f4ecf98797791b45cb131f8a19f6adb6db5e19425fc2d1a6c436",
+        "dxf": "0d445df66fc7d951800455c05e940353a97de6ba42abcbf17b884c9bc7a300cd"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "MAIN-C1-PROTO3",
+      "kind": "MAIN",
+      "variant": "C1",
+      "stock": "PROTO3",
+      "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+      "diameter_mm": 220,
+      "thickness_mm": 3.0,
+      "center_installed_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 90524.66351034192,
+      "step": "cad/MAIN-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/MAIN-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "4bc9b78242552b1150ae0616520ecc8a76c696f355d4e305907a9d375b5bf290",
+        "stl": "925f7e527bc3e0e9a7a11e470f8b4ab32598d4d58d178b51c31f5aff6a0997b8",
+        "dxf": "0d445df66fc7d951800455c05e940353a97de6ba42abcbf17b884c9bc7a300cd"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "DIV-C1-SS060",
+      "kind": "DIV",
+      "variant": "C1",
+      "stock": "SS060",
+      "material": "316 stainless steel",
+      "diameter_mm": 120,
+      "thickness_mm": 1.524,
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 9575.574408141689,
+      "step": "cad/DIV-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/DIV-C1_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "88b534d4a891df7dd7f61b106970a6634702f54ddd8413f36310e2aa352ccaf9",
+        "stl": "74ce6e71ffdf6c45c20545ad505b1e458518c39a8bccd48893ee742adc405609",
+        "dxf": "0180d9d80e8b6858bd0fce99271d7415e7300a112c9d3784b4a9cef9e8af42ac"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "DIV-C1-SS125",
+      "kind": "DIV",
+      "variant": "C1",
+      "stock": "SS125",
+      "material": "316 stainless steel",
+      "diameter_mm": 120,
+      "thickness_mm": 3.175,
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 19949.113350295185,
+      "step": "cad/DIV-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/DIV-C1_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "ee63c99ca2d35f4745c752969ff4ba387a4687512d3ccaa76159d5b83366fb95",
+        "stl": "c386acde90155b69ae9545cbf0ca627b22743a210052d1b4c9751b770b5a8241",
+        "dxf": "0180d9d80e8b6858bd0fce99271d7415e7300a112c9d3784b4a9cef9e8af42ac"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "DIV-C1-PROTO3",
+      "kind": "DIV",
+      "variant": "C1",
+      "stock": "PROTO3",
+      "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+      "diameter_mm": 120,
+      "thickness_mm": 3.0,
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 18849.555921538762,
+      "step": "cad/DIV-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/DIV-C1_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "269de3368ff6028ddc79868795c8e3d28a07f499e173bd578a7f323b75c53354",
+        "stl": "52ab726a0cc0d18ee08a0eac74b7ecc6663196ec5949437accec729d49978fb9",
+        "dxf": "0180d9d80e8b6858bd0fce99271d7415e7300a112c9d3784b4a9cef9e8af42ac"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "MAIN-C2-SS060",
+      "kind": "MAIN",
+      "variant": "C2",
+      "stock": "SS060",
+      "material": "316 stainless steel",
+      "diameter_mm": 214.15,
+      "thickness_mm": 1.524,
+      "center_installed_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 42946.5505093319,
+      "step": "cad/MAIN-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/MAIN-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "8e92cc9150ba1f884a25e8f3a5acbcc56d93b63120b32742f7efa59eea2f0aad",
+        "stl": "84649f64a42aa7c878f729ca49264f73bd52ded793f99ca70e04b4e71753a814",
+        "dxf": "d77e9116a80a54cd4f014f5fec886c131388877e7db9d894866f7fd0b72250f5"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "MAIN-C2-SS125",
+      "kind": "MAIN",
+      "variant": "C2",
+      "stock": "SS125",
+      "material": "316 stainless steel",
+      "diameter_mm": 214.15,
+      "thickness_mm": 3.175,
+      "center_installed_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 89471.98022777481,
+      "step": "cad/MAIN-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/MAIN-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "798c6357de57d0101853a81c01a877fab4861fcaeec89628cf76c2817fff362d",
+        "stl": "bfa8c3ca71896060a58214285ed999b8221b694de6891a14d8b85a5888dfdae1",
+        "dxf": "d77e9116a80a54cd4f014f5fec886c131388877e7db9d894866f7fd0b72250f5"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "MAIN-C2-PROTO3",
+      "kind": "MAIN",
+      "variant": "C2",
+      "stock": "PROTO3",
+      "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+      "diameter_mm": 214.15,
+      "thickness_mm": 3.0,
+      "center_installed_mm": [
+        0.7991944036080083,
+        39.672855449655486
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 84540.45375852741,
+      "step": "cad/MAIN-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/MAIN-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/MAIN-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "d9f5520c5bc5ab2528201d9ceb3e0a39f6df4ad932ade1002f8c0e789a964fa9",
+        "stl": "bb427fb0fb3bd109642bb5b8373935115be5d34edc62cdc06ed7e6457f0aaad9",
+        "dxf": "d77e9116a80a54cd4f014f5fec886c131388877e7db9d894866f7fd0b72250f5"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "DIV-C2-SS060",
+      "kind": "DIV",
+      "variant": "C2",
+      "stock": "SS060",
+      "material": "316 stainless steel",
+      "diameter_mm": 128.425,
+      "thickness_mm": 1.524,
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 12080.760871827493,
+      "step": "cad/DIV-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/DIV-C2_CB01_SS060_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "d558baa8b8fa1f411a528b8b7d64a4648c465053bf799aedbbdfa034e55226b6",
+        "stl": "520e1bf1e6ddfbb4a813d4093cc026fbd47ef77a978eacb816d0e07d68f57eee",
+        "dxf": "7bd67dac60ab739136d0c60f8b53c8518252ef61cb80b35497f4b98225f0de6c"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "DIV-C2-SS125",
+      "kind": "DIV",
+      "variant": "C2",
+      "stock": "SS125",
+      "material": "316 stainless steel",
+      "diameter_mm": 128.425,
+      "thickness_mm": 3.175,
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 25168.251816307282,
+      "step": "cad/DIV-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/DIV-C2_CB01_SS125_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "ad9e98d53bfaac17be26dedcb9e546e17d46183ead89b23b2e0b126ded822a6e",
+        "stl": "159a95ffd962f34bb1bc272710763270ddf4b00e2a6d8a3d0bd3d43661dae088",
+        "dxf": "7bd67dac60ab739136d0c60f8b53c8518252ef61cb80b35497f4b98225f0de6c"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    },
+    {
+      "id": "DIV-C2-PROTO3",
+      "kind": "DIV",
+      "variant": "C2",
+      "stock": "PROTO3",
+      "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+      "diameter_mm": 128.425,
+      "thickness_mm": 3.0,
+      "center_installed_mm": [
+        -0.06707892223839187,
+        -135.56284970689944
+      ],
+      "local_origin": "Outer circle center; rear face Z=0; +Y toward upper control",
+      "volume_mm3": 23781.025338243096,
+      "step": "cad/DIV-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.step",
+      "stl": "cad/DIV-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.stl",
+      "dxf": "cad/DIV-C2_CB01_PROTO3_DRAFT_NOT_FOR_FABRICATION.dxf",
+      "sha256": {
+        "step": "cd36bce700bba7048d62db668b8f161bc2c9d2fa5d5d83f7fa79a51caeebcd02",
+        "stl": "f7b459deca59e514640f0e21654290b00e3b4c7f600aefff81ebd51e4b5ad5cd",
+        "dxf": "7bd67dac60ab739136d0c60f8b53c8518252ef61cb80b35497f4b98225f0de6c"
+      },
+      "checks": {
+        "STEP_solid_roundtrip": "PASS",
+        "STL_watertight_bounds_volume": "PASS",
+        "DXF_mm_two_closed_contours": "PASS",
+        "center_origin_and_thickness": "PASS"
+      }
+    }
+  ],
+  "stock_options": [
+    {
+      "id": "SS060",
+      "thickness_mm": 1.524,
+      "material": "316 stainless steel",
+      "role": "Low added-depth metal trial; supported landing and stiffness must be proven",
+      "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+    },
+    {
+      "id": "SS125",
+      "thickness_mm": 3.175,
+      "material": "316 stainless steel",
+      "role": "Stiffer metal alternative; requires 1.651 mm more adapter/trim stack allowance",
+      "source": "https://sendcutsend.com/materials/stainless-steel-316/"
+    },
+    {
+      "id": "PROTO3",
+      "thickness_mm": 3.0,
+      "material": "Clear acrylic or printed PLA/PETG dry-fit prototype only",
+      "role": "Planar/clearance mockup; 0.175 mm thinner than SS125 and 1.476 mm thicker than SS060",
+      "source": "https://sendcutsend.com/materials/"
+    }
+  ],
+  "source_sha256": {
+    "canon/concentric_border_requirement.json": "073fada815ccfa6d0d3927c861c7e2c29eb58a19e48d02b79d3ee1d2ecf8849d",
+    "canon/fabrication_designs.json": "e36f0af2dbbe4d809bb15cb01d8fb4b7055163b356c506d742338167356fd233",
+    "data/derived/resolved.json": "a09caaa0b41861a10cedf1d23be1d797ab1ba3c449fb412c9f4e9f5752847883"
+  },
+  "cad_function_source_sha256": "a820b7513a0e3a96b953043c0951c49178d6c59fb37fca80ee17e371e2207dd8",
+  "physical_fit": "NOT PERFORMED",
+  "manufacturing_release": "NOT GIVEN",
+  "prototype_note": "3 mm is an existing stock trial, not thickness-matched to either metal option. See stock deltas in drawings.",
+  "placement_sensitivity": [
+    {
+      "variant": "C1",
+      "assumed_radial_location_bound_per_cover_mm": 0,
+      "gap_lower_bound_mm": 5.237846343733992,
+      "main_damage_margin_lower_bound_mm": 7.405393331022594,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 0
+    },
+    {
+      "variant": "C1",
+      "assumed_radial_location_bound_per_cover_mm": 0.5,
+      "gap_lower_bound_mm": 4.237846343733992,
+      "main_damage_margin_lower_bound_mm": 6.905393331022594,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 1.0
+    },
+    {
+      "variant": "C1",
+      "assumed_radial_location_bound_per_cover_mm": 1,
+      "gap_lower_bound_mm": 3.2378463437339917,
+      "main_damage_margin_lower_bound_mm": 6.405393331022594,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 2
+    },
+    {
+      "variant": "C1",
+      "assumed_radial_location_bound_per_cover_mm": 2,
+      "gap_lower_bound_mm": 1.2378463437339917,
+      "main_damage_margin_lower_bound_mm": 5.405393331022594,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 4
+    },
+    {
+      "variant": "C1",
+      "assumed_radial_location_bound_per_cover_mm": 3,
+      "gap_lower_bound_mm": -0.7621536562660083,
+      "main_damage_margin_lower_bound_mm": 4.405393331022594,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 6
+    },
+    {
+      "variant": "C2",
+      "assumed_radial_location_bound_per_cover_mm": 0,
+      "gap_lower_bound_mm": 3.950346343733969,
+      "main_damage_margin_lower_bound_mm": 4.480393331022597,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 0
+    },
+    {
+      "variant": "C2",
+      "assumed_radial_location_bound_per_cover_mm": 0.5,
+      "gap_lower_bound_mm": 2.950346343733969,
+      "main_damage_margin_lower_bound_mm": 3.980393331022597,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 1.0
+    },
+    {
+      "variant": "C2",
+      "assumed_radial_location_bound_per_cover_mm": 1,
+      "gap_lower_bound_mm": 1.950346343733969,
+      "main_damage_margin_lower_bound_mm": 3.480393331022597,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 2
+    },
+    {
+      "variant": "C2",
+      "assumed_radial_location_bound_per_cover_mm": 2,
+      "gap_lower_bound_mm": -0.04965365626603102,
+      "main_damage_margin_lower_bound_mm": 2.480393331022597,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 4
+    },
+    {
+      "variant": "C2",
+      "assumed_radial_location_bound_per_cover_mm": 3,
+      "gap_lower_bound_mm": -2.049653656266031,
+      "main_damage_margin_lower_bound_mm": 1.4803933310225972,
+      "separate_plate_to_cover_offset_e_border_peak_to_peak_mm": 6
+    }
+  ],
+  "placement_sensitivity_basis": "Illustrative bounds, not measured uncertainty. Gap uses worst-case independent center shifts toward each other. Damage margin includes the prior trace allowance and subtracts the main position bound. Scale and hidden support remain unbounded. Border variation concerns a different error: plate-to-cover offset."
+}

@@ -1,0 +1,34 @@
+{
+  "status": "PASS_SOFTWARE_AND_PRESENTATION_ONLY",
+  "date": "2026-10-15",
+  "evidence_revision": "R005",
+  "design_study": "CB01",
+  "reconciliation_revision": "RECON-001 revision 2",
+  "physical_fit": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN",
+  "tests": {
+    "unit_tests": 30,
+    "result": "PASS",
+    "command": ".venv/bin/python -m unittest discover -s tests -q"
+  },
+  "exports": "docs/validation/concentric_exports_2026-10-15.json",
+  "measurement_calculations": "docs/validation/center_reconciliation_2026-10-15.json",
+  "documents": "deliverables/current/fabrication/concentric-border-study/document_validation.json",
+  "browser": {
+    "review": "http://127.0.0.1:8765/fabrication/concentric-border-study/index.html#tip-depth",
+    "six_images_loaded": true,
+    "horizontal_overflow_at_1280px": false,
+    "console_warnings_or_errors": [],
+    "damage_link_and_opacity_slider": "PASS: navigated; changed 24 to 70 percent; verified label; restored 24; returned to main review",
+    "screenshot": "deliverables/current/fabrication/concentric-border-study/views/tip_depth_review.jpg"
+  },
+  "Blender": "Six final views inspected; saved-file source geometry, topology, UVs and transforms preserved per blender_validation.json. GUI Blender not disturbed.",
+  "limitations": [
+    "Conditional scan scale and wall-relative tip depths",
+    "Physical stud axes, diameters and cover cavity unknown",
+    "Actual rear foam trace and support/seal detail unresolved",
+    "LOC01 fixed-depth diagnostic conflicts; no locating variant released",
+    "Shop tolerance, physical dry fit and manufacturing release pending"
+  ],
+  "git_whitespace_check": "Authored source, canon and documentation passed staged diff --check. Generated STEP/DXF/SVG assets retain native exporter whitespace; a full staged whitespace check reports trailing whitespace in these assets. Exact export bytes are preserved, rather than post-processing CAD to satisfy text formatting."
+}

@@ -1,0 +1,32 @@
+{
+  "id": "VALIDATION-CB01-DAMAGE-001",
+  "date": "2026-10-15",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "page": "deliverables/current/fabrication/concentric-border-study/damage.html",
+  "executed_geometry_and_provenance_checks": [
+    "Ran .venv/bin/python scripts/concentric_damage_overlay.py successfully.",
+    "The copied wall_detail_source.png matches the original orthographic primary-scan render byte-for-byte.",
+    "All displayed feature vertices reproject to original annotation pixel contacts; maximum error 4.55e-13 pixels (numerical agreement, not physical accuracy).",
+    "Read current STEP solids to check outer diameters and zero local X/Y center offset.",
+    "Both circles contain all eight retained main opening/damage traces in the current projected model.",
+    "Each remaining margin agrees with the pre-existing CB01 analysis; no CAD or scan placement changed."
+  ],
+  "executed_browser_checks": [
+    "Opened damage.html in the Codex browser and visually inspected full overlays, top-gouge close-ups, legends and table.",
+    "Changed Blue band opacity to 85; all band fills changed to 0.85.",
+    "Enabled the 1.5 mm tracing allowance; its polygons became visible.",
+    "Show scan only hid all overlay elements; Restore overlay restored the overlay state.",
+    "Unchecked Damage traces and Limiting-cut dimension line; both classes became hidden.",
+    "Reloaded the page and verified default opacity 24%, traces on, allowance off and dimension line on."
+  ],
+  "reviewed_limitations": [
+    "CUT-02 and CUT-07 remain uncertain marks.",
+    "The factory-cover center remains inferred.",
+    "Tracing allowance is not a bound on scan scale or installed placement.",
+    "Projected edge margins are not verified sound-stone support or sealing widths.",
+    "The reveal drawing is not a finished opaque-plate appearance."
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN",
+  "water_test": "NOT PERFORMED"
+}

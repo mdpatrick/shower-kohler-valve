@@ -1,0 +1,64 @@
+Installed center reconciliation — RECON-001
+DRAFT_NOT_FOR_FABRICATION
+Supplement to R005 / F005. All figures in mm. No scan or CAD changes.
+
+Revision 2: user confirms 3D distances between end-tip centers, at unequal depths.
+The original six values are unchanged; they are not wall-plane hole spacings.
+
+Pair       Caliper   Scan 3D   Scaled scan   Weak-prior trial   Adjustment
+U-L           80.00     79.37         80.00              80.15        +0.15
+NE-SW        109.80    108.09        108.94             109.97        +0.17
+U-NE          51.40     52.36         52.77              51.38        -0.02
+L-NE          80.25     81.03         81.67              80.20        -0.05
+U-SW          81.14     78.27         78.88              80.94        -0.20
+L-SW          54.70     51.22         51.62              54.46        -0.24
+
+Scan is scaled to the reported 80 mm control spacing for comparison only.
+The trial uses scan relative depths and a weak 1/16 coordinate penalty.
+Its fitted values are tip distances, not manufacturing dimensions.
+
+DEPTH CORRECTION — ILLUSTRATIVE, using unchanged baseline scan depths
+d_XY = sqrt(d_3D^2 - (Z_a - Z_b)^2)
+Pair         Raw 3D    Scan delta Z    Conditional XY    Reduction
+U-L           80.00           1.447            79.987        0.013
+NE-SW        109.80           4.065           109.725        0.075
+U-NE          51.40           1.278            51.384        0.016
+L-NE          80.25           2.725            80.204        0.046
+U-SW          81.14           5.343            80.964        0.176
+L-SW          54.70           6.790            54.277        0.423
+Conditional XY values use unchanged baseline scan depth differences and original raw 3D readings. They are illustrative, not accepted wall-plane dimensions. Stud inclination additionally changes the axis intersection at the plate plane; projected tip XY is not that intersection unless the axis is normal.
+
+FREE-DEPTH GEOMETRY CHECK
+All six reported lengths can be satisfied by a 3D four-tip arrangement. The two mirror branches are rigidly oriented/translated toward the weak, uniformly scaled scan prior; no scale is fitted here. Six distances determine shape, not its orientation or absolute depth relative to the wall. Neither branch is accepted. Exact agreement with reused inputs is not validation, and point displacement is not scanner error or a tolerance bound.
+Both rigidly aligned mirror branches and their full coordinates are retained in the JSON report.
+
+Sensitivity: mode / scan weight / loss / maximum adjustment / RMS
+planar / 0 / linear / 0.283 / 0.202
+planar / 0.0625 / linear / 0.303 / 0.220
+planar / 0.25 / linear / 0.715 / 0.365
+scan_relative_depths / 0 / linear / 0.189 / 0.135
+scan_relative_depths / 0.0625 / linear / 0.236 / 0.157
+scan_relative_depths / 0.25 / linear / 0.595 / 0.310
+planar / 0.0625 / soft_l1 / 0.301 / 0.211
+scan_relative_depths / 0.0625 / soft_l1 / 0.189 / 0.145
+
+Both lower-left stud distances exceed the scan; both upper-right distances are smaller. A single average scale cannot explain this feature-dependent pattern.
+The six raw distances admit an exact 3D embedding. Residuals in the older fixed-depth fit reflect its imposed scan depths/planar constraints as well as measurement uncertainty; they do not establish inconsistency of the raw six lengths.
+Neither exact free-depth fit nor small constrained-fit residuals establish physical accuracy. Depth, contact repeatability, registration and axis uncertainty remain unbounded; no source is declared globally more accurate.
+Do not force the inner plate conditional 112.05 mm spacing into this fit. It has different endpoints, an unmeasured NE bore, and its own measurement uncertainty.
+Current custom escutcheon geometry has one clearance aperture containing both stud paths, not two separate close-fit mounting holes. Retain this aperture intent while reconciling its clearance and foam landing.
+
+Caliper residual weight 1 per distance. Scan coordinate penalty 0, 1/16, 1/4 is a chosen sensitivity study, not measured variances or confidence. 1/16 means four times the residual length scale for each scan coordinate. Distances sharing endpoints may have correlated errors.
+The user confirms unequal-depth 3D tip distances. The planar trials are counterfactual sensitivity checks only, not an alternative reading definition. Fixed scan-depth trials cannot establish true depth. Free-depth embeddings also remain unoriented relative to the wall without an external depth/plane datum.
+
+CLEARANCE BUDGET
+D_hole_nominal >= D_stud_max + 2*(e_location + e_axis + e_install + e_cut_position + c_free) + delta_diameter_undersize
+All e terms and c_free are worst-case radial allowances at the actual plate plane. delta_diameter_undersize is a diametral fabrication allowance. Obtain the vendor size/position convention so the same error is not counted twice. The formula is a sufficient conservative clearance budget for a round pass-through hole; it does not check bearing strength or seal land.
+An assumed 0.5 mm radial location allowance alone consumes 1.0 mm of diametral clearance, before fabrication and free-assembly clearance. This is an illustration, not a measured allowance for this installation.
+For any future required custom mounting holes, compare round clearance versus one locating hole and a slot along the stud-pair line only if bearing, restraint, drainage and seal land remain suitable. No change to factory holes is selected.
+First reconcile the 3D endpoint geometry; then bound location at the real plate plane. Assembly clearance, measurement/registration uncertainty, machining tolerance, and seal-support requirements are separate quantities. Do not use depth corrections or fit residuals as manufacturing tolerances.
+SendCutSend describes clearance fit and generally posts +/-0.005 inch cut tolerances, subject to material and thickness. This is approximately +/-0.127 mm, not an installation accuracy guarantee.
+https://sendcutsend.com/blog/basic-tolerances-and-cut-feature-relationships/
+
+Actual stud diameter, axes at the plate plane, and physical fit remain unverified.
+Supplemental calculation only. Raw six readings are preserved in the source record; no smoothing replaces them. Adoption into canon/design requires a revisioned endpoint and fit decision. Baseline scan, CAD and R005 measurements remain unchanged.

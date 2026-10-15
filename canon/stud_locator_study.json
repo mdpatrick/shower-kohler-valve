@@ -1,0 +1,43 @@
+{
+  "study_id": "LOC01",
+  "date": "2026-10-15",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "source": "User-authorized requirements relayed from Fix the wall guide (2), thread 01a14093-d3c7-78b1-9a29-43ea381a5a2a",
+  "requirements": [
+    "Circular escutcheons only; constant visible border centered on the actual assembled decorative cover.",
+    "Main and diverter plates must have a positive gap without offsetting the circles from their covers.",
+    "Compare the ordinary circular aperture plate with an upper-only screw-locating version retaining metal at the actual trim studs.",
+    "Assess through-hole versus threaded engagement, insertion/removal, bearing, cover depth and factory sealing/service functions.",
+    "No tile drilling/cutting and no modification of factory holes. Lower companion remains circular."
+  ],
+  "reference_state": {
+    "id": "RECON-001-WEAK-DEPTH-TRIAL",
+    "source": "deliverables/current/analysis/center_reconciliation_DRAFT.json",
+    "mode": "scan_relative_depths",
+    "scan_coordinate_penalty_weight": 0.0625,
+    "loss": "linear",
+    "use": "Separate derived tip-center state for diagnostic locator trials only; not physical calibration or accepted axis coordinates.",
+    "projection_assumption": "Trial stud axes normal to the tile plane, using fitted tip X/Y at every Z. Actual inclination and plate-plane centers unknown.",
+    "original_scan_and_R005_placements": "Preserve unchanged."
+  },
+  "geometry_trial": {
+    "upper_baseline": "C1",
+    "main_outer_diameter_mm": 220,
+    "thickness_mm": 1.524,
+    "rear_plane_z_mm": 1,
+    "tab_width_mm": 14,
+    "tab_root_overlap_mm": 4,
+    "round_hole_diameter_mm": 7.5,
+    "SW_slot_total_length_mm": 12,
+    "SW_slot_width_mm": 7.5,
+    "slot_direction": "Along the fitted stud-pair line",
+    "parameter_status": "All tab/hole/slot sizes are exploratory design parameters, not measured fastener dimensions or released tolerances.",
+    "bearing_status": "Actual nuts/washers, diameter, seating, material strength and clamping load unknown. No bearing approval."
+  },
+  "threaded_engagement": "Not selected: thread identity, usable engagement, clamping stack and serviceable assembly method are unverified. Clearance capture is studied first.",
+  "insertion_methods_to_compare": [
+    "Integral flat tabs: must clear the complete forward hardware sweep while sliding toward the wall.",
+    "Removable bridges: can be fitted after the open plate, but still need final seated clearance, retention, cover cavity and seal-land checks. No new attachment holes selected."
+  ],
+  "release": "No locating variant may be quoted as viable until insertion, seated clearance, actual axes, bearing and cover/foam interaction are resolved."
+}

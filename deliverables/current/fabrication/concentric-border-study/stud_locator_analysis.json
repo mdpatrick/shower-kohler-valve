@@ -1,0 +1,211 @@
+{
+  "study": "LOC01",
+  "status": "DIAGNOSTIC_NOT_FOR_FABRICATION",
+  "source_configuration": "canon/stud_locator_study.json",
+  "source_sha256": {
+    "canon/stud_locator_study.json": "1c0258464a0f9dcf75de0dea78f51b4a5675e89f81fbc7a9eeb28235beb98ec3",
+    "deliverables/current/analysis/center_reconciliation_DRAFT.json": "c224a1bc40a3db14b429057ee21b003245ee56c993d1622b2b683b0eb2a7e4e3",
+    "data/derived/registration.json": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3",
+    "canon/measurements.json": "01ac17be55e8a9cc3008f2726aef9becafdd76db12ce4b316f4134a7a3196308"
+  },
+  "model_state": "RECON-001-WEAK-DEPTH-TRIAL",
+  "parameters": {
+    "upper_baseline": "C1",
+    "main_outer_diameter_mm": 220,
+    "thickness_mm": 1.524,
+    "rear_plane_z_mm": 1,
+    "tab_width_mm": 14,
+    "tab_root_overlap_mm": 4,
+    "round_hole_diameter_mm": 7.5,
+    "SW_slot_total_length_mm": 12,
+    "SW_slot_width_mm": 7.5,
+    "slot_direction": "Along the fitted stud-pair line",
+    "parameter_status": "All tab/hole/slot sizes are exploratory design parameters, not measured fastener dimensions or released tolerances.",
+    "bearing_status": "Actual nuts/washers, diameter, seating, material strength and clamping load unknown. No bearing approval."
+  },
+  "locators": [
+    {
+      "id": "NE",
+      "center_installed_xy_mm": [
+        49.93542779965556,
+        62.694142058508255
+      ],
+      "root_installed_xy_mm": [
+        55.29636917610315,
+        73.07003120145387
+      ],
+      "hole_kind": "round clearance"
+    },
+    {
+      "id": "SW",
+      "center_installed_xy_mm": [
+        -50.726821327876394,
+        18.608024144801266
+      ],
+      "root_installed_xy_mm": [
+        -56.99382073305176,
+        16.835296710228235
+      ],
+      "hole_kind": "clearance slot along stud pair"
+    }
+  ],
+  "added_material_area_mm2": 173.46151792686862,
+  "integral_tabs_insertion_sweep": {
+    "triangles": 3138,
+    "projected_conflict_area_mm2": 54.85696718721971,
+    "bounds_mm": [
+      -49.88462925898995,
+      13.539670022204753,
+      56.81514279444377,
+      67.31930706420448
+    ],
+    "max_conflicting_triangle_vertex_Z_mm": 29.578661424500947
+  },
+  "removable_tabs_seated_plane": {
+    "triangles": 166,
+    "projected_conflict_area_mm2": 0.4204485410422274,
+    "bounds_mm": [
+      -46.894143640961616,
+      15.958867287919162,
+      54.645902431802625,
+      63.085680361648336
+    ],
+    "max_conflicting_triangle_vertex_Z_mm": 4.304365277937308
+  },
+  "depth_sensitivity": [
+    {
+      "rear_plane_z_mm": 0,
+      "triangles": 147,
+      "projected_conflict_area_mm2": 0.3546053797079457,
+      "bounds_mm": [
+        -46.894143640961616,
+        15.946190625081641,
+        54.64816077769703,
+        63.07786343078145
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 3.0516747407854155
+    },
+    {
+      "rear_plane_z_mm": 1,
+      "triangles": 166,
+      "projected_conflict_area_mm2": 0.4204485410422274,
+      "bounds_mm": [
+        -46.894143640961616,
+        15.958867287919162,
+        54.645902431802625,
+        63.085680361648336
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 4.304365277937308
+    },
+    {
+      "rear_plane_z_mm": 2.524,
+      "triangles": 165,
+      "projected_conflict_area_mm2": 0.47801623612775185,
+      "bounds_mm": [
+        -46.820279591922336,
+        15.979897029539444,
+        54.67145844403991,
+        63.084787022597745
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 5.577454675946441
+    },
+    {
+      "rear_plane_z_mm": 6,
+      "triangles": 154,
+      "projected_conflict_area_mm2": 0.6330706737642651,
+      "bounds_mm": [
+        -46.70627898780859,
+        16.06753953315494,
+        54.723982341860506,
+        63.0924060220759
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 8.822708561943802
+    },
+    {
+      "rear_plane_z_mm": 10,
+      "triangles": 134,
+      "projected_conflict_area_mm2": 0.24785367146949305,
+      "bounds_mm": [
+        -46.51144127328728,
+        16.255270780078117,
+        54.65598149892077,
+        63.10973965654895
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 12.56085132604358
+    },
+    {
+      "rear_plane_z_mm": 14,
+      "triangles": 102,
+      "projected_conflict_area_mm2": 0.6436009491844152,
+      "bounds_mm": [
+        -46.124745116191335,
+        16.752875816767922,
+        54.48111438216407,
+        63.28448825880476
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 16.28997889359754
+    },
+    {
+      "rear_plane_z_mm": 18,
+      "triangles": 97,
+      "projected_conflict_area_mm2": 3.3082912692034236,
+      "bounds_mm": [
+        -46.44796877474277,
+        16.423369708038198,
+        54.04378530831402,
+        63.42138544059451
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 20.677742309381816
+    },
+    {
+      "rear_plane_z_mm": 22,
+      "triangles": 281,
+      "projected_conflict_area_mm2": 7.142577786561263,
+      "bounds_mm": [
+        -49.88462925898995,
+        13.556854073388553,
+        54.90037866023218,
+        64.23912692749153
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 24.876770984656563
+    },
+    {
+      "rear_plane_z_mm": 26,
+      "triangles": 335,
+      "projected_conflict_area_mm2": 10.387295800464823,
+      "bounds_mm": [
+        48.63604849817298,
+        57.956187692366065,
+        56.81514279444377,
+        67.31930706420448
+      ],
+      "max_conflicting_triangle_vertex_Z_mm": 27.96769912877956
+    },
+    {
+      "rear_plane_z_mm": 30,
+      "triangles": 0,
+      "projected_conflict_area_mm2": 0.0,
+      "bounds_mm": null,
+      "max_conflicting_triangle_vertex_Z_mm": null
+    },
+    {
+      "rear_plane_z_mm": 34,
+      "triangles": 0,
+      "projected_conflict_area_mm2": 0.0,
+      "bounds_mm": null,
+      "max_conflicting_triangle_vertex_Z_mm": null
+    }
+  ],
+  "conclusion": "FLAT_TAB_TRIAL_CONFLICTS_WITH_CAPTURED_HARDWARE",
+  "bearing": "NOT VALIDATED: actual nut/washer seats and clamping load unknown",
+  "centering": "Hole clearance and an elongated slot allow motion; actual assembled cover datum and restraint must be verified.",
+  "threaded_engagement": "Not selected: thread identity, usable engagement, clamping stack and serviceable assembly method are unverified. Clearance capture is studied first.",
+  "limits": "Fitted tips projected along assumed normal axes, against unchanged captured hardware. No measured axis/cross-section/uncertainty bound. Intersections are conditional model conflicts, not proof of a physical defect. Hidden solids may add conflicts. Max Z is a triangle-vertex bound, not a precise required standoff.",
+  "diagnostic_CAD": [
+    "diagnostic/MAIN-C1_LOC01_TAB_TRIAL_NOT_FOR_FABRICATION.step",
+    "diagnostic/MAIN-C1_LOC01_TAB_TRIAL_NOT_FOR_FABRICATION.stl"
+  ],
+  "source_scan_modified": false,
+  "physical_fit": "NOT PERFORMED",
+  "manufacturing_release": "NOT GIVEN"
+}

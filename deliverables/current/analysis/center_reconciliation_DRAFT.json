@@ -1,0 +1,1684 @@
+{
+  "project_id": "shower-kohler-valve",
+  "study_id": "RECON-001",
+  "study_revision": 2,
+  "baseline_measurement_revision": "R005",
+  "baseline_design_revision": "F005",
+  "status": "DRAFT_NOT_FOR_FABRICATION",
+  "units": "mm",
+  "raw_record": "docs/physical_checks/installed_center_distances_2026-10-15.json",
+  "inputs_sha256": {
+    "docs/physical_checks/installed_center_distances_2026-10-15.json": "ea3f2f81fa63e53334a8700538d7eefff1ebe82545cf2a67c080e8483a38524e",
+    "data/derived/registration.json": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3",
+    "canon/measurements.json": "01ac17be55e8a9cc3008f2726aef9becafdd76db12ce4b316f4134a7a3196308",
+    "canon/scan_annotations.json": "31dd3126ef84a5dd0e62d6d664ac0367a776230d22010e1f4612234eeb13630b",
+    "src/analysis/reconcile_installed_centers.py": "8534f38ad7cfa0021643316e554cc41ff72b852368c763770f178e7a2e119753"
+  },
+  "comparison_only_uniform_scale_factor": 1.0078740157480317,
+  "scale_note": "80 mm control reading calibrates this trial only. It is reused as a fitting input; neither the scaled prior nor agreement with the same reading is independent evidence. No scan transform is changed.",
+  "local_frame": "L tip at origin; +Y along scan-projected L-to-U direction; +X toward right stud; Z relative to L. These are tip centers, not axis intersections at a plate plane.",
+  "fitting_method": "Joint nonlinear least squares of six center distances, five XY degrees of freedom, optional weak scan-coordinate penalty. Lower tip and control-line direction fix the coordinate gauge. Studs constrained to their observed opposite sides.",
+  "weighting_note": "Caliper residual weight 1 per distance. Scan coordinate penalty 0, 1/16, 1/4 is a chosen sensitivity study, not measured variances or confidence. 1/16 means four times the residual length scale for each scan coordinate. Distances sharing endpoints may have correlated errors.",
+  "confirmed_distance_metric": "euclidean_3d_tip_center_distance",
+  "projection_formula": "d_XY = sqrt(d_3D^2 - (Z_a - Z_b)^2)",
+  "projection_note": "Conditional XY values use unchanged baseline scan depth differences and original raw 3D readings. They are illustrative, not accepted wall-plane dimensions. Stud inclination additionally changes the axis intersection at the plate plane; projected tip XY is not that intersection unless the axis is normal.",
+  "depth_note": "The user confirms unequal-depth 3D tip distances. The planar trials are counterfactual sensitivity checks only, not an alternative reading definition. Fixed scan-depth trials cannot establish true depth. Free-depth embeddings also remain unoriented relative to the wall without an external depth/plane datum.",
+  "robust_note": "Soft-L1 sensitivity uses an illustrative 0.5 mm transition, not an accepted uncertainty. No individual caliper observation is automatically rejected or corrected.",
+  "selected_for_CAD": false,
+  "comparison": [
+    {
+      "measurement_id": "OBS-INSTALLED-CC-UL",
+      "endpoints": [
+        "U",
+        "L"
+      ],
+      "raw_caliper_mm": 80.0,
+      "baseline_scan_3D_mm": 79.37499999999999,
+      "baseline_scan_XY_mm": 79.36180872999351,
+      "baseline_scan_absolute_delta_Z_mm": 1.447045301268588,
+      "conditional_caliper_XY_using_baseline_scan_depth_mm": 79.98691180371996,
+      "conditional_depth_correction_mm": 0.013088196280037323,
+      "scan_scaled_to_80_control_mm": 80.0,
+      "caliper_minus_scaled_scan_mm": 0.0,
+      "reference_trial_fitted_mm": 80.14735003074567,
+      "reference_trial_adjustment_mm": 0.14735003074567032
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-NE-SW",
+      "endpoints": [
+        "NE",
+        "SW"
+      ],
+      "raw_caliper_mm": 109.8,
+      "baseline_scan_3D_mm": 108.08648110624021,
+      "baseline_scan_XY_mm": 108.01003164279484,
+      "baseline_scan_absolute_delta_Z_mm": 4.064537175630136,
+      "conditional_caliper_XY_using_baseline_scan_depth_mm": 109.72474441778354,
+      "conditional_depth_correction_mm": 0.07525558221645667,
+      "scan_scaled_to_80_control_mm": 108.93755576062009,
+      "caliper_minus_scaled_scan_mm": 0.8624442393799114,
+      "reference_trial_fitted_mm": 109.96934047088038,
+      "reference_trial_adjustment_mm": 0.1693404708803854
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-U-NE",
+      "endpoints": [
+        "U",
+        "NE"
+      ],
+      "raw_caliper_mm": 51.4,
+      "baseline_scan_3D_mm": 52.360373520111466,
+      "baseline_scan_XY_mm": 52.34476491283187,
+      "baseline_scan_absolute_delta_Z_mm": 1.2783979763578834,
+      "conditional_caliper_XY_using_baseline_scan_depth_mm": 51.38409966725158,
+      "conditional_depth_correction_mm": 0.015900332748415735,
+      "scan_scaled_to_80_control_mm": 52.772659925781646,
+      "caliper_minus_scaled_scan_mm": -1.3726599257816474,
+      "reference_trial_fitted_mm": 51.38298142325592,
+      "reference_trial_adjustment_mm": -0.017018576744078473
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-L-NE",
+      "endpoints": [
+        "L",
+        "NE"
+      ],
+      "raw_caliper_mm": 80.25,
+      "baseline_scan_3D_mm": 81.03371081181123,
+      "baseline_scan_XY_mm": 80.98786481240688,
+      "baseline_scan_absolute_delta_Z_mm": 2.7254432776264714,
+      "conditional_caliper_XY_using_baseline_scan_depth_mm": 80.20370601749299,
+      "conditional_depth_correction_mm": 0.046293982507009446,
+      "scan_scaled_to_80_control_mm": 81.67177152686489,
+      "caliper_minus_scaled_scan_mm": -1.4217715268648874,
+      "reference_trial_fitted_mm": 80.19755530320495,
+      "reference_trial_adjustment_mm": -0.052444696795049595
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-U-SW",
+      "endpoints": [
+        "U",
+        "SW"
+      ],
+      "raw_caliper_mm": 81.14,
+      "baseline_scan_3D_mm": 78.26590862518825,
+      "baseline_scan_XY_mm": 78.0833240640277,
+      "baseline_scan_absolute_delta_Z_mm": 5.342935151988019,
+      "conditional_caliper_XY_using_baseline_scan_depth_mm": 80.96389716386959,
+      "conditional_depth_correction_mm": 0.17610283613041133,
+      "scan_scaled_to_80_control_mm": 78.882175622237,
+      "caliper_minus_scaled_scan_mm": 2.2578243777630007,
+      "reference_trial_fitted_mm": 80.94448376655652,
+      "reference_trial_adjustment_mm": -0.19551623344348457
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-L-SW",
+      "endpoints": [
+        "L",
+        "SW"
+      ],
+      "raw_caliper_mm": 54.7,
+      "baseline_scan_3D_mm": 51.21943114089788,
+      "baseline_scan_XY_mm": 50.76737428547564,
+      "baseline_scan_absolute_delta_Z_mm": 6.789980453256607,
+      "conditional_caliper_XY_using_baseline_scan_depth_mm": 54.2769395364587,
+      "conditional_depth_correction_mm": 0.42306046354130444,
+      "scan_scaled_to_80_control_mm": 51.622733748306544,
+      "caliper_minus_scaled_scan_mm": 3.077266251693459,
+      "reference_trial_fitted_mm": 54.46376503916654,
+      "reference_trial_adjustment_mm": -0.23623496083346396
+    }
+  ],
+  "trials": [
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.20617073814385,
+        110.0830247708698,
+        51.259500221933884,
+        80.04485046592711,
+        80.93130946533772,
+        54.56842799946808
+      ],
+      "residuals_mm": [
+        0.20617073814385378,
+        0.28302477086980105,
+        -0.1404997780661148,
+        -0.20514953407288772,
+        -0.20869053466228138,
+        -0.13157200053192497
+      ],
+      "rms_residual_mm": 0.20219579773956606,
+      "maximum_absolute_residual_mm": 0.28302477086980105,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.20617073814385,
+          0.0
+        ],
+        "NE": [
+          48.5173177606317,
+          63.665123603324005,
+          0.0
+        ],
+        "SW": [
+          -51.57175228108336,
+          17.83445264065327,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6153947046957222,
+          80.18990163620555,
+          33.66486845951323
+        ],
+        "NE": [
+          49.78972572394634,
+          62.67504526082789,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.20209610402123,
+          18.869517452433836,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 110.0830247708698,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0.0625,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.20727008932721,
+        110.0645055381361,
+        51.33852130563944,
+        80.12913256637627,
+        80.87925339133852,
+        54.39728679651064
+      ],
+      "residuals_mm": [
+        0.20727008932720992,
+        0.2645055381361061,
+        -0.061478694360559416,
+        -0.12086743362372943,
+        -0.2607466086614778,
+        -0.30271320348936115
+      ],
+      "rms_residual_mm": 0.2202032067207846,
+      "maximum_absolute_residual_mm": 0.30271320348936115,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.20727008932721,
+          0.0
+        ],
+        "NE": [
+          48.61192915057706,
+          63.69896569096847,
+          0.0
+        ],
+        "SW": [
+          -51.412413909234864,
+          17.77156455823021,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6154168462100702,
+          80.19100076439538,
+          33.66486845951323
+        ],
+        "NE": [
+          49.88499952036666,
+          62.706974960469246,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.04405665177693,
+          18.80343296720092,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 110.0645055381361,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0.25,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.21673345788092,
+        110.00742791371111,
+        51.539446654598166,
+        80.3411926002889,
+        80.72877216346768,
+        53.98508424727913
+      ],
+      "residuals_mm": [
+        0.21673345788092035,
+        0.2074279137111148,
+        0.13944665459816719,
+        0.09119260028890608,
+        -0.4112278365323192,
+        -0.71491575272087
+      ],
+      "rms_residual_mm": 0.3646857226903596,
+      "maximum_absolute_residual_mm": 0.71491575272087,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.21673345788092,
+          0.0
+        ],
+        "NE": [
+          48.84962354016051,
+          63.78417913888453,
+          0.0
+        ],
+        "SW": [
+          -51.017590898854806,
+          17.652046342079235,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.615607443458506,
+          80.20046221338971,
+          33.66486845951323
+        ],
+        "NE": [
+          50.12436193969205,
+          62.787383832864585,
+          33.66486845951323
+        ],
+        "SW": [
+          -50.65172088779515,
+          18.675987049972008,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 110.00742791371111,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.13739822102855,
+        109.98861011957625,
+        51.30692964254904,
+        80.1130329646775,
+        81.0007038697736,
+        54.61148603907819
+      ],
+      "residuals_mm": [
+        0.1373982210285476,
+        0.1886101195762535,
+        -0.09307035745095504,
+        -0.136967035322499,
+        -0.13929613022639842,
+        -0.08851396092181574
+      ],
+      "rms_residual_mm": 0.13485315576803036,
+      "maximum_absolute_residual_mm": 0.1886101195762535,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.12412588148798,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.57283837225238,
+          63.64928864204976,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.23639765898599,
+          17.618547746308415,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6137422778840482,
+          80.10787342161255,
+          32.20642910075434
+        ],
+        "NE": [
+          49.84491614921304,
+          62.65809529704709,
+          30.91796499859836
+        ],
+        "SW": [
+          -50.871157944376996,
+          18.64690213298025,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.9122955112408,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0.0625,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.14735003074567,
+        109.96934047088038,
+        51.38298142325592,
+        80.19755530320495,
+        80.94448376655652,
+        54.46376503916654
+      ],
+      "residuals_mm": [
+        0.14735003074567032,
+        0.1693404708803854,
+        -0.017018576744078473,
+        -0.052444696795049595,
+        -0.19551623344348457,
+        -0.23623496083346396
+      ],
+      "rms_residual_mm": 0.15677045803497483,
+      "maximum_absolute_residual_mm": 0.23623496083346396,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.13407933949009,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.66260566237567,
+          63.68715104426601,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.091307296625814,
+          17.582584659985358,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6139427457932132,
+          80.11782486064503,
+          32.20642910075434
+        ],
+        "NE": [
+          49.93542779965556,
+          62.694142058508255,
+          30.91796499859836
+        ],
+        "SW": [
+          -50.726821327876394,
+          18.608024144801266,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.8930124808424,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0.25,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.17307871901295,
+        109.91383666237056,
+        51.57659661969184,
+        80.40713390142767,
+        80.7886722887053,
+        54.10473299651486
+      ],
+      "residuals_mm": [
+        0.17307871901294902,
+        0.11383666237055934,
+        0.1765966196918427,
+        0.15713390142767025,
+        -0.35132771129470086,
+        -0.5952670034851408
+      ],
+      "rms_residual_mm": 0.30999097403554876,
+      "maximum_absolute_residual_mm": 0.5952670034851408,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.15981228721702,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.888882568396376,
+          63.778043752000436,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -50.73119349970463,
+          17.516717759955878,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6144610209721895,
+          80.14355258867445,
+          32.20642910075434
+        ],
+        "NE": [
+          50.16348943464913,
+          62.78045899289344,
+          30.91796499859836
+        ],
+        "SW": [
+          -50.36810717101483,
+          18.53491772292478,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.8374701017665,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0.0625,
+      "loss": "soft_l1",
+      "fitted_distances_mm": [
+        80.19455276018363,
+        110.1006523209418,
+        51.31947634393444,
+        80.11983164453463,
+        80.89686328263511,
+        54.46191569718697
+      ],
+      "residuals_mm": [
+        0.1945527601836261,
+        0.3006523209418077,
+        -0.08052365606555867,
+        -0.1301683554653721,
+        -0.24313671736489084,
+        -0.23808430281303572
+      ],
+      "rms_residual_mm": 0.21113583822996954,
+      "maximum_absolute_residual_mm": 0.3006523209418077,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.19455276018363,
+          0.0
+        ],
+        "NE": [
+          48.59622929707987,
+          63.69924584211501,
+          0.0
+        ],
+        "SW": [
+          -51.475194032477845,
+          17.787767165281252,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6151607124741325,
+          80.17828601484788,
+          33.66486845951323
+        ],
+        "NE": [
+          49.869308493836144,
+          62.7075712581437,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.10649771155874,
+          18.82089671258895,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 110.1006523209418,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0.0625,
+      "loss": "soft_l1",
+      "fitted_distances_mm": [
+        80.14070051969668,
+        109.98907866606665,
+        51.35942367031893,
+        80.1821111738795,
+        80.95930862278651,
+        54.52074113511581
+      ],
+      "residuals_mm": [
+        0.1407005196966793,
+        0.18907866606664925,
+        -0.04057632968106617,
+        -0.06788882612049463,
+        -0.18069137721349193,
+        -0.17925886488418996
+      ],
+      "rms_residual_mm": 0.1452502575360546,
+      "maximum_absolute_residual_mm": 0.18907866606664925,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.1274287271502,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.63939811492577,
+          63.68543337918446,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.14565006832882,
+          17.601163466448146,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6138087989427659,
+          80.11117559732217,
+          32.20642910075434
+        ],
+        "NE": [
+          49.912190364965056,
+          62.69289215412121,
+          30.91796499859836
+        ],
+        "SW": [
+          -50.78077888964621,
+          18.62769367488726,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.91276438305232,
+      "omitted_measurement": null,
+      "optimizer_success": true
+    }
+  ],
+  "leave_one_pair_out": [
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        81.18406486548342,
+        109.8,
+        51.4,
+        80.25,
+        81.14,
+        54.699999999999996
+      ],
+      "residuals_mm": [
+        1.1840648654834212,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -7.105427357601002e-15
+      ],
+      "rms_residual_mm": 0.48339245713193063,
+      "maximum_absolute_residual_mm": 1.1840648654834212,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          81.18406486548342,
+          0.0
+        ],
+        "NE": [
+          48.436723407105625,
+          63.98395365701892,
+          0.0
+        ],
+        "SW": [
+          -51.48669792676195,
+          18.471868790091772,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6350900096893333,
+          81.16759740649732,
+          33.66486845951323
+        ],
+        "NE": [
+          49.715569124192044,
+          62.99543385561908,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.10422110379357,
+          19.505091268040232,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.8,
+      "omitted_measurement": "OBS-INSTALLED-CC-UL",
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        110.66552550578044,
+        51.39999999999999,
+        80.25,
+        81.14,
+        54.70000000000001
+      ],
+      "residuals_mm": [
+        0.0,
+        0.8655255057804396,
+        -7.105427357601002e-15,
+        0.0,
+        0.0,
+        7.105427357601002e-15
+      ],
+      "rms_residual_mm": 0.3533493080877349,
+      "maximum_absolute_residual_mm": 0.8655255057804396,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.0,
+          0.0
+        ],
+        "NE": [
+          48.759736767826425,
+          63.738140625,
+          0.0
+        ],
+        "SW": [
+          -51.80735324301369,
+          17.552440000000004,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6112423169729855,
+          79.98377271794568,
+          33.66486845951323
+        ],
+        "NE": [
+          50.03356616006079,
+          62.743165024620936,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.44332916016756,
+          18.592307143511125,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 110.66552550578044,
+      "omitted_measurement": "OBS-INSTALLED-CC-NE-SW",
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.8,
+        49.66184018017278,
+        80.25,
+        81.14,
+        54.7
+      ],
+      "residuals_mm": [
+        0.0,
+        0.0,
+        -1.7381598198272172,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rms_residual_mm": 0.7096007749974376,
+      "maximum_absolute_residual_mm": 1.7381598198272172,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.0,
+          0.0
+        ],
+        "NE": [
+          47.290086243381914,
+          64.83602581199361,
+          0.0
+        ],
+        "SW": [
+          -51.80735324301369,
+          17.55244,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6112423169729855,
+          79.98377271794568,
+          33.66486845951323
+        ],
+        "NE": [
+          48.586325729441825,
+          63.87042705440897,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.44332916016756,
+          18.59230714351112,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.8,
+      "omitted_measurement": "OBS-INSTALLED-CC-U-NE",
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.8,
+        51.4,
+        79.05864104069407,
+        81.14,
+        54.7
+      ],
+      "residuals_mm": [
+        0.0,
+        0.0,
+        0.0,
+        -1.19135895930593,
+        0.0,
+        0.0
+      ],
+      "rms_residual_mm": 0.48637025846545284,
+      "maximum_absolute_residual_mm": 1.19135895930593,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.0,
+          0.0
+        ],
+        "NE": [
+          48.34795586708128,
+          62.55192952000822,
+          0.0
+        ],
+        "SW": [
+          -51.80735324301368,
+          17.552440000000004,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6112423169729855,
+          79.98377271794568,
+          33.66486845951323
+        ],
+        "NE": [
+          49.597977866260585,
+          61.56548801706389,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.44332916016755,
+          18.592307143511125,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.8,
+      "omitted_measurement": "OBS-INSTALLED-CC-L-NE",
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.79999999999998,
+        51.39999999999999,
+        80.25,
+        79.96850237421238,
+        54.7
+      ],
+      "residuals_mm": [
+        0.0,
+        -1.4210854715202004e-14,
+        -7.105427357601002e-15,
+        0.0,
+        -1.171497625787623,
+        0.0
+      ],
+      "rms_residual_mm": 0.47826190301027144,
+      "maximum_absolute_residual_mm": 1.171497625787623,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.0,
+          0.0
+        ],
+        "NE": [
+          48.759736767826425,
+          63.738140625,
+          0.0
+        ],
+        "SW": [
+          -51.392607987383755,
+          18.73205392515994,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6112423169729855,
+          79.98377271794568,
+          33.66486845951323
+        ],
+        "NE": [
+          50.03356616006079,
+          62.743165024620936,
+          33.66486845951323
+        ],
+        "SW": [
+          -51.004909983466824,
+          19.76332860573964,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.79999999999998,
+      "omitted_measurement": "OBS-INSTALLED-CC-U-SW",
+      "optimizer_success": true
+    },
+    {
+      "mode": "planar",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.8,
+        51.39999999999999,
+        80.25,
+        81.14,
+        52.84496261048495
+      ],
+      "residuals_mm": [
+        0.0,
+        0.0,
+        -7.105427357601002e-15,
+        0.0,
+        0.0,
+        -1.8550373895150543
+      ],
+      "rms_residual_mm": 0.757315843016068,
+      "maximum_absolute_residual_mm": 1.8550373895150543,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.0,
+          0.0
+        ],
+        "NE": [
+          48.759736767826425,
+          63.738140625,
+          0.0
+        ],
+        "SW": [
+          -50.26647598940699,
+          16.305565458147196,
+          0.0
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6112423169729855,
+          79.98377271794568,
+          33.66486845951323
+        ],
+        "NE": [
+          50.03356616006079,
+          62.743165024620936,
+          33.66486845951323
+        ],
+        "SW": [
+          -49.927877172505795,
+          17.314651436015875,
+          33.66486845951323
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.8,
+      "omitted_measurement": "OBS-INSTALLED-CC-L-SW",
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.79157209614081,
+        109.8,
+        51.4,
+        80.25,
+        81.14,
+        54.7
+      ],
+      "residuals_mm": [
+        0.7915720961408113,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rms_residual_mm": 0.3231579550283828,
+      "maximum_absolute_residual_mm": 0.7915720961408113,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          80.77840724106127,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.51948753137343,
+          63.8621668209693,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.181468125459695,
+          18.0475644585306,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.626919850555937,
+          80.76202206608379,
+          32.20642910075434
+        ],
+        "NE": [
+          49.79586360920133,
+          62.87200480969435,
+          30.91796499859836
+        ],
+        "SW": [
+          -50.80759892929586,
+          19.074725513151634,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.7235542101794,
+      "omitted_measurement": "OBS-INSTALLED-CC-UL",
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        110.37797966147168,
+        51.4,
+        80.25,
+        81.14,
+        54.7
+      ],
+      "residuals_mm": [
+        0.0,
+        0.5779796614716872,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "rms_residual_mm": 0.23595920871869858,
+      "maximum_absolute_residual_mm": 0.5779796614716872,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          79.98670486172576,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.73396253886461,
+          63.698649252844874,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.39486582924282,
+          17.430577407429514,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6109745458555171,
+          79.97048027647092,
+          32.20642910075434
+        ],
+        "NE": [
+          50.00700178204537,
+          62.704200769541124,
+          30.91796499859836
+        ],
+        "SW": [
+          -51.03337979284185,
+          18.462161554970326,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 110.30193444660176,
+      "omitted_measurement": "OBS-INSTALLED-CC-NE-SW",
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.8,
+        50.231173399264705,
+        80.25000000000001,
+        81.14,
+        54.7
+      ],
+      "residuals_mm": [
+        0.0,
+        0.0,
+        -1.1688266007352937,
+        1.4210854715202004e-14,
+        0.0,
+        0.0
+      ],
+      "rms_residual_mm": 0.4771714615988718,
+      "maximum_absolute_residual_mm": 1.1688266007352937,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          79.98670486172576,
+          -1.4584393587588877
+        ],
+        "NE": [
+          47.74775475301747,
+          64.4412052759887,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.394865829242825,
+          17.43057740742951,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6109745458555171,
+          79.97048027647092,
+          32.20642910075434
+        ],
+        "NE": [
+          49.0359495106872,
+          63.46646891833315,
+          30.91796499859836
+        ],
+        "SW": [
+          -51.033379792841856,
+          18.462161554970322,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.72355421017939,
+      "omitted_measurement": "OBS-INSTALLED-CC-U-NE",
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.8,
+        51.39999999999999,
+        79.45529821624919,
+        81.14,
+        54.699999999999996
+      ],
+      "residuals_mm": [
+        0.0,
+        0.0,
+        -7.105427357601002e-15,
+        -0.7947017837508099,
+        0.0,
+        -7.105427357601002e-15
+      ],
+      "rms_residual_mm": 0.3244356446448507,
+      "maximum_absolute_residual_mm": 0.7947017837508099,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          79.98670486172576,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.46158028191322,
+          62.90527936977298,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.39486582924282,
+          17.430577407429507,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6109745458555171,
+          79.97048027647092,
+          32.20642910075434
+        ],
+        "NE": [
+          49.718695886282646,
+          61.91647773716496,
+          30.91796499859836
+        ],
+        "SW": [
+          -51.03337979284185,
+          18.46216155497032,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.72355421017939,
+      "omitted_measurement": "OBS-INSTALLED-CC-L-NE",
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.8,
+        51.4,
+        80.25,
+        80.35845759459689,
+        54.7
+      ],
+      "residuals_mm": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        -0.7815424054031155,
+        0.0
+      ],
+      "rms_residual_mm": 0.31906335093083726,
+      "maximum_absolute_residual_mm": 0.7815424054031155,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          79.98670486172576,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.73396253886461,
+          63.69864925284488,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -51.120490199388854,
+          18.21957036091828,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6109745458555171,
+          79.97048027647092,
+          32.20642910075434
+        ],
+        "NE": [
+          50.00700178204537,
+          62.70420076954113,
+          30.91796499859836
+        ],
+        "SW": [
+          -50.74316908219138,
+          19.245468397999566,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.7235542101794,
+      "omitted_measurement": "OBS-INSTALLED-CC-U-SW",
+      "optimizer_success": true
+    },
+    {
+      "mode": "scan_relative_depths",
+      "scan_coordinate_penalty_weight": 0,
+      "loss": "linear",
+      "fitted_distances_mm": [
+        80.0,
+        109.80000000000001,
+        51.4,
+        80.25000000000001,
+        81.14,
+        53.471575711631445
+      ],
+      "residuals_mm": [
+        0.0,
+        1.4210854715202004e-14,
+        0.0,
+        1.4210854715202004e-14,
+        0.0,
+        -1.2284242883685579
+      ],
+      "rms_residual_mm": 0.5015021156907512,
+      "maximum_absolute_residual_mm": 1.2284242883685579,
+      "local_tip_centers_mm": {
+        "L": [
+          0.0,
+          0.0,
+          0.0
+        ],
+        "U": [
+          0.0,
+          79.98670486172576,
+          -1.4584393587588877
+        ],
+        "NE": [
+          48.73396253886462,
+          63.69864925284488,
+          -2.7469034609148686
+        ],
+        "SW": [
+          -50.36684233880726,
+          16.59993567049973,
+          -6.843444866274375
+        ]
+      },
+      "hypothetical_installed_tip_centers_mm": {
+        "L": [
+          -4.5318079997297735e-15,
+          -7.608961579793201e-15,
+          33.66486845951323
+        ],
+        "U": [
+          1.6109745458555171,
+          79.97048027647092,
+          32.20642910075434
+        ],
+        "NE": [
+          50.00700178204538,
+          62.70420076954113,
+          30.91796499859836
+        ],
+        "SW": [
+          -50.02229439170533,
+          17.61098336937953,
+          26.821423593238855
+        ]
+      },
+      "fitted_XY_stud_tip_separation_mm": 109.7235542101794,
+      "omitted_measurement": "OBS-INSTALLED-CC-L-SW",
+      "optimizer_success": true
+    }
+  ],
+  "free_depth_metric_check": {
+    "centered_gram_eigenvalues_mm2": [
+      -7.01773108092328e-13,
+      47.60880081749456,
+      2289.8248662754277,
+      6941.0293579070785
+    ],
+    "exact_euclidean_embedding_possible": true,
+    "branches": [
+      {
+        "embedding_mirror_sign": 1,
+        "hypothetical_installed_tip_centers_mm": {
+          "L": [
+            1.3444141246758954,
+            0.19515099207279007,
+            35.15376282382265
+          ],
+          "U": [
+            2.6099781455028026,
+            80.1707768758989,
+            33.63797517395882
+          ],
+          "NE": [
+            50.91181529687138,
+            63.063269775984594,
+            29.609857917839218
+          ],
+          "SW": [
+            -49.28194953012796,
+            18.36558825214405,
+            25.209090236483902
+          ]
+        },
+        "displacement_from_scaled_scan_mm": {
+          "L": [
+            1.3444141246758998,
+            0.19515099207279768,
+            1.4888943643094237
+          ],
+          "U": [
+            0.999003599647285,
+            0.20029659942795774,
+            1.4315460732044798
+          ],
+          "NE": [
+            -0.7251973537926091,
+            -0.1534345847142191,
+            -1.308107080759143
+          ],
+          "SW": [
+            -1.6182203705305582,
+            -0.24201300678653226,
+            -1.6123333567549523
+          ]
+        },
+        "point_displacement_rms_mm": 1.9161950958077227,
+        "maximum_pair_residual_mm": 4.263256414560601e-14,
+        "rotation_determinant": 1.0000000000000009
+      },
+      {
+        "embedding_mirror_sign": -1,
+        "hypothetical_installed_tip_centers_mm": {
+          "L": [
+            1.6974768353257703,
+            0.05225577240992152,
+            28.361195982257794
+          ],
+          "U": [
+            2.973494845799167,
+            80.02365060860105,
+            26.644284222447396
+          ],
+          "NE": [
+            50.560428413896325,
+            63.20548673720644,
+            36.37018354232633
+          ],
+          "SW": [
+            -49.64714205809916,
+            18.51339277788292,
+            32.23502240507346
+          ]
+        },
+        "displacement_from_scaled_scan_mm": {
+          "L": [
+            1.6974768353257748,
+            0.05225577240992913,
+            -5.303672477255436
+          ],
+          "U": [
+            1.3625202999436492,
+            0.05317033213010802,
+            -5.562144878306945
+          ],
+          "NE": [
+            -1.0765842367676655,
+            -0.011217623492370876,
+            5.4522185437279695
+          ],
+          "SW": [
+            -1.9834128985017614,
+            -0.09420848104766222,
+            5.4135988118346035
+          ]
+        },
+        "point_displacement_rms_mm": 5.655650821950427,
+        "maximum_pair_residual_mm": 2.842170943040401e-14,
+        "rotation_determinant": 1.0000000000000007
+      }
+    ],
+    "interpretation": "All six reported lengths can be satisfied by a 3D four-tip arrangement. The two mirror branches are rigidly oriented/translated toward the weak, uniformly scaled scan prior; no scale is fitted here. Six distances determine shape, not its orientation or absolute depth relative to the wall. Neither branch is accepted. Exact agreement with reused inputs is not validation, and point displacement is not scanner error or a tolerance bound."
+  },
+  "findings": [
+    "Both lower-left stud distances exceed the scan; both upper-right distances are smaller. A single average scale cannot explain this feature-dependent pattern.",
+    "The six raw distances admit an exact 3D embedding. Residuals in the older fixed-depth fit reflect its imposed scan depths/planar constraints as well as measurement uncertainty; they do not establish inconsistency of the raw six lengths.",
+    "Neither exact free-depth fit nor small constrained-fit residuals establish physical accuracy. Depth, contact repeatability, registration and axis uncertainty remain unbounded; no source is declared globally more accurate.",
+    "Do not force the inner plate conditional 112.05 mm spacing into this fit. It has different endpoints, an unmeasured NE bore, and its own measurement uncertainty.",
+    "Current custom escutcheon geometry has one clearance aperture containing both stud paths, not two separate close-fit mounting holes. Retain this aperture intent while reconciling its clearance and foam landing."
+  ],
+  "clearance_policy": {
+    "formula": "D_hole_nominal >= D_stud_max + 2*(e_location + e_axis + e_install + e_cut_position + c_free) + delta_diameter_undersize",
+    "definitions": "All e terms and c_free are worst-case radial allowances at the actual plate plane. delta_diameter_undersize is a diametral fabrication allowance. Obtain the vendor size/position convention so the same error is not counted twice. The formula is a sufficient conservative clearance budget for a round pass-through hole; it does not check bearing strength or seal land.",
+    "location_error_bound_mm": null,
+    "stud_max_diameter_mm": null,
+    "selected_hole_diameter_mm": null,
+    "round_or_slot": "For any future required custom mounting holes, compare round clearance versus one locating hole and a slot along the stud-pair line only if bearing, restraint, drainage and seal land remain suitable. No change to factory holes is selected.",
+    "example": "An assumed 0.5 mm radial location allowance alone consumes 1.0 mm of diametral clearance, before fabrication and free-assembly clearance. This is an illustration, not a measured allowance for this installation.",
+    "finish_and_thickness": "Include actual finish build, plate thickness, stud inclination and insertion path.",
+    "separate_budgets": "First reconcile the 3D endpoint geometry; then bound location at the real plate plane. Assembly clearance, measurement/registration uncertainty, machining tolerance, and seal-support requirements are separate quantities. Do not use depth corrections or fit residuals as manufacturing tolerances.",
+    "manufacturing_source": {
+      "url": "https://sendcutsend.com/blog/basic-tolerances-and-cut-feature-relationships/",
+      "accessed": "2026-10-15",
+      "claim": "SendCutSend describes clearance fit and generally posts +/-0.005 inch cut tolerances, subject to material and thickness. This is approximately +/-0.127 mm, not an installation accuracy guarantee."
+    },
+    "material_source": "https://sendcutsend.com/materials/stainless-steel-316/"
+  },
+  "executed_checks": [
+    "Four evidence images copied byte-for-byte and SHA-256 verified",
+    "Six distinct positive finite mm observations validated",
+    "Six baseline scan pair distances independently recomputed",
+    "Eight joint-fit sensitivity trials converged",
+    "Twelve leave-one-pair-out diagnostics converged",
+    "Six conditional XY projections recomputed from raw 3D lengths and unchanged scan depth differences",
+    "Centered distance Gram matrix and both proper-rotation 3D embeddings checked"
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN",
+  "evidence_application": "Supplemental calculation only. Raw six readings are preserved in the source record; no smoothing replaces them. Adoption into canon/design requires a revisioned endpoint and fit decision. Baseline scan, CAD and R005 measurements remain unchanged."
+}

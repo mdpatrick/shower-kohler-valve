@@ -115,6 +115,32 @@ def prepare_fabrication(stage='all',force=False):
     publish_manifest()
     print('F005 preparation checkpoint saved. Permanent manufacturing release remains HOLD.')
 
+def prepare_concentric(stage='all',force=False):
+    """Dependency-aware CB01 appearance/clearance trials, kept separate from F005."""
+    preserve_edits()
+    state=read('build/concentric_stages.json') if (ROOT/'build/concentric_stages.json').exists() else {}
+    out='deliverables/current/fabrication/concentric-border-study'
+    stages=[
+      ('base',['scripts/concentric_border_study.py','canon/concentric_border_requirement.json','canon/fabrication_designs.json','data/derived/resolved.json'],[out+'/analysis.json',out+'/cad/*SS060*',out+'/views/C?_front.svg'],[sys.executable,'scripts/concentric_border_study.py']),
+      ('stock',['src/fabrication/concentric_package.py',out+'/analysis.json',out+'/cad/*SS060*.dxf','canon/fabrication_designs.json'],[out+'/package_manifest.json',out+'/cad/*'],[sys.executable,'src/fabrication/concentric_package.py','cad']),
+      ('locator',['src/fabrication/stud_locator.py','canon/stud_locator_study.json','canon/measurements.json','canon/fabrication_designs.json','data/derived/registration.json','data/derived/resolved.json','deliverables/current/analysis/center_reconciliation_DRAFT.json'],[out+'/stud_locator_analysis.json',out+'/reconciled_model_state.json',out+'/views/stud_locator_trial.*',out+'/diagnostic/*'],[sys.executable,'src/fabrication/stud_locator.py']),
+      ('damage',['scripts/concentric_damage_overlay.py','canon/damage_visibility_requirement.json','canon/concentric_border_requirement.json','data/derived/resolved.json','data/evidence/scan_quality/wall_detail_registered.*',out+'/analysis.json'],[out+'/damage.html',out+'/damage_mapping.json',out+'/views/*_damage_overlay.svg',out+'/views/*_top_gouges.svg',out+'/views/wall_detail_source.png'],[sys.executable,'scripts/concentric_damage_overlay.py']),
+      ('render',['src/fabrication/concentric_blender.py',out+'/analysis.json',out+'/package_manifest.json',out+'/stud_locator_analysis.json',out+'/reconciled_model_state.json',out+'/diagnostic/*.stl','deliverables/current/fabrication/F005/paired_escutcheons_F005_DRAFT.blend'],[out+'/views/C?_*.png',out+'/views/LOC01_tabs.png',out+'/paired_concentric_CB01_DRAFT.blend',out+'/blender_validation.json'],[BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/fabrication/concentric_blender.py']),
+      ('documents',['src/fabrication/concentric_package.py',out+'/*.json',out+'/views/*.png','data/evidence/scan_quality/wall_detail_registered.*','docs/physical_checks/installed_center_distances_2026-10-15.json','deliverables/current/analysis/center_reconciliation_DRAFT.json'],[out+'/*.pdf',out+'/quote_*.zip',out+'/index.html',out+'/document_validation.json'],[sys.executable,'src/fabrication/concentric_package.py','documents'])]
+    for name,inputs,patterns,cmd in stages:
+        if stage not in ('all',name):continue
+        # The documents stage's own validation must not invalidate its inputs.
+        if name=='documents':
+            inputs=[x for x in inputs if x!=out+'/*.json']+[out+'/'+x for x in ['analysis.json','package_manifest.json','blender_validation.json','stud_locator_analysis.json','reconciled_model_state.json']]
+        digest=fingerprint(inputs);prior=state.get(name,{});files=prior.get('outputs',{})
+        unchanged=not force and prior.get('fingerprint')==digest and files and all((ROOT/f).exists() and sha(ROOT/f)==h for f,h in files.items())
+        if unchanged:print('concentric '+name+': unchanged',flush=True);continue
+        print('concentric '+name+': building',flush=True);run(cmd,'concentric_'+name+'.log')
+        owned={str(p.relative_to(ROOT)) for pat in patterns for p in ROOT.glob(pat) if p.is_file() and not p.name.endswith('.blend1')}
+        state[name]={'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in sorted(owned)}};write('build/concentric_stages.json',state)
+    publish_manifest()
+    print('CB01 prepared as an unselected draft; LOC01 remains diagnostic. Physical checks and release remain open.')
+
 def validate(git_objects=False):
     errors=[];input_results=[]
     for i in read('canon/inputs.json')['inputs']:
@@ -156,6 +182,10 @@ def query(args):
     elif op=='coverage':result=checks['coverage'] if len(args)==1 else [x for x in checks['coverage'] if x['feature_id']==args[1]]
     elif op=='clearance':result=[x for x in checks['checks'] if any(k in x['id'] for k in ['DEPTH','CLASH','SLICE','ENGAGEMENT','NEIGHBOR'])]
     elif op=='depth':result=read('deliverables/current/analysis/depth_stack.json')
+    elif op=='reconcile-centers':
+        sys.path.insert(0,str(ROOT/'src/analysis'))
+        from reconcile_installed_centers import save
+        result=save(ROOT)
     elif op=='section':
         axis=args[1] if len(args)>1 else 'controls'
         if axis not in ['controls','studs']:raise ValueError('section must be controls or studs')
@@ -167,7 +197,7 @@ def query(args):
         id=args[1];p=next(x for x in read('deliverables/current/cad/cad_manifest.json')['parts'] if x['id']==id)
         if not p.get('step'):raise ValueError('No separate STEP for this envelope')
         s=cq.importers.importStep(str(ROOT/p['step'])).val();b=s.BoundingBox();result={'method':'recomputed exact OCCT solid query of provisional design','id':id,'bounds_local_mm':[[b.xmin,b.ymin,b.zmin],[b.xmax,b.ymax,b.zmax]],'volume_mm3':s.Volume(),'is_valid':s.isValid(),'provenance':p['evidence'],'physical_fit':'UNRESOLVED'}
-    else:result={'operations':['features [ID]','dimension <M-ID or candidate.diameter_mm>','measure <landmark-ID> <landmark-ID>','coverage [feature-ID]','clearance','depth','section controls|studs','compare-states','solid CUSTOM-01|PLATE-INNER|TRIM-OUTER','validate']}
+    else:result={'operations':['features [ID]','dimension <M-ID or candidate.diameter_mm>','measure <landmark-ID> <landmark-ID>','coverage [feature-ID]','clearance','depth','reconcile-centers','section controls|studs','compare-states','solid CUSTOM-01|PLATE-INNER|TRIM-OUTER','validate']}
     print(json.dumps(dict(header,result=result),indent=2))
 def review(no_open=False):
     port=int(os.environ.get('PROJECT_REVIEW_PORT','8765'))
@@ -223,12 +253,20 @@ def handoff():
             for name in ['inner_photo','outer_photo']:
                 p=ROOT/f'deliverables/current/review/views/{name}.png';z.write(p,str(p.relative_to(ROOT)))
             z.writestr('READ_REVIEW_PACKAGE_FIRST.txt','Private compact review package. F005 drawings, images, analysis and six custom-only quote ZIPs are included. The complete Git bundle contains Blender, all source code, original scans and the full interactive measurement review. The F005 Blender and measurement-worksheet links require that complete checkout. No manufacturing release or physical fit is implied.\n')
+        concentric=ROOT/'deliverables/current/fabrication/concentric-border-study'
+        if concentric.exists():
+            for pattern in ['*.json','*.pdf','*.html','views/*','quote_*.zip','diagnostic/*']:
+                for p in sorted(concentric.glob(pattern)):z.write(p,str(p.relative_to(ROOT)))
+            for p in sorted((ROOT/'data/evidence/user').glob('installed-*-2026-10-15.png')):
+                z.write(p,str(p.relative_to(ROOT)))
+            z.writestr('CURRENT_CB01_REVIEW.txt','Current circular-only CB01 candidates supersede the F005 appearances. Open deliverables/current/fabrication/concentric-border-study/index.html, including damage.html and the 3D tip-distance clarification. RECON-001 revision 2 preserves six 3D end-tip-center lengths; derived fits do not establish plate-plane hole locations. LOC01 is diagnostic and excluded from quote ZIPs. Full Blender scenes and source scans are in the complete Git bundle. Physical fit and manufacturing release remain open.\n')
     print('Private local handoff:',bundle.relative_to(ROOT),'(contains complete committed originals). Not an off-machine backup.')
 
 def main():
     p=argparse.ArgumentParser();sub=p.add_subparsers(dest='command',required=True)
     sub.add_parser('doctor');sub.add_parser('ingest');b=sub.add_parser('build');b.add_argument('--force',action='store_true')
     fab=sub.add_parser('prepare-fabrication');fab.add_argument('--stage',choices=['all','cad','fit','render','documents'],default='all');fab.add_argument('--force',action='store_true')
+    con=sub.add_parser('prepare-concentric');con.add_argument('--stage',choices=['all','base','stock','locator','damage','render','documents'],default='all');con.add_argument('--force',action='store_true')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -237,7 +275,9 @@ def main():
     elif args.command=='build':
         build(args.force)
         if (ROOT/'canon/fabrication_designs.json').exists():prepare_fabrication(force=args.force)
+        if (ROOT/'canon/concentric_border_requirement.json').exists():prepare_concentric(force=args.force)
     elif args.command=='prepare-fabrication':prepare_fabrication(args.stage,args.force)
+    elif args.command=='prepare-concentric':prepare_concentric(args.stage,args.force)
     elif args.command=='review':review(args.no_open)
     elif args.command=='validate':validate(args.git_objects)
     elif args.command=='query':query(args.args)

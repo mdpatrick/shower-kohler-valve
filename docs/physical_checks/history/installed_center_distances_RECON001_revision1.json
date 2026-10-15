@@ -1,0 +1,142 @@
+{
+  "schema_version": 1,
+  "project_id": "shower-kohler-valve",
+  "study_id": "RECON-001",
+  "study_revision": 1,
+  "baseline_measurement_revision": "R005",
+  "baseline_design_revision": "F005",
+  "status": "USER_REPORTED_INPUTS_FOR_DRAFT_RECONCILIATION",
+  "report_date": "2026-10-15",
+  "measurement_date": null,
+  "frame": "Viewed from shower; NE upper-right stud, SW lower-left stud, U upper control tip, L lower control tip. Endpoints are identified as tip centers; exact jaw-contact method and wall-plane projection are not specified.",
+  "feature_map": {
+    "L": "AXIS-LOWER-TIP",
+    "U": "AXIS-UPPER-TIP",
+    "NE": "STUD-NE-TIP",
+    "SW": "STUD-SW-TIP"
+  },
+  "photos": {
+    "stud-diagonal": {
+      "path": "data/evidence/user/installed-stud-diagonal-2026-10-15.png",
+      "sha256": "f489f91ea2a4871425f5e77b847adc96e52360808fe8b35d9c4d05b5638c425b",
+      "source_attachment_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/codex-clipboard-e4c7f305-21c7-43c6-a9f5-d031eb8947b1.png"
+    },
+    "control-spacing": {
+      "path": "data/evidence/user/installed-control-spacing-2026-10-15.png",
+      "sha256": "1098888b20f6bf26b3a052be27d3240278afa199ae42bf4d1dadab95b3e62bf0",
+      "source_attachment_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/codex-clipboard-e5a917d8-d459-400e-bd73-95a67c667f78.png"
+    },
+    "ne-stud-distances": {
+      "path": "data/evidence/user/installed-ne-stud-distances-2026-10-15.png",
+      "sha256": "e125f991df7ce7086cf5ade2ecaf9d92ad8548bf52df3934c76f2ccf01711a82",
+      "source_attachment_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/codex-clipboard-9793a544-5749-4587-a191-89d2ffb1af7a.png"
+    },
+    "sw-stud-distances": {
+      "path": "data/evidence/user/installed-sw-stud-distances-2026-10-15.png",
+      "sha256": "1421762170862ba74d07b8b1d17f48b7f5a96f6876aad8bf0dfd3bb2cf424ca0",
+      "source_attachment_path": "/var/folders/d8/kwdhl3h135s1z1ffch7n8j3c0000gn/T/codex-clipboard-076a7b0d-53f4-4e0a-9d83-93849416cf02.png"
+    }
+  },
+  "observations": [
+    {
+      "measurement_id": "OBS-INSTALLED-CC-UL",
+      "feature_a": "U",
+      "feature_b": "L",
+      "raw_readings": [
+        80
+      ],
+      "unit": "mm",
+      "value_mm": 80,
+      "method": "User-reported caliper center-to-center, annotated physical photograph",
+      "uncertainty_mm": null,
+      "status": "user-reported; no repeat readings or accuracy bound supplied",
+      "photo_ref": "data/evidence/user/installed-control-spacing-2026-10-15.png"
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-NE-SW",
+      "feature_a": "NE",
+      "feature_b": "SW",
+      "raw_readings": [
+        109.8
+      ],
+      "unit": "mm",
+      "value_mm": 109.8,
+      "method": "User-reported caliper center-to-center, annotated physical photograph",
+      "uncertainty_mm": null,
+      "status": "user-reported; no repeat readings or accuracy bound supplied",
+      "photo_ref": "data/evidence/user/installed-stud-diagonal-2026-10-15.png"
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-U-NE",
+      "feature_a": "U",
+      "feature_b": "NE",
+      "raw_readings": [
+        51.4
+      ],
+      "unit": "mm",
+      "value_mm": 51.4,
+      "method": "User-reported caliper center-to-center, annotated physical photograph",
+      "uncertainty_mm": null,
+      "status": "user-reported; no repeat readings or accuracy bound supplied",
+      "photo_ref": "data/evidence/user/installed-ne-stud-distances-2026-10-15.png"
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-L-NE",
+      "feature_a": "L",
+      "feature_b": "NE",
+      "raw_readings": [
+        80.25
+      ],
+      "unit": "mm",
+      "value_mm": 80.25,
+      "method": "User-reported caliper center-to-center, annotated physical photograph",
+      "uncertainty_mm": null,
+      "status": "user-reported; no repeat readings or accuracy bound supplied",
+      "photo_ref": "data/evidence/user/installed-ne-stud-distances-2026-10-15.png"
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-U-SW",
+      "feature_a": "U",
+      "feature_b": "SW",
+      "raw_readings": [
+        81.14
+      ],
+      "unit": "mm",
+      "value_mm": 81.14,
+      "method": "User-reported caliper center-to-center, annotated physical photograph",
+      "uncertainty_mm": null,
+      "status": "user-reported; no repeat readings or accuracy bound supplied",
+      "photo_ref": "data/evidence/user/installed-sw-stud-distances-2026-10-15.png"
+    },
+    {
+      "measurement_id": "OBS-INSTALLED-CC-L-SW",
+      "feature_a": "L",
+      "feature_b": "SW",
+      "raw_readings": [
+        54.7
+      ],
+      "unit": "mm",
+      "value_mm": 54.7,
+      "method": "User-reported caliper center-to-center, annotated physical photograph",
+      "uncertainty_mm": null,
+      "status": "user-reported; no repeat readings or accuracy bound supplied",
+      "photo_ref": "data/evidence/user/installed-sw-stud-distances-2026-10-15.png"
+    }
+  ],
+  "user_reconciliation_preference": {
+    "source": "Direct user message 2026-10-15",
+    "quote": "assume my calipers are more correct as a whole, but can do some smoothing with reference to our lidar scan if that makes sense.",
+    "user_reports_imperfect_caliper_technique": true,
+    "interpretation": "Fit the joint geometry primarily to the caliper readings; use only the installed wall/valve Polycam scan as weaker corroboration and orientation/depth guidance. Preserve raw readings and scan. Never silently replace observations or average unrelated pair errors. Show weights, residuals and sensitivity. Do not assign statistical accuracy from caliper digits or fit residuals."
+  },
+  "application_status": "Preserved as a supplemental study; no derived coordinates or scale selected for canon or CAD. Canon R005 and F005 are unchanged. Any future adoption must be a revisioned measurement/design reconciliation using project import with explicit endpoint/role definitions.",
+  "remaining_fit_inputs": [
+    "actual stud outside/thread diameter at the plate plane",
+    "stud axes and depth at the intended plate plane",
+    "exact installed reference-plane depths",
+    "uncertainty/repeatability or thickness-correct dry fit",
+    "actual NE factory hole diameter and mounting gap reconciliation"
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN"
+}
