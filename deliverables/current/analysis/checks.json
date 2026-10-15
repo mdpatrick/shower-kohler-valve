@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R002",
+  "revision": "R003",
   "units": "mm",
   "state": "diagnostic_trial_with_unchanged_hardware",
   "fit_verdict": "FAIL in provisional geometry / physical fit UNRESOLVED / candidate not selected",
@@ -9,7 +9,7 @@
     {
       "feature_id": "OPEN-MAIN",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -38,7 +38,7 @@
     {
       "feature_id": "CUT-01",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -67,7 +67,7 @@
     {
       "feature_id": "CUT-02",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -96,7 +96,7 @@
     {
       "feature_id": "CUT-03",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -125,7 +125,7 @@
     {
       "feature_id": "CUT-04",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -154,7 +154,7 @@
     {
       "feature_id": "CUT-05",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -183,7 +183,7 @@
     {
       "feature_id": "CUT-06",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -212,7 +212,7 @@
     {
       "feature_id": "CUT-07",
       "state": "as_observed_at_capture",
-      "revision": "R002",
+      "revision": "R003",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -543,9 +543,9 @@
     },
     {
       "id": "CAD-CLASH-FACTORY-PLATE-INNER",
-      "status": "UNRESOLVED",
-      "conditional_result": "NO_SOLID_INTERSECTION in original-wall trial",
-      "intersection_mm3": 0.0,
+      "status": "FAIL",
+      "conditional_result": "FAIL in original-wall trial",
+      "intersection_mm3": 2179.7318621846775,
       "physical_fit": "UNRESOLVED",
       "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
       "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"
@@ -606,9 +606,9 @@
     },
     {
       "id": "CAD-CLASH-PLATE-INNER",
-      "status": "UNRESOLVED",
-      "conditional_result": "NO_SOLID_INTERSECTION in trial with added backing plate",
-      "intersection_mm3": 0.0,
+      "status": "FAIL",
+      "conditional_result": "FAIL in trial with added backing plate",
+      "intersection_mm3": 2179.731862184693,
       "physical_fit": "UNRESOLVED",
       "method": "exact OCCT common volume of disclosed reference solids; not a physical measurement",
       "needed": "actual local cavity, nut/inner-plate/valve profiles and stud depth; reversible factory adjustment feasibility"

@@ -1,7 +1,7 @@
 {
   "project_id": "shower-kohler-valve",
   "schema_version": 1,
-  "revision": "R002",
+  "revision": "R003",
   "measurements": [
     {
       "id": "M02-W",
@@ -210,6 +210,93 @@
       "uncertainty_mm": null,
       "note": "Derived relation, not an independent second piece of evidence",
       "role": "fitting input"
+    },
+    {
+      "id": "M05-T",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "rear foam surface to metal backing",
+      "purpose": "Uncompressed foam thickness",
+      "raw_readings": [
+        6
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        6
+      ],
+      "value_mm": 6,
+      "method": "User-reported physical measurement; foam uncompressed",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "User said about 6 mm deep. Uncompressed state confirmed for the overall reading. No instrument accuracy, repeat readings or thickness map supplied.",
+      "approximate": true,
+      "source_ref": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M05-B",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "inner to outer foam edge; location and minimum not established",
+      "purpose": "Representative foam band width",
+      "raw_readings": [
+        6
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        6
+      ],
+      "value_mm": 6,
+      "method": "User-reported physical measurement of foam band width",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "User said about 6 mm wide. Representative width only: location, smallest width, perimeter variation, continuity and contact footprint are not established. Not M05-W (minimum width).",
+      "approximate": true,
+      "source_ref": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M04-O",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "uncompressed rear foam surface to frontmost metal",
+      "purpose": "Overall plate and free foam depth",
+      "raw_readings": [
+        15.44
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        15.44
+      ],
+      "value_mm": 15.44,
+      "method": "User-reported caliper overall depth; light contact without foam compression",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "User explicitly confirmed contacts: uncompressed rear foam surface to frontmost metal. This is a loose-part total envelope, not installed depth, sheet thickness, nut-seat depth or rear-metal-land-to-front depth. Instrument accuracy and repeats not supplied.",
+      "approximate": false,
+      "source_ref": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
     }
   ],
   "history": [
@@ -233,6 +320,24 @@
         "11": "User clarified 106.39 mm is nearest-edge gap, 11.71 mm is hole edge to rim. Only SW small-hole diameter is supplied; do not infer measured NE diameter. Photo shows the front face."
       },
       "date_utc": "2026-10-15T04:18:53.249189+00:00",
+      "physical_fit": "not established by measurement import"
+    },
+    {
+      "from_revision": "R002",
+      "to_revision": "R003",
+      "accepted_or_recorded_ids": [
+        "M05-T",
+        "M05-B",
+        "M04-O"
+      ],
+      "conflicting_ids": [],
+      "response_sha256": "e149ca6d847e7c269743a723c5696731b6b89a3e48c74b50a524429797132182",
+      "current_state_note": "",
+      "group_notes": {
+        "04": "15.44 mm is uncompressed foam back to frontmost metal. Subtracting approximately 6 mm gives about 9.4 mm from foam backing to frontmost metal, not sheet thickness. Relation of foam backing to rear metal lands remains unknown.",
+        "05": "Foam approximately 6 mm deep and 6 mm wide. Minimum width, footprint, damage, continuous landing and installed compression remain unverified."
+      },
+      "date_utc": "2026-10-15T04:38:40.706782+00:00",
       "physical_fit": "not established by measurement import"
     }
   ],

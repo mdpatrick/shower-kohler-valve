@@ -1,0 +1,45 @@
+{
+  "project_id": "shower-kohler-valve",
+  "review_revision": "R002",
+  "observations": [
+    {
+      "measurement_id": "M05-T",
+      "raw_readings": [6],
+      "unit": "mm",
+      "approximate": true,
+      "method": "User-reported physical measurement; foam uncompressed",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "source_ref": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "uncertainty_mm": null,
+      "notes": "User said about 6 mm deep. Uncompressed state confirmed for the overall reading. No instrument accuracy, repeat readings or thickness map supplied."
+    },
+    {
+      "measurement_id": "M05-B",
+      "raw_readings": [6],
+      "unit": "mm",
+      "approximate": true,
+      "method": "User-reported physical measurement of foam band width",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "source_ref": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "uncertainty_mm": null,
+      "notes": "User said about 6 mm wide. Representative width only: location, smallest width, perimeter variation, continuity and contact footprint are not established. Not M05-W (minimum width)."
+    },
+    {
+      "measurement_id": "M04-O",
+      "raw_readings": [15.44],
+      "unit": "mm",
+      "method": "User-reported caliper overall depth; light contact without foam compression",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "source_ref": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "uncertainty_mm": null,
+      "notes": "User explicitly confirmed contacts: uncompressed rear foam surface to frontmost metal. This is a loose-part total envelope, not installed depth, sheet thickness, nut-seat depth or rear-metal-land-to-front depth. Instrument accuracy and repeats not supplied."
+    }
+  ],
+  "group_notes": {
+    "04": "15.44 mm is uncompressed foam back to frontmost metal. Subtracting approximately 6 mm gives about 9.4 mm from foam backing to frontmost metal, not sheet thickness. Relation of foam backing to rear metal lands remains unknown.",
+    "05": "Foam approximately 6 mm deep and 6 mm wide. Minimum width, footprint, damage, continuous landing and installed compression remain unverified."
+  }
+}

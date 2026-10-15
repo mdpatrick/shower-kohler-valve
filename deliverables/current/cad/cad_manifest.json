@@ -1,5 +1,5 @@
 {
-  "revision": "R002",
+  "revision": "R003",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "units": "mm",
   "parts": [
@@ -59,7 +59,7 @@
         0.45
       ],
       "collection": "02_INNER_AND_GASKET",
-      "evidence": "Contact path topology provisional; use accepted dimensions where available",
+      "evidence": "Approximate measured free section where available; uniform width and contact path topology provisional; compression unknown",
       "status": "provisional reference",
       "bounds_local_mm": [
         [
@@ -70,10 +70,10 @@
         [
           58.0,
           82.5,
-          3.0
+          6.0
         ]
       ],
-      "volume_mm3": 7984.35345410779,
+      "volume_mm3": 15968.70690821558,
       "tessellation_tolerance_mm": 0.04,
       "angular_tolerance_radians": 0.08
     },
@@ -84,13 +84,13 @@
       "factory_location_mm": [
         0.7991944036080083,
         39.672855449655486,
-        3.0
+        6.000000000000001
       ],
       "brep": "data/derived/cad/PLATE-INNER.brep",
       "location_mm": [
         0.7991944036080083,
         39.672855449655486,
-        7.175
+        10.175
       ],
       "color": [
         0.9,
@@ -98,7 +98,7 @@
         0.16
       ],
       "collection": "02_INNER_AND_GASKET",
-      "evidence": "User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional",
+      "evidence": "User front photo and accepted free envelope; metal origin provisionally at foam backing. Sheet, nut seats, local formed profile, corners, remaining bores and installed placement unverified",
       "status": "provisional reference",
       "bounds_local_mm": [
         [
@@ -109,10 +109,10 @@
         [
           65.17500000000001,
           82.55000000000001,
-          5.0
+          9.44
         ]
       ],
-      "volume_mm3": 31820.88112152287,
+      "volume_mm3": 38400.33612587579,
       "tessellation_tolerance_mm": 0.04,
       "angular_tolerance_radians": 0.08
     },
@@ -435,13 +435,13 @@
       "factory_location_mm": [
         -47.291356275538035,
         18.462229374095184,
-        4.500000000000001
+        7.500000000000001
       ],
       "brep": "data/derived/cad/STUD-SW-NUT.brep",
       "location_mm": [
         -47.291356275538035,
         18.462229374095184,
-        8.675
+        11.675
       ],
       "color": [
         0.48,
@@ -513,13 +513,13 @@
       "factory_location_mm": [
         51.23359848933067,
         62.72282385788084,
-        4.500000000000001
+        7.500000000000001
       ],
       "brep": "data/derived/cad/STUD-NE-NUT.brep",
       "location_mm": [
         51.23359848933067,
         62.72282385788084,
-        8.675
+        11.675
       ],
       "color": [
         0.48,

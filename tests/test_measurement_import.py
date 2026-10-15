@@ -65,6 +65,14 @@ class ImportTests(unittest.TestCase):
         self.assertEqual(self.accepted()['M10-GU']['notes'],'Adapter identity unknown')
         self.assertNotIn('M07-SW',self.accepted())
 
+    def test_free_envelope_does_not_become_sheet_or_rear_land_depth(self):
+        self.submit([self.observation('M04-O',15.44),self.observation('M05-T',6,approximate=True),self.observation('M05-B',6,approximate=True)])
+        records=self.accepted()
+        self.assertTrue(records['M05-T']['approximate'])
+        self.assertTrue(records['M05-B']['approximate'])
+        self.assertIsNone(records['M05-T']['uncertainty_mm'])
+        for id in ['M04-D','M04-T','M05-W']:self.assertNotIn(id,records)
+
     def test_control_setup_cannot_borrow_stud_reference_height(self):
         self.submit([self.observation('M07-H',50),self.observation('M10-GU',18)])
         self.assertNotIn('M10-UPPER',self.accepted())

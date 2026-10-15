@@ -1,5 +1,5 @@
 {
-  "revision": "R002",
+  "revision": "R003",
   "units": "mm",
   "datum": "Intact-stone fitted reference plane Z=0; +Z toward shower",
   "purpose": "Explain why the prior seated-cover visualization is not an assemblable repair",
@@ -10,11 +10,11 @@
       "ranges_z_mm": {
         "GASKET-01": [
           0.0,
-          3.0
+          6.0
         ],
         "PLATE-INNER": [
-          3.0,
-          8.0
+          6.000000000000001,
+          15.440000000000001
         ],
         "TRIM-OUTER": [
           0.0,
@@ -49,16 +49,16 @@
           26.611881221416702
         ],
         "STUD-SW-NUT": [
-          4.500000000000001,
-          8.5
+          7.500000000000001,
+          11.5
         ],
         "STUD-NE": [
           -15.0,
           30.676418397046803
         ],
         "STUD-NE-NUT": [
-          4.500000000000001,
-          8.5
+          7.500000000000001,
+          11.5
         ]
       },
       "studs": [
@@ -70,8 +70,8 @@
           ],
           "tip_z_mm": 26.611881221416702,
           "nut_z_mm": [
-            4.500000000000001,
-            8.5
+            7.500000000000001,
+            11.5
           ],
           "cover_material_on_axis_z_mm": [
             [
@@ -82,7 +82,7 @@
           "cover_rear_z_mm": 14.5,
           "local_cavity_from_rim_mm": 14.5,
           "tip_to_cover_rear_clearance_mm": -12.111881221416702,
-          "nut_to_cover_rear_clearance_mm": 6.0,
+          "nut_to_cover_rear_clearance_mm": 3.0,
           "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
         },
         {
@@ -93,8 +93,8 @@
           ],
           "tip_z_mm": 30.676418397046803,
           "nut_z_mm": [
-            4.500000000000001,
-            8.5
+            7.500000000000001,
+            11.5
           ],
           "cover_material_on_axis_z_mm": [
             [
@@ -105,7 +105,7 @@
           "cover_rear_z_mm": 14.5,
           "local_cavity_from_rim_mm": 14.5,
           "tip_to_cover_rear_clearance_mm": -16.176418397046803,
-          "nut_to_cover_rear_clearance_mm": 6.0,
+          "nut_to_cover_rear_clearance_mm": 3.0,
           "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
         }
       ],
@@ -145,10 +145,10 @@
         {
           "part": "PLATE-INNER",
           "against": "TRIM-OUTER",
-          "intersection_mm3": 0.0,
-          "model_result": "NO_SOLID_INTERSECTION",
+          "intersection_mm3": 2179.7318621846775,
+          "model_result": "FAIL",
           "physical_result": "UNRESOLVED",
-          "part_basis": "User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional"
+          "part_basis": "User front photo and accepted free envelope; metal origin provisionally at foam backing. Sheet, nut seats, local formed profile, corners, remaining bores and installed placement unverified"
         },
         {
           "part": "VALVE-LOWER",
@@ -170,7 +170,7 @@
       "model_verdict": "FAIL",
       "physical_fit": "UNRESOLVED",
       "captured_hardware_adjusted": false,
-      "gasket_thickness_basis": "uncompressed placeholder; assembled compression and contact are unknown"
+      "gasket_thickness_basis": "Approximate user-measured free foam thickness where accepted; assembled compression and contact remain unknown"
     },
     "proposed": {
       "label": "Trial with added backing plate",
@@ -182,11 +182,11 @@
         ],
         "GASKET-01": [
           4.175,
-          7.175
+          10.175
         ],
         "PLATE-INNER": [
-          7.175,
-          12.175
+          10.175,
+          19.615000000000002
         ],
         "TRIM-OUTER": [
           4.175,
@@ -221,16 +221,16 @@
           26.611881221416702
         ],
         "STUD-SW-NUT": [
-          8.675,
-          12.675
+          11.675,
+          15.675
         ],
         "STUD-NE": [
           -15.0,
           30.676418397046803
         ],
         "STUD-NE-NUT": [
-          8.675,
-          12.675
+          11.675,
+          15.675
         ],
         "NEW-SEAL-PATH": [
           0.0,
@@ -246,8 +246,8 @@
           ],
           "tip_z_mm": 26.611881221416702,
           "nut_z_mm": [
-            8.675,
-            12.675
+            11.675,
+            15.675
           ],
           "cover_material_on_axis_z_mm": [
             [
@@ -258,7 +258,7 @@
           "cover_rear_z_mm": 18.674999999999997,
           "local_cavity_from_rim_mm": 14.499999999999996,
           "tip_to_cover_rear_clearance_mm": -7.936881221416705,
-          "nut_to_cover_rear_clearance_mm": 5.9999999999999964,
+          "nut_to_cover_rear_clearance_mm": 2.9999999999999964,
           "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
         },
         {
@@ -269,8 +269,8 @@
           ],
           "tip_z_mm": 30.676418397046803,
           "nut_z_mm": [
-            8.675,
-            12.675
+            11.675,
+            15.675
           ],
           "cover_material_on_axis_z_mm": [
             [
@@ -281,7 +281,7 @@
           "cover_rear_z_mm": 18.674999999999997,
           "local_cavity_from_rim_mm": 14.499999999999996,
           "tip_to_cover_rear_clearance_mm": -12.001418397046805,
-          "nut_to_cover_rear_clearance_mm": 5.9999999999999964,
+          "nut_to_cover_rear_clearance_mm": 2.9999999999999964,
           "note": "Signed axial gap at assumed axis; negative = overlap. Exact full-solid intersection is reported separately."
         }
       ],
@@ -321,10 +321,10 @@
         {
           "part": "PLATE-INNER",
           "against": "TRIM-OUTER",
-          "intersection_mm3": 0.0,
-          "model_result": "NO_SOLID_INTERSECTION",
+          "intersection_mm3": 2179.731862184693,
+          "model_result": "FAIL",
           "physical_result": "UNRESOLVED",
-          "part_basis": "User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional"
+          "part_basis": "User front photo and accepted free envelope; metal origin provisionally at foam backing. Sheet, nut seats, local formed profile, corners, remaining bores and installed placement unverified"
         },
         {
           "part": "VALVE-LOWER",
@@ -346,8 +346,17 @@
       "model_verdict": "FAIL",
       "physical_fit": "UNRESOLVED",
       "captured_hardware_adjusted": false,
-      "gasket_thickness_basis": "uncompressed placeholder; assembled compression and contact are unknown"
+      "gasket_thickness_basis": "Approximate user-measured free foam thickness where accepted; assembled compression and contact remain unknown"
     }
+  },
+  "inner_plate_depth": {
+    "overall_free_depth_mm": 15.44,
+    "free_foam_thickness_mm": 6,
+    "representative_band_width_mm": 6,
+    "installed_foam_thickness_mm": null,
+    "foam_backing_to_front_mm": 9.44,
+    "metal_datum_relation": "Foam backing versus rear metal contact lands is unmeasured.",
+    "display_basis": "Measured free overall envelope; metal origin provisionally equals foam backing. Remainder is approximate, not sheet thickness or an accepted rear-land datum depth."
   },
   "rough_in": {
     "status": "UNRESOLVED",
@@ -393,7 +402,7 @@
     "applicability": "Applicable arrangement reference; actual installed revision and adjustment range must be checked. Added backing plate is not a manufacturer-approved detail."
   },
   "limits": [
-    "All current Z values are conditional scan estimates or disclosed shape assumptions; no physical readings accepted.",
+    "Accepted loose-part free depths constrain the envelope only. Installed depths remain conditional scan estimates and disclosed placement assumptions.",
     "Foam compression, rear cavity shape, nut seats, valve collars and handle engagement remain unmeasured.",
     "A positive geometric gap is not a physical fit, support or water-performance pass.",
     "The captured scan, stud tip landmarks and valve pose remain unchanged. No shortening or relocation is specified."

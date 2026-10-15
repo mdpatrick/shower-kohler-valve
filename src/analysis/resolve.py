@@ -23,6 +23,25 @@ def resolve():
         if id in accepted:a[key]=accepted[id]
     for id,key in [('M11-UD','inner_upper_opening_diameter_mm'),('M11-LD','inner_lower_opening_diameter_mm')]:
         if id in accepted:a[key]=accepted[id]
+    # A representative foam width is not a measured minimum or a verified path.
+    if 'M05-B' in accepted and 'M05-W' not in accepted:a['gasket_width_mm']=accepted['M05-B']
+    depth_constraints={'overall_free_depth_mm':accepted.get('M04-O'),
+        'free_foam_thickness_mm':accepted.get('M05-T'),
+        'representative_band_width_mm':accepted.get('M05-B'),
+        'installed_foam_thickness_mm':None,'foam_backing_to_front_mm':None,
+        'metal_datum_relation':'Foam backing versus rear metal contact lands is unmeasured.',
+        'display_basis':'Independent provisional metal and foam depths.'}
+    if all(id in accepted for id in ('M04-O','M05-T')):
+        remainder=accepted['M04-O']-accepted['M05-T']
+        if remainder<=0:raise ValueError('Overall free depth must exceed foam thickness; reconcile measurement contacts')
+        depth_constraints['foam_backing_to_front_mm']=remainder
+        # Match the measured free envelope, without accepting this as M04-D.
+        # The display alone equates its metal origin with the foam backing plane.
+        if 'M04-D' not in accepted:
+            a['inner_formed_depth_mm']=remainder
+            depth_constraints['display_basis']='Measured free overall envelope; metal origin provisionally equals foam backing. Remainder is approximate, not sheet thickness or an accepted rear-land datum depth.'
+        else:
+            depth_constraints['display_basis']='Rear-land formed depth measured independently; compare free envelope and reconcile foam backing offset before fit approval.'
     if 'M06-OD' in accepted:nom['trim_diameter_mm']=accepted['M06-OD']
     if 'M01' in accepted:nom['control_spacing_mm']=accepted['M01']
     for i,axis in enumerate(['X','Y']):
@@ -62,7 +81,7 @@ def resolve():
     plate_constraints={'photo_face':'front toward handles','source':'SRC-USER-INNER-PLATE-01',
         'mounting_center_spacing_mm':accepted.get('M11-CC'),
         'conditional_display_center_spacing_mm':float(np.linalg.norm(np.array(slots[1]['center_mm'])-np.array(slots[0]['center_mm']))),
-        'missing':['NE mounting-hole diameter','lower large-opening diameter','mounting-hole vertical datums','outline corner shape/radii','rear gasket footprint','all plate Z dimensions'],
+        'missing':['NE mounting-hole diameter','lower large-opening diameter','mounting-hole vertical datums','outline corner shape/radii','rear gasket footprint','sheet thickness, rear metal datum, rim and nut-seat depths','installed foam compression'],
         'placement_note':'No plate photograph or measurement changes the primary wall registration or captured hardware pose.'}
     # Source geometry is used once for this conditional provisional scale. No independent validation is claimed.
     candidate=dict(dc['candidate']);land=candidate['target_sound_land_mm'];dia=math.ceil(2*(maxrad+land+1.5)/candidate['diameter_rounding_mm'])*candidate['diameter_rounding_mm']
@@ -80,7 +99,7 @@ def resolve():
         'controls_mm':[bottom.tolist(),top.tolist()],'diverter_tip_mm':diverter,'observations':observations,
         'diagnostic_control_depths_mm':{name:accepted[id] for name,id in [('upper','M10-UPPER'),('lower','M10-LOWER')] if id in accepted},
         'studs_mm':studs,'studs_state':'current measured envelopes where available; raw as-capture scan preserved',
-        'inner_center_mm':inner_center.tolist(),'inner_slots':slots,'inner_control_openings':holes,'inner_plate_constraints':plate_constraints,
+        'inner_center_mm':inner_center.tolist(),'inner_slots':slots,'inner_control_openings':holes,'inner_plate_constraints':plate_constraints,'inner_plate_depth':depth_constraints,
         'assumptions':a,'nominal':nom,'candidate':candidate,'accepted_measurement_ids':list(accepted),
         'scale_status':reg['scale_status'],'secondary_scans_used_to_fit':False,'features':resolved}
     out=ROOT/'data/derived/resolved.json';out.write_text(json.dumps(parameters,indent=2)+'\n');return parameters

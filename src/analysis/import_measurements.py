@@ -25,10 +25,11 @@ def import_response(path,root=ROOT,dry_run=False):
         values=[x*factors[unit] for x in raw];value=statistics.median(values);span=max(values)-min(values)
         conflict=span>2*definitions[id]['useful_accuracy_mm']
         bound=obs.get('uncertainty_mm')
+        if not isinstance(obs.get('approximate',False),bool):raise ValueError('approximate must be a boolean')
         if bound is not None and (isinstance(bound,bool) or not isinstance(bound,(int,float)) or not math.isfinite(bound) or bound<0):raise ValueError('Invalid uncertainty bound')
         validated.append(dict(id=id,component='see worksheet',state='current_physical_observation',datum=definitions[id]['contacts'],purpose=definitions[id]['label'],
             raw_readings=raw,raw_unit=unit,values_mm=values,value_mm=value,method=obs['method'],source='user measurement response',date=obs['date'],photo_ref=obs.get('photo_ref',''),
-            date_basis=obs.get('date_basis','measurement date'),notes=obs.get('notes',''),uncertainty_mm=bound,repeat_span_mm=span,status='conflicting' if conflict else 'user-confirmed',
+            date_basis=obs.get('date_basis','measurement date'),notes=obs.get('notes',''),approximate=obs.get('approximate',False),source_ref=obs.get('source_ref',''),uncertainty_mm=bound,repeat_span_mm=span,status='conflicting' if conflict else 'user-confirmed',
             reduction='median of repeat readings; repeat span does not establish measurement accuracy',role=definitions[id]['role'],correction_reason=obs.get('correction_reason')))
     out=copy.deepcopy(canon);accepted={m['id']:m for m in out['measurements'] if m['status']=='user-confirmed'};added=[];conflicts=[]
     for m in validated:

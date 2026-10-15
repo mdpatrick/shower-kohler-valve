@@ -165,6 +165,20 @@
         "6.5 inch height retains original precision; conversion does not imply 0.1 mm accuracy.",
         "No installed Z depth, rear gasket path or physical fit established."
       ]
+    },
+    {
+      "id": "SRC-USER-INNER-PLATE-FOAM-01",
+      "path": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "sha256": "f93885d12274a7ff15f6148624ff3677a937ece5003dce9a2a05c050a1e10b6c",
+      "size_bytes": 1775,
+      "reported_on": "2026-10-14",
+      "measurement_date": null,
+      "role": "direct user measurement and contact/compression clarification",
+      "limitations": [
+        "Foam thickness and representative width are approximate; no uncertainty bound supplied.",
+        "Overall depth is free state, not installed compression or sheet thickness.",
+        "Rear metal datum, foam footprint, minimum width and nut-seat depth remain unknown."
+      ]
     }
   ]
 }

@@ -50,7 +50,7 @@ def build():
     add('CUSTOM-01',plate,(*center,base),(.18,.52,.64),'04_CUSTOM_CANDIDATE','Computed draft profile / material and thickness unapproved',True)
     gw=a.get('gasket_outer_width_mm',a['inner_width_mm']);gh=a.get('gasket_outer_height_mm',a['inner_height_mm'])
     gasket=capsule(gw,gh,a['gasket_free_thickness_mm']).cut(capsule(gw-2*a['gasket_width_mm'],gh-2*a['gasket_width_mm'],a['gasket_free_thickness_mm']+2).translate((0,0,-1)))
-    add('GASKET-01',gasket,(*ic,gasketz),(.64,.22,.45),'02_INNER_AND_GASKET','Contact path topology provisional; use accepted dimensions where available')
+    add('GASKET-01',gasket,(*ic,gasketz),(.64,.22,.45),'02_INNER_AND_GASKET','Approximate measured free section where available; uniform width and contact path topology provisional; compression unknown')
     corner=a['inner_corner_radius_mm']
     inner=rounded_rect(a['inner_width_mm'],a['inner_height_mm'],corner,a['inner_sheet_thickness_mm'])
     # Raised peripheral flange is a visible, separately disclosed formed-depth placeholder.
@@ -70,7 +70,7 @@ def build():
         hole=(wp.circle(sw/2) if abs(sw-sh)<1e-6 else wp.slot2D(max(sw,sh),min(sw,sh),90 if sh>sw else 0)).extrude(100).translate((0,0,-1))
         inner=inner.cut(hole)
     innerz=gasketz+a['gasket_free_thickness_mm']
-    add('PLATE-INNER',inner,(*ic,innerz),(.9,.55,.16),'02_INNER_AND_GASKET','User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional',True)
+    add('PLATE-INNER',inner,(*ic,innerz),(.9,.55,.16),'02_INNER_AND_GASKET','User front photo and accepted free envelope; metal origin provisionally at foam backing. Sheet, nut seats, local formed profile, corners, remaining bores and installed placement unverified',True)
     if a.get('rear_projection_envelope_mm',0)>0:
         envelope=capsule(a['inner_width_mm']-10,a['inner_height_mm']-10,a['rear_projection_envelope_mm'])
         add('REAR-PROJECTION-ENVELOPE',envelope,(*ic,innerz-a['rear_projection_envelope_mm']),(.85,.2,.5),'01_OBSERVED_ENVELOPES','Maximum measured rear extent envelope ONLY; not a solid physical plate')

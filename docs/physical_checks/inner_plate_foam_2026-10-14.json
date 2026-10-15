@@ -1,0 +1,24 @@
+{
+  "id": "OBS-INNER-PLATE-FOAM-01",
+  "report_date": "2026-10-14",
+  "measurement_date": null,
+  "source": "Direct user report and clarification in this chat",
+  "user_report_verbatim": "The foam on the plate is about 6mm deep and 6mm wide. The whole plate is 15.44mm deep when you include the 6mm of foam.",
+  "clarification_question": "For the 15.44 mm overall depth, did you measure from the uncompressed back surface of the foam to the frontmost metal, or did the caliper squeeze the foam?",
+  "clarification_answer_verbatim": "Uncompressed foam to frontmost metal",
+  "accepted_raw_ids": ["M05-T", "M05-B", "M04-O"],
+  "approximate_ids": ["M05-T", "M05-B"],
+  "packet": "data/evidence/user/inner-plate-foam-readings-R002.json",
+  "arithmetic": {
+    "expression_mm": "15.44 - approximately 6",
+    "display_result_mm": "approximately 9.4",
+    "contacts": "foam backing to frontmost metal, assuming the reported foam thickness applies at the overall-depth contact",
+    "not_established": ["metal sheet thickness", "rear metal land datum relation", "local nut seat", "installed compressed depth"],
+    "accepted_as_M04_D": false
+  },
+  "model_update": "Use the approximate 6 mm free foam section and measured 15.44 mm free envelope. The display provisionally places its metal origin at the foam backing; local formed profile and rear lands remain assumed. Original installed scan and stud/control positions remain unchanged.",
+  "remaining": ["rear foam footprint and continuity", "smallest band width", "compressed foam thickness and contact", "local metal profile and nut seats", "real cover cavity", "installed stem and stud projections"],
+  "physical_fit": "NOT PERFORMED",
+  "installed_surface_water_test": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN"
+}

@@ -40,11 +40,17 @@ def build():
             picture=Image(str(views/'inner_photo.png'),width=177,height=219)
         pair=Table([[picture,Paragraph(g['instructions'],styles['SmallCell'] if g['id']=='11' else styles['BodyText'])]],colWidths=[220,290]);pair.setStyle(TableStyle([('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),0),('RIGHTPADDING',(0,0),(-1,-1),10)]));story+=[pair,Spacer(1,12)]
         rows=[[Paragraph(s,styles['SmallCell']) for s in ['ID / contact','Estimate mm','Raw reading','Unit','Repeat readings']]]
+        recorded=[]
         for f in g['fields']:
-            if g['id']=='11' and f['id'] in accepted:continue
+            if g['id'] in ('04','05','11') and f['id'] in accepted:
+                m=accepted[f['id']]
+                recorded.append(f"{f['label']}: {'approximately ' if m.get('approximate') else ''}{m['value_mm']:g} mm")
+                continue
             pred='unknown' if f['prediction_mm'] is None else f"{f['prediction_mm']:.1f}"
             if f['id'] in accepted:pred=f"Recorded {accepted[f['id']]['value_mm']:g}"
             rows.append([Paragraph(f"<b>{f['id']}</b><br/>{f['label']}<br/>{f['contacts']}",styles['SmallCell']),Paragraph(f"{pred}<br/>Useful +/-{f['useful_accuracy_mm']}",styles['SmallCell']),'____________','______','_______________'])
+        if recorded and g['id'] in ('04','05'):
+            story.append(Paragraph('Already recorded: '+'; '.join(recorded)+'. Free state; installed compression remains unknown.',styles['SmallCell']))
         if len(rows)>1:
             t=Table(rows,colWidths=[222,66,80,44,98],repeatRows=1);t.setStyle(TableStyle([('FONTNAME',(0,0),(-1,-1),'Project'),('FONTSIZE',(0,0),(-1,-1),8),('BACKGROUND',(0,0),(-1,0),colors.HexColor('#e6eff0')),('LINEBELOW',(0,0),(-1,-1),.4,colors.HexColor('#bacbd0')),('VALIGN',(0,0),(-1,-1),'TOP'),('TOPPADDING',(0,0),(-1,-1),4 if g['id']=='03' else 7),('BOTTOMPADDING',(0,0),(-1,-1),4 if g['id']=='03' else 7)]));story.append(t)
         story+=[Spacer(1,8),Paragraph('Date: __________________  Tool / method: ___________________________________',styles['BodyText']),Paragraph('Photo / trace reference: ___________________________________________________',styles['BodyText']),Paragraph('Notes, repeatability, condition and uncertainty: ______________________________',styles['BodyText']),Paragraph('_________________________________________________________________________',styles['BodyText']),Paragraph('Amber model geometry is assumed. Do not use estimates as your readings. Return raw values and units; do not round to match the model.',styles['SmallCell'])]
@@ -109,6 +115,9 @@ def build():
         Paragraph('Negative gap means interference. The assumed nut envelopes clear the cover, but real nut seats, formed metal, rear cavity and compressed foam remain unmeasured. A thicker backing plate also changes hub/adapter engagement and the cover landing.',styles['BodyText']),
         Paragraph('Kohler 1041504-2-F, page 7: the inner plate lies flat at the wall; the studs project at most 7/16 inch from the finished wall; the foam covers the opening; nuts stay behind the outer cover; its drain faces down. Page 8 requires appropriate adapters for engagement and seating. Current guide 1216755-2-A, steps 8-12, shows the same assembly order. Check the actual revision.',styles['BodyText']),
         Paragraph('Four separate questions remain: conceal all cuts; provide continuous supported foam landing; resolve surface-water seals and drainage; inspect concealed waterproofing through existing access. The current trial aperture conflicts with the assumed gasket path. Coverage alone is not a waterproof repair.',styles['BodyText'])]
+    free=depth.get('inner_plate_depth',{})
+    if free.get('overall_free_depth_mm') is not None:
+        story.append(Paragraph(f"Measured loose-part envelope: {free['overall_free_depth_mm']:g} mm from uncompressed foam back to frontmost metal, with approximately {free['free_foam_thickness_mm']:g} mm free foam thickness and {free['representative_band_width_mm']:g} mm representative band width. This free-state plate intersects the assumed cover; actual compression and local cavity geometry must be checked before judging installed fit.",styles['BodyText']))
     r=depth['rough_in'];lo,hi=r['nominal_bare_upper_tip_from_tile_mm']
     story += [PageBreak(),Paragraph('Control depth / diagnostic follow-up',styles['ProjectTitle']),
         Paragraph('The user confirms excessive stud projection and reports rear bolt contact with wood. Trim studs thread into the valve; they do not need wood anchorage. Identify the same rear fasteners, framing/blocking and usable travel before selecting a remedy.',styles['BodyText']),

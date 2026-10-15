@@ -41,14 +41,14 @@ def analyze_depth(d, manifest):
         cases[key]={'label':label,'cover_rim_z_mm':rim,'ranges_z_mm':ranges,'studs':studs,'collisions':collisions,
             'model_verdict':'FAIL' if any(c['model_result']=='FAIL' for c in collisions) else 'NO_REPORTED_SOLID_INTERSECTION',
             'physical_fit':'UNRESOLVED','captured_hardware_adjusted':False,
-            'gasket_thickness_basis':'uncompressed placeholder; assembled compression and contact are unknown'}
+            'gasket_thickness_basis':'Approximate user-measured free foam thickness where accepted; assembled compression and contact remain unknown'}
     return {'revision':d['revision'],'units':'mm','datum':'Intact-stone fitted reference plane Z=0; +Z toward shower',
         'purpose':'Explain why the prior seated-cover visualization is not an assemblable repair',
-        'cases':cases,'rough_in':analyze_rough_in(d),'factory_guide':{'source':'SRC-KOHLER-OLD-GUIDE p7; p8 adapter check; current guide steps8-12',
+        'cases':cases,'inner_plate_depth':d.get('inner_plate_depth',{}),'rough_in':analyze_rough_in(d),'factory_guide':{'source':'SRC-KOHLER-OLD-GUIDE p7; p8 adapter check; current guide steps8-12',
             'stud_max_from_finished_wall_mm':11.1125,'datum_confirmed_in_text':'finished wall, not front of yellow plate',
             'sequence':['Studs thread into valve','Inner plate and rear foam seat at finished wall','Nuts secure inner plate behind cover','Outer cover goes over inner plate with drain down','Handle assemblies secure cover via inner-plate hubs; correct adapters engage valve'],
             'applicability':'Applicable arrangement reference; actual installed revision and adjustment range must be checked. Added backing plate is not a manufacturer-approved detail.'},
-        'limits':['All current Z values are conditional scan estimates or disclosed shape assumptions; no physical readings accepted.',
+        'limits':['Accepted loose-part free depths constrain the envelope only. Installed depths remain conditional scan estimates and disclosed placement assumptions.',
             'Foam compression, rear cavity shape, nut seats, valve collars and handle engagement remain unmeasured.',
             'A positive geometric gap is not a physical fit, support or water-performance pass.',
             'The captured scan, stud tip landmarks and valve pose remain unchanged. No shortening or relocation is specified.']}

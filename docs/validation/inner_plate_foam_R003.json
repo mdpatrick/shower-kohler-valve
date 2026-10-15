@@ -1,0 +1,46 @@
+{
+  "revision": "R003",
+  "reported_on": "2026-10-14",
+  "scope": "accepted free foam/plate readings and regenerated provisional geometry; not physical fit",
+  "import": {
+    "accepted_raw_ids": [
+      "M05-T",
+      "M05-B",
+      "M04-O"
+    ],
+    "conflicts": [],
+    "total_accepted_raw_readings": 10,
+    "approximate": [
+      "M05-T",
+      "M05-B"
+    ],
+    "not_derived_as_measurements": [
+      "M04-T",
+      "M04-D",
+      "M05-W"
+    ]
+  },
+  "geometry": {
+    "free_overall_envelope_mm": 15.44,
+    "free_foam_approx_mm": 6,
+    "display_metal_extent_mm": 9.44,
+    "datum_limit": "Display metal origin provisionally at foam backing; rear metal lands and local profile unknown.",
+    "primary_transform_and_landmarks_unchanged": true,
+    "stud_tips_and_assumed_cover_cavity_unchanged": true,
+    "inner_plate_intersects_assumed_cover_in_free_state": true,
+    "installed_compression_mm": null
+  },
+  "checks": {
+    "automated_tests": 25,
+    "automated_result": "PASS",
+    "cad_export_checks": 5,
+    "saved_scene_reopened": "PASS - docs/validation/scene_state_check.json",
+    "integrity_with_committed_scan_bytes": "PASS - docs/validation/latest_integrity.json",
+    "pdf_render_review": "24 pages inspected; final worksheet pages 4/5 and manual page 7 re-rendered after wording update; no overlap or clipping",
+    "guide": "R003, 10 recorded readings, 35 remaining inputs; 320 px and 736 px layouts checked; depth/minimum-band selectors verified; browser errors empty",
+    "synthetic_measurements_imported": false
+  },
+  "physical_fit": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN",
+  "installed_water_test": "NOT PERFORMED"
+}

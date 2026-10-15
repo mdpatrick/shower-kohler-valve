@@ -28,6 +28,17 @@ class SnapshotTests(unittest.TestCase):
         np.testing.assert_allclose(B@np.array([100,60,4,1]),[.1,-.004,.06,1],atol=1e-12)
         np.testing.assert_allclose(np.array(reg['raw_to_blender_m']),B@T,atol=1e-12)
 
+    def test_free_plate_envelope_matches_measurement_without_assuming_compression(self):
+        records={m['id']:m for m in json.loads((ROOT/'canon/measurements.json').read_text())['measurements'] if m['status']=='user-confirmed'}
+        if 'M04-O' not in records:self.skipTest('No free-depth measurement')
+        report=json.loads((ROOT/'deliverables/current/analysis/depth_stack.json').read_text())
+        for case in report['cases'].values():
+            ranges=case['ranges_z_mm']
+            self.assertAlmostEqual(ranges['PLATE-INNER'][1]-ranges['GASKET-01'][0],records['M04-O']['value_mm'],places=5)
+            self.assertAlmostEqual(ranges['GASKET-01'][1]-ranges['GASKET-01'][0],records['M05-T']['value_mm'],places=5)
+        self.assertIsNone(report['inner_plate_depth']['installed_foam_thickness_mm'])
+        self.assertNotIn('M04-D',records)
+
     def test_dxf_has_no_cuttable_labels(self):
         doc=ezdxf.readfile(ROOT/'deliverables/current/cad/CUSTOM-01_DRAFT_NOT_FOR_FABRICATION.dxf')
         self.assertEqual(doc.units,4)

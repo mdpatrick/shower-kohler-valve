@@ -1,23 +1,23 @@
-# Measured inner-plate update — R002
+# Measured inner-plate update — R003
 
-**The prior seated-cover assembly is rejected: unchanged stud envelopes intersect the assumed cover. The review now shows the depth conflict explicitly. No repair is selected. All geometry is DRAFT / NOT FOR FABRICATION.** Seven physical plate readings are accepted, with one derived upper-opening position. Dry fit, fabrication approval, incoming-part inspection and installed water testing remain unperformed.
+**The prior seated-cover assembly is rejected: unchanged stud envelopes intersect the assumed cover. The review now shows the depth conflict explicitly. No repair is selected. All geometry is DRAFT / NOT FOR FABRICATION.** Ten physical plate/foam readings are accepted, with one derived upper-opening position. Dry fit, fabrication approval, incoming-part inspection and installed water testing remain unperformed.
 
-Open the review with `./project review` from this directory. It serves only `deliverables/current` on localhost. Use the static illustrated views if WebGL is unavailable. The eight highlighted measurement groups include raw-reading fields and a JSON download; filling the page saves in that browser only and does not change CAD.
+Open the review with `./project review` from this directory. It serves only `deliverables/current` on localhost. Use the static illustrated views if WebGL is unavailable. The eleven measurement groups include raw-reading fields and a JSON download; filling the page saves in that browser only and does not change CAD.
 
 | Open or read | Repository path |
 |---|---|
 | Local HTML review | `deliverables/current/review/index.html` (launch through `./project review`) |
-| Blender inspection workspace | `deliverables/current/blender/installation_R002_DRAFT.blend` |
-| Eleven-page tailored worksheet | `deliverables/current/drawings/measurement_worksheet_R002.pdf` |
+| Blender inspection workspace | `deliverables/current/blender/installation_R003_DRAFT.blend` |
+| Eleven-page tailored worksheet | `deliverables/current/drawings/measurement_worksheet_R003.pdf` |
 | Conditional fit and coverage results | `deliverables/current/analysis/checks.json` |
 | Contractor inspection/adjustment schedule | `deliverables/current/analysis/contractor_schedule.json` |
-| Draft repair sequence | `deliverables/current/manual/index.html` and `repair_manual_R002_DRAFT.pdf` |
-| Draft profile drawing / calibrated tiled template | `deliverables/current/drawings/candidate_drawing_R002_DRAFT.pdf` / `profile_template_R002_DRAFT.pdf` |
+| Draft repair sequence | `deliverables/current/manual/index.html` and `repair_manual_R003_DRAFT.pdf` |
+| Draft profile drawing / calibrated tiled template | `deliverables/current/drawings/candidate_drawing_R003_DRAFT.pdf` / `profile_template_R003_DRAFT.pdf` |
 | Separate reference STEP, candidate STEP/DXF, assembly STEP | `deliverables/current/cad/` |
 | Snapshot hashes, source hash, readiness | `deliverables/current/manifest.json` |
 | Reviewer entry point | `docs/downstream_audit_prompt.md` |
 
-The user identified **K-T14489-4-BN**, **K-T14491-4-BN**, **K-2973-KS-NA** and the separate **K-737-K-NA** diverter. See [the parts record](docs/verified_kohler_parts.md). On 2026-10-14 the user confirmed **nothing has changed since capture**: piping, valve pose, stud adjustment and wall opening remain as captured by user report. See [the current-state record](docs/decisions/current_state_2026-10-14.md). Some inner-plate dimensions are now measured; installed valve depths, gasket geometry and the installed hardware revision remain unverified.
+The user identified **K-T14489-4-BN**, **K-T14491-4-BN**, **K-2973-KS-NA** and the separate **K-737-K-NA** diverter. See [the parts record](docs/verified_kohler_parts.md). On 2026-10-14 the user confirmed **nothing has changed since capture**: piping, valve pose, stud adjustment and wall opening remain as captured by user report. See [the current-state record](docs/decisions/current_state_2026-10-14.md). Some inner-plate dimensions are now measured; the free plate depth and approximate foam section are recorded; installed valve depths, gasket footprint/compression and hardware revision remain unverified.
 
 Evidence priority is feature-specific: accepted physical observations govern the actual installation; the wall/valve scan governs captured spatial relationships; applicable manufacturer dimensions establish nominal design; locally credible secondary scan features can corroborate; visible assumptions fill remaining gaps. Neither plate scan is used for dimensional registration. Their severe reflective distortion does not justify flattening or averaging them into the primary scan.
 
@@ -29,9 +29,11 @@ The separate lower diverter is now represented by a nominal 98.425 mm trim envel
 
 Earlier depth inquiry: the user confirms excessive stud projection and reports rear bolt contact with wood. These are qualitative observations; no numerical readings were accepted. A conditional comparison of the upper scan tip with the valve specification also flags rough-in depth for checking, subject to bare-stem identification. See [the observation and research record](docs/physical_checks/depth_inquiry_2026-10-14.json). This discussion does not select stud cutting, wood drilling or valve relocation.
 
-R002 uses the actual front-face photo: 130.35 mm width, 6.5 inch height, 48.46 mm upper opening, 18 mm top gap, 5.66 mm SW hole, 106.39 mm nearest-edge diagonal gap and 11.71 mm NE hole-edge-to-rim gap. The NE diameter and lower large opening remain unmeasured. Center spacing 112.05 mm is conditional on equal 5.66 mm mounting holes. The metal outline is rounded rectangular; corner geometry, formed depth and installed placement remain provisional. Front metal dimensions do not establish rear gasket dimensions. See [the measurement record](docs/physical_checks/inner_plate_2026-10-14.json).
+The prior R002 update used the actual front-face photo: 130.35 mm width, 6.5 inch height, 48.46 mm upper opening, 18 mm top gap, 5.66 mm SW hole, 106.39 mm nearest-edge diagonal gap and 11.71 mm NE hole-edge-to-rim gap. The NE diameter and lower large opening remain unmeasured. Center spacing 112.05 mm is conditional on equal 5.66 mm mounting holes. The metal outline is rounded rectangular; corner geometry, formed depth and installed placement remain provisional. Front metal dimensions do not establish rear gasket dimensions. See [the measurement record](docs/physical_checks/inner_plate_2026-10-14.json).
 
-Next: complete Check 11 and read Depth & sealing in the review, then take Checks 01–08. Prioritize Checks 04–07 and the new focused Check 10 for inner formed depth, foam, each local cover cavity, stud projection and control-tip identity/depth. The most consequential readings are control spacing, inner plate datums and opening edges, actual gasket path, outer trim registration/cavity, and separate stud depths. Describe differences from the amber reference shapes instead of trying to make readings match them. Check 09 assigns inaccessible plumbing, backing and neighboring handle/tool-access observations to the installer. Report only new changes after the current-state confirmation. Return new readings using R002; reconcile any older response before importing; the new M10 readings are diagnostic and cannot move the valve without tip-identity review. This depth supplement preceded the seven plate readings accepted in R002.
+R003 also records 15.44 mm from uncompressed rear foam to frontmost metal, approximately 6 mm free foam thickness and approximately 6 mm representative band width. The model matches that free envelope with its metal origin provisionally at the foam backing. The approximately 9.4 mm difference is not sheet thickness or an accepted rear-metal-land depth. The minimum band width, rear footprint, installed compression, local nut seats and actual cover cavity remain unmeasured. See [the free-depth record](docs/physical_checks/inner_plate_foam_2026-10-14.json).
+
+Next: complete Check 11 and read Depth & sealing in the review, then take Checks 01–08. Prioritize Checks 04–07 and the new focused Check 10 for inner formed depth, foam, each local cover cavity, stud projection and control-tip identity/depth. The most consequential readings are control spacing, inner plate datums and opening edges, actual gasket path, outer trim registration/cavity, and separate stud depths. Describe differences from the amber reference shapes instead of trying to make readings match them. Check 09 assigns inaccessible plumbing, backing and neighboring handle/tool-access observations to the installer. Report only new changes after the current-state confirmation. Return new readings using R003; reconcile any older response before importing; the new M10 readings are diagnostic and cannot move the valve without tip-identity review. The scan registration and captured hardware are unchanged.
 
 ```sh
 ./project doctor

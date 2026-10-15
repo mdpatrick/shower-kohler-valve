@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R002",
+  "revision": "R003",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "units": "mm",
   "frame": "installed",
@@ -93,6 +93,24 @@
         "other hole diameters",
         "fit or waterproofing"
       ]
+    },
+    {
+      "id": "OBS-INNER-PLATE-FOAM-01",
+      "date": "2026-10-14",
+      "source": "SRC-USER-INNER-PLATE-FOAM-01",
+      "status": "user-confirmed free-state measurements; foam dimensions approximate",
+      "overall_depth_mm": 15.44,
+      "overall_contacts": "uncompressed rear foam surface to frontmost metal",
+      "foam_free_thickness_approx_mm": 6,
+      "foam_band_width_approx_mm": 6,
+      "record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
+      "not_established": [
+        "minimum band width",
+        "rear foam footprint and continuous landing",
+        "installed compression",
+        "sheet thickness, rear metal datum and nut seats",
+        "physical fit or water performance"
+      ]
     }
   ],
   "diagnostic_control_depths_mm": {},
@@ -166,20 +184,30 @@
       "mounting-hole vertical datums",
       "outline corner shape/radii",
       "rear gasket footprint",
-      "all plate Z dimensions"
+      "sheet thickness, rear metal datum, rim and nut-seat depths",
+      "installed foam compression"
     ],
     "placement_note": "No plate photograph or measurement changes the primary wall registration or captured hardware pose."
+  },
+  "inner_plate_depth": {
+    "overall_free_depth_mm": 15.44,
+    "free_foam_thickness_mm": 6,
+    "representative_band_width_mm": 6,
+    "installed_foam_thickness_mm": null,
+    "foam_backing_to_front_mm": 9.44,
+    "metal_datum_relation": "Foam backing versus rear metal contact lands is unmeasured.",
+    "display_basis": "Measured free overall envelope; metal origin provisionally equals foam backing. Remainder is approximate, not sheet thickness or an accepted rear-land datum depth."
   },
   "assumptions": {
     "inner_width_mm": 130.35,
     "inner_height_mm": 165.1,
     "inner_sheet_thickness_mm": 1.5,
-    "inner_formed_depth_mm": 5,
+    "inner_formed_depth_mm": 9.44,
     "hub_outer_diameter_mm": 32,
     "hub_bore_mm": 18,
     "hub_length_mm": 18,
     "gasket_width_mm": 6,
-    "gasket_free_thickness_mm": 3,
+    "gasket_free_thickness_mm": 6,
     "outer_shell_thickness_mm": 1.5,
     "outer_cavity_depth_mm": 14.5,
     "drain_width_mm": 4,
@@ -272,7 +300,10 @@
     "M11-SWD",
     "M11-G",
     "M11-R",
-    "M11-UC"
+    "M11-UC",
+    "M05-T",
+    "M05-B",
+    "M04-O"
   ],
   "scale_status": "inferred conditional scale; NOT physically calibrated",
   "secondary_scans_used_to_fit": false,

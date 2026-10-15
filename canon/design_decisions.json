@@ -1,5 +1,5 @@
 {
-  "revision": "R002",
+  "revision": "R003",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "candidate_identity": {
     "trim": "K-T14489-4-BN",
@@ -112,5 +112,16 @@
     },
     "keep_observed_hardware": true,
     "gasket": "free-thickness display is not installed compression"
+  },
+  "free_depth_update": {
+    "source": "OBS-INNER-PLATE-FOAM-01",
+    "replaced_display_free_envelope_mm": 8,
+    "accepted_free_envelope_mm": 15.44,
+    "foam_free_thickness_approx_mm": 6,
+    "display_metal_origin": "provisionally at foam backing; rear metal lands unmeasured",
+    "derived_display_metal_extent_mm": 9.44,
+    "derived_precision_note": "about 9.4 mm; depends on approximate foam thickness and aligned contacts; not accepted M04-D or sheet thickness",
+    "installed_compression": "unknown",
+    "captured_hardware_adjusted": false
   }
 }
