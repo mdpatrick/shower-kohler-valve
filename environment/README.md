@@ -13,6 +13,7 @@ git fsck --full
 PROJECT_PYTHON=/path/to/python3.12 ./scripts/setup.sh
 ./project ingest
 ./project build
+./project prepare-fit-trial
 ./project validate --git-objects
 ./project review
 ```
@@ -20,6 +21,8 @@ PROJECT_PYTHON=/path/to/python3.12 ./scripts/setup.sh
 `scripts/setup.sh` uses an existing `uv` executable and a Python 3.12 interpreter, creates only `.venv`, and installs the lock file's binary packages. On this machine the tested interpreter is `/Users/mdpatrick/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3`. It does not replace system Python or install applications. A new machine needs a compatible Blender installation and the fonts used by the PDF generator (`Arial.ttf` and `Arial Bold.ttf` under the macOS supplemental fonts directory, or an explicit source adaptation).
 
 No Downloads paths are used after initial copy. `ingest` checks repository ZIP hashes and safely extracts OBJ/MTL/texture relationships. `build` caches per-stage input/output hashes in ignored `build/stages.json`. Canon is input, never a build output. Changed generated files are preserved before regeneration. A source commit plus source-tree hash avoids a manifest depending on its own future commit.
+
+`build` reconstructs the base R005 evidence and historical diagnostic assembly. `prepare-fit-trial` then rebuilds the current FT01 parts, paired/exploded Blender views, documents and audit. Restoring only the base build does not test the current handoff. `scripts/verify_restore.py --bundle <path> --rebuild --report <receipt.json>` checks both paths in a separate checkout with a fresh environment, using locally cached locked packages; it also checks unchanged canon and the six regenerated STL geometries. Keep that receipt outside the bundle it verifies.
 
 `review` binds to `127.0.0.1:8765`, checks that the project page responds, then opens it. Use `PROJECT_REVIEW_PORT=8766 ./project review` for another port. The page has no CDN dependency. File-only opening retains static content, but browser security may prevent module/GLB loading; use the local launcher for interactive 3D.
 

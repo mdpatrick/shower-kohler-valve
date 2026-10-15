@@ -16,6 +16,8 @@ The [GP01 Pro review package](deliverables/current/gpt-pro-review/GP01/GPT_PRO_P
 
 [Recommended pair quote ZIP](deliverables/current/fabrication/fit-trial/FT01_recommended_T1524_quote.zip) · [3 mm alternative ZIP](deliverables/current/fabrication/fit-trial/FT01_plastic_T3000_quote.zip). Each ZIP contains only its two custom parts, drawings, shop notes and hashes. Send a vendor individual STEP/DXF for sheet cutting or STL for printing. All units are mm; order one main and one diverter, one thickness.
 
+[Prepared quote requests](docs/decisions/fabricator_inquiry_DRAFT.md) give separate metal and plastic/acrylic wording, finish and inspection questions, and a delivered-price/arrival comparison. They describe the current pair and have not been sent. Supply the destination and needed arrival date when actually requesting a quote; no vendor contact or purchase is authorized by the draft.
+
 ## Bring to the Kohler expert
 
 [Seven-page project handoff](deliverables/current/fabrication/fit-trial/project_handoff_FT01.pdf) · [dimensioned shop sheets](deliverables/current/fabrication/fit-trial/shop_drawings_FT01.pdf) · [A3 100% templates](deliverables/current/fabrication/fit-trial/full_size_templates_FT01.pdf) · [three-scene Blender file](deliverables/current/fabrication/fit-trial/escutcheon_fit_trial_FT01.blend).
