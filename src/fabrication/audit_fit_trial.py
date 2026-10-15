@@ -97,12 +97,12 @@ def audit():
                        'analytic_minimum_clearance_mm':clearance,'outside_vertices':int((distances<0).sum())})
 
     pdfs = {}
-    for name, count in [('project_handoff_FT01.pdf',7),('shop_drawings_FT01.pdf',2),('full_size_templates_FT01.pdf',2)]:
+    for name, count in [('project_handoff_FT01.pdf',7),('shop_drawings_FT01.pdf',2),('full_size_templates_FT01.pdf',2),('expert_visit_record_FT01.pdf',4)]:
         reader = PdfReader(OUT/name)
         assert len(reader.pages)==count
         text = '\n'.join(p.extract_text() or '' for p in reader.pages)
         assert 'FT01' in text and 'Permanent installation' in text
-        if name!='project_handoff_FT01.pdf':
+        if name in ['shop_drawings_FT01.pdf','full_size_templates_FT01.pdf']:
             for p in reader.pages:
                 assert abs(float(p.mediabox.width)-420*72/25.4)<.001
                 assert abs(float(p.mediabox.height)-297*72/25.4)<.001
@@ -122,6 +122,12 @@ def audit():
                      f'THROUGH DIAMETER {design["diverter"]["aperture_diameter_mm"]:.2f}']:
         assert expected in shop_text, 'Stale shop label: '+expected
     paper_profiles=check_paper_profiles(OUT,design)
+    from src.fabrication.field_record import validate_form
+    field_record=validate_form(OUT/'expert_visit_record_FT01.pdf',OUT/'field_record_schema.json')
+    blank=read(OUT/'field_record_blank.json');schema=read(OUT/'field_record_schema.json')
+    assert blank['values']=={n:f['default'] for n,f in schema['fields'].items()}
+    assert not blank['permanent_installation_release'] and blank['physical_fit']=='NOT PERFORMED'
+    assert blank['design_sha256_canonical_json']==schema['design_sha256_canonical_json']==hashlib.sha256(json.dumps(design,sort_keys=True,separators=(',',':')).encode()).hexdigest()
 
     packages = []
     for path in sorted(OUT.glob('*_quote.zip')):
@@ -154,7 +160,7 @@ def audit():
         checked+=1
     output={'revision':'FT01','status':'PASS_SOFTWARE_CHECKS_ONLY','parts':results,'analytic_capture_checks':checks,
       'capture_scope':report['geometric_check_scope'],'pdfs':pdfs,'paper_two_axis_100mm_bars':'PASS',
-      'paper_profile_dimensions':paper_profiles,
+      'paper_profile_dimensions':paper_profiles,'blank_field_record':field_record,
       'quote_packages':packages,'local_links_checked':checked,'Blender_saved_reopened':'PASS',
       'fresh_review_method':'Separate read-back script, independent analytic capsule area/distance; same agent, not a second reviewer.',
       'remaining_physical_risks':['Actual plate/control/adapter pose and axial engagement','Scan scale and surface error are not bounded',
@@ -164,7 +170,7 @@ def audit():
       'auditor_sha256':sha(Path(__file__)),'capture_mesh_sha256':sha(meshpath)}
     for path in [OUT/'audit.json',ROOT/'docs/validation/fit_trial_FT01.json']:
         path.parent.mkdir(parents=True,exist_ok=True);path.write_text(json.dumps(output,indent=2)+'\n')
-    print('FT01 fresh audit PASS: 6 STEP/STL/DXF sets, 3 analytic clearance states, 11 PDF pages, 2 quote packages; physical checks remain open.')
+    print('FT01 fresh audit PASS: 6 STEP/STL/DXF sets, 3 analytic clearance states, 15 PDF pages, blank interactive field record, 2 quote packages; physical checks remain open.')
 
 def check_paper_profiles(directory,design):
     """Read actual PDF drawing paths, independently of printed dimension labels.

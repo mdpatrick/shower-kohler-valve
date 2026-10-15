@@ -1,0 +1,819 @@
+{
+  "schema_version": 1,
+  "project_id": "shower-kohler-valve",
+  "design_revision": "FT01",
+  "record_revision": "FR01",
+  "design_sha256_canonical_json": "45d0fc0df258db6ef939ff3905239c4ee384a1151e60ea25a761703dc38e6635",
+  "purpose": "Blank field record; no evidence or release is created by generating or completing this form.",
+  "result_semantics": {
+    "NOT RECORDED": "No result supplied",
+    "PASS": "Observer found the stated check satisfied; method and evidence required",
+    "FAIL": "Observed failure; record the conflict and dependent work to stop",
+    "UNRESOLVED": "Could not verify, including hidden interfaces",
+    "N/A": "Observer must explain why the check does not apply"
+  },
+  "fields": {
+    "record_id": {
+      "label": "Record ID / date",
+      "page": 1,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Record ID / date"
+    },
+    "observer": {
+      "label": "Observer / company",
+      "page": 1,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observer / company"
+    },
+    "order_reference": {
+      "label": "Vendor / order reference",
+      "page": 1,
+      "check_id": "P15",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Vendor / order reference"
+    },
+    "part_ids": {
+      "label": "Received part IDs / revision",
+      "page": 1,
+      "check_id": "P15",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Received part IDs / revision"
+    },
+    "material_stock": {
+      "label": "Material / thickness / finish ordered",
+      "page": 1,
+      "check_id": "P15",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Material / thickness / finish ordered"
+    },
+    "P16_main_od": {
+      "label": "A: main outside diameter",
+      "page": 1,
+      "check_id": "P16",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "A: main outside diameter"
+    },
+    "P16_main_width": {
+      "label": "B: opening width",
+      "page": 1,
+      "check_id": "P16",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "B: opening width"
+    },
+    "P16_main_height": {
+      "label": "C: opening height",
+      "page": 1,
+      "check_id": "P16",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "C: opening height"
+    },
+    "P16_div_od": {
+      "label": "D: diverter outside diameter",
+      "page": 1,
+      "check_id": "P16",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "D: diverter outside diameter"
+    },
+    "P16_div_id": {
+      "label": "E: diverter opening",
+      "page": 1,
+      "check_id": "P16",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "E: diverter opening"
+    },
+    "P16_thickness": {
+      "label": "T: main / diverter min-max",
+      "page": 1,
+      "check_id": "P16",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "T: main / diverter min-max"
+    },
+    "P17_condition": {
+      "label": "P17  Flatness method/readings; sharp edges, burrs, distortion or finish defects; photo references",
+      "page": 1,
+      "check_id": "P17",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P17  Flatness method/readings; sharp edges, burrs, distortion or finish defects; photo references"
+    },
+    "P15_result": {
+      "label": "P15: identity/material result",
+      "page": 1,
+      "check_id": "P15",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "P15: identity/material result"
+    },
+    "P16_result": {
+      "label": "P16: dimensions result",
+      "page": 1,
+      "check_id": "P16",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "P16: dimensions result"
+    },
+    "P17_result": {
+      "label": "P17: condition result",
+      "page": 1,
+      "check_id": "P17",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "P17: condition result"
+    },
+    "P01_paper": {
+      "label": "P01  If paper used: X / Y readings for each 100 mm bar, on each of the TWO A3 sheets; print result or N/A",
+      "page": 1,
+      "check_id": "P01",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P01  If paper used: X / Y readings for each 100 mm bar, on each of the TWO A3 sheets; print result or N/A"
+    },
+    "record_page2": {
+      "label": "Record ID / date / observer",
+      "page": 2,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Record ID / date / observer"
+    },
+    "guide_identity": {
+      "label": "Applicable guide revision / actual part identity",
+      "page": 2,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Applicable guide revision / actual part identity"
+    },
+    "P10_U_parts": {
+      "label": "U - upper volume: adapter / screw / hub",
+      "page": 2,
+      "check_id": "P10",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "U - upper volume: adapter / screw / hub"
+    },
+    "P10_U_factory": {
+      "label": "Factory-only fit result",
+      "page": 2,
+      "check_id": "P10",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Factory-only fit result"
+    },
+    "P10_L_parts": {
+      "label": "L - lower temperature: adapter / screw / hub",
+      "page": 2,
+      "check_id": "P10",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "L - lower temperature: adapter / screw / hub"
+    },
+    "P10_L_factory": {
+      "label": "Factory-only fit result",
+      "page": 2,
+      "check_id": "P10",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Factory-only fit result"
+    },
+    "P10_D_parts": {
+      "label": "D - diverter: adapter / screw / hub",
+      "page": 2,
+      "check_id": "P10",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "D - diverter: adapter / screw / hub"
+    },
+    "P10_D_factory": {
+      "label": "Factory-only fit result",
+      "page": 2,
+      "check_id": "P10",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Factory-only fit result"
+    },
+    "P10_factory_evidence": {
+      "label": "P10  Actual seating/engagement observations, method and photos; failed/hidden interfaces; required adapter correction",
+      "page": 2,
+      "check_id": "P10",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P10  Actual seating/engagement observations, method and photos; failed/hidden interfaces; required adapter correction"
+    },
+    "P09_before": {
+      "label": "Before: NE / SW projection + H / G",
+      "page": 2,
+      "check_id": "P09",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Before: NE / SW projection + H / G"
+    },
+    "P09_after": {
+      "label": "After: NE / SW projection + H / G",
+      "page": 2,
+      "check_id": "P09",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "After: NE / SW projection + H / G"
+    },
+    "P09_adjustment": {
+      "label": "P09  Rear contact, chosen remedy, retained thread engagement, nut/cover clearance, method and photo refs.",
+      "page": 2,
+      "check_id": "P09",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P09  Rear contact, chosen remedy, retained thread engagement, nut/cover clearance, method and photo refs."
+    },
+    "P09_result": {
+      "label": "P09: actual rod/nut fit",
+      "page": 2,
+      "check_id": "P09",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "P09: actual rod/nut fit"
+    },
+    "expert_controls": {
+      "label": "Expert: isolation / operation / temperature checks",
+      "page": 2,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Expert: isolation / operation / temperature checks"
+    },
+    "record_page3": {
+      "label": "Record ID / date / observer",
+      "page": 3,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Record ID / date / observer"
+    },
+    "trial_configuration": {
+      "label": "Actual parts / revision / stock / diverter size",
+      "page": 3,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Actual parts / revision / stock / diverter size"
+    },
+    "stack_main": {
+      "label": "Main: t / b / total added height",
+      "page": 3,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Main: t / b / total added height"
+    },
+    "stack_div": {
+      "label": "Diverter: t / b / total added height",
+      "page": 3,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Diverter: t / b / total added height"
+    },
+    "pair_gap": {
+      "label": "Smallest actual gap between backings",
+      "page": 3,
+      "check_id": "P12",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Smallest actual gap between backings"
+    },
+    "P03_main_borders": {
+      "label": "Main exposed border: top / right / bottom / left",
+      "page": 3,
+      "check_id": "P03",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Main exposed border: top / right / bottom / left"
+    },
+    "P03_div_borders": {
+      "label": "Diverter border: top / right / bottom / left",
+      "page": 3,
+      "check_id": "P03",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Diverter border: top / right / bottom / left"
+    },
+    "P02_pose_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P02",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P02_pose_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P02",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P03_retention_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P03",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P03_retention_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P03",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P04_coverage_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P04",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P04_coverage_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P04",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P05_support_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P05",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P05_support_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P05",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P06_deflection_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P06",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P06_deflection_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P06",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P07_contact_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P07",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P07_contact_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P07",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P08_seating_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P08",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P08_seating_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P08",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P10_complete_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P10",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P10_complete_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P10",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P11_drain_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P11",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P11_drain_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P11",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P12_travel_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P12",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P12_travel_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P12",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "P13_P14_service_status": {
+      "label": "Result",
+      "page": 3,
+      "check_id": "P13/P14",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "Result"
+    },
+    "P13_P14_service_evidence": {
+      "label": "Observation / photo ref.",
+      "page": 3,
+      "check_id": "P13/P14",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Observation / photo ref."
+    },
+    "trial_conflicts": {
+      "label": "Conflicts / incomplete checks / photo index / exact revision changes needed (attach more pages if needed)",
+      "page": 3,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Conflicts / incomplete checks / photo index / exact revision changes needed (attach more pages if needed)"
+    },
+    "record_page4": {
+      "label": "Record ID / date / observer",
+      "page": 4,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Record ID / date / observer"
+    },
+    "repair_drawing": {
+      "label": "Final part / repair drawing revision(s)",
+      "page": 4,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Final part / repair drawing revision(s)"
+    },
+    "support_detail": {
+      "label": "P05/P06  Selected support / load path / local rebuilding; detail/sketch/photo refs.; how removal remains possible",
+      "page": 4,
+      "check_id": "P05/P06",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P05/P06  Selected support / load path / local rebuilding; detail/sketch/photo refs.; how removal remains possible"
+    },
+    "seal_detail": {
+      "label": "P07/P11  Actual seal-contact detail for BOTH valves, factory gasket condition, product/primer and preserved drain",
+      "page": 4,
+      "check_id": "P07/P11",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P07/P11  Actual seal-contact detail for BOTH valves, factory gasket condition, product/primer and preserved drain"
+    },
+    "P18_product": {
+      "label": "P18  Product / TDS revision / lot; stone non-staining and substrate compatibility evidence; selected joint detail",
+      "page": 4,
+      "check_id": "P18",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P18  Product / TDS revision / lot; stone non-staining and substrate compatibility evidence; selected joint detail"
+    },
+    "P18_application": {
+      "label": "Applied date/time + temperature / humidity",
+      "page": 4,
+      "check_id": "P18",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Applied date/time + temperature / humidity"
+    },
+    "P18_exposure": {
+      "label": "Required cure / earliest water exposure + source",
+      "page": 4,
+      "check_id": "P18",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Required cure / earliest water exposure + source"
+    },
+    "P18_result": {
+      "label": "P18: cure conditions met",
+      "page": 4,
+      "check_id": "P18",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "P18: cure conditions met"
+    },
+    "P19_status": {
+      "label": "P19: supply / valve leak test",
+      "page": 4,
+      "check_id": "P19",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "P19: supply / valve leak test"
+    },
+    "P20_status": {
+      "label": "P20: shower spray entry test",
+      "page": 4,
+      "check_id": "P20",
+      "type": "choice",
+      "default": "NOT RECORDED",
+      "options": [
+        "NOT RECORDED",
+        "PASS",
+        "FAIL",
+        "UNRESOLVED",
+        "N/A"
+      ],
+      "tooltip": "P20: shower spray entry test"
+    },
+    "P19_observation": {
+      "label": "P19  Date / observer / isolation or operating state / method / duration / accessible observation points / result / photos",
+      "page": 4,
+      "check_id": "P19",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P19  Date / observer / isolation or operating state / method / duration / accessible observation points / result / photos"
+    },
+    "P20_observation": {
+      "label": "P20  After verified cure: date / observer / spray method / duration / access points / moisture observations / photos",
+      "page": 4,
+      "check_id": "P20",
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "P20  After verified cure: date / observer / spray method / duration / access points / moisture observations / photos"
+    },
+    "expert_disposition": {
+      "label": "Expert assessment: remaining defects, stop conditions, remediation or further checks; accepted revision and rationale",
+      "page": 4,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Expert assessment: remaining defects, stop conditions, remediation or further checks; accepted revision and rationale"
+    },
+    "expert_name": {
+      "label": "Expert name / date (assessment attribution)",
+      "page": 4,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Expert name / date (assessment attribution)"
+    },
+    "owner_record": {
+      "label": "Owner received record / date / next action",
+      "page": 4,
+      "check_id": null,
+      "type": "text",
+      "default": "",
+      "options": null,
+      "tooltip": "Owner received record / date / next action"
+    }
+  },
+  "interpretation": "Preserve raw values and attach dated evidence. Agent review must reconcile these with the current design; no automatic acceptance or canonical import."
+}

@@ -1,0 +1,44 @@
+{
+  "revision": "FT01",
+  "record_revision": "FR01",
+  "date": "2026-10-15",
+  "status": "PASS_SOFTWARE_AND_VISUAL_CHECKS_ONLY",
+  "purpose": "Blank expert visit record and current handoff integration; no new physical observations.",
+  "form_checks": {
+    "pages": 4,
+    "fields": 75,
+    "widgets": 75,
+    "field_tree_and_widget_values": "PASS",
+    "appearance_streams": "PASS",
+    "values": "BLANK_DEFAULTS"
+  },
+  "synthetic_round_trip": {
+    "pages": 4,
+    "fields": 75,
+    "widgets": 75,
+    "field_tree_and_widget_values": "PASS",
+    "appearance_streams": "PASS",
+    "values": "TEST_VALUES_ROUND_TRIPPED"
+  },
+  "negative_test": "A visible page widget missing from the canonical form-field tree is rejected.",
+  "parameter_change_test": "PASS: unpublished changed CAD design propagates to record labels and design hash; quote ZIPs exclude field records.",
+  "visual_review": {
+    "resolution_long_edge_px": 1500,
+    "record_pages": 4,
+    "synthetic_filled_pages": 4,
+    "updated_guide_page": 7,
+    "other_final_pages": "13 final pages pixel-identical to inspected renders, including record pages 2-4; no clipped default or test values."
+  },
+  "pdf_fields_default": "All 75 entries are blank or NOT RECORDED. No preselected PASS.",
+  "paper_instruction_correction": "Current template is two A3 sheets, not four historical sheets.",
+  "CAD_changed": false,
+  "physical_fit": "NOT PERFORMED",
+  "permanent_installation_release": false,
+  "files_sha256": {
+    "deliverables/current/fabrication/fit-trial/expert_visit_record_FT01.pdf": "230825edf73cdc7bee8eaabe37105a1989050744fe2699cc035458a80566c900",
+    "deliverables/current/fabrication/fit-trial/field_record_schema.json": "40fbb11c95b0ea62688c70aaa42b835b222f2fa8090ffaeea8958aded9d1f9c4",
+    "deliverables/current/fabrication/fit-trial/field_record_blank.json": "2ba638669a9ab0004c73ada0908707bfe8eaa2ed27f19632aa02efdafac90ed6",
+    "src/fabrication/field_record.py": "ca5ca3c196b46b51603f0f68d057ec046d31a0ece243c30424d4be9e5b3c818d",
+    "tests/test_field_record.py": "98cc246b0d051dad658592f77acc48de95cb80773b9bf2f42633e7c0b4c8fd99"
+  }
+}

@@ -102,15 +102,19 @@
   "pdfs": {
     "project_handoff_FT01.pdf": {
       "pages": 7,
-      "sha256": "931064b7fccfa1bc02b46bf747047e9df0dafb0a55958dc5bd41737ef826f32f"
+      "sha256": "cdc0497507a6bf4fd024e8cfe832d18b0b9b2ff2112742405388d0b5c87197f4"
     },
     "shop_drawings_FT01.pdf": {
       "pages": 2,
-      "sha256": "38d57136d3d38f10c3b52c102805a31787540a5a09c93ae78e46163b8ad1de92"
+      "sha256": "7b4764364c3058964dee352d519d65ebef985efdbd876954e16f40e22352728e"
     },
     "full_size_templates_FT01.pdf": {
       "pages": 2,
-      "sha256": "81cbd5d8ae33c4e88fa38f725e3266b2345ad5a5bfc33a0c8fb2b4dc323bb661"
+      "sha256": "24dafb030b6c5b4912c5bda5d87d34786f15ff6f6d8a8cac206afac675dbf267"
+    },
+    "expert_visit_record_FT01.pdf": {
+      "pages": 4,
+      "sha256": "230825edf73cdc7bee8eaabe37105a1989050744fe2699cc035458a80566c900"
     }
   },
   "paper_two_axis_100mm_bars": "PASS",
@@ -160,21 +164,29 @@
       ]
     ]
   },
+  "blank_field_record": {
+    "pages": 4,
+    "fields": 75,
+    "widgets": 75,
+    "field_tree_and_widget_values": "PASS",
+    "appearance_streams": "PASS",
+    "values": "BLANK_DEFAULTS"
+  },
   "quote_packages": [
     {
       "file": "FT01_plastic_T3000_quote.zip",
       "members": 9,
-      "sha256": "d5be07341d13b753a6c5044482cfc9461bd27742deb65685c3c258e9504035b5",
+      "sha256": "4dae0912753cc998c664318751fb76dec4a487cfb36a56824bb71ec33b016f83",
       "private_scan_or_photo_included": false
     },
     {
       "file": "FT01_recommended_T1524_quote.zip",
       "members": 9,
-      "sha256": "477109941f2a36da730543bf6d8fae0fbace911062b3a2dcb084f4d790343244",
+      "sha256": "9e3ecb4fbfe6e56d4c680717fedc2f85acb88199fee4de9c3d3c3a04834ae542",
       "private_scan_or_photo_included": false
     }
   ],
-  "local_links_checked": 31,
+  "local_links_checked": 34,
   "Blender_saved_reopened": "PASS",
   "fresh_review_method": "Separate read-back script, independent analytic capsule area/distance; same agent, not a second reviewer.",
   "remaining_physical_risks": [
@@ -188,6 +200,6 @@
   ],
   "physical_fit": "NOT PERFORMED",
   "permanent_installation_release": false,
-  "auditor_sha256": "efa61ca6ea1a98114d33d6699368ee6030b259000cfb97ea97401312513c310a",
+  "auditor_sha256": "a199edb6a340f4970a785798ff93de3f56f7c267754982b242c8b6443a59d413",
   "capture_mesh_sha256": "2d2ebb65cab8bd23c7b94b23e57125c7388d4080c364f837e9f3a29776dfc625"
 }

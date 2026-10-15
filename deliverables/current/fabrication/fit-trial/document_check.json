@@ -2,7 +2,8 @@
   "pdf_page_counts": {
     "project_handoff_FT01.pdf": 7,
     "shop_drawings_FT01.pdf": 2,
-    "full_size_templates_FT01.pdf": 2
+    "full_size_templates_FT01.pdf": 2,
+    "expert_visit_record_FT01.pdf": 4
   },
   "paragraphs_within_page_bounds": true,
   "shop_and_template_units": "mm",
@@ -46,5 +47,13 @@
     "scenario_count": 3,
     "opening_extra_min": 10.862718964078404
   },
-  "visual_review": "PASS: all 11 pages rendered at 1500 px and individually inspected; no clipped text, overlaps or missing diagrams. Shop and template profile paths independently checked in PDF page coordinates."
+  "field_record": {
+    "pages": 4,
+    "fields": 75,
+    "widgets": 75,
+    "field_tree_and_widget_values": "PASS",
+    "appearance_streams": "PASS",
+    "values": "BLANK_DEFAULTS"
+  },
+  "visual_review": "PASS: final 15 pages rendered at 1500 px. New record pages 1-4 and updated guide page 7 inspected; unchanged pages matched inspected prior renders. Synthetic filled record pages 1-4 inspected."
 }

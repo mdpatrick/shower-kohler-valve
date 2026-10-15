@@ -76,6 +76,12 @@ class ParameterTests(unittest.TestCase):
         for value in ['Ø218 / diverter Ø122','T2000 is 2.000 mm','+1.200 mm','0.75 mm','FT01_recommended_T2000_quote.zip']:
             self.assertIn(value,page)
         self.assertNotIn('[[',page)
+        record=''.join(p.extract_text() for p in PdfReader(out/'expert_visit_record_FT01.pdf').pages)
+        for value in ['A 218; B 116.85; C 151.60; D 122 (fallback 118); E 78',
+                      'T2000 (2.000 mm)', 'T3200 (3.200 mm)']:
+            self.assertIn(value,record)
+        blank=json.loads((out/'field_record_blank.json').read_text())
+        self.assertEqual(blank['design_sha256_canonical_json'],hashlib.sha256(json.dumps(self.variant,sort_keys=True,separators=(',',':')).encode()).hexdigest())
         for base,case in zip(json.loads((CURRENT/'design_report.json').read_text())['placement_scenarios'],r['placement_scenarios']):
             self.assertAlmostEqual(case['gap_main_diverter_mm'],base['gap_main_diverter_mm']+2)
             self.assertAlmostEqual(case['main_margin_after_trace_mm'],base['main_margin_after_trace_mm']-1)
@@ -83,6 +89,7 @@ class ParameterTests(unittest.TestCase):
             zpath=out/f'FT01_{"recommended" if stock=="T2000" else "plastic"}_{stock}_quote.zip'
             with zipfile.ZipFile(zpath) as z:
                 self.assertIsNone(z.testzip())
+                self.assertFalse(any('field_record' in n or 'expert_visit' in n for n in z.namelist()))
                 notes=z.read('READ_ME.txt').decode()
                 self.assertIn('MAIN218 plus one DIV122',notes)
                 self.assertNotIn('[[',notes)

@@ -22,7 +22,7 @@
     "received_part_inspection": "NOT APPLICABLE YET",
     "installed_leak_test": "NOT PERFORMED",
     "prototype_quote_files": "FT01 six custom STEP/STL/DXF sets and2custom-only quote ZIPs prepared for a sacrificial fit trial; no upload/order performed.",
-    "software_geometry_checks_FT01": "PASS: fresh read-back of all6 STEP/STL/DXF sets; independent analytic capsule-clearance check in3states;11PDF pages inspected with2-axis scale verified;2quote ZIP contents/hashes checked;Blender3scenes saved/reopened, source vertices and custom dimensions verified. No physical fit test."
+    "software_geometry_checks_FT01": "PASS: fresh read-back of all 6 STEP/STL/DXF sets; independent analytic capsule-clearance check in 3 states; 15 PDF pages checked, including 75-field blank interactive visit record; 2 quote ZIP contents/hashes checked; earlier Blender 3-scene save/reopen and geometry checks remain valid. No physical fit test."
   },
   "current_piping": "User reports the valve is plumbed in; no new relocation or post-scan change stated. Earlier no-change confirmation remains in force.",
   "constraints": [
@@ -83,5 +83,8 @@
   ],
   "independent_review_package": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01.zip",
   "independent_review_response": "Not received",
-  "parameter_propagation_validation": "docs/validation/parameter_propagation_FT01.json"
+  "parameter_propagation_validation": "docs/validation/parameter_propagation_FT01.json",
+  "expert_visit_record": "deliverables/current/fabrication/fit-trial/expert_visit_record_FT01.pdf",
+  "expert_visit_record_validation": "docs/validation/field_record_FT01.json",
+  "expert_visit_results": "Not received; four-page blank record prepared. No physical readiness state changed."
 }

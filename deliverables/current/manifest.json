@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "a63e050a0e90fdb532a8c6df576a96cdd294c58f",
+  "source_commit": "03bcf23cc0ee0fca933f89c60af052b2a2be5209",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "650ae26fce0d95fb6a9826f6c7ee13c11faf4b914ae46c5f28ee76e68af84624",
+  "source_tree_hash": "2f6bf164eea6efb4e8a8e6d938257c428c090d9f3df60dddce0c247aea32d330",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1069,13 +1069,13 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/FT01_plastic_T3000_quote.zip",
-      "sha256": "d5be07341d13b753a6c5044482cfc9461bd27742deb65685c3c258e9504035b5",
-      "size_bytes": 62527
+      "sha256": "4dae0912753cc998c664318751fb76dec4a487cfb36a56824bb71ec33b016f83",
+      "size_bytes": 62524
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/FT01_recommended_T1524_quote.zip",
-      "sha256": "477109941f2a36da730543bf6d8fae0fbace911062b3a2dcb084f4d790343244",
-      "size_bytes": 62602
+      "sha256": "9e3ecb4fbfe6e56d4c680717fedc2f85acb88199fee4de9c3d3c3a04834ae542",
+      "size_bytes": 62599
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/access.png",
@@ -1089,8 +1089,8 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/audit.json",
-      "sha256": "c875146c65259d8a6d8f53d42abc349c339eea1119bdf08629931a429d9ab6dd",
-      "size_bytes": 5380
+      "sha256": "fd0495a780ead2d4a5bce360ac973643c82aaf3dbc0d9ffb0825a37571efa9fc",
+      "size_bytes": 5719
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/blender_check.json",
@@ -1194,8 +1194,8 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/document_check.json",
-      "sha256": "fb2a543b50697cc915560e734f377dcc4df7401e5ff5f6c8f25119cdf6d0bc4f",
-      "size_bytes": 1533
+      "sha256": "d46a0a91679a9036c40e01a424ed71fb407dae4507eba55620d9a77cada26e81",
+      "size_bytes": 1759
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/escutcheon_fit_trial_FT01.blend",
@@ -1203,19 +1203,34 @@
       "size_bytes": 85953966
     },
     {
+      "path": "deliverables/current/fabrication/fit-trial/expert_visit_record_FT01.pdf",
+      "sha256": "230825edf73cdc7bee8eaabe37105a1989050744fe2699cc035458a80566c900",
+      "size_bytes": 85372
+    },
+    {
       "path": "deliverables/current/fabrication/fit-trial/exploded.png",
       "sha256": "1df59cc2406519004412d51840f0131c94e03b9e9369f67937dc2bd69e1fb55d",
       "size_bytes": 1437519
     },
     {
+      "path": "deliverables/current/fabrication/fit-trial/field_record_blank.json",
+      "sha256": "2ba638669a9ab0004c73ada0908707bfe8eaa2ed27f19632aa02efdafac90ed6",
+      "size_bytes": 2646
+    },
+    {
+      "path": "deliverables/current/fabrication/fit-trial/field_record_schema.json",
+      "sha256": "40fbb11c95b0ea62688c70aaa42b835b222f2fa8090ffaeea8958aded9d1f9c4",
+      "size_bytes": 22346
+    },
+    {
       "path": "deliverables/current/fabrication/fit-trial/full_size_templates_FT01.pdf",
-      "sha256": "81cbd5d8ae33c4e88fa38f725e3266b2345ad5a5bfc33a0c8fb2b4dc323bb661",
+      "sha256": "24dafb030b6c5b4912c5bda5d87d34786f15ff6f6d8a8cac206afac675dbf267",
       "size_bytes": 5487
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/index.html",
-      "sha256": "a6717d36c61ea26425177ec6b97f82ab2e4fcddcfbcec29734f2493aa5ce607f",
-      "size_bytes": 23263
+      "sha256": "d4ce901f0471c30d71ef4c883bf46f37815b50b0c9b943d2057fa55087f4b596",
+      "size_bytes": 23463
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/paired_front.png",
@@ -1234,8 +1249,8 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/project_handoff_FT01.pdf",
-      "sha256": "931064b7fccfa1bc02b46bf747047e9df0dafb0a55958dc5bd41737ef826f32f",
-      "size_bytes": 8108033
+      "sha256": "cdc0497507a6bf4fd024e8cfe832d18b0b9b2ff2112742405388d0b5c87197f4",
+      "size_bytes": 8108067
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/raw_front.png",
@@ -1249,7 +1264,7 @@
     },
     {
       "path": "deliverables/current/fabrication/fit-trial/shop_drawings_FT01.pdf",
-      "sha256": "38d57136d3d38f10c3b52c102805a31787540a5a09c93ae78e46163b8ad1de92",
+      "sha256": "7b4764364c3058964dee352d519d65ebef985efdbd876954e16f40e22352728e",
       "size_bytes": 6771
     },
     {
@@ -1608,7 +1623,7 @@
     "received_part_inspection": "NOT APPLICABLE YET",
     "installed_leak_test": "NOT PERFORMED",
     "prototype_quote_files": "FT01 six custom STEP/STL/DXF sets and2custom-only quote ZIPs prepared for a sacrificial fit trial; no upload/order performed.",
-    "software_geometry_checks_FT01": "PASS: fresh read-back of all6 STEP/STL/DXF sets; independent analytic capsule-clearance check in3states;11PDF pages inspected with2-axis scale verified;2quote ZIP contents/hashes checked;Blender3scenes saved/reopened, source vertices and custom dimensions verified. No physical fit test."
+    "software_geometry_checks_FT01": "PASS: fresh read-back of all 6 STEP/STL/DXF sets; independent analytic capsule-clearance check in 3 states; 15 PDF pages checked, including 75-field blank interactive visit record; 2 quote ZIP contents/hashes checked; earlier Blender 3-scene save/reopen and geometry checks remain valid. No physical fit test."
   },
   "current_recommendation": "FT01",
   "current_recommendation_scope": "FT01 files are for quotes and sacrificial dry fit; permanent installation remains unreleased."

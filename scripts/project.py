@@ -222,10 +222,10 @@ def prepare_fit_trial(stage='all',force=False):
       ('blender',['src/fabrication/fit_trial_spec.py','src/blender/fit_trial.py','scripts/inspect_attached_scan.py','scripts/render_attached_plane.py',out+'/design_report.json',out+'/attached_scan_assessment.json',out+'/cad/*','build/attached_scan/wall_frame.json'],
        [out+'/*.blend',out+'/blender_check.json',out+'/paired_*.png',out+'/exploded.png',out+'/plane_front.png',out+'/raw_front.png'],
        [blender+['scripts/inspect_attached_scan.py'],blender+['scripts/render_attached_plane.py'],[sys.executable,'src/analysis/attached_scan.py'],blender+['src/blender/fit_trial.py']]),
-      ('documents',['src/fabrication/fit_trial_spec.py','src/fabrication/fit_trial_documents.py','canon/fit_trial_handoff.json','canon/fit_trial_design.json',out+'/design_report.json',out+'/*.png',out+'/cad/*'],
-       [out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/document_check.json'],
+      ('documents',['src/fabrication/fit_trial_spec.py','src/fabrication/fit_trial_documents.py','src/fabrication/field_record.py','canon/fit_trial_handoff.json','canon/fit_trial_design.json',out+'/design_report.json',out+'/*.png',out+'/cad/*'],
+       [out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/document_check.json',out+'/field_record_*.json'],
        [[sys.executable,'src/fabrication/fit_trial_documents.py']]),
-      ('audit',['src/fabrication/fit_trial_spec.py','src/fabrication/audit_fit_trial.py',out+'/design_report.json',out+'/cad/*',out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/blender_check.json'],
+      ('audit',['src/fabrication/fit_trial_spec.py','src/fabrication/audit_fit_trial.py','src/fabrication/field_record.py',out+'/field_record_*.json',out+'/design_report.json',out+'/cad/*',out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/blender_check.json'],
        [out+'/audit.json','docs/validation/fit_trial_FT01.json'],
        [[sys.executable,'src/fabrication/audit_fit_trial.py']])]
     for name,inputs,patterns,commands in stages:
