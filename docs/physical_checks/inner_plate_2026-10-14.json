@@ -1,0 +1,29 @@
+{
+  "revision": "R002",
+  "source": "SRC-USER-INNER-PLATE-01",
+  "accepted_raw_ids": [
+    "M02-W",
+    "M02-H",
+    "M11-UD",
+    "M11-UT",
+    "M11-SWD",
+    "M11-G",
+    "M11-R"
+  ],
+  "derived_upper_center_below_top_mm": 42.23,
+  "conditional_if_NE_hole_is_5_66_mm": {
+    "mounting_center_distance_mm": 112.05,
+    "NE_center_to_right_rim_mm": 14.54
+  },
+  "unknowns": [
+    "NE mounting-hole diameter",
+    "lower control-opening diameter",
+    "hole vertical positions and actual installed registration",
+    "corner shape",
+    "formed depths",
+    "rear foam path, compression and support"
+  ],
+  "model_update": "Measured dimensions override old placeholders. Round holes and rounded rectangular outline from actual photo. NE diameter 5.66, lower opening 50, corner radius 40 and formed depths remain explicit visualization assumptions. Hole diagonal angle and NE Y use conditional scan geometry; captured studs and wall registration unchanged.",
+  "physical_fit": "NOT PERFORMED",
+  "water_performance": "NOT PERFORMED"
+}

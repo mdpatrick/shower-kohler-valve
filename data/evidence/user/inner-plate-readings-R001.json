@@ -1,0 +1,100 @@
+{
+  "project_id": "shower-kohler-valve",
+  "review_revision": "R001",
+  "observations": [
+    {
+      "measurement_id": "M02-W",
+      "raw_readings": [
+        130.35
+      ],
+      "unit": "mm",
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "uncertainty_mm": null,
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied."
+    },
+    {
+      "measurement_id": "M02-H",
+      "raw_readings": [
+        6.5
+      ],
+      "unit": "in",
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "uncertainty_mm": null,
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied."
+    },
+    {
+      "measurement_id": "M11-UD",
+      "raw_readings": [
+        48.46
+      ],
+      "unit": "mm",
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "uncertainty_mm": null,
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied."
+    },
+    {
+      "measurement_id": "M11-UT",
+      "raw_readings": [
+        18
+      ],
+      "unit": "mm",
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "uncertainty_mm": null,
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied."
+    },
+    {
+      "measurement_id": "M11-SWD",
+      "raw_readings": [
+        5.66
+      ],
+      "unit": "mm",
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "uncertainty_mm": null,
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied."
+    },
+    {
+      "measurement_id": "M11-G",
+      "raw_readings": [
+        106.39
+      ],
+      "unit": "mm",
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "uncertainty_mm": null,
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied."
+    },
+    {
+      "measurement_id": "M11-R",
+      "raw_readings": [
+        11.71
+      ],
+      "unit": "mm",
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "date": "2026-10-14",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "uncertainty_mm": null,
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied."
+    }
+  ],
+  "group_notes": {
+    "11": "User clarified 106.39 mm is nearest-edge gap, 11.71 mm is hole edge to rim. Only SW small-hole diameter is supplied; do not infer measured NE diameter. Photo shows the front face."
+  }
+}

@@ -148,6 +148,23 @@
       "size_bytes": 161906,
       "applicability": "Uncalibrated side view. User confirms excessive stud projection and reports wood contact behind. Does not prove rough-in error or stem identity.",
       "observation_record": "docs/physical_checks/depth_inquiry_2026-10-14.json"
+    },
+    {
+      "id": "SRC-USER-INNER-PLATE-01",
+      "source_path": "/Users/mdpatrick/Screenshots/Screenshot 2026-10-14 at 8.59.37\u202fPM.png",
+      "path": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "sha256": "05d5b6017e70e08ba4e996404ffc39a186a7d8525f3f35e804136ddab7c9ce74",
+      "size_bytes": 6572372,
+      "reported_on": "2026-10-14",
+      "capture_date": null,
+      "measurement_date": null,
+      "face": "front toward handles; user-confirmed",
+      "role": "actual-part photograph with user-reported caliper annotations",
+      "limitations": [
+        "No instrument accuracy or repeat readings supplied.",
+        "6.5 inch height retains original precision; conversion does not imply 0.1 mm accuracy.",
+        "No installed Z depth, rear gasket path or physical fit established."
+      ]
     }
   ]
 }

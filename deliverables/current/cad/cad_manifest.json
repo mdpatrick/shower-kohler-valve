@@ -1,5 +1,5 @@
 {
-  "revision": "R001",
+  "revision": "R002",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "units": "mm",
   "parts": [
@@ -98,21 +98,21 @@
         0.16
       ],
       "collection": "02_INNER_AND_GASKET",
-      "evidence": "Factory guide form + current evidence; unconfirmed surfaces remain assumed",
+      "evidence": "User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional",
       "status": "provisional reference",
       "bounds_local_mm": [
         [
-          -58.0,
-          -82.5,
+          -65.17500000000001,
+          -82.55000000000001,
           0.0
         ],
         [
-          58.0,
-          82.5,
-          8.0
+          65.17500000000001,
+          82.55000000000001,
+          5.0
         ]
       ],
-      "volume_mm3": 28707.909175682238,
+      "volume_mm3": 31820.88112152287,
       "tessellation_tolerance_mm": 0.04,
       "angular_tolerance_radians": 0.08
     },

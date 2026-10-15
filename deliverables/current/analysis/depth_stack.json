@@ -1,5 +1,5 @@
 {
-  "revision": "R001",
+  "revision": "R002",
   "units": "mm",
   "datum": "Intact-stone fitted reference plane Z=0; +Z toward shower",
   "purpose": "Explain why the prior seated-cover visualization is not an assemblable repair",
@@ -14,7 +14,7 @@
         ],
         "PLATE-INNER": [
           3.0,
-          11.0
+          8.0
         ],
         "TRIM-OUTER": [
           0.0,
@@ -148,7 +148,7 @@
           "intersection_mm3": 0.0,
           "model_result": "NO_SOLID_INTERSECTION",
           "physical_result": "UNRESOLVED",
-          "part_basis": "Factory guide form + current evidence; unconfirmed surfaces remain assumed"
+          "part_basis": "User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional"
         },
         {
           "part": "VALVE-LOWER",
@@ -186,7 +186,7 @@
         ],
         "PLATE-INNER": [
           7.175,
-          15.175
+          12.175
         ],
         "TRIM-OUTER": [
           4.175,
@@ -324,7 +324,7 @@
           "intersection_mm3": 0.0,
           "model_result": "NO_SOLID_INTERSECTION",
           "physical_result": "UNRESOLVED",
-          "part_basis": "Factory guide form + current evidence; unconfirmed surfaces remain assumed"
+          "part_basis": "User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional"
         },
         {
           "part": "VALVE-LOWER",

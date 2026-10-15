@@ -7,6 +7,19 @@ from pypdf import PdfReader
 ROOT=Path(__file__).resolve().parents[1]
 
 class SnapshotTests(unittest.TestCase):
+    def test_inner_step_carries_accepted_plate_dimensions(self):
+        import cadquery as cq
+        measurements=json.loads((ROOT/'canon/measurements.json').read_text())['measurements']
+        accepted={m['id']:m['value_mm'] for m in measurements if m['status']=='user-confirmed'}
+        if 'M11-UD' not in accepted:self.skipTest('No actual plate readings yet')
+        plate=cq.importers.importStep(str(ROOT/'deliverables/current/cad/PLATE-INNER_DRAFT_NOT_FOR_FABRICATION.step')).val()
+        bounds=plate.BoundingBox()
+        self.assertAlmostEqual(bounds.xlen,accepted['M02-W'],places=5)
+        self.assertAlmostEqual(bounds.ylen,accepted['M02-H'],places=5)
+        circles=[e for e in plate.Edges() if e.geomType()=='CIRCLE']
+        self.assertTrue(any(abs(e.radius()*2-accepted['M11-UD'])<1e-5 for e in circles))
+        self.assertTrue(any(abs(e.radius()*2-accepted['M11-SWD'])<1e-5 for e in circles))
+
     def test_uniform_right_handed_transform(self):
         reg=json.loads((ROOT/'deliverables/current/analysis/registration.json').read_text())
         T=np.array(reg['raw_to_installed_mm']);A=T[:3,:3];B=np.array(reg['installed_mm_to_blender_m'])

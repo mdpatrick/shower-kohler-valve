@@ -49,6 +49,23 @@
       "date": "2026-10-14",
       "source": "direct user report; docs/physical_checks/depth_inquiry_2026-10-14.json",
       "classification": "qualitative observation; no accepted numeric dimension or completed fit check"
+    },
+    {
+      "id": "OBS-INNER-PLATE-PHOTO-01",
+      "date": "2026-10-14",
+      "source": "SRC-USER-INNER-PLATE-01 and direct user clarification",
+      "status": "user-confirmed front-face identity and measurement endpoints",
+      "face": "Front \u2014 toward the handles",
+      "diagonal_106_39_mm": "Gap between the nearest hole edges",
+      "right_edge_11_71_mm": "Hole edge to outside metal rim",
+      "visible_form": "rounded rectangular metal outline; two round mounting holes; two large control openings; central formed emboss",
+      "not_established": [
+        "rear foam contact path",
+        "plate Z depths",
+        "installed registration",
+        "other hole diameters",
+        "fit or waterproofing"
+      ]
     }
   ]
 }

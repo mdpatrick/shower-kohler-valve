@@ -1,0 +1,36 @@
+{
+  "revision": "R002",
+  "evidence_hash_verified": true,
+  "accepted_raw_readings": 7,
+  "derived_upper_center_from_top_mm": 42.23,
+  "mounting_center_spacing": "unresolved until NE hole diameter; 112.05 mm conditional display only",
+  "automated_tests": {
+    "count": 23,
+    "result": "PASS"
+  },
+  "cad_export_checks": 5,
+  "pdf_visual_review": {
+    "worksheet": 11,
+    "candidate_drawing": 1,
+    "profile_template": 4,
+    "manual": 8,
+    "total_pages": 24,
+    "result": "PASS; worksheet follow-up changed to the two outstanding diameters to prevent spillover"
+  },
+  "inline_guide": {
+    "revision": "R002",
+    "uses_actual_front_photo": true,
+    "accepted_readings_not_re_requested": true,
+    "test_NE_diameter_mm": 6.0,
+    "test_derived_spacing_mm": 112.22,
+    "test_value_cleared": true,
+    "save_reload": "PASS",
+    "minimum_content_width_px": 320,
+    "revised_diagrams_checked": 11,
+    "out_of_bounds_labels": 0
+  },
+  "physical_fit": "NOT PERFORMED",
+  "fabrication_approval": "NOT GIVEN",
+  "water_performance": "NOT PERFORMED",
+  "primary_registration_and_landmarks_unchanged": true
+}

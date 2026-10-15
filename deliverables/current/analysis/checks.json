@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R001",
+  "revision": "R002",
   "units": "mm",
   "state": "diagnostic_trial_with_unchanged_hardware",
   "fit_verdict": "FAIL in provisional geometry / physical fit UNRESOLVED / candidate not selected",
@@ -9,7 +9,7 @@
     {
       "feature_id": "OPEN-MAIN",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -38,7 +38,7 @@
     {
       "feature_id": "CUT-01",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -67,7 +67,7 @@
     {
       "feature_id": "CUT-02",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -96,7 +96,7 @@
     {
       "feature_id": "CUT-03",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -125,7 +125,7 @@
     {
       "feature_id": "CUT-04",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -154,7 +154,7 @@
     {
       "feature_id": "CUT-05",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -183,7 +183,7 @@
     {
       "feature_id": "CUT-06",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -212,7 +212,7 @@
     {
       "feature_id": "CUT-07",
       "state": "as_observed_at_capture",
-      "revision": "R001",
+      "revision": "R002",
       "units": "mm",
       "status": "UNRESOLVED",
       "result_type": "conditional projected geometry",
@@ -305,6 +305,29 @@
         "CUSTOM-01"
       ],
       "needed": "Measure before choosing single large aperture; contouring/rebuilding may be necessary. Candidate is not selected."
+    },
+    {
+      "id": "INNER-MOUNTING-REGISTRATION",
+      "status": "UNRESOLVED",
+      "conditional_result": "Round holes and measured edge gaps replace the slot placeholder; installed alignment is not established",
+      "hole_minus_captured_stud_xy_mm": [
+        [
+          -3.484596040498751,
+          -1.6555073493260188
+        ],
+        [
+          0.20059591427734347,
+          0.0
+        ]
+      ],
+      "radial_center_offset_mm": [
+        3.857863936057366,
+        0.20059591427734347
+      ],
+      "conditional_hole_center_spacing_mm": 112.04999999999998,
+      "accepted_hole_center_spacing_mm": null,
+      "needed": "NE hole diameter and Check 03 vertical datums; real fit without forcing; no scan or valve relocation from loose-part photo",
+      "note": "NE diameter, diagonal direction and vertical placement are provisional. Not a manufacturing hole pattern."
     },
     {
       "id": "CENTERING-01",

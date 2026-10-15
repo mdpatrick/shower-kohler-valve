@@ -55,7 +55,7 @@ def depth_svg(report, case):
 
 def depth_html(report):
     rows=[]
-    labels={'CUSTOM-01':'Trial backing plate','GASKET-01':'Foam (free, not compressed)','PLATE-INNER':'Yellow inner plate, incl. hubs','TRIM-OUTER':'Decorative cover','HANDLE-LOWER':'Lower handle envelope','HANDLE-UPPER':'Upper handle envelope','VALVE-LOWER':'Lower valve envelope','VALVE-UPPER':'Upper valve envelope'}
+    labels={'CUSTOM-01':'Trial backing plate','GASKET-01':'Foam (free, not compressed)','PLATE-INNER':'Inner plate, formed metal','TRIM-OUTER':'Decorative cover','HANDLE-LOWER':'Lower handle envelope','HANDLE-UPPER':'Upper handle envelope','VALVE-LOWER':'Lower valve envelope','VALVE-UPPER':'Upper valve envelope'}
     basis={'CUSTOM-01':'Trial thickness; no selected material or retention','GASKET-01':'Assumed footprint and free thickness; contact unknown','PLATE-INNER':'Assumed sheet / formed / hub depths','TRIM-OUTER':'Nominal exterior; rear cavity and seating unmeasured','HANDLE-LOWER':'Nominal projection; rear mating and engagement assumed','HANDLE-UPPER':'Nominal projection; rear mating and engagement assumed','VALVE-LOWER':'Scan tip; body profile and hidden extent assumed','VALVE-UPPER':'Scan tip; body profile and hidden extent assumed'}
     fmt=lambda span:'—' if span is None else f'{span[0]:.1f} to {span[1]:.1f}'
     for id,label in labels.items():

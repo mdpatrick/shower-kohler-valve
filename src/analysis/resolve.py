@@ -21,6 +21,8 @@ def resolve():
     a=dict(dc['visualization_assumptions']);nom=dict(dc['nominal_parameters'])
     for id,key in [('M02-W','inner_width_mm'),('M02-H','inner_height_mm'),('M04-T','inner_sheet_thickness_mm'),('M04-D','inner_formed_depth_mm'),('M04-R','rear_projection_envelope_mm'),('M04-H','hub_projection_envelope_mm'),('M05-OW','gasket_outer_width_mm'),('M05-OH','gasket_outer_height_mm'),('M05-W','gasket_width_mm'),('M05-T','gasket_free_thickness_mm'),('M06-C','outer_cavity_depth_mm')]:
         if id in accepted:a[key]=accepted[id]
+    for id,key in [('M11-UD','inner_upper_opening_diameter_mm'),('M11-LD','inner_lower_opening_diameter_mm')]:
+        if id in accepted:a[key]=accepted[id]
     if 'M06-OD' in accepted:nom['trim_diameter_mm']=accepted['M06-OD']
     if 'M01' in accepted:nom['control_spacing_mm']=accepted['M01']
     for i,axis in enumerate(['X','Y']):
@@ -31,13 +33,37 @@ def resolve():
     slots=[]
     for name,point in zip(['SW','NE'],studs):
         if 'M07-'+name in accepted:point[2]=accepted['M07-'+name]
-        slot={'center_mm':point[:2].copy(),'width_mm':a['stud_clearance_slot_width_mm'],'height_mm':a['stud_clearance_slot_length_mm'],'status':'scan-driven provisional hole'}
+        diameter=accepted.get('M11-'+name+'D',a.get('mounting_hole_diameter_mm',7))
+        slot={'center_mm':point[:2].copy(),'width_mm':diameter,'height_mm':diameter,'shape':'round; observed in user front photo',
+              'diameter_status':'user-confirmed' if 'M11-'+name+'D' in accepted else 'display assumption; independently measure this hole',
+              'status':'scan-driven provisional position'}
+        slots.append(slot)
+    # Solve the measured edge constraints without treating the unmeasured NE bore,
+    # diagonal angle or vertical placement as accepted. Never move the scan/studs.
+    if 'M11-G' in accepted and 'M11-R' in accepted:
+        direction=np.array(studs[1][:2])-np.array(studs[0][:2]);direction/=np.linalg.norm(direction)
+        cc=accepted['M11-G']+(slots[0]['width_mm']+slots[1]['width_mm'])/2
+        ne=np.array(slots[1]['center_mm']);ne[0]=inner_center[0]+a['inner_width_mm']/2-accepted['M11-R']-slots[1]['width_mm']/2
+        slots[1]['center_mm']=ne.tolist();slots[0]['center_mm']=(ne-direction*cc).tolist()
+        for slot in slots:slot['status']='measured edge constraints; NE diameter, diagonal angle and vertical placement remain provisional'
+    for name,slot in zip(['SW','NE'],slots):
         for i,axis,extent in [(0,'X',a['inner_width_mm']),(1,'Y',a['inner_height_mm'])]:
             near='M03-'+name+'-'+axis+'N';far='M03-'+name+'-'+axis+'F'
             if near in accepted and far in accepted:
                 slot['center_mm'][i]=float(inner_center[i]-extent/2+(accepted[near]+accepted[far])/2)
-                slot['width_mm' if i==0 else 'height_mm']=accepted[far]-accepted[near];slot['status']='accepted edge dimensions; part placement still provisional'
-        slots.append(slot)
+                slot['width_mm' if i==0 else 'height_mm']=accepted[far]-accepted[near]
+                slot['status']='paired edge datums override provisional coordinates; check residuals against diagonal and rim gaps'
+    holes=[]
+    for i,point in enumerate([bottom,top]):
+        local=point[:2]-inner_center
+        if i==1 and 'M11-UC' in accepted:local[1]=a['inner_height_mm']/2-accepted['M11-UC']
+        holes.append({'center_local_mm':local.tolist(),'diameter_mm':a['inner_lower_opening_diameter_mm' if i==0 else 'inner_upper_opening_diameter_mm'],
+                      'status':'upper diameter/top gap measured; horizontal centering provisional' if i==1 and 'M11-UC' in accepted else 'unmeasured display reference'})
+    plate_constraints={'photo_face':'front toward handles','source':'SRC-USER-INNER-PLATE-01',
+        'mounting_center_spacing_mm':accepted.get('M11-CC'),
+        'conditional_display_center_spacing_mm':float(np.linalg.norm(np.array(slots[1]['center_mm'])-np.array(slots[0]['center_mm']))),
+        'missing':['NE mounting-hole diameter','lower large-opening diameter','mounting-hole vertical datums','outline corner shape/radii','rear gasket footprint','all plate Z dimensions'],
+        'placement_note':'No plate photograph or measurement changes the primary wall registration or captured hardware pose.'}
     # Source geometry is used once for this conditional provisional scale. No independent validation is claimed.
     candidate=dict(dc['candidate']);land=candidate['target_sound_land_mm'];dia=math.ceil(2*(maxrad+land+1.5)/candidate['diameter_rounding_mm'])*candidate['diameter_rounding_mm']
     # Rounded rectangular aperture accommodates observed valve/body/stud envelope; not merely copied factory holes.
@@ -54,7 +80,7 @@ def resolve():
         'controls_mm':[bottom.tolist(),top.tolist()],'diverter_tip_mm':diverter,'observations':observations,
         'diagnostic_control_depths_mm':{name:accepted[id] for name,id in [('upper','M10-UPPER'),('lower','M10-LOWER')] if id in accepted},
         'studs_mm':studs,'studs_state':'current measured envelopes where available; raw as-capture scan preserved',
-        'inner_center_mm':inner_center.tolist(),'inner_slots':slots,
+        'inner_center_mm':inner_center.tolist(),'inner_slots':slots,'inner_control_openings':holes,'inner_plate_constraints':plate_constraints,
         'assumptions':a,'nominal':nom,'candidate':candidate,'accepted_measurement_ids':list(accepted),
         'scale_status':reg['scale_status'],'secondary_scans_used_to_fit':False,'features':resolved}
     out=ROOT/'data/derived/resolved.json';out.write_text(json.dumps(parameters,indent=2)+'\n');return parameters

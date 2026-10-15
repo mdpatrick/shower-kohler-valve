@@ -51,16 +51,18 @@ def build():
     gw=a.get('gasket_outer_width_mm',a['inner_width_mm']);gh=a.get('gasket_outer_height_mm',a['inner_height_mm'])
     gasket=capsule(gw,gh,a['gasket_free_thickness_mm']).cut(capsule(gw-2*a['gasket_width_mm'],gh-2*a['gasket_width_mm'],a['gasket_free_thickness_mm']+2).translate((0,0,-1)))
     add('GASKET-01',gasket,(*ic,gasketz),(.64,.22,.45),'02_INNER_AND_GASKET','Contact path topology provisional; use accepted dimensions where available')
-    inner=capsule(a['inner_width_mm'],a['inner_height_mm'],a['inner_sheet_thickness_mm'])
+    corner=a['inner_corner_radius_mm']
+    inner=rounded_rect(a['inner_width_mm'],a['inner_height_mm'],corner,a['inner_sheet_thickness_mm'])
     # Raised peripheral flange is a visible, separately disclosed formed-depth placeholder.
-    lip=capsule(a['inner_width_mm']-6,a['inner_height_mm']-6,a['inner_formed_depth_mm']).cut(capsule(a['inner_width_mm']-12,a['inner_height_mm']-12,a['inner_formed_depth_mm']+2).translate((0,0,-1)))
+    lip=rounded_rect(a['inner_width_mm']-6,a['inner_height_mm']-6,corner-3,a['inner_formed_depth_mm']).cut(rounded_rect(a['inner_width_mm']-12,a['inner_height_mm']-12,corner-6,a['inner_formed_depth_mm']+2).translate((0,0,-1)))
     inner=inner.union(lip)
-    for i,point in enumerate(d['controls_mm']):
-        x,y=np.array(point[:2])-ic
-        bore=32 if i==0 else 20
+    # Front emboss is photo-informed only; its depth remains unmeasured.
+    inner=inner.union(rounded_rect(54,26,7,a['inner_emboss_height_mm']))
+    for opening in d['inner_control_openings']:
+        x,y=opening['center_local_mm'];bore=opening['diameter_mm']/2
         inner=inner.cut(cq.Workplane('XY').center(float(x),float(y)).circle(bore).extrude(50).translate((0,0,-1)))
-        # Open rear recess to front hub transition is not inferable from the scans.
-        ring=cq.Workplane('XY').center(float(x),float(y)).circle(bore+3).circle(bore).extrude(a.get('hub_projection_envelope_mm',a['inner_formed_depth_mm']+3))
+        # The photograph shows thin aperture rims, not the earlier tall hub placeholders.
+        ring=cq.Workplane('XY').center(float(x),float(y)).circle(bore+1).circle(bore).extrude(a.get('hub_projection_envelope_mm',a['inner_aperture_rim_height_mm']))
         inner=inner.union(ring)
     for slot in d['inner_slots']:
         x,y=np.array(slot['center_mm'])-ic;sw=slot['width_mm'];sh=slot['height_mm']
@@ -68,7 +70,7 @@ def build():
         hole=(wp.circle(sw/2) if abs(sw-sh)<1e-6 else wp.slot2D(max(sw,sh),min(sw,sh),90 if sh>sw else 0)).extrude(100).translate((0,0,-1))
         inner=inner.cut(hole)
     innerz=gasketz+a['gasket_free_thickness_mm']
-    add('PLATE-INNER',inner,(*ic,innerz),(.9,.55,.16),'02_INNER_AND_GASKET','Factory guide form + current evidence; unconfirmed surfaces remain assumed',True)
+    add('PLATE-INNER',inner,(*ic,innerz),(.9,.55,.16),'02_INNER_AND_GASKET','User front photo and accepted dimensions; corner radii, lower bore, NE bore, formed depths and installed placement remain provisional',True)
     if a.get('rear_projection_envelope_mm',0)>0:
         envelope=capsule(a['inner_width_mm']-10,a['inner_height_mm']-10,a['rear_projection_envelope_mm'])
         add('REAR-PROJECTION-ENVELOPE',envelope,(*ic,innerz-a['rear_projection_envelope_mm']),(.85,.2,.5),'01_OBSERVED_ENVELOPES','Maximum measured rear extent envelope ONLY; not a solid physical plate')

@@ -1,5 +1,5 @@
 {
-  "revision": "R001",
+  "revision": "R002",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "candidate_identity": {
     "trim": "K-T14489-4-BN",
@@ -7,7 +7,7 @@
     "valve": "K-2973-KS-NA",
     "status": "user-confirmed exact model names on 2026-10-14",
     "diverter_installation_status": "User identified K-737-K-NA; no changes since capture reported 2026-10-14 (OBS-POST-SCAN-01).",
-    "physical_revision_and_dimensions": "not verified",
+    "physical_revision_and_dimensions": "Seven actual inner-plate measurements accepted in R002; installed revision and remaining dimensions unverified",
     "diverter": "K-737-K-NA"
   },
   "nominal_parameters": {
@@ -61,7 +61,17 @@
     "diverter_trim_body_depth_mm": 16,
     "diverter_trim_shell_mm": 1.5,
     "diverter_trim_opening_diameter_mm": 36,
-    "handle_note": "Long lever reach corrected from official dimensioned drawings; short main lever reach, cross-section, rear interfaces and housing remain display assumptions. Upper main lever points up; lower main and diverter point down in reference pose, not an operating-range claim."
+    "handle_note": "Long lever reach corrected from official dimensioned drawings; short main lever reach, cross-section, rear interfaces and housing remain display assumptions. Upper main lever points up; lower main and diverter point down in reference pose, not an operating-range claim.",
+    "inner_corner_radius_mm": 40,
+    "inner_upper_opening_diameter_mm": 40,
+    "inner_lower_opening_diameter_mm": 50,
+    "mounting_hole_diameter_mm": 5.66,
+    "inner_emboss_height_mm": 3,
+    "inner_aperture_rim_height_mm": 2,
+    "gasket_outer_width_mm": 116,
+    "gasket_outer_height_mm": 165,
+    "inner_photo_basis": "SRC-USER-INNER-PLATE-01: rounded rectangular outline, round mounting holes, central emboss and thin aperture rims. Corner radius, lower bore, NE mounting diameter and all Z values remain display assumptions. Accepted measurements override the relevant parameters.",
+    "gasket_basis": "The earlier 116 x 165 capsule footprint is retained independently as an unverified rear-contact placeholder. Front metal width is NOT rear foam width."
   },
   "candidate": {
     "shape": "circular",
@@ -84,7 +94,10 @@
     "surface seal assumed to restore hidden waterproofing",
     "seated-cover rendering with protruding studs presented as a feasible proposed assembly",
     "outer-cover bolt holes invented to hide interference",
-    "decorative coverage treated as proof of gasket support or waterproofing"
+    "decorative coverage treated as proof of gasket support or waterproofing",
+    "116 mm inner width superseded by user 130.35 mm caliper reading",
+    "capsule-shaped inner metal outline and slotted mounting holes contradicted by actual front photo",
+    "tall front aperture hubs not supported by actual plate photograph"
   ],
   "selection": null,
   "depth_review": {

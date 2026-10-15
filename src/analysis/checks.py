@@ -54,6 +54,15 @@ def run():
         'unsupported_projected_area_mm2':unsupported_plate.area,'criterion':'aperture must not remove actual gasket landing','feature_ids':['GASKET-01','CUSTOM-01'],
         'needed':'Measure before choosing single large aperture; contouring/rebuilding may be necessary. Candidate is not selected.'})
     studs=np.array(d['studs_mm']);mountmid=studs[:,:2].mean(0)
+    holes=np.array([s['center_mm'] for s in d['inner_slots']])
+    checks.append({'id':'INNER-MOUNTING-REGISTRATION','status':'UNRESOLVED',
+        'conditional_result':'Round holes and measured edge gaps replace the slot placeholder; installed alignment is not established',
+        'hole_minus_captured_stud_xy_mm':(holes-studs[:,:2]).tolist(),
+        'radial_center_offset_mm':np.linalg.norm(holes-studs[:,:2],axis=1).tolist(),
+        'conditional_hole_center_spacing_mm':float(np.linalg.norm(holes[1]-holes[0])),
+        'accepted_hole_center_spacing_mm':d['inner_plate_constraints']['mounting_center_spacing_mm'],
+        'needed':'NE hole diameter and Check 03 vertical datums; real fit without forcing; no scan or valve relocation from loose-part photo',
+        'note':'NE diameter, diagonal direction and vertical placement are provisional. Not a manufacturing hole pattern.'})
     checks.append({'id':'CENTERING-01','status':'UNRESOLVED','trim_center_inferred_mm':center.tolist(),'mount_midpoint_mm':mountmid.tolist(),
         'trim_minus_mount_midpoint_mm':(center-mountmid).tolist(),'opening_centroid_mm':list(opening.centroid.coords)[0],
         'candidate_minus_trim_center_mm':[0,0],'inferred_control_line_rotation_deg':d['trim_in_plane_rotation_deg'],

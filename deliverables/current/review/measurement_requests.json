@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R001",
+  "revision": "R002",
   "groups": [
     {
       "id": "01",
@@ -35,12 +35,12 @@
       "title": "Identify the inner plate datums",
       "view": "inner_measure",
       "purpose": "Replaces the assumed outline and prevents misleading hole coordinates.",
-      "instructions": "Place the loose factory inner plate on a padded surface. FRONT has the hubs facing you; BACK has the wall-facing foam. Do not remove or compress the gasket. Use the leftmost tangent as datum A and bottommost tangent as datum B. Record the overall width and height; photograph front and back with those labels. If the part is not capsule-shaped, trace its actual outline and describe the difference. For a span beyond the caliper range, use two square blocks and a steel ruler.",
+      "instructions": "Place the loose factory inner plate on a padded surface. FRONT faces the handles (confirmed in the supplied photo); BACK faces the wall. Do not remove or compress the gasket. Use the leftmost tangent as datum A and bottommost tangent as datum B. Record the overall width and height; photograph front and back with those labels. The actual front photo shows a rounded rectangular outline; corner shape remains unmeasured. For a span beyond the caliper range, use two square blocks and a steel ruler.",
       "fields": [
         {
           "id": "M02-W",
           "label": "Maximum metal outline width",
-          "prediction_mm": 116,
+          "prediction_mm": 130.35,
           "useful_accuracy_mm": 0.5,
           "method": "caliper or blocks/ruler",
           "contacts": "A left tangent to opposite right tangent",
@@ -49,7 +49,7 @@
         {
           "id": "M02-H",
           "label": "Maximum metal outline height",
-          "prediction_mm": 165,
+          "prediction_mm": 165.1,
           "useful_accuracy_mm": 0.5,
           "method": "blocks and steel ruler",
           "contacts": "B bottom tangent to top tangent",
@@ -67,8 +67,8 @@
       "fields": [
         {
           "id": "M03-SW-XN",
-          "label": "SW slot: near X edge",
-          "prediction_mm": 6.409449320853959,
+          "label": "SW opening: near X edge",
+          "prediction_mm": 10.769853280355205,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum A to left edge of this opening",
@@ -76,8 +76,8 @@
         },
         {
           "id": "M03-SW-XF",
-          "label": "SW slot: far X edge",
-          "prediction_mm": 13.409449320853959,
+          "label": "SW opening: far X edge",
+          "prediction_mm": 16.429853280355204,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum A to right edge of this opening",
@@ -85,8 +85,8 @@
         },
         {
           "id": "M03-SW-YN",
-          "label": "SW slot: near Y edge",
-          "prediction_mm": 55.7893739244397,
+          "label": "SW opening: near Y edge",
+          "prediction_mm": 56.85386657511368,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum B to bottom edge of this opening",
@@ -94,8 +94,8 @@
         },
         {
           "id": "M03-SW-YF",
-          "label": "SW slot: far Y edge",
-          "prediction_mm": 66.7893739244397,
+          "label": "SW opening: far Y edge",
+          "prediction_mm": 62.513866575113674,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum B to top edge of this opening",
@@ -103,8 +103,8 @@
         },
         {
           "id": "M03-NE-XN",
-          "label": "NE slot: near X edge",
-          "prediction_mm": 104.93440408572266,
+          "label": "NE opening: near X edge",
+          "prediction_mm": 112.98,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum A to left edge of this opening",
@@ -112,8 +112,8 @@
         },
         {
           "id": "M03-NE-XF",
-          "label": "NE slot: far X edge",
-          "prediction_mm": 111.93440408572266,
+          "label": "NE opening: far X edge",
+          "prediction_mm": 118.64,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum A to right edge of this opening",
@@ -121,8 +121,8 @@
         },
         {
           "id": "M03-NE-YN",
-          "label": "NE slot: near Y edge",
-          "prediction_mm": 100.04996840822535,
+          "label": "NE opening: near Y edge",
+          "prediction_mm": 102.76996840822535,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum B to bottom edge of this opening",
@@ -130,8 +130,8 @@
         },
         {
           "id": "M03-NE-YF",
-          "label": "NE slot: far Y edge",
-          "prediction_mm": 111.04996840822535,
+          "label": "NE opening: far Y edge",
+          "prediction_mm": 108.42996840822535,
           "useful_accuracy_mm": 0.2,
           "method": "caliper / tangent blocks",
           "contacts": "datum B to top edge of this opening",
@@ -176,11 +176,11 @@
         },
         {
           "id": "M04-H",
-          "label": "Forward hub projection from rear datum",
+          "label": "Forward aperture rim / hub projection from rear datum",
           "prediction_mm": null,
           "useful_accuracy_mm": 0.2,
           "method": "depth gauge",
-          "contacts": "rear metal datum to front hub end",
+          "contacts": "rear metal datum to frontmost aperture rim or attached hub end",
           "role": "fitting input"
         }
       ],
@@ -196,7 +196,7 @@
         {
           "id": "M05-OW",
           "label": "Outer foam footprint width",
-          "prediction_mm": 116,
+          "prediction_mm": 130.35,
           "useful_accuracy_mm": 0.5,
           "method": "ruler or light caliper contact",
           "contacts": "left to right outer foam edges",
@@ -205,7 +205,7 @@
         {
           "id": "M05-OH",
           "label": "Outer foam footprint height",
-          "prediction_mm": 165,
+          "prediction_mm": 165.1,
           "useful_accuracy_mm": 0.5,
           "method": "ruler",
           "contacts": "bottom to top outer foam edges",
@@ -421,6 +421,79 @@
           "method": "depth gauge",
           "contacts": "straightedge underside to identified lower tip L",
           "role": "diagnostic cross-check; tip identity required"
+        }
+      ],
+      "first": false
+    },
+    {
+      "id": "11",
+      "title": "Complete the photographed inner plate",
+      "view": "inner_photo",
+      "purpose": "Uses the actual front face and separates edge gaps from center distances.",
+      "instructions": "Front faces the handles. SW is the lower-left mounting hole; NE is the upper-right mounting hole. The supplied photo records width 130.35 mm, height 6.5 inches, upper opening 48.46 mm, top gap 18 mm, SW hole 5.66 mm, nearest-edge diagonal gap 106.39 mm and NE hole-to-right-rim gap 11.71 mm. Do not enter these again unless correcting them. Measure the NE hole and lower control opening independently. Diagonal center spacing requires BOTH mounting-hole diameters: gap + half of each diameter. Mounting-hole Y positions still need Check 03. The front photo does not establish the rear foam path or any Z depth.",
+      "fields": [
+        {
+          "id": "M11-UD",
+          "label": "Upper control opening diameter",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper inside jaws",
+          "contacts": "left inside edge to right inside edge of upper large opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M11-UT",
+          "label": "Top rim to upper opening top edge",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.3,
+          "method": "caliper",
+          "contacts": "topmost outer metal tangent to top inside edge of upper large opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M11-LD",
+          "label": "Lower control opening diameter",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper inside jaws",
+          "contacts": "left inside edge to right inside edge of lower large opening",
+          "role": "fitting input"
+        },
+        {
+          "id": "M11-SWD",
+          "label": "SW mounting-hole diameter",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.1,
+          "method": "caliper inside jaws",
+          "contacts": "opposite inside edges of lower-left round mounting hole, front view",
+          "role": "fitting input"
+        },
+        {
+          "id": "M11-NED",
+          "label": "NE mounting-hole diameter",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.1,
+          "method": "caliper inside jaws",
+          "contacts": "opposite inside edges of upper-right round mounting hole, front view",
+          "role": "fitting input"
+        },
+        {
+          "id": "M11-G",
+          "label": "Nearest-edge diagonal gap",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper",
+          "contacts": "nearest edges of SW and NE mounting holes along their center line",
+          "role": "fitting input"
+        },
+        {
+          "id": "M11-R",
+          "label": "NE hole edge to right outer rim",
+          "prediction_mm": null,
+          "useful_accuracy_mm": 0.2,
+          "method": "caliper",
+          "contacts": "right inside edge of NE hole to rightmost outer metal tangent",
+          "role": "fitting input"
         }
       ],
       "first": false

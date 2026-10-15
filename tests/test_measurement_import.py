@@ -13,6 +13,8 @@ class ImportTests(unittest.TestCase):
             p=self.root/name;p.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(ROOT/name,p)
         self.path=self.root/'response.json'
         self.canon_path=self.root/'canon/measurements.json'
+        # Disposable empty canon keeps importer tests independent of real observations.
+        self.canon_path.write_text(json.dumps(dict(project_id='shower-kohler-valve',revision='R001',measurements=[],history=[])))
         self.original=self.canon_path.read_bytes()
         self.revision=json.loads(self.original)['revision']
 
@@ -46,6 +48,13 @@ class ImportTests(unittest.TestCase):
         self.submit([self.observation('M07-H',50),self.observation('M07-GSW',23.5),self.observation('M07-GNE',19.2)])
         self.assertAlmostEqual(self.accepted()['M07-SW']['value_mm'],26.5)
         self.assertAlmostEqual(self.accepted()['M07-NE']['value_mm'],30.8)
+
+    def test_round_hole_centers_require_both_diameters(self):
+        self.submit([self.observation('M11-G',106.39),self.observation('M11-SWD',5.66),self.observation('M11-R',11.71)])
+        self.assertNotIn('M11-CC',self.accepted());self.assertNotIn('M11-NERC',self.accepted())
+        self.advance();self.submit([self.observation('M11-NED',6.0)])
+        self.assertAlmostEqual(self.accepted()['M11-CC']['value_mm'],112.22)
+        self.assertAlmostEqual(self.accepted()['M11-NERC']['value_mm'],14.71)
 
     def test_control_depth_is_signed_and_diagnostic(self):
         self.submit([self.observation('M10-H',2,'in'),self.observation('M10-GU',2.25,'in',notes='Adapter identity unknown'),self.observation('M10-GL',1.5,'in')])

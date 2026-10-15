@@ -1,6 +1,6 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R001",
+  "revision": "R002",
   "status": "DRAFT_NOT_FOR_FABRICATION",
   "units": "mm",
   "frame": "installed",
@@ -76,6 +76,23 @@
       "date": "2026-10-14",
       "source": "direct user report; docs/physical_checks/depth_inquiry_2026-10-14.json",
       "classification": "qualitative observation; no accepted numeric dimension or completed fit check"
+    },
+    {
+      "id": "OBS-INNER-PLATE-PHOTO-01",
+      "date": "2026-10-14",
+      "source": "SRC-USER-INNER-PLATE-01 and direct user clarification",
+      "status": "user-confirmed front-face identity and measurement endpoints",
+      "face": "Front \u2014 toward the handles",
+      "diagonal_106_39_mm": "Gap between the nearest hole edges",
+      "right_edge_11_71_mm": "Hole edge to outside metal rim",
+      "visible_form": "rounded rectangular metal outline; two round mounting holes; two large control openings; central formed emboss",
+      "not_established": [
+        "rear foam contact path",
+        "plate Z depths",
+        "installed registration",
+        "other hole diameters",
+        "fit or waterproofing"
+      ]
     }
   ],
   "diagnostic_control_depths_mm": {},
@@ -99,26 +116,63 @@
   "inner_slots": [
     {
       "center_mm": [
-        -47.291356275538035,
-        18.462229374095184
+        -50.775952316036786,
+        16.806722024769165
       ],
-      "width_mm": 7,
-      "height_mm": 11,
-      "status": "scan-driven provisional hole"
+      "width_mm": 5.66,
+      "height_mm": 5.66,
+      "shape": "round; observed in user front photo",
+      "diameter_status": "user-confirmed",
+      "status": "measured edge constraints; NE diameter, diagonal angle and vertical placement remain provisional"
     },
     {
       "center_mm": [
-        51.23359848933067,
+        51.43419440360801,
         62.72282385788084
       ],
-      "width_mm": 7,
-      "height_mm": 11,
-      "status": "scan-driven provisional hole"
+      "width_mm": 5.66,
+      "height_mm": 5.66,
+      "shape": "round; observed in user front photo",
+      "diameter_status": "display assumption; independently measure this hole",
+      "status": "measured edge constraints; NE diameter, diagonal angle and vertical placement remain provisional"
     }
   ],
+  "inner_control_openings": [
+    {
+      "center_local_mm": [
+        -0.7991944036080127,
+        -39.67285544965549
+      ],
+      "diameter_mm": 50,
+      "status": "unmeasured display reference"
+    },
+    {
+      "center_local_mm": [
+        0.7991944036080127,
+        40.31999999999999
+      ],
+      "diameter_mm": 48.46,
+      "status": "upper diameter/top gap measured; horizontal centering provisional"
+    }
+  ],
+  "inner_plate_constraints": {
+    "photo_face": "front toward handles",
+    "source": "SRC-USER-INNER-PLATE-01",
+    "mounting_center_spacing_mm": null,
+    "conditional_display_center_spacing_mm": 112.04999999999998,
+    "missing": [
+      "NE mounting-hole diameter",
+      "lower large-opening diameter",
+      "mounting-hole vertical datums",
+      "outline corner shape/radii",
+      "rear gasket footprint",
+      "all plate Z dimensions"
+    ],
+    "placement_note": "No plate photograph or measurement changes the primary wall registration or captured hardware pose."
+  },
   "assumptions": {
-    "inner_width_mm": 116,
-    "inner_height_mm": 165,
+    "inner_width_mm": 130.35,
+    "inner_height_mm": 165.1,
     "inner_sheet_thickness_mm": 1.5,
     "inner_formed_depth_mm": 5,
     "hub_outer_diameter_mm": 32,
@@ -141,7 +195,17 @@
     "diverter_trim_body_depth_mm": 16,
     "diverter_trim_shell_mm": 1.5,
     "diverter_trim_opening_diameter_mm": 36,
-    "handle_note": "Long lever reach corrected from official dimensioned drawings; short main lever reach, cross-section, rear interfaces and housing remain display assumptions. Upper main lever points up; lower main and diverter point down in reference pose, not an operating-range claim."
+    "handle_note": "Long lever reach corrected from official dimensioned drawings; short main lever reach, cross-section, rear interfaces and housing remain display assumptions. Upper main lever points up; lower main and diverter point down in reference pose, not an operating-range claim.",
+    "inner_corner_radius_mm": 40,
+    "inner_upper_opening_diameter_mm": 48.46,
+    "inner_lower_opening_diameter_mm": 50,
+    "mounting_hole_diameter_mm": 5.66,
+    "inner_emboss_height_mm": 3,
+    "inner_aperture_rim_height_mm": 2,
+    "gasket_outer_width_mm": 116,
+    "gasket_outer_height_mm": 165,
+    "inner_photo_basis": "SRC-USER-INNER-PLATE-01: rounded rectangular outline, round mounting holes, central emboss and thin aperture rims. Corner radius, lower bore, NE mounting diameter and all Z values remain display assumptions. Accepted measurements override the relevant parameters.",
+    "gasket_basis": "The earlier 116 x 165 capsule footprint is retained independently as an unverified rear-contact placeholder. Front metal width is NOT rear foam width."
   },
   "nominal": {
     "trim_diameter_mm": 184.15,
@@ -200,7 +264,16 @@
     "seal_display_thickness_mm": 1,
     "seal_thickness_status": "visual separator only; actual cured layer unknown"
   },
-  "accepted_measurement_ids": [],
+  "accepted_measurement_ids": [
+    "M02-W",
+    "M02-H",
+    "M11-UD",
+    "M11-UT",
+    "M11-SWD",
+    "M11-G",
+    "M11-R",
+    "M11-UC"
+  ],
   "scale_status": "inferred conditional scale; NOT physically calibrated",
   "secondary_scans_used_to_fit": false,
   "features": [

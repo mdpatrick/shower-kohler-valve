@@ -1,1 +1,240 @@
-{"project_id":"shower-kohler-valve","schema_version":1,"revision":"R001","measurements":[],"history":[],"note":"No user-confirmed physical dimensions have been supplied. Nominal dimensions and visualization assumptions live in design_decisions.json, not here."}
+{
+  "project_id": "shower-kohler-valve",
+  "schema_version": 1,
+  "revision": "R002",
+  "measurements": [
+    {
+      "id": "M02-W",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "A left tangent to opposite right tangent",
+      "purpose": "Maximum metal outline width",
+      "raw_readings": [
+        130.35
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        130.35
+      ],
+      "value_mm": 130.35,
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied.",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M02-H",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "B bottom tangent to top tangent",
+      "purpose": "Maximum metal outline height",
+      "raw_readings": [
+        6.5
+      ],
+      "raw_unit": "in",
+      "values_mm": [
+        165.1
+      ],
+      "value_mm": 165.1,
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied.",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M11-UD",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "left inside edge to right inside edge of upper large opening",
+      "purpose": "Upper control opening diameter",
+      "raw_readings": [
+        48.46
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        48.46
+      ],
+      "value_mm": 48.46,
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied.",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M11-UT",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "topmost outer metal tangent to top inside edge of upper large opening",
+      "purpose": "Top rim to upper opening top edge",
+      "raw_readings": [
+        18
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        18
+      ],
+      "value_mm": 18,
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied.",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M11-SWD",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "opposite inside edges of lower-left round mounting hole, front view",
+      "purpose": "SW mounting-hole diameter",
+      "raw_readings": [
+        5.66
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        5.66
+      ],
+      "value_mm": 5.66,
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied.",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M11-G",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "nearest edges of SW and NE mounting holes along their center line",
+      "purpose": "Nearest-edge diagonal gap",
+      "raw_readings": [
+        106.39
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        106.39
+      ],
+      "value_mm": 106.39,
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied.",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M11-R",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "right inside edge of NE hole to rightmost outer metal tangent",
+      "purpose": "NE hole edge to right outer rim",
+      "raw_readings": [
+        11.71
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        11.71
+      ],
+      "value_mm": 11.71,
+      "method": "User-reported caliper annotation on actual inner-plate photograph",
+      "source": "user measurement response",
+      "date": "2026-10-14",
+      "photo_ref": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "date_basis": "date reported in chat; actual measurement date unspecified",
+      "notes": "Front face toward handles confirmed. Original units/precision retained. Instrument accuracy and repeat readings not supplied.",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": null
+    },
+    {
+      "id": "M11-UC",
+      "component": "derived",
+      "state": "current_physical_observation",
+      "status": "user-confirmed",
+      "value_mm": 42.230000000000004,
+      "raw_unit": "mm",
+      "raw_readings": [],
+      "source": "derived from accepted raw observations",
+      "inputs": [
+        "M11-UT",
+        "M11-UD"
+      ],
+      "method": "top edge gap + upper opening diameter/2",
+      "date": "2026-10-14",
+      "uncertainty_mm": null,
+      "note": "Derived relation, not an independent second piece of evidence",
+      "role": "fitting input"
+    }
+  ],
+  "history": [
+    {
+      "from_revision": "R001",
+      "to_revision": "R002",
+      "accepted_or_recorded_ids": [
+        "M02-W",
+        "M02-H",
+        "M11-UD",
+        "M11-UT",
+        "M11-SWD",
+        "M11-G",
+        "M11-R",
+        "M11-UC"
+      ],
+      "conflicting_ids": [],
+      "response_sha256": "bfdb96b123a8504c50987db99461d7ee5b7d24f5dd82ad251d6d8d114beb06d0",
+      "current_state_note": "",
+      "group_notes": {
+        "11": "User clarified 106.39 mm is nearest-edge gap, 11.71 mm is hole edge to rim. Only SW small-hole diameter is supplied; do not infer measured NE diameter. Photo shows the front face."
+      },
+      "date_utc": "2026-10-15T04:18:53.249189+00:00",
+      "physical_fit": "not established by measurement import"
+    }
+  ],
+  "note": "User-confirmed readings retain source units, endpoints and unknown uncertainty. Derived values are not independent evidence. Remaining assumptions are in design_decisions.json."
+}

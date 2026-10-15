@@ -28,7 +28,7 @@ def import_response(path,root=ROOT,dry_run=False):
         if bound is not None and (isinstance(bound,bool) or not isinstance(bound,(int,float)) or not math.isfinite(bound) or bound<0):raise ValueError('Invalid uncertainty bound')
         validated.append(dict(id=id,component='see worksheet',state='current_physical_observation',datum=definitions[id]['contacts'],purpose=definitions[id]['label'],
             raw_readings=raw,raw_unit=unit,values_mm=values,value_mm=value,method=obs['method'],source='user measurement response',date=obs['date'],photo_ref=obs.get('photo_ref',''),
-            notes=obs.get('notes',''),uncertainty_mm=bound,repeat_span_mm=span,status='conflicting' if conflict else 'user-confirmed',
+            date_basis=obs.get('date_basis','measurement date'),notes=obs.get('notes',''),uncertainty_mm=bound,repeat_span_mm=span,status='conflicting' if conflict else 'user-confirmed',
             reduction='median of repeat readings; repeat span does not establish measurement accuracy',role=definitions[id]['role'],correction_reason=obs.get('correction_reason')))
     out=copy.deepcopy(canon);accepted={m['id']:m for m in out['measurements'] if m['status']=='user-confirmed'};added=[];conflicts=[]
     for m in validated:
@@ -52,6 +52,15 @@ def import_response(path,root=ROOT,dry_run=False):
     if all(x in accepted for x in ['M01-O','M01-I']):
         if accepted['M01-O']['value_mm']<=accepted['M01-I']['value_mm']:raise ValueError('Outer tip span must exceed inner gap')
         derived('M01',(accepted['M01-O']['value_mm']+accepted['M01-I']['value_mm'])/2,['M01-O','M01-I'],'(outside span + inside gap)/2')
+    if all(x in accepted for x in ['M11-G','M11-SWD','M11-NED']):
+        derived('M11-CC',accepted['M11-G']['value_mm']+(accepted['M11-SWD']['value_mm']+accepted['M11-NED']['value_mm'])/2,
+                ['M11-G','M11-SWD','M11-NED'],'nearest-edge gap + (SW diameter + NE diameter)/2')
+    if all(x in accepted for x in ['M11-R','M11-NED']):
+        derived('M11-NERC',accepted['M11-R']['value_mm']+accepted['M11-NED']['value_mm']/2,
+                ['M11-R','M11-NED'],'right hole-edge gap + NE diameter/2')
+    if all(x in accepted for x in ['M11-UT','M11-UD']):
+        derived('M11-UC',accepted['M11-UT']['value_mm']+accepted['M11-UD']['value_mm']/2,
+                ['M11-UT','M11-UD'],'top edge gap + upper opening diameter/2')
     for which in ['SW','NE']:
         if all(x in accepted for x in ['M07-H','M07-G'+which]):
             z=accepted['M07-H']['value_mm']-accepted['M07-G'+which]['value_mm']
@@ -68,6 +77,7 @@ def import_response(path,root=ROOT,dry_run=False):
             if near in accepted and far in accepted and accepted[far]['value_mm']<=accepted[near]['value_mm']:raise ValueError('Far edge must exceed near edge: '+prefix+' '+axis)
     if not added and not payload.get('current_state_note') and not payload.get('group_notes'):return {'status':'no changes','revision':canon['revision']}
     newrev='R'+str(int(canon['revision'][1:])+1).zfill(3);out['revision']=newrev
+    if added:out['note']='User-confirmed readings retain source units, endpoints and unknown uncertainty. Derived values are not independent evidence. Remaining assumptions are in design_decisions.json.'
     out['history'].append({'from_revision':canon['revision'],'to_revision':newrev,'accepted_or_recorded_ids':added,'conflicting_ids':conflicts,
         'response_sha256':hashlib.sha256(Path(path).read_bytes()).hexdigest(),'current_state_note':payload.get('current_state_note',''),'group_notes':payload.get('group_notes',{}),
         'date_utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'physical_fit':'not established by measurement import'})
