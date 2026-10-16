@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "6e46de0723809d1f95463479392014343b8427e7",
+  "source_commit": "82f24da5e11ad2e40f79f8cee21b1fed285ccc98",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "8548a0b42f088322514fa3a5167a65b82e6c714b03d36916263cd4f127337ed4",
+  "source_tree_hash": "b81f7ebc3628ba776ffceed8ab5c2dc9aef5bd408b5fe7b5bf8ef23cf9e9b713",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1319,8 +1319,8 @@
     },
     {
       "path": "deliverables/current/manual/index.html",
-      "sha256": "e54f91b74d89a3f27996dc0e075f2d61c30938873a957eda80629046c08d6aac",
-      "size_bytes": 6556
+      "sha256": "82a2936c573b9eedbf014637a1ef2abb165d7d8b8a9aa45141d9ed1798b4f32a",
+      "size_bytes": 6857
     },
     {
       "path": "deliverables/current/manual/repair_manual_R001_DRAFT.pdf",
