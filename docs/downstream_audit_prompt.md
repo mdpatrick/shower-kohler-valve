@@ -16,4 +16,6 @@ Review costs as planning allowances, not quotes. Finished sheet metal may be a s
 
 Apply `docs/decisions/measurement_scope_2026-10-15.json`: the expert assembles/installs and is not expected to return new dimensions. The owner may be asked for only a handful of indispensable machining dimensions, each tied to a specific CAD decision with illustrated contacts, plane, easy method and necessary precision. Existing evidence and simpler designs come first; omit general scan-calibration or nice-to-have measurements. Installation checks remain separate.
 
+Audit the final machining set against `docs/decisions/machining_deliverables_2026-10-15.json`: only a small justified set of custom plate variants, one valid plate per STEP, exact filename/quantity/scenario table, isolated previews and no wall/assembly/factory references in vendor ZIPs. Keep reference assemblies in a separate private area.
+
 Preserve evidence and accepted canon. Record proposed corrections with source and consequence, then rerun dependent checks. The fuller historical audit checklist remains in docs/downstream_audit_prompt_pre_FT01.md.

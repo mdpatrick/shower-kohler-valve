@@ -1,17 +1,17 @@
 Kohler shower backing plates - independent design review brief
-15 October 2026 | Review package GP03 | CAD baseline FT01 | Accepted part measurements R005
+15 October 2026 | Review package GP04 | CAD baseline FT01 | Accepted part measurements R005
 
 PURPOSE
 
 Prepare a useful next pair of backing plates for an existing over-cut travertine wall. The owner wants real CAD to obtain a quote and a prompt physical fit trial, plus separate handoffs for the fabricator, Kohler expert/plumber and a novice owner. Pro is being asked to issue concrete implementation instructions to the local agent, not to approve the existing design uncritically. No upload, order, successful complete physical trial or installed water test is recorded.
 
-The current CAD is FOR_QUOTE_AND_DRY_FIT_ONLY. The revision has passed digital file checks; permanent installation is unreleased. Earlier F005, CB01, AP01 and LOC01 are historical studies. GP03 does not revise CAD or authorize a physical repair.
+The current CAD is FOR_QUOTE_AND_DRY_FIT_ONLY. The revision has passed digital file checks; permanent installation is unreleased. Earlier F005, CB01, AP01 and LOC01 are historical studies. GP04 does not revise CAD or authorize a physical repair.
 
 1. PEOPLE, PURPOSE AND CONSTRAINTS
 
 The expert is expected to assemble and install the parts, not supply new expert measurements or a CAD survey. The owner found measuring difficult but will supply a handful of indispensable machining dimensions if needed. Use existing evidence first. Ask only when a value directly changes the custom main or diverter plate aperture, outside profile, thickness or an essential locator; do not request readings merely to refine the scan or complete a broad checklist. For each indispensable request, identify the affected CAD decision, why existing evidence or a simpler design cannot resolve it, exact illustrated contacts and reference plane, easiest method, required precision, and how the answer changes the machining file. Send one short prioritized batch, or request none if the chosen machining scope needs no new dimensions. Ordinary assembly, fit and water checks remain the installer's work, distinct from this measurement burden.
 
-The expert is not a planned source of new machining measurements. Legacy measurement assignments and the long field form are optional background only; this GP03 responsibility clarification governs. Obtain a useful prototype/quote now and keep assembly checks separate. The owner may use finished metal as the first sacrificial fit trial if the delivered price is about twice plastic or less; a remake remains possible.
+The expert is not a planned source of new machining measurements. Legacy measurement assignments and the long field form are optional background only; this GP04 responsibility clarification governs. Obtain a useful prototype/quote now and keep assembly checks separate. The owner may use finished metal as the first sacrificial fit trial if the delivered price is about twice plastic or less; a remake remains possible.
 
 The main concern is shower water reaching the wall cavity behind the trim. A decorative cover concealing a cut is different from supported gasket contact, a sealed new plate-to-wall interface and the condition of concealed waterproofing. Pressure plumbing leaks require a separate check.
 
@@ -29,7 +29,7 @@ The foam is attached to the rear of the real inner plate and meets its outside e
 
 3. ACTUAL LOOSE-PART MEASUREMENTS
 
-Source records are in repo_snapshot/docs/physical_checks/ and repo_snapshot/canon/measurements.json. GP03 includes the owner clarification in review_addenda/inner_plate_planarity_2026-10-15.json and the responsibility constraint in review_addenda/measurement_scope_2026-10-15.json. The annotated photographs are reproduced in 03_VISUAL_EVIDENCE.pdf.
+Source records are in repo_snapshot/docs/physical_checks/ and repo_snapshot/canon/measurements.json. GP04 includes the owner clarification in review_addenda/inner_plate_planarity_2026-10-15.json and the responsibility constraint in review_addenda/measurement_scope_2026-10-15.json. The annotated photographs are reproduced in 03_VISUAL_EVIDENCE.pdf.
 
 The owner confirms the INNER-PLATE FACE measurements were taken within a SINGLE PLANE and considers the caliper readings highly accurate. Use those direct dimensions ahead of scan-derived estimates for the same measured features. They require NO tip-depth correction. This is separate from the installed 3D tip distances in section 4 and the foam/assembly depth readings below. Preserve the supplied digits and instrument distinctions; no numerical accuracy bound or repeatability series was supplied. High confidence in the measured edges does not measure an unknown diameter, infer an installed pose or turn an edge gap into center spacing.
 
@@ -89,6 +89,10 @@ Its manually picked U-L tips were used to set uniform scale from the same 80 mm 
 
 7. CURRENT CAD BASELINE TO CHALLENGE
 
+Distill the CAD down to the smallest justified set of standalone custom main and diverter plates that should actually be fabricated. Evaluate which prototype/thickness/diameter/locator variants are worth keeping; do not carry every historical alternative forward. For each retained scenario give its purpose, exact nominal dimensions or explicit unresolved parameters, stock/material/process, quantity, revision/status and exact output filenames. Distinguish mutually exclusive choices from parts needed together. Each manufacturing STEP must contain exactly one valid custom plate solid in mm at a documented local origin, with no wall, scan, valve, plumbing, factory trim or assembly. Provide matching clean DXF and STL where useful, dimensioned drawings, isolated part previews, a short upload list and hashes. Keep assembly/reference files outside all manufacturing folders and ZIPs. Reimport the actual exports and verify their geometry and contents before delivery.
+
+The owner reports opening STEP files showing a whole shower wall. The exact file is unknown. A separate historical assembly exists at deliverables/current/cad/assembly_DRAFT_NOT_FOR_FABRICATION.step. The six STEP files in this review's technical ZIP are instead the standalone FT01 plate candidates, identified in 06_PLATE_ONLY_FILE_GUIDE.txt. Fresh reimport checks confirm one valid solid per candidate at the expected plate bounds/thickness; this checks file contents, not physical fit. Pro must prune or revise these into a small useful set and write precise file-level instructions.
+
 Main: outside diameter 220; central vertical capsule 116.35 wide x 151.10 high; R58.175 semicircular ends; straight side length 34.75 mm. Aperture center equals outside-circle center.
 Diverter: outside diameter 124, inside diameter 80 mm. Fallback: 120/80 mm.
 Stocks: T1524 = 1.524 mm / 0.060 inch; T3000 = 3.000 mm. The 3 mm version adds 1.476 mm relative to the metal baseline.
@@ -124,7 +128,7 @@ Existing seven-page FT01 guide, two-page shop sheets and full-size templates are
 
 10. LOCAL AGENT FILES AND REPRODUCIBILITY
 
-Workspace: /Users/mdpatrick/Code/shower-kohler-valve. The 82 technical snapshot files are retained byte-for-byte from GP01, source commit fbe55d6475383feca03e9f337fbf6f450f336c89. GP03 adds the separately identified measurement-method/confidence and measurement-responsibility records under review_addenda/ and revises the review prompt, brief and PDF. Older snapshot measurement assignments are superseded by these current instructions. Later repository software maintenance is outside this frozen snapshot. This review changes no baseline CAD. Original scan archives are versioned ordinary Git blobs; no LFS. No remote publication.
+Workspace: /Users/mdpatrick/Code/shower-kohler-valve. The 82 technical snapshot files are retained byte-for-byte from GP01, source commit fbe55d6475383feca03e9f337fbf6f450f336c89. GP04 adds the separately identified measurement-method/confidence, measurement-responsibility and machining-deliverables records under review_addenda/ and revises the review prompt, brief and PDF. Older snapshot measurement assignments are superseded by these current instructions. Later repository software maintenance is outside this frozen snapshot. This review changes no baseline CAD. Original scan archives are versioned ordinary Git blobs; no LFS. No remote publication.
 
 Dimensional inputs: canon/fit_trial_design.json; observations canon/measurements.json and docs/physical_checks/*.json. Handoff prose/research: canon/fit_trial_handoff.json. CAD builder: src/fabrication/fit_trial.py. Export/analytic audit: src/fabrication/audit_fit_trial.py. Documents: src/fabrication/fit_trial_documents.py. Blender: src/blender/fit_trial.py. New scan: src/analysis/attached_scan.py. Entry point: ./project prepare-fit-trial --stage analysis|blender|documents|audit; ./project validate --git-objects. Some frozen snapshot figures/docs contain literal FT01 values; any changed design must update all dependencies coherently.
 

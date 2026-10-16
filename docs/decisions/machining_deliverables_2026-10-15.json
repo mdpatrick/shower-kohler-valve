@@ -1,0 +1,192 @@
+{
+  "id": "USER-PLATE-ONLY-MACHINING-01",
+  "date": "2026-10-15",
+  "source": "Direct user instruction in project chat",
+  "raw_user_statement": "Yeah, so what I want GPT Pro to also do is distill down the cad drawings to just the plate versions that need to be machined. I was surprised to open the step files and find that it's the whole shower wall rather than the escutcheon plates I actually needed in varying prototypes, so my hope is that GPT Pro will evaluate our needs and write instructions for me to give back to you telling you what to do with precision.",
+  "requested_review": "GPT Pro should choose the smallest justified set of standalone main and diverter backing-plate variants and return precise implementation instructions for the local agent.",
+  "required_decision_table": [
+    "Part and variant ID",
+    "Purpose and whether recommended, mutually exclusive alternative, or conditional",
+    "Exact nominal geometry or explicitly unresolved parameter",
+    "Material/process and stock thickness",
+    "Quantity for that scenario",
+    "Exact output filenames and folders",
+    "Reason to keep or omit each candidate",
+    "Essential owner measurement only if it determines machining"
+  ],
+  "manufacturing_exports": "Each STEP contains exactly one valid connected custom plate solid, in mm at a documented local origin. Matching clean DXF and STL when useful. No shower wall, scans, plumbing, valves, factory trim, exploded assembly or diagnostic envelopes.",
+  "release_contents": "One clearly named fabricator folder per selected route/scenario, a short upload list, isolated part previews, matching dimensioned drawings, quantity/status and a hash manifest. Do not tell the owner to order all alternatives.",
+  "verification": "Reimport each exported STEP and compare solid count, actual topology, bounds, thickness, volume/profile and units against that variant. Inspect isolated top/isometric previews. Check matching DXF/STL and only the selected files in each manufacturing ZIP.",
+  "references": "Keep assemblies, factory references, scans, old versions and rejected studies in a separate private reference area. Preserve source history; exclude it from machining delivery.",
+  "current_inspection_scope": "All six current FT01 and all six archived GP03 STEP files independently reimported this turn; each is a valid single plate solid at the expected bounds and thickness. The complete-wall STEP reported by the user has not been identified.",
+  "current_standalone_STEP_checks": [
+    {
+      "file": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        120.0,
+        120.0,
+        1.524
+      ],
+      "min_mm": [
+        -60.0,
+        -60.0,
+        0.0
+      ],
+      "sha256": "eafb71a5a918007cf8d3439638024320ece2200e7766f25866e62621868ae9c5"
+    },
+    {
+      "file": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        120.0,
+        120.0,
+        3.0
+      ],
+      "min_mm": [
+        -60.0,
+        -60.0,
+        0.0
+      ],
+      "sha256": "f41718a65b2b049364ceace2065730d115785bc6a2f002e7683ac6c43654b1d6"
+    },
+    {
+      "file": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T1524_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        124.0,
+        124.0,
+        1.524
+      ],
+      "min_mm": [
+        -62.0,
+        -62.0,
+        0.0
+      ],
+      "sha256": "823c271f9e3e3bb182da54a4fc6e4a9d6f62a1c1b08ec2f54090b52e1bb084d0"
+    },
+    {
+      "file": "deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T3000_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        124.0,
+        124.0,
+        3.0
+      ],
+      "min_mm": [
+        -62.0,
+        -62.0,
+        0.0
+      ],
+      "sha256": "cf540a6993db712b5e4221fd9eb03d716cbe1f7c5256989568737c2363f6568f"
+    },
+    {
+      "file": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T1524_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        220.0,
+        220.0,
+        1.524
+      ],
+      "min_mm": [
+        -110.0,
+        -110.0,
+        0.0
+      ],
+      "sha256": "be0075d386e743c089170e0ae39c570ebe94963f04d08023327b49cba656e7f8"
+    },
+    {
+      "file": "deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T3000_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        220.0,
+        220.0,
+        3.0
+      ],
+      "min_mm": [
+        -110.0,
+        -110.0,
+        0.0
+      ],
+      "sha256": "93e85e028119bd2e2744c4838397c905c98b6d1456023a710ae56a4d9d685613"
+    }
+  ],
+  "legacy_assembly_example": "deliverables/current/cad/assembly_DRAFT_NOT_FOR_FABRICATION.step",
+  "current_design_status": "FT01 remains for quote and sacrificial fit trial; Pro has not selected or revised the machining set.",
+  "numeric_measurement_revision": "R005 unchanged",
+  "CAD_revision": "FT01 unchanged",
+  "archived_GP03_STEP_checks": [
+    {
+      "technical_zip_path": "repo_snapshot/deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        120.0,
+        120.0,
+        1.524
+      ],
+      "sha256": "a666b916902115e30ddf73680461a589be5df0733be9e2342a2c6c0de24141a4"
+    },
+    {
+      "technical_zip_path": "repo_snapshot/deliverables/current/fabrication/fit-trial/cad/FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        120.0,
+        120.0,
+        3.0
+      ],
+      "sha256": "5a832640247151d954cbd54114b36610edba93b45aa1ee7d861c61e6eb037b65"
+    },
+    {
+      "technical_zip_path": "repo_snapshot/deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T1524_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        124.0,
+        124.0,
+        1.524
+      ],
+      "sha256": "d42e68e6675c738e926e086085b6f0a125c9dd36fa334bbb9a34992dd67bfcf4"
+    },
+    {
+      "technical_zip_path": "repo_snapshot/deliverables/current/fabrication/fit-trial/cad/FT01_DIV_124_T3000_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        124.0,
+        124.0,
+        3.0
+      ],
+      "sha256": "870df72e8ebacbf97fbd41be6c8b64b4a4b74d7d5ec74e41ea155ca044b3f63b"
+    },
+    {
+      "technical_zip_path": "repo_snapshot/deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T1524_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        220.0,
+        220.0,
+        1.524
+      ],
+      "sha256": "a8963165b7dc3f817a9f22435fcf784c61bd7c83e78a548e2d88e3002f1adae3"
+    },
+    {
+      "technical_zip_path": "repo_snapshot/deliverables/current/fabrication/fit-trial/cad/FT01_MAIN_220_T3000_FIT_TRIAL.step",
+      "solid_count": 1,
+      "valid": true,
+      "bounds_mm": [
+        220.0,
+        220.0,
+        3.0
+      ],
+      "sha256": "a277940a93a8c7c2a02adbf83b4c86b566cf084b1f847fad85a10149ae0038fc"
+    }
+  ]
+}

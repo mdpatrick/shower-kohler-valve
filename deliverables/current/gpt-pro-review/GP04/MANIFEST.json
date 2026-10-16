@@ -1,0 +1,204 @@
+{
+  "package": "GP04",
+  "supersedes_review_package": "GP03",
+  "project": "shower-kohler-valve",
+  "date": "2026-10-15",
+  "baseline_commit": "fbe55d6475383feca03e9f337fbf6f450f336c89",
+  "current_CAD": "FT01",
+  "measurement_revision": "R005",
+  "status": "INDEPENDENT_REVIEW_PROMPT_PACKAGE; CAD remains FOR_QUOTE_AND_DRY_FIT_ONLY",
+  "actual_external_transmission": false,
+  "baseline_geometry_changed": false,
+  "source_note": "The 82 GP01 technical snapshot files remain byte-identical to the baseline commit. GP04 carries forward both measurement clarifications and adds the plate-only machining requirement, fresh STEP inspection and exact candidate file guide. Prompt, brief and PDF state the current requirements. Later software maintenance is not pulled into the snapshot.",
+  "payload_files": [
+    {
+      "path": "00_READ_ME_FIRST.txt",
+      "sha256": "b67221360856b51cc4fddcaea716532dd46f16688223aba2036b12a54035f2e1",
+      "size_bytes": 6144
+    },
+    {
+      "path": "01_PASTE_INTO_GPT_PRO.txt",
+      "sha256": "8d687613e780007efff30ebc810cffa2d829f2360e8fbe26a9b3c33225356af9",
+      "size_bytes": 22090
+    },
+    {
+      "path": "02_PROJECT_BRIEF.txt",
+      "sha256": "4fc9dd87caafa36dba4920ee9ed1c781ec43a17f45374924653c0b935e21c2ee",
+      "size_bytes": 20406
+    },
+    {
+      "path": "05_RETURN_TO_AGENT.txt",
+      "sha256": "226a93ce826af663d70c3ff9087e0178cc20edd2e666653b49c419f81e2cb9ba",
+      "size_bytes": 3670
+    },
+    {
+      "path": "06_PLATE_ONLY_FILE_GUIDE.txt",
+      "sha256": "a07054fe5b90e0e5400456aae900e98cfea90961dcbb057efdc7856f177f4cf1",
+      "size_bytes": 4435
+    },
+    {
+      "path": "03_VISUAL_EVIDENCE.pdf",
+      "sha256": "fd420f07db2f0c7048cfb89289a343c323866d7436662be9e7490cb8cf44c6f5",
+      "size_bytes": 50847079
+    },
+    {
+      "path": "04_TECHNICAL_REFERENCE.zip",
+      "sha256": "deaa19f78e87154504cffc1d3b8301b7a88080ef1f286ef854053444b6a03c33",
+      "size_bytes": 12792745
+    }
+  ],
+  "evidence_figures": [
+    {
+      "page": 2,
+      "title": "Inner plate measured face",
+      "category": "PLANAR FACE MEASUREMENTS / FRONT TOWARD HANDLES",
+      "repository_source": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+      "sha256": "05d5b6017e70e08ba4e996404ffc39a186a7d8525f3f35e804136ddab7c9ce74",
+      "size_bytes": 6572372,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 3,
+      "title": "Decorative cover measured face",
+      "category": "USER MEASUREMENTS / FRONT TOWARD HANDLES",
+      "repository_source": "data/evidence/user/outer-plate-front-caliper-2026-10-14.png",
+      "sha256": "60912be5e07c5821cada84ad21ec88d42ddafac48cf653f59b676ea2bd8b1c87",
+      "size_bytes": 6333123,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 4,
+      "title": "Upper-right stud tip distances",
+      "category": "USER CALIPER READINGS / THREE-DIMENSIONAL TIP DISTANCES",
+      "repository_source": "data/evidence/user/installed-ne-stud-distances-2026-10-15.png",
+      "sha256": "e125f991df7ce7086cf5ade2ecaf9d92ad8548bf52df3934c76f2ccf01711a82",
+      "size_bytes": 4802410,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 5,
+      "title": "Lower-left stud tip distances",
+      "category": "USER CALIPER READINGS / THREE-DIMENSIONAL TIP DISTANCES",
+      "repository_source": "data/evidence/user/installed-sw-stud-distances-2026-10-15.png",
+      "sha256": "1421762170862ba74d07b8b1d17f48b7f5a96f6876aad8bf0dfd3bb2cf424ca0",
+      "size_bytes": 4899486,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 6,
+      "title": "Rear installation context",
+      "category": "ACTUAL USER PHOTOGRAPH / NO CAD RECONSTRUCTION",
+      "repository_source": "data/evidence/user/rear-context-2026-10-15.jpeg",
+      "sha256": "08e9d5589e405ced95386715aa7bad8a3fbe6051001f31f3c193eb7578727b99",
+      "size_bytes": 1406179,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 7,
+      "title": "Rear rod and wood relationship",
+      "category": "ACTUAL USER PHOTOGRAPH / OWNER-CONFIRMED CONTACT",
+      "repository_source": "data/evidence/user/rear-close-2026-10-15.jpeg",
+      "sha256": "809f61e96bf5b636c1d5364ee0f40388ea23a1857904555ac147254b7c4242aa",
+      "size_bytes": 1167389,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 8,
+      "title": "Depth concern from the side",
+      "category": "USER-SUPPLIED SCAN VIEW / QUALITATIVE DEPTH EVIDENCE",
+      "repository_source": "data/evidence/user/depth-side-view-2026-10-14.png",
+      "sha256": "9b093e02da9956bf804ffff8efe1031171e42c2f157362e51b075abc7f8dcf13",
+      "size_bytes": 161906,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 9,
+      "title": "Real inner plate attached",
+      "category": "SUPPLEMENTAL POLYCAM / SEPARATE WALL-NORMAL INSPECTION",
+      "repository_source": "deliverables/current/fabrication/fit-trial/plane_front.png",
+      "sha256": "d94005663a9a4ee7b390cfeef05efe8b221c4875e2fd3daf28b20ba641b610b6",
+      "size_bytes": 4216338,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 10,
+      "title": "Current main aperture",
+      "category": "FT01 PROPOSED GEOMETRY / ASSUMED FOAM AND LOWER OPENING",
+      "repository_source": "deliverables/current/fabrication/fit-trial/access.png",
+      "sha256": "1d040dd714c1b9b98f43721ac1a1371e11fb0990e82cba7381f61a2739bbdd9e",
+      "size_bytes": 194451,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 11,
+      "title": "Main and diverter size choice",
+      "category": "FT01 PROPOSED PAIR / SCENARIO PLACEMENT",
+      "repository_source": "deliverables/current/fabrication/fit-trial/sizes.png",
+      "sha256": "3b182cafa791645d22b2a1cb1e3c754219ebaf552dc49ac987482d850973bda0",
+      "size_bytes": 160682,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 12,
+      "title": "Proposed appearance on the travertine",
+      "category": "FT01 APPEARANCE / OFFICIAL EXTERIOR CAD REFERENCES",
+      "repository_source": "deliverables/current/fabrication/fit-trial/paired_front.png",
+      "sha256": "be0ca1b99bb72de45b871c6d7f3fba010e4503ce209297686dfd9b87972f3913",
+      "size_bytes": 1501703,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 13,
+      "title": "Exploded layer illustration",
+      "category": "FT01 PROPOSED ASSEMBLY / DISPLAY OFFSETS ONLY",
+      "repository_source": "deliverables/current/fabrication/fit-trial/exploded.png",
+      "sha256": "1df59cc2406519004412d51840f0131c94e03b9e9369f67937dc2bd69e1fb55d",
+      "size_bytes": 1437519,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    },
+    {
+      "page": 14,
+      "title": "Earlier locating-tab experiment",
+      "category": "HISTORICAL LOC01 / NOT A CURRENT ORDER FILE",
+      "repository_source": "deliverables/current/fabrication/concentric-border-study/views/stud_locator_trial.png",
+      "sha256": "f332c2367221ded3cf38c32e86e5b932088d945f41ce923ea03addeab5fd4c36",
+      "size_bytes": 123214,
+      "rendering": "Original image uniformly placed, no retouching; source pixels retained in repository"
+    }
+  ],
+  "technical_snapshot_files": 85,
+  "omitted_local_assets": [
+    {
+      "id": "SCAN-WALL",
+      "repository_path": "data/raw/polycam/shower-hole-valve-polycam.zip",
+      "sha256": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
+      "size_bytes": 36799744
+    },
+    {
+      "id": "SCAN-PLATE-1",
+      "repository_path": "data/raw/polycam/plates-side-1-polycam.zip",
+      "sha256": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
+      "size_bytes": 4072620
+    },
+    {
+      "id": "SCAN-PLATE-2",
+      "repository_path": "data/raw/polycam/plates-side-2-polycam.zip",
+      "sha256": "393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781",
+      "size_bytes": 4448807
+    },
+    {
+      "id": "SCAN-INNER-ATTACHED",
+      "repository_path": "data/raw/polycam/polycam-inner-plate-attached.zip",
+      "sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+      "size_bytes": 23654985
+    },
+    {
+      "id": "BLENDER-FT01",
+      "repository_path": "deliverables/current/fabrication/fit-trial/escutcheon_fit_trial_FT01.blend",
+      "sha256": "2dcc22ad090848e23868420a6a4aa14c2fc74b1ed0c5f348357d9c5cc0912b57",
+      "size_bytes": 85953966
+    }
+  ],
+  "omissions_note": "Omitted assets remain in the local repository. No raw mesh recomputation is possible from this compact package alone.",
+  "manifest_self_hash_note": "Manifest excluded from its own hash to avoid circularity; outer ZIP verified separately."
+}

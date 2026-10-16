@@ -1,0 +1,51 @@
+PLATE-ONLY FILE GUIDE - GP04
+
+These are existing FT01 candidates for Pro to evaluate, not a direction to fabricate all six. Pro must select the smallest useful main/diverter prototype set and give the local agent exact filenames, dimensions, purpose, material/process, quantities and checks for the chosen or revised parts.
+
+WHERE THE STANDALONE PARTS ARE
+
+Inside 04_TECHNICAL_REFERENCE.zip, extract this folder:
+repo_snapshot/deliverables/current/fabrication/fit-trial/cad/
+
+In the local project, the corresponding folder is:
+/Users/mdpatrick/Code/shower-kohler-valve/deliverables/current/fabrication/fit-trial/cad/
+
+Each STEP below contains one custom plate solid. The matching .dxf and .stl use the exact same filename stem. STEP, DXF and STL are alternative representations of that part, not three parts to buy. No file below contains the shower wall, valve, plumbing or factory trim.
+
+CANDIDATES, ALL DIMENSIONS IN MM
+
+Current T1524 pair (quote / sacrificial fit-trial baseline):
+- FT01_MAIN_220_T1524_FIT_TRIAL.step
+  Main backing. Outside diameter 220; upright capsule aperture 116.35 x 151.10, R58.175; thickness 1.524. One main if this scenario is selected.
+- FT01_DIV_124_T1524_FIT_TRIAL.step
+  Diverter backing. Outside diameter 124; circular aperture 80; thickness 1.524. One diverter if this scenario is selected.
+
+Alternative T3000 pair (separate plastic/acrylic shape trial):
+- FT01_MAIN_220_T3000_FIT_TRIAL.step
+  Same main outline/aperture; thickness 3.000.
+- FT01_DIV_124_T3000_FIT_TRIAL.step
+  Same 124/80 diverter profile; thickness 3.000.
+  This pair is an alternative thickness, not an extra pair automatically required. It adds 1.476 mm to the baseline stack and does not validate 1.524 mm metal stiffness or identical depth fit.
+
+Conditional smaller-diverter alternatives:
+- FT01_DIV-FALLBACK_120_T1524_FIT_TRIAL.step
+  Outside diameter 120; aperture 80; thickness 1.524.
+- FT01_DIV-FALLBACK_120_T3000_FIT_TRIAL.step
+  Outside diameter 120; aperture 80; thickness 3.000.
+  A 120 mm diverter substitutes for the 124 mm diverter only if the selected design/fit scenario justifies it. It is not a third required installed plate.
+
+T1524 can support a 0.060-inch sheet-metal quote or a thickness-matched plastic print. A material change does not automatically require a new shape variant. Confirm actual vendor stock thickness. Current shapes have no fixed bolt locators; Pro should decide whether a separate locator variant is worth making and defensible with the available evidence.
+
+WHAT WAS CHECKED
+
+The local agent reimported all six current STEP files and all six archived STEP files supplied to Pro. Each is one valid solid, with square XY bounds of 220, 124 or 120 and Z thickness 1.524 or 3.000 as labeled. See review_addenda/machining_deliverables_2026-10-15.json for exact source paths and hashes. These are software file-content checks; physical fit is not established.
+
+ASSEMBLY REFERENCES ARE A DIFFERENT FILE CLASS
+
+The historical local file deliverables/current/cad/assembly_DRAFT_NOT_FOR_FABRICATION.step is an assembly reference. F005/reference/ also contains factory and diagnostic assembly references. They are not included among the six STEP files in this Pro technical ZIP and must never be substituted for a standalone plate upload. The particular whole-wall file the owner previously opened is unknown.
+
+WHAT PRO MUST RETURN TO THE AGENT
+
+A small selected-set table and precise implementation instructions, not another undifferentiated CAD archive. For each retained scenario: part/variant ID, exact geometry or explicit conditional input, stock/material/process, quantity, revision/status, exact STEP/DXF/STL/drawing filenames, purpose and reason for retaining it. Explain which choices are mutually exclusive. Omit unnecessary prototypes, rejected shapes and assembly references from machining delivery.
+
+Require one clearly named fabricator folder/ZIP per chosen scenario, an exact upload list, isolated top/isometric previews, dimensioned drawings and a hash manifest. Reopen the exported files and verify one valid custom solid per STEP, the correct units/origin/bounds/thickness/profile/volume/cutouts, matching DXF/STL and no other geometry. Keep all wall/assembly illustrations in a separate private reference handoff. Only request a handful of owner measurements if indispensable to those machining decisions; the expert is expected to assemble/install, not supply a new CAD survey.

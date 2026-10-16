@@ -1,0 +1,151 @@
+Kohler shower backing plates - independent design review brief
+15 October 2026 | Review package GP04 | CAD baseline FT01 | Accepted part measurements R005
+
+PURPOSE
+
+Prepare a useful next pair of backing plates for an existing over-cut travertine wall. The owner wants real CAD to obtain a quote and a prompt physical fit trial, plus separate handoffs for the fabricator, Kohler expert/plumber and a novice owner. Pro is being asked to issue concrete implementation instructions to the local agent, not to approve the existing design uncritically. No upload, order, successful complete physical trial or installed water test is recorded.
+
+The current CAD is FOR_QUOTE_AND_DRY_FIT_ONLY. The revision has passed digital file checks; permanent installation is unreleased. Earlier F005, CB01, AP01 and LOC01 are historical studies. GP04 does not revise CAD or authorize a physical repair.
+
+1. PEOPLE, PURPOSE AND CONSTRAINTS
+
+The expert is expected to assemble and install the parts, not supply new expert measurements or a CAD survey. The owner found measuring difficult but will supply a handful of indispensable machining dimensions if needed. Use existing evidence first. Ask only when a value directly changes the custom main or diverter plate aperture, outside profile, thickness or an essential locator; do not request readings merely to refine the scan or complete a broad checklist. For each indispensable request, identify the affected CAD decision, why existing evidence or a simpler design cannot resolve it, exact illustrated contacts and reference plane, easiest method, required precision, and how the answer changes the machining file. Send one short prioritized batch, or request none if the chosen machining scope needs no new dimensions. Ordinary assembly, fit and water checks remain the installer's work, distinct from this measurement burden.
+
+The expert is not a planned source of new machining measurements. Legacy measurement assignments and the long field form are optional background only; this GP04 responsibility clarification governs. Obtain a useful prototype/quote now and keep assembly checks separate. The owner may use finished metal as the first sacrificial fit trial if the delivered price is about twice plastic or less; a remake remains possible.
+
+The main concern is shower water reaching the wall cavity behind the trim. A decorative cover concealing a cut is different from supported gasket contact, a sealed new plate-to-wall interface and the condition of concealed waterproofing. Pressure plumbing leaks require a separate check.
+
+Preserve travertine: no tile drilling, cutting, grinding, enlargement or retiling. Supported local repair is a possible option. Retain factory inner plate, foam, cover, adapters/handles, drainage and service functions. Do not move plumbing solely to improve a rendering. No external upload/order/message is authorized by this package.
+
+2. IDENTIFIED COMPONENTS AND ASSEMBLY STATES
+
+Main: Kohler K-2973-KS-NA valve with K-T14489-4-BN trim.
+Diverter: K-737-K-NA valve with K-T14491-4-BN trim.
+The custom parts are backing plates, not replacements for factory trim.
+
+The owner reported no piping/valve/stud/wall-opening change since the primary bare installation scan and says the valve is plumbed in. Later they supplied a separate scan with the real inner plate attached. These are different trim assembly states, not proof that the hardware/rough-in position changed. No successful assembled handle or water test is recorded.
+
+The foam is attached to the rear of the real inner plate and meets its outside edge. It is not foam backing inside the rear wall cavity. It is absent from the earlier bare-valve state because that plate was removed. Rear photographs show actual wood and plumbing. The owner confirms the 4.56 inch rods touch wood and conditionally prefers wood clearance behind them if all other valve/handle depth relationships are acceptable. The clearance hole dimensions, member function and safe route remain unestablished.
+
+3. ACTUAL LOOSE-PART MEASUREMENTS
+
+Source records are in repo_snapshot/docs/physical_checks/ and repo_snapshot/canon/measurements.json. GP04 includes the owner clarification in review_addenda/inner_plate_planarity_2026-10-15.json and the responsibility constraint in review_addenda/measurement_scope_2026-10-15.json. The annotated photographs are reproduced in 03_VISUAL_EVIDENCE.pdf.
+
+The owner confirms the INNER-PLATE FACE measurements were taken within a SINGLE PLANE and considers the caliper readings highly accurate. Use those direct dimensions ahead of scan-derived estimates for the same measured features. They require NO tip-depth correction. This is separate from the installed 3D tip distances in section 4 and the foam/assembly depth readings below. Preserve the supplied digits and instrument distinctions; no numerical accuracy bound or repeatability series was supplied. High confidence in the measured edges does not measure an unknown diameter, infer an installed pose or turn an edge gap into center spacing.
+
+INNER PLATE (photo faces outward, toward handles)
+- Overall width: 130.35 mm, caliper.
+- Overall height: 6.5 inches = 165.10 mm, tape.
+- Upper opening inside diameter: 48.46 mm.
+- Top outside rim to upper opening nearest edge: 18 mm. Derived upper center 42.23 mm below top, under the stated diameter/contact geometry.
+- SW mounting hole diameter: 5.66 mm.
+- Diagonal gap between nearest mounting-hole edges: 106.39 mm. This is NOT center spacing.
+- NE mounting-hole outside edge to outside plate rim: 11.71 mm. This is NOT center-to-rim.
+- NE hole diameter and lower large opening diameter are unmeasured. If both small holes were 5.66 mm, the corresponding center spacing would be 112.05 mm; that is conditional only.
+- Lower opening diameter 50 mm and outer corner radius 40 mm are model assumptions, not accepted measurements. Hole vertical positions and installed plate registration are also unresolved.
+
+FOAM AND DEPTH
+- Foam about 6 mm wide and 6 mm deep, edge-flush to the plate.
+- Complete loose plate depth 15.44 mm, from UNCOMPRESSED foam rear to frontmost metal; the caliper did not squeeze the foam.
+- 15.44 - 6 = 9.44 mm is not sheet thickness, installed spacer allowance or a verified rear contact datum.
+- Exact rear outline, corner contour, minimum local width, condition, compressed thickness and continuous contact remain unknown.
+
+DECORATIVE MAIN COVER (photo faces outward)
+- Outside diameter: 7.25 inches = 184.15 mm, tape.
+- Upper opening inside diameter: 33.79 mm.
+- 46.25 mm gap between nearest INSIDE opening edges, not raised lip outside edges.
+- Lower opening bottom INSIDE edge to bottommost OUTSIDE rim: 35.23 mm.
+- Lower opening diameter and rear cavity at both nuts/studs are unmeasured.
+- If the opening centers are vertically collinear, spacing = 46.25 + (33.79 + lower_diameter)/2. The equal-bore assumption yields 80.04 mm, but is not a measured planar center distance or independent confirmation of the 80 mm 3D tip length.
+
+4. INSTALLED TIP DISTANCES AND WHY THEY DO NOT LOCATE HOLES
+
+U = upper control tip; L = lower control tip; NE = upper-right trim stud tip; SW = lower-left stud tip, viewed from the shower.
+
+All six readings are straight-line 3D distances between the centers of the end faces of the projecting pieces, at unequal Z depths:
+U-L 80.00; NE-SW 109.80; U-NE 51.40; L-NE 80.25; U-SW 81.14; L-SW 54.70 mm.
+
+These are not wall-plane center distances or axes at the intended backing plane. If a depth difference dz is independently known, projected tip separation is sqrt(distance_3d^2 - dz^2), but even projected tips do not establish inclined stud axes at another plane. No repeat readings/uncertainty bounds were supplied. Earlier technique/endpoint concerns belong to these installed tip readings and must not be generalized to the separately confirmed coplanar inner-plate face measurements. The calipers guide reconciliation, with the primary scan as weaker corroboration. Preserve both; fit weights/residuals are not measurement accuracy.
+
+The conditional loose-plate center spacing 112.05 mm exceeds the 109.8 mm installed 3D tip spacing. Unequal depth alone cannot make a projected tip spacing larger than its 3D length. This deserves reconciliation of contacts, hole diameters, axes and assembly pose; it is not by itself proof of defective hardware.
+
+5. MANUFACTURER REFERENCES AND ROD DEPTH
+
+Primary archived PDFs and source register are included. Applicability to the actual revision must be confirmed. The older 1041504-2-F guide places nuts behind the decorative cover, calls for the inner plate to lie flat and its foam to cover the opening, shows the drain down, and provides adapter/engagement checks. Read the complete applicable steps, not isolated numbers.
+
+Official service part 1038645 is described as Stud, 10-24 x 4.56 L: nominal total length 4.56 inches = 115.824 mm. This is different from permitted exposed front projection. The older trim guide's front-projection maximum is 7/16 inch = 11.1125 mm from the finished wall. Do not assume a custom backing moves that datum or establishes an extension allowance.
+
+The user now confirms rear wood contact. Earlier primary-scan front tip estimates around 26.61 and 30.68 mm suggested roughly 15.5 and 19.6 mm inward travel to the nominal 11.11 mm datum. Those are conditional scan estimates, not hole drilling depths or an adjustment instruction. Required retained threads and actual front/reference planes remain physical checks.
+
+Handle attachment is a separate system from stud/nut adjustment. More clearance behind rods does not repair a wrong control rough-in depth or wrong adapter. The main handles install from the front; rear connection envelopes must reach the stems through the relevant layers. There is no established general 5 mm waterproofing tolerance.
+
+6. WHAT THE SCANS ESTABLISH
+
+The primary wall-and-valve ZIP remains the unchanged installed spatial reference. The two original plate-side scans are secondary and visibly distorted. Physical measurements govern the actual measured parts; manufacturer data govern applicable nominal design, not necessarily installed position.
+
+The supplemental polycam-inner-plate-attached.zip is preserved at 23,654,985 bytes, SHA256 6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91. It contains 333,573 vertices and 597,416 faces. The agent created a separate wall-normal inspection frame; it is NOT globally registered to the primary scan.
+
+Its manually picked U-L tips were used to set uniform scale from the same 80 mm measurement. This is calibration, not an independent check. Its approximate outline reads 134.46 mm wide versus 130.35 mm caliper and 166.04 mm high versus 165.10 mm tape. The visible stem centers appear about 3-4 mm high within hub rings. Reflective distortion, depth projection and uncertain hub geometry prevent treating that offset as a measured axis error, but the owner's fit concern remains real. Do not force the circles concentric in the evidence.
+
+7. CURRENT CAD BASELINE TO CHALLENGE
+
+Distill the CAD down to the smallest justified set of standalone custom main and diverter plates that should actually be fabricated. Evaluate which prototype/thickness/diameter/locator variants are worth keeping; do not carry every historical alternative forward. For each retained scenario give its purpose, exact nominal dimensions or explicit unresolved parameters, stock/material/process, quantity, revision/status and exact output filenames. Distinguish mutually exclusive choices from parts needed together. Each manufacturing STEP must contain exactly one valid custom plate solid in mm at a documented local origin, with no wall, scan, valve, plumbing, factory trim or assembly. Provide matching clean DXF and STL where useful, dimensioned drawings, isolated part previews, a short upload list and hashes. Keep assembly/reference files outside all manufacturing folders and ZIPs. Reimport the actual exports and verify their geometry and contents before delivery.
+
+The owner reports opening STEP files showing a whole shower wall. The exact file is unknown. A separate historical assembly exists at deliverables/current/cad/assembly_DRAFT_NOT_FOR_FABRICATION.step. The six STEP files in this review's technical ZIP are instead the standalone FT01 plate candidates, identified in 06_PLATE_ONLY_FILE_GUIDE.txt. Fresh reimport checks confirm one valid solid per candidate at the expected plate bounds/thickness; this checks file contents, not physical fit. Pro must prune or revise these into a small useful set and write precise file-level instructions.
+
+Main: outside diameter 220; central vertical capsule 116.35 wide x 151.10 high; R58.175 semicircular ends; straight side length 34.75 mm. Aperture center equals outside-circle center.
+Diverter: outside diameter 124, inside diameter 80 mm. Fallback: 120/80 mm.
+Stocks: T1524 = 1.524 mm / 0.060 inch; T3000 = 3.000 mm. The 3 mm version adds 1.476 mm relative to the metal baseline.
+Existing exports: six part/stock combinations, each STEP, STL and DXF. No fixed locator tabs or holes. The broad opening contains the modeled control openings and rods.
+
+The no-tab rationale is to preserve adjustment and insertion access under uncertain pose. Proposed trial centering uses the actual covers, four equal visible borders and temporary holding, then verification of retention with the selected support/clamping system. This is not a proven retention design. The expert must establish whether the backing remains stable without excessive nut load.
+
+Visible main border: (220 - 184.15)/2 = 17.925 mm. Diverter border using nominal cover 98.425 mm: (124 - 98.425)/2 = 12.7875 mm. The diverter cover's radial overlap beyond the 80 mm aperture is 9.2125 mm, not proof that its actual rear seal footprint lands there.
+
+Predicted gap between the 220/124 pair is 3.06-5.21 mm across three historical placements. The 120 fallback adds 2 mm gap. Those placements are scenarios, not uncertainty bounds; true cover centers must govern. A 3 mm actual gap is a project handling preference, not a Kohler standard.
+
+Main projected damage margins after prior trace allowances are about 7.03-8.28 mm. Diverter 124 original-scenario margin is about 10.95 mm. Concealed damage, weak stone and unsupported depth are not resolved by those 2D margins.
+
+Requested shop targets, not vendor commitments: metal cut profile +/-0.13 mm; plastic +/-0.25 mm; free overall flatness 0.5 mm. Report actual stock thickness and finish loss. These are not accepted field-fit allowances.
+
+8. DIGITAL CHECKS AND THEIR LIMITS
+
+The current audit records valid single STEP solids; clean two-contour mm DXFs; analytic volume, bounds and watertight STL checks; six consistent part sets; printable two-axis 100 mm bars; drawings and archive hashes; Blender save/reopen. The fresh calculation was by the same local agent, not a separate reviewer.
+
+The capsule covers 51,929 clipped primary-scan projected surface pieces in each of three historical pose hypotheses. Minimum projected hardware clearances are 1.904, 2.303 and 1.606 mm, with no modeled conflicts. Scope is Z >= 0.5 mm and inside OPEN-MAIN eroded 3 mm. Stone-border geometry, hidden surfaces, uncertain axes and the newly attached scan's full insertion path are outside that result. No physical clearance allowance has been demonstrated.
+
+With an assumed 6 mm edge-flush foam band, the nominal extra land between foam inner edge and aperture is only 1 mm. Outer corner-radius scenarios 40-65.175 mm were checked. After a 0.13 mm cut target only 0.87 mm nominal extra land remains, before unresolved footprint and registration error. This is a key design weakness to assess, not an endorsed tolerance stack.
+
+Historical LOC01 used added tabs, exploratory 7.5 mm holes, a 12 x 7.5 mm SW slot, assumed normal stud axes and an earlier diagonal aperture. It reported insertion and seated model conflicts. It is not a released alternative, and its coordinates must not be copied into new cut files. A notch removes material and must be judged separately.
+
+9. MATERIALS, COST AND HANDOFF STATUS
+
+Flat laser-cut stainless is the existing metal route; no metal additive manufacturing is needed for these flat profiles. Earlier research compared 316 deburred/directionally grained with 304 #4 protected brushed stock. Deburring is not necessarily cosmetic finishing, and brushed stainless is not an exact Kohler BN finish match. Thin metal still requires suitable support under seal/clamp loads.
+
+Earlier planning allowances per pair, NOT quotes: FDM plastic $40-120 plus shipping; acrylic $40-100; SendCutSend cut/deburr metal $65-180 before separately priced cosmetic work; OSH Cut finished-route allowance $75-220. Public processing claims included roughly 2-4 business days for standard metal, eligible faster service, and 3-5 business days for one print service. Eligibility, finish time, shipping, tax, destination and actual part pricing were not established. Recheck before buying; no current vendor quote is attached.
+
+Existing seven-page FT01 guide, two-page shop sheets and full-size templates are included as baseline artifacts. They are not a finalized repair specification. The new Pro review should instruct the agent to produce audience-specific evergreen documents and fill only justified repair details.
+
+10. LOCAL AGENT FILES AND REPRODUCIBILITY
+
+Workspace: /Users/mdpatrick/Code/shower-kohler-valve. The 82 technical snapshot files are retained byte-for-byte from GP01, source commit fbe55d6475383feca03e9f337fbf6f450f336c89. GP04 adds the separately identified measurement-method/confidence, measurement-responsibility and machining-deliverables records under review_addenda/ and revises the review prompt, brief and PDF. Older snapshot measurement assignments are superseded by these current instructions. Later repository software maintenance is outside this frozen snapshot. This review changes no baseline CAD. Original scan archives are versioned ordinary Git blobs; no LFS. No remote publication.
+
+Dimensional inputs: canon/fit_trial_design.json; observations canon/measurements.json and docs/physical_checks/*.json. Handoff prose/research: canon/fit_trial_handoff.json. CAD builder: src/fabrication/fit_trial.py. Export/analytic audit: src/fabrication/audit_fit_trial.py. Documents: src/fabrication/fit_trial_documents.py. Blender: src/blender/fit_trial.py. New scan: src/analysis/attached_scan.py. Entry point: ./project prepare-fit-trial --stage analysis|blender|documents|audit; ./project validate --git-objects. Some frozen snapshot figures/docs contain literal FT01 values; any changed design must update all dependencies coherently.
+
+Canon uses mm, +X right, +Y up, +Z out of wall, from the shower. Local CAD origin is the custom outer-circle center with rear Z=0 and front Z=thickness. Installed feature coordinates use a different recorded reference frame; do not mix them. Blender mapping is (x,-z,y)/1000. Read transforms and installed placements explicitly.
+
+The technical ZIP is an inspection snapshot, not a complete runnable checkout. It omits large raw scans, Blender file, extracted meshes and dependencies. They remain available to the local agent. Omitted hashes/sizes are in the manifest. Do not claim to reproduce mesh checks without those inputs. Use the actual exported CAD for a file-level check if tooling permits.
+
+KEY OFFICIAL SOURCES
+
+Kohler older stacked trim guide: https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf
+Kohler stud: https://www.kohler.com/en/support/find-a-service-part/shop-parts/stud-10-24-x-4-56-l-1038645
+SendCutSend 316: https://sendcutsend.com/materials/stainless-steel-316/
+SendCutSend process times: https://sendcutsend.com/sendcutsend-processing-times/
+OSH Cut: https://www.oshcut.com/ and https://www.oshcut.com/services/deburring
+Ponoko acrylic: https://www.ponoko.com/laser-cutting/acrylic
+3D Printer On Demand: https://3dprinterondemand.com/pricing
+
+READING ORDER
+
+Read the master prompt, this brief and the visual PDF. Then inspect the FT01 design/report/audit, physical observation records and manufacturer PDFs in the technical ZIP. Historical tab/registration data are included to expose assumptions, not to compete with the current design. Pro should return a preferred decision plus a complete BEGIN AGENT INSTRUCTIONS block with executable tasks, outputs, checks and field decision gates.

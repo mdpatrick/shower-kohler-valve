@@ -20,6 +20,12 @@ The expert is expected to assemble and install the parts, not supply new expert 
 
 The existing long field form is an optional record, not a mandatory measurement campaign. This instruction supersedes older assignments of new CAD measurements to the expert. See `docs/decisions/measurement_scope_2026-10-15.json`.
 
+## Manufacturing deliverables
+
+Distill the CAD down to the smallest justified set of standalone custom main and diverter plates that should actually be fabricated. Evaluate which prototype/thickness/diameter/locator variants are worth keeping; do not carry every historical alternative forward. For each retained scenario give its purpose, exact nominal dimensions or explicit unresolved parameters, stock/material/process, quantity, revision/status and exact output filenames. Distinguish mutually exclusive choices from parts needed together. Each manufacturing STEP must contain exactly one valid custom plate solid in mm at a documented local origin, with no wall, scan, valve, plumbing, factory trim or assembly. Provide matching clean DXF and STL where useful, dimensioned drawings, isolated part previews, a short upload list and hashes. Keep assembly/reference files outside all manufacturing folders and ZIPs. Reimport the actual exports and verify their geometry and contents before delivery.
+
+The Pro review must return a precise selected-variant table and file-by-file local-agent instructions. See `docs/decisions/machining_deliverables_2026-10-15.json`.
+
 ## Evidence and component identity
 
 Main trim K-T14489-4-BN; main valve K-2973-KS-NA; diverter trim K-T14491-4-BN; diverter valve K-737-K-NA. Verify the actual hardware revision with the expert. The valve is plumbed in. No relocation of piping, valve or studs since the primary capture has been reported; the new supplemental capture shows the inner plate installed, a different assembly state.

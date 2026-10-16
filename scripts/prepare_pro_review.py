@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package GP03 clarification without changing the frozen FT01 geometry.
+"""Package GP04 clarification without changing the frozen FT01 geometry.
 
 The archive is an inspection snapshot, not a runnable project or a shop packet.
 Original images are placed in PDF pages without retouching or geometric edits.
@@ -22,11 +22,12 @@ from reportlab.platypus import Paragraph
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'deliverables/current/gpt-pro-review/GP03'
+OUT = ROOT / 'deliverables/current/gpt-pro-review/GP04'
 PREVIOUS = ROOT / 'deliverables/current/gpt-pro-review/GP01'
 SUPPLEMENTS = [
     ('docs/physical_checks/inner_plate_planarity_2026-10-15.json', 'User-confirmed coplanar inner-plate face measurements and high caliper confidence'),
     ('docs/decisions/measurement_scope_2026-10-15.json', 'Expert assembles; owner supplies only indispensable machining dimensions, at most a handful'),
+    ('docs/decisions/machining_deliverables_2026-10-15.json', 'Minimal justified plate-only machining set; precise per-file instructions and fresh STEP content checks'),
 ]
 TEXT = ROOT / 'docs/gpt_pro_review'
 FT = 'deliverables/current/fabrication/fit-trial/'
@@ -136,7 +137,7 @@ def base(c, title, category, num):
     c.line(32, 35, w - 32, 35)
     c.setFillColor(GREY)
     c.setFont('Helvetica', 8)
-    c.drawString(32, 21, 'GP03 | 15 October 2026 | Measurement clarification; FT01 CAD unchanged')
+    c.drawString(32, 21, 'GP04 | 15 October 2026 | Measurement clarification; FT01 CAD unchanged')
     c.drawRightString(w - 32, 21, str(num))
 
 
@@ -146,11 +147,11 @@ def evidence_pdf():
     c.setTitle('Kohler shower backing plates - visual evidence for independent review')
     c.setAuthor('Shower escutcheon project')
     w, h = A4
-    base(c, 'What this review needs to decide', 'REVIEW BRIEF / CURRENT DESIGN IS A FIT TRIAL', 1)
+    base(c, 'Choose the plate files to machine', 'REVIEW BRIEF / CURRENT DESIGN IS A FIT TRIAL', 1)
     y = h - 92
     sections = [
-        ('A useful part for the expert visit',
-         'The owner needs an accurate, simple backing-plate design that can be quoted and physically tried soon. Pro should issue concrete instructions to the local agent for revised CAD and separate fabricator, repair and installation handoffs.'),
+        ('A small, precise manufacturing set',
+         'Pro must choose which main/diverter plate variants should actually be made and return exact file-by-file instructions. Each manufacturing STEP must contain one custom plate solid. Keep wall, valve and assembly references outside the fabricator package. Specify filenames, dimensions, purpose, stock, quantities, isolated previews and verification. The six current standalone candidates are listed in 06_PLATE_ONLY_FILE_GUIDE.txt.'),
         ('Who measures and assembles',
          'The expert is expected to assemble/install, not supply new CAD measurements. Measuring was difficult for the owner. Ask the owner for at most a handful of indispensable machining dimensions, only after using existing evidence and simpler design options. Each request needs the affected CAD decision, illustrated contacts and plane, easiest method and necessary precision. General field forms are optional; ordinary installation checks remain separate.'),
         ('Current proposal to challenge',
@@ -158,7 +159,7 @@ def evidence_pdf():
         ('Four decisions',
          'Choose the best aperture while preserving full foam support and real control access. Decide whether bolt notches or other locators are useful and feasible. Establish the minimum factory-fit and water-path checks for the expert. Specify the documents and file-level tests the agent should produce.'),
         ('Read the pictures according to their labels',
-         'Inner-plate face dimensions were measured within one plane; the owner considers those caliper readings highly accurate. Installed tip distances span unequal depths and are 3D lengths. Proposed CAD and exploded pictures contain assumptions. GP03 clarifies this distinction; FT01 CAD is unchanged.'),
+         'Inner-plate face dimensions were measured within one plane; the owner considers those caliper readings highly accurate. Installed tip distances span unequal depths and are 3D lengths. Proposed CAD and exploded pictures contain assumptions. GP04 clarifies this distinction; FT01 CAD is unchanged.'),
         ('What has not been established',
          'Physical handle attachment, compressed foam contact, sound support and retention, the final sealing detail, actual paired gap, and installed water performance remain open. The existing digital audit does not certify these. The nominal 1 mm extra foam land is particularly narrow.'),
         ('Use the separate text prompt',
@@ -194,7 +195,7 @@ def evidence_pdf():
     reader = PdfReader(path)
     assert len(reader.pages) == len(FIGURES) + 1
     for i, page in enumerate(reader.pages, 1):
-        assert 'GP03' in page.extract_text(), f'Missing footer on page {i}'
+        assert 'GP04' in page.extract_text(), f'Missing footer on page {i}'
     return mapping
 
 
@@ -256,7 +257,7 @@ def technical_zip(paths):
 def main():
     OUT.mkdir(parents=True, exist_ok=True)
     texts = sorted(TEXT.glob('*.txt'))
-    assert len(texts) == 4
+    assert len(texts) == 5
     for p in texts:
         shutil.copyfile(p, OUT / p.name)
     figures = evidence_pdf()
@@ -268,18 +269,18 @@ def main():
     omitted.append(dict(id='BLENDER-FT01', repository_path=str(blend.relative_to(ROOT)),
                         sha256=sha(blend), size_bytes=blend.stat().st_size))
     payload = [OUT / p.name for p in texts] + [OUT / '03_VISUAL_EVIDENCE.pdf', OUT / '04_TECHNICAL_REFERENCE.zip']
-    manifest = dict(package='GP03', supersedes_review_package='GP02', project='shower-kohler-valve', date='2026-10-15',
+    manifest = dict(package='GP04', supersedes_review_package='GP03', project='shower-kohler-valve', date='2026-10-15',
                     baseline_commit=BASELINE, current_CAD='FT01', measurement_revision='R005',
                     status='INDEPENDENT_REVIEW_PROMPT_PACKAGE; CAD remains FOR_QUOTE_AND_DRY_FIT_ONLY',
                     actual_external_transmission=False, baseline_geometry_changed=False,
-                    source_note='The 82 GP01 technical snapshot files remain byte-identical to the baseline commit. GP03 retains the method/confidence clarification and adds the owner/expert measurement-responsibility constraint; prompt, brief and PDF reflect both. Later software maintenance is not pulled into the snapshot.',
+                    source_note='The 82 GP01 technical snapshot files remain byte-identical to the baseline commit. GP04 carries forward both measurement clarifications and adds the plate-only machining requirement, fresh STEP inspection and exact candidate file guide. Prompt, brief and PDF state the current requirements. Later software maintenance is not pulled into the snapshot.',
                     payload_files=[dict(path=p.name, sha256=sha(p), size_bytes=p.stat().st_size) for p in payload],
                     evidence_figures=figures, technical_snapshot_files=len(items),
                     omitted_local_assets=omitted,
                     omissions_note='Omitted assets remain in the local repository. No raw mesh recomputation is possible from this compact package alone.',
                     manifest_self_hash_note='Manifest excluded from its own hash to avoid circularity; outer ZIP verified separately.')
     write_json(OUT / 'MANIFEST.json', manifest)
-    archive = OUT / 'GPT_PRO_PROMPT_PACKAGE_GP03.zip'
+    archive = OUT / 'GPT_PRO_PROMPT_PACKAGE_GP04.zip'
     members = payload + [OUT / 'MANIFEST.json']
     with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for p in sorted(members):
@@ -289,7 +290,7 @@ def main():
         assert set(z.namelist()) == {p.name for p in members}
         for p in members:
             assert hashlib.sha256(z.read(p.name)).hexdigest() == sha(p)
-    audit = dict(package='GP03', zip_crc='PASS', all_member_hashes='PASS',
+    audit = dict(package='GP04', zip_crc='PASS', all_member_hashes='PASS',
                  baseline_commit_byte_comparison='PASS', baseline_files_checked=len(items)-len(SUPPLEMENTS),
                  clarification_addenda=len(SUPPLEMENTS),
                  outer_archive_members=len(members), evidence_pages=len(figures) + 1,

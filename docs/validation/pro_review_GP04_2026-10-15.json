@@ -1,0 +1,22 @@
+{
+  "package": "GP04",
+  "zip_crc": "PASS",
+  "all_member_hashes": "PASS",
+  "baseline_commit_byte_comparison": "PASS",
+  "baseline_files_checked": 82,
+  "clarification_addenda": 3,
+  "outer_archive_members": 8,
+  "evidence_pages": 14,
+  "archive_sha256": "982c913dee2d35bfa30cdeda2cf46d228c12c5b7ab666071cba6f036c6f3244d",
+  "archive_size_bytes": 54080954,
+  "CAD_modified": false,
+  "physical_fit": "NOT PERFORMED",
+  "PDF_visual_review": "PASS: revised page 1 rendered and visually inspected; pages 2-14 text unchanged from visually reviewed GP03 apart from same-length revision label.",
+  "prior_GP03_archive_unchanged": true,
+  "current_CAD_and_numeric_measurements_unchanged": true,
+  "current_STEP_reimports": 6,
+  "archived_STEP_reimports": 6,
+  "STEP_result": "Each is a valid single solid with expected plate size and thickness.",
+  "exact_plate_file_guide": "06_PLATE_ONLY_FILE_GUIDE.txt",
+  "new_measurements_requested": []
+}
