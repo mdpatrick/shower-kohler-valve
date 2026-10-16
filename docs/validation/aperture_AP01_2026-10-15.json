@@ -35,8 +35,14 @@
     "canon/measurements.json": true,
     "canon/transforms.json": true,
     "canon/fabrication_designs.json": true,
-    "data/evidence/kohler-T14489-4.obj": true,
-    "deliverables/current/blender/installation_REAR01_DRAFT.blend": true
+    "data/evidence/kohler-T14489-4.obj": true
+  },
+  "generated_rear_preservation": {
+    "status": "PASS",
+    "path": "deliverables/current/blender/installation_REAR01_DRAFT.blend",
+    "sha256": "9097ecdd7bd023b77c6f94468db738404cba1a20266267da5285e96f5ddf83d7",
+    "scope": "Legacy snapshot matches historical commit 8911e34; no rebuild baseline recorded",
+    "limitation": "File preservation only. REAR01 separately checks source mesh geometry, UVs and placement. No physical registration or fit is implied."
   },
   "visual_review": "Not performed by this automated script; see docs/validation/aperture_AP01_visual_review_2026-10-15.json for the separate dated inspection.",
   "unresolved": [

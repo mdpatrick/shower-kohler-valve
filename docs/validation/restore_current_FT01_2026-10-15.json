@@ -1,0 +1,268 @@
+{
+  "status": "PASS_WITH_DOCUMENTED_SOURCE_CORRECTION",
+  "base_commit": "6e46de0723809d1f95463479392014343b8427e7",
+  "restored_checkout": "build/restore-bundle-20261015-165518",
+  "started_at": "2026-10-15T17:14:55.578475-07:00",
+  "original_unmodified_bundle_rebuild": {
+    "status": "FAILED",
+    "stage": "AP01 preservation audit",
+    "reason": "Generated REAR01 .blend compared with historical bytes from 8911e34 after a legitimate rebuild",
+    "completed_before_failure": [
+      "repository-only ingest",
+      "fresh offline locked environment",
+      "base R005",
+      "F005",
+      "CB01",
+      "REAR01",
+      "AP01 outputs"
+    ],
+    "log": "build/restore-bundle-20261015-165518/build/full-rebuild.log"
+  },
+  "correction_scope": "Resume the same isolated recovery checkout with two explicit source fixes; no restart or claim that the original bundle rebuilt unmodified.",
+  "source_patch_sha256": {
+    "scripts/project.py": "51e8bb25da919ce3a634561123c4d2236320f8fad65b8845df68c38c34273a10",
+    "src/fabrication/audit_aperture.py": "03d0712100c03a0badd04f609537600ae6025106b13f0ecf44aabf8f4db00f35"
+  },
+  "physical_fit": "NOT PERFORMED",
+  "off_machine_backup": false,
+  "log": "build/restore-bundle-20261015-165518/build/corrected-full-rebuild.log",
+  "final_comparison_first_attempt": {
+    "status": "FAILED",
+    "reason": "Resolved geometry changed",
+    "diagnosis": "Only the copied observations list differed: two accepted later records were added. Every other resolved field is equal."
+  },
+  "observation_refresh": {
+    "matches_accepted_canon": true,
+    "saved_count": 9,
+    "rebuilt_count": 11,
+    "added_ids": [
+      "OBS-INNER-ATTACHED-SCAN-01",
+      "OBS-REAR-INSTALLATION-01"
+    ],
+    "removed_ids": [],
+    "updated_ids": []
+  },
+  "finished_at": "2026-10-15T17:19:14.470289-07:00",
+  "corrected_full_pipeline": "PASS",
+  "all_canon_unchanged": true,
+  "canon_files": 21,
+  "resolved_geometry_agrees": true,
+  "comparison_script_sha256": "593a0308b7901d06e53da3dcaf1610f05f5a1bb6bba9625f590ab8aaf93900b0",
+  "current_fit_trial": {
+    "revision": "FT01",
+    "parts": 6,
+    "STLs_byte_identical_to_saved_snapshot": true,
+    "audit_status": "PASS_SOFTWARE_CHECKS_ONLY"
+  },
+  "original_rear_meshes_preserved": 128,
+  "rear_geometry_UV_and_placement_unchanged": true,
+  "frozen_GP01_unchanged_sha256": "d32efe4931199fe1fe014cd2b87633ade692cc837bb8b12a0d49265adcc5ed64",
+  "regression_tests": {
+    "aperture_preservation": 5,
+    "restore_comparison": 3,
+    "status": "PASS"
+  },
+  "original_bundle": {
+    "path": "build/handoff/shower-kohler-valve-20261015-165236.git.bundle",
+    "sha256": "fe47fa5470d24f81d5f1aafcfe98d3e1aee5ebc08fdb00861a5c85220b2cefe9",
+    "bytes": 879777717
+  },
+  "original_snapshot_files_verified_before_rebuild": 320,
+  "original_archives": [
+    {
+      "id": "SCAN-WALL",
+      "status": "PASS",
+      "committed_bytes_checked": true
+    },
+    {
+      "id": "SCAN-PLATE-1",
+      "status": "PASS",
+      "committed_bytes_checked": true
+    },
+    {
+      "id": "SCAN-PLATE-2",
+      "status": "PASS",
+      "committed_bytes_checked": true
+    },
+    {
+      "id": "SCAN-INNER-ATTACHED",
+      "status": "PASS",
+      "committed_bytes_checked": true
+    }
+  ],
+  "visual_comparison": {
+    "pages": 15,
+    "all_pixels_identical": true,
+    "checks": [
+      {
+        "page": "guide-1.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "e5280fbe7aa9da8190c8b4c0cad51f28618e8aa6f4a2fda6220dd62fadcc079d",
+        "reference_sha256": "e5280fbe7aa9da8190c8b4c0cad51f28618e8aa6f4a2fda6220dd62fadcc079d"
+      },
+      {
+        "page": "guide-2.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "3c709708e64ae8e25347a60f2208f2b14f0667e356405e349380f9d63d6d8fdc",
+        "reference_sha256": "3c709708e64ae8e25347a60f2208f2b14f0667e356405e349380f9d63d6d8fdc"
+      },
+      {
+        "page": "guide-3.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "8ecc7dbced67a07e3359049238c93b55eaaa19724beeedbbcb9687b9ec11b2b1",
+        "reference_sha256": "8ecc7dbced67a07e3359049238c93b55eaaa19724beeedbbcb9687b9ec11b2b1"
+      },
+      {
+        "page": "guide-4.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "b24654b3cb7b95914b0c61222a5a9f60a59d6ead2ca0d4a198ee09fd66005448",
+        "reference_sha256": "b24654b3cb7b95914b0c61222a5a9f60a59d6ead2ca0d4a198ee09fd66005448"
+      },
+      {
+        "page": "guide-5.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "099a62f734f67a5b49de2f2fc0ff24f3e8b778bf3a77d068c9ed70d61be50bc5",
+        "reference_sha256": "099a62f734f67a5b49de2f2fc0ff24f3e8b778bf3a77d068c9ed70d61be50bc5"
+      },
+      {
+        "page": "guide-6.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "30d540da389286f2075a04a786c176da88e87c4c8b905a5690bfd2df44306316",
+        "reference_sha256": "30d540da389286f2075a04a786c176da88e87c4c8b905a5690bfd2df44306316"
+      },
+      {
+        "page": "guide-7.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "75169a94b4d91fe1eb6e31952f6518badf5812a110726d6d74dfa4aae687085b",
+        "reference_sha256": "75169a94b4d91fe1eb6e31952f6518badf5812a110726d6d74dfa4aae687085b"
+      },
+      {
+        "page": "record-1.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "74ec31d9c497b760f217f1a11d8718194fba659fc6a1b266b96b74e15a4b027a",
+        "reference_sha256": "74ec31d9c497b760f217f1a11d8718194fba659fc6a1b266b96b74e15a4b027a"
+      },
+      {
+        "page": "record-2.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "05418ff57a7001fd59efc3b545b8f24e97dc50328c8ca87d0472ef2b2860afd5",
+        "reference_sha256": "05418ff57a7001fd59efc3b545b8f24e97dc50328c8ca87d0472ef2b2860afd5"
+      },
+      {
+        "page": "record-3.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "16ec304c64d0e1da44ea3fca1871de611528d3ff4573120fab32cef43adc65a2",
+        "reference_sha256": "16ec304c64d0e1da44ea3fca1871de611528d3ff4573120fab32cef43adc65a2"
+      },
+      {
+        "page": "record-4.png",
+        "dimensions": [
+          1061,
+          1500
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "84a721eb3062b675d7cae6ef2a8e9b725fd91f1e5cd822305ae2be5725ba63f3",
+        "reference_sha256": "84a721eb3062b675d7cae6ef2a8e9b725fd91f1e5cd822305ae2be5725ba63f3"
+      },
+      {
+        "page": "shop-1.png",
+        "dimensions": [
+          1500,
+          1061
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "63864b904db1fb87cbe1f460293c9ad5999af1fafd5e8470d689f9abbf1773f8",
+        "reference_sha256": "63864b904db1fb87cbe1f460293c9ad5999af1fafd5e8470d689f9abbf1773f8"
+      },
+      {
+        "page": "shop-2.png",
+        "dimensions": [
+          1500,
+          1061
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "073273f6b50f43de3c2ce138e55244a282a4964302777f15965f3203d27482ac",
+        "reference_sha256": "073273f6b50f43de3c2ce138e55244a282a4964302777f15965f3203d27482ac"
+      },
+      {
+        "page": "template-1.png",
+        "dimensions": [
+          1500,
+          1061
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "0b22a445079fba8b17b384fe20c1421be81bc9c402f621aeb877eb79260aa19d",
+        "reference_sha256": "0b22a445079fba8b17b384fe20c1421be81bc9c402f621aeb877eb79260aa19d"
+      },
+      {
+        "page": "template-2.png",
+        "dimensions": [
+          1500,
+          1061
+        ],
+        "pixels_identical": true,
+        "difference_bbox": null,
+        "rebuilt_sha256": "21d3444938476f228b7eb7897654ce891b8a21a9be9096d2ee2dd7ea4c2ed7ed",
+        "reference_sha256": "21d3444938476f228b7eb7897654ce891b8a21a9be9096d2ee2dd7ea4c2ed7ed"
+      }
+    ],
+    "method": "Poppler PNG at 1500 px long edge; all decoded RGB pixels compared with the previously visually inspected current FT01 pages.",
+    "limitation": "Rebuild verification, not a new claim of physical installation performance."
+  },
+  "current_deliverables_replaced": false,
+  "notes": "Rebuilt output remained in the isolated recovery checkout. The primary reviewed CAD, Blender, PDF, quote ZIP and frozen GP01 artifacts were retained. Historical resolved output refreshes two copied qualitative observations from unchanged accepted canon on a full rebuild; dimensional fields agree exactly."
+}

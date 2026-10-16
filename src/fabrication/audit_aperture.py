@@ -1,5 +1,6 @@
 """Fresh read-back audit of AP01 exports, references and prototype template scale."""
 from pathlib import Path
+import argparse
 import hashlib
 import json
 import math
@@ -13,9 +14,46 @@ from pypdf import PdfReader
 
 ROOT=Path(__file__).resolve().parents[2]
 OUT=ROOT/'deliverables/current/fabrication/aperture-access'
+REAR='deliverables/current/blender/installation_REAR01_DRAFT.blend'
+RECEIPT='docs/validation/aperture_AP01_2026-10-15.json'
 
 
-def run():
+def check_preserved_files(root, rear_before_sha256=None):
+    """Protect immutable evidence and the generated rear input at different scopes.
+
+    A rebuilt .blend need not serialize identically to the historical commit.
+    The launcher captures its hash after preparing REAR01 but before running
+    AP01. A standalone audit reuses that successful check's saved baseline;
+    legacy snapshots without it must still match the original committed file.
+    """
+    retained=['canon/measurements.json','canon/transforms.json','canon/fabrication_designs.json',
+              'data/evidence/kohler-T14489-4.obj']
+    preserved={}
+    for name in retained:
+        old=subprocess.check_output(['git','show','8911e34:'+name],cwd=root)
+        preserved[name]=hashlib.sha256(old).hexdigest()==hashlib.sha256((root/name).read_bytes()).hexdigest()
+    assert all(preserved.values()), 'Immutable AP01 evidence changed: '+str(preserved)
+    scope='Unchanged between REAR01 preparation and the end of AP01 preparation'
+    if rear_before_sha256 is None:
+        receipt=root/RECEIPT
+        saved=json.loads(receipt.read_text()) if receipt.exists() else {}
+        prior=saved.get('generated_rear_preservation')
+        if prior is not None:
+            assert saved.get('status')=='PASS' and prior.get('status')=='PASS', 'No successful AP01 preservation receipt'
+            rear_before_sha256=prior['sha256']
+            scope='Matches the generated rear input retained by the last successful AP01 preparation'
+        else:
+            old=subprocess.check_output(['git','show','8911e34:'+REAR],cwd=root)
+            rear_before_sha256=hashlib.sha256(old).hexdigest()
+            scope='Legacy snapshot matches historical commit 8911e34; no rebuild baseline recorded'
+    assert re.fullmatch(r'[0-9a-f]{64}',rear_before_sha256), 'Invalid rear preservation baseline'
+    actual=hashlib.sha256((root/REAR).read_bytes()).hexdigest()
+    assert actual==rear_before_sha256, 'Generated rear input changed outside its preparation stage'
+    return preserved,dict(status='PASS',path=REAR,sha256=actual,scope=scope,
+        limitation='File preservation only. REAR01 separately checks source mesh geometry, UVs and placement. No physical registration or fit is implied.')
+
+
+def run(rear_before_sha256=None):
     a=json.loads((OUT/'analysis.json').read_text())
     for name,expected in a['input_sha256'].items():
         assert hashlib.sha256((ROOT/name).read_bytes()).hexdigest()==expected, name
@@ -60,18 +98,13 @@ def run():
         for href in re.findall(r'(?:src|href)="([^"]+)"',page.read_text()):
             u=urlparse(href)
             if u.scheme or not u.path:continue
-            if not (page.parent/unquote(u.path)).exists():missing.append(href)
+            local=ROOT/'deliverables/current'/unquote(u.path).lstrip('/') if u.path.startswith('/') else page.parent/unquote(u.path)
+            if not local.exists():missing.append(href)
     assert not missing,missing
-    retained=['canon/measurements.json','canon/transforms.json','canon/fabrication_designs.json',
-              'data/evidence/kohler-T14489-4.obj','deliverables/current/blender/installation_REAR01_DRAFT.blend']
-    preserved={}
-    for name in retained:
-        old=subprocess.check_output(['git','show','8911e34:'+name],cwd=ROOT)
-        preserved[name]=hashlib.sha256(old).hexdigest()==hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
-    assert all(preserved.values())
+    preserved,rear_preservation=check_preserved_files(ROOT,rear_before_sha256)
     result=dict(id='AP01-READBACK-AUDIT',date='2026-10-15',status='PASS',parts=parts,
                 pdf_pages=4,A3_template_scale='Exact 72/25.4 transform and two calibration bars verified',
-                local_links='PASS',preserved_baseline=preserved,
+                local_links='PASS',preserved_baseline=preserved,generated_rear_preservation=rear_preservation,
                 visual_review='Not performed by this automated script; see docs/validation/aperture_AP01_visual_review_2026-10-15.json for the separate dated inspection.',
                 unresolved=['Actual corner and foam minimum-width geometry','Captured-surface mask excludes stone and unobserved geometry',
                             'Actual adapter/hub outside profiles and spline/thread engagement','Added bedding and compressed foam depths',
@@ -82,4 +115,7 @@ def run():
     print(json.dumps({'status':result['status'],'parts':len(parts),'pdf_pages':4,'preserved':all(preserved.values()),'physical_fit':'UNPERFORMED'},indent=2))
 
 
-if __name__=='__main__':run()
+if __name__=='__main__':
+    parser=argparse.ArgumentParser()
+    parser.add_argument('--rear-before-sha256',help='Hash captured by the launcher before AP01 runs, after REAR01 preparation')
+    run(parser.parse_args().rear_before_sha256)

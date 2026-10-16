@@ -9,6 +9,16 @@ def run(args,cwd=ROOT,env=None,log=None):
         with log.open('w') as f:subprocess.run(args,cwd=cwd,env=env,check=True,stdout=f,stderr=subprocess.STDOUT)
     else:subprocess.run(args,cwd=cwd,env=env,check=True)
 
+def compare_resolved(original, restored, accepted_observations):
+    """Separate exact dimensional recovery from refreshing copied observations."""
+    assert {k:v for k,v in original.items() if k!='observations'}=={k:v for k,v in restored.items() if k!='observations'},'Resolved geometry changed in restored checkout'
+    assert restored.get('observations')==accepted_observations,'Rebuilt observations disagree with accepted canon'
+    old={o['id']:o for o in original.get('observations',[])}
+    new={o['id']:o for o in accepted_observations}
+    return {'matches_accepted_canon':True,'saved_count':len(old),'rebuilt_count':len(new),
+            'added_ids':sorted(new.keys()-old.keys()),'removed_ids':sorted(old.keys()-new.keys()),
+            'updated_ids':sorted(k for k in old.keys()&new.keys() if old[k]!=new[k])}
+
 def main():
     p=argparse.ArgumentParser();p.add_argument('--bundle');p.add_argument('--rebuild',action='store_true');p.add_argument('--report',help='Optional receipt path outside the committed snapshot');a=p.parse_args()
     kind='bundle' if a.bundle else 'clone';destination=ROOT/'build'/('restore-'+kind+'-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S'))
@@ -26,8 +36,10 @@ def main():
     canon_before={str(f.relative_to(destination)):hashlib.sha256(f.read_bytes()).hexdigest() for f in (destination/'canon').rglob('*') if f.is_file()}
     fit_path=destination/'deliverables/current/fabrication/fit-trial/design_report.json'
     fit_before=json.loads(fit_path.read_text()) if fit_path.exists() else None
+    resolved_path=destination/'deliverables/current/analysis/resolved.json'
+    resolved_before=json.loads(resolved_path.read_text())
     run([sys.executable,str(destination/'scripts/ingest.py')],cwd=destination)
-    rebuild=False;fit_rebuild=None
+    rebuild=False;fit_rebuild=None;observation_refresh=None
     if a.rebuild:
         env=dict(os.environ);env['UV_CACHE_DIR']=str(ROOT/'build/uv-cache');env['XDG_CACHE_HOME']=str(destination/'build/cache')
         base_python=subprocess.check_output([str(ROOT/'.venv/bin/python'),'-c','import sys; print(sys._base_executable)'],text=True).strip()
@@ -46,10 +58,8 @@ def main():
                          'stages':['analysis','blender','documents','audit'],
                          'audit_status':json.loads((fit_path.parent/'audit.json').read_text())['status']}
         run([str(destination/'project'),'validate','--git-objects'],cwd=destination,env=env)
-        original=json.loads((ROOT/'deliverables/current/analysis/resolved.json').read_text())
-        restored=json.loads((destination/'deliverables/current/analysis/resolved.json').read_text())
-        assert original==restored,'Resolved geometry changed in restored checkout'
-        assert (destination/'canon/measurements.json').read_bytes()==(ROOT/'canon/measurements.json').read_bytes()
+        restored=json.loads(resolved_path.read_text())
+        observation_refresh=compare_resolved(resolved_before,restored,json.loads((destination/'canon/observations.json').read_text())['observations'])
         canon_after={str(f.relative_to(destination)):hashlib.sha256(f.read_bytes()).hexdigest() for f in (destination/'canon').rglob('*') if f.is_file()}
         assert canon_after==canon_before,'Rebuild changed accepted canon'
         rebuild=True
@@ -57,6 +67,7 @@ def main():
         'destination':str(destination.relative_to(ROOT)),'archives':archive_results,'snapshot_files_checked':len(manifest['files']),
         'extraction_from_repository_only':True,'Downloads_accessed':False,'fresh_environment_and_full_rebuild':rebuild,
         'current_fit_trial_rebuild':fit_rebuild,'all_canon_unchanged':True if rebuild else None,
+        'observation_refresh':observation_refresh,
         'resolved_geometry_agrees':True if rebuild else None,'physical_fit':'NOT PERFORMED','off_machine_backup':False,
         'bundle_sha256':hashlib.sha256(source.read_bytes()).hexdigest() if a.bundle else None}
     out=ROOT/(a.report or 'docs/validation/restore_check.json');out.parent.mkdir(parents=True,exist_ok=True)

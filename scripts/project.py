@@ -186,13 +186,16 @@ def prepare_rear(force=False,preserve=True):
 def prepare_aperture(stage='all'):
     """Separate AP01 control-access candidates; never replace historical quote CAD."""
     preserve_edits()
+    prepare_rear(force=False,preserve=False)
+    rear='deliverables/current/blender/installation_REAR01_DRAFT.blend'
+    rear_before=sha(ROOT/rear)
     if stage in ('all','analysis'):
         run([sys.executable,'src/fabrication/aperture_access.py'],'aperture_access.log')
     if stage in ('all','blender'):
         run([BLENDER,'--background','--factory-startup','--python-exit-code','1','--python','src/blender/aperture_access.py'],'aperture_access_blender.log')
-    prepare_rear(force=False,preserve=False)
+    assert sha(ROOT/rear)==rear_before, 'AP01 modified the generated rear input'
     if stage in ('all','blender'):
-        run([sys.executable,'src/fabrication/audit_aperture.py'])
+        run([sys.executable,'src/fabrication/audit_aperture.py','--rear-before-sha256',rear_before])
     if (ROOT/'docs/physical_checks/control_alignment_2026-10-15.json').exists():
         run([sys.executable,'src/analysis/control_alignment.py'])
     publish_manifest()

@@ -13,7 +13,6 @@ git fsck --full
 PROJECT_PYTHON=/path/to/python3.12 ./scripts/setup.sh
 ./project ingest
 ./project build
-./project prepare-fit-trial
 ./project validate --git-objects
 ./project review
 ```
@@ -22,7 +21,11 @@ PROJECT_PYTHON=/path/to/python3.12 ./scripts/setup.sh
 
 No Downloads paths are used after initial copy. `ingest` checks repository ZIP hashes and safely extracts OBJ/MTL/texture relationships. `build` caches per-stage input/output hashes in ignored `build/stages.json`. Canon is input, never a build output. Changed generated files are preserved before regeneration. A source commit plus source-tree hash avoids a manifest depending on its own future commit.
 
-`build` reconstructs the base R005 evidence and historical diagnostic assembly. `prepare-fit-trial` then rebuilds the current FT01 parts, paired/exploded Blender views, documents and audit. Restoring only the base build does not test the current handoff. `scripts/verify_restore.py --bundle <path> --rebuild --report <receipt.json>` checks both paths in a separate checkout with a fresh environment, using locally cached locked packages; it also checks unchanged canon and the six regenerated STL geometries. Keep that receipt outside the bundle it verifies.
+`build` reconstructs the base R005 evidence, then dispatches the applicable historical reference stages and the current FT01 parts, Blender views, documents and audit. These earlier stages recreate ignored reference meshes needed by the current stage. Use `prepare-fit-trial` for a targeted current-design rebuild after that initial preparation. `scripts/verify_restore.py --bundle <path> --rebuild --report <receipt.json>` tests the full path in a separate checkout with a fresh environment, using locally cached locked packages; it also checks unchanged canon and the six regenerated STL geometries. Keep that receipt outside the bundle it verifies.
+
+The historical AP01 audit checks accepted evidence against its original checkpoint. A generated REAR01 Blender file is checked against its hash immediately before AP01 runs; a later standalone audit checks the last successful preservation receipt. Rebuilding Blender can change serialization without changing the source meshes, so historical `.blend` byte identity is not required after an authorized regeneration. REAR01 separately verifies source mesh geometry, UVs and placement after saving and reopening.
+
+The [FT01 recovery receipt](../docs/validation/restore_current_FT01_2026-10-15.json) records the initial audit failure and the corrected continuation in the same isolated checkout. All six current STL geometries and all 15 rendered handoff pages matched the saved versions; accepted canon and the frozen GP01 package stayed unchanged. Resolved dimensional fields are compared exactly. Copied observation text must match current accepted canon, with additions/removals/updates listed separately. The restored model legitimately includes two later qualitative observations absent from the older resolved snapshot.
 
 `review` binds to `127.0.0.1:8765`, checks that the project page responds, then opens it. Use `PROJECT_REVIEW_PORT=8766 ./project review` for another port. The page has no CDN dependency. File-only opening retains static content, but browser security may prevent module/GLB loading; use the local launcher for interactive 3D.
 
