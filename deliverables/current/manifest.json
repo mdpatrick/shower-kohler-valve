@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "82f24da5e11ad2e40f79f8cee21b1fed285ccc98",
+  "source_commit": "c56eb90f418e5118f4f4cd6768e5750d2dd95fba",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "b81f7ebc3628ba776ffceed8ab5c2dc9aef5bd408b5fe7b5bf8ef23cf9e9b713",
+  "source_tree_hash": "fe854503301e5e86a6a15a3d322f9af27a21caf7d5680025aeb6186b03db27e6",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -12,6 +12,11 @@
     "SCAN-INNER-ATTACHED": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91"
   },
   "files": [
+    {
+      "path": "deliverables/current/.DS_Store",
+      "sha256": "57bcfbf0306c136d12cfd7e27bded6b3f318221161565a9f954eca441e4a266f",
+      "size_bytes": 8196
+    },
     {
       "path": "deliverables/current/analysis/center_reconciliation_DRAFT.json",
       "sha256": "c224a1bc40a3db14b429057ee21b003245ee56c993d1622b2b683b0eb2a7e4e3",
@@ -201,6 +206,11 @@
       "path": "deliverables/current/drawings/profile_template_R005_DRAFT.pdf",
       "sha256": "9699a17ab926943a52d5913a144a4fdeed9a0d754e7a0d139e31f0f18aac5afd",
       "size_bytes": 70654
+    },
+    {
+      "path": "deliverables/current/fabrication/.DS_Store",
+      "sha256": "3dc9463516654704fe17d2d8e261ecd42fe49e45800fd3f96875c8cc1b5d4129",
+      "size_bytes": 6148
     },
     {
       "path": "deliverables/current/fabrication/F005/analysis.json",
@@ -1278,6 +1288,16 @@
       "size_bytes": 78019
     },
     {
+      "path": "deliverables/current/gpt-pro-review/.DS_Store",
+      "sha256": "29840d70f560f74d9bdf93fac548dcd7042e6d36cb9655ab3b328d48c2b37770",
+      "size_bytes": 8196
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/.DS_Store",
+      "sha256": "e6119c4ece104ed37c52df4a515767c8686c80ac91fa0cb60d83b3ee14971268",
+      "size_bytes": 6148
+    },
+    {
       "path": "deliverables/current/gpt-pro-review/GP01/00_READ_ME_FIRST.txt",
       "sha256": "41fa3591e1d21d25d9817a69bab8ee75b5a81834be9afb2a9e21ee3edef44a0f",
       "size_bytes": 3160
@@ -1316,6 +1336,46 @@
       "path": "deliverables/current/gpt-pro-review/GP01/MANIFEST.json",
       "sha256": "834e8da5ab5d9370e8b3fdb4c31bb8fc53d2149cec916ca2de26f94f729d5a67",
       "size_bytes": 8959
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/00_READ_ME_FIRST.txt",
+      "sha256": "596e201f809963e7dda757f508c64ef6212eb08c1ce8e07261e272331cf423eb",
+      "size_bytes": 3744
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/01_PASTE_INTO_GPT_PRO.txt",
+      "sha256": "403db2e4294f4053f86b0ab9d3f3de4c4fe83f0cda6c06b86293f3f1fe1e9eb0",
+      "size_bytes": 17282
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/02_PROJECT_BRIEF.txt",
+      "sha256": "e8a350b9bffcd4181cef6aa75355185966336f0068ec56a0cc839764b7ecd3bc",
+      "size_bytes": 17674
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/03_VISUAL_EVIDENCE.pdf",
+      "sha256": "babef08fb096e86fb4517758e1ed5c165bbcd04ec59ca97a6a89278db899bf2c",
+      "size_bytes": 50846627
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/04_TECHNICAL_REFERENCE.zip",
+      "sha256": "bee2d6d87dec11d34c93f238434b6744e8ddeddfdeeefdd31b214047e1382671",
+      "size_bytes": 12788490
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/05_RETURN_TO_AGENT.txt",
+      "sha256": "42e6a2344e1ffc179e47c6ab14ba25bafbe2711d50ec258f01c0d21041bdc6be",
+      "size_bytes": 1757
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/GPT_PRO_PROMPT_PACKAGE_GP02.zip",
+      "sha256": "01b8d26e78db891de54feb4adc81b402cb72622a6706ebca7a279a3d74c755d3",
+      "size_bytes": 54069461
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP02/MANIFEST.json",
+      "sha256": "7c714f334a92d8f87453ed0dea38e40ff3068d34420ad1e5d499c2e8c924da09",
+      "size_bytes": 9147
     },
     {
       "path": "deliverables/current/manual/index.html",

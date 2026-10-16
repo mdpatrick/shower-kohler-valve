@@ -1,0 +1,20 @@
+{
+  "package": "GP02",
+  "zip_crc": "PASS",
+  "all_member_hashes": "PASS",
+  "baseline_commit_byte_comparison": "PASS",
+  "baseline_files_checked": 82,
+  "clarification_addenda": 1,
+  "outer_archive_members": 7,
+  "evidence_pages": 14,
+  "archive_sha256": "01b8d26e78db891de54feb4adc81b402cb72622a6706ebca7a279a3d74c755d3",
+  "archive_size_bytes": 54069461,
+  "CAD_modified": false,
+  "physical_fit": "NOT PERFORMED",
+  "PDF_visual_review": "PASS: pages 1, 2, 4, 5 inspected; page 2 re-rendered after caption shortening. Other page bodies unchanged; common footer updated.",
+  "original_GP01_archive_unchanged": true,
+  "numeric_R005_unchanged": true,
+  "current_FT01_CAD_unchanged_from_pre_edit_HEAD": true,
+  "user_extracted_GP01_folder_preserved": true,
+  "measurement_method_record": "docs/physical_checks/inner_plate_planarity_2026-10-15.json"
+}

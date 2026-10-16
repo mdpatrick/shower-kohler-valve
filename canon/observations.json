@@ -2,6 +2,14 @@
   "project_id": "shower-kohler-valve",
   "observations": [
     {
+      "id": "OBS-INNER-PLATE-PLANARITY-01",
+      "date": "2026-10-15",
+      "source": "Direct user clarification in project chat",
+      "status": "user-confirmed coplanar inner-plate face measurements; owner reports high caliper confidence",
+      "record": "docs/physical_checks/inner_plate_planarity_2026-10-15.json",
+      "interpretation": "Inner-plate face dimensions need no tip-depth correction and govern those measured features ahead of scan estimates. Installed end-tip distances remain 3D. No numerical accuracy bound or new dimensions supplied; R005 unchanged."
+    },
+    {
       "id": "OBS-POST-SCAN-01",
       "date": "2026-10-14",
       "status": "user-confirmed",

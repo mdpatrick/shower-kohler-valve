@@ -1,11 +1,11 @@
 Kohler shower backing plates - independent design review brief
-15 October 2026 | Review package GP01 | CAD baseline FT01 | Accepted part measurements R005
+15 October 2026 | Review package GP02 | CAD baseline FT01 | Accepted part measurements R005
 
 PURPOSE
 
 Prepare a useful next pair of backing plates for an existing over-cut travertine wall. The owner wants real CAD to obtain a quote and a prompt physical fit trial, plus separate handoffs for the fabricator, Kohler expert/plumber and a novice owner. Pro is being asked to issue concrete implementation instructions to the local agent, not to approve the existing design uncritically. No upload, order, successful complete physical trial or installed water test is recorded.
 
-The current CAD is FOR_QUOTE_AND_DRY_FIT_ONLY. The revision has passed digital file checks; permanent installation is unreleased. Earlier F005, CB01, AP01 and LOC01 are historical studies. GP01 does not revise CAD or authorize a physical repair.
+The current CAD is FOR_QUOTE_AND_DRY_FIT_ONLY. The revision has passed digital file checks; permanent installation is unreleased. Earlier F005, CB01, AP01 and LOC01 are historical studies. GP02 does not revise CAD or authorize a physical repair.
 
 1. PEOPLE, PURPOSE AND CONSTRAINTS
 
@@ -27,7 +27,9 @@ The foam is attached to the rear of the real inner plate and meets its outside e
 
 3. ACTUAL LOOSE-PART MEASUREMENTS
 
-Source records are in repo_snapshot/docs/physical_checks/ and repo_snapshot/canon/measurements.json. The annotated photographs are reproduced in 03_VISUAL_EVIDENCE.pdf. Caliper digits are preserved, but repeatability/accuracy bounds were not supplied.
+Source records are in repo_snapshot/docs/physical_checks/ and repo_snapshot/canon/measurements.json. GP02 adds the owner clarification in review_addenda/inner_plate_planarity_2026-10-15.json. The annotated photographs are reproduced in 03_VISUAL_EVIDENCE.pdf.
+
+The owner confirms the INNER-PLATE FACE measurements were taken within a SINGLE PLANE and considers the caliper readings highly accurate. Use those direct dimensions ahead of scan-derived estimates for the same measured features. They require NO tip-depth correction. This is separate from the installed 3D tip distances in section 4 and the foam/assembly depth readings below. Preserve the supplied digits and instrument distinctions; no numerical accuracy bound or repeatability series was supplied. High confidence in the measured edges does not measure an unknown diameter, infer an installed pose or turn an edge gap into center spacing.
 
 INNER PLATE (photo faces outward, toward handles)
 - Overall width: 130.35 mm, caliper.
@@ -61,7 +63,7 @@ U = upper control tip; L = lower control tip; NE = upper-right trim stud tip; SW
 All six readings are straight-line 3D distances between the centers of the end faces of the projecting pieces, at unequal Z depths:
 U-L 80.00; NE-SW 109.80; U-NE 51.40; L-NE 80.25; U-SW 81.14; L-SW 54.70 mm.
 
-These are not wall-plane center distances or axes at the intended backing plane. If a depth difference dz is independently known, projected tip separation is sqrt(distance_3d^2 - dz^2), but even projected tips do not establish inclined stud axes at another plane. No repeat readings/uncertainty bounds were supplied. The owner reported imperfect caliper technique and asked that the calipers guide reconciliation, with the primary scan as weaker corroboration. Preserve both; fit weights/residuals are not measurement accuracy.
+These are not wall-plane center distances or axes at the intended backing plane. If a depth difference dz is independently known, projected tip separation is sqrt(distance_3d^2 - dz^2), but even projected tips do not establish inclined stud axes at another plane. No repeat readings/uncertainty bounds were supplied. Earlier technique/endpoint concerns belong to these installed tip readings and must not be generalized to the separately confirmed coplanar inner-plate face measurements. The calipers guide reconciliation, with the primary scan as weaker corroboration. Preserve both; fit weights/residuals are not measurement accuracy.
 
 The conditional loose-plate center spacing 112.05 mm exceeds the 109.8 mm installed 3D tip spacing. Unequal depth alone cannot make a projected tip spacing larger than its 3D length. This deserves reconciliation of contacts, hole diameters, axes and assembly pose; it is not by itself proof of defective hardware.
 
@@ -120,9 +122,9 @@ Existing seven-page FT01 guide, two-page shop sheets and full-size templates are
 
 10. LOCAL AGENT FILES AND REPRODUCIBILITY
 
-Workspace: /Users/mdpatrick/Code/shower-kohler-valve. Snapshot source commit fbe55d6475383feca03e9f337fbf6f450f336c89. This review changes no baseline CAD. Original scan archives are versioned ordinary Git blobs; no LFS. No remote publication.
+Workspace: /Users/mdpatrick/Code/shower-kohler-valve. The 82 technical snapshot files are retained byte-for-byte from GP01, source commit fbe55d6475383feca03e9f337fbf6f450f336c89. GP02 adds only the separately identified measurement-method/confidence record under review_addenda/ and revises the review prompt, brief and PDF captions. Later repository software maintenance is outside this frozen snapshot. This review changes no baseline CAD. Original scan archives are versioned ordinary Git blobs; no LFS. No remote publication.
 
-Dimensional inputs: canon/fit_trial_design.json; observations canon/measurements.json and docs/physical_checks/*.json. Handoff prose/research: canon/fit_trial_handoff.json. CAD builder: src/fabrication/fit_trial.py. Export/analytic audit: src/fabrication/audit_fit_trial.py. Documents: src/fabrication/fit_trial_documents.py. Blender: src/blender/fit_trial.py. New scan: src/analysis/attached_scan.py. Entry point: ./project prepare-fit-trial --stage analysis|blender|documents|audit; ./project validate --git-objects. Some figures/docs still contain literal FT01 values; any changed design must update all dependencies coherently.
+Dimensional inputs: canon/fit_trial_design.json; observations canon/measurements.json and docs/physical_checks/*.json. Handoff prose/research: canon/fit_trial_handoff.json. CAD builder: src/fabrication/fit_trial.py. Export/analytic audit: src/fabrication/audit_fit_trial.py. Documents: src/fabrication/fit_trial_documents.py. Blender: src/blender/fit_trial.py. New scan: src/analysis/attached_scan.py. Entry point: ./project prepare-fit-trial --stage analysis|blender|documents|audit; ./project validate --git-objects. Some frozen snapshot figures/docs contain literal FT01 values; any changed design must update all dependencies coherently.
 
 Canon uses mm, +X right, +Y up, +Z out of wall, from the shower. Local CAD origin is the custom outer-circle center with rear Z=0 and front Z=thickness. Installed feature coordinates use a different recorded reference frame; do not mix them. Blender mapping is (x,-z,y)/1000. Read transforms and installed placements explicitly.
 

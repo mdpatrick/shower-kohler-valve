@@ -4,7 +4,7 @@
 
 Open the [current illustrated review](deliverables/current/fabrication/fit-trial/index.html), or run `./project review`. The review includes individual upload files, prices and timing research, paired mockups, an exploded view, and the actual new scan with the inner plate attached.
 
-The [GP01 Pro review package](deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01.zip) is ready. Follow its `00_READ_ME_FIRST.txt`: attach the brief, visual evidence and technical archive, then paste the master prompt. It requests independent design review and concrete instructions back to the agent for CAD, optional locators and separate party-specific handoffs. No Pro response has been received. GP01 is a frozen review checkpoint; later software maintenance has not changed the nominal FT01 design.
+The [GP02 Pro review package](deliverables/current/gpt-pro-review/GP02/GPT_PRO_PROMPT_PACKAGE_GP02.zip) is ready. Follow its `00_READ_ME_FIRST.txt`: attach the brief, visual evidence and technical archive, then paste the master prompt. It requests independent design review and concrete instructions back to the agent for CAD, optional locators and separate party-specific handoffs. GP02 explicitly distinguishes the user-confirmed coplanar, high-confidence inner-plate face measurements from the installed 3D tip distances. It retains the frozen GP01 technical snapshot and adds the clarification separately; numeric R005 and FT01 CAD are unchanged. GP01 remains available as history. No Pro response has been received.
 
 ## Choose the next part
 

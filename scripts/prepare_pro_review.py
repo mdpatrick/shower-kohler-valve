@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package GP01 review evidence without changing the FT01 geometry.
+"""Package GP02 clarification without changing the frozen FT01 geometry.
 
 The archive is an inspection snapshot, not a runnable project or a shop packet.
 Original images are placed in PDF pages without retouching or geometric edits.
@@ -22,7 +22,9 @@ from reportlab.platypus import Paragraph
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'deliverables/current/gpt-pro-review/GP01'
+OUT = ROOT / 'deliverables/current/gpt-pro-review/GP02'
+PREVIOUS = ROOT / 'deliverables/current/gpt-pro-review/GP01'
+SUPPLEMENT = 'docs/physical_checks/inner_plate_planarity_2026-10-15.json'
 TEXT = ROOT / 'docs/gpt_pro_review'
 FT = 'deliverables/current/fabrication/fit-trial/'
 BASELINE = 'fbe55d6475383feca03e9f337fbf6f450f336c89'
@@ -39,22 +41,22 @@ HEAD = ParagraphStyle('head', parent=P, fontName='Helvetica-Bold',
 
 # Explicit, ordered evidence. Historical graphics are never called current CAD.
 FIGURES = [
-    ('Inner plate measured face', 'USER MEASUREMENTS / FRONT TOWARD HANDLES',
+    ('Inner plate measured face', 'PLANAR FACE MEASUREMENTS / FRONT TOWARD HANDLES',
      'data/evidence/user/inner-plate-front-caliper-2026-10-14.png',
-     'Width 130.35 mm; height 165.10 mm; upper opening 48.46 mm. The 106.39 mm diagonal is the gap between nearest hole edges, not centers. The 11.71 mm dimension is hole edge to outside rim. SW hole is 5.66 mm; NE diameter is unknown.',
-     'This front photograph does not establish the rear foam contour or installed compression. The owner separately confirms edge-flush foam about 6 mm wide/deep and total free depth 15.44 mm.'),
+     'Measured within one plane; the owner considers the caliper readings highly accurate. No tip-depth correction applies. Width 130.35 mm; upper opening 48.46 mm; tape height 165.10 mm.',
+     '106.39 mm is nearest-hole-edge gap; 11.71 mm is hole edge to outside rim; SW hole is 5.66 mm; NE diameter is unknown. Use the calipers ahead of scan estimates for these measured dimensions. Foam/depth readings are separate; no numerical accuracy bound was supplied.'),
     ('Decorative cover measured face', 'USER MEASUREMENTS / FRONT TOWARD HANDLES',
      'data/evidence/user/outer-plate-front-caliper-2026-10-14.png',
      'Outside diameter 7.25 inches = 184.15 mm. Upper opening 33.79 mm. The blue 46.25 mm is between nearest inside opening edges. Orange 35.23 mm runs from lower inside opening edge to outside bottom rim.',
      'Lower opening diameter and rear cavity are unmeasured. These front dimensions do not establish nut clearance, handle engagement or the installed center.'),
     ('Upper-right stud tip distances', 'USER CALIPER READINGS / THREE-DIMENSIONAL TIP DISTANCES',
      'data/evidence/user/installed-ne-stud-distances-2026-10-15.png',
-     'U-NE = 51.40 mm; L-NE = 80.25 mm. These join the centers of the end faces at different depths. NE is the upper-right trim rod. The factory inner plate is removed in this state.',
-     'Additional supplied lengths: U-L = 80.00 mm and NE-SW = 109.80 mm. Do not treat any of these as planar drilling coordinates. The bare installation also shows the over-cut and saw damage.'),
+     'U-NE = 51.40 mm; L-NE = 80.25 mm. These are 3D distances between end-tip centers at different depths. NE is the upper-right trim rod. Unequal depth makes a tip distance longer than its projection onto the tile plane.',
+     'Additional supplied lengths: U-L = 80.00 mm and NE-SW = 109.80 mm. Do not use these directly as CAD hole spacing. Unlike the coplanar inner-plate face measurements on page 2, projected tip spacing needs the depth difference; stud axes at the backing plane remain separate.'),
     ('Lower-left stud tip distances', 'USER CALIPER READINGS / THREE-DIMENSIONAL TIP DISTANCES',
      'data/evidence/user/installed-sw-stud-distances-2026-10-15.png',
-     'U-SW = 81.14 mm; L-SW = 54.70 mm. SW is the lower-left trim rod. User clarification supersedes any earlier planar interpretation of the annotations.',
-     'Stud inclination, actual diameter at the backing plane, axis intersections and measurement repeatability are unestablished. A fitted point pattern does not by itself define holes that a rigid plate can slide over.'),
+     'U-SW = 81.14 mm; L-SW = 54.70 mm. These join end-tip centers at different depths, not points in the tile plane. The 3D lengths exceed their tile-plane projections. SW is the lower-left trim rod.',
+     'Do not use these directly as CAD hole spacing. The inner-plate face measurements on page 2 are coplanar and need no tip-depth correction. Here, depth differences are needed for projection; stud inclination and axis intersections at the backing plane are still unestablished.'),
     ('Rear installation context', 'ACTUAL USER PHOTOGRAPH / NO CAD RECONSTRUCTION',
      'data/evidence/user/rear-context-2026-10-15.jpeg',
      'Actual rear view of wood, valve and plumbing. The foam discussed elsewhere belongs to the removable front inner plate; no foam-filled rear cavity is claimed.',
@@ -131,7 +133,7 @@ def base(c, title, category, num):
     c.line(32, 35, w - 32, 35)
     c.setFillColor(GREY)
     c.setFont('Helvetica', 8)
-    c.drawString(32, 21, 'GP01 | 15 October 2026 | Independent review of FT01 quote / fit-trial baseline')
+    c.drawString(32, 21, 'GP02 | 15 October 2026 | Measurement clarification; FT01 CAD unchanged')
     c.drawRightString(w - 32, 21, str(num))
 
 
@@ -151,7 +153,7 @@ def evidence_pdf():
         ('Four decisions',
          'Choose the best aperture while preserving full foam support and real control access. Decide whether bolt notches or other locators are useful and feasible. Establish the minimum factory-fit and water-path checks for the expert. Specify the documents and file-level tests the agent should produce.'),
         ('Read the pictures according to their labels',
-         'Measured photographs and observed scans are evidence. Proposed CAD and exploded pictures are illustrations with assumptions. The old locator experiment is historical. Source paths and SHA256 hashes are in MANIFEST.json; selected reports and original manufacturer PDFs are in the technical reference ZIP.'),
+         'Inner-plate face dimensions were measured within one plane; the owner considers those caliper readings highly accurate. Installed tip distances span unequal depths and are 3D lengths. Proposed CAD and exploded pictures contain assumptions. GP02 clarifies this distinction; FT01 CAD is unchanged.'),
         ('What has not been established',
          'Physical handle attachment, compressed foam contact, sound support and retention, the final sealing detail, actual paired gap, and installed water performance remain open. The existing digital audit does not certify these. The nominal 1 mm extra foam land is particularly narrow.'),
         ('Use the separate text prompt',
@@ -187,47 +189,17 @@ def evidence_pdf():
     reader = PdfReader(path)
     assert len(reader.pages) == len(FIGURES) + 1
     for i, page in enumerate(reader.pages, 1):
-        assert 'GP01' in page.extract_text(), f'Missing footer on page {i}'
+        assert 'GP02' in page.extract_text(), f'Missing footer on page {i}'
     return mapping
 
 
 def sources():
-    paths = {
-        'START_HERE.md', 'AGENTS.md', 'project', 'scripts/project.py',
-        'docs/fabrication_goal_prompt.md', 'docs/downstream_audit_prompt.md',
-        'docs/project_request.md', 'docs/questions_answered.md',
-        'docs/validation/fit_trial_FT01.json',
-        'src/fabrication/fit_trial.py', 'src/fabrication/audit_fit_trial.py',
-        'src/fabrication/fit_trial_documents.py', 'src/blender/fit_trial.py',
-        'src/analysis/attached_scan.py', 'src/analysis/registration_trial.py',
-        'scripts/inspect_attached_scan.py', 'scripts/render_attached_plane.py',
-        'deliverables/current/fabrication/control-registration/registration_trial.json',
-        'deliverables/current/fabrication/concentric-border-study/analysis.json',
-        'deliverables/current/fabrication/concentric-border-study/stud_locator_analysis.json',
-        'deliverables/current/fabrication/aperture-access/analysis.json',
-        'deliverables/current/analysis/center_reconciliation_DRAFT.json',
-    }
-    for name in ['fit_trial_design', 'fit_trial_handoff', 'measurements',
-                 'inputs', 'source_register', 'features', 'transforms',
-                 'scan_annotations', 'project_state', 'stud_locator_study',
-                 'aperture_access_study', 'concentric_border_requirement',
-                 'damage_visibility_requirement']:
-        paths.add('canon/' + name + '.json')
-    for path in (ROOT / 'docs/physical_checks').glob('*.json'):
-        paths.add(str(path.relative_to(ROOT)))
-    for name in ['design_report.json', 'audit.json', 'attached_scan_assessment.json',
-                 'document_check.json', 'blender_check.json',
-                 'project_handoff_FT01.pdf', 'shop_drawings_FT01.pdf',
-                 'full_size_templates_FT01.pdf']:
-        paths.add(FT + name)
-    for path in (ROOT / FT / 'cad').iterdir():
-        if path.suffix in {'.step', '.stl', '.dxf'}:
-            paths.add(str(path.relative_to(ROOT)))
-    for path in (ROOT / 'data/evidence').glob('kohler-*.pdf'):
-        paths.add(str(path.relative_to(ROOT)))
-    # The source images are visible in the evidence PDF; originals and large raw
-    # meshes stay in the private repository rather than duplicated in this ZIP.
-    return sorted(paths)
+    # Retain the GP01 inspection snapshot exactly; do not silently pull later
+    # software maintenance or current canon into this evidence-only revision.
+    with zipfile.ZipFile(PREVIOUS / '04_TECHNICAL_REFERENCE.zip') as z:
+        manifest = json.loads(z.read('SNAPSHOT_MANIFEST.json'))
+    assert manifest['source_commit'] == BASELINE
+    return sorted(item['repository_source'] for item in manifest['files'])
 
 
 def zip_bytes(archive, name, data):
@@ -240,13 +212,11 @@ def zip_bytes(archive, name, data):
 def technical_zip(paths):
     items = []
     path = OUT / '04_TECHNICAL_REFERENCE.zip'
-    with zipfile.ZipFile(path, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
+    with zipfile.ZipFile(PREVIOUS / '04_TECHNICAL_REFERENCE.zip') as old, \
+            zipfile.ZipFile(path, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for rel in paths:
-            p = ROOT / rel
-            if not p.is_file():
-                raise FileNotFoundError(rel)
-            data = p.read_bytes()
-            # Ensure the claimed baseline is exact, not just the current HEAD.
+            data = old.read('repo_snapshot/' + rel)
+            # Verify the retained snapshot against its original source commit.
             committed = subprocess.check_output(['git', 'show', BASELINE + ':' + rel], cwd=ROOT)
             if hashlib.sha256(data).digest() != hashlib.sha256(committed).digest():
                 raise ValueError('Baseline has changed; revise snapshot context before packaging: ' + rel)
@@ -254,9 +224,18 @@ def technical_zip(paths):
             zip_bytes(z, dest, data)
             items.append(dict(path=dest, repository_source=rel, size_bytes=len(data),
                               sha256=hashlib.sha256(data).hexdigest()))
+        data = (ROOT / SUPPLEMENT).read_bytes()
+        dest = 'review_addenda/' + Path(SUPPLEMENT).name
+        zip_bytes(z, dest, data)
+        supplement = dict(path=dest, repository_source=SUPPLEMENT,
+                          size_bytes=len(data), sha256=hashlib.sha256(data).hexdigest(),
+                          scope='GP02 direct user method/confidence clarification; numeric R005 and FT01 CAD unchanged')
+        items.append(supplement)
         snapshot = dict(source_commit=BASELINE, current_CAD='FT01',
                         scope='Inspection snapshot only; not a runnable checkout or vendor packet',
                         files=items,
+                        baseline_files_unchanged_from='GP01',
+                        post_baseline_addenda=[supplement],
                         omitted='Raw scans, extracted/derived meshes, Blender file, runtime and nonselected history. See outer MANIFEST.json.')
         zip_bytes(z, 'SNAPSHOT_MANIFEST.json', (json.dumps(snapshot, indent=2) + '\n').encode())
     with zipfile.ZipFile(path) as z:
@@ -281,18 +260,18 @@ def main():
     omitted.append(dict(id='BLENDER-FT01', repository_path=str(blend.relative_to(ROOT)),
                         sha256=sha(blend), size_bytes=blend.stat().st_size))
     payload = [OUT / p.name for p in texts] + [OUT / '03_VISUAL_EVIDENCE.pdf', OUT / '04_TECHNICAL_REFERENCE.zip']
-    manifest = dict(package='GP01', project='shower-kohler-valve', date='2026-10-15',
+    manifest = dict(package='GP02', supersedes_review_package='GP01', project='shower-kohler-valve', date='2026-10-15',
                     baseline_commit=BASELINE, current_CAD='FT01', measurement_revision='R005',
                     status='INDEPENDENT_REVIEW_PROMPT_PACKAGE; CAD remains FOR_QUOTE_AND_DRY_FIT_ONLY',
                     actual_external_transmission=False, baseline_geometry_changed=False,
-                    source_note='All technical ZIP files verified byte-for-byte against the baseline commit. New prompt/evidence assembly belongs to GP01.',
+                    source_note='The 82 GP01 technical snapshot files remain byte-identical to the baseline commit. GP02 adds one separately labeled user method/confidence clarification and updates the prompt, brief and visual captions. Later software maintenance is not pulled into the snapshot.',
                     payload_files=[dict(path=p.name, sha256=sha(p), size_bytes=p.stat().st_size) for p in payload],
                     evidence_figures=figures, technical_snapshot_files=len(items),
                     omitted_local_assets=omitted,
                     omissions_note='Omitted assets remain in the local repository. No raw mesh recomputation is possible from this compact package alone.',
                     manifest_self_hash_note='Manifest excluded from its own hash to avoid circularity; outer ZIP verified separately.')
     write_json(OUT / 'MANIFEST.json', manifest)
-    archive = OUT / 'GPT_PRO_PROMPT_PACKAGE_GP01.zip'
+    archive = OUT / 'GPT_PRO_PROMPT_PACKAGE_GP02.zip'
     members = payload + [OUT / 'MANIFEST.json']
     with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for p in sorted(members):
@@ -302,8 +281,9 @@ def main():
         assert set(z.namelist()) == {p.name for p in members}
         for p in members:
             assert hashlib.sha256(z.read(p.name)).hexdigest() == sha(p)
-    audit = dict(package='GP01', zip_crc='PASS', all_member_hashes='PASS',
-                 baseline_commit_byte_comparison='PASS', baseline_files_checked=len(items),
+    audit = dict(package='GP02', zip_crc='PASS', all_member_hashes='PASS',
+                 baseline_commit_byte_comparison='PASS', baseline_files_checked=len(items)-1,
+                 clarification_addenda=1,
                  outer_archive_members=len(members), evidence_pages=len(figures) + 1,
                  archive_sha256=sha(archive), archive_size_bytes=archive.stat().st_size,
                  CAD_modified=False, physical_fit='NOT PERFORMED',

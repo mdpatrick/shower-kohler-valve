@@ -1,0 +1,28 @@
+{
+  "id": "OBS-INNER-PLATE-PLANARITY-01",
+  "revision": 1,
+  "date": "2026-10-15",
+  "source": "Direct user clarification in project chat",
+  "status": "ACCEPTED_MEASUREMENT_METHOD_CLARIFICATION",
+  "raw_user_statement": "One thing I should mention, the measurements done on the inner plate WERE within a single plane. They're likely very very accurate. Make sure that difference is noted.",
+  "scope": "Previously supplied inner-plate face dimensions, not the separately reported foam/assembly depth measurements or the installed projection tip distances.",
+  "accepted_face_measurement_ids": ["M02-W", "M02-H", "M11-UD", "M11-UT", "M11-SWD", "M11-G", "M11-R"],
+  "measurement_plane": "A single plane on the loose inner plate, confirmed by the user.",
+  "confidence": "Owner considers the inner-plate caliper readings highly accurate. Use direct measured dimensions ahead of scan-derived estimates for the same features.",
+  "instruments": "Preserve original attribution: 6.5-inch overall height was tape-measured; the supplied mm face dimensions were caliper measurements.",
+  "numerical_accuracy_bound_mm": null,
+  "tip_depth_correction_applies_to_face_measurements": false,
+  "separate_installed_tip_readings": {
+    "method": "Straight-line 3D distances between end-face centers at different depths from the wall.",
+    "values_mm": {"U-L": 80.0, "NE-SW": 109.8, "U-NE": 51.4, "L-NE": 80.25, "U-SW": 81.14, "L-SW": 54.7},
+    "use": "Do not use directly as planar CAD hole spacing. Projected tip spacing requires the depth difference; inclined rod axes at the backing plane require separate reconciliation."
+  },
+  "preserved_endpoint_meanings": {
+    "106.39_mm": "Gap between nearest mounting-hole edges, not center spacing.",
+    "11.71_mm": "Upper-right mounting-hole edge to outside metal rim, not center-to-rim."
+  },
+  "engineering_interpretation": "Do not discount the inner-plate dimensions using unequal tip depths, average them with a distorted scan, or invent a numerical caliper tolerance. Unknown diameters, inferred center positions, installed registration and physical fit remain separate from confidence in the measured face dimensions.",
+  "numeric_measurement_revision": "R005 unchanged",
+  "CAD_revision": "FT01 unchanged",
+  "physical_fit_result": "No new result supplied"
+}
