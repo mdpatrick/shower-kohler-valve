@@ -1,0 +1,22 @@
+{
+  "package": "GP05",
+  "zip_crc": "PASS",
+  "all_member_hashes": "PASS",
+  "baseline_commit_byte_comparison": "PASS",
+  "baseline_files_checked": 82,
+  "clarification_addenda": 4,
+  "outer_archive_members": 8,
+  "evidence_pages": 14,
+  "archive_sha256": "92bbd4bc68c045edf5317a5b402f44a2ac434de0b11397b0a967a7996cd68ab3",
+  "archive_size_bytes": 54086022,
+  "CAD_modified": false,
+  "physical_fit": "NOT PERFORMED",
+  "PDF_visual_review": "PASS: revised page 1 rendered and visually inspected with no clipping or overlaps; pages 2-14 text unchanged from visually reviewed GP04 apart from same-length revision label.",
+  "prior_GP04_archive_unchanged": true,
+  "prior_three_addenda_unchanged": true,
+  "current_CAD_and_numeric_measurements_unchanged": true,
+  "archived_CAD_files_byte_identical_to_GP04": 18,
+  "source_text_matches_package": true,
+  "new_policy_record": "docs/decisions/evidence_reconciliation_2026-10-15.json",
+  "new_measurements_requested": []
+}

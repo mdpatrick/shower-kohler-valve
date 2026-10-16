@@ -41,7 +41,7 @@
   "post_scan_state_observation": "OBS-POST-SCAN-01",
   "depth_review_observation": "OBS-DEPTH-REVIEW-01",
   "depth_inquiry_record": "docs/physical_checks/depth_inquiry_2026-10-14.json",
-  "latest_user_state_note": "User wants GPT Pro to distill CAD to only the plate versions worth machining and return precise per-file instructions to the local agent. GP04 identifies standalone candidates and requires a minimal justified manufacturing set, isolated one-plate exports and strict separation from wall/assembly references. Prior owner measurement-burden and planar/3D distinctions remain. No new dimensions or Pro response.",
+  "latest_user_state_note": "User explicitly prefers close, well-supported working approximations reconciled from the strongest calipers and credible features across Polycam scans rather than more difficult measurements. GP05 instructs Pro to select practical nominals and forgiving plate geometry, asking only when consequential remaining uncertainty cannot reasonably be accommodated by evidence, design or the fit trial. Prior plate-only handoff, owner burden and planar/3D distinctions remain. No new dimensions or Pro response.",
   "inner_plate_planarity_record": "docs/physical_checks/inner_plate_planarity_2026-10-15.json",
   "inner_plate_measurement_record": "docs/physical_checks/inner_plate_2026-10-14.json",
   "inner_plate_foam_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
@@ -82,12 +82,13 @@
       "status": "Preserved, extracted and wall-normal visually assessed; not globally registered or precision validated."
     }
   ],
-  "independent_review_package": "deliverables/current/gpt-pro-review/GP04/GPT_PRO_PROMPT_PACKAGE_GP04.zip",
+  "independent_review_package": "deliverables/current/gpt-pro-review/GP05/GPT_PRO_PROMPT_PACKAGE_GP05.zip",
   "independent_review_response": "Not received",
   "parameter_propagation_validation": "docs/validation/parameter_propagation_FT01.json",
   "expert_visit_record": "deliverables/current/fabrication/fit-trial/expert_visit_record_FT01.pdf",
   "expert_visit_record_validation": "docs/validation/field_record_FT01.json",
   "expert_visit_results": "Not received; four-page blank record prepared. No physical readiness state changed.",
   "measurement_responsibility_record": "docs/decisions/measurement_scope_2026-10-15.json",
-  "machining_deliverables_record": "docs/decisions/machining_deliverables_2026-10-15.json"
+  "machining_deliverables_record": "docs/decisions/machining_deliverables_2026-10-15.json",
+  "evidence_reconciliation_record": "docs/decisions/evidence_reconciliation_2026-10-15.json"
 }

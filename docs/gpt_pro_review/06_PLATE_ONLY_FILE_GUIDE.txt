@@ -1,4 +1,4 @@
-PLATE-ONLY FILE GUIDE - GP04
+PLATE-ONLY FILE GUIDE - GP05
 
 These are existing FT01 candidates for Pro to evaluate, not a direction to fabricate all six. Pro must select the smallest useful main/diverter prototype set and give the local agent exact filenames, dimensions, purpose, material/process, quantities and checks for the chosen or revised parts.
 

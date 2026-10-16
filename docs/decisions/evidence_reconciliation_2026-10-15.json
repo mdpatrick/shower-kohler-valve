@@ -1,0 +1,26 @@
+{
+  "id": "USER-EVIDENCE-RECONCILIATION-01",
+  "date": "2026-10-15",
+  "source": "Direct user instruction in project chat",
+  "raw_user_statement": "Yeah, so basically to the extent we can smooth out discrepancies or things that aren't clear to really close and very likely approximations (e.g., across multiple polycams, the best of my caliper measurements, etc.) then that's what we should do rather than having me take 100 more impossible measurements. Make that clear in our prompt package for GPT Pro.",
+  "objective": "Actively reconcile the available evidence into the most likely practical plate dimensions and a small useful machining set. Supported engineering approximations are preferred to further homeowner measurements. Perfect agreement among scans and readings is not a prerequisite for a quote or sacrificial fit trial.",
+  "evidence_method": [
+    "Use the strongest source for each relevant feature. The confirmed coplanar inner-plate calipers govern those measured face dimensions. Preserve their readings and exact edge endpoints; installed tip distances remain 3D.",
+    "Compare credible local features across the Polycam captures, actual photographs and applicable manufacturer geometry. The original wall/valve scan remains the primary installed spatial reference. Different scans have different assembly states, scales, occlusions and reflective distortion; do not average them indiscriminately or alter source geometry to manufacture agreement.",
+    "Account for measurement direction, depth, registration, shared calibration and source quality before reconciling a discrepancy. Use corroborating independent features when available; a value used to calibrate a scan is not a second independent confirmation of that value.",
+    "Choose a supported working nominal where evidence permits. Label it inferred/design-selected rather than newly measured. Preserve contradictory raw observations and briefly explain the choice, likely variation and functional consequence.",
+    "Use a plausible range or a few relevant scenarios only where they can change machining. State the basis; do not present these as certified error bounds or invent confidence percentages. Do not commission a complete scan reconciliation or characterize every unknown before progressing."
+  ],
+  "design_method": [
+    "Prefer simple, forgiving apertures and omit optional close-fitting locators when that accommodates plausible variation without another measuring task.",
+    "Check both sides of an allowance: enlarging an opening can help control access but reduce foam support; enlarging an outside diameter can improve coverage but reduce the gap to the diverter. Compare only variations that affect the selected part.",
+    "Keep uncertainty about the installation distinct from the manufacturing tolerance specified for the part. Choose practical nominal dimensions and process tolerances; do not demand unrealistic machining precision to compensate for an uncertain scan.",
+    "Proceed with a well-supported quote and sacrificial prototype, including metal if otherwise appropriate, when remaining uncertainty can reasonably be resolved by the ordinary fit trial. Do not require every unknown to become an accepted measurement first."
+  ],
+  "measurement_gate": "A discrepancy alone is not a reason to request another measurement. Ask the owner only if a plausible unresolved range materially changes a required machining feature and cannot reasonably be accommodated by evidence reconciliation, a simpler design, a justified allowance or the planned fit trial. Explain the specific decision and why these options do not suffice. Request zero when no such value remains, otherwise one short prioritized batch of at most a handful, with exact illustrated contacts, plane, easy method and only necessary precision. The expert is expected to assemble/install, not return a CAD survey.",
+  "required_Pro_output": "For each consequential estimate give the chosen working dimension, supporting sources, likely variation or relevant scenarios, reason it is adequate for the next machining step and what would actually change the part. Include this policy and the selected values in BEGIN AGENT INSTRUCTIONS. Do not substitute a long uncertainty report or measurement list for a concrete plate design.",
+  "scope": "This clarifies the measurement burden instruction and supersedes older defaults that a discrepancy requires a recheck or that an unmeasured feature cannot receive a supported trial-design nominal. It does not turn an estimate into an accepted measurement, alter recorded source evidence or claim successful physical assembly or sealing.",
+  "numeric_measurement_revision": "R005 unchanged",
+  "CAD_revision": "FT01 unchanged",
+  "new_measurements_requested_by_this_record": []
+}

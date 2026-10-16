@@ -1,17 +1,19 @@
 Kohler shower backing plates - independent design review brief
-15 October 2026 | Review package GP04 | CAD baseline FT01 | Accepted part measurements R005
+15 October 2026 | Review package GP05 | CAD baseline FT01 | Accepted part measurements R005
 
 PURPOSE
 
 Prepare a useful next pair of backing plates for an existing over-cut travertine wall. The owner wants real CAD to obtain a quote and a prompt physical fit trial, plus separate handoffs for the fabricator, Kohler expert/plumber and a novice owner. Pro is being asked to issue concrete implementation instructions to the local agent, not to approve the existing design uncritically. No upload, order, successful complete physical trial or installed water test is recorded.
 
-The current CAD is FOR_QUOTE_AND_DRY_FIT_ONLY. The revision has passed digital file checks; permanent installation is unreleased. Earlier F005, CB01, AP01 and LOC01 are historical studies. GP04 does not revise CAD or authorize a physical repair.
+The current CAD is FOR_QUOTE_AND_DRY_FIT_ONLY. The revision has passed digital file checks; permanent installation is unreleased. Earlier F005, CB01, AP01 and LOC01 are historical studies. GP05 does not revise CAD or authorize a physical repair.
 
 1. PEOPLE, PURPOSE AND CONSTRAINTS
 
 The expert is expected to assemble and install the parts, not supply new expert measurements or a CAD survey. The owner found measuring difficult but will supply a handful of indispensable machining dimensions if needed. Use existing evidence first. Ask only when a value directly changes the custom main or diverter plate aperture, outside profile, thickness or an essential locator; do not request readings merely to refine the scan or complete a broad checklist. For each indispensable request, identify the affected CAD decision, why existing evidence or a simpler design cannot resolve it, exact illustrated contacts and reference plane, easiest method, required precision, and how the answer changes the machining file. Send one short prioritized batch, or request none if the chosen machining scope needs no new dimensions. Ordinary assembly, fit and water checks remain the installer's work, distinct from this measurement burden.
 
-The expert is not a planned source of new machining measurements. Legacy measurement assignments and the long field form are optional background only; this GP04 responsibility clarification governs. Obtain a useful prototype/quote now and keep assembly checks separate. The owner may use finished metal as the first sacrificial fit trial if the delivered price is about twice plastic or less; a remake remains possible.
+Actively reconcile the strongest caliper evidence and credible local features across the Polycam scans, photographs and applicable manufacturer references into close, well-supported working dimensions. Prefer a supported engineering approximation and a forgiving design to another difficult owner measurement. Preserve the confirmed coplanar face readings and the separate 3D tip-distance meaning; account for scan quality, depth, assembly state and shared calibration. Record consequential chosen nominals as inferred/design-selected, with their basis and likely variation, without overwriting raw evidence or inventing accuracy bounds. Ask again only when the remaining plausible range materially changes required machining and cannot reasonably be handled by reconciliation, a simpler design, a justified allowance or the planned fit trial. Perfect scan agreement is not a prerequisite. If one useful prototype accommodates the plausible range, proceed without further measuring; do not turn every discrepancy into a request. Ordinary installation checks remain separate.
+
+The expert is not a planned source of new machining measurements. Legacy measurement assignments and the long field form are optional background only; this GP05 responsibility clarification governs. Obtain a useful prototype/quote now and keep assembly checks separate. The owner may use finished metal as the first sacrificial fit trial if the delivered price is about twice plastic or less; a remake remains possible.
 
 The main concern is shower water reaching the wall cavity behind the trim. A decorative cover concealing a cut is different from supported gasket contact, a sealed new plate-to-wall interface and the condition of concealed waterproofing. Pressure plumbing leaks require a separate check.
 
@@ -29,7 +31,7 @@ The foam is attached to the rear of the real inner plate and meets its outside e
 
 3. ACTUAL LOOSE-PART MEASUREMENTS
 
-Source records are in repo_snapshot/docs/physical_checks/ and repo_snapshot/canon/measurements.json. GP04 includes the owner clarification in review_addenda/inner_plate_planarity_2026-10-15.json and the responsibility constraint in review_addenda/measurement_scope_2026-10-15.json. The annotated photographs are reproduced in 03_VISUAL_EVIDENCE.pdf.
+Source records are in repo_snapshot/docs/physical_checks/ and repo_snapshot/canon/measurements.json. GP05 includes the owner clarification in review_addenda/inner_plate_planarity_2026-10-15.json and the responsibility constraint in review_addenda/measurement_scope_2026-10-15.json. The annotated photographs are reproduced in 03_VISUAL_EVIDENCE.pdf.
 
 The owner confirms the INNER-PLATE FACE measurements were taken within a SINGLE PLANE and considers the caliper readings highly accurate. Use those direct dimensions ahead of scan-derived estimates for the same measured features. They require NO tip-depth correction. This is separate from the installed 3D tip distances in section 4 and the foam/assembly depth readings below. Preserve the supplied digits and instrument distinctions; no numerical accuracy bound or repeatability series was supplied. High confidence in the measured edges does not measure an unknown diameter, infer an installed pose or turn an edge gap into center spacing.
 
@@ -128,7 +130,7 @@ Existing seven-page FT01 guide, two-page shop sheets and full-size templates are
 
 10. LOCAL AGENT FILES AND REPRODUCIBILITY
 
-Workspace: /Users/mdpatrick/Code/shower-kohler-valve. The 82 technical snapshot files are retained byte-for-byte from GP01, source commit fbe55d6475383feca03e9f337fbf6f450f336c89. GP04 adds the separately identified measurement-method/confidence, measurement-responsibility and machining-deliverables records under review_addenda/ and revises the review prompt, brief and PDF. Older snapshot measurement assignments are superseded by these current instructions. Later repository software maintenance is outside this frozen snapshot. This review changes no baseline CAD. Original scan archives are versioned ordinary Git blobs; no LFS. No remote publication.
+Workspace: /Users/mdpatrick/Code/shower-kohler-valve. The 82 technical snapshot files are retained byte-for-byte from GP01, source commit fbe55d6475383feca03e9f337fbf6f450f336c89. GP05 adds the separately identified measurement-method/confidence, measurement-responsibility and machining-deliverables records under review_addenda/ and revises the review prompt, brief and PDF. Older snapshot measurement assignments are superseded by these current instructions. Later repository software maintenance is outside this frozen snapshot. This review changes no baseline CAD. Original scan archives are versioned ordinary Git blobs; no LFS. No remote publication.
 
 Dimensional inputs: canon/fit_trial_design.json; observations canon/measurements.json and docs/physical_checks/*.json. Handoff prose/research: canon/fit_trial_handoff.json. CAD builder: src/fabrication/fit_trial.py. Export/analytic audit: src/fabrication/audit_fit_trial.py. Documents: src/fabrication/fit_trial_documents.py. Blender: src/blender/fit_trial.py. New scan: src/analysis/attached_scan.py. Entry point: ./project prepare-fit-trial --stage analysis|blender|documents|audit; ./project validate --git-objects. Some frozen snapshot figures/docs contain literal FT01 values; any changed design must update all dependencies coherently.
 

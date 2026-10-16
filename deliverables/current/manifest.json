@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R005",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "dd7d1b1e54d182a21051c3e2e0a5e122a3f49053",
+  "source_commit": "f658253efc6e8a37555bcc1e7fb1011223340577",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "2c05add77d33f14bfcee199f03584940a0651582eb0f34d0f4fade9215986392",
+  "source_tree_hash": "f0e89f45451392d59b0cdc46b1339a40d49c2dbc8fe73195d312d94f27f99dc0",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1461,6 +1461,51 @@
       "path": "deliverables/current/gpt-pro-review/GP04/MANIFEST.json",
       "sha256": "ed9a4966529a424b7194ac3841954487ca7a03c6c43a395ab59d2ddc9dfa62ee",
       "size_bytes": 9402
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/00_READ_ME_FIRST.txt",
+      "sha256": "293e20bb0891950ca17f32bab03722f85ead02e0078292c7ea08c92e31fd3bc6",
+      "size_bytes": 7302
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/01_PASTE_INTO_GPT_PRO.txt",
+      "sha256": "c9786f65ef7d36e6d6e9eaead73b1550cb72f42da3f7a1d4d2ad780f46be8809",
+      "size_bytes": 25932
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/02_PROJECT_BRIEF.txt",
+      "sha256": "7ecfa0bd9a8ea291f7479aa0e8abeb575fcf277313a3b9611ec7a8c4d3d53017",
+      "size_bytes": 21482
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/03_VISUAL_EVIDENCE.pdf",
+      "sha256": "7e65bbe4ee6b9f13b2e3fc1975b1f919fb238ea2c5dd415632af77e2563fe823",
+      "size_bytes": 50847192
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/04_TECHNICAL_REFERENCE.zip",
+      "sha256": "3d2e1b8f8fd822d86e669895226eb9541bb968c3d0be878459bc3ac6e682f84a",
+      "size_bytes": 12795258
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/05_RETURN_TO_AGENT.txt",
+      "sha256": "c7a74b959093a4dbce461d82747cacb7cf9d2217344307de6d3e717633b69790",
+      "size_bytes": 4746
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/06_PLATE_ONLY_FILE_GUIDE.txt",
+      "sha256": "43aa061ec630880329cbf3b9e62d8306ec9ce2a862707cff534bea465892287c",
+      "size_bytes": 4435
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/GPT_PRO_PROMPT_PACKAGE_GP05.zip",
+      "sha256": "92bbd4bc68c045edf5317a5b402f44a2ac434de0b11397b0a967a7996cd68ab3",
+      "size_bytes": 54086022
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP05/MANIFEST.json",
+      "sha256": "fa4d4e99f338bc574733b147a283aa1e0695f1156219f1e4112a8b0936e6ef7e",
+      "size_bytes": 9502
     },
     {
       "path": "deliverables/current/manual/index.html",
