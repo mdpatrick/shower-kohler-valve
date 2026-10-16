@@ -1,0 +1,21 @@
+{
+  "id": "USER-MEASUREMENT-SCOPE-01",
+  "date": "2026-10-15",
+  "source": "Direct user instruction in project chat",
+  "raw_user_statement": "I should also mention. My expert who will assemble the parts - I don't anticipate he'll contribute new expert measurements. I should be tasked with that to the extent that it's required, but I plan on really belaboring that I found this difficult and should only do it for a handful of critical measurements to the extent they're really absolutely needed for the machining of our escutcheon plate and no more.",
+  "expert_role": "Assembly, necessary installation adjustments and ordinary fit/function/sealing checks. Do not plan on the expert supplying a new dimensional survey or CAD measurement dataset.",
+  "owner_role": "Only the indispensable new measurements needed to determine the custom main or diverter plate machining geometry, if any remain after using the existing evidence.",
+  "burden_constraint": "Measurement has been difficult. Request at most a handful, in one short prioritized batch. No general remeasurement campaign or measurements merely to improve a scan/model.",
+  "request_gate": [
+    "Identify the specific machining feature or decision that the value changes, such as aperture size, outer profile, thickness or an essential locator.",
+    "Explain why accepted measurements, manufacturer references, existing scans or a simpler design cannot resolve that feature adequately.",
+    "Show the exact physical contacts, reference plane and measurement direction in a clear annotated view; give an easy method and only the precision actually needed.",
+    "State how the reading changes the CAD and which dependent step is blocked without it; continue unaffected quote/trial work.",
+    "If no further dimension is indispensable for the selected machining scope, say so and request none."
+  ],
+  "design_preference": "Prefer a sensible broad aperture without optional fixed bolt locators if adding locators creates avoidable measurement burden. Do not invent missing geometry or loosen a functional requirement merely to avoid asking.",
+  "installation_distinction": "Ordinary assembly and fit/water checks remain necessary, but are not a new pre-machining metrology assignment. Existing long field forms are optional recording aids, not mandatory measuring lists for either person.",
+  "numeric_measurement_revision": "R005 unchanged",
+  "CAD_revision": "FT01 unchanged",
+  "new_measurements_requested_by_this_record": []
+}

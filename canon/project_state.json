@@ -41,7 +41,7 @@
   "post_scan_state_observation": "OBS-POST-SCAN-01",
   "depth_review_observation": "OBS-DEPTH-REVIEW-01",
   "depth_inquiry_record": "docs/physical_checks/depth_inquiry_2026-10-14.json",
-  "latest_user_state_note": "User confirms the inner-plate face dimensions were measured in one plane and considers those caliper readings highly accurate. GP02 makes this distinction explicit against the separate 3D installed tip readings. Numeric R005 and FT01 CAD are unchanged; no Pro response or physical fit result received.",
+  "latest_user_state_note": "The expert is expected to assemble/install, not supply new CAD measurements. The owner will supply only a handful of indispensable machining dimensions if needed, each justified against existing evidence and simpler designs. GP03 records this and preserves the coplanar inner-plate versus 3D tip distinction. No new numerical measurements or physical fit results.",
   "inner_plate_planarity_record": "docs/physical_checks/inner_plate_planarity_2026-10-15.json",
   "inner_plate_measurement_record": "docs/physical_checks/inner_plate_2026-10-14.json",
   "inner_plate_foam_measurement_record": "docs/physical_checks/inner_plate_foam_2026-10-14.json",
@@ -82,10 +82,11 @@
       "status": "Preserved, extracted and wall-normal visually assessed; not globally registered or precision validated."
     }
   ],
-  "independent_review_package": "deliverables/current/gpt-pro-review/GP02/GPT_PRO_PROMPT_PACKAGE_GP02.zip",
+  "independent_review_package": "deliverables/current/gpt-pro-review/GP03/GPT_PRO_PROMPT_PACKAGE_GP03.zip",
   "independent_review_response": "Not received",
   "parameter_propagation_validation": "docs/validation/parameter_propagation_FT01.json",
   "expert_visit_record": "deliverables/current/fabrication/fit-trial/expert_visit_record_FT01.pdf",
   "expert_visit_record_validation": "docs/validation/field_record_FT01.json",
-  "expert_visit_results": "Not received; four-page blank record prepared. No physical readiness state changed."
+  "expert_visit_results": "Not received; four-page blank record prepared. No physical readiness state changed.",
+  "measurement_responsibility_record": "docs/decisions/measurement_scope_2026-10-15.json"
 }

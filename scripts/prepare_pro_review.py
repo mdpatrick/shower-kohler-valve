@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package GP02 clarification without changing the frozen FT01 geometry.
+"""Package GP03 clarification without changing the frozen FT01 geometry.
 
 The archive is an inspection snapshot, not a runnable project or a shop packet.
 Original images are placed in PDF pages without retouching or geometric edits.
@@ -22,9 +22,12 @@ from reportlab.platypus import Paragraph
 from pypdf import PdfReader
 
 ROOT = Path(__file__).resolve().parents[1]
-OUT = ROOT / 'deliverables/current/gpt-pro-review/GP02'
+OUT = ROOT / 'deliverables/current/gpt-pro-review/GP03'
 PREVIOUS = ROOT / 'deliverables/current/gpt-pro-review/GP01'
-SUPPLEMENT = 'docs/physical_checks/inner_plate_planarity_2026-10-15.json'
+SUPPLEMENTS = [
+    ('docs/physical_checks/inner_plate_planarity_2026-10-15.json', 'User-confirmed coplanar inner-plate face measurements and high caliper confidence'),
+    ('docs/decisions/measurement_scope_2026-10-15.json', 'Expert assembles; owner supplies only indispensable machining dimensions, at most a handful'),
+]
 TEXT = ROOT / 'docs/gpt_pro_review'
 FT = 'deliverables/current/fabrication/fit-trial/'
 BASELINE = 'fbe55d6475383feca03e9f337fbf6f450f336c89'
@@ -133,7 +136,7 @@ def base(c, title, category, num):
     c.line(32, 35, w - 32, 35)
     c.setFillColor(GREY)
     c.setFont('Helvetica', 8)
-    c.drawString(32, 21, 'GP02 | 15 October 2026 | Measurement clarification; FT01 CAD unchanged')
+    c.drawString(32, 21, 'GP03 | 15 October 2026 | Measurement clarification; FT01 CAD unchanged')
     c.drawRightString(w - 32, 21, str(num))
 
 
@@ -148,12 +151,14 @@ def evidence_pdf():
     sections = [
         ('A useful part for the expert visit',
          'The owner needs an accurate, simple backing-plate design that can be quoted and physically tried soon. Pro should issue concrete instructions to the local agent for revised CAD and separate fabricator, repair and installation handoffs.'),
+        ('Who measures and assembles',
+         'The expert is expected to assemble/install, not supply new CAD measurements. Measuring was difficult for the owner. Ask the owner for at most a handful of indispensable machining dimensions, only after using existing evidence and simpler design options. Each request needs the affected CAD decision, illustrated contacts and plane, easiest method and necessary precision. General field forms are optional; ordinary installation checks remain separate.'),
         ('Current proposal to challenge',
          'Main: diameter 220 mm, centered upright capsule 116.35 x 151.10 mm, end radius 58.175 mm. Diverter: 124 mm outside / 80 mm inside; 120 mm fallback. Stock: 1.524 mm metal or matching plastic; separate 3 mm plastic trial. No locators in the present files.'),
         ('Four decisions',
          'Choose the best aperture while preserving full foam support and real control access. Decide whether bolt notches or other locators are useful and feasible. Establish the minimum factory-fit and water-path checks for the expert. Specify the documents and file-level tests the agent should produce.'),
         ('Read the pictures according to their labels',
-         'Inner-plate face dimensions were measured within one plane; the owner considers those caliper readings highly accurate. Installed tip distances span unequal depths and are 3D lengths. Proposed CAD and exploded pictures contain assumptions. GP02 clarifies this distinction; FT01 CAD is unchanged.'),
+         'Inner-plate face dimensions were measured within one plane; the owner considers those caliper readings highly accurate. Installed tip distances span unequal depths and are 3D lengths. Proposed CAD and exploded pictures contain assumptions. GP03 clarifies this distinction; FT01 CAD is unchanged.'),
         ('What has not been established',
          'Physical handle attachment, compressed foam contact, sound support and retention, the final sealing detail, actual paired gap, and installed water performance remain open. The existing digital audit does not certify these. The nominal 1 mm extra foam land is particularly narrow.'),
         ('Use the separate text prompt',
@@ -189,7 +194,7 @@ def evidence_pdf():
     reader = PdfReader(path)
     assert len(reader.pages) == len(FIGURES) + 1
     for i, page in enumerate(reader.pages, 1):
-        assert 'GP02' in page.extract_text(), f'Missing footer on page {i}'
+        assert 'GP03' in page.extract_text(), f'Missing footer on page {i}'
     return mapping
 
 
@@ -224,18 +229,21 @@ def technical_zip(paths):
             zip_bytes(z, dest, data)
             items.append(dict(path=dest, repository_source=rel, size_bytes=len(data),
                               sha256=hashlib.sha256(data).hexdigest()))
-        data = (ROOT / SUPPLEMENT).read_bytes()
-        dest = 'review_addenda/' + Path(SUPPLEMENT).name
-        zip_bytes(z, dest, data)
-        supplement = dict(path=dest, repository_source=SUPPLEMENT,
-                          size_bytes=len(data), sha256=hashlib.sha256(data).hexdigest(),
-                          scope='GP02 direct user method/confidence clarification; numeric R005 and FT01 CAD unchanged')
-        items.append(supplement)
+        supplements = []
+        for rel, scope in SUPPLEMENTS:
+            data = (ROOT / rel).read_bytes()
+            dest = 'review_addenda/' + Path(rel).name
+            zip_bytes(z, dest, data)
+            supplement = dict(path=dest, repository_source=rel,
+                              size_bytes=len(data), sha256=hashlib.sha256(data).hexdigest(),
+                              scope=scope + '; numeric R005 and FT01 CAD unchanged')
+            items.append(supplement)
+            supplements.append(supplement)
         snapshot = dict(source_commit=BASELINE, current_CAD='FT01',
                         scope='Inspection snapshot only; not a runnable checkout or vendor packet',
                         files=items,
                         baseline_files_unchanged_from='GP01',
-                        post_baseline_addenda=[supplement],
+                        post_baseline_addenda=supplements,
                         omitted='Raw scans, extracted/derived meshes, Blender file, runtime and nonselected history. See outer MANIFEST.json.')
         zip_bytes(z, 'SNAPSHOT_MANIFEST.json', (json.dumps(snapshot, indent=2) + '\n').encode())
     with zipfile.ZipFile(path) as z:
@@ -260,18 +268,18 @@ def main():
     omitted.append(dict(id='BLENDER-FT01', repository_path=str(blend.relative_to(ROOT)),
                         sha256=sha(blend), size_bytes=blend.stat().st_size))
     payload = [OUT / p.name for p in texts] + [OUT / '03_VISUAL_EVIDENCE.pdf', OUT / '04_TECHNICAL_REFERENCE.zip']
-    manifest = dict(package='GP02', supersedes_review_package='GP01', project='shower-kohler-valve', date='2026-10-15',
+    manifest = dict(package='GP03', supersedes_review_package='GP02', project='shower-kohler-valve', date='2026-10-15',
                     baseline_commit=BASELINE, current_CAD='FT01', measurement_revision='R005',
                     status='INDEPENDENT_REVIEW_PROMPT_PACKAGE; CAD remains FOR_QUOTE_AND_DRY_FIT_ONLY',
                     actual_external_transmission=False, baseline_geometry_changed=False,
-                    source_note='The 82 GP01 technical snapshot files remain byte-identical to the baseline commit. GP02 adds one separately labeled user method/confidence clarification and updates the prompt, brief and visual captions. Later software maintenance is not pulled into the snapshot.',
+                    source_note='The 82 GP01 technical snapshot files remain byte-identical to the baseline commit. GP03 retains the method/confidence clarification and adds the owner/expert measurement-responsibility constraint; prompt, brief and PDF reflect both. Later software maintenance is not pulled into the snapshot.',
                     payload_files=[dict(path=p.name, sha256=sha(p), size_bytes=p.stat().st_size) for p in payload],
                     evidence_figures=figures, technical_snapshot_files=len(items),
                     omitted_local_assets=omitted,
                     omissions_note='Omitted assets remain in the local repository. No raw mesh recomputation is possible from this compact package alone.',
                     manifest_self_hash_note='Manifest excluded from its own hash to avoid circularity; outer ZIP verified separately.')
     write_json(OUT / 'MANIFEST.json', manifest)
-    archive = OUT / 'GPT_PRO_PROMPT_PACKAGE_GP02.zip'
+    archive = OUT / 'GPT_PRO_PROMPT_PACKAGE_GP03.zip'
     members = payload + [OUT / 'MANIFEST.json']
     with zipfile.ZipFile(archive, 'w', compression=zipfile.ZIP_DEFLATED, compresslevel=6) as z:
         for p in sorted(members):
@@ -281,9 +289,9 @@ def main():
         assert set(z.namelist()) == {p.name for p in members}
         for p in members:
             assert hashlib.sha256(z.read(p.name)).hexdigest() == sha(p)
-    audit = dict(package='GP02', zip_crc='PASS', all_member_hashes='PASS',
-                 baseline_commit_byte_comparison='PASS', baseline_files_checked=len(items)-1,
-                 clarification_addenda=1,
+    audit = dict(package='GP03', zip_crc='PASS', all_member_hashes='PASS',
+                 baseline_commit_byte_comparison='PASS', baseline_files_checked=len(items)-len(SUPPLEMENTS),
+                 clarification_addenda=len(SUPPLEMENTS),
                  outer_archive_members=len(members), evidence_pages=len(figures) + 1,
                  archive_sha256=sha(archive), archive_size_bytes=archive.stat().st_size,
                  CAD_modified=False, physical_fit='NOT PERFORMED',

@@ -1,0 +1,19 @@
+{
+  "package": "GP03",
+  "zip_crc": "PASS",
+  "all_member_hashes": "PASS",
+  "baseline_commit_byte_comparison": "PASS",
+  "baseline_files_checked": 82,
+  "clarification_addenda": 2,
+  "outer_archive_members": 7,
+  "evidence_pages": 14,
+  "archive_sha256": "d3c875e5448d7adffdee2433b677df33c3953c9b58c190601939a54965ce355e",
+  "archive_size_bytes": 54073177,
+  "CAD_modified": false,
+  "physical_fit": "NOT PERFORMED",
+  "PDF_visual_review": "PASS: revised page 1 rendered and visually inspected; pages 2-14 body text unchanged from visually reviewed GP02 apart from the same-length revision footer.",
+  "prior_GP02_archive_unchanged": true,
+  "current_CAD_and_numeric_measurements_unchanged": true,
+  "request_scope_record": "docs/decisions/measurement_scope_2026-10-15.json",
+  "new_measurements_requested": []
+}

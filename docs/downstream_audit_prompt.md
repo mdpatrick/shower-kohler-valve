@@ -14,4 +14,6 @@ Check both custom parts together: concentric visible borders, damage coverage ve
 
 Review costs as planning allowances, not quotes. Finished sheet metal may be a sacrificial first trial at≤2×plastic; no metal3Dprinting is required. Verify current vendor options before purchase. No upload/order/trade message is authorized by this review.
 
+Apply `docs/decisions/measurement_scope_2026-10-15.json`: the expert assembles/installs and is not expected to return new dimensions. The owner may be asked for only a handful of indispensable machining dimensions, each tied to a specific CAD decision with illustrated contacts, plane, easy method and necessary precision. Existing evidence and simpler designs come first; omit general scan-calibration or nice-to-have measurements. Installation checks remain separate.
+
 Preserve evidence and accepted canon. Record proposed corrections with source and consequence, then rerun dependent checks. The fuller historical audit checklist remains in docs/downstream_audit_prompt_pre_FT01.md.
