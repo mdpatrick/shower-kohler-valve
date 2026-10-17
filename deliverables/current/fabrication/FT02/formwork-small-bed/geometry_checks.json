@@ -1,0 +1,61 @@
+{
+  "revision": "RF04",
+  "scope": "CAD/export checks only; no physical fit or slicer run",
+  "source_STEP_sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7",
+  "config_sha256": "b5d6440569096a40f3266fc136a76dd16a266ddafd229b9261d0c980b2d3af0f",
+  "size_mm": [
+    192.55,
+    192.55,
+    32
+  ],
+  "original_size_mm": [
+    240,
+    240,
+    32
+  ],
+  "solid_volume_mm3": 145618.8280284496,
+  "original_solid_volume_mm3": 274578.0491577095,
+  "CAD_volume_reduction_percent": 46.966325795107366,
+  "solid_mass_upper_bound_g_at_1_30": 189.30447643698452,
+  "removed_geometry_max_print_z_mm": 8.000000000000014,
+  "central_geometry_symmetric_difference_mm3": 0.0,
+  "rear_collar_symmetric_difference_mm3": 0.0,
+  "new_material_outside_original_mm3": 0.0,
+  "originals_preserved": [
+    {
+      "source": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+      "file": "ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+    },
+    {
+      "source": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+      "file": "ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb"
+    },
+    {
+      "source": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D24_RELIEVED_mm.step",
+      "file": "ORIGINAL_RF03/RF03_D24_RELIEVED_mm.step",
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7"
+    }
+  ],
+  "files": [
+    {
+      "file": "SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.stl",
+      "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2",
+      "bytes": 834284
+    },
+    {
+      "file": "SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.3mf",
+      "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4",
+      "bytes": 202443
+    },
+    {
+      "file": "SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.step",
+      "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6",
+      "bytes": 168399
+    }
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "permanent_use": "NOT APPROVED",
+  "capture": "No new registration or scan fit claim. New solid is strictly a subset of RF03 after reversing its print-position translation; collar, tabs and slots are verified unchanged. RF03 captured-scope limits continue to apply."
+}

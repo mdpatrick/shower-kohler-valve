@@ -1,0 +1,68 @@
+{
+  "revision": "RF04",
+  "units": "mm",
+  "status": "FOR_TEMPORARY_TOOL_PRINT_AND_DRY_FIT",
+  "parts": "Two size alternatives; choose one per physical print.",
+  "files": [
+    {
+      "file": "COMPARE_SIZES.png",
+      "bytes": 1724683,
+      "sha256": "e16992115cf13c87a113ecf53fc16c982b3732fe1a427d571f53d75efe5fdea4"
+    },
+    {
+      "file": "ORIGINAL_RF03/PREVIEW.png",
+      "bytes": 1650349,
+      "sha256": "467891233440cf7c4bb04bd58e60cc73c2d6b71138cf8084b7bd2bb43f9db5b1"
+    },
+    {
+      "file": "ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+      "bytes": 200926,
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb"
+    },
+    {
+      "file": "ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+      "bytes": 834684,
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+    },
+    {
+      "file": "ORIGINAL_RF03/RF03_D24_RELIEVED_mm.step",
+      "bytes": 168147,
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7"
+    },
+    {
+      "file": "PRINT_GUIDE.pdf",
+      "bytes": 1280794,
+      "sha256": "fb617260a658418a3acad59050983d4071933a0cfb47f1ef5e94297e24a49b2f"
+    },
+    {
+      "file": "PRINT_SETTINGS.json",
+      "bytes": 2431,
+      "sha256": "c7cf4dcce7349621eef1ef68afbd76d9a278d106d94591b25091842180cdc92c"
+    },
+    {
+      "file": "READ_ME_FIRST.txt",
+      "bytes": 1665,
+      "sha256": "0d123c9fa29ddfca1798668324b2e5aef761d19e690906d855b168a3037fa39e"
+    },
+    {
+      "file": "SMALL_RF04/PREVIEW.png",
+      "bytes": 1595619,
+      "sha256": "5b47e46a0dbe5cb9164e548791cd5607075ddbe0c371fb05f41f9efed226069e"
+    },
+    {
+      "file": "SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.3mf",
+      "bytes": 202443,
+      "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4"
+    },
+    {
+      "file": "SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.step",
+      "bytes": 168399,
+      "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6"
+    },
+    {
+      "file": "SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.stl",
+      "bytes": 834284,
+      "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2"
+    }
+  ]
+}

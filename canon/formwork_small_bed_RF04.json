@@ -1,0 +1,49 @@
+{
+  "revision": "RF04",
+  "date": "2026-10-17",
+  "status": "FOR_TEMPORARY_TOOL_PRINT_AND_DRY_FIT",
+  "purpose": "Additional small-bed version of the RF03 relieved 24 mm collar. Preserve both original RF03 forms and their packages.",
+  "source_design": "canon/formwork_print_RF03.json",
+  "source_STEP": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D24_RELIEVED_mm.step",
+  "owner_request": "Reduce the outer face by half around the unchanged relieved collar; keep locating screw tabs and original design. The annotated circular boundary is conceptual, not a measured dimension.",
+  "interpretation": {
+    "rule": "Halve the minimum radial face width outside the collar, keeping a circular outside edge. This is not half the whole diameter or half the face area.",
+    "original_diameter_mm": 240,
+    "collar_front_height_mm": 145.10,
+    "original_minimum_face_overhang_mm": 47.45,
+    "new_minimum_face_overhang_mm": 23.725,
+    "calculation": "D_new = 145.10 + (240 - 145.10) / 2 = 192.55 mm. The smaller diameter is a design choice, not a measured requirement."
+  },
+  "panel_diameter_mm": 192.55,
+  "panel_thickness_mm": 8,
+  "print_height_mm": 32,
+  "preserved_geometry": ["Entire 24 mm relieved rear collar", "12 mm continuous molding wall", "1 degree draft", "2 mm collar wall", "Both locating tabs, 3 mm thick", "Both 12 x 8 mm slots", "Central service opening", "Original forming plane"],
+  "print_translation_from_RF03_mm": [-23.725, -23.725, 0],
+  "print": {
+    "material": "Unfilled PETG, friend's established filament/profile",
+    "scale_percent": 100,
+    "nozzle_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "wall_loops": 5,
+    "top_bottom_solid_thickness_mm": 1.2,
+    "infill_percent": 25,
+    "infill_pattern": "gyroid or cubic",
+    "brim_mm": 5,
+    "support": "off; inspect actual sliced layers",
+    "raft": "off",
+    "geometry_footprint_mm": [192.55, 192.55],
+    "footprint_with_5mm_brim_mm": [202.55, 202.55],
+    "minimum_clear_area_rounded_mm": [203, 203],
+    "orientation": "Files are pre-oriented: flat front face and tabs on bed Z=0; collar grows upward. No machine G-code supplied.",
+    "selection": "Take original and small alternate; print one selected geometry. STL, 3MF and STEP are alternative formats of the same part. Do not scale to fit a smaller bed."
+  },
+  "use": {
+    "guidance": "Collar still defines the same central keep-clear boundary. The smaller front face guides a smaller surrounding repair area. Outside its edge, establish flushness to sound tile separately with a straightedge or appropriate additional temporary form.",
+    "retention": "Slots give coarse alignment and play, not precise centering or structural support. Remove rod-end nuts for insertion. Independent padded bracing supports the form; do not tighten nuts to load tabs or pull a distorted face flat.",
+    "repair": "Rehearse seating, bracing and withdrawal before applying a compatible supported repair. Do not bridge an unsupported void or encase valve/service parts. Rear repair stays within the continuous front 12 mm collar zone.",
+    "removal": "Temporary tool only. Remove form, release film and pads after suitable cure. This is not the permanent escutcheon or a waterproof liner.",
+    "physical_checks": "Full-face bearing, hidden clearances, print strength, release and actual repair suitability are unverified. No new owner measurements requested."
+  },
+  "capture_scope": "No new registration or scan fit claim. New solid is strictly a subset of RF03 after reversing its print-position translation; collar, tabs and slots are verified unchanged. RF03 captured-scope limits continue to apply.",
+  "cost": "Less CAD material than original; actual filament/time require friend's slicer. Prior $75 planning allowance covered one selected form plus one retry, not a promise of labor cost for printing every alternative."
+}

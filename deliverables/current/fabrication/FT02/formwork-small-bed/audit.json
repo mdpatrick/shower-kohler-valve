@@ -1,0 +1,131 @@
+{
+  "revision": "RF04",
+  "status": "PASS_FOR_TEMPORARY_PRINT_HANDOFF_WITH_STATED_LIMITS",
+  "review_method": "Fresh adversarial review by same agent from delivered files; not an independent external review or physical certification.",
+  "parts": [
+    {
+      "variant": "ORIGINAL_RF03",
+      "size_mm": [
+        240,
+        240,
+        32
+      ],
+      "valid_STEP_solids": 1,
+      "STL_closed_oriented_components": 1,
+      "STEP_STL_volume_difference_fraction": 4.6216834656987046e-05,
+      "3MF_explicit_mm_and_one_geometry_object": true,
+      "independent_3MF_import": "PASS",
+      "slot_centers_print_xy_mm": [
+        [
+          70.375,
+          142.6999969482422
+        ],
+        [
+          169.1649932861328,
+          96.25
+        ]
+      ],
+      "slot_size_mm": [
+        12,
+        8
+      ],
+      "max_unsupported_layer_area_mm2_with_0_03mm_lateral_allowance": 0
+    },
+    {
+      "variant": "SMALL_RF04",
+      "size_mm": [
+        192.55,
+        192.55,
+        32
+      ],
+      "valid_STEP_solids": 1,
+      "STL_closed_oriented_components": 1,
+      "STEP_STL_volume_difference_fraction": 5.395190643314536e-05,
+      "3MF_explicit_mm_and_one_geometry_object": true,
+      "independent_3MF_import": "PASS",
+      "slot_centers_print_xy_mm": [
+        [
+          46.650001525878906,
+          118.9749984741211
+        ],
+        [
+          145.44000244140625,
+          72.5250015258789
+        ]
+      ],
+      "slot_size_mm": [
+        12,
+        8
+      ],
+      "max_unsupported_layer_area_mm2_with_0_03mm_lateral_allowance": 0
+    }
+  ],
+  "core_symmetric_difference_mm3": 0.0,
+  "collar_symmetric_difference_mm3": 0.0,
+  "difference_from_exact_circular_crop_mm3": 0.0,
+  "new_material_outside_original_mm3": 0.0,
+  "removed_material_max_print_z_mm": 8.000000000000014,
+  "originals_unchanged_against_Git_HEAD": [
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip",
+      "sha256": "6f31888367e80287478535a8d0794a9a54975dc0f4a61972c188d236b29771f1"
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D12_mm.step",
+      "sha256": "f3e52c98bee446015d23991b32e80957e6978c9bb9ff157713748f0629aaecd3"
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D24_RELIEVED_mm.step",
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7"
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb"
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.3mf",
+      "sha256": "a034ee4b3694cbb34dd1abd1c584a67d26cb17aaf6dde90e3b19bff5a764fa85"
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.stl",
+      "sha256": "6f7bc5d06ae88250b65654d2701b1bdd65a31f94a9dabd0354b47094bb5a0991"
+    }
+  ],
+  "ZIP_integrity_and_hashes": "PASS",
+  "ZIP_sha256": "273885097ddf8172f00829a0c6a2e0f3f83449e752ce4a546f4e1554bc543e7f",
+  "PDF_pages": 2,
+  "PDF_visual_review": "See docs/validation/RF04_small_bed_2026-10-17.json",
+  "challenges": [
+    {
+      "question": "Did half-size unintentionally shrink collar or slots?",
+      "finding": "No. Only outer material removed; exact circular crop and central/rear geometry boolean checks pass. Scale stays 100%."
+    },
+    {
+      "question": "Do nuts and slots now carry the repair load?",
+      "finding": "No. Original loose slots only locate. Independent padded support and dry rehearsal remain required."
+    },
+    {
+      "question": "Does the smaller face still guide the whole repair?",
+      "finding": "Not established. It guides less face area; outside edge use sound tile reference/straightedge or additional form. No unsupported filler bridging."
+    },
+    {
+      "question": "Can any small bed print it?",
+      "finding": "No. Need 203 x 203 usable area with brim; a nominal bed dimension alone does not prove usable clearance."
+    },
+    {
+      "question": "Do inherited scan checks prove smaller form seats?",
+      "finding": "No. No new scan reconciliation claimed. Core geometry is unchanged but full contact, retention and release still need actual trial."
+    },
+    {
+      "question": "Is 24 mm a continuous repair boundary?",
+      "finding": "No. Rear reliefs remain; first 12 mm continuous only."
+    }
+  ],
+  "slicer_execution": "NOT RUN - printer unknown",
+  "physical_fit": "NOT PERFORMED",
+  "permanent_use": "NOT APPROVED"
+}

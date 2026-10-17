@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "b31aa0eec825d0d93e1e8bf9ca41d51761ef483d",
+  "source_commit": "2491a58608f04bb89ca74a3d04c9bbdcc621cbae",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "2e70ba63efc71c73959327a8fc979258ccb727870a5868a1b8f01ee8459bdced",
+  "source_tree_hash": "d218020a127365ad0c254b21a63bbfa129e5bb5b8b215b421b3b360a6918d107",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1221,6 +1221,121 @@
       "path": "deliverables/current/fabrication/FT02/formwork-print/index.html",
       "sha256": "bfc65313c39bc8c904df93f557c03089fbfd3de49cf7c8499a36c2558e9c8ca4",
       "size_bytes": 3701
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip",
+      "sha256": "273885097ddf8172f00829a0c6a2e0f3f83449e752ce4a546f4e1554bc543e7f",
+      "size_bytes": 7002670
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/RF04_original_and_small_forms.blend",
+      "sha256": "288dd9f6e75d88bd4c7573bbfaf7f685c89d89035447bf48eae2ab71087ae925",
+      "size_bytes": 799250
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/COMPARE_SIZES.png",
+      "sha256": "e16992115cf13c87a113ecf53fc16c982b3732fe1a427d571f53d75efe5fdea4",
+      "size_bytes": 1724683
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/MANIFEST.json",
+      "sha256": "172464f6575d9360d90cf1cc7f97d75f23096bca26b62bdd2d743787e656e899",
+      "size_bytes": 2220
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/ORIGINAL_RF03/PREVIEW.png",
+      "sha256": "467891233440cf7c4bb04bd58e60cc73c2d6b71138cf8084b7bd2bb43f9db5b1",
+      "size_bytes": 1650349
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb",
+      "size_bytes": 200926
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091",
+      "size_bytes": 834684
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/ORIGINAL_RF03/RF03_D24_RELIEVED_mm.step",
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7",
+      "size_bytes": 168147
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/PRINT_GUIDE.pdf",
+      "sha256": "fb617260a658418a3acad59050983d4071933a0cfb47f1ef5e94297e24a49b2f",
+      "size_bytes": 1280794
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/PRINT_SETTINGS.json",
+      "sha256": "c7cf4dcce7349621eef1ef68afbd76d9a278d106d94591b25091842180cdc92c",
+      "size_bytes": 2431
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/READ_ME_FIRST.txt",
+      "sha256": "0d123c9fa29ddfca1798668324b2e5aef761d19e690906d855b168a3037fa39e",
+      "size_bytes": 1665
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/PREVIEW.png",
+      "sha256": "5b47e46a0dbe5cb9164e548791cd5607075ddbe0c371fb05f41f9efed226069e",
+      "size_bytes": 1595619
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.3mf",
+      "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4",
+      "size_bytes": 202443
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.step",
+      "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6",
+      "size_bytes": 168399
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.stl",
+      "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2",
+      "size_bytes": 834284
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/audit.json",
+      "sha256": "683c3855bcc4a3f6c3bba7edf4946d9728d829ab5889202f690d43c10f861a28",
+      "size_bytes": 4977
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/comparison.png",
+      "sha256": "e16992115cf13c87a113ecf53fc16c982b3732fe1a427d571f53d75efe5fdea4",
+      "size_bytes": 1724683
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/geometry_checks.json",
+      "sha256": "e36d6d8b0212e96aa7b5830b6338a74baa3a2f4308331eb2c9ad3ad81f6daa96",
+      "size_bytes": 2575
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/index.html",
+      "sha256": "2cb0734514428f93860c23d435373c6860177372e7887e7b68f4360cec941cde",
+      "size_bytes": 5552
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/original_print.png",
+      "sha256": "467891233440cf7c4bb04bd58e60cc73c2d6b71138cf8084b7bd2bb43f9db5b1",
+      "size_bytes": 1650349
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/original_top.png",
+      "sha256": "5836f62537ddea6e7084d2267f76a651ed85c710f974cbfe8926e94ed45703ac",
+      "size_bytes": 1770503
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/small_print.png",
+      "sha256": "5b47e46a0dbe5cb9164e548791cd5607075ddbe0c371fb05f41f9efed226069e",
+      "size_bytes": 1595619
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-small-bed/small_top.png",
+      "sha256": "ecc5eca2c9eec926abee65b4c9c0b355eff101a524f43b49e0bc499891ea6c44",
+      "size_bytes": 1634960
     },
     {
       "path": "deliverables/current/fabrication/FT02/index.html",

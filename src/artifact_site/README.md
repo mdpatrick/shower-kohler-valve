@@ -15,7 +15,7 @@ python3 -m http.server 8772 --bind 127.0.0.1 --directory build/sites/shower-arti
 
 The first command creates a dedicated ignored checkout under `build/sites/shower-artifacts`. It copies the current FT02 tree, the saved interactive references and their local dependencies, three original Polycam ZIPs and the input manifest. Larger files are linked to the GitHub commit recorded at build time. Push all changed source artifacts to GitHub before publishing a snapshot that references them.
 
-`catalog.json` selects the 35 handoff entries shown in the library. `index.html`, `site.css` and `site.js` implement the hub. The complete hosted inventory is generated as `artifact-manifest.json` with input hashes, file sizes, hosted versus GitHub storage and the source commit. Hosted page navigation/links are adapted; original project HTML remains unchanged. CAD, documents, images, videos and ZIPs are copied byte for byte.
+`catalog.json` selects the 40 handoff entries shown in the library. `index.html`, `site.css` and `site.js` implement the hub. The complete hosted inventory is generated as `artifact-manifest.json` with input hashes, file sizes, hosted versus GitHub storage and the source commit. Hosted page navigation/links are adapted; original project HTML remains unchanged. CAD, documents, images, videos and ZIPs are copied byte for byte.
 
 The dedicated Site source contains `web/`, a hash-pinned `assets.json` recipe and `hydrate_assets.mjs`; generated `dist/` is ignored there. Running `node hydrate_assets.mjs` in that checkout reconstructs the exact static output from the committed pages and pinned GitHub originals. An optional `--cache /absolute/path/to/previous/dist` avoids downloading unchanged files; cached bytes must pass the same size and SHA-256 checks. The deployment archive includes the actual binary assets even though the Site source Git history does not duplicate them. The engineering GitHub repository still stores the original files directly, without LFS.
 
@@ -33,4 +33,4 @@ Check the desktop/mobile layout, search/category filters, print ZIP download, cu
 
 ## Scope
 
-RF03 is the current temporary print form. FT02 / R006 is the selected plain main/diverter plate pair for quote and sacrificial dry fit, with clear and metal alternatives. TR03/RF02, TR02 and older tools remain labeled studies. Publication does not change geometry, accepted measurements, purchase authorization or physical installation readiness.
+RF03 provides the original temporary forms; RF04 adds the smaller-face relieved version and a combined two-size handoff. FT02 / R006 is the selected plain main/diverter plate pair for quote and sacrificial dry fit, with clear and metal alternatives. TR03/RF02, TR02 and older tools remain labeled studies. Publication does not change geometry, accepted measurements, purchase authorization or physical installation readiness.

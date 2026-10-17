@@ -4,9 +4,9 @@
 
 Browse the current print package, plate CAD, installer PDFs, narrated video, design studies and original Polycam downloads without running a local server. The ChatGPT Site is private to the owner; sign in with the account that owns it. The GitHub files below remain available separately.
 
-Quick links: [friend’s print guide](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-print/index.html) · [print ZIP](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip) · [installer PDF](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/PLUMBER_START_HERE.pdf) · [search all handoffs](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/#library).
+Quick links: [both relieved-collar sizes](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-small-bed/index.html) · [friend’s original print guide](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-print/index.html) · [print ZIP](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip) · [installer PDF](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/PLUMBER_START_HERE.pdf) · [search all handoffs](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/#library).
 
-**Current plates: FT02 / R006. Latest temporary print form: RF03.** Start with [START_HERE.md](START_HERE.md) for the selected designs, installation context and unresolved physical checks.
+**Current plates: FT02 / R006. Temporary print forms: RF03 original + RF04 small-bed alternate.** Start with [START_HERE.md](START_HERE.md) for the selected designs, installation context and unresolved physical checks.
 
 This repository preserves the complete project history, all four original Polycam ZIPs, supplied photos, manufacturer references, accepted measurements, CAD sources, Blender scenes, videos and handoff documents. Original ZIP bytes are stored directly in ordinary Git; Git LFS is not used.
 
@@ -28,7 +28,9 @@ The [GitHub recovery check](docs/validation/github_remote_restore_2026-10-17.jso
 
 | Purpose | Current artifact |
 |---|---|
-| Hand directly to a friend for 3D printing | [RF03_FRIEND_PRINT_PACKAGE.zip](deliverables/current/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip) |
+| Both relieved-collar sizes: original + small bed | [RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip](deliverables/current/fabrication/FT02/formwork-small-bed/RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip) |
+| RF04 comparison and print guide | [View online](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-small-bed/index.html) · [PDF](deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/PRINT_GUIDE.pdf) |
+| Original D12 + relieved D24 print package | [RF03_FRIEND_PRINT_PACKAGE.zip](deliverables/current/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip) |
 | RF03 illustrated guide and cost estimate | [View online](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-print/index.html) · [saved HTML](deliverables/current/fabrication/FT02/formwork-print/index.html) |
 | Current plate designs and installer handoff | [FT02 online review](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/index.html) · [saved HTML](deliverables/current/fabrication/FT02/index.html) |
 | Clear acrylic trial pair | [FT02_CLEAR_FIT_TRIAL.zip](deliverables/current/fabrication/FT02/FT02_CLEAR_FIT_TRIAL.zip) |
@@ -40,6 +42,8 @@ The [GitHub recovery check](docs/validation/github_remote_restore_2026-10-17.jso
 | Finish comparison on captured travertine | [FIN01 online](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/finish-study/index.html) · [saved HTML](deliverables/current/fabrication/FT02/finish-study/index.html) |
 | Earlier interactive measurement and tab explanations | [Hosted visualization archive](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/visualizations/index.html) · [saved HTML](deliverables/current/visualizations/index.html) |
 | Original scans and hash manifest | [data/raw/polycam](data/raw/polycam) and [canon/inputs.json](canon/inputs.json) |
+
+RF04 adds a smaller Ø192.55 mm face to the relieved 24 mm-collar form: allow 203 × 203 mm usable bed including brim. It keeps the same collar, tabs and slots while reducing minimum outer face overhang by half. The combined ZIP preserves the original Ø240 relieved form too. Print at 100%; select one size and one file format. The smaller face guides less repair area and still needs independent padded support.
 
 RF03 is a temporary, removable repair tool. Its default file has a 12 mm collar and smaller locating slots; print one form, choosing the optional relieved 24 mm version only if needed. FT02 remains the separate plain-aperture main/diverter pair for quotes and sacrificial dry fit. A print file or successful software check does not establish physical fit or permanent waterproof installation.
 
@@ -56,6 +60,6 @@ Regenerable extracts, build caches, virtual environments, browser session data a
 
 ## Updating the hosted hub
 
-The Site hosts 221 project files, with 35 curated handoffs in its searchable library. Four larger originals are linked to the preserved GitHub revision because static assets are limited to 25 MiB per file. The [hosted manifest](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifact-manifest.json) records each file’s source path, hash and storage location. CAD, PDF, ZIP, scan and video bytes are unchanged; only the hosted page links/navigation are adapted.
+The Site hosts the current project artifacts and a searchable handoff library, including both RF04/RF03 relieved-collar print sizes. Four larger originals are linked to the preserved GitHub revision because static assets are limited to 25 MiB per file. The [hosted manifest](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifact-manifest.json) records each file’s source path, hash and storage location. CAD, PDF, ZIP, scan and video bytes are unchanged; only the hosted page links/navigation are adapted.
 
 The reproducible Site source is in [src/artifact_site](src/artifact_site), with the build command and publication workflow in its [maintenance guide](src/artifact_site/README.md). See the [publication and verification record](docs/validation/artifact_site_2026-10-17.json). This is a dated snapshot; rebuilding engineering files locally does not automatically publish them.

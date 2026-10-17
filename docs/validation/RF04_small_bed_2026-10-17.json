@@ -1,0 +1,35 @@
+{
+  "revision": "RF04",
+  "date": "2026-10-17",
+  "status": "PRINT_FILES_CHECKED_PHYSICAL_FIT_OPEN",
+  "executed": [
+    "./project prepare-small-bed-form --stage cad",
+    "./project prepare-small-bed-form --stage render",
+    "./project prepare-small-bed-form --stage documents",
+    "./project prepare-small-bed-form --stage audit",
+    "pdftoppm rendered both PDF pages; visually inspected both at 1400px",
+    "Visually inspected actual-CAD same-scale original/small comparison"
+  ],
+  "geometry_result": "Valid one-solid STEP and closed one-component STL/3MF; size, slots, circular crop and unchanged collar/core pass. Original RF03 geometry/package files unchanged versus Git HEAD.",
+  "visual_result": "Both PDF pages legible with no clipped/overlapping text; clear size comparison and format selection. CAD render shows smaller outer face, retained collar and tabs. Desktop comparison page visually inspected; mobile has no horizontal overflow; every page link and the ZIP download returned successfully.",
+  "PDF_sha256": "fb617260a658418a3acad59050983d4071933a0cfb47f1ef5e94297e24a49b2f",
+  "ZIP_sha256": "273885097ddf8172f00829a0c6a2e0f3f83449e752ce4a546f4e1554bc543e7f",
+  "not_performed": [
+    "Printer-specific slicing or G-code",
+    "Physical print/fit/strength/release",
+    "New scan registration",
+    "Permanent repair or water performance"
+  ],
+  "source_evidence": "data/evidence/user/formwork-smaller-face-request-2026-10-17.json",
+  "audit": "deliverables/current/fabrication/FT02/formwork-small-bed/audit.json",
+  "browser_check": {
+    "desktop": true,
+    "mobile": {
+      "width": 390,
+      "scroll": 390
+    },
+    "zip": "RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip",
+    "errors": [],
+    "failures": []
+  }
+}

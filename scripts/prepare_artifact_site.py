@@ -110,7 +110,7 @@ def main():
                     return match.group(0)[0] + new + match.group(0)[-1]
                 text = quoted.sub(replace, text)
                 if path.suffix.lower() == '.html':
-                    nav = '<div style="font:14px/1.5 system-ui;padding:12px 20px;background:#102f3c;color:white"><a style="color:white" href="/">← Project artifact hub</a> · Saved project document · FT02 / RF03 current selections are on the hub.</div>'
+                    nav = '<div style="font:14px/1.5 system-ui;padding:12px 20px;background:#102f3c;color:white"><a style="color:white" href="/">← Project artifact hub</a> · Saved project document · FT02 / RF03 / RF04 current selections are on the hub.</div>'
                     if re.search(r'<body\b[^>]*>', text, re.I):
                         text = re.sub(r'(<body\b[^>]*>)', lambda m:m.group(0) + nav, text, count=1, flags=re.I)
                     elif '<main' in text:
@@ -137,7 +137,7 @@ def main():
     (dist / 'catalog.json').write_text(json.dumps(rows, indent=2) + '\n')
     provenance = dict(project_id=hosting['project_id'], artifact_source_commit=commit,
                       source_repository=REPO_URL, date='2026-10-17',
-                      scope='Current FT02 files, RF03 print package, TR03/RF02 and TR02 studies, FIN01, archived interactives and original Polycam archives.',
+                      scope='Current FT02 files, RF03 and RF04 print packages, TR03/RF02 and TR02 studies, FIN01, archived interactives and original Polycam archives.',
                       audience='owner-private', max_static_asset_bytes=MAX_ASSET,
                       asset_limit_source='https://developers.cloudflare.com/workers/platform/limits/',
                       oversized_downloads='Original bytes linked to the already-pushed GitHub commit. No splitting or repacking of source ZIPs.',

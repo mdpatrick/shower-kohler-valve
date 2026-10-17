@@ -1,0 +1,58 @@
+{
+  "revision": "RF04",
+  "small": {
+    "material": "Unfilled PETG, friend's established filament/profile",
+    "scale_percent": 100,
+    "nozzle_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "wall_loops": 5,
+    "top_bottom_solid_thickness_mm": 1.2,
+    "infill_percent": 25,
+    "infill_pattern": "gyroid or cubic",
+    "brim_mm": 5,
+    "support": "off; inspect actual sliced layers",
+    "raft": "off",
+    "geometry_footprint_mm": [
+      192.55,
+      192.55
+    ],
+    "footprint_with_5mm_brim_mm": [
+      202.55,
+      202.55
+    ],
+    "minimum_clear_area_rounded_mm": [
+      203,
+      203
+    ],
+    "orientation": "Files are pre-oriented: flat front face and tabs on bed Z=0; collar grows upward. No machine G-code supplied.",
+    "selection": "Take original and small alternate; print one selected geometry. STL, 3MF and STEP are alternative formats of the same part. Do not scale to fit a smaller bed."
+  },
+  "original": {
+    "size_mm": [
+      240,
+      240,
+      32
+    ],
+    "usable_bed_with_brim_mm": [
+      250,
+      250
+    ]
+  },
+  "unchanged_features": [
+    "Entire 24 mm relieved rear collar",
+    "12 mm continuous molding wall",
+    "1 degree draft",
+    "2 mm collar wall",
+    "Both locating tabs, 3 mm thick",
+    "Both 12 x 8 mm slots",
+    "Central service opening",
+    "Original forming plane"
+  ],
+  "use": {
+    "guidance": "Collar still defines the same central keep-clear boundary. The smaller front face guides a smaller surrounding repair area. Outside its edge, establish flushness to sound tile separately with a straightedge or appropriate additional temporary form.",
+    "retention": "Slots give coarse alignment and play, not precise centering or structural support. Remove rod-end nuts for insertion. Independent padded bracing supports the form; do not tighten nuts to load tabs or pull a distorted face flat.",
+    "repair": "Rehearse seating, bracing and withdrawal before applying a compatible supported repair. Do not bridge an unsupported void or encase valve/service parts. Rear repair stays within the continuous front 12 mm collar zone.",
+    "removal": "Temporary tool only. Remove form, release film and pads after suitable cure. This is not the permanent escutcheon or a waterproof liner.",
+    "physical_checks": "Full-face bearing, hidden clearances, print strength, release and actual repair suitability are unverified. No new owner measurements requested."
+  }
+}

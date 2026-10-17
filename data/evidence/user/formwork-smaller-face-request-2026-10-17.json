@@ -1,0 +1,8 @@
+{
+  "date": "2026-10-17",
+  "source_path": "/Users/mdpatrick/Screenshots/Screenshot 2026-10-17 at 11.44.23\u202fAM.png",
+  "repository_path": "data/evidence/user/formwork-smaller-face-request-2026-10-17.png",
+  "sha256": "fa45746718432c8977c29e5f42e50e059f23d1ae83290099fabcc0d06d5b5a31",
+  "role": "Owner annotation on prior CAD render, requesting a smaller circular outer face; qualitative design intent, not a measurement.",
+  "decision": "canon/formwork_small_bed_RF04.json"
+}
