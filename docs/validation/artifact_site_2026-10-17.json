@@ -1,105 +1,143 @@
 {
   "date": "2026-10-17",
   "status": "PASS",
-  "scope": "Published RF04 small-bed alternate and combined original/small print handoff; preserve owner-private audience.",
+  "scope": "Public MASV print handoffs and image-labeled form selection; existing engineering artifacts unchanged.",
   "deployed_url": "https://shower-kohler-artifacts.mdpatrick.chatgpt.site",
-  "audience": "owner-private",
+  "audience": "public",
   "site_project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
-  "deployment_id": "appgdep_6ad3cd101b0881919a2209a403a287c2",
-  "saved_version_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d~appgver_03ec752c64e88191ad1a1b6745650bc9",
+  "deployment_id": "appgdep_6ad3d63992a881918c6396e15bccee80",
+  "saved_version_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d~appgver_b7282e30b10481918eb4e7caa604577c",
   "native_deployment_status": "succeeded",
-  "native_deployment_updated_at": "2026-10-17T19:31:41.644377+00:00",
-  "site_source_commit": "5001642f395e293bd0641fa26ba7b29a38d59b73",
-  "artifact_source_commit": "bb8f2d0d34092051a014631f9bc9a5fb75aeca09",
+  "native_deployment_updated_at": "2026-10-17T20:10:43.395509+00:00",
+  "site_source_commit": "74b1b5a8e3034c0142f81bacea956eb311e56d90",
+  "artifact_source_commit": "fc9caf5f0051ea3d87a394263bee0766c9e471dc",
   "hosted_project_files": 244,
   "curated_handoff_files": 40,
   "linked_large_originals": 4,
   "original_binary_hashes_verified": true,
-  "browser_checks": {
-    "catalog_count": 40,
-    "search_count": 3,
-    "scan_filter_count": 4,
-    "download_filename": "RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip",
-    "mobile_dimensions": {
-      "scroll": 390,
-      "viewport": 390
-    },
-    "console_errors": [],
-    "http_failures": []
+  "checks_executed": {
+    "project_validation": "./project validate --git-objects: PASS; R006 and four original scan ZIPs intact.",
+    "diff_check": "git diff --check: PASS",
+    "site_build": "prepare_artifact_site.py completed; original binary hashes verified.",
+    "visual_review": "Local and published desktop print cards show the correct RF04/RF03 CAD previews, dimensions, usable-bed requirements and MASV actions.",
+    "download_checks": "Stopped at owner request. No completed MASV download or round-trip checksum check claimed.",
+    "screenshot": "build/masv-print-page.jpg (local ignored proof)"
   },
-  "visual_review": "Desktop hub and two-page RF04 PDF inspected; smaller-face selection, usable bed area and retained collar/slots are clear.",
-  "publication_verification": "Native Sites private deployment returned succeeded with production URL. Browser QA was local preview; no authenticated production-browser test claimed.",
-  "engineering_record": "docs/validation/RF04_small_bed_2026-10-17.json",
-  "geometry_changed": "RF04 alternate added; RF03 originals and FT02 plate geometry preserved.",
+  "publication_verification": "Native public deployment succeeded with production URL. Published page was opened for visual handoff; no download links were activated after the owner waived testing.",
+  "publishing_note": "Automatic review initially mistook the opening Site commit for the publication target. Read-only helper inspection established that packaging commits current changes and returns a new verified Site SHA; the evidence-backed retry succeeded. The new returned SHA was used for publication.",
+  "sharing_record": "docs/decisions/masv_print_sharing_2026-10-17.json",
+  "privacy_reminder": {
+    "date": "2026-10-24",
+    "automation_id": "make-shower-artifact-site-private-again",
+    "automatic_access_change": false
+  },
+  "geometry_changed": false,
   "accepted_measurements_changed": false,
   "physical_fit": "UNRESOLVED",
+  "permanent_installation_release": "NOT GIVEN",
   "previous_publication": {
     "date": "2026-10-17",
     "status": "PASS",
-    "scope": "Artifact hosting, README navigation and existing-file integrity; no new engineering or physical-fit approval.",
+    "scope": "Published RF04 small-bed alternate and combined original/small print handoff; preserve owner-private audience.",
     "deployed_url": "https://shower-kohler-artifacts.mdpatrick.chatgpt.site",
     "audience": "owner-private",
     "site_project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
-    "deployment_id": "appgdep_6ad3c871d1008191a96577ce375b39df",
-    "saved_version_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d~appgver_e692892f98a08191a968007506fb00a6",
+    "deployment_id": "appgdep_6ad3cd101b0881919a2209a403a287c2",
+    "saved_version_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d~appgver_03ec752c64e88191ad1a1b6745650bc9",
     "native_deployment_status": "succeeded",
-    "native_deployment_updated_at": "2026-10-17T19:12:21.369250+00:00",
-    "site_source_commit": "eac787b24dceaaa3e99c9ed34005888ea0c502c1",
-    "artifact_source_commit": "b31aa0eec825d0d93e1e8bf9ca41d51761ef483d",
-    "hosted_project_files": 221,
-    "curated_handoff_files": 35,
+    "native_deployment_updated_at": "2026-10-17T19:31:41.644377+00:00",
+    "site_source_commit": "5001642f395e293bd0641fa26ba7b29a38d59b73",
+    "artifact_source_commit": "bb8f2d0d34092051a014631f9bc9a5fb75aeca09",
+    "hosted_project_files": 244,
+    "curated_handoff_files": 40,
     "linked_large_originals": 4,
-    "asset_limit_source": "https://developers.cloudflare.com/workers/platform/limits/",
-    "binary_policy": "All hosted CAD, PDF, ZIP, scan, image and video bytes match their project originals. Hosted HTML/JS/CSS navigation and resource URLs may be adapted.",
-    "tests_executed": {
-      "local_html_links_checked": 146,
-      "broken_local_links": 0,
-      "desktop_viewport": [
-        1440,
-        1100
-      ],
-      "mobile_viewport": [
-        390,
-        844
-      ],
-      "mobile_document_width": 390,
-      "catalog_entries": 35,
-      "search_diverter_matches": 3,
-      "scan_filter_matches": 4,
-      "downloaded_filename": "RF03_FRIEND_PRINT_PACKAGE.zip",
-      "local_pages_browsed": [
-        "hub",
-        "RF03 print guide",
-        "TR03/RF02 study",
-        "TR02 narrated video page",
-        "FIN01 finish study",
-        "archived measurement tool",
-        "archived tab/foam tool"
-      ],
-      "browser_console_errors": 0,
-      "local_http_failures": 0,
-      "large_github_links_statuses": [
-        200,
-        200,
-        200,
-        200
-      ],
-      "hydration_original_artifact_checksums_verified": 145,
-      "hydrated_output_files_compared_to_browser_tested_output": 228,
-      "hydration_output_differences": 0,
-      "project_validation": "./project validate --git-objects: PASS, R006, four committed original scan byte checks passed",
-      "syntax_check": "node --check src/artifact_site/site.js: PASS",
-      "diff_check": "git diff --check: PASS"
+    "original_binary_hashes_verified": true,
+    "browser_checks": {
+      "catalog_count": 40,
+      "search_count": 3,
+      "scan_filter_count": 4,
+      "download_filename": "RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip",
+      "mobile_dimensions": {
+        "scroll": 390,
+        "viewport": 390
+      },
+      "console_errors": [],
+      "http_failures": []
     },
-    "publication_verification": "Sites save_version_and_deploy_private returned succeeded with the production URL. No separate authenticated production-browser test was claimed.",
-    "repairs": [
-      "Used installed Xcode Git 2.50.1 because the older default Git lacks --config-env.",
-      "Direct source upload containing all generated assets returned repeated HTTP 500 responses, including a buffered HTTP/1.1 retry.",
-      "Preserved the failed unpublished checkout locally. Same Site identity; new compact source checkout uses committed pages, hash-pinned GitHub asset sources and ignored generated dist. The separately uploaded deployment archive contains the complete selected assets. No remote force push or main-repository history rewrite."
-    ],
-    "geometry_changed": false,
+    "visual_review": "Desktop hub and two-page RF04 PDF inspected; smaller-face selection, usable bed area and retained collar/slots are clear.",
+    "publication_verification": "Native Sites private deployment returned succeeded with production URL. Browser QA was local preview; no authenticated production-browser test claimed.",
+    "engineering_record": "docs/validation/RF04_small_bed_2026-10-17.json",
+    "geometry_changed": "RF04 alternate added; RF03 originals and FT02 plate geometry preserved.",
     "accepted_measurements_changed": false,
     "physical_fit": "UNRESOLVED",
-    "permanent_installation_release": "NOT GIVEN"
+    "previous_publication": {
+      "date": "2026-10-17",
+      "status": "PASS",
+      "scope": "Artifact hosting, README navigation and existing-file integrity; no new engineering or physical-fit approval.",
+      "deployed_url": "https://shower-kohler-artifacts.mdpatrick.chatgpt.site",
+      "audience": "owner-private",
+      "site_project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
+      "deployment_id": "appgdep_6ad3c871d1008191a96577ce375b39df",
+      "saved_version_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d~appgver_e692892f98a08191a968007506fb00a6",
+      "native_deployment_status": "succeeded",
+      "native_deployment_updated_at": "2026-10-17T19:12:21.369250+00:00",
+      "site_source_commit": "eac787b24dceaaa3e99c9ed34005888ea0c502c1",
+      "artifact_source_commit": "b31aa0eec825d0d93e1e8bf9ca41d51761ef483d",
+      "hosted_project_files": 221,
+      "curated_handoff_files": 35,
+      "linked_large_originals": 4,
+      "asset_limit_source": "https://developers.cloudflare.com/workers/platform/limits/",
+      "binary_policy": "All hosted CAD, PDF, ZIP, scan, image and video bytes match their project originals. Hosted HTML/JS/CSS navigation and resource URLs may be adapted.",
+      "tests_executed": {
+        "local_html_links_checked": 146,
+        "broken_local_links": 0,
+        "desktop_viewport": [
+          1440,
+          1100
+        ],
+        "mobile_viewport": [
+          390,
+          844
+        ],
+        "mobile_document_width": 390,
+        "catalog_entries": 35,
+        "search_diverter_matches": 3,
+        "scan_filter_matches": 4,
+        "downloaded_filename": "RF03_FRIEND_PRINT_PACKAGE.zip",
+        "local_pages_browsed": [
+          "hub",
+          "RF03 print guide",
+          "TR03/RF02 study",
+          "TR02 narrated video page",
+          "FIN01 finish study",
+          "archived measurement tool",
+          "archived tab/foam tool"
+        ],
+        "browser_console_errors": 0,
+        "local_http_failures": 0,
+        "large_github_links_statuses": [
+          200,
+          200,
+          200,
+          200
+        ],
+        "hydration_original_artifact_checksums_verified": 145,
+        "hydrated_output_files_compared_to_browser_tested_output": 228,
+        "hydration_output_differences": 0,
+        "project_validation": "./project validate --git-objects: PASS, R006, four committed original scan byte checks passed",
+        "syntax_check": "node --check src/artifact_site/site.js: PASS",
+        "diff_check": "git diff --check: PASS"
+      },
+      "publication_verification": "Sites save_version_and_deploy_private returned succeeded with the production URL. No separate authenticated production-browser test was claimed.",
+      "repairs": [
+        "Used installed Xcode Git 2.50.1 because the older default Git lacks --config-env.",
+        "Direct source upload containing all generated assets returned repeated HTTP 500 responses, including a buffered HTTP/1.1 retry.",
+        "Preserved the failed unpublished checkout locally. Same Site identity; new compact source checkout uses committed pages, hash-pinned GitHub asset sources and ignored generated dist. The separately uploaded deployment archive contains the complete selected assets. No remote force push or main-repository history rewrite."
+      ],
+      "geometry_changed": false,
+      "accepted_measurements_changed": false,
+      "physical_fit": "UNRESOLVED",
+      "permanent_installation_release": "NOT GIVEN"
+    }
   }
 }
