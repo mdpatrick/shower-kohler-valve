@@ -1,0 +1,39 @@
+{
+  "date": "2026-10-17",
+  "scope": "User-directed narrated explanation and TR02 design study; preserves selected FT02 order files",
+  "user_direction": [
+    "Adding inward tabs does not move foam or consume its support margin.",
+    "Loose locating slots are acceptable; visually align the backing, then retain it with an appropriate bonding/retention detail.",
+    "The relevant water risk is shower spray entering the wall cavity, not supply-water leakage.",
+    "Investigate a modestly smaller aperture to add inward support beneath the existing foam without moving the foam.",
+    "Use both installed Polycam captures; respect strong coplanar factory-plate calipers and separate 3D installed end distances.",
+    "The narrated video must also show the proposed temporary formwork."
+  ],
+  "design_interpretation": "Keep outer diameter 220 mm. Add tabs locally and compare 0, 1, and 2 mm inward boundary offsets, rather than increasing the outside circle.",
+  "study_geometry": {
+    "stock_mm": 1.5,
+    "tab_width_mm": 18,
+    "slots_mm": [
+      18,
+      10
+    ],
+    "slot_extension_inward_mm": 8,
+    "tab_root_fillet_mm": 1.5,
+    "inward_offsets_mm": [
+      0,
+      1,
+      2
+    ]
+  },
+  "best_current_direction": "2 mm inward support with loose tabs is a promising trial candidate in the tested working pose. It is not yet substituted into order packages.",
+  "measurement_requests": "None. Ordinary physical fit, removal, retention, handle and contact checks remain separate from machining measurements.",
+  "formwork": "Show existing RF01 CAD without alteration: optional temporary one-piece PETG face/collar, rear fill only outside collar, forward withdrawal. Full face seating, support, liner release and service paths are unproved physical conditions.",
+  "evidence": "deliverables/current/fabrication/FT02/tab-rethink/analysis.json",
+  "media": "deliverables/current/fabrication/FT02/tab-rethink/TR02_tabs_foam_and_two_scans_NARRATED.mp4",
+  "no_actions": [
+    "No new vendor upload or purchase",
+    "No change to primary scan transform",
+    "No accepted caliper observations altered",
+    "No physical checks marked complete"
+  ]
+}

@@ -1,0 +1,411 @@
+{
+  "voice": "macOS Samantha, synthetic narration",
+  "rate_wpm": 172,
+  "fps": 8,
+  "duration": 327.625,
+  "chapters": [
+    {
+      "id": "correction",
+      "title": "Adding tabs does not move the foam",
+      "tag": "Correction to the first video",
+      "visual": "design",
+      "sentences": [
+        "You were right. Adding tabs inside the opening does not move the foam or use up its backing margin.",
+        "Both outside circles stay the same size. Only the gold areas change.",
+        "My earlier video separately shifted the entire backing plate. That was a hypothetical alignment error, not something that tabs automatically cause."
+      ],
+      "start": 0,
+      "duration": 19.5,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 5.633166666666667,
+          "text": "You were right. Adding tabs inside the opening does not move the foam or use up its backing margin."
+        },
+        {
+          "start": 5.833166666666667,
+          "end": 10.109916666666667,
+          "text": "Both outside circles stay the same size. Only the gold areas change."
+        },
+        {
+          "start": 10.309916666666666,
+          "end": 18.51083333333333,
+          "text": "My earlier video separately shifted the entire backing plate. That was a hypothetical alignment error, not something that tabs automatically cause."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/correction.wav"
+    },
+    {
+      "id": "water",
+      "title": "The water path we care about",
+      "tag": "Shower water entering the wall",
+      "visual": "water",
+      "sentences": [
+        "Your concern is shower spray getting behind the trim and into the wall.",
+        "There are two interfaces to address. The factory foam contacts the front of the custom backing. The custom backing also needs an appropriate seal to the travertine.",
+        "The foam does not have to line up with the opening edge. It needs continuous effective contact around the opening. Keep the factory cover drain open toward the shower."
+      ],
+      "start": 19.5,
+      "duration": 23.125,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 3.6478333333333333,
+          "text": "Your concern is shower spray getting behind the trim and into the wall."
+        },
+        {
+          "start": 3.8478333333333334,
+          "end": 12.948541666666667,
+          "text": "There are two interfaces to address. The factory foam contacts the front of the custom backing. The custom backing also needs an appropriate seal to the travertine."
+        },
+        {
+          "start": 13.148541666666667,
+          "end": 22.158375,
+          "text": "The foam does not have to line up with the opening edge. It needs continuous effective contact around the opening. Keep the factory cover drain open toward the shower."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/water.wav"
+    },
+    {
+      "id": "margin",
+      "title": "What the extra margin actually means",
+      "tag": "A deliberate offset example \u2014 not an observed movement",
+      "visual": "margin",
+      "sentences": [
+        "Here the purple foam stays fixed. Blue is the backing underneath it.",
+        "Only in this example, I deliberately position the whole backing two millimeters to one side. A smaller opening leaves more material underneath the same foam.",
+        "A loss of full width is not a proven leak threshold. We have no validated minimum partial contact width. Keeping the whole band supported is the more forgiving target."
+      ],
+      "start": 42.625,
+      "duration": 23.125,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 3.9530833333333333,
+          "text": "Here the purple foam stays fixed. Blue is the backing underneath it."
+        },
+        {
+          "start": 4.153083333333334,
+          "end": 12.958375,
+          "text": "Only in this example, I deliberately position the whole backing two millimeters to one side. A smaller opening leaves more material underneath the same foam."
+        },
+        {
+          "start": 13.158375,
+          "end": 22.19920833333333,
+          "text": "A loss of full width is not a proven leak threshold. We have no validated minimum partial contact width. Keeping the whole band supported is the more forgiving target."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/margin.wav"
+    },
+    {
+      "id": "tabs",
+      "title": "Longer tabs, with room to adjust",
+      "tag": "Local CAD change; outside diameter stays 220 mm",
+      "visual": "design",
+      "sentences": [
+        "This new study extends each tab farther inward, and uses an eighteen by ten millimeter slot.",
+        "The slot extends toward the center, where the captured rods need more room in our current overlay.",
+        "These are loose locating features. They help get close, while visual alignment and a suitable retention detail establish the final position. They do not need to be precision dowels."
+      ],
+      "start": 65.75,
+      "duration": 22.5,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 5.603958333333333,
+          "text": "This new study extends each tab farther inward, and uses an eighteen by ten millimeter slot."
+        },
+        {
+          "start": 5.803958333333333,
+          "end": 10.924416666666666,
+          "text": "The slot extends toward the center, where the captured rods need more room in our current overlay."
+        },
+        {
+          "start": 11.124416666666667,
+          "end": 21.571666666666665,
+          "text": "These are loose locating features. They help get close, while visual alignment and a suitable retention detail establish the final position. They do not need to be precision dowels."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/tabs.wav"
+    },
+    {
+      "id": "inward",
+      "title": "More backing under the same foam",
+      "tag": "1 mm and 2 mm inward support compared",
+      "visual": "narrow",
+      "sentences": [
+        "I also tested adding one and two millimeters of backing around the interior opening. The outside diameter stays unchanged.",
+        "The two millimeter version has an opening about one hundred twelve by one hundred forty seven millimeters.",
+        "In this nominal layout, its smallest extra foam support is about two point six millimeters, including the slots. Neither smaller opening added a captured surface clash in the tested placement."
+      ],
+      "start": 88.25,
+      "duration": 25.125,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 7.343416666666666,
+          "text": "I also tested adding one and two millimeters of backing around the interior opening. The outside diameter stays unchanged."
+        },
+        {
+          "start": 7.543416666666666,
+          "end": 13.093458333333334,
+          "text": "The two millimeter version has an opening about one hundred twelve by one hundred forty seven millimeters."
+        },
+        {
+          "start": 13.293458333333334,
+          "end": 24.14575,
+          "text": "In this nominal layout, its smallest extra foam support is about two point six millimeters, including the slots. Neither smaller opening added a captured surface clash in the tested placement."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/inward.wav"
+    },
+    {
+      "id": "rods",
+      "title": "Getting past the ends versus fitting around the rods",
+      "tag": "Original capture + new tab CAD; approximate placement",
+      "visual": "rods",
+      "sentences": [
+        "The new slots remove the small seated clash that the earlier tight tab showed in this model.",
+        "Getting the plate into position is a separate question. The captured lower left end hardware still intersects the tab during a straight approach.",
+        "Check whether that end hardware comes off, or whether the rod can be retracted. Do not force the acrylic over it. This modeled overlap is not proof of a physical defect."
+      ],
+      "start": 113.375,
+      "duration": 22.875,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 4.909625,
+          "text": "The new slots remove the small seated clash that the earlier tight tab showed in this model."
+        },
+        {
+          "start": 5.109625,
+          "end": 12.276791666666668,
+          "text": "Getting the plate into position is a separate question. The captured lower left end hardware still intersects the tab during a straight approach."
+        },
+        {
+          "start": 12.476791666666667,
+          "end": 21.937,
+          "text": "Check whether that end hardware comes off, or whether the rod can be retracted. Do not force the acrylic over it. This modeled overlap is not proof of a physical defect."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/rods.wav"
+    },
+    {
+      "id": "scans",
+      "title": "Both installed Polycam captures",
+      "tag": "Separate captures; no forced alignment",
+      "visual": "scans",
+      "sentences": [
+        "Here are both actual three dimensional captures. The first shows exposed valve hardware. The second shows your inner plate attached.",
+        "I have kept their source geometry separate and unchanged. The second scan is not a precision registration of the first.",
+        "It confirms the attached state, but the plate and end hardware hide parts of the rod path that a new backing must clear."
+      ],
+      "start": 136.25,
+      "duration": 22.0,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 7.7495416666666666,
+          "text": "Here are both actual three dimensional captures. The first shows exposed valve hardware. The second shows your inner plate attached."
+        },
+        {
+          "start": 7.949541666666667,
+          "end": 14.667875,
+          "text": "I have kept their source geometry separate and unchanged. The second scan is not a precision registration of the first."
+        },
+        {
+          "start": 14.867875000000002,
+          "end": 21.006416666666667,
+          "text": "It confirms the attached state, but the plate and end hardware hide parts of the rod path that a new backing must clear."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/scans.wav"
+    },
+    {
+      "id": "numbers",
+      "title": "Do both scans disagree with your calipers?",
+      "tag": "3D end distances \u2014 not factory hole coordinates",
+      "visual": "table",
+      "sentences": [
+        "They do not show one consistent error. Your rod tip distance is one hundred nine point eight millimeters.",
+        "The original scan gives about one hundred nine point seven after improving the visible tip centers and using your eighty millimeter control spacing as a comparison scale. The attached scan gives about one hundred eleven point seven from visible end picks.",
+        "Eighty millimeters is a calibration input here, not an independent check. Your coplanar inner plate measurements remain the stronger evidence for the factory hole layout."
+      ],
+      "start": 158.25,
+      "duration": 30.0,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 5.906208333333333,
+          "text": "They do not show one consistent error. Your rod tip distance is one hundred nine point eight millimeters."
+        },
+        {
+          "start": 6.106208333333333,
+          "end": 19.758125,
+          "text": "The original scan gives about one hundred nine point seven after improving the visible tip centers and using your eighty millimeter control spacing as a comparison scale. The attached scan gives about one hundred eleven point seven from visible end picks."
+        },
+        {
+          "start": 19.958125,
+          "end": 29.022083333333335,
+          "text": "Eighty millimeters is a calibration input here, not an independent check. Your coplanar inner plate measurements remain the stronger evidence for the factory hole layout."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/numbers.wav"
+    },
+    {
+      "id": "handles",
+      "title": "Where the handles actually attach",
+      "tag": "Official Kohler exterior CAD + approximate inner plate",
+      "visual": "factory",
+      "sentences": [
+        "The complete handles do not have to pass through the custom backing. They attach from the shower side, through the factory trim, onto the inner plate hubs and valve adapters.",
+        "The hardware occupying the backing plane, and the assembly path, control our opening.",
+        "The two millimeter inset still clears the factory opening footprints in this reference layout by at least about eight point six millimeters. The lower footprint is assumed, and these exterior models cannot prove hidden engagement."
+      ],
+      "start": 188.25,
+      "duration": 28.0,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 9.600083333333334,
+          "text": "The complete handles do not have to pass through the custom backing. They attach from the shower side, through the factory trim, onto the inner plate hubs and valve adapters."
+        },
+        {
+          "start": 9.800083333333333,
+          "end": 14.839291666666668,
+          "text": "The hardware occupying the backing plane, and the assembly path, control our opening."
+        },
+        {
+          "start": 15.039291666666667,
+          "end": 27.021250000000002,
+          "text": "The two millimeter inset still clears the factory opening footprints in this reference layout by at least about eight point six millimeters. The lower footprint is assumed, and these exterior models cannot prove hidden engagement."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/handles.wav"
+    },
+    {
+      "id": "formtool",
+      "title": "The proposed temporary formwork",
+      "tag": "RF01 \u00b7 actual exported tool CAD \u00b7 optional support repair",
+      "visual": "formtool",
+      "sentences": [
+        "This is the proposed formwork. It is a separate, temporary printed tool, not another escutcheon.",
+        "The front panel is two hundred forty millimeters across and twelve millimeters thick. A twelve millimeter deep collar projects behind it into the opening.",
+        "The panel and collar are one piece. A separate protective cover, removable film, and a stable padded front brace complete the setup. Use it only if the fit trial finds missing support."
+      ],
+      "start": 216.25,
+      "duration": 26.25,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 6.138208333333333,
+          "text": "This is the proposed formwork. It is a separate, temporary printed tool, not another escutcheon."
+        },
+        {
+          "start": 6.338208333333333,
+          "end": 14.407625,
+          "text": "The front panel is two hundred forty millimeters across and twelve millimeters thick. A twelve millimeter deep collar projects behind it into the opening."
+        },
+        {
+          "start": 14.607624999999999,
+          "end": 25.3125,
+          "text": "The panel and collar are one piece. A separate protective cover, removable film, and a stable padded front brace complete the setup. Use it only if the fit trial finds missing support."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/formtool.wav"
+    },
+    {
+      "id": "formsection",
+      "title": "Where repair material goes \u2014 and must not go",
+      "tag": "Illustrative side section \u00b7 actual repair zones depend on sound support",
+      "visual": "formsection",
+      "sentences": [
+        "This section shows the form holding the front surface of a small repair. The lined, wall-facing side sets the finished plane.",
+        "Repair material is placed from the rear, only in missing support zones outside the collar. The center stays empty for the valve and service access.",
+        "The fresh patch needs suitable sound substrate and permanent backing. The temporary front brace must not load the valve rods or pipes. The form does not supply the final waterproofing."
+      ],
+      "start": 242.5,
+      "duration": 27.0,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 7.310833333333333,
+          "text": "This section shows the form holding the front surface of a small repair. The lined, wall-facing side sets the finished plane."
+        },
+        {
+          "start": 7.510833333333333,
+          "end": 15.645083333333332,
+          "text": "Repair material is placed from the rear, only in missing support zones outside the collar. The center stays empty for the valve and service access."
+        },
+        {
+          "start": 15.845083333333331,
+          "end": 25.992666666666665,
+          "text": "The fresh patch needs suitable sound substrate and permanent backing. The temporary front brace must not load the valve rods or pipes. The form does not supply the final waterproofing."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/formsection.wav"
+    },
+    {
+      "id": "formremove",
+      "title": "Remove the tool; then fit the permanent parts",
+      "tag": "Exploded placement and withdrawal \u00b7 no actual casting shown",
+      "visual": "formplace",
+      "sentences": [
+        "Here the actual tool is shown apart from the captured installation, then moving toward its working position.",
+        "The collar narrows slightly toward the rear, so the tool withdraws toward the shower after appropriate curing. Remove the film, pads, cover and brace too.",
+        "The modeled collar clears the tested captured surfaces. Full panel seating, bracing, release and service access still need a dry rehearsal. Recheck the backing plate and handles on the finished support before sealing."
+      ],
+      "start": 269.5,
+      "duration": 28.25,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 5.9035416666666665,
+          "text": "Here the actual tool is shown apart from the captured installation, then moving toward its working position."
+        },
+        {
+          "start": 6.103541666666667,
+          "end": 14.939208333333333,
+          "text": "The collar narrows slightly toward the rear, so the tool withdraws toward the shower after appropriate curing. Remove the film, pads, cover and brace too."
+        },
+        {
+          "start": 15.139208333333332,
+          "end": 27.330166666666663,
+          "text": "The modeled collar clears the tested captured surfaces. Full panel seating, bracing, release and service access still need a dry rehearsal. Recheck the backing plate and handles on the finished support before sealing."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/formremove.wav"
+    },
+    {
+      "id": "next",
+      "title": "A sensible next fit trial",
+      "tag": "More adjustment, more backing, then align and retain",
+      "visual": "next",
+      "sentences": [
+        "Your proposal is worth testing: longer tabs with adjustment slots, and a modestly smaller opening for more foam support.",
+        "Align the backing with the actual trim before locking its position. The bonding and sealing detail must suit acrylic or metal and travertine, and preserve service access.",
+        "The new shapes are prepared as a separate study. No order files were silently replaced. The physical trial should settle end clearance, handle attachment, and continuous contact without a new measurement survey."
+      ],
+      "start": 297.75,
+      "duration": 29.875,
+      "sentences_timed": [
+        {
+          "start": 0.3,
+          "end": 7.316291666666666,
+          "text": "Your proposal is worth testing: longer tabs with adjustment slots, and a modestly smaller opening for more foam support."
+        },
+        {
+          "start": 7.516291666666667,
+          "end": 16.766166666666667,
+          "text": "Align the backing with the actual trim before locking its position. The bonding and sealing detail must suit acrylic or metal and travertine, and preserve service access."
+        },
+        {
+          "start": 16.966166666666666,
+          "end": 28.948124999999997,
+          "text": "The new shapes are prepared as a separate study. No order files were silently replaced. The physical trial should settle end clearance, handle attachment, and continuous contact without a new measurement survey."
+        }
+      ],
+      "audio": "build/FT02/tab_rethink/speech/next.wav"
+    }
+  ]
+}

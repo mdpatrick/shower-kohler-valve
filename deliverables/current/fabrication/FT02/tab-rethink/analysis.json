@@ -1,0 +1,664 @@
+{
+  "id": "TR02",
+  "date": "2026-10-17",
+  "status": "EXPLANATORY_DESIGN_STUDY_NOT_RELEASED",
+  "latest_user_intent": "Tabs are approximate locators. Align the backing visually before retaining/bonding it. Concern is shower water entering the wall, not valve pressure leakage. Adding tabs does not itself shift the backing or foam.",
+  "assets": {
+    "plain": {
+      "path": "build/FT02/tab_rethink/plain.stl",
+      "sha256": "ac2e3bc477384547598eb7e6fbd01b48386e1c5c23bd1fc6a1bb9db03a2877ee",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5
+        ]
+      ]
+    },
+    "previous_tabs": {
+      "path": "build/FT02/tab_rethink/previous_tabs.stl",
+      "sha256": "3d3f3543581174b4f0db99de196d7272c1a58644e1c4f17bcc7fc084451680e5",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5
+        ]
+      ]
+    },
+    "longer_tabs": {
+      "path": "build/FT02/tab_rethink/longer_tabs.stl",
+      "sha256": "c66d31e011f181c7b8b21a2cb75fd75d22bb730905bd37d646efb3e5ce038f11",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5
+        ]
+      ]
+    },
+    "inward_0": {
+      "path": "build/FT02/tab_rethink/inward_0.stl",
+      "sha256": "c66d31e011f181c7b8b21a2cb75fd75d22bb730905bd37d646efb3e5ce038f11",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5
+        ]
+      ]
+    },
+    "inward_1": {
+      "path": "build/FT02/tab_rethink/inward_1.stl",
+      "sha256": "284e61a998f8566ccd3c9e30a309707d708028b69a0d770e4a61c5f05bb9051b",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5
+        ]
+      ]
+    },
+    "inward_2": {
+      "path": "build/FT02/tab_rethink/inward_2.stl",
+      "sha256": "bbfb82ca7e8c25ef426e43afae0363cc33f444b51f0398ff738d292171c3ca3a",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5
+        ]
+      ]
+    }
+  },
+  "plate_pose": {
+    "row_rotation": [
+      [
+        0.9998274063888835,
+        -0.018578413109797246
+      ],
+      [
+        0.01857841310979725,
+        0.9998274063888836
+      ]
+    ],
+    "translation_mm": [
+      4.014384219632262,
+      39.700994788750954
+    ],
+    "determinant": 0.9999999999999998
+  },
+  "inner_pose": {
+    "row_rotation": [
+      [
+        1.0,
+        0.0
+      ],
+      [
+        0.0,
+        1.0
+      ]
+    ],
+    "translation_mm": [
+      0.0,
+      -0.22999999999998266
+    ]
+  },
+  "centers": {
+    "A": [
+      51.165000000000006,
+      23.750000000000014
+    ],
+    "B": [
+      -51.625,
+      -23.69999999999998
+    ]
+  },
+  "slots": {
+    "A": {
+      "outer_cap_center_mm": [
+        51.165000000000006,
+        23.750000000000014
+      ],
+      "inner_cap_center_mm": [
+        43.165000000000006,
+        23.750000000000014
+      ],
+      "slot_center_mm": [
+        47.165000000000006,
+        23.750000000000014
+      ],
+      "size_mm": [
+        18,
+        10
+      ],
+      "minimum_slot_to_original_aperture_mm": 1.6142128721553548,
+      "minimum_nominal_end_web_mm": 4
+    },
+    "B": {
+      "outer_cap_center_mm": [
+        -51.625,
+        -23.69999999999998
+      ],
+      "inner_cap_center_mm": [
+        -43.625,
+        -23.69999999999998
+      ],
+      "slot_center_mm": [
+        -47.625,
+        -23.69999999999998
+      ],
+      "size_mm": [
+        18,
+        10
+      ],
+      "minimum_slot_to_original_aperture_mm": 1.1638621181541586,
+      "minimum_nominal_end_web_mm": 4
+    }
+  },
+  "geometry": {
+    "outer_diameter_mm": 220,
+    "original_capsule_mm": [
+      116.35,
+      151.1,
+      58.175
+    ],
+    "sheet_mm": 1.5,
+    "tab_width_mm": 18,
+    "inward_slot_extension_mm": 8,
+    "root_fillet_mm": 1.5,
+    "plain_material_removed_mm3": 0.0,
+    "plain_material_not_removed": true,
+    "foam_pose_unchanged": true,
+    "cutouts_within_original_aperture": true,
+    "STEP_readback_valid_one_solid": true
+  },
+  "captured_surface_checks": [
+    {
+      "case": "seated_illustrative_1mm_bed",
+      "z_mm": [
+        1,
+        2.5
+      ],
+      "added_tab_projected_surface_overlap_mm2": 0.0,
+      "bounds_mm": [],
+      "scope": "Actual CAD top-face tessellation, including root fillets, versus captured triangle projection. Placement approximate. Not full solid collision or physical fit."
+    },
+    {
+      "case": "full_insertion_current_capture",
+      "z_mm": [
+        1,
+        80
+      ],
+      "added_tab_projected_surface_overlap_mm2": 6.857563253999471,
+      "bounds_mm": [
+        -50.89495140827913,
+        21.070080002572073,
+        -43.11419246964511,
+        23.49581064266826
+      ],
+      "scope": "Actual CAD top-face tessellation, including root fillets, versus captured triangle projection. Placement approximate. Not full solid collision or physical fit."
+    }
+  ],
+  "scan_comparison": [
+    {
+      "pair": "U-L",
+      "owner_3d_mm": 80,
+      "original_stored_picks_3d_mm": 79.37499999999999,
+      "original_refitted_80_anchor_3d_mm": 80.0,
+      "attached_visible_picks_3d_mm": 80.00000000000001,
+      "attached_xy_mm": 79.98129720807252
+    },
+    {
+      "pair": "A-B",
+      "owner_3d_mm": 109.8,
+      "original_stored_picks_3d_mm": 108.08648110624021,
+      "original_refitted_80_anchor_3d_mm": 109.67070777346346,
+      "attached_visible_picks_3d_mm": 111.72717969853284,
+      "attached_xy_mm": 111.66191164674328
+    },
+    {
+      "pair": "U-A",
+      "owner_3d_mm": 51.4,
+      "original_stored_picks_3d_mm": 52.360373520111466,
+      "original_refitted_80_anchor_3d_mm": 51.31401263458032,
+      "attached_visible_picks_3d_mm": 52.998832274679444,
+      "attached_xy_mm": 52.98430924347374
+    },
+    {
+      "pair": "L-A",
+      "owner_3d_mm": 80.25,
+      "original_stored_picks_3d_mm": 81.03371081181123,
+      "original_refitted_80_anchor_3d_mm": 79.84779978339353,
+      "attached_visible_picks_3d_mm": 80.76653184924722,
+      "attached_xy_mm": 80.71189083878684
+    },
+    {
+      "pair": "U-B",
+      "owner_3d_mm": 81.14,
+      "original_stored_picks_3d_mm": 78.26590862518825,
+      "original_refitted_80_anchor_3d_mm": 80.85164618743097,
+      "attached_visible_picks_3d_mm": 81.76167625443108,
+      "attached_xy_mm": 81.60501082886725
+    },
+    {
+      "pair": "L-B",
+      "owner_3d_mm": 54.7,
+      "original_stored_picks_3d_mm": 51.21943114089788,
+      "original_refitted_80_anchor_3d_mm": 54.37827267135046,
+      "attached_visible_picks_3d_mm": 54.14194655049436,
+      "attached_xy_mm": 53.71463887244748
+    }
+  ],
+  "original_cap_fits": {
+    "L": {
+      "depth_band_mm": 2,
+      "vertices": 607,
+      "center_xy_mm": [
+        3.2816814588510472,
+        0.26940842901302303
+      ],
+      "radius_mm": 3.8229334787847806,
+      "radial_residual_rms_mm": 0.07818418976280873,
+      "algebraic_center_difference_mm": 0.001965025868877217
+    },
+    "U": {
+      "depth_band_mm": 2,
+      "vertices": 638,
+      "center_xy_mm": [
+        4.749687958248851,
+        79.27255698538335
+      ],
+      "radius_mm": 3.690438161571259,
+      "radial_residual_rms_mm": 0.03417965565434453,
+      "algebraic_center_difference_mm": 0.00018056542850211982
+    },
+    "B": {
+      "depth_band_mm": 2,
+      "vertices": 196,
+      "center_xy_mm": [
+        -46.80597754608774,
+        18.486228521541662
+      ],
+      "radius_mm": 1.7373658366813463,
+      "radial_residual_rms_mm": 0.09050176436195642,
+      "algebraic_center_difference_mm": 0.0029142590881793607
+    },
+    "A": {
+      "depth_band_mm": 2,
+      "vertices": 325,
+      "center_xy_mm": [
+        52.36841199987862,
+        61.94564734127705
+      ],
+      "radius_mm": 2.706823068559126,
+      "radial_residual_rms_mm": 0.41840843756533913,
+      "algebraic_center_difference_mm": 0.02080020680150095
+    }
+  },
+  "original_diagnostic_scale_factor": 1.0122481658542366,
+  "original_fit_points_mm": {
+    "L": [
+      3.2816814588510472,
+      0.26940842901302303,
+      33.668031153135885
+    ],
+    "U": [
+      4.749687958248851,
+      79.27255698538335,
+      32.11723757760042
+    ],
+    "B": [
+      -46.80597754608774,
+      18.486228521541662,
+      26.941646481694878
+    ],
+    "A": [
+      52.36841199987862,
+      61.94564734127705,
+      30.693430474343874
+    ]
+  },
+  "original_cap_fit_sensitivity": [
+    {
+      "cap_depth_band_mm": 0.5,
+      "A_B_80_anchor_mm": 109.31462692497922
+    },
+    {
+      "cap_depth_band_mm": 1,
+      "A_B_80_anchor_mm": 109.30413359976292
+    },
+    {
+      "cap_depth_band_mm": 1.5,
+      "A_B_80_anchor_mm": 109.48837337873897
+    },
+    {
+      "cap_depth_band_mm": 2,
+      "A_B_80_anchor_mm": 109.67070777346346
+    },
+    {
+      "cap_depth_band_mm": 2.5,
+      "A_B_80_anchor_mm": 109.89181457179205
+    },
+    {
+      "cap_depth_band_mm": 3,
+      "A_B_80_anchor_mm": 109.51409504947705
+    }
+  ],
+  "attached_visible_picks": {
+    "U": {
+      "pixels": [
+        897,
+        565
+      ],
+      "zero_based_vertex": 223625,
+      "point_wall_units": [
+        0.13018603398950299,
+        0.5381964811805044,
+        0.18765340190690144
+      ]
+    },
+    "L": {
+      "pixels": [
+        884,
+        1157
+      ],
+      "zero_based_vertex": 50680,
+      "point_wall_units": [
+        0.12038002649197413,
+        0.08121660951552889,
+        0.19753885136661908
+      ]
+    },
+    "A": {
+      "pixels": [
+        1264,
+        696
+      ],
+      "zero_based_vertex": 109948,
+      "point_wall_units": [
+        0.4152032572446368,
+        0.4359564616968843,
+        0.18056324867003892
+      ],
+      "method": "Visible end-center pixel selected on existing wall-normal render; nearest XY mesh vertex. Not a hidden bore center."
+    },
+    "B": {
+      "pixels": [
+        510,
+        1023
+      ],
+      "zero_based_vertex": 75734,
+      "point_wall_units": [
+        -0.1698640155060915,
+        0.18117302386605139,
+        0.15874148251495923
+      ],
+      "method": "Visible end-center pixel selected on existing wall-normal render; nearest XY mesh vertex. Not a hidden bore center."
+    }
+  },
+  "attached_local_points_mm": {
+    "U": [
+      1.7158670282056505,
+      79.96288953900769,
+      32.83581877168843
+    ],
+    "L": [
+      0.0,
+      0.0,
+      34.565586650327866
+    ],
+    "A": [
+      51.588524781879144,
+      62.07280752150402,
+      31.5951752001713
+    ],
+    "B": [
+      -50.787252806314854,
+      17.490494034901072,
+      27.776776218511227
+    ]
+  },
+  "attached_outline_check_mm": {
+    "outline_width_approx": 134.4633364355788,
+    "outline_height_approx": 166.0377231289536,
+    "caliper_width": 130.35,
+    "caliper_height": 165.1,
+    "estimated_stem_above_hub_center": [
+      3.5385088535678633,
+      3.674605347935858
+    ]
+  },
+  "coplanar_factory_layout": {
+    "source_ids": [
+      "M11-NED",
+      "M11-SWD",
+      "M13-FAX",
+      "M13-FBX",
+      "M13-FAY",
+      "M13-FBY"
+    ],
+    "frame": "Front toward handles; x RIGHT from LEFT block, y DOWN from TOP block",
+    "center_from_left_top_mm": {
+      "A": [
+        116.34,
+        58.57
+      ],
+      "B": [
+        13.549999999999999,
+        106.02
+      ]
+    },
+    "diameters_mm": {
+      "A": 5.66,
+      "B": 5.66
+    },
+    "separation_xy_mm": [
+      102.79,
+      47.449999999999996
+    ],
+    "center_distance_mm": 113.21345591403878,
+    "predicted_nearest_edge_gap_mm": 107.55345591403878,
+    "uncertainty_mm": null,
+    "status": "derived from owner-selected planar observations",
+    "installed_pose": "Separate transform required; no scan/valve relocation implied",
+    "outline_centered_xy_up_mm": {
+      "A": [
+        51.165000000000006,
+        23.979999999999997
+      ],
+      "B": [
+        -51.625,
+        -23.47
+      ]
+    },
+    "outline_midpoint_offset_mm": [
+      -0.22999999999999687,
+      0.254999999999999
+    ],
+    "outline_note": "Comparison frame only; tape height does not gain accuracy from derived decimals",
+    "earlier_diagonal_comparison": {
+      "edge_gap_mm": 106.39,
+      "implied_center_mm": 112.05,
+      "difference_mm": 1.163455914038778,
+      "role": "Retained disagreement / robustness scenario; not selected layout or certified error bound"
+    }
+  },
+  "limits": [
+    "Refitted primary is a separate calculation. Original scan and transform stay unchanged.",
+    "Both 80 mm anchored comparisons use that reading as calibration, not validation.",
+    "Tip or exposed fastener-end distances are not coplanar factory bore spacing and not stud-axis intersections with a new flat plate.",
+    "Attached-state hardware can obscure the original contact points; hidden rod axes cannot be checked from that scan.",
+    "Pick, shape, scale and seating differences are not certified machining tolerance bounds.",
+    "No partial foam support width, adhesive or final water seal is approved.",
+    "Existing no-tab vendor files and previous tabbed quote remain unchanged."
+  ],
+  "sources_sha256": {
+    "canon/measurements.json": "45f7fefebd12ecbf3c057bf775e6f920685f5edfa6f40aa6314d640dba648abd",
+    "canon/fit_trial_design.json": "2b191cf0d50c49a023a8b63f1ce1bfaa6903a841c25c95678c0ca8e04bcce822",
+    "canon/repair_form_design.json": "ac3c66909fcf3ec30b0703fa28a9ae224403ae0fd04348d6efea713d48fc594a",
+    "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/RF01_MAIN_REMOVABLE_FORM_PETG.stl": "ffc245bb73bd957ba34c82b24845812b3d2bf029bd7d2c68b72b1bc6e38105e7",
+    "data/derived/registration.json": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3",
+    "data/derived/resolved.json": "fe9097bfc54110c287c37315fc751cb8d990358976c3bfa0e35d8f6e2a30ce1c",
+    "deliverables/current/fabrication/fit-trial/attached_scan_assessment.json": "0e334ddd29c3aeccaeb62521add6d3d355f24cab0591db1f3259283921b59934",
+    "data/raw/polycam/shower-hole-valve-polycam.zip": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
+    "data/raw/polycam/polycam-inner-plate-attached.zip": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91"
+  },
+  "official_reference": {
+    "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf",
+    "page": 7,
+    "basis": "Factory plate lies flat; foam surrounds opening; decorative drain remains down. Custom backing/bonding is a project adaptation, not a Kohler-approved repair."
+  },
+  "inward_support_variants": [
+    {
+      "inward_per_edge_mm": 0,
+      "capsule_mm": [
+        116.35,
+        151.1,
+        58.175
+      ],
+      "nominal_min_foam_reserve_including_slots_mm": 0.7722476196289279,
+      "foam_overlap_area_mm2": 3020.2583855230187,
+      "complete_nominal_foam_area_mm2": 3020.2583855230077,
+      "capture_checks": [
+        {
+          "case": "seated_illustrative_1mm_bed",
+          "extra_ring_overlap_mm2": 0.0,
+          "bounds_mm": []
+        },
+        {
+          "case": "full_insertion_current_capture",
+          "extra_ring_overlap_mm2": 0.0,
+          "bounds_mm": []
+        }
+      ],
+      "factory_opening_footprints": [
+        {
+          "control": "U",
+          "reference_diameter_mm": 48.46,
+          "material_overlap_mm2": 0.0,
+          "clearance_to_material_mm": 11.227127027400234,
+          "scope": "Factory opening footprint, not measured handle rear diameter. Lower 50 mm is provisional; no axial engagement proof."
+        },
+        {
+          "control": "L",
+          "reference_diameter_mm": 50,
+          "material_overlap_mm2": 0.0,
+          "clearance_to_material_mm": 10.598095393040596,
+          "scope": "Factory opening footprint, not measured handle rear diameter. Lower 50 mm is provisional; no axial engagement proof."
+        }
+      ],
+      "step": "deliverables/current/fabrication/FT02/tab-rethink/TR02_INWARD_0MM_TABS_EXPLANATORY_NOT_RELEASED.step"
+    },
+    {
+      "inward_per_edge_mm": 1,
+      "capsule_mm": [
+        114.35,
+        149.1,
+        57.175
+      ],
+      "nominal_min_foam_reserve_including_slots_mm": 1.7709201049804901,
+      "foam_overlap_area_mm2": 3020.2583855230187,
+      "complete_nominal_foam_area_mm2": 3020.2583855230077,
+      "capture_checks": [
+        {
+          "case": "seated_illustrative_1mm_bed",
+          "extra_ring_overlap_mm2": 0.0,
+          "bounds_mm": []
+        },
+        {
+          "case": "full_insertion_current_capture",
+          "extra_ring_overlap_mm2": 0.0,
+          "bounds_mm": []
+        }
+      ],
+      "factory_opening_footprints": [
+        {
+          "control": "U",
+          "reference_diameter_mm": 48.46,
+          "material_overlap_mm2": 0.0,
+          "clearance_to_material_mm": 10.227588695109784,
+          "scope": "Factory opening footprint, not measured handle rear diameter. Lower 50 mm is provisional; no axial engagement proof."
+        },
+        {
+          "control": "L",
+          "reference_diameter_mm": 50,
+          "material_overlap_mm2": 0.0,
+          "clearance_to_material_mm": 9.597492883662891,
+          "scope": "Factory opening footprint, not measured handle rear diameter. Lower 50 mm is provisional; no axial engagement proof."
+        }
+      ],
+      "step": "deliverables/current/fabrication/FT02/tab-rethink/TR02_INWARD_1MM_TABS_EXPLANATORY_NOT_RELEASED.step"
+    },
+    {
+      "inward_per_edge_mm": 2,
+      "capsule_mm": [
+        112.35,
+        147.1,
+        56.175
+      ],
+      "nominal_min_foam_reserve_including_slots_mm": 2.549999999999997,
+      "foam_overlap_area_mm2": 3020.2583855230187,
+      "complete_nominal_foam_area_mm2": 3020.2583855230077,
+      "capture_checks": [
+        {
+          "case": "seated_illustrative_1mm_bed",
+          "extra_ring_overlap_mm2": 0.0,
+          "bounds_mm": []
+        },
+        {
+          "case": "full_insertion_current_capture",
+          "extra_ring_overlap_mm2": 0.0,
+          "bounds_mm": []
+        }
+      ],
+      "factory_opening_footprints": [
+        {
+          "control": "U",
+          "reference_diameter_mm": 48.46,
+          "material_overlap_mm2": 0.0,
+          "clearance_to_material_mm": 9.228130682390509,
+          "scope": "Factory opening footprint, not measured handle rear diameter. Lower 50 mm is provisional; no axial engagement proof."
+        },
+        {
+          "control": "L",
+          "reference_diameter_mm": 50,
+          "material_overlap_mm2": 0.0,
+          "clearance_to_material_mm": 8.598111609016916,
+          "scope": "Factory opening footprint, not measured handle rear diameter. Lower 50 mm is provisional; no axial engagement proof."
+        }
+      ],
+      "step": "deliverables/current/fabrication/FT02/tab-rethink/TR02_INWARD_2MM_TABS_EXPLANATORY_NOT_RELEASED.step"
+    }
+  ]
+}

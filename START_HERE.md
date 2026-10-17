@@ -2,11 +2,13 @@
 
 **The two custom plate designs are prepared for a quote and sacrificial physical fit trial.** Private Ponoko quotes have been obtained. No purchase, physical fit, permanent installation or water test has occurred. Open the [current illustrated handoff](deliverables/current/fabrication/FT02/index.html), or run `./project review`.
 
+**October 17 explanation and design study:** [TR02 narrated video: tabs, smaller opening, both scans, handles and RF01 formwork](deliverables/current/fabrication/FT02/tab-rethink/index.html). Adding inward tabs does not move the foam. TR02 tests loose locating slots and 1–2 mm more inward backing while preserving Ø220. Its new CAD is a separate study; current FT02 order files have not been replaced.
+
 ## Order one pair in one material
 
 The selected main plate is Ø220 mm with one centered upright capsule opening, 116.35 × 151.10 mm, R58.175 ends. The selected diverter ring is Ø124 / Ø80 mm. Each manufacturing STEP contains one custom plate solid, centered at X=Y=0, back Z=0, front Z=stock thickness, in millimeters. No wall or factory hardware is included.
 
-The main has **no permanent bolt tabs**. The R006 round-hole/slot candidates introduced captured-shaft interference and uncertain registration between the formed inner plate and new flat sheet. Wider holes also permit movement beyond the small nominal gasket reserve. Use the supplied removable front border gauge to center each backing on its real factory cover. The gauge is not left beneath the gasket. Proper support and factory assembly must retain the plate without rocking or sliding.
+The selected FT02 main has **no permanent bolt tabs**. Its earlier R006 round-hole/slot candidates introduced captured-shaft interference and uncertain registration between the formed inner plate and new flat sheet. The later TR02 study extends the tabs and slots inward and adds backing around the opening. Loose slots allow adjustment; they do not themselves move the foam or cause a leak. Visually align the backing and then retain its position with a suitable support/seal detail. For the selected no-tab files, use the removable front border gauge on the real factory cover; it is not left beneath the gasket.
 
 | Alternative route — quantity one main + one diverter | Quoted total, USD | Ordinary timing observed 2026-10-16 | Finish limitation |
 |---|---:|---|---|
@@ -21,7 +23,7 @@ Totals include the displayed $16.16 delivery; tax was not separately shown. Extr
 
 Upload one DXF per physical part. STEP/STL are alternate representations, not extra items. Acrylic `PONOKO_K020_CUT` files contain the documented 0.20 mm kerf compensation; their path outer diameters are 220.20 and 124.20 mm, targeting finished 220 and 124 mm. Metal DXFs use finished profiles; Ponoko compensates them. Do not compensate twice. Each route ZIP has shop drawings, isolated previews and hashes.
 
-Ponoko currently uses one mutable cart, ID 1268443; the live cart contains the metal pair. Separate private formal exports preserve both alternatives under `build/FT02/ponoko_private/`. Do not combine both pairs. Account/session and destination details are excluded from Git. Only custom part DXFs were uploaded, not scans, photos or the installation assembly. No staff message or order was sent.
+Ponoko uses one mutable cart, ID 1268443. Its contents have changed during quote comparisons; consult the dated quote record and inspect the cart before ordering. Separate private formal exports preserve both material alternatives under `build/FT02/ponoko_private/`. Do not combine both pairs. Account/session and destination details are excluded from Git. Only custom part DXFs were uploaded, not scans, photos or the installation assembly. No staff message or order was sent.
 
 ## Bring these to the installer
 
@@ -62,6 +64,8 @@ Use supported reconciliation and forgiving geometry before requesting another ow
 ## Rebuild and preserve
 
 `canon/fit_trial_design.json` governs selected geometry; `canon/fit_trial_handoff.json` holds editable prose. `canon/repair_form_design.json` governs RF01. Use `./project prepare-fit-trial` or `--stage analysis|blender|documents|audit`. Blender background processing requires the documented desktop permission on this Mac. Preserve annotations separately. Generated checks are software evidence; they must never mark physical checks complete.
+
+Reproduce the separate narrated study with `./project rethink-tabs --stage analysis|speech|render|preview|encode|verify` (or `all`). Local macOS speech synthesis and Blender background rendering require desktop access; the sandbox can return empty speech. The builder rejects empty audio. RF01's original tool geometry is read without alteration.
 
 `./project query solid MAIN`, `solid DIV T1500`, `dimension main.outer_diameter_mm`, `coverage CUT-03`, `clearance`, `depth`, and `compare-states` use the current selected design. `./project query historical ...` is explicitly older reconstruction. `./project validate --git-objects` verifies preserved source bytes and the current manifest. `./project handoff` creates a private local Git bundle and review ZIP; neither is an off-machine backup.
 

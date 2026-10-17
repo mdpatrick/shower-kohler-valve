@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-17",
+  "status": "PASS_FOR_EXPLANATORY_MEDIA",
+  "scope": "TR02 video, display CAD and data consistency; no physical fabrication release",
+  "video": "deliverables/current/fabrication/FT02/tab-rethink/TR02_tabs_foam_and_two_scans_NARRATED.mp4",
+  "visual_review": {
+    "actual_encoded_frames": "Reviewed one extracted frame from every chapter, plus full-size foam, margin, handle and formwork layouts.",
+    "aspect_ratio": "Uniform image scaling; side-by-side scan panels crop instead of stretching.",
+    "captions": "Burned-in exact speech text; all headings and caption lines checked against the frame bounds.",
+    "formwork": "Actual RF01 exported tool shown front/back and moving relative to original capture. Section explicitly schematic; backing is required, not asserted present."
+  },
+  "executed_checks": [
+    "Exact STEP read-back: one valid custom solid per variant",
+    "STL watertightness and CAD top-face projection including fillets",
+    "Captured-surface comparisons at seated plane and straight insertion sweep",
+    "Both scans compared as 3D endpoints with calibration distinguished from validation",
+    "Saved Blender transform properties checked against recorded matrices; packed textures and RF01 dimensions checked",
+    "All encoded movie frames decoded; AAC audio decoded with nonzero RMS and peak below clipping",
+    "Input hashes unchanged",
+    "Local review page HTTP 200"
+  ],
+  "records": [
+    "deliverables/current/fabrication/FT02/tab-rethink/analysis.json",
+    "deliverables/current/fabrication/FT02/tab-rethink/video_checks.json",
+    "deliverables/current/fabrication/FT02/tab-rethink/blender_checks.json"
+  ],
+  "physical_checks": "NOT PERFORMED: engagement, seating, insertion/removal, support, bracing, bonding/seal compatibility, repair strength, service access and spray-water performance.",
+  "prior_recovery_reference": "docs/validation/restore_FT02.json contains the prior full clone/bundle recovery check; this media update is separately checkpointed."
+}

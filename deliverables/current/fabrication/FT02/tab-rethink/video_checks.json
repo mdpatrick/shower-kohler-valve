@@ -1,0 +1,84 @@
+{
+  "status": "PASS",
+  "video_codec": "h264",
+  "audio_codec": "aac",
+  "size": [
+    1440,
+    960
+  ],
+  "duration_seconds": 327.646333,
+  "decoded_all_frames": true,
+  "decoded_audio_rms": 0.16451184451580048,
+  "decoded_audio_peak": 0.8485897183418274,
+  "speech": [
+    {
+      "chapter": "correction",
+      "seconds": 19.5,
+      "speech_rms": 0.16043655517941982
+    },
+    {
+      "chapter": "water",
+      "seconds": 23.125,
+      "speech_rms": 0.15805146522362207
+    },
+    {
+      "chapter": "margin",
+      "seconds": 23.125,
+      "speech_rms": 0.16370983815992632
+    },
+    {
+      "chapter": "tabs",
+      "seconds": 22.5,
+      "speech_rms": 0.16240720355343705
+    },
+    {
+      "chapter": "inward",
+      "seconds": 25.125,
+      "speech_rms": 0.16783197812660428
+    },
+    {
+      "chapter": "rods",
+      "seconds": 22.875,
+      "speech_rms": 0.15533644381323422
+    },
+    {
+      "chapter": "scans",
+      "seconds": 22.0,
+      "speech_rms": 0.15034283466110665
+    },
+    {
+      "chapter": "numbers",
+      "seconds": 30.0,
+      "speech_rms": 0.16998299343824297
+    },
+    {
+      "chapter": "handles",
+      "seconds": 28.0,
+      "speech_rms": 0.15799389041894094
+    },
+    {
+      "chapter": "formtool",
+      "seconds": 26.25,
+      "speech_rms": 0.15594470018430195
+    },
+    {
+      "chapter": "formsection",
+      "seconds": 27.0,
+      "speech_rms": 0.15523581610324433
+    },
+    {
+      "chapter": "formremove",
+      "seconds": 28.25,
+      "speech_rms": 0.15399550890062821
+    },
+    {
+      "chapter": "next",
+      "seconds": 29.875,
+      "speech_rms": 0.15804587389741925
+    }
+  ],
+  "original_sources_unchanged": true,
+  "manufacturing_release_unchanged": true,
+  "physical_tests": "NOT PERFORMED",
+  "video_sha256": "742161c4c8879270c78b746400e71e11b282b9d0c975fbc80ba6f1554262ae66"
+}

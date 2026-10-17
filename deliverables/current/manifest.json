@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "78e48a063afe84ee65df06359e58fe2202d4a59b",
+  "source_commit": "cdae608161efeb869c43e7feb35d7163b4ee735d",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "8ed0073fe2a53e0a7358692ed217d4e1ddcb3773296fbafea6314117a25f0d4b",
+  "source_tree_hash": "1b2b94f762ff23f5e2a22f23daed1316b262f391fe9ce7090b9dc9197887bc98",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -629,8 +629,8 @@
     },
     {
       "path": "deliverables/current/fabrication/FT02/ENGINEERING_RECORD.html",
-      "sha256": "a5e0559be5217d739fa06db911fe7229e739f6c889afe9f6430bb49678a7ea5c",
-      "size_bytes": 12307
+      "sha256": "dcdba1ec31efa5bce27d0c57e40d1891c09c090f6a4844631b6223682f26a9c6",
+      "size_bytes": 12875
     },
     {
       "path": "deliverables/current/fabrication/FT02/ENGINEERING_RECORD.pdf",
@@ -729,8 +729,8 @@
     },
     {
       "path": "deliverables/current/fabrication/FT02/ORDER_AND_NEXT_STEP.html",
-      "sha256": "0cf9b0e04002ace8d8aaec0eb7904b497a9d2edc9baca136eb6f23ad9251aacb",
-      "size_bytes": 2635
+      "sha256": "19643d232116bd3c06e089ba10fd519a3bfb9657fc0057f78051207db02f968b",
+      "size_bytes": 3203
     },
     {
       "path": "deliverables/current/fabrication/FT02/ORDER_AND_NEXT_STEP.pdf",
@@ -1014,8 +1014,8 @@
     },
     {
       "path": "deliverables/current/fabrication/FT02/index.html",
-      "sha256": "9d272afda45ef824e0e73f2913bc345e73885a640b2fb75dc1be1cd4e3ba1665",
-      "size_bytes": 5251
+      "sha256": "8961e457edc5a7fc60abf39a05b9e0f486ace07fbbffd4181cec0e63e09dcfc9",
+      "size_bytes": 5819
     },
     {
       "path": "deliverables/current/fabrication/FT02/packages.json",
@@ -1064,8 +1064,33 @@
     },
     {
       "path": "deliverables/current/fabrication/FT02/ponoko/quotes.json",
-      "sha256": "ba0dc6bdcd2cec907aadfa02c6e66e5b579d8d63fd730406f0c22701ef9b95fc",
-      "size_bytes": 3393
+      "sha256": "8e150d41970d4bb40a3ddf9dad61c6fc78cfb37cacdda69ea6970eac34082991",
+      "size_bytes": 3533
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/tabbed-study/FT02_MAIN_220_T1500_TAB_STUDY_7MM_QUOTE_ONLY.step",
+      "sha256": "887cf7e61979642a52e465b37b97235bfc30dc6fdc921cdef307474cac8a6f17",
+      "size_bytes": 85692
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/tabbed-study/FT02_MAIN_220_T1500_TAB_STUDY_7MM_QUOTE_ONLY_PONOKO_K020_CUT.dxf",
+      "sha256": "64a145e445dde8589dcb1cdf25cc356d9b48c09ca41138b8c19a2dd2a376ea28",
+      "size_bytes": 18509
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/tabbed-study/checks.json",
+      "sha256": "7a8c7794e42ef6d03b97a3efa514ce0fea6ec7fea40c6fec8d1eeab9d1c2572b",
+      "size_bytes": 867
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/tabbed-study/ponoko_tabbed_acrylic_rush_2026-10-16.jpg",
+      "sha256": "334fef10a3a0788b1dc71454b4249a01de99515b6d9239d265b87d4b911487d8",
+      "size_bytes": 163083
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/tabbed-study/quote.json",
+      "sha256": "97ae2770c98453baf18600a1a703425ea98b3dfd99bc064105b27ee8765b9579",
+      "size_bytes": 2712
     },
     {
       "path": "deliverables/current/fabrication/FT02/ponoko/upload_geometry_check.json",
@@ -1171,6 +1196,136 @@
       "path": "deliverables/current/fabrication/FT02/tab-explainer/tabs_overview.jpg",
       "sha256": "240abf5dc1d0e1dbbbf8722c144c7b469e7d1f0363772e05d7b4f91a6da2d269",
       "size_bytes": 149876
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/READ_ME.txt",
+      "sha256": "4a952e57fbceae4a66a7aa24e1c0028d08c8e9c20dca43f92a7ef93a5d96e79a",
+      "size_bytes": 3377
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_INWARD_0MM_TABS_EXPLANATORY_NOT_RELEASED.step",
+      "sha256": "b3c3736154b0b9d77b08b9544c569345cb70e44c3bfb52ebc8f901a28da6a54e",
+      "size_bytes": 96864
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_INWARD_1MM_TABS_EXPLANATORY_NOT_RELEASED.step",
+      "sha256": "92a9d834d250c8de336902bd1aa2f0bf88d65e6f20812273cd3e7fc196b73a2b",
+      "size_bytes": 96841
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_INWARD_2MM_TABS_EXPLANATORY_NOT_RELEASED.step",
+      "sha256": "1d4000af71a58dc1b746f1e365fb44be757eb7b9c1cb5c15a7f629eae799b2e9",
+      "size_bytes": 96937
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_captions.srt",
+      "sha256": "cc3212ea1ceaa5113b0fc3fbfc4e939363cf26854357a9bae31e43defad73039",
+      "size_bytes": 6920
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_tabs_foam_and_two_scans_NARRATED.mp4",
+      "sha256": "742161c4c8879270c78b746400e71e11b282b9d0c975fbc80ba6f1554262ae66",
+      "size_bytes": 13697839
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_tabs_scans_and_handles.blend",
+      "sha256": "b7c3cdc731af3cb280de1fe147996e57c735a8b1664117d780386275625b9838",
+      "size_bytes": 90149790
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_transcript.txt",
+      "sha256": "643ca6480cf9ca48658a687f63ecf27de232b1ae8609b42cd8ab541a432bfc5f",
+      "size_bytes": 6316
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/analysis.json",
+      "sha256": "b1b78204a3086121d95de5c9e6d8c934f54fae749560799e7e8d745cdfee278d",
+      "size_bytes": 19170
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/blender_checks.json",
+      "sha256": "e0ee504e6dfc49dbce588bbe0a9f797b3a2aeb36f14b2d8a1de9ff0cc515cafd",
+      "size_bytes": 3469
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/index.html",
+      "sha256": "ee5256658103407fa2ae550dfe03195c8f941ed87cd3f3849fcf12f91c85c5ef",
+      "size_bytes": 16394
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/correction.jpg",
+      "sha256": "ab3c66f2825fa9aa2d0a9e71d282f24b85c28b7348c2c0b54cb4f1cb0089c489",
+      "size_bytes": 159073
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/formremove.jpg",
+      "sha256": "61260c31ef6c8beb2c710583ab40635573d35b533ac5d0a1e01467cd5b785d10",
+      "size_bytes": 205822
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/formsection.jpg",
+      "sha256": "3640cfa26fd4607d4443e5f94d6449880358bee6174e58792e1a00e6e942a41d",
+      "size_bytes": 185793
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/formtool.jpg",
+      "sha256": "783e1faec75cf5a59ffcd9d59bd53f62bc151cda1ecc1c514f62cc63118a973f",
+      "size_bytes": 173176
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/handles.jpg",
+      "sha256": "45ffdf6c78c73e09e1083f83941e4b3e7b19d3bfd00ca97fc8aad10cdf8a359b",
+      "size_bytes": 174811
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/inward.jpg",
+      "sha256": "200453c40512b33979dfa4702bd90e0470813d9939e120b2014e2912f72edd44",
+      "size_bytes": 176154
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/margin.jpg",
+      "sha256": "d0dee46617bc5fd920e64af6028ef09cb87a4581ff39e78db446e7b90a57966f",
+      "size_bytes": 172056
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/next.jpg",
+      "sha256": "921f2b1a4bd33c731db7161a19ba7f7ac4f886ee9027c2688f51c0262f4315e9",
+      "size_bytes": 228624
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/numbers.jpg",
+      "sha256": "3ae4aa7cb231d35cb6b8a725f578c29a0a4984483a3155c393cee9cdaebcef31",
+      "size_bytes": 197897
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/rods.jpg",
+      "sha256": "ebde967bbb82b4510133c6bb37d416e0b055b8311a9da9b7914c91ec3d444c6c",
+      "size_bytes": 200378
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/scans.jpg",
+      "sha256": "3f78afd783dbcbbe64a9aefcd6130c778547d10cb82b2c18250195bd7ffc4853",
+      "size_bytes": 268600
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/tabs.jpg",
+      "sha256": "e3f76248178ab289d9d5485a6c74755f17e22a7e2214552b33bea90054ebdf4d",
+      "size_bytes": 168286
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/water.jpg",
+      "sha256": "32639f8807642bedbfa80e9e361c1c198135056bab6a110678d93f2aea2a0432",
+      "size_bytes": 195215
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/story.json",
+      "sha256": "1954ca2c9fc066ee30405531a34c5bdfe30c8fffa89371c47eaaea40afb75a0f",
+      "size_bytes": 20605
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-rethink/video_checks.json",
+      "sha256": "98f9e15d85e84fc1e36d75272cf9358f96b16903d05f06d7c4126b5710db4b35",
+      "size_bytes": 1841
     },
     {
       "path": "deliverables/current/fabrication/FT02/visual_review.json",

@@ -1,0 +1,98 @@
+{
+  "status": "PASS",
+  "fresh_saved_file_readback": true,
+  "scene_names": [
+    "RF01 | actual temporary form front and rear",
+    "RF01 | exploded placement and withdrawal",
+    "TR02 | actual inner plate attached",
+    "TR02 | added inward support",
+    "TR02 | factory handles enter from front",
+    "TR02 | longer tabs, fixed outline",
+    "TR02 | original captured installation",
+    "TR02 | original scan without overlays",
+    "TR02 | rod_A close view",
+    "TR02 | rod_B close view"
+  ],
+  "source_captures": [
+    {
+      "object": "ATTACHED original capture",
+      "source": "data/extracted/polycam-inner-plate-attached/10_15_2026.obj",
+      "saved_transform_max_difference": 1.4901161193847656e-08,
+      "vertices": 333573
+    },
+    {
+      "object": "PRIMARY original capture",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 236359
+    },
+    {
+      "object": "PRIMARY original capture.001",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 215256
+    },
+    {
+      "object": "PRIMARY original capture.002",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 236359
+    },
+    {
+      "object": "PRIMARY original capture.003",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 215256
+    },
+    {
+      "object": "PRIMARY original capture.004",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 236359
+    },
+    {
+      "object": "PRIMARY original capture.005",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 215256
+    },
+    {
+      "object": "PRIMARY original capture.006",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 236359
+    },
+    {
+      "object": "PRIMARY original capture.007",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 215256
+    },
+    {
+      "object": "PRIMARY original capture.008",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 236359
+    },
+    {
+      "object": "PRIMARY original capture.009",
+      "source": "data/extracted/shower-hole-valve-polycam/10_14_2026.obj",
+      "saved_transform_max_difference": 2.421438694000244e-08,
+      "vertices": 215256
+    }
+  ],
+  "RF01_actual_export_instances": 3,
+  "RF01_bounds_mm": [
+    240,
+    240,
+    24
+  ],
+  "factory_handle_scene_backing": "TR02 inward_2 CAD export",
+  "packed_images": [
+    "0d630c10162ef4d3889cebe53165c43f.jpg",
+    "6dd45d4c3692f2ee8598a843e6bf7529.jpg",
+    "8d315f2f146e544a4090fd648b387e65.jpg"
+  ],
+  "blend_sha256": "b7c3cdc731af3cb280de1fe147996e57c735a8b1664117d780386275625b9838",
+  "physical_checks": "NOT PERFORMED; no fit, repair strength or sealing certification"
+}

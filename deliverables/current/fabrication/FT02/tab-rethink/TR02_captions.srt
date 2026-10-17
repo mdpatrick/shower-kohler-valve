@@ -1,0 +1,155 @@
+1
+00:00:00,300 --> 00:00:05,633
+You were right. Adding tabs inside the opening does not move the foam or use up its backing margin.
+
+2
+00:00:05,833 --> 00:00:10,110
+Both outside circles stay the same size. Only the gold areas change.
+
+3
+00:00:10,310 --> 00:00:18,511
+My earlier video separately shifted the entire backing plate. That was a hypothetical alignment error, not something that tabs automatically cause.
+
+4
+00:00:19,800 --> 00:00:23,148
+Your concern is shower spray getting behind the trim and into the wall.
+
+5
+00:00:23,348 --> 00:00:32,449
+There are two interfaces to address. The factory foam contacts the front of the custom backing. The custom backing also needs an appropriate seal to the travertine.
+
+6
+00:00:32,649 --> 00:00:41,658
+The foam does not have to line up with the opening edge. It needs continuous effective contact around the opening. Keep the factory cover drain open toward the shower.
+
+7
+00:00:42,925 --> 00:00:46,578
+Here the purple foam stays fixed. Blue is the backing underneath it.
+
+8
+00:00:46,778 --> 00:00:55,583
+Only in this example, I deliberately position the whole backing two millimeters to one side. A smaller opening leaves more material underneath the same foam.
+
+9
+00:00:55,783 --> 00:01:04,824
+A loss of full width is not a proven leak threshold. We have no validated minimum partial contact width. Keeping the whole band supported is the more forgiving target.
+
+10
+00:01:06,050 --> 00:01:11,354
+This new study extends each tab farther inward, and uses an eighteen by ten millimeter slot.
+
+11
+00:01:11,554 --> 00:01:16,674
+The slot extends toward the center, where the captured rods need more room in our current overlay.
+
+12
+00:01:16,874 --> 00:01:27,322
+These are loose locating features. They help get close, while visual alignment and a suitable retention detail establish the final position. They do not need to be precision dowels.
+
+13
+00:01:28,550 --> 00:01:35,593
+I also tested adding one and two millimeters of backing around the interior opening. The outside diameter stays unchanged.
+
+14
+00:01:35,793 --> 00:01:41,343
+The two millimeter version has an opening about one hundred twelve by one hundred forty seven millimeters.
+
+15
+00:01:41,543 --> 00:01:52,396
+In this nominal layout, its smallest extra foam support is about two point six millimeters, including the slots. Neither smaller opening added a captured surface clash in the tested placement.
+
+16
+00:01:53,675 --> 00:01:58,285
+The new slots remove the small seated clash that the earlier tight tab showed in this model.
+
+17
+00:01:58,485 --> 00:02:05,652
+Getting the plate into position is a separate question. The captured lower left end hardware still intersects the tab during a straight approach.
+
+18
+00:02:05,852 --> 00:02:15,312
+Check whether that end hardware comes off, or whether the rod can be retracted. Do not force the acrylic over it. This modeled overlap is not proof of a physical defect.
+
+19
+00:02:16,550 --> 00:02:24,000
+Here are both actual three dimensional captures. The first shows exposed valve hardware. The second shows your inner plate attached.
+
+20
+00:02:24,200 --> 00:02:30,918
+I have kept their source geometry separate and unchanged. The second scan is not a precision registration of the first.
+
+21
+00:02:31,118 --> 00:02:37,256
+It confirms the attached state, but the plate and end hardware hide parts of the rod path that a new backing must clear.
+
+22
+00:02:38,550 --> 00:02:44,156
+They do not show one consistent error. Your rod tip distance is one hundred nine point eight millimeters.
+
+23
+00:02:44,356 --> 00:02:58,008
+The original scan gives about one hundred nine point seven after improving the visible tip centers and using your eighty millimeter control spacing as a comparison scale. The attached scan gives about one hundred eleven point seven from visible end picks.
+
+24
+00:02:58,208 --> 00:03:07,272
+Eighty millimeters is a calibration input here, not an independent check. Your coplanar inner plate measurements remain the stronger evidence for the factory hole layout.
+
+25
+00:03:08,550 --> 00:03:17,850
+The complete handles do not have to pass through the custom backing. They attach from the shower side, through the factory trim, onto the inner plate hubs and valve adapters.
+
+26
+00:03:18,050 --> 00:03:23,089
+The hardware occupying the backing plane, and the assembly path, control our opening.
+
+27
+00:03:23,289 --> 00:03:35,271
+The two millimeter inset still clears the factory opening footprints in this reference layout by at least about eight point six millimeters. The lower footprint is assumed, and these exterior models cannot prove hidden engagement.
+
+28
+00:03:36,550 --> 00:03:42,388
+This is the proposed formwork. It is a separate, temporary printed tool, not another escutcheon.
+
+29
+00:03:42,588 --> 00:03:50,658
+The front panel is two hundred forty millimeters across and twelve millimeters thick. A twelve millimeter deep collar projects behind it into the opening.
+
+30
+00:03:50,858 --> 00:04:01,562
+The panel and collar are one piece. A separate protective cover, removable film, and a stable padded front brace complete the setup. Use it only if the fit trial finds missing support.
+
+31
+00:04:02,800 --> 00:04:09,811
+This section shows the form holding the front surface of a small repair. The lined, wall-facing side sets the finished plane.
+
+32
+00:04:10,011 --> 00:04:18,145
+Repair material is placed from the rear, only in missing support zones outside the collar. The center stays empty for the valve and service access.
+
+33
+00:04:18,345 --> 00:04:28,493
+The fresh patch needs suitable sound substrate and permanent backing. The temporary front brace must not load the valve rods or pipes. The form does not supply the final waterproofing.
+
+34
+00:04:29,800 --> 00:04:35,404
+Here the actual tool is shown apart from the captured installation, then moving toward its working position.
+
+35
+00:04:35,604 --> 00:04:44,439
+The collar narrows slightly toward the rear, so the tool withdraws toward the shower after appropriate curing. Remove the film, pads, cover and brace too.
+
+36
+00:04:44,639 --> 00:04:56,830
+The modeled collar clears the tested captured surfaces. Full panel seating, bracing, release and service access still need a dry rehearsal. Recheck the backing plate and handles on the finished support before sealing.
+
+37
+00:04:58,050 --> 00:05:05,066
+Your proposal is worth testing: longer tabs with adjustment slots, and a modestly smaller opening for more foam support.
+
+38
+00:05:05,266 --> 00:05:14,516
+Align the backing with the actual trim before locking its position. The bonding and sealing detail must suit acrylic or metal and travertine, and preserve service access.
+
+39
+00:05:14,716 --> 00:05:26,698
+The new shapes are prepared as a separate study. No order files were silently replaced. The physical trial should settle end clearance, handle attachment, and continuous contact without a new measurement survey.
