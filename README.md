@@ -16,6 +16,8 @@ Viewing the saved browser review needs Python 3.9 or newer, but no CAD installat
 
 Use [environment/README.md](environment/README.md) for validation, optional rebuilding and the tested software versions. The GitHub repository was public when checked on October 17, 2026. The owner explicitly requested this repository upload, including Polycams and recent artifacts; see the [transfer record](docs/decisions/github_transfer_2026-10-17.json).
 
+The [GitHub recovery check](docs/validation/github_remote_restore_2026-10-17.json) verified a full remote clone, all four original ZIPs, 588 saved artifacts and the review launcher under Apple Python 3.9.6 without a virtual environment.
+
 ## Files to use
 
 | Purpose | Current artifact |

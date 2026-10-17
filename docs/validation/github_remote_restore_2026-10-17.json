@@ -1,0 +1,150 @@
+{
+  "date": "2026-10-17",
+  "status": "PASS",
+  "repository": "https://github.com/mdpatrick/shower-kohler-valve",
+  "remote_source": "https://github.com/mdpatrick/shower-kohler-valve.git",
+  "verified_commit": "cd9b98b3f20390bd72f7dc6b6bde1f58cb351437",
+  "history_commit_count": 45,
+  "tracked_file_count": 866,
+  "complete_history_and_tree_match": true,
+  "git_fsck_full": "PASS",
+  "original_archives": [
+    {
+      "id": "SCAN-WALL",
+      "path": "data/raw/polycam/shower-hole-valve-polycam.zip",
+      "sha256": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
+      "size_bytes": 36799744,
+      "status": "PASS",
+      "ZIP_CRC": "PASS"
+    },
+    {
+      "id": "SCAN-PLATE-1",
+      "path": "data/raw/polycam/plates-side-1-polycam.zip",
+      "sha256": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
+      "size_bytes": 4072620,
+      "status": "PASS",
+      "ZIP_CRC": "PASS"
+    },
+    {
+      "id": "SCAN-PLATE-2",
+      "path": "data/raw/polycam/plates-side-2-polycam.zip",
+      "sha256": "393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781",
+      "size_bytes": 4448807,
+      "status": "PASS",
+      "ZIP_CRC": "PASS"
+    },
+    {
+      "id": "SCAN-INNER-ATTACHED",
+      "path": "data/raw/polycam/polycam-inner-plate-attached.zip",
+      "sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+      "size_bytes": 23654985,
+      "status": "PASS",
+      "ZIP_CRC": "PASS"
+    }
+  ],
+  "manifest_artifacts_verified": 588,
+  "project_validate_git_objects": {
+    "status": "PASS",
+    "scope": "evidence/revision/export snapshot integrity only",
+    "revision": "R006",
+    "input_checks": [
+      {
+        "id": "SCAN-WALL",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      },
+      {
+        "id": "SCAN-PLATE-1",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      },
+      {
+        "id": "SCAN-PLATE-2",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      },
+      {
+        "id": "SCAN-INNER-ATTACHED",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      }
+    ],
+    "errors": [],
+    "physical_fit": "UNRESOLVED",
+    "fabrication_approval": "NOT GIVEN"
+  },
+  "validation_without_virtual_environment": true,
+  "validation_python": "/usr/bin/python3 (3.9.6)",
+  "Downloads_accessed": false,
+  "canonical_inputs_unchanged": true,
+  "HTTP_checks": [
+    {
+      "path": "fabrication/FT02/index.html",
+      "status": 200,
+      "content_length": 5819
+    },
+    {
+      "path": "fabrication/FT02/formwork-print/index.html",
+      "status": 200,
+      "content_length": 3701
+    },
+    {
+      "path": "fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip",
+      "status": 200,
+      "content_length": 3804117
+    },
+    {
+      "path": "fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_GUIDE.pdf",
+      "status": 200,
+      "content_length": 1053920
+    },
+    {
+      "path": "fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.3mf",
+      "status": 200,
+      "content_length": 168902
+    },
+    {
+      "path": "fabrication/FT02/FT02_CLEAR_FIT_TRIAL.zip",
+      "status": 200,
+      "content_length": 373411
+    },
+    {
+      "path": "fabrication/FT02/FT02_METAL_FIT_TRIAL.zip",
+      "status": 200,
+      "content_length": 373013
+    },
+    {
+      "path": "fabrication/FT02/tab-rethink/TR02_tabs_foam_and_two_scans_NARRATED.mp4",
+      "status": 200,
+      "content_length": 13697839
+    },
+    {
+      "path": "visualizations/index.html",
+      "status": 200,
+      "content_length": 1782
+    },
+    {
+      "path": "visualizations/shower-measurements.html",
+      "status": 200,
+      "content_length": 675479
+    },
+    {
+      "path": "visualizations/bolt-tabs-and-foam-margin.html",
+      "status": 200,
+      "content_length": 13009
+    }
+  ],
+  "clone_worktree_clean": true,
+  "full_CAD_rebuild_performed": false,
+  "physical_fit": "NOT PERFORMED",
+  "scope": "Fresh full HTTPS clone from GitHub, committed raw bytes, ZIP integrity, saved artifact hashes and local serving. No CAD rebuild or physical fit claim.",
+  "review_launcher": {
+    "status": "PASS",
+    "Python": "3.9.6",
+    "fresh_local_server_started": true,
+    "served_from_fresh_GitHub_clone": true,
+    "temporary_server_stopped": true,
+    "browser_open_suppressed_for_test": true
+  },
+  "earlier_failure_and_correction": "docs/validation/laptop_launcher_2026-10-17.json"
+}
