@@ -1,0 +1,104 @@
+{
+  "revision": "RF03",
+  "status": "PASS_FOR_PRINT_HANDOFF_WITH_STATED_LIMITS",
+  "audit_type": "Fresh adversarial review and file read-back by same agent; no independent reviewer or physical certification claimed.",
+  "parts": [
+    {
+      "id": "D12",
+      "size_mm": [
+        240,
+        240,
+        20
+      ],
+      "slot_dimensions_mm": [
+        12,
+        8
+      ],
+      "slot_centers_print_xy_mm": [
+        [
+          70.375,
+          142.6999969482422
+        ],
+        [
+          169.1649932861328,
+          96.25
+        ]
+      ],
+      "STL_components": 1,
+      "STL_closed_oriented": true,
+      "STEP_valid_solids": 1,
+      "3MF_mm_one_object_geometry_only": true,
+      "3MF_independent_trimesh_import": "PASS",
+      "max_unsupported_layer_area_mm2_with_0_03mm_lateral_allowance": 0,
+      "print_bed_z0": true,
+      "slicer_execution": "NOT RUN - equipment unknown; file geometry checked only"
+    },
+    {
+      "id": "D24_RELIEVED",
+      "size_mm": [
+        240,
+        240,
+        32
+      ],
+      "slot_dimensions_mm": [
+        12,
+        8
+      ],
+      "slot_centers_print_xy_mm": [
+        [
+          70.375,
+          142.6999969482422
+        ],
+        [
+          169.1649932861328,
+          96.25
+        ]
+      ],
+      "STL_components": 1,
+      "STL_closed_oriented": true,
+      "STEP_valid_solids": 1,
+      "3MF_mm_one_object_geometry_only": true,
+      "3MF_independent_trimesh_import": "PASS",
+      "max_unsupported_layer_area_mm2_with_0_03mm_lateral_allowance": 0,
+      "print_bed_z0": true,
+      "slicer_execution": "NOT RUN - equipment unknown; file geometry checked only"
+    }
+  ],
+  "package_hashes": "PASS",
+  "package_contents": "Only isolated custom tools, their images, and print guide/settings/costs; no scans, home photos or machine commands.",
+  "PDF_pages": 3,
+  "PDF_visual_review": "See docs/validation/RF03_print_2026-10-17.json after rendered-page inspection.",
+  "engineering_review": [
+    {
+      "challenge": "Thinner panel is less stiff. Is weight reduction hiding a support requirement?",
+      "resolution": "8 mm is a supported-tool design choice, not minimum engineered thickness. Broad independent padded bracing remains required; no rod-nut clamping, pressure casting or tamping. Physical seating/deflection and release rehearsal required."
+    },
+    {
+      "challenge": "Moving the front tabs from Z9.05..12.05 to Z5.05..8.05 can change clearance.",
+      "resolution": "Recomputed actual captured seated slice and conditional nut-removed forward sweep: zero added-tab overlap. Unknown rod sections/scan errors remain unverified; no guarantee of physical clearance."
+    },
+    {
+      "challenge": "Does the lighter revision change the molding contour or deeper rear reliefs?",
+      "resolution": "STEP boolean symmetric difference of RF02/RF03 rear geometry below Z0.05 is below 0.01 mm3. Same collar surfaces and reliefs."
+    },
+    {
+      "challenge": "A nice printer may have a small bed.",
+      "resolution": "Explicit 250x250 usable area including brim; 240 mm actual diameter. Do not scale. Small bed requires separately designed split tool, not an automatic slicer cut."
+    },
+    {
+      "challenge": "Will thin tabs or collar require supports?",
+      "resolution": "Tabs start on the bed and end at 3 mm. Collar grows from the face, tapering by 1 degree. Delivered mesh layer-support test passes; friend must still inspect actual slicer preview."
+    },
+    {
+      "challenge": "Does print authorization imply repair/waterproofing approval?",
+      "resolution": "No: authorized temporary print and dry fit only. All form/film/pads removed; physical repair suitability, support, engagement and water sealing remain separate."
+    },
+    {
+      "challenge": "Is $75 a measured quote?",
+      "resolution": "No. Explicit whole-spool/wear/labor gift budget with one retry. Filament mass is geometry estimate; no slicer runtime or utility tariff measurement."
+    }
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "permanent_use": "NOT APPROVED",
+  "zip_sha256": "6f31888367e80287478535a8d0794a9a54975dc0f4a61972c188d236b29771f1"
+}

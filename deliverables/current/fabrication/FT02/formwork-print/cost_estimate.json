@@ -1,0 +1,76 @@
+{
+  "revision": "RF03",
+  "payment_recommendation_usd": 75,
+  "assumptions": {
+    "currency": "USD",
+    "density_g_cm3_for_upper_bound": 1.3,
+    "filament_budget_usd_kg": 35,
+    "one_attempt_print_hours_budget": [
+      6,
+      16
+    ],
+    "electricity_average_kw_budget": 0.2,
+    "electricity_usd_kwh_budget": 0.5,
+    "drying_and_heatup_kwh_budget": 1.5,
+    "generous_payment_usd": 75,
+    "payment_breakdown_usd": {
+      "whole_1kg_spool_with_shipping_tax_allowance": 45,
+      "electricity_drying_and_one_retry_allowance": 5,
+      "wear_and_consumables": 10,
+      "setup_and_cleanup_thank_you": 15
+    },
+    "scope": "One selected form, one successful print plus one retry. Budget assumptions, not a vendor quote or guarantee of friend's labor price. One kg covers two conservative solid-body prints with reasonable waste. Actual slicer reports supersede mass/time estimates."
+  },
+  "sources": [
+    {
+      "url": "https://www.prusa3d.com/category/petg/?filters=%7B%22brands%22%3A%5B%2224824bd8-0ec7-4cc5-aea4-c3ac7c16e2d0%22%5D%7D",
+      "accessed": "2026-10-17",
+      "claim": "Official category search returned standard 1 kg PETG listings at $25.49 sale; regional prices vary. Use $35/kg for conservative consumed-material budgeting, $45 delivered whole-spool allowance, not live checkout price."
+    },
+    {
+      "url": "https://polymaker.com/wp-content/uploads/lana-downloads/TDS_Polymaker_PETG_V2.0_2025-11-17.pdf",
+      "accessed": "2026-10-17",
+      "claim": "PETG density 1.30 g/cm3 used as a conservative standard-unfilled-PETG mass assumption."
+    },
+    {
+      "url": "https://help.prusa3d.com/article/petg_2059",
+      "accessed": "2026-10-17",
+      "claim": "PETG functional use, material-specific print profile and suitable bed surface/release layer."
+    },
+    {
+      "url": "https://help.prusa3d.com/article/infill_42",
+      "accessed": "2026-10-17",
+      "claim": "Perimeters and infill have different roles; 100 percent infill is usually unnecessary. Five walls/25 percent here are design choices, not manufacturer's certification of this tool."
+    }
+  ],
+  "parts": [
+    {
+      "id": "D12",
+      "solid_mass_upper_bound_g_at_density_1_30": 346.15136174809373,
+      "approximate_print": {
+        "method": "Approximate cross-section integration: 5 x 0.45 mm walls, 1.2 mm skins, 25% infill. No printer toolpath/timing simulation.",
+        "body_mm3": 143210.62464536575,
+        "body_grams_at_1_30": 186.17381203897548,
+        "planning_range_grams_with_brim_purge": [
+          160,
+          240
+        ]
+      },
+      "CAD_volume_reduction_percent": 32.40350069477111
+    },
+    {
+      "id": "D24_RELIEVED",
+      "solid_mass_upper_bound_g_at_density_1_30": 356.9514639050224,
+      "approximate_print": {
+        "method": "Approximate cross-section integration: 5 x 0.45 mm walls, 1.2 mm skins, 25% infill. No printer toolpath/timing simulation.",
+        "body_mm3": 151518.2110664,
+        "body_grams_at_1_30": 196.97367438632,
+        "planning_range_grams_with_brim_purge": [
+          170,
+          260
+        ]
+      },
+      "CAD_volume_reduction_percent": 31.734211617066876
+    }
+  ]
+}

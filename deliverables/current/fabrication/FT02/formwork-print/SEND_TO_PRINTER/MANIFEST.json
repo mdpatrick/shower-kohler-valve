@@ -1,0 +1,71 @@
+{
+  "revision": "RF03",
+  "quantity": "Print one chosen variant, not every format",
+  "files": [
+    {
+      "file": "CAD_REFERENCE/RF03_D12_mm.step",
+      "bytes": 122491,
+      "sha256": "f3e52c98bee446015d23991b32e80957e6978c9bb9ff157713748f0629aaecd3"
+    },
+    {
+      "file": "CAD_REFERENCE/RF03_D24_RELIEVED_mm.step",
+      "bytes": 168147,
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7"
+    },
+    {
+      "file": "COST_ESTIMATE.json",
+      "bytes": 3166,
+      "sha256": "b146555c9888df7a2b67f91847fe3422833d281d56664845860e966b34ab33c6"
+    },
+    {
+      "file": "OPTIONAL_DEEPER/PREVIEW.png",
+      "bytes": 1024621,
+      "sha256": "b4210e9efabc808dcfede05b66de4eb742540b70c789dbe4e3c103b8042b78ee"
+    },
+    {
+      "file": "OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+      "bytes": 200926,
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb"
+    },
+    {
+      "file": "OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+      "bytes": 834684,
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+    },
+    {
+      "file": "ORIENTATION.png",
+      "bytes": 37856,
+      "sha256": "741b7a603a827ca5cb93f9755b7f7708b0c6dd5b5eaef690cd535d69cb111ba4"
+    },
+    {
+      "file": "PREVIEW.png",
+      "bytes": 994901,
+      "sha256": "bc28beb4870038bcc089949d463bb4bfd6aaea16280670f0b49f679b48a74ccd"
+    },
+    {
+      "file": "PRINT_GUIDE.pdf",
+      "bytes": 1053920,
+      "sha256": "648ea67a006c66a5c4e21797b025a8f1cb64111db49f87fe7623c3a64dd1c394"
+    },
+    {
+      "file": "PRINT_ONE_RF03_D12.3mf",
+      "bytes": 168902,
+      "sha256": "a034ee4b3694cbb34dd1abd1c584a67d26cb17aaf6dde90e3b19bff5a764fa85"
+    },
+    {
+      "file": "PRINT_ONE_RF03_D12.stl",
+      "bytes": 716084,
+      "sha256": "6f7bc5d06ae88250b65654d2701b1bdd65a31f94a9dabd0354b47094bb5a0991"
+    },
+    {
+      "file": "PRINT_SETTINGS.json",
+      "bytes": 978,
+      "sha256": "da63f3df73c1b099ff395f3d7a585af3c4eba1f63c45ab6dd60f13918946eb37"
+    },
+    {
+      "file": "READ_ME_FIRST.txt",
+      "bytes": 2993,
+      "sha256": "ef5e28790c6304b06e3dd4b12accccb82ed01af41c09b4080138e60823c0fdb6"
+    }
+  ]
+}

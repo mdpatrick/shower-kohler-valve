@@ -1,0 +1,24 @@
+{
+  "revision": "RF03",
+  "checks": [
+    {
+      "case": "new_tabs_seated_z5_05_to8_05",
+      "overlap_mm2": 0.0
+    },
+    {
+      "case": "nut_removed_forward_path_5mm_conditional_envelope",
+      "overlap_mm2": 0.0
+    }
+  ],
+  "status": "PASS_IN_CAPTURED_SCOPE",
+  "limits": [
+    "Rod-end nuts must be removed before insertion.",
+    "Hidden rod region uses inferred 5 mm diagnostic envelope, not a measured diameter or error bound.",
+    "Full forming-face seating, stiffness under actual bracing, unseen geometry and release remain physical checks.",
+    "Rear collars match RF02 exactly; RF02 diagnostic collar checks still apply; no claim of global attached-scan registration."
+  ],
+  "source": {
+    "RF02_analysis_sha256": "22233f29e929b5dcb75c9081600671c1f1f425019e8e4435dd9683d28b7acf3c",
+    "registration_sha256": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "revision": "RF03",
+  "scope": "Geometry/export checks; not physical fit or mechanical certification",
+  "parts": [
+    {
+      "id": "D12",
+      "recommended": true,
+      "dimensions_mm": [
+        240,
+        240,
+        20
+      ],
+      "panel_mm": 8,
+      "collar_depth_mm": 12,
+      "continuous_collar_mm": 12,
+      "solid_volume_mm3": 266270.2782677644,
+      "solid_mass_upper_bound_g_at_density_1_30": 346.15136174809373,
+      "old_solid_volume_mm3": 393911.3430496352,
+      "CAD_volume_reduction_percent": 32.40350069477111,
+      "approximate_print": {
+        "method": "Approximate cross-section integration: 5 x 0.45 mm walls, 1.2 mm skins, 25% infill. No printer toolpath/timing simulation.",
+        "body_mm3": 143210.62464536575,
+        "body_grams_at_1_30": 186.17381203897548,
+        "planning_range_grams_with_brim_purge": [
+          160,
+          240
+        ]
+      },
+      "old_12mm_face_same_print_settings_estimate": {
+        "method": "Approximate cross-section integration: 5 x 0.45 mm walls, 1.2 mm skins, 25% infill. No printer toolpath/timing simulation.",
+        "body_mm3": 182996.04183446453,
+        "body_grams_at_1_30": 237.8948543848039,
+        "planning_range_grams_with_brim_purge": [
+          210,
+          310
+        ]
+      },
+      "STEP_valid_connected_solids": 1,
+      "STL_watertight_connected_components": 1,
+      "3MF_valid_connected_components": 1,
+      "3MF_unit": "millimeter",
+      "3MF_has_machine_settings": false,
+      "STEP_STL_volume_difference_percent": 0.004477581755568422,
+      "rear_collar_symmetric_difference_mm3": 0.0,
+      "files": [
+        {
+          "path": "PRINT_ONE_RF03_D12.stl",
+          "sha256": "6f7bc5d06ae88250b65654d2701b1bdd65a31f94a9dabd0354b47094bb5a0991",
+          "bytes": 716084
+        },
+        {
+          "path": "PRINT_ONE_RF03_D12.3mf",
+          "sha256": "a034ee4b3694cbb34dd1abd1c584a67d26cb17aaf6dde90e3b19bff5a764fa85",
+          "bytes": 168902
+        },
+        {
+          "path": "CAD_REFERENCE/RF03_D12_mm.step",
+          "sha256": "f3e52c98bee446015d23991b32e80957e6978c9bb9ff157713748f0629aaecd3",
+          "bytes": 122491
+        }
+      ],
+      "triangles": 14320
+    },
+    {
+      "id": "D24_RELIEVED",
+      "recommended": false,
+      "dimensions_mm": [
+        240,
+        240,
+        32
+      ],
+      "panel_mm": 8,
+      "collar_depth_mm": 24,
+      "continuous_collar_mm": 12,
+      "solid_volume_mm3": 274578.0491577095,
+      "solid_mass_upper_bound_g_at_density_1_30": 356.9514639050224,
+      "old_solid_volume_mm3": 402219.1139395905,
+      "CAD_volume_reduction_percent": 31.734211617066876,
+      "approximate_print": {
+        "method": "Approximate cross-section integration: 5 x 0.45 mm walls, 1.2 mm skins, 25% infill. No printer toolpath/timing simulation.",
+        "body_mm3": 151518.2110664,
+        "body_grams_at_1_30": 196.97367438632,
+        "planning_range_grams_with_brim_purge": [
+          170,
+          260
+        ]
+      },
+      "old_12mm_face_same_print_settings_estimate": {
+        "method": "Approximate cross-section integration: 5 x 0.45 mm walls, 1.2 mm skins, 25% infill. No printer toolpath/timing simulation.",
+        "body_mm3": 191303.62825549877,
+        "body_grams_at_1_30": 248.6947167321484,
+        "planning_range_grams_with_brim_purge": [
+          220,
+          320
+        ]
+      },
+      "STEP_valid_connected_solids": 1,
+      "STL_watertight_connected_components": 1,
+      "3MF_valid_connected_components": 1,
+      "3MF_unit": "millimeter",
+      "3MF_has_machine_settings": false,
+      "STEP_STL_volume_difference_percent": 0.004621683465698705,
+      "rear_collar_symmetric_difference_mm3": 0.0,
+      "files": [
+        {
+          "path": "OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+          "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091",
+          "bytes": 834684
+        },
+        {
+          "path": "OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+          "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb",
+          "bytes": 200926
+        },
+        {
+          "path": "CAD_REFERENCE/RF03_D24_RELIEVED_mm.step",
+          "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7",
+          "bytes": 168147
+        }
+      ],
+      "triangles": 16692
+    }
+  ],
+  "config_sha256": "70dfd52192e570d95c6ba072b95fdd084c144c9826a01de8bb3d1431114fdb66"
+}

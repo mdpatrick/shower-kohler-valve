@@ -1,0 +1,21 @@
+{
+  "material": "Unfilled PETG; use friend's established filament and matching profile",
+  "quantity": "One D12 by default; D24_RELIEVED is an alternative, not an additional required print",
+  "nozzle_mm": 0.4,
+  "layer_height_mm": 0.2,
+  "wall_loops": 5,
+  "top_bottom_solid_thickness_mm": 1.2,
+  "infill_percent": 25,
+  "infill_pattern": "gyroid or cubic",
+  "brim_mm": 5,
+  "support": "off; verify layer preview",
+  "raft": "off",
+  "scale_percent": 100,
+  "minimum_clear_print_area_with_brim_mm": [
+    250,
+    250
+  ],
+  "orientation": "Flat shower-facing face and locator tabs on bed; collar grows upward. Files are pre-oriented and translated to nonnegative XYZ.",
+  "transform_from_installed": "x_print=x+120; y_print=120-y; z_print=8.05-z. Proper 180 degree X rotation plus translation, not reflection.",
+  "gcode": "Not supplied: printer model, firmware, filament and profile unknown. Friend slices locally. Geometry-only 3MF has explicit mm, no machine settings."
+}

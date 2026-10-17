@@ -1,0 +1,70 @@
+{
+  "revision": "RF03",
+  "date": "2026-10-17",
+  "status": "FOR_TEMPORARY_TOOL_PRINT_AND_DRY_FIT",
+  "basis": "Owner requested a friend-ready print of RF02 with the smaller TR03 slots and less waste. Sacrificial temporary tool; no permanent retained liner or installed-water performance approval.",
+  "source_design": "canon/tab_refinement_study.json",
+  "panel_diameter_mm": 240,
+  "panel_thickness_mm": 8,
+  "forming_plane_installed_z_mm": 0.05,
+  "collar_outer_front_mm": [118.35, 145.10],
+  "collar_wall_mm": 2,
+  "draft_deg": 1,
+  "locator_thickness_mm": 3,
+  "locator_z_mm": [5.05, 8.05],
+  "slots": {
+    "A": {"center_mm": [49.165, 23.75], "length_mm": 12, "width_mm": 8},
+    "B": {"center_mm": [-49.625, -22.70], "length_mm": 12, "width_mm": 8}
+  },
+  "tab_width_mm": 16,
+  "tab_root_x_absolute_mm": 67,
+  "variants": [
+    {"id": "D12", "recommended": true, "depth_mm": 12, "continuous_depth_mm": 12, "rear_reliefs": false},
+    {"id": "D24_RELIEVED", "recommended": false, "depth_mm": 24, "continuous_depth_mm": 12, "rear_reliefs": true}
+  ],
+  "rear_relief_boxes_xy_mm": [[-77,7,-53,39],[-18.5,-89,21.5,-65]],
+  "rear_relief_radius_mm": 2,
+  "print": {
+    "material": "Unfilled PETG; use friend's established filament and matching profile",
+    "quantity": "One D12 by default; D24_RELIEVED is an alternative, not an additional required print",
+    "nozzle_mm": 0.4,
+    "layer_height_mm": 0.2,
+    "wall_loops": 5,
+    "top_bottom_solid_thickness_mm": 1.2,
+    "infill_percent": 25,
+    "infill_pattern": "gyroid or cubic",
+    "brim_mm": 5,
+    "support": "off; verify layer preview",
+    "raft": "off",
+    "scale_percent": 100,
+    "minimum_clear_print_area_with_brim_mm": [250,250],
+    "orientation": "Flat shower-facing face and locator tabs on bed; collar grows upward. Files are pre-oriented and translated to nonnegative XYZ.",
+    "transform_from_installed": "x_print=x+120; y_print=120-y; z_print=8.05-z. Proper 180 degree X rotation plus translation, not reflection.",
+    "gcode": "Not supplied: printer model, firmware, filament and profile unknown. Friend slices locally. Geometry-only 3MF has explicit mm, no machine settings."
+  },
+  "engineering": {
+    "thickness_choice": "8 mm chosen as a practical braced-tool compromise, not a proven minimum. Compared with RF02's 12 mm, reduce face material by one third; keep collar and slot XY. A thinner unsupported panel is less stiff, so retain broad padded independent support and rehearse seating/release before fill.",
+    "brace": "Support the broad front annulus with padded bracing without obstructing controls or removal. Rods locate only; never tighten nuts to load the tabs or pull a warped face flat. Hand-place repair material; no pressure casting or tamping.",
+    "limits": "Source capture clearance does not prove full-face seating, hidden clearances, print strength or suitability for a particular repair material. Check the physical print and brace before repair. Remove all plastic, release film and pads after suitable cure.",
+    "liner": "Keep the existing removable approximately 0.05 mm PE release liner allowance; do not fill the central service opening or slots. Rear repair stays within the continuous front 12 mm zone even on D24_RELIEVED.",
+    "owner_measurements": "None requested; printer model/bed is optional equipment information."
+  },
+  "cost_assumptions": {
+    "currency": "USD",
+    "density_g_cm3_for_upper_bound": 1.30,
+    "filament_budget_usd_kg": 35,
+    "one_attempt_print_hours_budget": [6,16],
+    "electricity_average_kw_budget": 0.20,
+    "electricity_usd_kwh_budget": 0.50,
+    "drying_and_heatup_kwh_budget": 1.5,
+    "generous_payment_usd": 75,
+    "payment_breakdown_usd": {"whole_1kg_spool_with_shipping_tax_allowance": 45, "electricity_drying_and_one_retry_allowance": 5, "wear_and_consumables": 10, "setup_and_cleanup_thank_you": 15},
+    "scope": "One selected form, one successful print plus one retry. Budget assumptions, not a vendor quote or guarantee of friend's labor price. One kg covers two conservative solid-body prints with reasonable waste. Actual slicer reports supersede mass/time estimates."
+  },
+  "sources": [
+    {"url":"https://www.prusa3d.com/category/petg/?filters=%7B%22brands%22%3A%5B%2224824bd8-0ec7-4cc5-aea4-c3ac7c16e2d0%22%5D%7D", "accessed":"2026-10-17", "claim":"Official category search returned standard 1 kg PETG listings at $25.49 sale; regional prices vary. Use $35/kg for conservative consumed-material budgeting, $45 delivered whole-spool allowance, not live checkout price."},
+    {"url":"https://polymaker.com/wp-content/uploads/lana-downloads/TDS_Polymaker_PETG_V2.0_2025-11-17.pdf", "accessed":"2026-10-17", "claim":"PETG density 1.30 g/cm3 used as a conservative standard-unfilled-PETG mass assumption."},
+    {"url":"https://help.prusa3d.com/article/petg_2059", "accessed":"2026-10-17", "claim":"PETG functional use, material-specific print profile and suitable bed surface/release layer."},
+    {"url":"https://help.prusa3d.com/article/infill_42", "accessed":"2026-10-17", "claim":"Perimeters and infill have different roles; 100 percent infill is usually unnecessary. Five walls/25 percent here are design choices, not manufacturer's certification of this tool."}
+  ]
+}

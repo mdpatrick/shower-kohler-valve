@@ -1,0 +1,78 @@
+{
+  "revision": "RF03",
+  "date": "2026-10-17",
+  "status": "PASS_FOR_TEMPORARY_TOOL_PRINT_HANDOFF",
+  "executed": [
+    "./project prepare-form-print --stage cad",
+    "./project prepare-form-print --stage capture",
+    "Background Blender src/blender/formwork_print.py",
+    "./project prepare-form-print --stage documents",
+    "./project prepare-form-print --stage audit",
+    "Saved Blender reopened and two CAD mesh dimensions verified",
+    "Poppler rendered all three PDF pages; all visually inspected",
+    "Playwright desktop1200/mobile390: all images loaded, no horizontal overflow",
+    "./project manifest; ./project validate --git-objects: PASS"
+  ],
+  "fresh_adversarial_review": "deliverables/current/fabrication/FT02/formwork-print/audit.json",
+  "PDF_visual_review": {
+    "page_count": 3,
+    "status": "PASS",
+    "observations": "All text, dimensions, tables, images and linked sources legible; no clipping or overlap. Correct printer orientation and temporary-tool scope. Poppler fontconfig warnings resolved using absolute workspace font configuration."
+  },
+  "blender": {
+    "status": "PASS",
+    "objects": [
+      {
+        "scene": "RF03 D12 | print orientation",
+        "object": "RF03 D12 | one connected CAD form",
+        "dimensions_mm": [
+          239.99664187431335,
+          239.99832570552826,
+          20.000001415610313
+        ]
+      },
+      {
+        "scene": "RF03 D24_RELIEVED | print orientation",
+        "object": "RF03 D24_RELIEVED | one connected CAD form",
+        "dimensions_mm": [
+          239.99664187431335,
+          239.99832570552826,
+          32.00000151991844
+        ]
+      }
+    ]
+  },
+  "material_change": "Face12 to8 mm; exact rear collar surfaces retained;3 mm front tabs move fromZ9.05..12.05 to5.05..8.05 and were rechecked. Same12x8 slots. D12 CAD volume32.4 percent lower; approximate same-settings printed-material reduction21.7 percent.",
+  "dependencies_added": {
+    "networkx": "3.7",
+    "lxml": "6.1.3",
+    "purpose": "Isolated project environment: independent Trimesh3MF reader and mesh-layer audit; requirements lock updated."
+  },
+  "integrity_note": "PASS after refreshing the incremental-build snapshot manifest. Initial expected stale fingerprint/link notice resolved; all four source ZIPs matched committed bytes. No selected plate geometry or raw measurements changed.",
+  "physical_tests": "NOT PERFORMED",
+  "printer_model": "Unknown; owner will check at handoff. Files full-size240 mm;250x250 usable area with5 mm brim required. No extra measurement request.",
+  "recovery_scope": "Prior full clone/bundle restoration: docs/validation/restore_FT02.json. New print assets will be checked against their committed Git blobs; no new complete repository restore claimed.",
+  "files": [
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip",
+      "sha256": "6f31888367e80287478535a8d0794a9a54975dc0f4a61972c188d236b29771f1",
+      "bytes": 3804117
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_GUIDE.pdf",
+      "sha256": "648ea67a006c66a5c4e21797b025a8f1cb64111db49f87fe7623c3a64dd1c394",
+      "bytes": 1053920
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_print_forms.blend",
+      "sha256": "bc11910593f83bafaa51b5d202970785b10c1169b6615d25a01eb89df995131a",
+      "bytes": 650175
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/audit.json",
+      "sha256": "d66538cd8e21ddb2a906aac9d148dffd879f539461ca2fec2a4273843b4818fc",
+      "bytes": 4144
+    }
+  ],
+  "browser_links": "All10 local linked targets returned HTTP200."
+}

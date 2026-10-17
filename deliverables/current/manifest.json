@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "51ff7dbb41898d18b63b7d6bf863c7e97633e414",
+  "source_commit": "dba55582ef8e551ebe99e50958babdd0015e6cfc",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "b8b83ab681c38bf19280e55de1cf6a32fa5bb5d44049fbed751aba94fc5e5d34",
+  "source_tree_hash": "ddceeb146fa23e40ec0f6e27454bb3a993bba321146bf4ffad470af71c5e3634",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1053,6 +1053,151 @@
       "size_bytes": 2987
     },
     {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D12_front.png",
+      "sha256": "eca39a6909b56b16e905a746c43f6d2d513d96a7236f53070906e64fc323b189",
+      "size_bytes": 1503386
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D12_print.png",
+      "sha256": "e351076d1acfce76f07ba37c897e48b478d07a80c0f198a2ac47f2b376958f5d",
+      "size_bytes": 1522338
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D12_side.png",
+      "sha256": "e4e82ed09edd6d21dbf1b67297ab2d9727b627545e7c59598f210fc5335b477b",
+      "size_bytes": 1468764
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D12_top.png",
+      "sha256": "da6c996e0442f0de59ab86bfe89b67bb33644df5d348f538e4bdb613ff194b8d",
+      "size_bytes": 1647723
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D24_RELIEVED_front.png",
+      "sha256": "301007408fd916097aa286d0799042831a05ee664131da3a8a3fbb90b4644cbc",
+      "size_bytes": 1509210
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D24_RELIEVED_print.png",
+      "sha256": "55c85e343b693526d3408e805429f4cec4f5cce1dbab527cab215ee138fc1ce7",
+      "size_bytes": 1546938
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D24_RELIEVED_side.png",
+      "sha256": "83dd133dba659f1031c4b2aa5533b6b1d8893bcc8c90729b4dbad7c85848cd02",
+      "size_bytes": 1479222
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/D24_RELIEVED_top.png",
+      "sha256": "633500d7cb9b60f337eb1ce703b57b935e5eb852e04074de5dae6bf69584f18f",
+      "size_bytes": 1649919
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip",
+      "sha256": "6f31888367e80287478535a8d0794a9a54975dc0f4a61972c188d236b29771f1",
+      "size_bytes": 3804117
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_print_forms.blend",
+      "sha256": "bc11910593f83bafaa51b5d202970785b10c1169b6615d25a01eb89df995131a",
+      "size_bytes": 650175
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D12_mm.step",
+      "sha256": "f3e52c98bee446015d23991b32e80957e6978c9bb9ff157713748f0629aaecd3",
+      "size_bytes": 122491
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D24_RELIEVED_mm.step",
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7",
+      "size_bytes": 168147
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/COST_ESTIMATE.json",
+      "sha256": "b146555c9888df7a2b67f91847fe3422833d281d56664845860e966b34ab33c6",
+      "size_bytes": 3166
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/MANIFEST.json",
+      "sha256": "f42652f1ee0663a920dc582b2a81a72e2d4e82694237eeaf8129d06bf5b040ca",
+      "size_bytes": 2214
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PREVIEW.png",
+      "sha256": "b4210e9efabc808dcfede05b66de4eb742540b70c789dbe4e3c103b8042b78ee",
+      "size_bytes": 1024621
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb",
+      "size_bytes": 200926
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091",
+      "size_bytes": 834684
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/ORIENTATION.png",
+      "sha256": "741b7a603a827ca5cb93f9755b7f7708b0c6dd5b5eaef690cd535d69cb111ba4",
+      "size_bytes": 37856
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PREVIEW.png",
+      "sha256": "bc28beb4870038bcc089949d463bb4bfd6aaea16280670f0b49f679b48a74ccd",
+      "size_bytes": 994901
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_GUIDE.pdf",
+      "sha256": "648ea67a006c66a5c4e21797b025a8f1cb64111db49f87fe7623c3a64dd1c394",
+      "size_bytes": 1053920
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.3mf",
+      "sha256": "a034ee4b3694cbb34dd1abd1c584a67d26cb17aaf6dde90e3b19bff5a764fa85",
+      "size_bytes": 168902
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.stl",
+      "sha256": "6f7bc5d06ae88250b65654d2701b1bdd65a31f94a9dabd0354b47094bb5a0991",
+      "size_bytes": 716084
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_SETTINGS.json",
+      "sha256": "da63f3df73c1b099ff395f3d7a585af3c4eba1f63c45ab6dd60f13918946eb37",
+      "size_bytes": 978
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/READ_ME_FIRST.txt",
+      "sha256": "ef5e28790c6304b06e3dd4b12accccb82ed01af41c09b4080138e60823c0fdb6",
+      "size_bytes": 2993
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/audit.json",
+      "sha256": "d66538cd8e21ddb2a906aac9d148dffd879f539461ca2fec2a4273843b4818fc",
+      "size_bytes": 4144
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/capture_checks.json",
+      "sha256": "2a99b2b93a7640a8f630f842b687d2100f5dba7f916e821f1af4461deea59991",
+      "size_bytes": 904
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/cost_estimate.json",
+      "sha256": "b146555c9888df7a2b67f91847fe3422833d281d56664845860e966b34ab33c6",
+      "size_bytes": 3166
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/geometry_checks.json",
+      "sha256": "b958331cbbcac5f1872343f3901f2c321901121fa532598413243707fd89bc64",
+      "size_bytes": 4476
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/formwork-print/index.html",
+      "sha256": "bfc65313c39bc8c904df93f557c03089fbfd3de49cf7c8499a36c2558e9c8ca4",
+      "size_bytes": 3701
+    },
+    {
       "path": "deliverables/current/fabrication/FT02/index.html",
       "sha256": "8961e457edc5a7fc60abf39a05b9e0f486ace07fbbffd4181cec0e63e09dcfc9",
       "size_bytes": 5819
@@ -1329,8 +1474,8 @@
     },
     {
       "path": "deliverables/current/fabrication/FT02/tab-refinement/index.html",
-      "sha256": "d244615423a2e73a05d16a40c5f01eb2f1ea6160d0857e6f1493934c3de3a24e",
-      "size_bytes": 10539
+      "sha256": "c350d6e633448cb827445ae2e52fcce7052aaabec94da398a9c7c20e118f20ed",
+      "size_bytes": 10876
     },
     {
       "path": "deliverables/current/fabrication/FT02/tab-refinement/plate_front.png",
