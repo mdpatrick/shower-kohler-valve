@@ -30,6 +30,7 @@ Use [environment/README.md](environment/README.md) for validation, optional rebu
 | Smaller-slot and deeper-collar studies | [TR03 / RF02](deliverables/current/fabrication/FT02/tab-refinement/index.html) |
 | Narrated explanation using both scans | [TR02 video page](deliverables/current/fabrication/FT02/tab-rethink/index.html) |
 | Finish comparison on captured travertine | [FIN01](deliverables/current/fabrication/FT02/finish-study/index.html) |
+| Earlier interactive measurement and tab explanations | [Portable visualization archive](deliverables/current/visualizations/index.html) |
 | Original scans and hash manifest | [data/raw/polycam](data/raw/polycam) and [canon/inputs.json](canon/inputs.json) |
 
 RF03 is a temporary, removable repair tool. Its default file has a 12 mm collar and smaller locating slots; print one form, choosing the optional relieved 24 mm version only if needed. FT02 remains the separate plain-aperture main/diverter pair for quotes and sacrificial dry fit. A print file or successful software check does not establish physical fit or permanent waterproof installation.

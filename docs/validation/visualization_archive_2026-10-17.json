@@ -1,0 +1,23 @@
+{
+  "status": "PASS",
+  "rows": [
+    {
+      "page": "bolt-tabs-and-foam-margin",
+      "status": 200,
+      "controls_exercised": true,
+      "horizontalOverflow": false
+    },
+    {
+      "page": "shower-measurements",
+      "status": 200,
+      "controls_exercised": true,
+      "horizontalOverflow": false
+    }
+  ],
+  "javascript_errors": [],
+  "date": "2026-10-17",
+  "source_preservation": "Both original HTML fragments copied byte-for-byte; hashes in deliverables/current/visualizations/provenance.json",
+  "visual_inspection": "PASS: both complete page screenshots reviewed at 1280px width; archive notices, diagrams and controls visible",
+  "current_measurements_changed": false,
+  "current_CAD_changed": false
+}

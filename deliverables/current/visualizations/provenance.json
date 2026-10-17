@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-17",
+  "scope": "Owner-requested complete project transfer",
+  "artifacts": [
+    {
+      "name": "shower-measurements.html",
+      "source": "/Users/mdpatrick/.codex/visualizations/2026/10/14/01a13c51-58ac-7a90-95ed-957781ad5347/shower-measurements.html",
+      "preserved_original": "deliverables/current/visualizations/original/shower-measurements.html",
+      "original_sha256": "6a10403a2d4602ed9289b3daf869e39b708114fced0f2ae2ff881bce6c7f352b",
+      "standalone_page": "deliverables/current/visualizations/shower-measurements.html",
+      "adaptation": "Original fragment embedded without edits; surrounding HTML, local CSS tokens and historical-context notice added. No network dependencies."
+    },
+    {
+      "name": "bolt-tabs-and-foam-margin.html",
+      "source": "/Users/mdpatrick/.codex/visualizations/2026/10/14/01a13c51-58ac-7a90-95ed-957781ad5347/bolt-tabs-and-foam-margin.html",
+      "preserved_original": "deliverables/current/visualizations/original/bolt-tabs-and-foam-margin.html",
+      "original_sha256": "22b7a977f11db7713f65e7ee95e946b272e813bfe9078f409075e9513e5606a5",
+      "standalone_page": "deliverables/current/visualizations/bolt-tabs-and-foam-margin.html",
+      "adaptation": "Original fragment embedded without edits; surrounding HTML, local CSS tokens and historical-context notice added. No network dependencies."
+    }
+  ]
+}

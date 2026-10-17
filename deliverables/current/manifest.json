@@ -2,7 +2,7 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "75ea0b0a9bc25e52d19c1e8326488153c9040d9e",
+  "source_commit": "b5e89964f75629dc216c18212b8f496b7e01a9e9",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
   "source_tree_hash": "ce1c5326b26a9d6f019f1d21db07a5a057f9ca962d84d22013970c60d6733a9b",
   "input_hashes": {
@@ -2921,6 +2921,36 @@
       "path": "deliverables/current/review/views/wall_measure.png",
       "sha256": "c052a57477aa935ac62eeee6738a0472a3617623ad4a6b27288ec51107a4a0e3",
       "size_bytes": 1969729
+    },
+    {
+      "path": "deliverables/current/visualizations/bolt-tabs-and-foam-margin.html",
+      "sha256": "9b229e801c15776f8c4696257249a5069200572d5f9e5c94916af58ef129e151",
+      "size_bytes": 13009
+    },
+    {
+      "path": "deliverables/current/visualizations/index.html",
+      "sha256": "b8baf0b94c216ae9d37f253daf3ec649e880adc702aae3c34a6fda80354a2421",
+      "size_bytes": 1782
+    },
+    {
+      "path": "deliverables/current/visualizations/original/bolt-tabs-and-foam-margin.html",
+      "sha256": "22b7a977f11db7713f65e7ee95e946b272e813bfe9078f409075e9513e5606a5",
+      "size_bytes": 11375
+    },
+    {
+      "path": "deliverables/current/visualizations/original/shower-measurements.html",
+      "sha256": "6a10403a2d4602ed9289b3daf869e39b708114fced0f2ae2ff881bce6c7f352b",
+      "size_bytes": 673844
+    },
+    {
+      "path": "deliverables/current/visualizations/provenance.json",
+      "sha256": "9eb4f8f20d6eea5c605cd79c30989623de760927a54db8e6d3f9ca2eb5106f8b",
+      "size_bytes": 1388
+    },
+    {
+      "path": "deliverables/current/visualizations/shower-measurements.html",
+      "sha256": "358d0063282854a820268d435b21aa40dfda9a7811c0ec7b807f879a675fcce5",
+      "size_bytes": 675479
     }
   ],
   "readiness": {
