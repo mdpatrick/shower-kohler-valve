@@ -1,0 +1,12 @@
+{
+  "date": "2026-10-17",
+  "initial_remote_commit": "bba6a36fc1c44eefb0e85a60034de47442dcc680",
+  "initial_result": "Fresh GitHub clone recovered; validation launcher failed under Apple Python 3.9.6 before reading project data, due to Python 3.12-only f-string quote reuse in scripts/project.py",
+  "correction": "Changed inner string delimiters in one f-string; Python 3.12 AST is identical before and after",
+  "Python_3_9_6_compile": "PASS; compiled in memory to avoid writing outside the repository",
+  "Python_3_9_6_help": "PASS",
+  "Python_3_9_6_validate_git_objects": "PASS",
+  "measurement_or_geometry_changes": false,
+  "full_CAD_rebuild": false,
+  "remaining_remote_test": "Repeat against updated remote clone after pushing this correction"
+}

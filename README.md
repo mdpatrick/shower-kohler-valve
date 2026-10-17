@@ -12,7 +12,7 @@ cd shower-kohler-valve
 ./project review
 ```
 
-Viewing the saved browser review needs Python 3, but no CAD installation or rebuild. The launcher opens the local FT02 review at `http://127.0.0.1:8765/fabrication/FT02/index.html`. Open the latest print guide at `http://127.0.0.1:8765/fabrication/FT02/formwork-print/index.html`. PDFs and the print ZIP can also be opened directly from the checkout. After cloning, the saved review works offline.
+Viewing the saved browser review needs Python 3.9 or newer, but no CAD installation or rebuild. The launcher opens the local FT02 review at `http://127.0.0.1:8765/fabrication/FT02/index.html`. Open the latest print guide at `http://127.0.0.1:8765/fabrication/FT02/formwork-print/index.html`. PDFs and the print ZIP can also be opened directly from the checkout. After cloning, the saved review works offline.
 
 Use [environment/README.md](environment/README.md) for validation, optional rebuilding and the tested software versions. The GitHub repository was public when checked on October 17, 2026. The owner explicitly requested this repository upload, including Polycams and recent artifacts; see the [transfer record](docs/decisions/github_transfer_2026-10-17.json).
 

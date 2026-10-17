@@ -245,7 +245,7 @@ def prepare_fit_trial(stage='all',force=False):
         write(statefile,state)
     # Old pages remain available as evidence but identify the current recommendation.
     d=read('canon/fit_trial_design.json')
-    banner=f'<aside id="ft01-current" style="padding:16px;background:#e5f1f3;border:2px solid #236679;margin:12px;color:#183e48">Current quote and dry-fit recommendation: <a href="/{out.removeprefix('deliverables/current/')}/index.html">{d["revision"]} main {d["main"]["outer_diameter_mm"]:g} / diverter {d["diverter"]["outer_diameter_mm"]:g}, upright capsule opening</a>. This page is a historical study.</aside>'
+    banner=f'<aside id="ft01-current" style="padding:16px;background:#e5f1f3;border:2px solid #236679;margin:12px;color:#183e48">Current quote and dry-fit recommendation: <a href="/{out.removeprefix("deliverables/current/")}/index.html">{d["revision"]} main {d["main"]["outer_diameter_mm"]:g} / diverter {d["diverter"]["outer_diameter_mm"]:g}, upright capsule opening</a>. This page is a historical study.</aside>'
     for rel in ['review/index.html','review/rear/index.html','manual/index.html','fabrication/F005/index.html','fabrication/concentric-border-study/index.html','fabrication/aperture-access/index.html','fabrication/control-registration/index.html']:
         p=ROOT/'deliverables/current'/rel
         if p.exists():

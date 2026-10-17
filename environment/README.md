@@ -4,7 +4,7 @@ This project was built on macOS arm64 with Blender 4.5.13 LTS and isolated Pytho
 
 The existing Blender application was reused. In this Codex session, native Blender needs the ordinary macOS process environment outside the filesystem sandbox; sandbox startup crashed. CPU renders succeeded without security-setting changes. From a normal local terminal, use the wrapper directly. Set `PROJECT_BLENDER` if Blender is installed elsewhere.
 
-For a laptop checkout and viewing only (Python 3 required):
+For a laptop checkout and viewing only (Python 3.9 or newer required):
 
 ```sh
 git clone https://github.com/mdpatrick/shower-kohler-valve.git
