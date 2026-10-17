@@ -1,0 +1,15 @@
+{
+  "date": "2026-10-17",
+  "basis": "Owner explicitly requested: Setup a readme and push it that links to the artifacts etc. Push the artifacts to a chatgpt site and link to that site from the README.",
+  "authorized_scope": [
+    "Create and publish a ChatGPT Site containing the existing project artifacts and navigable handoff pages.",
+    "Link larger originals to the already-authorized GitHub repository.",
+    "Update the README, preserve reproducible Site source and commit/push to mdpatrick/shower-kohler-valve."
+  ],
+  "site_project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
+  "audience": "owner-private; default audience preserved",
+  "override_scope": "This explicit request overrides earlier no-publishing restrictions for this Site and the named GitHub repository only. Ponoko quote-upload restrictions remain unchanged.",
+  "excluded": ["credentials", "browser sessions", "private vendor account exports", "regenerable extracts", "environments", "unrelated files"],
+  "engineering_effect": "No geometry, accepted measurement, manufacturing release or physical-check status changes.",
+  "not_authorized_by_this_request": ["purchase", "payment", "message to a trade or vendor", "public Site audience change"]
+}

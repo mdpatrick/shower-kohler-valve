@@ -1,5 +1,7 @@
 # Shower escutcheon project — FT02 / R006
 
+**Hosted artifacts:** [Open the ChatGPT Site](https://shower-kohler-artifacts.mdpatrick.chatgpt.site) for the RF03 print package, FT02 plate CAD, installer PDFs, videos and scan downloads. The Site is owner-private; the complete GitHub repository remains separate. [Site maintenance](src/artifact_site/README.md).
+
 **Laptop transfer:** the owner authorized pushing the complete project, including all four original Polycam ZIPs and recent artifacts, to [mdpatrick/shower-kohler-valve](https://github.com/mdpatrick/shower-kohler-valve). Clone it and run `./project review` to open the saved review without rebuilding CAD. See [setup and restoration](environment/README.md) and the [repository-specific authorization](docs/decisions/github_transfer_2026-10-17.json). Private account/session exports and regenerable caches remain local.
 
 **The two custom plate designs are prepared for a quote and sacrificial physical fit trial.** Private Ponoko quotes have been obtained. No purchase, physical fit, permanent installation or water test has occurred. Open the [current illustrated handoff](deliverables/current/fabrication/FT02/index.html), or run `./project review`.

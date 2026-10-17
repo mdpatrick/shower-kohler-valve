@@ -1,0 +1,212 @@
+[
+  {
+    "title": "Complete friend print package",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip",
+    "category": "print",
+    "description": "RF03 \u00b7 Default D12 plus optional deeper alternative, instructions and CAD. Print one form."
+  },
+  {
+    "title": "Default form \u00b7 3MF",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.3mf",
+    "category": "print",
+    "description": "RF03 D12 \u00b7 Geometry only, millimeter units. Use your printer profile."
+  },
+  {
+    "title": "Default form \u00b7 STL",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.stl",
+    "category": "print",
+    "description": "Same RF03 D12 part as the 3MF. Interpret STL units as millimeters."
+  },
+  {
+    "title": "Print guide",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_GUIDE.pdf",
+    "category": "print",
+    "description": "Three-page handoff with orientation, bed size, settings and use checks."
+  },
+  {
+    "title": "Editable default form \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D12_mm.step",
+    "category": "print",
+    "description": "One isolated RF03 D12 solid in print orientation, millimeters."
+  },
+  {
+    "title": "Optional deeper form \u00b7 3MF",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+    "category": "print",
+    "description": "Alternative only: 24 mm maximum depth with rear reliefs, 12 mm continuous collar."
+  },
+  {
+    "title": "Optional deeper form \u00b7 STL",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+    "category": "print",
+    "description": "Same optional deeper part. Do not print this in addition to the default unless chosen."
+  },
+  {
+    "title": "Print cost estimate",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/cost_estimate.json",
+    "category": "print",
+    "description": "Dated estimate and basis for the suggested $75 thank-you budget."
+  },
+  {
+    "title": "Acrylic plate pair package",
+    "path": "deliverables/current/fabrication/FT02/FT02_CLEAR_FIT_TRIAL.zip",
+    "category": "plates",
+    "description": "Selected FT02 main + diverter, 1.50 mm. Includes compensated Ponoko DXFs and drawings."
+  },
+  {
+    "title": "Stainless plate pair package",
+    "path": "deliverables/current/fabrication/FT02/FT02_METAL_FIT_TRIAL.zip",
+    "category": "plates",
+    "description": "Alternative FT02 pair, 1.52 mm #4 brushed 304. Safe-edge finishing remains necessary."
+  },
+  {
+    "title": "Acrylic main \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1500_FIT_TRIAL.step",
+    "category": "plates",
+    "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
+  },
+  {
+    "title": "Acrylic diverter \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1500_FIT_TRIAL.step",
+    "category": "plates",
+    "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
+  },
+  {
+    "title": "Stainless main \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.step",
+    "category": "plates",
+    "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
+  },
+  {
+    "title": "Stainless diverter \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1520_FIT_TRIAL.step",
+    "category": "plates",
+    "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
+  },
+  {
+    "title": "Plumber start here",
+    "path": "deliverables/current/fabrication/FT02/PLUMBER_START_HERE.pdf",
+    "category": "documents",
+    "description": "Installer briefing: actual photos, factory sequence, stud/depth and support/seal checks."
+  },
+  {
+    "title": "Installation guide",
+    "path": "deliverables/current/fabrication/FT02/INSTALLATION_GUIDE.pdf",
+    "category": "documents",
+    "description": "Incoming inspection through physical fitting, repairs, cure and water checks."
+  },
+  {
+    "title": "Engineering record",
+    "path": "deliverables/current/fabrication/FT02/ENGINEERING_RECORD.pdf",
+    "category": "documents",
+    "description": "Evidence, selected dimensions, assumptions and open physical checks."
+  },
+  {
+    "title": "Order and next step",
+    "path": "deliverables/current/fabrication/FT02/ORDER_AND_NEXT_STEP.pdf",
+    "category": "documents",
+    "description": "Dated quote summary and exact routes. Recheck current cart prices and delivery."
+  },
+  {
+    "title": "Letter-size cutting templates",
+    "path": "deliverables/current/fabrication/FT02/TEMPLATES_LETTER.pdf",
+    "category": "documents",
+    "description": "Print at 100% and verify both scale bars. Paper checks XY, not depth or sealing."
+  },
+  {
+    "title": "A3 cutting templates",
+    "path": "deliverables/current/fabrication/FT02/TEMPLATES_A3.pdf",
+    "category": "documents",
+    "description": "A3 alternative to tiled Letter sheets; same scale checks apply."
+  },
+  {
+    "title": "Reference overlays",
+    "path": "deliverables/current/fabrication/FT02/REFERENCE_OVERLAYS_LETTER.pdf",
+    "category": "documents",
+    "description": "Separate reference geometry; not additional cut paths."
+  },
+  {
+    "title": "Repair form setup",
+    "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_SETUP.pdf",
+    "category": "documents",
+    "description": "Earlier RF01 repair/release procedure; apply with current RF03 guide and installer checks."
+  },
+  {
+    "title": "RF03 print-form Blender views",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_print_forms.blend",
+    "category": "studies",
+    "description": "CAD-only default and optional forms. Geometry reference, not a printer file."
+  },
+  {
+    "title": "Main three-scene Blender file",
+    "path": "deliverables/current/fabrication/FT02/escutcheon_fit_trial_FT02.blend",
+    "category": "studies",
+    "description": "Observed attached scan, proposed appearance and exploded ordering are separate scenes."
+  },
+  {
+    "title": "Narrated tabs and two-scan video",
+    "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_tabs_foam_and_two_scans_NARRATED.mp4",
+    "category": "studies",
+    "description": "Earlier TR02 explanation, including foam, both Polycams, handle access and formwork."
+  },
+  {
+    "title": "Video transcript",
+    "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_transcript.txt",
+    "category": "studies",
+    "description": "Readable narration for the TR02 video; later TR03 and RF03 refinements remain separate."
+  },
+  {
+    "title": "Video captions",
+    "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_captions.srt",
+    "category": "studies",
+    "description": "SRT captions corresponding to the narrated TR02 video."
+  },
+  {
+    "title": "Smaller-slot and collar study",
+    "path": "deliverables/current/fabrication/FT02/tab-refinement/index.html",
+    "category": "studies",
+    "description": "TR03 / RF02: later refinements leading to RF03. These are not selected order files."
+  },
+  {
+    "title": "Finish comparison",
+    "path": "deliverables/current/fabrication/FT02/finish-study/index.html",
+    "category": "studies",
+    "description": "FIN01: real reference photos and illustrative appearance on captured travertine."
+  },
+  {
+    "title": "TR02 reference Blender model",
+    "path": "deliverables/current/fabrication/FT02/tab-rethink/TR02_tabs_scans_and_handles.blend",
+    "category": "studies",
+    "description": "Historical explanatory scene. Not manufacturing CAD."
+  },
+  {
+    "title": "Archived interactive references",
+    "path": "deliverables/current/visualizations/index.html",
+    "category": "studies",
+    "description": "Earlier measurement and tab/foam tools. Current R006 evidence takes precedence."
+  },
+  {
+    "title": "Polycam without inner plate",
+    "path": "data/raw/polycam/shower-hole-valve-polycam.zip",
+    "category": "scans",
+    "description": "Primary wall-and-valve installed reference. Original ZIP bytes."
+  },
+  {
+    "title": "Polycam with inner plate",
+    "path": "data/raw/polycam/polycam-inner-plate-attached.zip",
+    "category": "scans",
+    "description": "Separate observed attached state; not globally registered. Original ZIP bytes."
+  },
+  {
+    "title": "Plate-side Polycam 1",
+    "path": "data/raw/polycam/plates-side-1-polycam.zip",
+    "category": "scans",
+    "description": "Secondary reflective-object scan; known distortion. Original ZIP bytes."
+  },
+  {
+    "title": "Plate-side Polycam 2",
+    "path": "data/raw/polycam/plates-side-2-polycam.zip",
+    "category": "scans",
+    "description": "Secondary reflective-object scan; known distortion. Original ZIP bytes."
+  }
+]
