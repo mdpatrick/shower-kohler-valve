@@ -2,7 +2,7 @@
 
 Site: https://shower-kohler-artifacts.mdpatrick.chatgpt.site
 
-This is the owner-private ChatGPT Site for the current project handoffs. The Site ID is preserved in [.openai/hosting.json](.openai/hosting.json); **reuse it on every update**. Do not create another Site or change its audience without an owner request.
+This is the ChatGPT Site for the current project handoffs. The owner explicitly made the full existing hub public by link on October 17, 2026, with a reminder on October 24 to restore owner-only access. The reminder does not automatically change access. Current sharing state and the public MASV links are recorded in sharing.json. The Site ID is preserved in [.openai/hosting.json](.openai/hosting.json); **reuse it on every update**. Do not create another Site or change its audience without an owner request.
 
 ## Content and reproducibility
 
@@ -27,10 +27,14 @@ Use the Sites skill and its source helper, preserving the ID in this directory�
 
 On this Mac, `/usr/local/bin/git` is an older Apple Git without the helper’s required `--config-env` option. Select the already-installed Git 2.50.1 from `/Applications/Xcode.app/Contents/Developer/usr/bin` in the helper process’s PATH. No global Git changes are needed.
 
-Package the checked static Site with `site-workflow.mjs`, using `commands: [["node", "hydrate_assets.mjs"]]` (optionally with `--cache`) and an absolute `archivePath`. Skip the hydration command only when the identical output has already been verified and inputs are unchanged. Publish the helper’s exact returned `commit_sha` and archive with `save_version_and_deploy_private`. The engineering repository and the Site source have separate Git histories; the engineering history and original scans remain in `mdpatrick/shower-kohler-valve`.
+Package the checked static Site with `site-workflow.mjs`, using `commands: [["node", "hydrate_assets.mjs"]]` (optionally with `--cache`) and an absolute `archivePath`. Skip the hydration command only when the identical output has already been verified and inputs are unchanged. Refresh the actual Site audience before publishing. For the currently public Site, save the helper’s exact returned commit_sha and archive with save_site_version, then pass the returned version ID to deploy_site_version. Use the private publishing operation only after owner-only access is confirmed again. The engineering repository and the Site source have separate Git histories; the engineering history and original scans remain in `mdpatrick/shower-kohler-valve`.
 
-Check the desktop/mobile layout, search/category filters, print ZIP download, current document pages and local link closure. Record deployment success and identifiers in `docs/validation/artifact_site_2026-10-17.json`, then update/push the project README. The native successful deployment response verifies publication. The saved browser checks describe the local preview, not an authenticated production-browser test.
+Run checks appropriate to the actual changes. The owner explicitly waived further download-link testing on October 17; do not repeat downloads without a new reason or request. Existing search, filters and document checks are retained in the prior validation record. Record deployment success and identifiers in `docs/validation/artifact_site_2026-10-17.json`, then update/push the project README. The native successful deployment response verifies publication. The saved browser checks describe the local preview, not an authenticated production-browser test.
 
 ## Scope
 
 RF03 provides the original temporary forms; RF04 adds the smaller-face relieved version and a combined two-size handoff. FT02 / R006 is the selected plain main/diverter plate pair for quote and sacrificial dry fit, with clear and metal alternatives. TR03/RF02, TR02 and older tools remain labeled studies. Publication does not change geometry, accepted measurements, purchase authorization or physical installation readiness.
+
+## Public print downloads
+
+The first section pairs each actual CAD preview with dimensions, usable-bed requirements, exact STL/3MF filenames and a MASV download button. MASV has separate small, original and combined packages, a 25-download limit per link, no password, and an October 27, 2026 expiry shown in the desktop app. The secret query values in sharing.json are deliberately public recipient-link tokens, not account credentials. Keep complete URLs intact. The existing Site ZIP is a backup. Only print geometry, previews, guide and readmes were uploaded to MASV; the broader hub audience was changed separately at the owner’s explicit request. See docs/decisions/masv_print_sharing_2026-10-17.json.

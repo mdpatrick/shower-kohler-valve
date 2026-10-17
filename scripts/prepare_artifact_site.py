@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build the owner-private artifact hub without changing engineering deliverables."""
+"""Build the artifact hub without changing engineering deliverables."""
 from pathlib import Path
 from html import escape, unescape
 import argparse
@@ -31,6 +31,8 @@ def main():
         raise SystemExit('Use a dedicated ignored build/sites checkout.')
     checkout.mkdir(parents=True, exist_ok=True)
     hosting = json.loads((SOURCE / '.openai/hosting.json').read_text())
+    sharing = json.loads((SOURCE / 'sharing.json').read_text())
+    assert sharing['project_id'] == hosting['project_id']
     existing = checkout / '.openai/hosting.json'
     if existing.exists() and json.loads(existing.read_text()).get('project_id') != hosting['project_id']:
         raise SystemExit('Refusing to change the identity of an existing Site.')
@@ -138,13 +140,13 @@ def main():
     provenance = dict(project_id=hosting['project_id'], artifact_source_commit=commit,
                       source_repository=REPO_URL, date='2026-10-17',
                       scope='Current FT02 files, RF03 and RF04 print packages, TR03/RF02 and TR02 studies, FIN01, archived interactives and original Polycam archives.',
-                      audience='owner-private', max_static_asset_bytes=MAX_ASSET,
+                      audience=sharing['audience'], max_static_asset_bytes=MAX_ASSET,
                       asset_limit_source='https://developers.cloudflare.com/workers/platform/limits/',
                       oversized_downloads='Original bytes linked to the already-pushed GitHub commit. No splitting or repacking of source ZIPs.',
                       page_adaptations='Only hosted HTML/JS/CSS links and hub navigation are adapted; original engineering deliverables are unchanged.',
                       rewritten_pages=rewritten, files=assets)
     (dist / 'artifact-manifest.json').write_text(json.dumps(provenance, indent=2) + '\n')
-    for name in ('index.html', 'site.css', 'site.js'):
+    for name in ('index.html', 'site.css', 'site.js', 'sharing.json'):
         shutil.copyfile(SOURCE / name, dist / name)
     (dist / 'robots.txt').write_text('User-agent: *\nDisallow: /\n')
     (dist / '404.html').write_text('<!doctype html><html lang="en"><meta charset="utf-8"><title>Artifact not found</title><h1>Artifact not found</h1><p><a href="/">Return to the artifact hub</a></p></html>')

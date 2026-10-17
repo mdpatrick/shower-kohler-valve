@@ -1,0 +1,154 @@
+{
+  "date": "2026-10-17",
+  "authorization": [
+    "Owner explicitly authorized public MASV design downloads, repeat downloads, and MASV desktop computer use.",
+    "Owner explicitly chose to make the existing complete ChatGPT Site public to anyone with a link and requested a privacy reminder in one week."
+  ],
+  "site": {
+    "project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
+    "url": "https://shower-kohler-artifacts.mdpatrick.chatgpt.site",
+    "access_mode": "public",
+    "access_revision": 2,
+    "access_updated_at": "2026-10-17T19:55:32.756855+00:00",
+    "robots": "noindex,nofollow and robots.txt Disallow /; not an access restriction"
+  },
+  "reminder": {
+    "date": "2026-10-24",
+    "automation_id": "make-shower-artifact-site-private-again",
+    "action": "Remind the owner to restore owner-only access; no automatic access change."
+  },
+  "masv": {
+    "password_required": false,
+    "download_limit_per_link": 25,
+    "expiry_date_shown_in_desktop_app": "2026-10-27",
+    "unlimited_storage": false,
+    "scope": "Isolated RF03/RF04 print geometry, CAD previews and print guide only.",
+    "small": "https://get.massive.app/01M55PAJHEVHQHACYXBB3ZGCDM?secret=DOJNGkgsWJiglAck&lang=system",
+    "original": "https://get.massive.app/01M55PQSC3KPKB950Q9C6C5CEG?secret=qxsOmFRjVNSvrYTG&lang=system",
+    "both": "https://get.massive.app/01M55PW318W9SDKRCJYK649D25?secret=edZjYTVSHjxKdOUc&lang=system",
+    "link_tokens": "The secret query parameters are intentional public recipient-link tokens, not account credentials. Keep each complete URL intact.",
+    "recipient_package_ids": {
+      "small": "01M55PAHY600W0Y7F94EH2BBDA",
+      "original": "01M55PQRTXQHFFBV719FG1FVZT",
+      "both": "01M55PW2H12M7A7M3MGFQMSCTZ"
+    }
+  },
+  "upload_manifest": {
+    "scope": "Only isolated RF03/RF04 print designs, CAD previews and print guide. No scans/home photos/account exports.",
+    "packages": [
+      {
+        "id": "SMALL_RF04",
+        "title": "Small-bed relieved collar",
+        "dimensions": "192.55 x 192.55 x 32 mm",
+        "bed_with_brim": "203 x 203 mm",
+        "upload_folder": "build/masv_print_uploads/01_SMALL_RF04_192.55mm_RELIEVED",
+        "files": [
+          {
+            "name": "PREVIEW.png",
+            "bytes": 1595619,
+            "sha256": "5b47e46a0dbe5cb9164e548791cd5607075ddbe0c371fb05f41f9efed226069e"
+          },
+          {
+            "name": "PRINT_GUIDE.pdf",
+            "bytes": 1280794,
+            "sha256": "fb617260a658418a3acad59050983d4071933a0cfb47f1ef5e94297e24a49b2f"
+          },
+          {
+            "name": "READ_ME_FIRST.txt",
+            "bytes": 991,
+            "sha256": "00e37140c6eeac3e5df85de6ad017a958a9af1c3de1bff31bd276868e0d626ba"
+          },
+          {
+            "name": "RF04_SMALL_192_55_D24_RELIEVED_mm.3mf",
+            "bytes": 202443,
+            "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4"
+          },
+          {
+            "name": "RF04_SMALL_192_55_D24_RELIEVED_mm.step",
+            "bytes": 168399,
+            "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6"
+          },
+          {
+            "name": "RF04_SMALL_192_55_D24_RELIEVED_mm.stl",
+            "bytes": 834284,
+            "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2"
+          }
+        ]
+      },
+      {
+        "id": "ORIGINAL_RF03",
+        "title": "Original full-size relieved collar",
+        "dimensions": "240 x 240 x 32 mm",
+        "bed_with_brim": "250 x 250 mm",
+        "upload_folder": "build/masv_print_uploads/02_ORIGINAL_RF03_240mm_RELIEVED",
+        "files": [
+          {
+            "name": "PREVIEW.png",
+            "bytes": 1650349,
+            "sha256": "467891233440cf7c4bb04bd58e60cc73c2d6b71138cf8084b7bd2bb43f9db5b1"
+          },
+          {
+            "name": "PRINT_GUIDE.pdf",
+            "bytes": 1280794,
+            "sha256": "fb617260a658418a3acad59050983d4071933a0cfb47f1ef5e94297e24a49b2f"
+          },
+          {
+            "name": "PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+            "bytes": 200926,
+            "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb"
+          },
+          {
+            "name": "PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+            "bytes": 834684,
+            "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+          },
+          {
+            "name": "READ_ME_FIRST.txt",
+            "bytes": 994,
+            "sha256": "ae2ff7d72074da6c2e8af25f03181f2dfa96ae39c1f4f07d0d983582d3557629"
+          },
+          {
+            "name": "RF03_D24_RELIEVED_mm.step",
+            "bytes": 168147,
+            "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7"
+          }
+        ]
+      },
+      {
+        "id": "BOTH",
+        "title": "Both relieved sizes",
+        "upload_folder": "build/masv_print_uploads/03_BOTH_RELIEVED_SIZES",
+        "files": [
+          {
+            "name": "COMPARE_ORIGINAL_LEFT_SMALL_RIGHT.png",
+            "bytes": 1724683,
+            "sha256": "e16992115cf13c87a113ecf53fc16c982b3732fe1a427d571f53d75efe5fdea4"
+          },
+          {
+            "name": "PRINT_GUIDE.pdf",
+            "bytes": 1280794,
+            "sha256": "fb617260a658418a3acad59050983d4071933a0cfb47f1ef5e94297e24a49b2f"
+          },
+          {
+            "name": "RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip",
+            "bytes": 7002670,
+            "sha256": "273885097ddf8172f00829a0c6a2e0f3f83449e752ce4a546f4e1554bc543e7f"
+          }
+        ]
+      }
+    ]
+  },
+  "geometry_changes": "None. Original CAD/mesh/PDF/ZIP bytes are preserved. The MASV folders add only handoff readmes and copied previews.",
+  "not_authorized_by_this_change": [
+    "Purchases or payments",
+    "Messages to the friend or trades",
+    "Changing permanent-installation readiness"
+  ],
+  "verification": {
+    "uploads": "MASV desktop confirmed all three uploads complete.",
+    "recipient_pages": "Package names and file counts were visible without login/password.",
+    "downloads": "No completed download or round-trip hash validation claimed. Further download testing stopped at the owner\u2019s request.",
+    "layout": "Local print cards visually inspected: both CAD images, dimensions, usable-bed requirements and correctly labeled download actions.",
+    "geometry": "No CAD or print asset changed in this sharing update."
+  }
+}

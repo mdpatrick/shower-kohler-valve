@@ -1,0 +1,21 @@
+{
+  "project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
+  "audience": "public",
+  "authorized_on": "2026-10-17",
+  "privacy_reminder": {
+    "date": "2026-10-24",
+    "automation_id": "make-shower-artifact-site-private-again",
+    "action": "Remind the owner to restore owner-only access; no automatic access change."
+  },
+  "masv": {
+    "password_required": false,
+    "download_limit_per_link": 25,
+    "expiry_date_shown_in_desktop_app": "2026-10-27",
+    "unlimited_storage": false,
+    "scope": "Isolated RF03/RF04 print geometry, CAD previews and print guide only.",
+    "small": "https://get.massive.app/01M55PAJHEVHQHACYXBB3ZGCDM?secret=DOJNGkgsWJiglAck&lang=system",
+    "original": "https://get.massive.app/01M55PQSC3KPKB950Q9C6C5CEG?secret=qxsOmFRjVNSvrYTG&lang=system",
+    "both": "https://get.massive.app/01M55PW318W9SDKRCJYK649D25?secret=edZjYTVSHjxKdOUc&lang=system",
+    "link_tokens": "The secret query parameters are intentional public recipient-link tokens, not account credentials. Keep each complete URL intact."
+  }
+}
