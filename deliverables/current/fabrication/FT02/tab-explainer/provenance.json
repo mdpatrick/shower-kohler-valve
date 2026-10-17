@@ -1,0 +1,238 @@
+{
+  "revision": "FT02_TAB_EXPLANATION_01",
+  "fps": 15,
+  "duration_seconds": 36,
+  "frames": 540,
+  "size": [
+    1024,
+    640
+  ],
+  "assets": {
+    "plain": {
+      "path": "build/FT02/tab_explainer/plain.stl",
+      "sha256": "1c1481721e986452deb387b4b355859f63c02d26344e93819d841005a91b71bc",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5199999809265137
+        ]
+      ],
+      "solids": 1
+    },
+    "tabbed_candidate": {
+      "path": "build/FT02/tab_explainer/tabbed_candidate.stl",
+      "sha256": "1af4e7a7a9160ba1463ba300579421ff6e11e8d26c488c0bd69b3cd89a996370",
+      "bounds_mm": [
+        [
+          -109.9945297241211,
+          -109.9986343383789,
+          0.0
+        ],
+        [
+          110.0,
+          109.9986343383789,
+          1.5199999809265137
+        ]
+      ],
+      "solids": 1
+    },
+    "backing_section": {
+      "path": "build/FT02/tab_explainer/backing_section.stl",
+      "sha256": "991f872bddf29ecbc1bd325c370b1f1c14527a1135d3a3facead262441b7e9f4",
+      "bounds_mm": [
+        [
+          -69.0,
+          -7.0,
+          0.0
+        ],
+        [
+          -58.17499923706055,
+          7.0,
+          1.5199999809265137
+        ]
+      ],
+      "solids": 1
+    },
+    "foam_section": {
+      "path": "build/FT02/tab_explainer/foam_section.stl",
+      "sha256": "e1d9ae61bc3f4f24f62d2c67c537875be7e13d8d757e24586a4b6957d5c0f5c9",
+      "bounds_mm": [
+        [
+          -65.17500305175781,
+          -7.0,
+          1.5199999809265137
+        ],
+        [
+          -59.17499923706055,
+          7.0,
+          7.519999980926514
+        ]
+      ],
+      "solids": 1
+    }
+  },
+  "sources_sha256": {
+    "canon/fit_trial_design.json": "2b191cf0d50c49a023a8b63f1ce1bfaa6903a841c25c95678c0ca8e04bcce822",
+    "canon/measurements.json": "45f7fefebd12ecbf3c057bf775e6f920685f5edfa6f40aa6314d640dba648abd",
+    "data/derived/registration.json": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3",
+    "deliverables/current/fabrication/FT02/engineering/locator_evaluation.json": "9f3b7c9ce5194e1a9242644649ef3f1b6d01e2ad1951fa36dc0e32695fe0123d",
+    "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.step": "8282a662518d2bf1d41cefaabbd5061b431e681b3a67daa9996fde967774aed2",
+    "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.stl": "0375c18ecf745cc3f070dd9ed7733ca030cdef383cf15a42ae0b116d49d90498"
+  },
+  "plate_transform": {
+    "row_rotation": [
+      [
+        0.9998274063888835,
+        -0.018578413109797246
+      ],
+      [
+        0.01857841310979725,
+        0.9998274063888836
+      ]
+    ],
+    "translation_mm": [
+      4.014384219632262,
+      39.700994788750954
+    ],
+    "determinant": 0.9999999999999998
+  },
+  "tab_geometry": {
+    "round_at": "A",
+    "slot_at": "B",
+    "slot_axis_unit_B_to_A": [
+      0.9079309448697235,
+      0.41911979116712106
+    ],
+    "tab_width_mm": 15,
+    "root_radius_mm": 1.5,
+    "candidates": {
+      "tight": {
+        "diameter_width_mm": 6.4,
+        "slot_length_mm": 9.4
+      },
+      "balanced": {
+        "diameter_width_mm": 7,
+        "slot_length_mm": 10
+      },
+      "generous": {
+        "diameter_width_mm": 8,
+        "slot_length_mm": 11
+      }
+    }
+  },
+  "studs_mm": [
+    [
+      -47.291356275538035,
+      18.462229374095184,
+      26.61188122141667
+    ],
+    [
+      51.23359848933067,
+      62.72282385788084,
+      30.676418397046806
+    ]
+  ],
+  "seated_overlap": {
+    "opening_surface_overlap_mm2": 0.5050013691458869,
+    "outside_opening_contact_mm2": 0.0,
+    "added_tab_overlap_mm2": 0.5050013691458869,
+    "added_tab_conflict_bounds_mm": [
+      50.70530859050112,
+      60.408588008289,
+      52.802868401781694,
+      63.194338778488905
+    ],
+    "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+  },
+  "overlap_reference_note": "Reported overlap uses the existing 1.524 mm tab study; this 1.520 mm explanatory mesh uses its region as a qualitative callout, not a newly calculated collision volume.",
+  "thickness_mm": 1.52,
+  "bedding_mm": 1,
+  "bedding_status": "Illustrative working placement, not measured support",
+  "scan_transform": "Unchanged data/derived/registration.json",
+  "relative_shift_mm": 1.504,
+  "section_status": "Local straight side, nominal 6 x 6 mm uncompressed foam; no full-footprint or engagement proof",
+  "chapters": [
+    {
+      "start": 0,
+      "end": 5,
+      "title": "Where the tabs would go",
+      "status": "Rejected tab candidate",
+      "caption": "Amber tabs extend into the opening to surround the two trim rods.",
+      "limit": "CAD candidate over the unchanged original scan; working alignment is approximate."
+    },
+    {
+      "start": 5,
+      "end": 9,
+      "title": "Look closely at the upper-right rod",
+      "status": "Captured installation",
+      "caption": "The tab-hole center comes from your measured inner-plate layout.",
+      "limit": "The custom sheet and factory mounting holes occupy different depth planes."
+    },
+    {
+      "start": 9,
+      "end": 17,
+      "title": "Move the tab toward the wall",
+      "status": "Geometric insertion sweep",
+      "caption": "The captured rod end meets the added tab material along this modeled path.",
+      "limit": "Removing or retracting the rods could clear their ends; seated alignment is a separate check."
+    },
+    {
+      "start": 17,
+      "end": 22,
+      "title": "Inspect the seated tab",
+      "status": "Scan-based conflict warning",
+      "caption": "Red marks the small overlap flagged near the upper-right shaft.",
+      "limit": "Capture and placement uncertainty remain; this is not a confirmed physical defect."
+    },
+    {
+      "start": 22,
+      "end": 31,
+      "title": "What larger hole clearance can allow",
+      "status": "Illustrative shift",
+      "caption": "The foam stays fixed while the backing moves sideways by 1.50 mm.",
+      "limit": "Local straight-edge section: nominal 6 mm foam width + 1 mm extra backing."
+    },
+    {
+      "start": 31,
+      "end": 36,
+      "title": "The selected FT02 plate has no tabs",
+      "status": "Current fit-trial design",
+      "caption": "Use the removable front guide to center it, then verify stable support and clamping.",
+      "limit": "Check the full foam contact in the actual trial; this movie does not establish sealing."
+    }
+  ],
+  "physical_fit": "NOT PERFORMED",
+  "manufacturing_files_changed": false,
+  "video": {
+    "path": "FT02_tabs_and_foam_explained.mp4",
+    "sha256": "c3529b40cae9337602cdb15fe28500b6014a31417b063db3dd54f355c1453a43",
+    "codec": "h264",
+    "width": 1024,
+    "height": 840,
+    "seconds": 36.0
+  },
+  "explanatory_blender": {
+    "path": "FT02_tab_explanation.blend",
+    "sha256": "792694f79348b99cc8de970f272b5e8a8afbb2291af9132bd31d377cd8c37a87"
+  },
+  "shift_basis": {
+    "factory_bore_mm": 5.66,
+    "custom_hole_mm": 7,
+    "nominal_rod_crest_mm": 4.826,
+    "sum_of_radial_clearances_mm": 1.5040000000000004,
+    "interpretation": "Conservative relative translation opportunity for the round-hole stack; not measured travel. The second locator, real geometry and clamping can restrict movement."
+  },
+  "source_hashes_unchanged": true,
+  "checks": [
+    "Actual CadQuery solid and watertight display exports",
+    "Original scan transform unchanged",
+    "Selected manufacturing STEP/STL and measurement canon unchanged",
+    "All frames encoded and H.264 dimensions/duration verified"
+  ]
+}

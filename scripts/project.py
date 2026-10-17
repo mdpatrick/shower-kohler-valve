@@ -261,6 +261,22 @@ def prepare_fit_trial(stage='all',force=False):
     publish_manifest()
     print(rev+' quote/dry-fit package prepared. Physical fit, support/seal and water verification remain open.')
 
+def explain_tabs(stage='all'):
+    """Separate explanatory movie. Selected CAD, canon and vendor packages are inputs only."""
+    blender=[BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1','--python','src/blender/tab_explainer.py']
+    if stage in ('all','assets'):
+        run([sys.executable,'src/fabrication/tab_explainer.py','assets'],'tab_explainer_assets.log')
+    if stage=='preview':
+        run(blender+['--','preview'],'tab_explainer_preview.log')
+        run([sys.executable,'src/fabrication/tab_explainer.py','preview'])
+    if stage in ('all','render'):
+        run(blender,'tab_explainer_render.log')
+    if stage in ('all','encode'):
+        run([sys.executable,'src/fabrication/tab_explainer.py','encode'])
+    if stage in ('all','verify'):
+        run([BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1',
+             '--python','src/blender/check_tab_explainer.py'],'tab_explainer_readback.log')
+
 def validate(git_objects=False):
     errors=[];input_results=[]
     for i in read('canon/inputs.json')['inputs']:
@@ -430,6 +446,7 @@ def main():
     sub.add_parser('audit-control-alignment')
     align=sub.add_parser('prepare-registration');align.add_argument('--stage',choices=['all','analysis','blender'],default='all')
     trial=sub.add_parser('prepare-fit-trial');trial.add_argument('--stage',choices=['all','analysis','blender','documents','audit'],default='all');trial.add_argument('--force',action='store_true')
+    movie=sub.add_parser('explain-tabs');movie.add_argument('--stage',choices=['all','assets','preview','render','encode','verify'],default='all')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -452,6 +469,7 @@ def main():
         publish_manifest()
     elif args.command=='prepare-registration':prepare_registration(args.stage)
     elif args.command=='prepare-fit-trial':prepare_fit_trial(args.stage,args.force)
+    elif args.command=='explain-tabs':explain_tabs(args.stage)
     elif args.command=='review':review(args.no_open)
     elif args.command=='validate':validate(args.git_objects)
     elif args.command=='query':query(args.args)

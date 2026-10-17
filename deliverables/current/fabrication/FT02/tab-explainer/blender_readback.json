@@ -1,0 +1,55 @@
+{
+  "status": "PASS",
+  "saved_scene_reopened": true,
+  "chapters_checked": [
+    {
+      "frame": 46,
+      "visible": [
+        "Original captured wall and valve",
+        "Original captured wall and valve.001",
+        "tabbed_candidate"
+      ],
+      "capture_transform": "UNCHANGED"
+    },
+    {
+      "frame": 301,
+      "visible": [
+        "Callout around scan overlap",
+        "Original captured wall and valve",
+        "Original captured wall and valve.001",
+        "tabbed_candidate"
+      ],
+      "capture_transform": "UNCHANGED"
+    },
+    {
+      "frame": 346,
+      "visible": [
+        "backing_section",
+        "foam_section"
+      ],
+      "capture_transform": "UNCHANGED"
+    },
+    {
+      "frame": 451,
+      "visible": [
+        "backing_section",
+        "foam_section"
+      ],
+      "capture_transform": "UNCHANGED"
+    },
+    {
+      "frame": 511,
+      "visible": [
+        "Original captured wall and valve",
+        "Original captured wall and valve.001",
+        "plain"
+      ],
+      "capture_transform": "UNCHANGED"
+    }
+  ],
+  "packed_images": [
+    "6dd45d4c3692f2ee8598a843e6bf7529.jpg",
+    "8d315f2f146e544a4090fd648b387e65.jpg"
+  ],
+  "physical_fit": "NOT PERFORMED"
+}

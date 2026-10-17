@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "e460c3b324ffa0e2c679a59af562c3044a01efc6",
+  "source_commit": "78e48a063afe84ee65df06359e58fe2202d4a59b",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "6b098da8716f8008c820b471c9c943221e40fefb8567b998076f58722caccb51",
+  "source_tree_hash": "8ed0073fe2a53e0a7358692ed217d4e1ddcb3773296fbafea6314117a25f0d4b",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1111,6 +1111,66 @@
       "path": "deliverables/current/fabrication/FT02/support_seal.png",
       "sha256": "5514b0a11bdd6e6c54bc0810369b9a2f4267d2964d814c90389e16c52eb38ae6",
       "size_bytes": 148365
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/FT02_tab_explanation.blend",
+      "sha256": "792694f79348b99cc8de970f272b5e8a8afbb2291af9132bd31d377cd8c37a87",
+      "size_bytes": 53801751
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/FT02_tabs_and_foam_explained.mp4",
+      "sha256": "c3529b40cae9337602cdb15fe28500b6014a31417b063db3dd54f355c1453a43",
+      "size_bytes": 3720518
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/READ_ME.txt",
+      "sha256": "6867e3ff1b8b7e00f9ebe397765bd5d7f324daa333f7e64492de16c2d1c9011f",
+      "size_bytes": 2543
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/blender_readback.json",
+      "sha256": "fbf9fecfd5d3628cedd995623d7f6772e3056bfbe7cdfcad0ad23385c8484f9d",
+      "size_bytes": 1215
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/foam_centered.jpg",
+      "sha256": "066b8686408ec667bd537dff72f370fadabf7110b56f5302ffd30450ad2f1f04",
+      "size_bytes": 92601
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/foam_shifted.jpg",
+      "sha256": "8d2cce8e547ae230fe6c4092f12a0d64863b9ba74da497998797e705e4af1188",
+      "size_bytes": 92818
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/poster.jpg",
+      "sha256": "240abf5dc1d0e1dbbbf8722c144c7b469e7d1f0363772e05d7b4f91a6da2d269",
+      "size_bytes": 149876
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/provenance.json",
+      "sha256": "7873a09d6712cbaa7b704ec4a94e1eaa31c77f15a2d78f8242e9e484fbb5e87e",
+      "size_bytes": 7702
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/rod_tip.jpg",
+      "sha256": "ffd0575a8c7eb904364b88db2c9b09a3800590bf4c5139f5889cf464203a0eae",
+      "size_bytes": 129513
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/seated_scan_overlap.jpg",
+      "sha256": "9d0c2398fdfdb5e246cfd69bdb8a374bc8d8cdccc30f344f268fcb9abb722e0b",
+      "size_bytes": 109922
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/selected_plain.jpg",
+      "sha256": "4c00774c7f7f5ed5985e891463b5831c4edf6dfc5ccd895ea6f0dad6d7e15074",
+      "size_bytes": 156417
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-explainer/tabs_overview.jpg",
+      "sha256": "240abf5dc1d0e1dbbbf8722c144c7b469e7d1f0363772e05d7b4f91a6da2d269",
+      "size_bytes": 149876
     },
     {
       "path": "deliverables/current/fabrication/FT02/visual_review.json",
