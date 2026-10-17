@@ -31,5 +31,14 @@
     "zip": "RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip",
     "errors": [],
     "failures": []
-  }
+  },
+  "remote_recovery": {
+    "revision": "RF04",
+    "remote_commit": "bb8f2d0d34092051a014631f9bc9a5fb75aeca09",
+    "artifact_files_hash_verified": 23,
+    "method": "Fast-forward existing clean GitHub clone; compare every RF04 output hash with primary working copy.",
+    "clone_clean": true
+  },
+  "project_validation": "./project validate --git-objects PASS; R006 and all four original scan bytes preserved.",
+  "hosted_page": "https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-small-bed/index.html"
 }
