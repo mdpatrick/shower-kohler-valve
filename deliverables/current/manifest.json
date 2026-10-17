@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "cdae608161efeb869c43e7feb35d7163b4ee735d",
+  "source_commit": "51ff7dbb41898d18b63b7d6bf863c7e97633e414",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "1b2b94f762ff23f5e2a22f23daed1316b262f391fe9ce7090b9dc9197887bc98",
+  "source_tree_hash": "b8b83ab681c38bf19280e55de1cf6a32fa5bb5d44049fbed751aba94fc5e5d34",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1013,6 +1013,46 @@
       "size_bytes": 1436424
     },
     {
+      "path": "deliverables/current/fabrication/FT02/finish-study/FIN01_finish_illustration.blend",
+      "sha256": "77dce69049da5fae531c43e9bcb4db95d0d26dac50d9ce60346e45a1fa082568",
+      "size_bytes": 19341128
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/finish-study/FIN01_front.png",
+      "sha256": "04d490467c989cdeaa68afe85f8dd8a68c510040c18d880ed381cb5ca0825e78",
+      "size_bytes": 2062455
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/finish-study/FIN01_oblique.png",
+      "sha256": "e8a0856110e37e5783c1222bd3fe025183383ecaf5421b1f6b6062387a39f406",
+      "size_bytes": 2099653
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/finish-study/FIN01_warm_light.png",
+      "sha256": "fbafb22254a4b9b40daae7e995c37cb37b54ed3482090b3d681ce0fdae9b7e2d",
+      "size_bytes": 2062570
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/finish-study/checks.json",
+      "sha256": "ffe7a0a31588bbef816f64ff8d143171dc80adb9c6ba3ee2b9950be8d778fab1",
+      "size_bytes": 1110
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/finish-study/index.html",
+      "sha256": "a8e1c59ed91cd4f7fbc3af9a9b60b20223b7735dbe4be085c3b8ad12a50925b3",
+      "size_bytes": 10018
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/finish-study/render_provenance.json",
+      "sha256": "61bc0d15bd964afc41ef221829c381e5711e81b5c09ac3bf78fc6c4d16471fb0",
+      "size_bytes": 1286
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/finish-study/research.json",
+      "sha256": "7060c8185f589a0c02b3624f6847fdc9ac180c0e0ba8dd5bcef7c34d263c6b93",
+      "size_bytes": 2987
+    },
+    {
       "path": "deliverables/current/fabrication/FT02/index.html",
       "sha256": "8961e457edc5a7fc60abf39a05b9e0f486ace07fbbffd4181cec0e63e09dcfc9",
       "size_bytes": 5819
@@ -1198,6 +1238,116 @@
       "size_bytes": 149876
     },
     {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/READ_ME.txt",
+      "sha256": "8f626f3999a07a62e070f6d4fe076b452838d419a1915a969e03430f3685541a",
+      "size_bytes": 1103
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/RF02_D12_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED.step",
+      "sha256": "88d67b76792ec82e71ce07588383663b4da3c72733fef2f1a097a549bfb9b753",
+      "size_bytes": 123655
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/RF02_D12_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED.stl",
+      "sha256": "ee59f8b0c8d3abbf6eb24fb6ecaf46e8163359a7f6c1076a2acefdc224815764",
+      "size_bytes": 539384
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/RF02_D24_RELIEVED_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED.step",
+      "sha256": "c5b805c5e8cba647e0902da22e3466d9b591e388a359939c5d6103b6cd956686",
+      "size_bytes": 169779
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/RF02_D24_RELIEVED_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED.stl",
+      "sha256": "42d6dbd6f99d6f2e06d44afaa0989163eb49f755f827d8e0a97fd24cca475588",
+      "size_bytes": 597084
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/TR03_MAIN_220_T1500_SLOT12x8_STUDY_NOT_RELEASED.step",
+      "sha256": "7fd994cb13f903dad9c622129ef6df07264611cc5e1d79414a59a5b062ebf816",
+      "size_bytes": 96964
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/TR03_MAIN_220_T1500_SLOT12x8_STUDY_NOT_RELEASED.stl",
+      "sha256": "008947f27c6e296e1e713385cd587321ee4b3e3be30fa87fa9082d509f8ca020",
+      "size_bytes": 381484
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/TR03_MAIN_220_T1520_SLOT12x8_STUDY_NOT_RELEASED.step",
+      "sha256": "c378f02cb5c278dbf7cdde12a68aaab7f18ef1b141ef149880feb195d2243d65",
+      "size_bytes": 97063
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/TR03_MAIN_220_T1520_SLOT12x8_STUDY_NOT_RELEASED.stl",
+      "sha256": "e055e20a41b7ed5348a1604482dbd75111a2eb9ea8db3f9ba593fc6b4981d05d",
+      "size_bytes": 381484
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/TR03_RF02_parts_study.blend",
+      "sha256": "92ee08d4765179bd2846b233d7dce98bb00388a6b98e64a3cab9c80cabb51a64",
+      "size_bytes": 630877
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/analysis.json",
+      "sha256": "22233f29e929b5dcb75c9081600671c1f1f425019e8e4435dd9683d28b7acf3c",
+      "size_bytes": 22490
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/blender_checks.json",
+      "sha256": "eac781d2ff3dc43f13cadb871c9a03616896e9fcd1e5908854d5393a9e0da86e",
+      "size_bytes": 1236
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/form_d12_front.png",
+      "sha256": "f218734039e15f32bc8383c7d55e7d354d4756f47cc5f0947c96a8ea019584d8",
+      "size_bytes": 1454778
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/form_d12_rear.png",
+      "sha256": "a23d25f6cacd3735f78e57a12208f6f1f193fa4a5355ee721818237c46fa61c7",
+      "size_bytes": 1426566
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/form_d12_side.png",
+      "sha256": "1a7d9d2141505daabcc951d7de42230b0ee5ef0204be3714f26e62ee142c848b",
+      "size_bytes": 1383340
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/form_d24_relieved_front.png",
+      "sha256": "732ff945b55a3372b50bcf82d01ee329c1a2b465e66a6d3a82f7393f40f73e60",
+      "size_bytes": 1460758
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/form_d24_relieved_rear.png",
+      "sha256": "0c3f3c636695cd318f37f42107b34c217d010d87d746a224d3e8dcb58a21bdc1",
+      "size_bytes": 1438158
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/form_d24_relieved_side.png",
+      "sha256": "50f4c050cbfd598d1faaac1084b08f0f0104a4095883be939acfcd32ff9dda05",
+      "size_bytes": 1401698
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/index.html",
+      "sha256": "d244615423a2e73a05d16a40c5f01eb2f1ea6160d0857e6f1493934c3de3a24e",
+      "size_bytes": 10539
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/plate_front.png",
+      "sha256": "7bd8322434f4fbe2793ccc7b21a257e4c6447a1b1a455eef4c3a3406ed7be856",
+      "size_bytes": 1483214
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/plate_oblique.png",
+      "sha256": "c62a9f1495ec2f1d99b40b917c0a6b499cba2a65ca28e4dcb55cdc07f39637dc",
+      "size_bytes": 1450827
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/tab-refinement/slot_comparison.png",
+      "sha256": "693c5fd3bc567f63e4bda8356be139d3dbe0b3dd0aaf4818a95c70e753920194",
+      "size_bytes": 230857
+    },
+    {
       "path": "deliverables/current/fabrication/FT02/tab-rethink/READ_ME.txt",
       "sha256": "4a952e57fbceae4a66a7aa24e1c0028d08c8e9c20dca43f92a7ef93a5d96e79a",
       "size_bytes": 3377
@@ -1249,8 +1399,8 @@
     },
     {
       "path": "deliverables/current/fabrication/FT02/tab-rethink/index.html",
-      "sha256": "ee5256658103407fa2ae550dfe03195c8f941ed87cd3f3849fcf12f91c85c5ef",
-      "size_bytes": 16394
+      "sha256": "d559303062b52baf205dabbeac8aba34b7e9904702bc939585f32d5b7e6f7072",
+      "size_bytes": 16706
     },
     {
       "path": "deliverables/current/fabrication/FT02/tab-rethink/stills/correction.jpg",

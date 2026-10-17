@@ -1,0 +1,39 @@
+{
+  "revision": "FIN01",
+  "purpose": "Appearance illustration, not a finish approval",
+  "source_scene": "deliverables/current/fabrication/FT02/escutcheon_fit_trial_FT02.blend",
+  "source_sha256": "f3ff8c97062a6d19e26b4e3641baaa260b63f29ffbc71b3e11b5bff9cd67400c",
+  "custom_parts": [
+    {
+      "name": "FT02_MAIN_220_T1520_FIT_TRIAL",
+      "source": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.stl",
+      "dimensions_mm": [
+        220.0,
+        220.0,
+        1.52
+      ]
+    },
+    {
+      "name": "FT02_DIV_124_T1520_FIT_TRIAL",
+      "source": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1520_FIT_TRIAL.stl",
+      "dimensions_mm": [
+        124.0,
+        124.0,
+        1.52
+      ]
+    }
+  ],
+  "factory_geometry": "Official Kohler exterior CAD already in FT02; hidden connections not shown",
+  "wall": "Existing scan-derived appearance wall; not generated new construction evidence",
+  "images": [
+    "FIN01_front.png",
+    "FIN01_oblique.png",
+    "FIN01_warm_light.png"
+  ],
+  "limits": [
+    "No physical finish sample inspected",
+    "No calibrated color or reflectance match",
+    "Actual sheet grain direction and cosmetic condition remain supplier-dependent",
+    "No CAD dimensions or physical fit state changed"
+  ]
+}

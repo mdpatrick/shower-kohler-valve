@@ -2,7 +2,11 @@
 
 **The two custom plate designs are prepared for a quote and sacrificial physical fit trial.** Private Ponoko quotes have been obtained. No purchase, physical fit, permanent installation or water test has occurred. Open the [current illustrated handoff](deliverables/current/fabrication/FT02/index.html), or run `./project review`.
 
-**October 17 explanation and design study:** [TR02 narrated video: tabs, smaller opening, both scans, handles and RF01 formwork](deliverables/current/fabrication/FT02/tab-rethink/index.html). Adding inward tabs does not move the foam. TR02 tests loose locating slots and 1–2 mm more inward backing while preserving Ø220. Its new CAD is a separate study; current FT02 order files have not been replaced.
+**Finish comparison:** [FIN01 stainless beside Kohler brushed nickel](deliverables/current/fabrication/FT02/finish-study/index.html) shows three CAD appearance views on the captured travertine and actual reference photos. The colors are illustrative; a physical sample is needed to judge a close finish match. Rebuild with `./project preview-finishes`.
+
+**Latest October 17 refinement:** [TR03 / RF02: smaller slots, tabbed form and deeper-collar options](deliverables/current/fabrication/FT02/tab-refinement/index.html). Owner confirms removable rod-end nut. New 12 × 8 mm flat slots replace TR02's 18 × 10 mm study size; current FT02 order files remain intact. RF02 adds front locating tabs to the temporary form: 12 mm continuous collar, or 24 mm maximum skirt with rear reliefs and only 12 mm continuous molding wall. The simple deeper full collars conflict with captured surfaces. Permanent retained-collar use is not established. See `canon/tab_refinement_study.json` and `docs/physical_checks/removable_trim_nut_2026-10-17.json`.
+
+**Earlier October 17 explanation:** [TR02 narrated video: tabs, smaller opening, both scans, handles and RF01 formwork](deliverables/current/fabrication/FT02/tab-rethink/index.html). Adding inward tabs does not move the foam. TR02 tests loose locating slots and 1–2 mm more inward backing while preserving Ø220. Its CAD and video remain historical studies.
 
 ## Order one pair in one material
 

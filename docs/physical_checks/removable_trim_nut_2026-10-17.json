@@ -1,0 +1,16 @@
+{
+  "id": "OBS-REMOVABLE-TRIM-NUT-01",
+  "revision": 1,
+  "date": "2026-10-17",
+  "source": "Direct owner statement in project chat",
+  "status": "ACCEPTED_QUALITATIVE_OBSERVATION",
+  "statement": "The bolt has a nut on the end that can be removed. That's the end hardware you mentioned.",
+  "interpretation": "The enlarged end fitting under discussion is removable; a trial locator need not pass over that fitting when it is removed first.",
+  "limits": [
+    "No removal, retraction, plate fit or form placement has been reported as completed.",
+    "No new shaft diameter, rod-axis coordinate or engagement measurement is accepted.",
+    "The scan with its enlarged tip remains unchanged. A nut-removed diagnostic is a separate hypothetical state."
+  ],
+  "related_request": "Find a moderate slot size; add locating tabs to formwork and assess a collar deeper than 12 mm.",
+  "measurement_revision": "R006 unchanged"
+}

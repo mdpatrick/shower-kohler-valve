@@ -1,0 +1,19 @@
+{
+  "revision": "FIN01",
+  "date": "2026-10-17",
+  "question": "Will Ponoko brushed stainless match the existing Kohler faceplate?",
+  "conclusion": "Compatible brushed silver appearance is plausible; an exact shade, texture or reflectance match is not established. Compare actual material beside the existing cover under bathroom lighting before expecting a seamless match.",
+  "existing_trim": {"model": "K-T14489-4-BN", "finish": "Vibrant Brushed Nickel", "source": "https://www.kohler.com/en/products/showers/shop-shower-trims-valves/purist-valve-trim-with-lever-handles-for-stacked-valve-requires-valve-t14489-4?skuId=T14489-4-BN", "official_image": "https://kohler.scene7.com/is/image/PAWEB/zaa67942_rgb"},
+  "ponoko_selected": {"finish": "#4 304 Stainless Steel", "thickness_mm": 1.52, "basis": "deliverables/current/fabrication/FT02/ponoko/quotes.json; private quote obtained 2026-10-16", "main": "Linear Deburring", "diverter": "As cut only offered", "color_matching": "Not quoted or guaranteed", "fresh_live_catalog": "Not inspected in this turn. Browser origin approval check timed out; prior quote record retained."},
+  "public_generic_catalog": {"url": "https://www.ponoko.com/materials/stainless-steel", "observed_finish": "#2B", "interpretation": "Different from the selected #4 quote; do not substitute its image or finishing claims as #4 batch evidence."},
+  "reference_photo": {"page": "https://www.stainlesssupply.com/order-metal-online/docs/g1c1045s1ss0p0/304-stainless-steel-sheet-4-finish.htm", "image": "https://stainlesssupply.com/order-metal-online/images/closeupFinishNum4Lg.jpg", "scope": "Representative number 4 stainless supplier photograph; not a Ponoko batch sample."},
+  "sources": [
+    {"url": "https://www.studiokohler.com/resources/kohler-finishes", "supports": "Manufacturer describes BN as textured silver with diffuse light response, and offers finish sample inquiries."},
+    {"url": "https://help.ponoko.com/en/articles/9358110-ponoko-manufacturing-standards", "supports": "Sheet-metal cosmetic finish can be one-sided; cut edges are not polished; as-cut surfaces may have scratches or burrs."},
+    {"url": "https://help.ponoko.com/en/articles/2890742-can-i-get-a-sample-of-a-material", "supports": "Material samples are offered through material pages; exact #4 availability unverified."},
+    {"url": "https://www.outokumpu.com/en/products/product-ranges/deco", "supports": "Surface-processing choices produce different grain and reflective appearances."}
+  ],
+  "visible_borders_mm": {"main": 17.925, "diverter": 12.7875, "basis": "Existing FT02 backing diameters and measured/nominal factory cover diameters; concentric proposed placement."},
+  "render_scope": "Actual existing CAD sizes, official exterior models and scan-derived wall; illustrative uncalibrated materials and lighting. No physical fit or finish result.",
+  "actions": "Local research, rendering and chat rename only. No vendor message, upload, sample purchase or order."
+}

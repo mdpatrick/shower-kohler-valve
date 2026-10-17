@@ -1,0 +1,43 @@
+{
+  "revision": "FIN01",
+  "date": "2026-10-17",
+  "executed": {
+    "source_blend_hash_unchanged": true,
+    "all_mesh_geometry_and_transforms_identical_to_source_scene": true,
+    "mesh_count": 14,
+    "saved_blend_scene_count": 1,
+    "file_textures_packed": true,
+    "png_readback": {
+      "FIN01_front.png": {
+        "size_px": [
+          1120,
+          1400
+        ],
+        "sha256": "04d490467c989cdeaa68afe85f8dd8a68c510040c18d880ed381cb5ca0825e78"
+      },
+      "FIN01_oblique.png": {
+        "size_px": [
+          1120,
+          1400
+        ],
+        "sha256": "e8a0856110e37e5783c1222bd3fe025183383ecaf5421b1f6b6062387a39f406"
+      },
+      "FIN01_warm_light.png": {
+        "size_px": [
+          1120,
+          1400
+        ],
+        "sha256": "fbafb22254a4b9b40daae7e995c37cb37b54ed3482090b3d681ce0fdae9b7e2d"
+      }
+    },
+    "browser": {
+      "reference_images_loaded": 3,
+      "front_angled_warmer_controls_verified": true
+    }
+  },
+  "not_tested": [
+    "Physical material appearance or finish match",
+    "Physical assembly fit",
+    "Sealing or water resistance"
+  ]
+}

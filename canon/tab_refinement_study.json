@@ -1,0 +1,50 @@
+{
+  "id": "TR03",
+  "date": "2026-10-17",
+  "status": "DESIGN_STUDY_NOT_RELEASED",
+  "basis": "Owner confirms removable end nut, requests less generous adjustment slots and tabbed deeper repair form. Strong R006 planar calipers and unchanged primary capture remain separate evidence.",
+  "plate": {
+    "outer_diameter_mm": 220,
+    "aperture_width_mm": 112.35,
+    "aperture_height_mm": 147.10,
+    "aperture_radius_mm": 56.175,
+    "inward_land_added_to_FT02_mm": 2,
+    "stock_mm": [1.50, 1.52]
+  },
+  "locators": {
+    "slot_length_mm": 12,
+    "slot_width_mm": 8,
+    "slot_orientation": "horizontal",
+    "tab_width_mm": 16,
+    "root_fillet_mm": 1.5,
+    "center_offsets_from_R006_cover_coordinates_mm": {"A": [-2, 0], "B": [2, 1]},
+    "offset_basis": "Design-selected rounded offsets accommodate captured shaft paths at the new sheet plane. They are not corrections to measured factory holes.",
+    "purpose": "Loose alignment aid before visual centering and supported retention. No bend, preload, extra clamp or gasket movement intended.",
+    "installation_state": "Remove end nuts first; their captured enlarged envelopes do not pass these smaller slots. Preserve factory reassembly order and engagement."
+  },
+  "form": {
+    "id": "RF02",
+    "status": "TEMPORARY_TOOL_STUDY_NOT_RELEASED",
+    "panel_diameter_mm": 240,
+    "panel_thickness_mm": 12,
+    "collar_outer_front_mm": [118.35, 145.10],
+    "collar_wall_mm": 2,
+    "draft_deg": 1,
+    "liner_mm": 0.05,
+    "variants": [
+      {"id": "D12", "max_depth_mm": 12, "continuous_depth_mm": 12, "rear_reliefs": false},
+      {"id": "D24_RELIEVED", "max_depth_mm": 24, "continuous_depth_mm": 12, "rear_reliefs": true}
+    ],
+    "rear_relief_boxes_xy_mm": [[-77,7,-53,39],[-18.5,-89,21.5,-65]],
+    "rear_relief_radius_mm": 2,
+    "rear_relief_basis": "Practical rounded clearance windows around the captured left-side and lower-body conflicts; explicit working geometry, not a certified scan-error allowance.",
+    "locator_z_mm": [9.05,12.05],
+    "locator_thickness_mm": 3,
+    "locator_role": "Integral front-side loose tabs, outside the casting zone. No new rear fasteners or embedded locating tabs.",
+    "support": "Same independently braced temporary face concept as RF01; rods locate only and must not carry repair loads.",
+    "use": "Temporary form for the same bounded front repair; the longer relieved skirt is not a 24 mm continuous casting wall. Remove tool, liner and pads after the selected repair permits stripping. Permanent retained use is not established."
+  },
+  "physical_fit": "NOT PERFORMED",
+  "selected_FT02_order_files": "UNCHANGED",
+  "owner_measurement_requests": []
+}

@@ -1,0 +1,75 @@
+{
+  "id": "TR03-RF02-checks",
+  "date": "2026-10-17",
+  "status": "PASS",
+  "scope": "Executed CAD STEP read-back and dimensions, saved Blender read-back, source fingerprints and desktop/mobile browser checks. Not fabrication approval.",
+  "parts": [
+    {
+      "file": "deliverables/current/fabrication/FT02/tab-refinement/TR03_MAIN_220_T1500_SLOT12x8_STUDY_NOT_RELEASED.step",
+      "valid_solids": 1,
+      "bounds_mm": [
+        220.0,
+        220.0,
+        1.5
+      ],
+      "sha256": "7fd994cb13f903dad9c622129ef6df07264611cc5e1d79414a59a5b062ebf816"
+    },
+    {
+      "file": "deliverables/current/fabrication/FT02/tab-refinement/TR03_MAIN_220_T1520_SLOT12x8_STUDY_NOT_RELEASED.step",
+      "valid_solids": 1,
+      "bounds_mm": [
+        220.0,
+        220.0,
+        1.52
+      ],
+      "sha256": "c378f02cb5c278dbf7cdde12a68aaab7f18ef1b141ef149880feb195d2243d65"
+    },
+    {
+      "file": "deliverables/current/fabrication/FT02/tab-refinement/RF02_D12_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED.step",
+      "valid_solids": 1,
+      "bounds_mm": [
+        240.0,
+        240.0,
+        24.00000010000006
+      ],
+      "sha256": "88d67b76792ec82e71ce07588383663b4da3c72733fef2f1a097a549bfb9b753"
+    },
+    {
+      "file": "deliverables/current/fabrication/FT02/tab-refinement/RF02_D24_RELIEVED_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED.step",
+      "valid_solids": 1,
+      "bounds_mm": [
+        240.0,
+        240.0,
+        36.00000010000002
+      ],
+      "sha256": "c5b805c5e8cba647e0902da22e3466d9b591e388a359939c5d6103b6cd956686"
+    }
+  ],
+  "source_hashes_verified": [
+    "canon/tab_refinement_study.json",
+    "canon/measurements.json",
+    "canon/fit_trial_design.json",
+    "canon/repair_form_design.json",
+    "data/derived/registration.json",
+    "deliverables/current/fabrication/FT02/tab-rethink/analysis.json",
+    "docs/physical_checks/removable_trim_nut_2026-10-17.json",
+    "src/analysis/tab_refinement.py"
+  ],
+  "browser": {
+    "desktop_width": 1200,
+    "mobile_width": 390,
+    "horizontal_document_overflow": false,
+    "form_variant_switch": "PASS",
+    "images_loaded": "PASS",
+    "only_console_issue": "Missing existing localhost favicon, unrelated to study"
+  },
+  "render_review": "Inspected slot comparison and form rear plus browser front/rear views; actual CAD rendered, not inferred physical evidence.",
+  "physical_tests": "NOT PERFORMED",
+  "selected_FT02_and_R006": "Unchanged",
+  "review_limits": [
+    "No independent fabrication-readiness review claimed for TR03/RF02.",
+    "Normal projection diagnostics do not establish unseen clearance, full-face seating, support, material suitability, engagement or sealing.",
+    "Retained-collar use not established; optional clarification remains unanswered."
+  ],
+  "recovery_scope": "New artifact committed-object hashes will be checked after commit. Earlier full clone/bundle recovery remains recorded in docs/validation/restore_FT02.json; not rerun for this study."
+}

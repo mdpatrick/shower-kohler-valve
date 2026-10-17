@@ -1,0 +1,40 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "scene": "RF02 | D12 temporary tabbed form",
+      "mesh": "RF02_D12_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED",
+      "dimensions_mm": [
+        239.99404162168503,
+        239.9970144033432,
+        24.00000113993883
+      ],
+      "max_difference_from_CAD_mm": 7.808208465576172e-06,
+      "mesh_count": 1
+    },
+    {
+      "scene": "RF02 | D24_RELIEVED temporary tabbed form",
+      "mesh": "RF02_D24_RELIEVED_TABBED_REMOVABLE_FORM_STUDY_NOT_RELEASED",
+      "dimensions_mm": [
+        239.99404162168503,
+        239.9970144033432,
+        36.000002175569534
+      ],
+      "max_difference_from_CAD_mm": 7.808208465576172e-06,
+      "mesh_count": 1
+    },
+    {
+      "scene": "TR03 | smaller flat locating tabs",
+      "mesh": "TR03_MAIN_220_T1520_SLOT12x8_STUDY_NOT_RELEASED",
+      "dimensions_mm": [
+        219.99454498291016,
+        219.99727189540863,
+        1.5200000489130616
+      ],
+      "max_difference_from_CAD_mm": 1.52587890625e-05,
+      "mesh_count": 1
+    }
+  ],
+  "blender_sha256": "92ee08d4765179bd2846b233d7dce98bb00388a6b98e64a3cab9c80cabb51a64",
+  "scope": "Fresh saved-file read, scene/mesh counts and CAD dimensions. No physical or installation check."
+}
