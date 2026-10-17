@@ -3,7 +3,7 @@
   "date": "2026-10-16",
   "vendor": "Ponoko",
   "status": "Private formal quote snapshots obtained; no order",
-  "working_cart": "One mutable cart, 1268443. Separate local formal exports preserve each alternative. Current live cart contains the metal pair; adding saved designs appends to it. Order only one alternative pair.",
+  "working_cart": "One mutable cart, 1268443. Separate local formal exports preserve the original no-tab alternatives. As of 2026-10-16 22:41 Pacific, the live cart instead contains the experimental tabbed acrylic main plus acrylic diverter with rush delivery selected. See tabbed-study/quote.json. No order placed; selected no-tab FT02 design unchanged.",
   "metal": {
     "material": "#4 304 Stainless Steel",
     "nominal_thickness_mm": 1.52,

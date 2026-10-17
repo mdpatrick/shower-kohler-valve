@@ -1,0 +1,17 @@
+{
+  "status": "QUOTE_ONLY_UNVERIFIED_TAB_FIT",
+  "measurement_revision": "R006",
+  "shape": "Video candidate: A round 7 mm; B slot 10 x 7 mm; 15 mm tabs and R1.5 roots",
+  "material": "Clear acrylic1.50mm",
+  "kerf_mm": 0.2,
+  "expected_cut_bounds_mm": [
+    220.2,
+    220.2
+  ],
+  "readback": "Valid single STEP solid; DXF 4 closed contours and one valid extruded solid",
+  "known_issue": "Captured enlarged ends obstruct insertion and small source-shaft overlap remains; fit unresolved. Source shape is the rejected engineering candidate, not the selected plain production file.",
+  "files": {
+    "FT02_MAIN_220_T1500_TAB_STUDY_7MM_QUOTE_ONLY.step": "887cf7e61979642a52e465b37b97235bfc30dc6fdc921cdef307474cac8a6f17",
+    "FT02_MAIN_220_T1500_TAB_STUDY_7MM_QUOTE_ONLY_PONOKO_K020_CUT.dxf": "64a145e445dde8589dcb1cdf25cc356d9b48c09ca41138b8c19a2dd2a376ea28"
+  }
+}

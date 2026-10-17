@@ -1,0 +1,55 @@
+{
+  "observed_at": "2026-10-16T22:41:00-07:00",
+  "status": "PRIVATE_LIVE_QUOTE_ONLY_NO_ORDER",
+  "vendor": "Ponoko",
+  "quote_url": "https://www.ponoko.com/price/1268443",
+  "destination_region": "Rancho Santa Fe, CA 92067 (existing saved destination)",
+  "scope": "One experimental tabbed main and one matching plain diverter; not the selected no-tab FT02 pair",
+  "material": "Clear acrylic, nominal 1.50 mm, as cut",
+  "parts": [
+    {
+      "id": "FT02_MAIN_220_T1500_TAB_STUDY_7MM_QUOTE_ONLY_PONOKO_K020_CUT",
+      "qty": 1,
+      "price_usd": 23.0,
+      "nominal_finished_diameter_mm": 220,
+      "geometry": "A round 7 mm; B diagonal slot 10 x 7 mm; 15 mm tabs; R1.5 roots"
+    },
+    {
+      "id": "FT02_DIV_124_T1500_FIT_TRIAL_PONOKO_K020_CUT",
+      "qty": 1,
+      "price_usd": 18.04,
+      "nominal_finished_diameter_mm": 124
+    }
+  ],
+  "parts_ui_subtotal_usd": 41.05,
+  "multi_part_discount_usd": 13.21,
+  "fastest": {
+    "arrival_date": "2026-10-20",
+    "vendor_label": "guaranteed",
+    "production": "1 day",
+    "shipping": "UPS Next Day Air",
+    "production_and_delivery_usd": 123.0,
+    "grand_total_displayed_usd": 150.84
+  },
+  "ordinary": {
+    "arrival_date": "2026-10-26",
+    "vendor_label": "estimated",
+    "production": "3 day",
+    "shipping": "UPS Ground",
+    "production_and_delivery_usd": 16.16,
+    "grand_total_displayed_usd": 44.0
+  },
+  "rush_premium_usd": 106.84,
+  "cutoff_ui": "Order in the next 1 hours for delivery by Oct 20. Time-sensitive, not an order confirmation.",
+  "tax": "Not separately shown; not asserted included.",
+  "geometry_check": "Both automated DFM checks succeeded. Custom main STEP and kerf-compensated DXF read-back checked; see checks.json. This is not a physical fit check.",
+  "fit_status": "Captured enlarged ends obstruct insertion and small source-shaft overlap remains; fit unresolved. Source shape is the rejected engineering candidate, not the selected plain production file.",
+  "current_cart": "Tabbed acrylic main plus acrylic diverter, quantity one each, Tuesday Oct20 rush selected. No checkout, purchase, payment or staff message.",
+  "selected_design_unchanged": "FT02 no-tab trial remains the selected design; this supplemental study is for pricing only.",
+  "proof": "ponoko_tabbed_acrylic_rush_2026-10-16.jpg",
+  "formal_pdf": "Export clicked but no download was observed; screenshot and live UI are the evidence for this quote.",
+  "files_sha256": {
+    "FT02_MAIN_220_T1500_TAB_STUDY_7MM_QUOTE_ONLY.step": "887cf7e61979642a52e465b37b97235bfc30dc6fdc921cdef307474cac8a6f17",
+    "FT02_MAIN_220_T1500_TAB_STUDY_7MM_QUOTE_ONLY_PONOKO_K020_CUT.dxf": "64a145e445dde8589dcb1cdf25cc356d9b48c09ca41138b8c19a2dd2a376ea28"
+  }
+}
