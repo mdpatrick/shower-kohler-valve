@@ -1,0 +1,90 @@
+{
+  "runs": [
+    {
+      "status": "PASS",
+      "kind": "clone",
+      "source_commit": "609e8d1cfcd20be467d979507cc61636fd34ed78",
+      "destination": "build/restore-clone-20261016-171059",
+      "archives": [
+        {
+          "id": "SCAN-WALL",
+          "sha256": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
+          "full_blob_bytes": 36799744,
+          "status": "PASS"
+        },
+        {
+          "id": "SCAN-PLATE-1",
+          "sha256": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
+          "full_blob_bytes": 4072620,
+          "status": "PASS"
+        },
+        {
+          "id": "SCAN-PLATE-2",
+          "sha256": "393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781",
+          "full_blob_bytes": 4448807,
+          "status": "PASS"
+        },
+        {
+          "id": "SCAN-INNER-ATTACHED",
+          "sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+          "full_blob_bytes": 23654985,
+          "status": "PASS"
+        }
+      ],
+      "snapshot_files_checked": 465,
+      "extraction_from_repository_only": true,
+      "Downloads_accessed": false,
+      "fresh_environment_and_full_rebuild": false,
+      "current_fit_trial_rebuild": null,
+      "all_canon_unchanged": null,
+      "observation_refresh": null,
+      "resolved_geometry_agrees": null,
+      "physical_fit": "NOT PERFORMED",
+      "off_machine_backup": false,
+      "bundle_sha256": null
+    },
+    {
+      "status": "PASS",
+      "kind": "bundle",
+      "source_commit": "609e8d1cfcd20be467d979507cc61636fd34ed78",
+      "destination": "build/restore-bundle-20261016-171449",
+      "archives": [
+        {
+          "id": "SCAN-WALL",
+          "sha256": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
+          "full_blob_bytes": 36799744,
+          "status": "PASS"
+        },
+        {
+          "id": "SCAN-PLATE-1",
+          "sha256": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
+          "full_blob_bytes": 4072620,
+          "status": "PASS"
+        },
+        {
+          "id": "SCAN-PLATE-2",
+          "sha256": "393d37b7394ec6e733b72885f5167ec3d7a797b52eb119c936988b8b768ef781",
+          "full_blob_bytes": 4448807,
+          "status": "PASS"
+        },
+        {
+          "id": "SCAN-INNER-ATTACHED",
+          "sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+          "full_blob_bytes": 23654985,
+          "status": "PASS"
+        }
+      ],
+      "snapshot_files_checked": 465,
+      "extraction_from_repository_only": true,
+      "Downloads_accessed": false,
+      "fresh_environment_and_full_rebuild": false,
+      "current_fit_trial_rebuild": null,
+      "all_canon_unchanged": null,
+      "observation_refresh": null,
+      "resolved_geometry_agrees": null,
+      "physical_fit": "NOT PERFORMED",
+      "off_machine_backup": false,
+      "bundle_sha256": "4faed810b92f0b9c002ba1421415c4b5f5e4b658dfe937233720e3e4c78a31b8"
+    }
+  ]
+}
