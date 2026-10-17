@@ -1,0 +1,5 @@
+Archived generated illustration; preserved without altering the original image or prompts.
+
+This October 16 image shows the earlier FBY=109.06 mm reading and derived B Y=106.23 mm. The accepted R006 survey instead selects FBY=108.85 mm and B Y=106.02 mm. The readings were not averaged. Refer to canon/measurements.json and canon/measurement_responses/R006.json for the active survey.
+
+Generated artwork is not measured geometry, an exact-scale template or a machining drawing. The original supplied photos and accepted calipers govern. This illustration was added to Git during the owner's October 17 request to preserve and upload all recent artifacts.

@@ -1,0 +1,22 @@
+{
+  "pdf_page_counts": {
+    "ENGINEERING_RECORD.pdf": 8,
+    "INSTALLATION_GUIDE.pdf": 7,
+    "ORDER_AND_NEXT_STEP.pdf": 1,
+    "PLUMBER_START_HERE.pdf": 3,
+    "REFERENCE_OVERLAYS_LETTER.pdf": 5,
+    "REPAIR_FORM_DRAWING.pdf": 1,
+    "REPAIR_FORM_SETUP.pdf": 3,
+    "TEMPLATES_A3.pdf": 2,
+    "TEMPLATES_LETTER.pdf": 6,
+    "METAL_FIT_TRIAL/SHOP_DRAWINGS.pdf": 2,
+    "CLEAR_FIT_TRIAL/SHOP_DRAWINGS.pdf": 2
+  },
+  "paragraph_layout": "bounds checked while generating",
+  "visual_review": "PASS: 40 pages, see visual_review.json with exact PDF hashes",
+  "sources": [
+    "canon/fit_trial_design.json",
+    "canon/fit_trial_handoff.json",
+    "src/fabrication/release_documents.py"
+  ]
+}

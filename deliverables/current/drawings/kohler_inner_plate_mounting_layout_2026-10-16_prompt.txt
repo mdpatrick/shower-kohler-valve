@@ -1,0 +1,71 @@
+Use case: infographic-diagram.
+Asset type: one high-resolution technical measurement-reference illustration for this Kohler inner-plate project.
+Create the finished IMAGE, preferably 2400 × 3000 pixels in a 4:5 portrait composition, with white background, crisp typography, generous spacing, restrained blue and green accents, and premium engineering instruction-sheet styling.
+
+REFERENCE IMAGE: The supplied local photo is a subject/orientation reference only, showing the ORIGINAL INNER KOHLER METAL PLATE from the front. Make a completely new simplified flat technical illustration, not a photograph. Do not copy the photo's dimension annotations; the exact dimension specification below governs. No photographic texture, shadows, embossing, calipers, control openings, or decorative graphics.
+
+TITLE (verbatim): “Kohler inner plate — measured mounting-hole layout”
+SUBTITLE (verbatim): “Front view · All dimensions in millimeters · Two mounting holes”
+
+LAYOUT:
+Two matching front-view diagrams side by side, with identical plate silhouette and hole positions.
+LEFT heading “Horizontal measurements”, blue measurement lines/text.
+RIGHT heading “Vertical measurements”, green measurement lines/text.
+Both plate silhouettes: light gray fill, fine dark gray outline, simplified upright rounded rectangle, width 130.35 mm and height 165.10 mm in correct ratio. Corner curvature is unverified: show a plausible smooth rounded outline but NO radius dimensions.
+Each plate has exactly TWO small circular mounting holes (two holes PER diagram, the same pair repeated). White hole interiors and thin dark circular boundaries, diameter 5.66 mm. A at upper right, B at lower left. Do not mirror. No other holes or control openings.
+Each hole has a small thin dark center cross and a clear nearby A or B label placed away from its measured contact dot.
+Print “Both mounting holes: Ø5.66 mm” below the diagrams.
+Print “Control openings and formed details omitted.”
+Print “Corner curvature unverified.”
+
+PRECISE GEOMETRY, used in BOTH diagrams:
+Use the intersection of LEFT and TOP tangent datum lines as (0, 0); not the rounded plate's physical corner.
+The LEFT datum is a vertical reference line tangent to the leftmost outside plate edge at X=0.
+The TOP datum is a horizontal reference line tangent to the topmost outside plate edge at Y=0.
+X increases rightward. Y increases downward. Draw unobtrusive +X right arrow and +Y down arrow, labeled LEFT datum, TOP datum and O at their intersection. O sits in the white area outside the rounded upper-left profile. Do not place the datums inset from the outermost silhouette.
+Hole A center: X=116.34 mm, Y=58.57 mm.
+Hole B center: X=13.55 mm, Y=106.23 mm.
+Hole radius: 2.83 mm.
+To aid proportional placement: A is about 89.25% across and 35.48% down the bounding rectangle; B is about 10.40% across and 64.34% down. Hole diameter is about 4.34% of plate width.
+Keep both diagrams at the same scale and upright orientation.
+
+CRITICAL DIMENSION ENDPOINTS:
+The four F readings measure FAR HOLE EDGES, never centers, never near edges, never outer plate edges.
+Use a small vivid highlighted contact dot ON the circular hole boundary, distinguishable from the black center cross. Dimension extension line must start EXACTLY at that contact dot.
+Avoid angled dimension lines, crossing arrows, intersecting labels, label crowding, and any arrow ending on a center cross. Use standard thin perpendicular extension lines and double-headed dimension arrows. Put labels outside plates.
+
+LEFT DIAGRAM (blue):
+FAX = 119.17 mm. Measured from LEFT datum X=0 to the RIGHTMOST inside circular wall of A at (119.17,58.57). Place a blue contact dot at the 3 o'clock boundary of hole A. Extend vertically UP from this dot to a horizontal blue dimension line ABOVE the plate, spanning X=0 to119.17. Label above that line “FAX = 119.17 mm”. Left end aligns with the LEFT tangent datum.
+FBX = 16.38 mm. Measured from LEFT datum X=0 to the RIGHTMOST inside circular wall of B at (16.38,106.23). Place a blue contact dot at the 3 o'clock boundary of hole B. Extend vertically DOWN from this dot to a short horizontal dimension line BELOW the plate, spanning X=0 to16.38. Because the span is short, place legible label outside/beside the span rather than squeezing it between arrowheads. Label “FBX = 16.38 mm”.
+Show overall WIDTH separately, outside below the plate, from leftmost silhouette X=0 to rightmost silhouette X=130.35, label “130.35 mm”. Keep width dimension and FBX dimension on separate rows with ample space.
+No green measurements on this panel.
+
+RIGHT DIAGRAM (green):
+FAY = 61.40 mm. Measured from TOP datum Y=0 to the BOTTOMMOST inside circular wall of A at (116.34,61.40). Place a green contact dot at the 6 o'clock boundary of hole A. Extend horizontally RIGHT from this dot to a vertical dimension line OUTSIDE the right side of the plate, spanning Y=0 to61.40. Label “FAY = 61.40 mm”.
+FBY = 109.06 mm. Measured from TOP datum Y=0 to the BOTTOMMOST inside circular wall of B at (13.55,109.06). Place a green contact dot at the 6 o'clock boundary of hole B. Extend horizontally LEFT from this dot to a vertical dimension line OUTSIDE the left side of the plate, spanning Y=0 to109.06. Label “FBY = 109.06 mm”. Use the left side for FBY and right side for FAY to avoid crossing measurement lines.
+Show overall HEIGHT separately, farther right of the plate, from topmost silhouette Y=0 to bottommost silhouette Y=165.10, label “165.10 mm”. Give FAY and height dimensions separate tracks and clear labels.
+No blue measurements on this panel.
+
+Add a compact datum explanation:
+“Datum intersection = reference origin, not a physical corner.”
+Optional tiny legend explaining marks: “Colored dot: measured hole-edge contact · Cross: hole center”.
+
+BOTTOM TABLE, below the two diagrams, clean typography, fine rules:
+Heading (verbatim): “Calculated hole centers — from LEFT and TOP datums”
+Column headings and rows verbatim:
+Hole | X from LEFT | Y down from TOP | Diameter
+A | 116.34 mm | 58.57 mm | 5.66 mm
+B | 13.55 mm | 106.23 mm | 5.66 mm
+
+Below table, render these exact lines:
+“Hole center = far-edge reading − radius”
+“Radius = 2.83 mm”
+“Calculated A–B center spacing ≈ 113.30 mm”
+
+MEASUREMENT NOTE (verbatim, readable, can wrap across two lines):
+“FBY shown: 109.06 mm. Repeat reading: 108.85 mm, a 0.21 mm difference. Values have not been averaged.”
+
+FOOTER (verbatim, readable):
+“Measurement reference only. Displayed decimal places do not establish accuracy. Verify fit before fabrication.”
+
+Priority: correct proportional geometry, precisely anchored far-right/far-bottom contacts, matching diagrams, correct verbatim numbers/text, then visual elegance. No extra mounting holes, invented dimensions, corner radius numbers, custom escutcheon, 3D perspective, caliper illustrations, or guaranteed-fit claims.

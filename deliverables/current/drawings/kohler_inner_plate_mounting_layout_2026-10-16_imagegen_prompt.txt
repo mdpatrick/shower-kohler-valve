@@ -1,0 +1,11 @@
+Mode: built-in image_gen (not CLI).
+Final reference: build/imagegen/kohler_layout_guide.png (2400 x 3000), rendered from the project-local HTML layout guide.
+Original photo inspected: data/evidence/user/inner-plate-front-caliper-2026-10-14.png.
+The user's 2026-10-16 illustration specifications govern the values and layout; no canonical measurement import or manufacturing release was performed.
+
+Use case: infographic-diagram.
+The reference is an exact, mathematically laid-out guide for the requested final technical illustration. Create the finished high-resolution 4:5 portrait engineering sheet by faithfully reproducing this layout with crisp, elegant typography and clean fine lines on white. Preserve ALL geometry, positions, line endpoints, hole sizes, colors, words and numbers. Preserve both diagrams at exactly the SAME size and scale. Do not redesign, reflow, or move the measurement arrows.
+The plates are130.35mm wide by165.10mm high. Each plate has exactly TWO SMALL Ø5.66mm holes. A is upper-right atX116.34,Y58.57; B is lower-left atX13.55,Y106.23. Keep the holes tiny: diameter4.34% of plate width. Use the reference as the authoritative geometric scaffold.
+The blue dots are on the RIGHT boundaries of the holes; the green dots are on the BOTTOM boundaries. They are distinct from black center crosses. Preserve these exact contact points and the attached perpendicular extension lines. Preserve the tangent TOP and LEFT datums, origin outside rounded corner, X right and Y down.
+All table data, equations, repeat-reading note, subtitle, omission note, and footer must be reproduced verbatim from the reference. The title is “Kohler inner plate — measured mounting-hole layout”.
+No additional holes, dimension values, control openings, embossed details, textures or decorative graphics. No corner-radius dimensions. Do not enlarge the holes for visibility, do not narrow either plate, and do not shift B down. Make only subtle typography/line-quality refinement while faithfully preserving the exact reference content and layout. Return the final IMAGE at the reference resolution of2400×3000 if possible.

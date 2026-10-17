@@ -31,7 +31,7 @@
   "constraints": [
     "preserve travertine; no further cutting/drilling/grinding",
     "retain original plate/gasket/drain/service functions",
-    "no off-machine scan upload or publication",
+    "No off-machine scan upload or publication except the owner-authorized complete-project transfer to mdpatrick/shower-kohler-valve; see docs/decisions/github_transfer_2026-10-17.json",
     "no fabrication order or trade contact without authorization",
     "Wood clearance holes are conditionally authorized for trim-stud retraction if other valve/handle depth checks pass; this does not permit tile modification or establish relief dimensions."
   ],
@@ -98,5 +98,6 @@
     "revision": "RF01",
     "package": "deliverables/current/fabrication/FT02/RF01_REPAIR_FORM_TRIAL.zip",
     "decision": "Optional only if the protected plate trial reveals missing bearing support; no form order by default. Full face seating and release rehearsal precede filling. Does not change the selected plates."
-  }
+  },
+  "github_transfer_record": "docs/decisions/github_transfer_2026-10-17.json"
 }

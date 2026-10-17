@@ -9,4 +9,5 @@ __pycache__/
 .DS_Store
 environment/local.json
 deliverables/current/blender/user_notes.blend
+.playwright-mcp/
 

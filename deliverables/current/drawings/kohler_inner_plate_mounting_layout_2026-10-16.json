@@ -1,0 +1,39 @@
+{
+  "artifact": "kohler_inner_plate_mounting_layout_2026-10-16.png",
+  "date": "2026-10-16",
+  "generator": "built-in image_gen",
+  "status": "MEASUREMENT_REFERENCE_ONLY",
+  "sha256": "ae8d117b112c060f2b9adfc315c7226da62e966902c65fd9f75480775352b820",
+  "pixels": [
+    1122,
+    1402
+  ],
+  "source_photo": "data/evidence/user/inner-plate-front-caliper-2026-10-14.png",
+  "measurement_values_source": "Direct user specification in this illustration request, 2026-10-16. Not imported into canon.",
+  "final_prompt": "kohler_inner_plate_mounting_layout_2026-10-16_imagegen_prompt.txt",
+  "initial_prompt": "kohler_inner_plate_mounting_layout_2026-10-16_prompt.txt",
+  "arithmetic_check": {
+    "centers_mm": {
+      "A": {
+        "x_from_left_mm": 116.34,
+        "y_down_from_top_mm": 58.57
+      },
+      "B": {
+        "x_from_left_mm": 13.549999999999999,
+        "y_down_from_top_mm": 106.23
+      }
+    },
+    "A_B_center_spacing_mm": 113.30163149752082,
+    "repeat_reading_difference_mm": 0.21
+  },
+  "executed_checks": [
+    "Visual review of the final generated image: matching upright plate outlines; two small holes per panel; blue right-edge contacts and green bottom-edge contacts; datum origins; text and coordinate table.",
+    "Arithmetic recomputation of radius subtraction, center spacing and repeat-reading difference.",
+    "Byte-identical workspace copy verified by SHA-256. PNG dimensions read from file header."
+  ],
+  "limits": [
+    "Raster illustration, not an exact-scale fabrication template or measured evidence.",
+    "No physical fit or other installation check performed.",
+    "Canon, CAD, scans and existing fabrication packages unchanged."
+  ]
+}

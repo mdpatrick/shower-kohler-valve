@@ -1,0 +1,85 @@
+{
+  "reachable_blob_count": 1587,
+  "largest_blob_bytes": 99602400,
+  "all_blobs_under_100_MiB": true,
+  "text_objects_checked_for_known_credential_formats": 1088,
+  "credential_format_findings": [],
+  "expanded_GP01_matches": [
+    {
+      "name": "00_READ_ME_FIRST.txt",
+      "matches_existing_GP01": true
+    },
+    {
+      "name": "01_PASTE_INTO_GPT_PRO.txt",
+      "matches_existing_GP01": true
+    },
+    {
+      "name": "02_PROJECT_BRIEF.txt",
+      "matches_existing_GP01": true
+    },
+    {
+      "name": "03_VISUAL_EVIDENCE.pdf",
+      "matches_existing_GP01": true
+    },
+    {
+      "name": "04_TECHNICAL_REFERENCE.zip",
+      "matches_existing_GP01": true
+    },
+    {
+      "name": "05_RETURN_TO_AGENT.txt",
+      "matches_existing_GP01": true
+    },
+    {
+      "name": "MANIFEST.json",
+      "matches_existing_GP01": true
+    }
+  ],
+  "scope": "Known credential formats in reachable small text objects; not a comprehensive security audit.",
+  "date": "2026-10-17",
+  "baseline_commit": "75ea0b0a9bc25e52d19c1e8326488153c9040d9e",
+  "repository": "mdpatrick/shower-kohler-valve",
+  "remote_empty_before_push": true,
+  "SSH_push_dry_run": "PASS",
+  "git_fsck_full": "PASS; existing dangling objects reported, no corrupt or missing reachable objects",
+  "readme_and_setup_links": "PASS",
+  "current_integrity": {
+    "status": "PASS",
+    "scope": "evidence/revision/export snapshot integrity only",
+    "revision": "R006",
+    "input_checks": [
+      {
+        "id": "SCAN-WALL",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      },
+      {
+        "id": "SCAN-PLATE-1",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      },
+      {
+        "id": "SCAN-PLATE-2",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      },
+      {
+        "id": "SCAN-INNER-ATTACHED",
+        "status": "PASS",
+        "committed_bytes_checked": true
+      }
+    ],
+    "errors": [],
+    "physical_fit": "UNRESOLVED",
+    "fabrication_approval": "NOT GIVEN"
+  },
+  "geometry_changed": false,
+  "original_scan_files_changed": false,
+  "remote_recovery": "Not yet tested at this preflight checkpoint; post-push receipt recorded separately",
+  "included_recent_artifacts": [
+    "RF03 friend print package and guide (already in baseline commit)",
+    "TR03/RF02 refinement and FIN01 finish study (already committed)",
+    "Generated mounting-layout drawings, prompts and provenance; superseded reading labeled",
+    "Expanded GP01 package, byte-identical to its already-committed files",
+    "Preserved manual document-check snapshot"
+  ]
+}

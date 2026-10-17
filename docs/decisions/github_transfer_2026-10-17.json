@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-17",
+  "repository": "https://github.com/mdpatrick/shower-kohler-valve",
+  "requested_by": "owner, in this project conversation",
+  "request": "I've created a repository since I will be taking my laptop. I need you to upload everything to it. Including some of the recent artifacts and stuff. Commit and push to mdpatrick/shower-kohler-valve. Polycams and everything.",
+  "scope": [
+    "Commit and push complete existing project history and recent meaningful artifacts to the named repository",
+    "Include all four original Polycam ZIPs as unchanged ordinary Git blobs",
+    "Include supplied project photos, manufacturer references, accepted measurements, CAD/Blender files, videos, documents and printable form package"
+  ],
+  "observed_destination": {
+    "visibility": "public",
+    "size_before_transfer": 0,
+    "default_branch": "main",
+    "push_permission": true,
+    "visibility_changed_by_agent": false,
+    "user_informed_of_public_visibility_in_commentary": true
+  },
+  "excluded_local_material": [
+    "Virtual environments and regenerable extraction/build caches",
+    "Browser automation session logs/snapshots",
+    "Private vendor account/session and destination exports under ignored build/FT02/ponoko_private",
+    "Operating-system metadata and Blender automatic backups"
+  ],
+  "manual_notes_check": "No deliverables/current/blender/user_notes.blend existed at transfer preparation. One preserved document_check.json manual-edit snapshot included; ignored .DS_Store is not a project artifact.",
+  "preservation": "No LFS, history rewriting, forced push, source ZIP repacking or changes to CAD dimensions. Generated artwork retains its original bytes and has an added superseded-measurement notice.",
+  "authorization_boundary": "This request supersedes older no-remote/no-scan-upload restrictions for this named GitHub repository. It does not authorize orders, payments, trade messages, vendor scan uploads or changes to repository visibility.",
+  "verification_scope": "Project integrity and remote recovery will be checked. This transfer does not establish physical fit, fabrication approval or water performance."
+}

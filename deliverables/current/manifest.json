@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "dba55582ef8e551ebe99e50958babdd0015e6cfc",
+  "source_commit": "75ea0b0a9bc25e52d19c1e8326488153c9040d9e",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "ddceeb146fa23e40ec0f6e27454bb3a993bba321146bf4ffad470af71c5e3634",
+  "source_tree_hash": "ce1c5326b26a9d6f019f1d21db07a5a057f9ca962d84d22013970c60d6733a9b",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -151,6 +151,31 @@
       "path": "deliverables/current/drawings/candidate_drawing_R005_DRAFT.pdf",
       "sha256": "b9e98c215ace877c2e196a1158998dd8377e8d8fa164f61be1c30eb41992569a",
       "size_bytes": 64851
+    },
+    {
+      "path": "deliverables/current/drawings/kohler_inner_plate_mounting_layout_2026-10-16.json",
+      "sha256": "5752787025a4155d48453584922aea8ffe985e569c09539f5202db5938eb1f2c",
+      "size_bytes": 1682
+    },
+    {
+      "path": "deliverables/current/drawings/kohler_inner_plate_mounting_layout_2026-10-16.png",
+      "sha256": "ae8d117b112c060f2b9adfc315c7226da62e966902c65fd9f75480775352b820",
+      "size_bytes": 1294099
+    },
+    {
+      "path": "deliverables/current/drawings/kohler_inner_plate_mounting_layout_2026-10-16_ARCHIVE_NOTE.txt",
+      "sha256": "cf7ac320e35915a734740c61286e72f84fd16c6b9321cab376a137754553fea0",
+      "size_bytes": 655
+    },
+    {
+      "path": "deliverables/current/drawings/kohler_inner_plate_mounting_layout_2026-10-16_imagegen_prompt.txt",
+      "sha256": "bce6d26c5cea254675ddc1b75ddc72e6429877b0bfc561347c612579e01608fe",
+      "size_bytes": 2135
+    },
+    {
+      "path": "deliverables/current/drawings/kohler_inner_plate_mounting_layout_2026-10-16_prompt.txt",
+      "sha256": "9fdde3e0b94a94e907f339cab119a341b01b3dc81e659298a423b3a69a396fed",
+      "size_bytes": 6941
     },
     {
       "path": "deliverables/current/drawings/measurement_worksheet_R001.pdf",
@@ -2373,6 +2398,41 @@
       "size_bytes": 1551
     },
     {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01/00_READ_ME_FIRST.txt",
+      "sha256": "41fa3591e1d21d25d9817a69bab8ee75b5a81834be9afb2a9e21ee3edef44a0f",
+      "size_bytes": 3160
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01/01_PASTE_INTO_GPT_PRO.txt",
+      "sha256": "445fad8d2352053acbe9dd731ddc06393eeab2dcfe7e168c3dfa0152888f6214",
+      "size_bytes": 16125
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01/02_PROJECT_BRIEF.txt",
+      "sha256": "9c5a9ac7166799108575de265de1dd2a4501a312a85d65e30c1c16d90c0cecf0",
+      "size_bytes": 16616
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01/03_VISUAL_EVIDENCE.pdf",
+      "sha256": "d99ad381adda1aa0fd10077e4caa9e53b67e6e69438903c08fe9e956f7c735bf",
+      "size_bytes": 50846252
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01/04_TECHNICAL_REFERENCE.zip",
+      "sha256": "20eefa2025057422cda2d4429e17fabda49fcf56eacebc494043710a9f92c1e4",
+      "size_bytes": 12786985
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01/05_RETURN_TO_AGENT.txt",
+      "sha256": "be4e614e724486fa40c636f269d630dc3c231aa0fc85875f3e8fd32a4e0e5515",
+      "size_bytes": 1551
+    },
+    {
+      "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01/MANIFEST.json",
+      "sha256": "834e8da5ab5d9370e8b3fdb4c31bb8fc53d2149cec916ca2de26f94f729d5a67",
+      "size_bytes": 8959
+    },
+    {
       "path": "deliverables/current/gpt-pro-review/GP01/GPT_PRO_PROMPT_PACKAGE_GP01.zip",
       "sha256": "d32efe4931199fe1fe014cd2b87633ade692cc837bb8b12a0d49265adcc5ed64",
       "size_bytes": 54066598
@@ -2551,6 +2611,21 @@
       "path": "deliverables/current/gpt-pro-review/GP05/MANIFEST.json",
       "sha256": "fa4d4e99f338bc574733b147a283aa1e0695f1156219f1e4112a8b0936e6ef7e",
       "size_bytes": 9502
+    },
+    {
+      "path": "deliverables/current/illustrations/README.txt",
+      "sha256": "111a68aa2e9ca7f39e4dd7487ccbc23f807f58ab15815d62f58c4d09ba437123",
+      "size_bytes": 447
+    },
+    {
+      "path": "deliverables/current/illustrations/kohler_inner_plate_measured_mounting_holes_IMAGEGEN_DRAFT_v1.generation.json",
+      "sha256": "c9395f74997fd46f5e691a238e83027278bd8ffef77053d1195cc8760707695d",
+      "size_bytes": 16884
+    },
+    {
+      "path": "deliverables/current/illustrations/kohler_inner_plate_measured_mounting_holes_IMAGEGEN_DRAFT_v1.png",
+      "sha256": "1b29f4f9499133e2c1617c4188aa0f2792650bc45c884c2ff46b24fd6a0ac29d",
+      "size_bytes": 1657594
     },
     {
       "path": "deliverables/current/manual/index.html",
