@@ -1,0 +1,1 @@
+RF01 optional temporary tool. Upload ONE of STEP or STL, quantity1, to a suitable PETG printing service. No price obtained. Read setup and check actual dry placement/removal before fill. All printed parts and film are removed. Does not change FT02 plate files.

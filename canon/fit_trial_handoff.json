@@ -1,196 +1,323 @@
 {
-  "title": "Shower escutcheon repair - field and fabrication guide",
-  "subtitle": "FT01 | 15 October 2026 | Quote and physical fit trial",
-  "recommendation": "Price the [[thickness:.3f]] mm stainless pair first, alongside the matching plastic print. If the finished, delivered metal pair costs no more than about twice the plastic pair and arrives in time, using metal as the first fit trial is reasonable. Accept that an unsuccessful trial may require a remake. Otherwise get the plastic pair promptly. This gets a real part to the Kohler visit without claiming the installation is already solved.",
-  "pages": [
+  "revision": "FT02",
+  "measurement_revision": "R006",
+  "title": "Kohler shower backing plates - fit trial and installation handoff",
+  "policy": "Use accepted calipers and credible local scan features to select supported approximations. Preserve conflicts; do not average the reflective scans or apply a depth correction to the coplanar plate survey. No new owner measurement is requested. The plumber assembles, adjusts and tests.",
+  "owner": [
     {
-      "title": "One practical next step",
-      "lead": "Make a fit trial of two simple backing plates. Retain the Kohler inner plate, foam, cover, adapters and handles.",
-      "image": "paired_front.png",
-      "caption": "Proposed appearance on the scanned travertine. Kohler exterior forms are from official CAD; finish, installed depth and successful assembly are not established by this rendering.",
+      "title": "Order one pair; choose one material route",
+      "image": "cad/FT02_MAIN_220_T1500_FIT_TRIAL_preview.png",
+      "lead": "Recommended first trial: one clear acrylic main plate and one clear diverter. The broad upright main opening preserves access; the trial resolves real contact before metal finishing or permanent installation.",
       "blocks": [
-        {
-          "heading": "Recommended pair",
-          "text": "Main: [[main_od]] mm outside diameter with a centered upright capsule opening, [[aperture_w:.2f]] x [[aperture_h:.2f]] mm, semicircular ends R[[aperture_r]]. Diverter: [[div_od]] mm outside diameter with a [[div_id]] mm opening. Both are flat. Start with [[thickness:.3f]] mm ([[thickness_in:.3f]] inch) stock. Keep the [[fallback_od]] mm diverter fallback if the real gap is too tight."
-        },
-        {
-          "heading": "What to buy",
-          "text": "One main and one diverter, one thickness. Quote 316 stainless with deburring and directional graining; compare 304 brushed stock if it is cheaper or faster. Plastic is a dry-fit tool. A stainless trial can become the installed part only after the field checks pass. No order or upload has been made."
-        },
-        {
-          "heading": "Bring to the appointment",
-          "text": "This guide, the prototype pair, the actual loose Kohler parts and any adapters/screws already on hand. The expert's first job is to prove the factory handles connect and work, then test the added plate and establish the support/sealing detail. No additional measuring campaign is required before pricing these files."
-        }
-      ]
-    },
-    {
-      "title": "How this repair is supposed to work",
-      "lead": "The new metal bridges the visible over-cut and provides a possible landing for the original foam. It is not a replacement valve trim or a complete concealed waterproofing repair.",
-      "image": "stack.png",
-      "caption": "Layer order only. The new support/bedding height and compressed foam thickness must be established on site.",
-      "blocks": [
-        {
-          "heading": "Handle access",
-          "text": "The handles attach from the shower side; their entire bodies are not pushed through the new backing. The upright opening surrounds both factory connection openings and both rods. It leaves at least [[opening_extra_min:.2f]] mm extra space beyond the modeled upper and lower opening circles. That compares projected outlines, not hidden adapter engagement. No extra bolt holes are put in the decorative cover."
-        },
-        {
-          "heading": "Support and water path",
-          "text": "The existing foam belongs to the inner plate and meets its outside edge. Its full rear footprint needs firm, continuous contact. The new plate-to-stone interface needs a compatible, continuous sealing detail, while the original cover's bottom drain remains open. Covering a saw cut cosmetically does not make its substrate waterproof. Sound support, sealed interfaces and concealed waterproofing continuity are separate checks."
-        },
-        {
-          "heading": "Keep the added depth small",
-          "text": "Added height equals actual backing thickness plus effective support/bedding height. That can reduce handle engagement even when the opening is generous. The 15.44 mm loose inner-plate depth includes about 6 mm of uncompressed foam; it is not a permitted spacer allowance. A [[alt_thickness]] mm acrylic trial adds [[depth_difference:.3f]] mm more than the [[thickness:.3f]] mm metal design."
-        },
-        {
-          "heading": "Kohler reference",
-          "text": "Kohler's older guide calls for the inner assembly to sit flat with its seal over the opening, the cover drain downward, and an appropriate adapter if engagement or cover tightening fails. The expert must confirm the applicable hardware revision. See 1041504-2-F, printed pages 3-8.",
-          "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf"
-        }
-      ]
-    },
-    {
-      "title": "What the evidence actually establishes",
-      "lead": "Physical caliper readings control the loose parts. Scans locate the installation approximately; neither reflection-distorted metal nor a low model residual establishes a machining tolerance.",
-      "image": "plane_front.png",
-      "caption": "New attached-inner-plate capture, viewed normal to a fitted wall plane. The visible stems sit high within the hub rings; their true 3D axes and engagement are not resolved.",
-      "blocks": [
-        {
-          "heading": "Reliable inputs",
-          "text": "Inner envelope 130.35 x 165.10 mm; upper opening 48.46 mm; top rim to upper opening 18 mm; foam approximately 6 mm wide and 6 mm free depth; complete free depth 15.44 mm. Main decorative cover diameter 184.15 mm. Original photos and ZIPs are preserved. Models: K-T14489-4-BN / K-2973-KS-NA, and K-T14491-4-BN / K-737-K-NA."
-        },
-        {
-          "heading": "Direct current observation",
-          "text": "The new scan shows the inner plate attached, with hubs surrounding the stems. Approximate projected stem-to-ring offsets are 3-4 mm vertically. Its width check is about 134.5 mm against a real 130.35 mm caliper reading, so this capture is not a precision jig. No parts were moved or stretched to hide the discrepancy. The expert must distinguish plate pose, hub/adapter arrangement, valve tilt and scan error by fitting the real handles."
-        },
-        {
-          "heading": "Depth and measurements",
-          "text": "The six installed distances are 3D tip-to-tip readings: U-L 80; NE-SW 109.8; U-NE 51.4; L-NE 80.25; U-SW 81.14; L-SW 54.7 mm. They are not wall-plane hole coordinates. The reported 106.39 mm inner-plate mounting gap was between nearest hole edges, not centers. Do not use either set as a drill pattern."
-        },
-        {
-          "heading": "What remains a scenario",
-          "text": "Inner corner R[[foam_r]], lower opening diameter/position, diverter rear footprint, actual cover centers, compressed foam, hidden engagement and structural support remain unresolved. FT01 uses these openly for a fit trial. The new scan does not establish a successful seal or a factory trim fit."
-        }
-      ]
-    },
-    {
-      "title": "Use the expert's visit efficiently",
-      "lead": "Check attachment before sealing. A part that looks centered but binds, fails to engage, rocks or leaves the foam unsupported does not pass.",
-      "image": "access.png",
-      "caption": "Broad upright access, no fixed bolt tabs. Gold is the assumed edge-flush foam footprint; the [[foam_land:.2f]] mm extra land is a narrow design margin, not a verified tolerance.",
-      "blocks": [
-        {
-          "heading": "1. Establish the factory fit",
-          "text": "Inspect the actual inner hubs, adapters, screws and both handles together. Confirm the handles engage and operate through their intended range without side-load, binding or forcing the plate into position. Check temperature limiting and function using the applicable Kohler procedure. If the factory assembly itself cannot fit, resolve that before using a custom plate to conceal the problem."
-        },
-        {
-          "heading": "2. Correct rod obstruction",
-          "text": "The owner confirms the nominal 4.56 inch rods touch wood. They are trim studs, not wood anchors. The published maximum front projection is 7/16 inch (11.11 mm) from the original finished wall. Confirm datum/applicability with the expert; do not automatically add the new plate thickness. Wood clearance behind the rods is the owner's preferred conditional remedy if the rest of the valve/handle depth is acceptable. Inspect the member, piping and cable before any drilling; no hole diameter or depth is prescribed here. No tile modification is authorized."
-        },
-        {
-          "heading": "3. Trial the complete stack",
-          "text": "Remove the inner plate, slide on the custom backing without force, then reinstall all factory parts. Center the backing on the real cover and check four equal visible borders. Verify full foam contact, no metal interference, free operation, suitable engagement, cover seating, service removal and no backing movement under normal operation. No added nut or tab may bear on the decorative cover."
-        },
-        {
-          "heading": "4. Resolve support and sealing",
-          "text": "Check both plates together; aim for at least 3 mm clear gap as a project handling preference. Use the [[fallback_od]] mm diverter if necessary. Confirm its [[div_id]] mm aperture clears hardware while retaining the factory rear seal/contact footprint. Specify sound support beneath clamp/seal zones and a stone-compatible nonstaining sealing system. Do not pull thin metal across a void with the nuts. Record the repair detail, cure requirements and drain path before final installation."
-        }
-      ]
-    },
-    {
-      "title": "Price a real file, then choose the route",
-      "lead": "Use delivered totals including finish, rush, shipping and tax. These planning allowances are not vendor quotes; current CAD upload results decide.",
-      "blocks": [
-        {
-          "heading": "Upload sequence",
-          "text": "For metal upload the MAIN [[main_od]] and DIV [[div_od]] [[stock]] STEP files (or their DXFs), quantity one each, millimeters, stainless [[thickness_in:.3f]] inch. Check the preview says [[main_od]] / [[div_od]] mm and select deburring plus grain finishing or protected brushed stock. For printing upload the matching [[stock]] STLs, millimeters, flat on bed, solid PETG/PLA for dry fit. If the printer recommends [[alt_thickness]] mm to control warping, use [[alt_stock]], record the thickness change and do not scale the model. For clear acrylic use the DXFs and explicitly select [[alt_thickness]] mm stock."
-        },
-        {
-          "heading": "Decision at the quoted price",
-          "text": "Prefer metal as the first trial when its finished delivered total is at most about 2x plastic and its arrival meets the appointment. This avoids paying twice for a geometry that may work. Choose plastic when metal finishing is costly, timing is worse, or the cost of remaking metal is unwelcome. A cheap local clear acrylic cut may be more useful than an opaque print for seeing contact. No metal 3D printing is needed for these flat profiles."
-        },
-        {
-          "heading": "Finish request",
-          "text": "Request smooth deburred inside and outside edges, removal of cutting tabs and heat tint, a consistent directional satin grain on both visible faces, protected shipping, and actual thickness/flatness confirmation. Raw or merely deburred stainless is not necessarily a finished decorative surface. Stainless brushing is not an exact Kohler Vibrant Brushed Nickel color match."
-        },
-        {
-          "heading": "What to send",
-          "text": "The quote ZIP contains custom CAD, shop drawings, shop notes and hashes only. Send those to a fabricator; the full field guide and scans contain installation photographs and are for the owner/expert. Choose one diverter size and one thickness. The fallback and [[alt_thickness]] mm files are alternatives, not extra parts to order by default."
-        }
-      ]
-    },
-    {
-      "title": "Fit, release and future upkeep",
-      "lead": "FT01 is the current quote and fit-trial recommendation. Previous experimental variants remain archived evidence, not competing instructions for this next order.",
-      "blocks": [
-        {
-          "heading": "Before permanent installation",
-          "text": "Record the part revision, material, measured thickness, selected diverter diameter, expert and date. The complete real assembly must pass attachment, operation, plate seating, full gasket support, retention, drainage and removal checks. Document the final stone repair/support, sealant/primer, concealed waterproofing assessment and water-exposure cure time. Only then release the selected part for permanent service."
-        },
-        {
-          "heading": "Water verification",
-          "text": "After the specified cure, test plumbing pressure/leaks separately from shower spray around the trim. Observe the accessible rear cavity and relevant joints for ingress. Verify bottom drainage and recheck after use. The installer determines the test procedure and acceptance. A render, covered over-cut or dry-fit pass is not a water test."
-        },
-        {
-          "heading": "If the prototype fails",
-          "text": "Mark the contact or missing landing directly on the prototype and photograph it with the real factory parts. Preserve measured data and change one reasoned dimension at a time. Do not enlarge the opening until the gasket landing is checked. Do not move just the factory plate in CAD while leaving the backing fixed. Fixed tabs may be reconsidered after actual stud axes, seats and engagement are established; they would need their own insertion and bearing check."
-        },
-        {
-          "heading": "Maintain one current source",
-          "text": "The dimension master is canon/fit_trial_design.json, read by src/fabrication/fit_trial.py. The attached scan assessment remains separate from the original wall transform. The main project uses millimeters: X right, Y up, Z toward the shower. Regenerate and check CAD, drawings and models together after a revision. Record actual field results in docs/physical_checks; never mark a check complete because a drawing was updated."
-        },
-        {
-          "heading": "Decision record for the visit",
-          "text": "Expert / date: __________________________   Part revision: __________\nFactory handle fit: __________   Stud remedy: ______________________\nActual added stack / adapters: __________________________________\nMain foam contact / diverter footprint: ____________________________\nGap / retention / support detail: _________________________________\nSeal system / cure / drain: _____________________________________\nOwner acceptance / final water test record: ________________________"
-        }
+        [
+          "Upload one file per part, quantity1 each",
+          "CLEAR_FIT_TRIAL/FT02_MAIN_220_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf\nCLEAR_FIT_TRIAL/FT02_DIV_124_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf\nSelect Clear Acrylic1.50 mm and Cutting. These paths already allow0.20 mm nominal kerf; no second compensation."
+        ],
+        [
+          "Real comparison",
+          "$43.79 clear pair vs $80.47 stainless pair, ordinary delivery included; estimated26 October2026. Tax not separately shown. Metal1.52 mm is1.84x, but diverter is AS CUT; its deburring/cosmetic finishing cost remains open. Metal-first is reasonable only with that work arranged. See ponoko/quotes.json."
+        ],
+        [
+          "Why no fixed bolt tabs?",
+          "The measured mounting layout was evaluated. Tight tabs conflict with captured rods; larger holes add movement beyond the extra gasket reserve. Center with the removable front border guide. Plain access leaves the real factory attachments adjustable."
+        ],
+        [
+          "Bring to the visit",
+          "Bring the pair, original trim and PLUMBER_START_HERE. Check full gasket contact, support, cover/handle engagement, both plates together and drain before sealing. Obtain the optional RF01 form only if support is missing. Quotes are saved; nothing purchased."
+        ]
       ]
     }
   ],
-  "vendors": [
+  "plumber": [
     {
-      "name": "OSH Cut",
-      "route": "316 + grain, or 304 #4 brushed, 0.060 in",
-      "allowance": "$75-220 per pair",
-      "time": "2 business days standard cutting; faster options depend on checkout. Finish and transit may add time.",
-      "note": "Deburring/graining available. Published 240-grit grain; confirm visible finish, stock and delivered total.",
-      "url": "https://www.oshcut.com/",
-      "finish_url": "https://www.oshcut.com/services/deburring"
+      "title": "Start with the actual installation",
+      "image": "photos/front.png",
+      "lead": "The owner needs an over-cut cover and a sound landing for the existing gasket while preserving the travertine. This is a fit-trial part, not a replacement for the factory trim or concealed waterproofing.",
+      "blocks": [
+        [
+          "Parts to identify",
+          "Main: Purist K-T14489-4-BN over K-2973-KS-NA. Separate diverter: K-T14491-4-BN over K-737-K-NA. Verify the hardware revision. Upper main control is volume; lower is thermostatic. Bring the correct factory adapters/screws, spline adapters, hubs/bonnets or rings, nuts, plate/gasket and handles."
+        ],
+        [
+          "Already known",
+          "Foam is attached to the inner plate and meets its outer edge; approximately 6 mm wide/deep, 15.44 mm uncompressed total stack. Owner confirms the 4.56 inch trim rods touch rear wood. The two mounting bores are 5.66 mm; final planar layout is R006. Installed tip distances were taken in 3D."
+        ],
+        [
+          "First supported fit",
+          "Remove decorative trim/inner plate only as needed. Keep the factory hardware organized and protect cartridges. Slide the custom backing over the exposed hardware; reinstall foam-backed inner plate, nuts, decorative cover and correct handles in that order. Nuts stay behind the unperforated decorative face. Support the inner assembly; do not tighten across a void."
+        ]
+      ]
     },
     {
-      "name": "SendCutSend",
-      "route": "316, 0.060 in; compare 304",
-      "allowance": "$65-180 per pair before separate cosmetic work",
-      "time": "2-4 business days production; deburr +0, cutting-tab removal +1 day. Thin 316 is not on the current rush list; 304 0.060 in is.",
-      "note": "If external brushing is needed, reserve an additional unquoted $50-150 and 2-5 business days. Confirm before buying.",
-      "url": "https://sendcutsend.com/materials/stainless-steel-316/",
-      "finish_url": "https://sendcutsend.com/sendcutsend-processing-times/"
+      "title": "Separate three depth problems",
+      "image": "photos/rear.jpeg",
+      "lead": "Adjusting a trim rod does not move the control shaft. Diagnose the factory attachment before proposing valve relocation.",
+      "blocks": [
+        [
+          "A - Trim rods meet wood",
+          "Kohler stud 1038645 is 10-24 x 4.56 inches overall (115.824 mm). Guide 1041504-2-F limits projection to 7/16 inch (11.1125 mm) from the finished wall and calls for adjustment when the plate will not sit flat. This is not a stem limit or automatic permission to add sheet thickness to the datum. Inspect the actual new seating stack."
+        ],
+        [
+          "Wood relief is conditional",
+          "Inspect the member and nearby pipe/cable from the open rear. If wood blocks retraction and other depths pass, choose local clearance that preserves the member, services and rod engagement. No blind depth, automatic rod cutting or tile drilling is specified."
+        ],
+        [
+          "B - Adapters and handles",
+          "Try the correct factory adapter/screw combination and verify full hub/bonnet or ring attachment. Main guide lists short/middle/long adapters with corresponding upper/lower screws; see reference links. Diverter uses #1/#2/#3 options. Do not substitute a generic screw or use tightening to compensate for poor engagement."
+        ],
+        [
+          "C - Valve position",
+          "Only if appropriate adapters and rod adjustment cannot make the complete supported stack work, assess valve depth/alignment. Include actual sheet plus support/bedding height. No numeric move is justified by the reflective scan. Refit both plate templates before committing a changed valve position."
+        ]
+      ]
     },
     {
-      "name": "Ponoko",
-      "route": "Clear 3 mm acrylic, DXF",
-      "allowance": "$40-100 per pair",
-      "time": "Advertises same-day eligible cutting / next-day US delivery; stock, cutoff and checkout determine eligibility.",
-      "note": "Clear material exposes contact. Brittle and thicker than the metal trial; dry fit only.",
-      "url": "https://www.ponoko.com/laser-cutting/acrylic"
-    },
-    {
-      "name": "3D Printer on Demand",
-      "route": "PETG or PLA, STL",
-      "allowance": "$40-120 per pair plus shipping",
-      "time": "Most orders ship in 3-5 business days; transit additional. Expedited work is separately quoted.",
-      "note": "Published $8 order fee is included in its quote calculation; domestic shipping $7.95. Get the actual quote rather than adding the fee twice. Check thin-part flatness.",
-      "url": "https://3dprinterondemand.com/pricing"
+      "title": "Support, seal, test and hand back",
+      "image": "support_seal.png",
+      "lead": "No new CAD survey is expected. If a trial fails, mark the exact interference/contact location and provide one useful photograph.",
+      "blocks": [
+        [
+          "Supported trial",
+          "Center the main backing on the cover with the removable guide; verify the entire factory foam band lands on metal. Check the diverter rear plate/contact ring separately: 80 mm is a trial aperture, not a measured gasket diameter. Both backings must seat without rocking, sliding or bowing; keep a visible neighbor gap."
+        ],
+        [
+          "Two support branches",
+          "If the sound stone already supports the complete assembly, retain it. If a specific contact zone lacks support, rebuild that zone on solid backing through rear access where practical. Do not bridge with loose grout, silicone or unsupported mortar. The guide gives material roles and a concealed-waterproofing inspection branch."
+        ],
+        [
+          "Water paths and success checks",
+          "New outer backing-to-stone seal is continuous. The factory cover drain remains open at 6 o'clock and drains onto the FRONT of the backing. Preserve service removal. After required cure: verify handle travel, safe temperature limit/function, dry rear during plumbing use, then controlled shower-spray ingress check. Stop on movement, leakage, trapped water or incomplete factory attachment. Record actual part revision and outcome; permanent use remains unverified until these pass."
+        ]
+      ]
     }
   ],
-  "research_checked": "2026-10-15",
-  "budget_limits": "All part-price ranges are assistant planning estimates, not published design-specific prices. No destination, tax or actual quote obtained. Small orders, finish and rush can exceed these ranges.",
-  "source_links": [
+  "guide": [
     {
-      "label": "Kohler trim installation 1041504-2-F",
-      "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf"
+      "title": "1. Receive and protect the parts",
+      "image": "cad/FT02_MAIN_220_T1520_FIT_TRIAL_preview.png",
+      "lead": "Owner + installer | Tools: printed drawing, straightedge, caliper, nonmarring gloves and surface protection.",
+      "blocks": [
+        [
+          "Inspect incoming parts",
+          "Confirm FT02 MAIN220 and DIV124/80, one each. Ponoko #4 metal is1.52 mm nominal,0.004 mm below the earlier1.524 engineering nominal. Clear is1.50. Inspect actual thickness, profile, flatness, safe edges and face. Catalog stock ranges: #4 steel1.44-1.64; acrylic1.27-1.73. Requested flatness0.5 mm is not supplier-guaranteed. No3 mm substitute."
+        ],
+        [
+          "Use paper for XY only",
+          "Print the Letter tiles at 100% and measure BOTH scale bars before trimming. Align the overlap crosses. The blue cutting profile is separate from the dashed cover/gasket overlay. Paper confirms outline/coverage; it does not establish stack depth, stiffness or water performance."
+        ],
+        [
+          "Completion check",
+          "Parts match the selected route and no sharp edge can scratch the stone or gasket. Preserve film during handling, but remove film from final contact/seal areas before evaluating the actual stack. Do not force a warped plate flat with factory nuts."
+        ]
+      ]
     },
     {
-      "label": "Kohler stud 1038645: 10-24 x 4.56 inch",
-      "url": "https://www.kohler.com/en/support/find-a-service-part/shop-parts/stud-10-24-x-4-56-l-1038645"
+      "title": "2. Fit factory parts and center the backing",
+      "image": "centering.png",
+      "lead": "Kohler installer | Tools: proper factory components and tools, nonmarring paper/card border guide, removable tape.",
+      "blocks": [
+        [
+          "Make access",
+          "Remove handles, decorative cover and foam-backed inner plate as required. Retract/remove trim studs only if needed and restore correct engagement. Main backing passes over hardware through the single broad capsule; the knobs attach from the front through the FACTORY openings. They are not additional holes in the custom part."
+        ],
+        [
+          "Center without permanent tabs",
+          "Use the dashed factory-cover circle and outer circle on the 1:1 overlay, or cut the radial border gauge. Hold the actual cover in its intended location and compare the visible border at top/right/bottom/left. Main nominal border is 17.925 mm; diverter 12.7875 mm. Support with removable low-tack tape outside seal areas. Remove the guide from the FRONT; nothing remains under the gasket."
+        ],
+        [
+          "Trial complete stack",
+          "Include the actual backing thickness and required support stand-off. Verify all main foam lands on metal, inner plate seats, nuts remain under the cover, handles attach and turn freely, factory drain is down, and the diverter rear contact sits fully on the new ring. No cut or forced bend. If wrong, mark the interfering location rather than measuring the whole shower."
+        ],
+        [
+          "Completion check",
+          "Both circles remain concentric and separated; the assembly can be removed normally. Correct factory clamping on solid support must prevent shifting. Tape and sealant are not assumed permanent structural retention."
+        ]
+      ]
+    },
+    {
+      "title": "3. Provide solid support where it is needed",
+      "image": "support_seal.png",
+      "lead": "Installer + tile/stone specialist if required | Keep the original tile intact. Inspect through the existing rear opening.",
+      "blocks": [
+        [
+          "Branch A - Sound contact",
+          "Dry-fit metal on clean sound stone. If the perimeter seal zone and factory clamp/gasket zones are adequately supported without bowing or rocking, no full-opening rebuild is required. Preserve that stable load path."
+        ],
+        [
+          "Branch B - Local missing support",
+          "Mark only unsupported bearing zones. Through rear access, provide securely supported cementitious backing on suitable framing/cleats without new tile penetrations. Fit sound stone or compatible cementitious infill to those zones, supported while curing and flush enough for the plate to sit without force. Keep repair and fasteners clear of pipes, valve mounting and service access. Do not use an adhesive dab as a freestanding support column."
+        ],
+        [
+          "Bonding option and limits",
+          "254 PLATINUM Plus is a candidate thin-set for compatible stone on cementitious backing; it is not cavity filler or waterproofing. Use the actual manufacturer sheet for substrate preparation, mixed bed thickness, support and water-exposure cure. LATAPOXY 310 may bond supported sound stone to compatible dry substrates, but porous/fissile material needs a suitability check. Neither product authorizes grinding the existing tile."
+        ],
+        [
+          "Concealed-waterproofing branch",
+          "If the rear reveals wet, crumbling material or a disrupted membrane, the specialist must identify and repair that system with a compatible detail before wet service. A surface bead or metal cover cannot demonstrate an unseen membrane connection. Record the selected repair, materials and cure; then repeat the same dry fit."
+        ]
+      ]
+    },
+    {
+      "title": "3A. Optional form-assisted local repair",
+      "image": "engineering/form_after_removal.png",
+      "lead": "Repair contractor | Use only after a support gap is found. REPAIR_FORM_SETUP gives the separate three-page procedure; the two plate files are unchanged.",
+      "blocks": [
+        [
+          "Prepare and place",
+          "Confirm sound permanent backing and suitable substrate. Rehearse insertion and straight withdrawal of RF01 with actual hardware; preserve cartridge/tool access. Line it with removable PE, set three matched pads on sound tile, and brace it independently from the front. The full panel must seat without force or rocking."
+        ],
+        [
+          "Fill from the rear",
+          "Protect the valve. Hand-place only the required front12 mm repair zones outside the collar, supported by backing and outer shuttering. Do not fill the central service cavity or cast around pipes. Use the product-specific preparation/mix/cure; Cement All is conditional on compatible cementitious substrate, not presumed adhesion to travertine or board."
+        ],
+        [
+          "Remove all temporary pieces",
+          "After contractor-confirmed stripping strength, release the brace and pull toward the shower. Remove film, pads, protection and shuttering. No permanent plastic remains. Inspect support, voids and service clearance; repeat the same plate dry fit, then resolve sealing/waterproofing and cure before water tests."
+        ]
+      ]
+    },
+    {
+      "title": "4. Seal the new interface; keep drainage",
+      "image": "support_seal.png",
+      "lead": "Installer | Tools/materials: approved nonstaining stone-compatible sealant system, primer where required, mask and joint tooling.",
+      "blocks": [
+        [
+          "Two separate seals",
+          "The original foam seals against the FRONT of the new backing. The new seal closes the OUTER backing-to-travertine perimeter on sound stone. Its path must lie outside all over-cuts. Keep the factory cover bottom notch open; it drains onto the front of the backing. Do not make an aligned gap in the new rear perimeter seal."
+        ],
+        [
+          "Candidate seal system",
+          "LATASIL with LATASIL 9118 primer is a researched candidate for porous stone and stainless, subject to a small adhesion/staining test. Remove contaminants and contact-surface protective film using methods compatible with the finishes. Follow the sealant joint design; its sheet specifies width 3-25 mm, depth at most 12 mm and roughly 2:1 width/depth. Use backer rod or bond-breaker tape where the joint needs it. Do not substitute an unqualified paper-thin smear or assume silicone supports the plate."
+        ],
+        [
+          "Finish and cure",
+          "Tool a continuous accessible perimeter joint, preserve service clearances, remove masking promptly and allow the complete selected system to cure. LATASIL generally needs 24 hours at 21 C before water, longer if conditions require; actual repair mortar/membrane may govern a longer interval. Record the product/lot, conditions and earliest permitted water test."
+        ],
+        [
+          "Completion check",
+          "The supported plate remains centered and stable, the entire foam band has contact, the new seal crosses no void, and the factory drain is visibly open. If the actual edge cannot accommodate a valid joint or sound substrate, resolve that detail before wet use."
+        ]
+      ]
+    },
+    {
+      "title": "5. Assemble, operate and test",
+      "image": "sections.png",
+      "lead": "Kohler installer | Use correct factory instructions for the actual revision. Maintain rear access for observation when practical.",
+      "blocks": [
+        [
+          "Factory assembly",
+          "Fit correct adapters/screws, foam-backed inner plate and its nuts; install the decorative cover with drain down; secure handles through their factory hubs/bonnets or rings. Check full engagement and travel without scraping. Never drill the decorative cover for protruding nuts. Added depth is actual sheet plus bedding/support, not a generic 5 mm allowance."
+        ],
+        [
+          "Separate plumbing check",
+          "With correct hardware installed, test operation and temperature-limit setting per Kohler. Observe rear piping and valve for leakage while running water without wetting the trim exterior. Pressure-system work belongs to the plumber. A leak here is not repaired by the new escutcheon."
+        ],
+        [
+          "Separate external-water check",
+          "After all required cure, apply controlled normal shower spray to the assembled trim while observing accessible rear surfaces. Confirm drainage and no new moisture around the opening. Stop, dry and identify the route if water enters. Do not interpret one local test as certification of concealed shower waterproofing."
+        ],
+        [
+          "Completion check",
+          "Record FT02, material and actual thickness, adapter choice, stud remedy, support/seal system, cure completion, handle/drain results and the two water-test outcomes. Until passed, keep the part labeled fit trial."
+        ]
+      ]
+    },
+    {
+      "title": "6. Service, maintain and report a failed trial",
+      "image": "photos/rear.jpeg",
+      "lead": "Owner + installer | Retain the drawings and the actual installed revision with the factory instructions.",
+      "blocks": [
+        [
+          "Future removal",
+          "Remove handles and cover using the factory sequence. The custom backing normally remains while the inner assembly is serviced. If backing removal is needed, carefully release its accessible outer seal without cutting the tile or disturbing hidden repairs. Recreate the seal and repeat the relevant cure/test steps. Do not permanently bond serviceable factory parts into the opening."
+        ],
+        [
+          "Routine care",
+          "Use finish-compatible, neutral-pH cleaning. Check for a loose plate, open perimeter joint, blocked factory drain or moisture. Do not caulk the factory drain closed. Repair damaged sealing after identifying the cause."
+        ],
+        [
+          "If something does not fit",
+          "Mark which part contacts what, and capture one focused photograph plus the failed action (cannot slide on / cannot seat / cannot attach / cannot turn / loses gasket contact). This is enough to separate an ordinary factory adjustment from a necessary CAD change. No new broad survey or 75-field form is required."
+        ],
+        [
+          "Status boundaries",
+          "Valid exports mean coherent geometry. Private quotes were obtained; no purchase or physical check has occurred. Actual received parts must establish fit, support, sealing, cure and water performance before permanent use."
+        ]
+      ]
     }
-  ]
+  ],
+  "research": [
+    {
+      "label": "Kohler main trim sequence and adapter table",
+      "url": "https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf",
+      "note": "1041504-2-F pp3,7-8: applicable revision must be checked; 7/16 maximum is wall-to-stud, not a stem limit."
+    },
+    {
+      "label": "Kohler alternate main trim revision",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/1216755-2.pdf",
+      "note": "Setscrew/ring versus bonnet versions differ. Match actual components."
+    },
+    {
+      "label": "Kohler diverter trim",
+      "url": "https://techcomm.kohler.com/techcomm/pdf/1190382-2.pdf",
+      "note": "1190382-2-A: rear plate before cover; adapter #1/#2/#3; notch down."
+    },
+    {
+      "label": "Kohler stud 1038645",
+      "url": "https://www.kohler.com/en/support/find-a-service-part/shop-parts/stud-10-24-x-4-56-l-1038645",
+      "note": "Overall 4.56 inches, #10-24. Separate from allowable front projection."
+    },
+    {
+      "label": "LATASIL",
+      "url": "https://www.laticrete.com/en/products/latasil",
+      "note": "Archived DS-6200.1-0926. Stone test and 9118 primer; suitable joint geometry and cure required. Not structural support."
+    },
+    {
+      "label": "Unselected standard Ponoko304,1.50 mm",
+      "url": "https://www.ponoko.com/materials/stainless-steel",
+      "note": "Standard #2B alternative was rejected for this quote because its cosmetic finish and D127 deburring threshold do not suit the pair as well as the live #4 option. Recorded range1.40-1.60 mm; not the selected metal."
+    },
+    {
+      "label": "Ponoko clear acrylic, live 1.50 mm selection",
+      "url": "https://www.ponoko.com/materials/clear-acrylic",
+      "note": "2026-10-16: thickness 1.27-1.73 mm, 0.20 mm nominal kerf, minimum feature 1 mm. Compensated DXFs are distinct from intended finished CAD."
+    },
+    {
+      "label": "Ponoko kerf policy",
+      "url": "https://help.ponoko.com/en/articles/4442594-how-much-material-does-the-laser-burn-away",
+      "note": "Metal compensation is automatic; nonmetal paths require allowance. Separate acrylic files expand outside and shrink inside cutting paths by 0.10 mm radially. Actual burn varies."
+    },
+    {
+      "label": "Ponoko manufacturing standards",
+      "url": "https://help.ponoko.com/en/articles/9358110-ponoko-manufacturing-standards",
+      "note": "Stock thickness, cutting tolerance and flatness are separate. Ordinary sheet flatness is not guaranteed; finish may have scratches or burrs. Requested targets require supplier agreement."
+    },
+    {
+      "label": "254 PLATINUM Plus",
+      "url": "https://cdnmdm.laticrete.com/Datasheet/NA/51224/Datasheet_NA_en_51224.pdf",
+      "note": "Candidate thin-set for compatible supported stone/cementitious substrate. Obtain actual substrate/thickness/cure requirements for the local repair."
+    },
+    {
+      "label": "LATAPOXY 310",
+      "url": "https://cdnmdm.laticrete.com/Datasheet/NA/98/Datasheet_NA_en_98.pdf",
+      "note": "DS-679-1026: vertical supported stone bonding; clean dry sound substrate, 10-35 C application, up to 25 mm non-sag, equal-volume components, standard working time 30-45 min / initial set 5-6 h at about 21 C. Initial set is not full water-exposure cure. Porous/fissile stone limits matter."
+    },
+    {
+      "label": "Ponoko #4 brushed304, live authenticated quote",
+      "url": "https://www.ponoko.com/materials",
+      "note": "Selected in quote interface2026-10-16:1.52 mm nominal,1.44-1.64 range,1.54 mm minimum feature,0.10 mm kerf. Brushed one face; scratches/burrs remain possible. Deburring description uses75 mm size and1.5 mm/0.060 inch thickness threshold. Draft proof stored locally; no account data in Git."
+    },
+    {
+      "label": "Actual Ponoko #4 quote and finishing eligibility",
+      "url": "https://www.ponoko.com/materials",
+      "note": "Live private quote16 October2026: #4 304 Stainless Steel1.52 mm; range1.44-1.64, minimum feature1.54, kerf0.10. Main offers Linear Deburring($10.83); diverter offers only As cut. $80.47 pair includes ordinary delivery, no separately shown tax or extra diverter finishing. Local quote snapshots are recorded separately; public catalog is not the quote."
+    }
+  ],
+  "costs": {
+    "actual_quotes": false,
+    "delivered_pair_prices": "Ponoko private formal quotes, 16 October 2026: one main plus one diverter. Clear acrylic1.50 mm: $43.79 including ordinary delivery. #4 304 stainless1.52 mm: $80.47 including main linear deburring and ordinary delivery; diverter remains AS CUT. Tax is not separately shown; additional diverter finishing is not included. Both estimate26 October arrival (3 business-day production plus UPS Ground), subject to order timing.",
+    "decision": "Recommended first trial: clear acrylic at $43.79 because the remaining gasket/contact checks are easier to see and the metal diverter has no quoted deburring option. Metal is1.84x this price before that missing finishing. If a qualified finisher will smooth all diverter edges at acceptable cost, metal-first remains reasonable with the same selected geometry. Do not use an as-cut edge against tile or gasket. Both choices accept possible remake risk; neither is permanent-use approval.",
+    "print_fallback": "Use T1520 metal STL for a thickness-matched print only if clear is unsuitable. No part-specific print quote exists; plastic does not establish metal stiffness or water performance.",
+    "actual_quote_obtained": true
+  }
 }

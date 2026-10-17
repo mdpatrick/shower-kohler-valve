@@ -1,0 +1,83 @@
+{
+  "revision": "FT02",
+  "measurement_revision": "R006",
+  "date": "2026-10-16",
+  "reviewer": "Codex primary agent, fresh adversarial pass using separate export reimport/analytic code; not an external engineer or GPT Pro response",
+  "disposition": "FABRICATION_FIT_TRIAL_FILES_READY; physical fit and permanent use not established",
+  "scope": "Selected two-part plate set in two alternative stocks, matching exports/drawings/ZIPs, R006 reference update, local handoff and separately conditional RF01 tool.",
+  "executed_checks": [
+    "26 unit tests passed: measurement import/history/rejection, unequal-depth 3D distances, current/historical query separation and restore comparison.",
+    "Four selected stock/part sets reimported: one valid connected STEP solid each, two closed cutting loops, mm units, XY origin and stock Z bounds, independent analytic volume, DXF equivalence and watertight STL.",
+    "Two route archives inspected: one main and one diverter only; actual member bytes and SHA256 matched route directories; no wall, factory assembly, fallback120, old stocks or tabs.",
+    "Clear acrylic path compensation independently read back: OD220.20/124.20, aperture116.15x150.90/79.80 targeting finished220/124 and116.35x151.10/80. No metal customer compensation.",
+    "Rejected tab CAD pipeline independently exercised: valid connected solid with four loops and STEP round trip. Not included in orders.",
+    "R006 front orientation checked: A upper-right, B lower-left; FAR wall contacts minus radii, no mirrored or symmetry-forced layout.",
+    "Saved/reopened Blender has three separate scenes, selected CAD sizes and333573 original attached-scan vertices. Current paired/exploded renders visually inspected.",
+    "All40 PDF pages rendered and visually inspected; template overlap corrected and three changed pages rechecked. HTML locally opened and relative file links audited.",
+    "Actual Ponoko final metal and clear quote proofs/formal exports captured; no purchase. Saved submitted metal cut geometry equals current package despite regenerated metadata.",
+    "RF01 exported STEP/STL reimported; one connected body, drafted collar, documented cast datum. Collar/small inner face paths tested independently from full-face contact diagnostic."
+  ],
+  "reviewed_failure_modes": [
+    {
+      "issue": "Locator interference / constrained assembly",
+      "finding": "Seated A tab and present tip sweep conflicts occur in tested registration. Stud retraction may remove tips but does not prove formed-hole-plane axes. Plain broad aperture avoids those additional constraints; a removable concentric gauge supplies setup position."
+    },
+    {
+      "issue": "Insufficient land / off-center controls",
+      "finding": "Nominal6 mm foam band plus1 mm inward reserve; working inner-to-cover shift and pose variation retained. Full knob/hub engagement cannot be certified from projected opening circles. Trial checks actual components and complete gasket contact before permanent use."
+    },
+    {
+      "issue": "Underconstrained centering and Z retention",
+      "finding": "Front gauge/tape only assists placement. Sound support plus correct factory clamping must prevent sliding or rocking. No adhesive strength or unsupported sheet stiffness was certified."
+    },
+    {
+      "issue": "Low hardware / wall contact / insertion",
+      "finding": "Expanded source analysis includes Z0 and uneroded opening boundary. Plain plate intersects low topography atZ0 and clears the scoped sweep at illustrative1 mm bedding. This is not an approved bedding thickness or a complete concealed solid check. Real support/engagement sets the installed plane."
+    },
+    {
+      "issue": "Neighbor gap and diverter rear plate",
+      "finding": "124/80 retained as trial nominal; scenarios do not guarantee gap. Diverter factory rear plate installs after custom ring. Its actual contact, screw engagement, clearance and joint support remain specific trial checks. No need to order dormant120 fallback now."
+    },
+    {
+      "issue": "Wrong stock / misleading quote / finish",
+      "finding": "Metal1.52 and clear1.50 explicitly differ from1.524 baseline. Actual stock ranges and effective bedding matter. Metal diverter is As cut only; safe-edge finishing is unresolved and unpriced. Clear-first selected; neither quote certifies cosmetic match or flatness."
+    },
+    {
+      "issue": "Stale measurements / wrongly placed vendor geometry",
+      "finding": "R006 final survey controls; older106.39 diagonal and installed3D tip lengths retained separately. Vendor solids contain only one local custom plate, no assembly translation. Current README and CLI now point to FT02."
+    },
+    {
+      "issue": "Repair form and permanent support",
+      "finding": "RF01 is conditional after support need identified. Clear collar does not prove full D240 face seating: complete-face overlap diagnostic is recorded. Actual pads/brace, substrate, liner release, service clearance and free withdrawal must pass before filling. No strength or waterproofing certification; all tooling removed."
+    }
+  ],
+  "readiness": {
+    "stage1_fit_trial_files": "READY",
+    "stage2_private_quotes": "COMPLETE; purchase not authorized",
+    "stage3_physical_fit": "NOT PERFORMED",
+    "stage4_permanent_use": "NOT ESTABLISHED"
+  },
+  "no_new_owner_measurement_requested": true,
+  "documents_reviewed": {
+    "ENGINEERING_RECORD.pdf": "daa69b0aa1aad00b8c89c5c561a910a0fb391a1b8ed6a0e1566a13813eaf90e4",
+    "INSTALLATION_GUIDE.pdf": "4f220a11783178efd662d7430798d922151dcd72bc88c5e57d871e01bc2d40a2",
+    "ORDER_AND_NEXT_STEP.pdf": "cdd1733e78cf9e063ab3f3d237fc739cadc0b8b2437a16b21c6dd2d7f1d0e564",
+    "PLUMBER_START_HERE.pdf": "56e8e1f75af54cda32c77fdfe0b654521cba15ee0af363489d5906076725ad49",
+    "REFERENCE_OVERLAYS_LETTER.pdf": "2b20f147f2575723e255a1eb78c746984b2b91d36a5d99ef44320a13b2d47d8b",
+    "REPAIR_FORM_DRAWING.pdf": "c7832c1d14e860ac49d2b4d6bc135691ecd4ba77044572a41a9a5372ef0f888a",
+    "REPAIR_FORM_SETUP.pdf": "bf118e45dc57d765c5c527a6cc1963bdac2a71d985f71efe8e5b789e337edc40",
+    "TEMPLATES_A3.pdf": "c8948fb78929a8949c3f9b5677904a41d4db378ddea06aef685c6d5c6fc368c5",
+    "TEMPLATES_LETTER.pdf": "eac263616dda448d8b0ef91618fa4b334cad14751c9a68d163ee5620e68579f3",
+    "CLEAR_FIT_TRIAL/SHOP_DRAWINGS.pdf": "c99c79c9599c5f37e242988afa182ea69af9588614a0f981f94655a9d521c684",
+    "METAL_FIT_TRIAL/SHOP_DRAWINGS.pdf": "95ee07a78e36fe0c085f03564f592c423479d8a7a32a52046e38554ed43c66d9"
+  },
+  "evidence_sha256": {
+    "deliverables/current/fabrication/FT02/audit.json": "3948cd730c64c75dc0918e7cb4d4edc02a11210d9b4822613c56151ac5d499dd",
+    "deliverables/current/fabrication/FT02/visual_review.json": "26109388a480099b67fde0bd4af4439df191eded5f4b682c674b2927e0e991a2",
+    "deliverables/current/fabrication/FT02/engineering/locator_evaluation.json": "9f3b7c9ce5194e1a9242644649ef3f1b6d01e2ad1951fa36dc0e32695fe0123d",
+    "deliverables/current/fabrication/FT02/engineering/form_assessment.json": "a8bdfc1d1f5875f611aaebe14ae1d5daac132d6423efbd5cfba1834e4ba55ad8",
+    "deliverables/current/fabrication/FT02/blender_check.json": "d0cb3f28da2ee80b437ee7077eb4c669f841d558e1a11facf0f763640e1279e4",
+    "canon/measurements.json": "45f7fefebd12ecbf3c057bf775e6f920685f5edfa6f40aa6314d640dba648abd",
+    "canon/fit_trial_design.json": "2b191cf0d50c49a023a8b63f1ce1bfaa6903a841c25c95678c0ca8e04bcce822"
+  }
+}

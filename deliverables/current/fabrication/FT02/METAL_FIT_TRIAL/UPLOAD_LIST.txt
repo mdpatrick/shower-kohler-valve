@@ -1,0 +1,2 @@
+QTY 1 | FT02_MAIN_220_T1520_FIT_TRIAL.dxf | MAIN | thickness 1.520 mm
+QTY 1 | FT02_DIV_124_T1520_FIT_TRIAL.dxf | DIV | thickness 1.520 mm

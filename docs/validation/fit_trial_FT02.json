@@ -1,0 +1,95 @@
+{
+  "revision": "FT02",
+  "measurement_revision": "R006",
+  "status": "PASS",
+  "scope": "Executed fresh file read-back, analytic and package consistency audit; not physical verification. Human-facing PDF/browser review is separately recorded in visual_review.json.",
+  "parts": [
+    {
+      "id": "FT02_MAIN_220_T1520_FIT_TRIAL",
+      "valid_solids": 1,
+      "loops": 2,
+      "aperture_bounds_mm": [
+        116.35000000000001,
+        151.1
+      ],
+      "analytic_volume_mm3": 35473.63897701867,
+      "export_volume_mm3": 35473.63897701999,
+      "status": "PASS"
+    },
+    {
+      "id": "FT02_MAIN_220_T1500_FIT_TRIAL",
+      "valid_solids": 1,
+      "loops": 2,
+      "aperture_bounds_mm": [
+        116.35000000000001,
+        151.1
+      ],
+      "analytic_volume_mm3": 35006.88056942633,
+      "export_volume_mm3": 35006.88056942762,
+      "status": "PASS"
+    },
+    {
+      "id": "FT02_DIV_124_T1520_FIT_TRIAL",
+      "valid_solids": 1,
+      "loops": 2,
+      "aperture_bounds_mm": [
+        80.0,
+        80.0
+      ],
+      "analytic_volume_mm3": 10715.595550276354,
+      "export_volume_mm3": 10715.59555027659,
+      "status": "PASS"
+    },
+    {
+      "id": "FT02_DIV_124_T1500_FIT_TRIAL",
+      "valid_solids": 1,
+      "loops": 2,
+      "aperture_bounds_mm": [
+        80.0,
+        80.0
+      ],
+      "analytic_volume_mm3": 10574.600871983244,
+      "export_volume_mm3": 10574.600871983479,
+      "status": "PASS"
+    }
+  ],
+  "packages": [
+    {
+      "route": "METAL_FIT_TRIAL",
+      "parts": 2,
+      "sha256": "931c025bad61be4c262bbff24033ef541025b6b071f3376cb27f45e6b6084dc9",
+      "status": "PASS"
+    },
+    {
+      "route": "CLEAR_FIT_TRIAL",
+      "parts": 2,
+      "sha256": "11d4cb2905585f064f0e42e4cb4a50a9b93a0b268ffaeb4a436055464fc3206d",
+      "status": "PASS"
+    }
+  ],
+  "R006_orientation": "PASS A upper-right/B lower-left; no reflection; raw 3D tip distances unused as planar layout",
+  "tab_pipeline": "PASS: 1 connected valid solid, 4 closed top loops, STEP round trip; this geometry is rejected and absent from order packages",
+  "form": "One connected STEP; collar-path scope and full-face seating limitation recorded; field placement/material suitability unperformed",
+  "blender": "Saved/reopened 3 scenes; CAD dimensions and preserved attached source verified",
+  "pdf_page_counts": {
+    "TEMPLATES_LETTER.pdf": 6,
+    "ORDER_AND_NEXT_STEP.pdf": 1,
+    "INSTALLATION_GUIDE.pdf": 7,
+    "REPAIR_FORM_DRAWING.pdf": 1,
+    "REPAIR_FORM_SETUP.pdf": 3,
+    "ENGINEERING_RECORD.pdf": 8,
+    "TEMPLATES_A3.pdf": 2,
+    "PLUMBER_START_HERE.pdf": 3,
+    "REFERENCE_OVERLAYS_LETTER.pdf": 5,
+    "METAL_FIT_TRIAL/SHOP_DRAWINGS.pdf": 2,
+    "CLEAR_FIT_TRIAL/SHOP_DRAWINGS.pdf": 2
+  },
+  "physical_fit": "NOT PERFORMED",
+  "permanent_use": "NOT ESTABLISHED",
+  "source_sha256": {
+    "canon/fit_trial_design.json": "2b191cf0d50c49a023a8b63f1ce1bfaa6903a841c25c95678c0ca8e04bcce822",
+    "canon/measurements.json": "45f7fefebd12ecbf3c057bf775e6f920685f5edfa6f40aa6314d640dba648abd",
+    "src/fabrication/audit_release.py": "c8b34b477311b7d48a80657f3a77c60307f3f5237d7d2dbf73a8d6edde0f0631",
+    "deliverables/current/fabrication/FT02/design_report.json": "e34d75a723633273ccfe1663ed2ec4e760309be25544ed7c3128022b5b992d4b"
+  }
+}

@@ -1,4 +1,4 @@
-"""Read current FT01 design evidence without relabeling historical geometry.
+"""Read current selected design evidence without relabeling historical geometry.
 
 No imports of builders, no mutations, and no physical approval inferred from an
 exact solid or a positive projected margin. Historical queries stay explicit.
@@ -32,8 +32,8 @@ def nested(value,path):
 class CurrentQuery:
     def __init__(self,root):
         self.root=Path(root)
-        self.folder=Path('deliverables/current/fabrication/fit-trial')
         self.design=self.read('canon/fit_trial_design.json')
+        self.folder=Path(self.design.get('output_directory','deliverables/current/fabrication/fit-trial'))
         self.state=self.read('canon/project_state.json')
         self.measurements=self.read('canon/measurements.json')
 
@@ -142,19 +142,29 @@ class CurrentQuery:
 
     def clearance(self):
         r=self.report()
-        return self.response({k:r[k] for k in ['placement_scenarios','geometric_check_scope','inner_opening_envelopes',
-                     'nominal_foam_extra_land_mm','foam_corner_sensitivity','tolerance_budget','physical_checks']},
+        result={k:r[k] for k in ['placement_scenarios','geometric_check_scope','inner_opening_envelopes',
+                     'nominal_foam_extra_land_mm','foam_corner_sensitivity','tolerance_budget','physical_checks']}
+        sources=[self.folder/'design_report.json']
+        if r.get('complete_local_checks'):
+            path=self.folder/r['complete_local_checks'];study=self.read(path)
+            for rel,expected in study['sources_sha256'].items():
+                if not (self.root/rel).is_file() or digest(self.root/rel)!=expected:
+                    raise QueryError(f'Stale local study source: {rel}. Rebuild the dependent analysis.')
+            result['expanded_local_study']={k:study[k] for k in ['full_capture_checks','gasket_sensitivity','diverter_assessment','vendor_thickness_check','decision','limits']}
+            result['scope_note']='Historical clipped scenarios above remain separate; expanded_local_study is the current complete-local-surface assessment. No hidden-geometry or physical fit proof.'
+            sources.append(path)
+        return self.response(result,
                      'Read saved, source-hash-checked projected hardware and nominal foam checks; no new intersection computation',
-                     state='unselected_placement_scenarios',sources=[self.folder/'design_report.json'])
+                     state='unselected_placement_scenarios',sources=sources)
 
     def depth(self):
         d=self.design
         return self.response(dict(added_height=d['depth'],stocks=d['stocks'],
              effective_bedding_height_mm=None,actual_compressed_foam_height_mm=None,
              installed_rod_projection_mm=None,actual_adapter_engagement_mm=None,
-             current_full_stack_fit='UNRESOLVED: no measured complete FT01 assembly',
-             actual_fit_record=str(self.folder/'expert_visit_record_FT01.pdf'),
-             historical_diagnostic='query historical depth shows older assumed solids and rough-in comparisons, not the current FT01 installed assembly'),
+             current_full_stack_fit='UNRESOLVED: no measured complete '+d['revision']+' assembly',
+             actual_fit_record=str(self.folder/'PLUMBER_START_HERE.pdf'),
+             historical_diagnostic='query historical depth shows older assumed solids and rough-in comparisons, not the current installed assembly'),
              'Read current depth inputs and explicitly unknown field values',sources=['canon/fit_trial_design.json'])
 
     def compare_states(self):
@@ -163,19 +173,19 @@ class CurrentQuery:
              proposed_design=r['design'],placement_scenarios=r['placement_scenarios'],
              source_capture_state=self.state['states']['current_exposed_installation'],
              attached_scan='Separate supplemental capture; not globally registered to primary scan',
-             observed_geometry_changed=False,changes='Current custom parts use FT01 dimensions. Prior placement hypotheses remain separate and unselected. No physical valve/stud adjustment is inferred.'),
+             observed_geometry_changed=False,changes='Current custom parts use '+self.design['revision']+' dimensions. Prior placement hypotheses remain separate and unselected. No physical valve/stud adjustment is inferred.'),
              'Read current design and preserved scenario records',state='observed_and_proposed_distinguished',
              sources=['canon/project_state.json',self.folder/'design_report.json'])
 
     def help(self):
         return self.response({'operations':['dimension main.outer_diameter_mm','dimension stocks.0.thickness_mm',
              'dimension <measurement-ID>','coverage [CUT-03]','clearance','depth',
-             'solid MAIN|DIV|DIV-FALLBACK [T1524|T3000]','solid <exact current part-ID>',
+             'solid MAIN|DIV [T1520|T1500]','solid <exact current part-ID>',
              'compare-states','features [ID]','measure <landmark-ID> <landmark-ID>',
              'historical dimension candidate.diameter_mm','historical solid PLATE-INNER|TRIM-OUTER',
              'historical section controls|studs','historical depth','validate'],
              'default':'Current fit-trial design; source measurements remain their own evidence revision.',
-             'historical':'Explicit access to older R005 reconstruction and its rejected trial assembly. Never a current FT01 fit check.',
+             'historical':'Explicit access to older R005 reconstruction and its rejected trial assembly. Never a current selected-design fit check.',
              'scope':'features/measure inspect the preserved evidence registry. section/reconcile-centers retain historical diagnostic scope, explicitly labeled.'},
              'Query command reference',sources=['canon/fit_trial_design.json'])
 

@@ -1,0 +1,5 @@
+FT02 METAL_FIT_TRIAL
+One MAIN plus one DIV, not every format. Upload the two DXFs in UPLOAD_LIST. STEP and STL are the intended finished parts, not additional order items.
+Metal alternative: Ponoko #4 brushed 304 stainless, 1.52 mm nominal, brushed on one face. Actual quote offers Linear Deburring for MAIN only; DIV is As cut and needs safe-edge finishing arranged separately. Clear-first is the current recommendation. No exact Kohler BN match.
+Metal DXF is the uncompensated finished profile; Ponoko automatically offsets its cutter.
+No scaling, permanent tabs, threads, countersinks or bends. Follow SHOP_DRAWINGS. Confirm actual thickness, flatness, safe edges, cosmetic finish, price and arrival before purchase. Catalog stock is not a finish/flatness certification. No exact Kohler BN match. A fit trial is not a water-performance pass.

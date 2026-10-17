@@ -25,13 +25,40 @@ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def rr(w,h,r):
     if abs(w/2-r)<1e-8:return LineString([(0,-h/2+r),(0,h/2-r)]).buffer(r,quad_segs=256)
     return box(-w/2+r,-h/2+r,w/2-r,h/2-r).buffer(r,quad_segs=256)
+def make_main(d,t,locators=None):
+    """Exact source geometry. Optional tabs are an engineering test, not selected."""
+    m=d['main'];w,h=m['aperture_width_mm'],m['aperture_height_mm'];y=(h-w)/2
+    cutter=(cq.Workplane('XY').moveTo(-w/2,-y).lineTo(-w/2,y)
+            .threePointArc((0,h/2),(w/2,y)).lineTo(w/2,-y)
+            .threePointArc((0,-h/2),(-w/2,-y)).close().extrude(t+2).translate((0,0,-1)))
+    part=cq.Workplane('XY').circle(m['outer_diameter_mm']/2).extrude(t).cut(cutter)
+    if locators:
+        a,b=[locators[k] for k in ('A','B')]
+        angle=math.degrees(math.atan2(a[1]-b[1],a[0]-b[0]))
+        for p in [a,b]:
+            root=math.copysign(67,p[0]);length=abs(root-p[0])+15
+            tab=cq.Workplane('XY').center((root+p[0])/2,p[1]).slot2D(length,15,0).extrude(t)
+            part=part.union(tab)
+        part=part.edges('|Z').fillet(1.5)
+        part=part.cut(cq.Workplane('XY').center(*a).circle(3.5).extrude(t+2).translate((0,0,-1)))
+        part=part.cut(cq.Workplane('XY').center(*b).slot2D(10,7,angle).extrude(t+2).translate((0,0,-1)))
+    return part
 def run(design=None, output=None):
     global OUT
-    OUT=Path(output) if output is not None else ROOT/'deliverables/current/fabrication/fit-trial'
     d=validate_design(design or read('canon/fit_trial_design.json'))
+    OUT=Path(output) if output is not None else ROOT/d.get('output_directory','deliverables/current/fabrication/fit-trial')
     resolved=read('data/derived/resolved.json');m=d['main'];f=d['foam'];parts=[]
     (OUT/'cad').mkdir(parents=True,exist_ok=True)
+    # Remove only superseded generator-owned stock variants in this release.
+    # Earlier releases and owner annotations remain untouched.
+    active_ids={f'{d["revision"]}_{kind}_{od:g}_{stock["id"]}_FIT_TRIAL'
+        for kind,od in [('MAIN',m['outer_diameter_mm']),('DIV',d['diverter']['outer_diameter_mm'])]
+        for stock in d['stocks']}
+    for previous in (OUT/'cad').glob(d['revision']+'_*'):
+        if not any(previous.name.startswith(ident+'.') or previous.name==ident+'_preview.png' for ident in active_ids):
+            previous.unlink()
     for kind,od in [('MAIN',m['outer_diameter_mm']),('DIV',d['diverter']['outer_diameter_mm']),('DIV-FALLBACK',d['diverter']['fallback_outer_diameter_mm'])]:
+        if 'selected_parts' in d and kind not in d['selected_parts']:continue
         for stock in d['stocks']:
             t=stock['thickness_mm'];solid=cq.Workplane('XY').circle(od/2).extrude(t)
             if kind=='MAIN':
@@ -43,7 +70,7 @@ def run(design=None, output=None):
             else:
                 ir=d['diverter']['aperture_diameter_mm']/2
                 cutter=cq.Workplane('XY').circle(ir).extrude(t+2).translate((0,0,-1));innerarea=math.pi*ir**2
-            part=solid.cut(cutter);s=part.val()
+            part=make_main(d,t) if kind=='MAIN' else solid.cut(cutter);s=part.val()
             ident=f'{d["revision"]}_{kind}_{od:g}_{stock["id"]}_FIT_TRIAL'
             files={x:OUT/'cad'/(ident+'.'+x) for x in ['step','stl','dxf']}
             cq.exporters.export(s,str(files['step']))
@@ -119,7 +146,7 @@ def run(design=None, output=None):
       'sources_sha256':{p:sha(ROOT/p) for p in ['src/fabrication/fit_trial.py','src/fabrication/fit_trial_spec.py','canon/fit_trial_design.json','canon/measurements.json','data/derived/resolved.json','deliverables/current/fabrication/control-registration/registration_trial.json','deliverables/current/fabrication/concentric-border-study/analysis.json','data/raw/polycam/polycam-inner-plate-attached.zip']}}
     (OUT/'design_report.json').write_text(json.dumps(report,indent=2)+'\n')
     figures(report,ap,outer,foamin,resolved)
-    print('FT01: six valid STEP/STL/DXF part sets; no integral mounting tabs; report and figures saved.')
+    print(f'{d["revision"]}: {len(parts)} valid STEP/STL/DXF part sets; no integral mounting tabs; report and figures saved.')
 
 def figures(report,ap,outer,foamin,resolved):
     v=values(report['design'],resolved,report);od=v['main_od'];land=report['nominal_foam_extra_land_mm']

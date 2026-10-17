@@ -4,6 +4,8 @@ import json,datetime,copy,statistics,sys,hashlib,math
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'src/review'))
 from requests import requests
+sys.path.insert(0, str(ROOT))
+from src.analysis.mounting_layout import derive_layout
 
 def import_response(path,root=ROOT,dry_run=False):
     payload=json.loads(Path(path).read_text());canonpath=root/'canon/measurements.json';canon=json.loads(canonpath.read_text())
@@ -82,6 +84,13 @@ def import_response(path,root=ROOT,dry_run=False):
         for axis in ['X','Y']:
             near=prefix+'-'+axis+'N';far=prefix+'-'+axis+'F'
             if near in accepted and far in accepted and accepted[far]['value_mm']<=accepted[near]['value_mm']:raise ValueError('Far edge must exceed near edge: '+prefix+' '+axis)
+    layout = derive_layout({k:v['value_mm'] for k,v in accepted.items()})
+    if layout:
+        out['active_locating_layout'] = layout
+        # Earlier edge-gap derivations remain evidence, not the selected layout.
+        for m in out['measurements']:
+            if m['id'] in ('M11-G', 'M11-CC', 'M11-R', 'M11-NERC'):
+                m['role'] = 'historical edge observation / reconciliation check; final TOP/LEFT survey governs locating layout'
     if not added and not payload.get('current_state_note') and not payload.get('group_notes'):return {'status':'no changes','revision':canon['revision']}
     newrev='R'+str(int(canon['revision'][1:])+1).zfill(3);out['revision']=newrev
     if added:out['note']='User-confirmed readings retain source units, endpoints and unknown uncertainty. Derived values are not independent evidence. Remaining assumptions are in design_decisions.json.'

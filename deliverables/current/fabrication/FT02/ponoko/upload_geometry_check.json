@@ -1,0 +1,21 @@
+{
+  "date": "2026-10-16",
+  "revision": "FT02",
+  "scope": "Two locally preserved metal DXFs used for the final quote compared geometrically with current package. Regeneration can change metadata bytes without changing geometry. Clear is supported by saved formal quote/proof and current kerf audit, not a preserved submitted-byte copy.",
+  "metal": [
+    {
+      "part": "FT02_MAIN_220_T1520_FIT_TRIAL.dxf",
+      "saved_upload_sha256": "358cd45d19d2bda01ff3416d0394b494aead263b1b710b6e4a5b4ceacb2f8130",
+      "current_package_sha256": "b75cf6bafa0baa5d287c3da31d0dfa5c8f7860443203717eee2a3a4064f79f06",
+      "symmetric_difference_mm3_at_1mm_extrusion": 0.0,
+      "same_cut_geometry": true
+    },
+    {
+      "part": "FT02_DIV_124_T1520_FIT_TRIAL.dxf",
+      "saved_upload_sha256": "4cf13681e1ffe23c39eee1ee30a6a40b477bdaebc004ccae681cafcc6af6a430",
+      "current_package_sha256": "90d3cdf8cca0a45dbfbae0564de9496740bf53755b3a2ae3b5afe2d3a4db662a",
+      "symmetric_difference_mm3_at_1mm_extrusion": 0.0,
+      "same_cut_geometry": true
+    }
+  ]
+}

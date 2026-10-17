@@ -1,10 +1,10 @@
 {
   "project_id": "shower-kohler-valve",
-  "revision": "R005",
+  "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "f658253efc6e8a37555bcc1e7fb1011223340577",
+  "source_commit": "e460c3b324ffa0e2c679a59af562c3044a01efc6",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "f0e89f45451392d59b0cdc46b1339a40d49c2dbc8fe73195d312d94f27f99dc0",
+  "source_tree_hash": "6b098da8716f8008c820b471c9c943221e40fefb8567b998076f58722caccb51",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -12,11 +12,6 @@
     "SCAN-INNER-ATTACHED": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91"
   },
   "files": [
-    {
-      "path": "deliverables/current/.DS_Store",
-      "sha256": "57bcfbf0306c136d12cfd7e27bded6b3f318221161565a9f954eca441e4a266f",
-      "size_bytes": 8196
-    },
     {
       "path": "deliverables/current/analysis/center_reconciliation_DRAFT.json",
       "sha256": "c224a1bc40a3db14b429057ee21b003245ee56c993d1622b2b683b0eb2a7e4e3",
@@ -208,11 +203,6 @@
       "size_bytes": 70654
     },
     {
-      "path": "deliverables/current/fabrication/.DS_Store",
-      "sha256": "3dc9463516654704fe17d2d8e261ecd42fe49e45800fd3f96875c8cc1b5d4129",
-      "size_bytes": 6148
-    },
-    {
       "path": "deliverables/current/fabrication/F005/analysis.json",
       "sha256": "69273268af571abe94449d5309e553dbf51b90fbb05fad066c0cb835a13a46a3",
       "size_bytes": 29447
@@ -394,8 +384,8 @@
     },
     {
       "path": "deliverables/current/fabrication/F005/index.html",
-      "sha256": "8edff850a9e3606f30e1e817df652464028c11ce3dee2fbec2c456ee67e8b694",
-      "size_bytes": 15320
+      "sha256": "03206213dfbb026e284e9886b5a20dd5991cf029e5c0f6cb9a34fdf3af6a3572",
+      "size_bytes": 15315
     },
     {
       "path": "deliverables/current/fabrication/F005/mesh_path_check.json",
@@ -573,6 +563,561 @@
       "size_bytes": 88058
     },
     {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/CUT_PATHS.json",
+      "sha256": "b6d00b96320b8988c1eea83b21d6cf293de203d42203b86630c8d01b0ee042d0",
+      "size_bytes": 1208
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_DIV_124_T1500_FIT_TRIAL.step",
+      "sha256": "1907dc2e86444715469a7ba6c4755adb2ec5385a625c79269ff4f12d6698dd7f",
+      "size_bytes": 10585
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_DIV_124_T1500_FIT_TRIAL.stl",
+      "sha256": "18722c03e731be2b8eb1951852a89838e9eeb98b302ef7c6327d3de550a26f87",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_DIV_124_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf",
+      "sha256": "5718db4ca84fb8b287841e2abb7c799219133cf19e22c8b35d8cb73dc28aa7b4",
+      "size_bytes": 15602
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_DIV_124_T1500_FIT_TRIAL_preview.png",
+      "sha256": "f077e1849e774fd0ca5aad5c01e0c7aba3a8b990d9d05803043075efd0f1b5bf",
+      "size_bytes": 153160
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_MAIN_220_T1500_FIT_TRIAL.step",
+      "sha256": "7df7e975a841bbd8935052fffe17ebed569ed94a9403d7e49f112876ff54459e",
+      "size_bytes": 22899
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_MAIN_220_T1500_FIT_TRIAL.stl",
+      "sha256": "ea406235b8d5775d967d14c6e864624febb454ad10ba45f84ab3914e63943d7d",
+      "size_bytes": 101284
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_MAIN_220_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf",
+      "sha256": "79d4058c795e9d723ad048ad2fec43db70e3e296a139e0c3efdaa8cbbecfa2d5",
+      "size_bytes": 16104
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/FT02_MAIN_220_T1500_FIT_TRIAL_preview.png",
+      "sha256": "112a2239ca2efcb19cd6dbe405da26f4ac21b71f1e1bc670e3ffebf1eccfe196",
+      "size_bytes": 163521
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/SHA256.json",
+      "sha256": "41e349efea59f3421ef6764eddaf31f3f505e52a6d1337e64609ff4c9ce7fa00",
+      "size_bytes": 1261
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/SHOP_DRAWINGS.pdf",
+      "sha256": "c99c79c9599c5f37e242988afa182ea69af9588614a0f981f94655a9d521c684",
+      "size_bytes": 4790
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/SHOP_NOTES.txt",
+      "sha256": "ec962d6189975d0e6ffa42580c858de9c98b41f6baddfe260a3a99f97cefebfb",
+      "size_bytes": 729
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/CLEAR_FIT_TRIAL/UPLOAD_LIST.txt",
+      "sha256": "5ee24e1148e2e3be43f84c3c55a18d225f6cf4afcaf6cec77b204900b4cc4710",
+      "size_bytes": 170
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ENGINEERING_RECORD.html",
+      "sha256": "a5e0559be5217d739fa06db911fe7229e739f6c889afe9f6430bb49678a7ea5c",
+      "size_bytes": 12307
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ENGINEERING_RECORD.pdf",
+      "sha256": "daa69b0aa1aad00b8c89c5c561a910a0fb391a1b8ed6a0e1566a13813eaf90e4",
+      "size_bytes": 750327
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ENGINEERING_RECORD.source.json",
+      "sha256": "ed4c9f3a8e160d1d708b119017028b47b45de10dc26e57532db9a7910eeec783",
+      "size_bytes": 11948
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/FT02_CLEAR_FIT_TRIAL.zip",
+      "sha256": "11d4cb2905585f064f0e42e4cb4a50a9b93a0b268ffaeb4a436055464fc3206d",
+      "size_bytes": 373411
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/FT02_METAL_FIT_TRIAL.zip",
+      "sha256": "931c025bad61be4c262bbff24033ef541025b6b071f3376cb27f45e6b6084dc9",
+      "size_bytes": 373013
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/INSTALLATION_GUIDE.html",
+      "sha256": "d781043f326152488be88f301c32d4ae47f8d1c84e74d21a608a0e8a07a34889",
+      "size_bytes": 12273
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/INSTALLATION_GUIDE.pdf",
+      "sha256": "4f220a11783178efd662d7430798d922151dcd72bc88c5e57d871e01bc2d40a2",
+      "size_bytes": 2123580
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/INSTALLATION_GUIDE.source.json",
+      "sha256": "bdef1358fa6346c9ffa5492dfadc430f2298ab7451f7ce4c50e668006e0049ff",
+      "size_bytes": 11701
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_DIV_124_T1520_FIT_TRIAL.dxf",
+      "sha256": "90d3cdf8cca0a45dbfbae0564de9496740bf53755b3a2ae3b5afe2d3a4db662a",
+      "size_bytes": 15562
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_DIV_124_T1520_FIT_TRIAL.step",
+      "sha256": "2a221ce7f17e01058b2605daf6734afd6868637214ce313429d88e4ffc4a189d",
+      "size_bytes": 10592
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_DIV_124_T1520_FIT_TRIAL.stl",
+      "sha256": "99006f6f228cf0a0162b6ec2392e8fc32aa8ee3d985969386027504ad5ee5fbd",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_DIV_124_T1520_FIT_TRIAL_preview.png",
+      "sha256": "594369f0383b781887fada96acfa55b61a59f3cc075be2e406710ddcc94716b1",
+      "size_bytes": 153204
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_MAIN_220_T1520_FIT_TRIAL.dxf",
+      "sha256": "b75cf6bafa0baa5d287c3da31d0dfa5c8f7860443203717eee2a3a4064f79f06",
+      "size_bytes": 16067
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_MAIN_220_T1520_FIT_TRIAL.step",
+      "sha256": "8282a662518d2bf1d41cefaabbd5061b431e681b3a67daa9996fde967774aed2",
+      "size_bytes": 22917
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_MAIN_220_T1520_FIT_TRIAL.stl",
+      "sha256": "0375c18ecf745cc3f070dd9ed7733ca030cdef383cf15a42ae0b116d49d90498",
+      "size_bytes": 101284
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/FT02_MAIN_220_T1520_FIT_TRIAL_preview.png",
+      "sha256": "604243970851c5dae7b52ca47db4247bf99441754dfa50d92bf760147acecf8f",
+      "size_bytes": 163838
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/SHA256.json",
+      "sha256": "692d893e1d5fe091d6713200f0224cbbb81ab7ab5878f005af07300710ef1d3f",
+      "size_bytes": 1141
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/SHOP_DRAWINGS.pdf",
+      "sha256": "95ee07a78e36fe0c085f03564f592c423479d8a7a32a52046e38554ed43c66d9",
+      "size_bytes": 4849
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/SHOP_NOTES.txt",
+      "sha256": "7116e2b8e5136eae488da677ba76df8748b81e77e5126bd5f2801b143429deba",
+      "size_bytes": 845
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/METAL_FIT_TRIAL/UPLOAD_LIST.txt",
+      "sha256": "f93f477cc372c38a776a3f1d5217779aeb36fb0fc3a13d77849d7d4fe8aa2471",
+      "size_bytes": 138
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ORDER_AND_NEXT_STEP.html",
+      "sha256": "0cf9b0e04002ace8d8aaec0eb7904b497a9d2edc9baca136eb6f23ad9251aacb",
+      "size_bytes": 2635
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ORDER_AND_NEXT_STEP.pdf",
+      "sha256": "cdd1733e78cf9e063ab3f3d237fc739cadc0b8b2437a16b21c6dd2d7f1d0e564",
+      "size_bytes": 149105
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ORDER_AND_NEXT_STEP.source.json",
+      "sha256": "9084e95be357c1eca5ba5aef019f27d7ff9f0d7a8c31308048c62d0233508c59",
+      "size_bytes": 1682
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/PLUMBER_START_HERE.html",
+      "sha256": "4ec071d8d4469cdb44d59cd49e194443d7707e1238496153a9db21cf51a57b9a",
+      "size_bytes": 5557
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/PLUMBER_START_HERE.pdf",
+      "sha256": "56e8e1f75af54cda32c77fdfe0b654521cba15ee0af363489d5906076725ad49",
+      "size_bytes": 9361142
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/PLUMBER_START_HERE.source.json",
+      "sha256": "e2e704da93ba8b8113b8d48a83b1e49f4bfbeb5739f01e40076bf5aa9a145592",
+      "size_bytes": 4720
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/PRE_VISIT_MESSAGE_DRAFT.txt",
+      "sha256": "24cab81d5516c8b44de1b11d588d6e745686c12ab9333e9596a3fc71eb77c9dd",
+      "size_bytes": 728
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REFERENCE_OVERLAYS_LETTER.pdf",
+      "sha256": "2b20f147f2575723e255a1eb78c746984b2b91d36a5d99ef44320a13b2d47d8b",
+      "size_bytes": 10443
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_DRAWING.html",
+      "sha256": "63d26005a133b795cee0b250280801c956e3dcf3d70dcf769160ff31031559c4",
+      "size_bytes": 2298
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_DRAWING.pdf",
+      "sha256": "c7832c1d14e860ac49d2b4d6bc135691ecd4ba77044572a41a9a5372ef0f888a",
+      "size_bytes": 182270
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_DRAWING.source.json",
+      "sha256": "079bd342f92907c11b27e148c35fb71b6ff6fbec8602de50bea9cf9b2ed6706a",
+      "size_bytes": 1331
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_SETUP.html",
+      "sha256": "9ff99a5b98459058d8628b1f4905549b21567ef1861c15b2eed23c33779571ba",
+      "size_bytes": 5752
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_SETUP.pdf",
+      "sha256": "bf118e45dc57d765c5c527a6cc1963bdac2a71d985f71efe8e5b789e337edc40",
+      "size_bytes": 531127
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_SETUP.source.json",
+      "sha256": "ab34a7946a8f6667c84924dd843f2e0c4de3e7220f47d2b21edc0ac87474f94e",
+      "size_bytes": 4884
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/BOM.json",
+      "sha256": "f274cba62267841f1bd3361eb7b08c6df29afe149591fa5b0a054c77bb7897b4",
+      "size_bytes": 1021
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/CHECKS.json",
+      "sha256": "a8bdfc1d1f5875f611aaebe14ae1d5daac132d6423efbd5cfba1834e4ba55ad8",
+      "size_bytes": 5122
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/READ_ME.txt",
+      "sha256": "d8a028b748010d8a4094e3898cf160b5a4e424e623a1fb0c1fde60af47d33501",
+      "size_bytes": 261
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/REPAIR_FORM_DRAWING.pdf",
+      "sha256": "c7832c1d14e860ac49d2b4d6bc135691ecd4ba77044572a41a9a5372ef0f888a",
+      "size_bytes": 182270
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/REPAIR_FORM_SETUP.pdf",
+      "sha256": "bf118e45dc57d765c5c527a6cc1963bdac2a71d985f71efe8e5b789e337edc40",
+      "size_bytes": 531127
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/RF01_MAIN_REMOVABLE_FORM_PETG.step",
+      "sha256": "307161d77dd76d411bd500ccb5967cf6fcb9b20312ff3d549e259f1f9697fe0b",
+      "size_bytes": 58343
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/RF01_MAIN_REMOVABLE_FORM_PETG.stl",
+      "sha256": "ffc245bb73bd957ba34c82b24845812b3d2bf029bd7d2c68b72b1bc6e38105e7",
+      "size_bytes": 252484
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/RF01_SPEC.json",
+      "sha256": "edbcbd7b7e5bdaf77c31b9c9072c73bcbc5a74ea26f8c44073f94557a224ae73",
+      "size_bytes": 4194
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/RF01_isolated_preview.png",
+      "sha256": "971850df227cd68d901fb46792ef01ded25a98f1fc67cfea2fcef7917f52f8bd",
+      "size_bytes": 190979
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/REPAIR_FORM_TRIAL/SHA256.json",
+      "sha256": "dbc9dc3a7c8adc5cd229b4a75090df833809123daa50f4337e1abd59e77fca61",
+      "size_bytes": 849
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/RF01_REPAIR_FORM_TRIAL.zip",
+      "sha256": "c9e82033d8f12a63787629b9c7876c17d0490b64b98703607f4cda8f6ac0d9c3",
+      "size_bytes": 824725
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/TEMPLATES_A3.pdf",
+      "sha256": "c8948fb78929a8949c3f9b5677904a41d4db378ddea06aef685c6d5c6fc368c5",
+      "size_bytes": 3320
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/TEMPLATES_LETTER.pdf",
+      "sha256": "eac263616dda448d8b0ef91618fa4b334cad14751c9a68d163ee5620e68579f3",
+      "size_bytes": 9489
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/access.png",
+      "sha256": "1d040dd714c1b9b98f43721ac1a1371e11fb0990e82cba7381f61a2739bbdd9e",
+      "size_bytes": 194451
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/attached_scan_assessment.json",
+      "sha256": "0e334ddd29c3aeccaeb62521add6d3d355f24cab0591db1f3259283921b59934",
+      "size_bytes": 3871
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/audit.json",
+      "sha256": "3948cd730c64c75dc0918e7cb4d4edc02a11210d9b4822613c56151ac5d499dd",
+      "size_bytes": 3271
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/blender_check.json",
+      "sha256": "d0cb3f28da2ee80b437ee7077eb4c669f841d558e1a11facf0f763640e1279e4",
+      "size_bytes": 402
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1500_FIT_TRIAL.dxf",
+      "sha256": "2ba05d1be545e452a336c2e5dd7679f50dd907b50fea347b45810b92901dd857",
+      "size_bytes": 15562
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1500_FIT_TRIAL.step",
+      "sha256": "1907dc2e86444715469a7ba6c4755adb2ec5385a625c79269ff4f12d6698dd7f",
+      "size_bytes": 10585
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1500_FIT_TRIAL.stl",
+      "sha256": "18722c03e731be2b8eb1951852a89838e9eeb98b302ef7c6327d3de550a26f87",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1500_FIT_TRIAL_preview.png",
+      "sha256": "f077e1849e774fd0ca5aad5c01e0c7aba3a8b990d9d05803043075efd0f1b5bf",
+      "size_bytes": 153160
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1520_FIT_TRIAL.dxf",
+      "sha256": "90d3cdf8cca0a45dbfbae0564de9496740bf53755b3a2ae3b5afe2d3a4db662a",
+      "size_bytes": 15562
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1520_FIT_TRIAL.step",
+      "sha256": "2a221ce7f17e01058b2605daf6734afd6868637214ce313429d88e4ffc4a189d",
+      "size_bytes": 10592
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1520_FIT_TRIAL.stl",
+      "sha256": "99006f6f228cf0a0162b6ec2392e8fc32aa8ee3d985969386027504ad5ee5fbd",
+      "size_bytes": 100884
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1520_FIT_TRIAL_preview.png",
+      "sha256": "594369f0383b781887fada96acfa55b61a59f3cc075be2e406710ddcc94716b1",
+      "size_bytes": 153204
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1500_FIT_TRIAL.dxf",
+      "sha256": "ba7bcdb7277495597c1e98cfe248211eaa5257ed32bb68746cc76ef77aebc412",
+      "size_bytes": 16067
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1500_FIT_TRIAL.step",
+      "sha256": "7df7e975a841bbd8935052fffe17ebed569ed94a9403d7e49f112876ff54459e",
+      "size_bytes": 22899
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1500_FIT_TRIAL.stl",
+      "sha256": "ea406235b8d5775d967d14c6e864624febb454ad10ba45f84ab3914e63943d7d",
+      "size_bytes": 101284
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1500_FIT_TRIAL_preview.png",
+      "sha256": "112a2239ca2efcb19cd6dbe405da26f4ac21b71f1e1bc670e3ffebf1eccfe196",
+      "size_bytes": 163521
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.dxf",
+      "sha256": "b75cf6bafa0baa5d287c3da31d0dfa5c8f7860443203717eee2a3a4064f79f06",
+      "size_bytes": 16067
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.step",
+      "sha256": "8282a662518d2bf1d41cefaabbd5061b431e681b3a67daa9996fde967774aed2",
+      "size_bytes": 22917
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.stl",
+      "sha256": "0375c18ecf745cc3f070dd9ed7733ca030cdef383cf15a42ae0b116d49d90498",
+      "size_bytes": 101284
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL_preview.png",
+      "sha256": "604243970851c5dae7b52ca47db4247bf99441754dfa50d92bf760147acecf8f",
+      "size_bytes": 163838
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/centering.png",
+      "sha256": "5a32c4797c69a3ad5e38cef172ecd6b7da6b07d51fca4c4afe2d0708517cc9bf",
+      "size_bytes": 76325
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/design_report.json",
+      "sha256": "e34d75a723633273ccfe1663ed2ec4e760309be25544ed7c3128022b5b992d4b",
+      "size_bytes": 18749
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/document_check.json",
+      "sha256": "63266e1c3d1912b34334682c9d446b0274b821805b6f42d444b5f8cac3c721be",
+      "size_bytes": 689
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/engineering/form_after_removal.png",
+      "sha256": "0f301916a33389ab8253c9b99db27463fd2a8cc31c0e84ec80e32ed8286e7109",
+      "size_bytes": 83251
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/engineering/form_assessment.json",
+      "sha256": "a8bdfc1d1f5875f611aaebe14ae1d5daac132d6423efbd5cfba1834e4ba55ad8",
+      "size_bytes": 5122
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/engineering/form_assessment.png",
+      "sha256": "d7e0f65348f7859f534dc48be316950761b11b380a6e7da36fffd4b88d7c689b",
+      "size_bytes": 225566
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/engineering/locator_evaluation.json",
+      "sha256": "9f3b7c9ce5194e1a9242644649ef3f1b6d01e2ad1951fa36dc0e32695fe0123d",
+      "size_bytes": 26003
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/engineering/locator_evaluation.png",
+      "sha256": "51c1857b430ffe2619a348310d26225fe950450afde905ffe7a608a498d7adce",
+      "size_bytes": 129289
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/escutcheon_fit_trial_FT02.blend",
+      "sha256": "f3ff8c97062a6d19e26b4e3641baaa260b63f29ffbc71b3e11b5bff9cd67400c",
+      "size_bytes": 85196858
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/exploded.png",
+      "sha256": "acc416251f88ad1a863f99e015e88a9801647b3bf6534614b668aae1c8af3023",
+      "size_bytes": 1436424
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/index.html",
+      "sha256": "9d272afda45ef824e0e73f2913bc345e73885a640b2fb75dc1be1cd4e3ba1665",
+      "size_bytes": 5251
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/packages.json",
+      "sha256": "13c0c716ba50a60a558993d3239916f9e193c8f52920961f829b82797d0173fa",
+      "size_bytes": 717
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/paired_front.png",
+      "sha256": "7cfbdd654d1080a451f693cd64598afe2e0c2ca2345e20dc2bb1e9908e411708",
+      "size_bytes": 1500835
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/paired_oblique.png",
+      "sha256": "1b0ee2569a707fb02f3861017406c58dd77ca55bd59e08eba0893454d35a827b",
+      "size_bytes": 1505392
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/photos/front.png",
+      "sha256": "1098888b20f6bf26b3a052be27d3240278afa199ae42bf4d1dadab95b3e62bf0",
+      "size_bytes": 5069249
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/photos/rear.jpeg",
+      "sha256": "809f61e96bf5b636c1d5364ee0f40388ea23a1857904555ac147254b7c4242aa",
+      "size_bytes": 1167389
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/plane_front.png",
+      "sha256": "d94005663a9a4ee7b390cfeef05efe8b221c4875e2fd3daf28b20ba641b610b6",
+      "size_bytes": 4216338
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/QUESTIONS_FOR_FINISHER_DRAFT.txt",
+      "sha256": "78e19597e29aa027a168e70488f8458044bda89ce0969d668b343996b6332010",
+      "size_bytes": 610
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/evidence/acrylic_150_catalog.jpg",
+      "sha256": "88ec6773b4e4e4cc98f7b40c0d27ac9b58be2556ae4b220afef25b2ac2834533",
+      "size_bytes": 186084
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/evidence/stainless_150_catalog.jpg",
+      "sha256": "9c6f5674ead2881ae30f2800463c5370abdd7818b7171f7cf79f1b6a04387929",
+      "size_bytes": 255784
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/quotes.json",
+      "sha256": "ba0dc6bdcd2cec907aadfa02c6e66e5b579d8d63fd730406f0c22701ef9b95fc",
+      "size_bytes": 3393
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/ponoko/upload_geometry_check.json",
+      "sha256": "bffe957364738fa0cad519b67c2aeb523c396be8ede93743fcb81ea11a3713c8",
+      "size_bytes": 1054
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/raw_front.png",
+      "sha256": "e60bdb6ba207bf1b02a0084c577a62f9d0a8a07debd7a98cc4b41ab37c81acff",
+      "size_bytes": 2600636
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/reference/R006_FACTORY_INNER_REFERENCE.json",
+      "sha256": "49b4d2fe5f56a413c8d0137a96afabb6c9214faa094a8a227e25e966f5903c9f",
+      "size_bytes": 762
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/reference/R006_FACTORY_INNER_REFERENCE.step",
+      "sha256": "473edf055738e84537be47bbf289634eb95f2bc23e24cd94b71c8e99af6c95d7",
+      "size_bytes": 81973
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/reference/R006_FACTORY_INNER_REFERENCE.stl",
+      "sha256": "6637b2c2c0726cf6614293b6aa5425b8b1be66549f4c2f2325f15c721ebfabbb",
+      "size_bytes": 154284
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/sections.png",
+      "sha256": "2b76586b65857be9094be00809ecbea35c4eaed58020723dd56bbe0c97d7babe",
+      "size_bytes": 122114
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/sizes.png",
+      "sha256": "3b182cafa791645d22b2a1cb1e3c754219ebaf552dc49ac987482d850973bda0",
+      "size_bytes": 160682
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/stack.png",
+      "sha256": "86065cea88124f5062b3a65f47b9d1a4621cab873dd0c3936c2fcf70707ec94c",
+      "size_bytes": 77812
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/support_seal.png",
+      "sha256": "5514b0a11bdd6e6c54bc0810369b9a2f4267d2964d814c90389e16c52eb38ae6",
+      "size_bytes": 148365
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/visual_review.json",
+      "sha256": "26109388a480099b67fde0bd4af4439df191eded5f4b682c674b2927e0e991a2",
+      "size_bytes": 2582
+    },
+    {
       "path": "deliverables/current/fabrication/aperture-access/analysis.json",
       "sha256": "0e2150939d369f46eec574c2b58337aaf56da8607e138dbf6c315e414a76deac",
       "size_bytes": 6894
@@ -674,8 +1219,8 @@
     },
     {
       "path": "deliverables/current/fabrication/aperture-access/index.html",
-      "sha256": "da3ab7e3c20ae78eab3af3eed23ba92fd69295f243ace82debe0d4f6c1e06b63",
-      "size_bytes": 12651
+      "sha256": "ec1f8393fd2e5682fa81c9d07583c42d67c95b6bfc9b2a2bdf4704ac1b775adc",
+      "size_bytes": 12646
     },
     {
       "path": "deliverables/current/fabrication/aperture-access/upper_connection_depth.png",
@@ -914,8 +1459,8 @@
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/index.html",
-      "sha256": "9afd529af1f0332397d7d80fbe92015760d6bb332d249731443e51534efe438e",
-      "size_bytes": 14112
+      "sha256": "dff77d011c87d78e4e29c4a54abd312e6e60a39598ececf585a4227065521a30",
+      "size_bytes": 14107
     },
     {
       "path": "deliverables/current/fabrication/concentric-border-study/package_manifest.json",
@@ -1059,8 +1604,8 @@
     },
     {
       "path": "deliverables/current/fabrication/control-registration/index.html",
-      "sha256": "4cb85e608cb001ea0e3148f307278cc96ac5c5f3dc1a190e691b312d7e9df8bd",
-      "size_bytes": 7985
+      "sha256": "d1b6bbabc233b04db99b13c1d6853f4f139095b78551def2832fe52612ab53e7",
+      "size_bytes": 7980
     },
     {
       "path": "deliverables/current/fabrication/control-registration/registration_caliper_front.png",
@@ -1288,16 +1833,6 @@
       "size_bytes": 78019
     },
     {
-      "path": "deliverables/current/gpt-pro-review/.DS_Store",
-      "sha256": "29840d70f560f74d9bdf93fac548dcd7042e6d36cb9655ab3b328d48c2b37770",
-      "size_bytes": 8196
-    },
-    {
-      "path": "deliverables/current/gpt-pro-review/GP01/.DS_Store",
-      "sha256": "e6119c4ece104ed37c52df4a515767c8686c80ac91fa0cb60d83b3ee14971268",
-      "size_bytes": 6148
-    },
-    {
       "path": "deliverables/current/gpt-pro-review/GP01/00_READ_ME_FIRST.txt",
       "sha256": "41fa3591e1d21d25d9817a69bab8ee75b5a81834be9afb2a9e21ee3edef44a0f",
       "size_bytes": 3160
@@ -1509,8 +2044,8 @@
     },
     {
       "path": "deliverables/current/manual/index.html",
-      "sha256": "82a2936c573b9eedbf014637a1ef2abb165d7d8b8a9aa45141d9ed1798b4f32a",
-      "size_bytes": 6857
+      "sha256": "ee924e01e22494f234e27ac5ae41edf017e7c2f1b95b408688b94f36b48bb97a",
+      "size_bytes": 6852
     },
     {
       "path": "deliverables/current/manual/repair_manual_R001_DRAFT.pdf",
@@ -1549,8 +2084,8 @@
     },
     {
       "path": "deliverables/current/review/index.html",
-      "sha256": "ba4aac4187b0b8c5841cf60a455a022a845a7ae386a5619bf6c71819381bd2f9",
-      "size_bytes": 96803
+      "sha256": "261739cbcc78ef91a85ff26e4f3126a40ef723539dfa642336706da19866ccde",
+      "size_bytes": 96798
     },
     {
       "path": "deliverables/current/review/installation_DRAFT.glb",
@@ -1579,8 +2114,8 @@
     },
     {
       "path": "deliverables/current/review/rear/index.html",
-      "sha256": "961c7f371f96f60b3c87b2f083da808547495e1c1d6ed904eabd8fa25c33e6c2",
-      "size_bytes": 8123
+      "sha256": "a0d8fa507c9de3ab90d1beab89f4c413d1c3b2a46d618110915e8f6a8c1e648c",
+      "size_bytes": 8118
     },
     {
       "path": "deliverables/current/review/rear/rear-close-2026-10-15.jpeg",
@@ -1805,16 +2340,19 @@
   ],
   "readiness": {
     "evidence_preserved": true,
-    "software_geometry_checks": "PASS: 30 unit tests; independent 12-part STEP/STL/DXF and 6-package audit; saved/reopened Blender source preservation; 11 blueprint and 4 template pages visually checked; local HTML/reveal control checked. Numerical checks do not establish actual fit. AP01: four STEP/STL parts, two clean DXFs, analytic volumes, exact bounds and mm template scale passed fresh read-back audit; Blender reopened and CAD dimensions checked. Four PDF pages and browser comparison visually reviewed. ALIGN02: three separate Blender scenes saved/reopened with unchanged CAD dimensions and checked placements; independent analytic clearance/rigid-transform checks and local browser review passed. These are diagnostic software checks only.",
-    "geometric_fit": "FT01 capsule clears51,929 scoped primary-scan projected pieces in3historical placement scenarios; minimum about1.6mm. No bounded field error. Foam nominal extra land1mm; real contact, hidden engagement, support, diverter footprint and neighbor gap need physical trial. New attached scan inspected separately, with apparent3-4mm vertical stem/hub eccentricity; width cross-check differsabout4mm fromcalipers.",
-    "materials_design_review": "Current public vendor/stock/finish/timing research in FT01 guide; actual design-specific quote, final material/finish and support/seal detail not obtained.",
+    "software_geometry_checks": "FT02 independent exported-file read-back and document checks: deliverables/current/fabrication/FT02/audit.json. Visual/fresh review: docs/validation/adversarial_review_FT02.json. Earlier checks remain historical.",
+    "geometric_fit": "Selected trial geometry evaluated against scoped capture and documented scenarios; physical fit unperformed.",
+    "materials_design_review": "Private Ponoko quotes obtained: clear 43.79 USD; metal 80.47 USD, each displayed shipping included. Metal diverter offered As cut only; extra finishing unresolved. See FT02/ponoko/quotes.json.",
     "physical_fit": "NOT PERFORMED",
-    "fabrication_approval": "Quote and sacrificial fit-trial design prepared under latest user direction; no order or permanent-installation release.",
+    "fabrication_approval": "NOT GIVEN",
     "received_part_inspection": "NOT APPLICABLE YET",
     "installed_leak_test": "NOT PERFORMED",
-    "prototype_quote_files": "FT01 six custom STEP/STL/DXF sets and2custom-only quote ZIPs prepared for a sacrificial fit trial; no upload/order performed.",
-    "software_geometry_checks_FT01": "PASS: fresh read-back of all 6 STEP/STL/DXF sets; independent analytic capsule-clearance check in 3 states; 15 PDF pages checked, including 75-field blank interactive visit record; 2 quote ZIP contents/hashes checked; earlier Blender 3-scene save/reopen and geometry checks remain valid. No physical fit test."
+    "prototype_quote_files": "FT02 two selected parts per material route, plate-only STEP/DXF/STL and isolated previews; private quotes obtained. One pair only. No order.",
+    "software_geometry_checks_FT01": "PASS: fresh read-back of all 6 STEP/STL/DXF sets; independent analytic capsule-clearance check in 3 states; 15 PDF pages checked, including 75-field blank interactive visit record; 2 quote ZIP contents/hashes checked; earlier Blender 3-scene save/reopen and geometry checks remain valid. No physical fit test.",
+    "fabrication_fit_trial_files": "READY: selected FT02 plate-only exports, two alternative order packages, audience handoff, 40-page visual review and fresh adversarial audit complete. This is stage1 only.",
+    "owner_order_approval": "NOT GIVEN; selected private Ponoko quote uploads authorized",
+    "permanent_use": "NOT ESTABLISHED"
   },
-  "current_recommendation": "FT01",
-  "current_recommendation_scope": "FT01 files are for quotes and sacrificial dry fit; permanent installation remains unreleased."
+  "current_recommendation": "FT02",
+  "current_recommendation_scope": "Current selected plate-only files are for quotes and sacrificial dry fit; permanent installation remains unreleased."
 }

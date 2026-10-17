@@ -1,0 +1,21 @@
+[
+  {
+    "title": "RF01 temporary printed forming tool",
+    "lead": "Quantity1, PETG. One valid connected solid. Manufacturing geometry is in mm; this construction tool is not an escutcheon or a permanent insert.",
+    "image": "REPAIR_FORM_TRIAL/RF01_isolated_preview.png",
+    "blocks": [
+      [
+        "Geometry and orientation",
+        "Cover-centered X right/Y up; +Z toward shower. Face outerD240, panel12 thick. Molding plastic faceZ+0.05; frontZ+12.05; collar rearZ-11.95. Collar front outer118.35x145.10 with semicircular ends; nominal wall2, depth12, draft1 degree smaller at rear. Minimum internal113.931x140.681. No threads or embedded fasteners."
+      ],
+      [
+        "Print and inspect",
+        "Flat front face on print bed; collar upward. Use solid bearing zones and dense face, without a hollow unsupported shell. Smooth and line molding face/outer collar; target molding-plane flatness0.3 mm. No certified force/temperature rating is implied. Read BOM, CHECKS and the setup sheet before field use."
+      ],
+      [
+        "Conditional readiness",
+        "Geometric STEP/STL read-back passed; actual support, full panel seating, print/liner coupon, hardware/service clearance and clean withdrawal remain dry checks before any filling. Do not order with the plate pair by default."
+      ]
+    ]
+  }
+]

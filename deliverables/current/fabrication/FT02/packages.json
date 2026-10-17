@@ -1,0 +1,16 @@
+[
+  {
+    "route": "METAL_FIT_TRIAL",
+    "zip": "FT02_METAL_FIT_TRIAL.zip",
+    "sha256": "931c025bad61be4c262bbff24033ef541025b6b071f3376cb27f45e6b6084dc9",
+    "upload_list": "QTY 1 | FT02_MAIN_220_T1520_FIT_TRIAL.dxf | MAIN | thickness 1.520 mm\nQTY 1 | FT02_DIV_124_T1520_FIT_TRIAL.dxf | DIV | thickness 1.520 mm\n",
+    "files": 12
+  },
+  {
+    "route": "CLEAR_FIT_TRIAL",
+    "zip": "FT02_CLEAR_FIT_TRIAL.zip",
+    "sha256": "11d4cb2905585f064f0e42e4cb4a50a9b93a0b268ffaeb4a436055464fc3206d",
+    "upload_list": "QTY 1 | FT02_MAIN_220_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf | MAIN | thickness 1.500 mm\nQTY 1 | FT02_DIV_124_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf | DIV | thickness 1.500 mm\n",
+    "files": 13
+  }
+]

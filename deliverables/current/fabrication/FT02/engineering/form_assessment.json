@@ -1,0 +1,110 @@
+{
+  "revision": "RF01",
+  "plate_release": "FT02",
+  "decision": "Use the one-piece removable front form only if the trial shows missing support and the contractor verifies sound repair substrate/permanent backing. Its modest drafted collar clears the captured local surfaces in the tested working pose. Do not order it as a required companion to the two plate quotes; first use the plate trial to locate actual unsupported zones.",
+  "tool_nominal_path_pass": true,
+  "capture_scope": [
+    {
+      "scope": "collar seated",
+      "z_mm": [
+        -12,
+        0.05
+      ],
+      "source_intersection_area_mm2": 0.0,
+      "local_source_triangles": 291342
+    },
+    {
+      "scope": "collar insertion and withdrawal",
+      "z_mm": [
+        -12,
+        80
+      ],
+      "source_intersection_area_mm2": 0.0,
+      "local_source_triangles": 291342
+    },
+    {
+      "scope": "front face aperture approach",
+      "z_mm": [
+        0.05,
+        80
+      ],
+      "source_intersection_area_mm2": 0.0,
+      "local_source_triangles": 291342
+    }
+  ],
+  "control_opening_proxy_checks": [
+    {
+      "id": "U",
+      "diameter_mm": 48.46,
+      "basis": "upper owner opening / lower reference assumption",
+      "within_smallest_collar_opening": true,
+      "boundary_clearance_mm": 6.020510887057351
+    },
+    {
+      "id": "L",
+      "diameter_mm": 50,
+      "basis": "upper owner opening / lower reference assumption",
+      "within_smallest_collar_opening": true,
+      "boundary_clearance_mm": 5.390513851957323
+    }
+  ],
+  "as_cast_front_opening_mm": [
+    118.44999999999999,
+    145.2
+  ],
+  "as_cast_rear_opening_mm": [
+    118.03107844172277,
+    144.78107844172277
+  ],
+  "smallest_tool_internal_mm": [
+    113.93107844172278,
+    140.68107844172278
+  ],
+  "as_cast_foam_overlap_mm2": 2.997612733404039,
+  "as_cast_vs_metal": "Cast hole is about 118.45 x145.20 at front; metal capsule remains116.35 x151.10. Sheet bridges about1.05 mm each side and reveals some repaired wall at top/bottom. Required factory opening footprints remain inside both. No plate dimension change is needed for this trial.",
+  "comparison": "One-piece 12 mm face with drafted 2 mm collar avoids split seams, rear fasteners, undercuts and loose sacrificial pieces. Panel + two collar halves was considered; it permits inward release but introduces a joint under the repaired face and needs fasteners in narrow material. The current nominal straight withdrawal test does not require that complication. Do not use one-piece if the real dry trial cannot withdraw freely.",
+  "specific_rejected_collar": "120.35 x155.10, 2 mm wall and12 mm depth intersects about79 mm2 of captured stone/hardware projection. Enlarging the repair collar to match arbitrary outlines is not permitted. RF01 is shorter and narrower, using a bounded search rather than tile alteration.",
+  "full_face_diagnostic": {
+    "projected_overlap_above_nominal_contact_plane_mm2": 5443.546953248075,
+    "scope": "Complete D240 front face outside its actual opening, source Z0.05..80. Includes intended stone contact/topography; not classified as all hardware. Full face seating is NOT established by the clear collar test. Rehearse on actual sound pads; do not force flat or alter tile."
+  },
+  "physical_limits": [
+    "Scan error and hidden surfaces are not bounded",
+    "Full face seating at the nominal datum is not established; verify stable sound-pad contact and free withdrawal",
+    "Factory wrench/cartridge/stop service must be rehearsed with actual components before fill; bores are only proxies",
+    "Actual support/bond substrate and brace reaction require contractor inspection",
+    "No permanent plastic, plumbing burial or unapproved tile preparation",
+    "Coupon establishes liner release and temperature behavior; no certified form load rating"
+  ],
+  "export_checks": {
+    "valid_connected_solids": 1,
+    "stl_watertight": true,
+    "bounds_mm": [
+      240.0,
+      240.0,
+      24.00000010000006
+    ],
+    "volume_mm3": 392963.98561512725,
+    "face_z_mm": 0.05,
+    "rear_tip_z_mm": -11.95
+  },
+  "handoff_blocks": [
+    [
+      "Use only where support is missing",
+      "Trial the two metal/acrylic plates first. If firm bearing is absent, contractor checks substrate and temporary brace before selecting this form. No new owner survey."
+    ],
+    [
+      "Different functions",
+      "The D240 form is temporary and12 mm thick. It is not the D220 escutcheon or a permanent liner. No casting until plumbing position and service access pass."
+    ],
+    [
+      "Cure and removal",
+      "Use REPAIR_FORM_SETUP for product conditions, front datum, protected rear filling and pull-forward removal. No one-hour strength claim is treated as automatic strip, seal or water readiness."
+    ]
+  ],
+  "source_sha256": {
+    "canon/repair_form_design.json": "ac3c66909fcf3ec30b0703fa28a9ae224403ae0fd04348d6efea713d48fc594a",
+    "canon/fit_trial_design.json": "2b191cf0d50c49a023a8b63f1ce1bfaa6903a841c25c95678c0ca8e04bcce822",
+    "src/fabrication/repair_form.py": "aa44600c431f75433efe1c515f370f8db91c16528feb826577f85f7613d26204"
+  }
+}

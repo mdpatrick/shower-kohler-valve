@@ -1,0 +1,26 @@
+{
+  "NOT_FOR_MANUFACTURING": true,
+  "measurement_revision": "R006",
+  "mounting_holes": {
+    "A": [
+      51.165000000000006,
+      23.979999999999997
+    ],
+    "B": [
+      -51.625,
+      -23.47
+    ]
+  },
+  "hole_diameter_mm": 5.66,
+  "control_centers_mm": {
+    "U": [
+      0,
+      40.32
+    ],
+    "L": [
+      0,
+      -39.720000000000006
+    ]
+  },
+  "limits": "Outer width/height and upper opening from owner. R40, 1 mm web, 4 mm rim, lower D50 and position remain reconstructed form, not a new factory part. Overall metal envelope 9.44 is derived from uncompressed stack minus approximate 6 mm foam. Exact mounting plane depth is NOT measured. Two small holes only. Reference coordinates outline-centered; transform to cover recorded separately."
+}

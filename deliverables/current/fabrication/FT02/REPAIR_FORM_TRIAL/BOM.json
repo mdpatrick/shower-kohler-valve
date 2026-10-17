@@ -1,0 +1,20 @@
+{
+  "all_custom_parts_temporary": true,
+  "printed_parts": [
+    {
+      "file": "RF01_MAIN_REMOVABLE_FORM_PETG.step",
+      "stl": "RF01_MAIN_REMOVABLE_FORM_PETG.stl",
+      "quantity": 1,
+      "material": "PETG, solid perimeter and dense solid face; no hollow shell in bearing zones",
+      "print_orientation": "Flat front face on build plate, collar grows upward; smooth and line molding surfaces. Verify no support scars on molding plane."
+    }
+  ],
+  "site_supplies": [
+    "0.05 mm PE release film and three matched removable contact patches",
+    "Two broad padded front battens, contractor-supplied stable brace",
+    "Removable protective hardware cover, no adhesive on moving stems",
+    "Supported repair substrate/backing and compatible repair/waterproofing system, permanent only after inspection"
+  ],
+  "not_included": "No valve parts, anchors, permanent liner, divider form or metal escutcheon in this tool package",
+  "quote": "No form price obtained; not suitable for ordinary flat laser cutting."
+}

@@ -1,8 +1,9 @@
 {
-  "revision": "FT01",
-  "date": "2026-10-15",
-  "purpose": "Recommended quote and physical dry-fit baseline; permanent installation remains unreleased",
+  "revision": "FT02",
+  "date": "2026-10-16",
+  "purpose": "Selected plate-only fabrication fit trial; physical and permanent checks remain future stages",
   "supersedes_for_next_quote": [
+    "FT01",
     "F005",
     "CB01",
     "AP01"
@@ -25,22 +26,22 @@
     "outer_diameter_mm": 124,
     "aperture_diameter_mm": 80,
     "fallback_outer_diameter_mm": 120,
-    "aperture_status": "Clearance trial; rear factory sealing and mounting footprint remains unmeasured"
+    "aperture_status": "Selected 80 mm sacrificial trial nominal. Official guide rear plate assembly is installed AFTER the custom backing; hidden contact footprint is not dimensioned by exterior CAD. Check full factory contact on the trial before permanent use. No known rigid pass-through conflict in captured scope."
   },
   "stocks": [
     {
-      "id": "T1524",
-      "thickness_mm": 1.524,
-      "use": "First metal quote: 0.060 inch stainless. Same STL for a thickness-matched plastic dry-fit print; ask printer to report actual finished thickness."
+      "id": "T1520",
+      "thickness_mm": 1.52,
+      "use": "Selected Ponoko #4 brushed 304 stainless; live quote option 1.52 mm, stock range1.44-1.64. Explicit vendor variant versus1.524 baseline."
     },
     {
-      "id": "T3000",
-      "thickness_mm": 3.0,
-      "use": "Clear acrylic / PETG shape trial only. Adds 1.476 mm more depth than T1524. Does not qualify metal stiffness or its exact installed stack."
+      "id": "T1500",
+      "thickness_mm": 1.5,
+      "use": "Ponoko clear acrylic alternative1.50 mm; stock range1.27-1.73; separate CO2 kerf paths."
     }
   ],
-  "preferred_material": "Quote 316 stainless with deburring and directional graining. Also price 304 #4 brushed protected sheet if cheaper/faster. Appearance need not exactly match Kohler BN; owner judges finish.",
-  "locator_decision": "No integral bolt tabs or threaded custom holes in FT01. They would constrain an uncertain factory plate pose, obstruct insertion and complicate stud retraction. Center with four equal exposed-border measurements, removable tape and the actual cover. Verify retention under factory clamping and the approved bedding; if it slides, stop and redesign retention, not overtighten.",
+  "preferred_material": "Metal alternative: Ponoko #4 brushed 304 stainless, 1.52 mm nominal, brushed on one face. Actual quote offers Linear Deburring for MAIN only; DIV is As cut and needs safe-edge finishing arranged separately. Clear-first is the current recommendation. No exact Kohler BN match.",
+  "locator_decision": "Select plain upright capsule and a removable four-direction concentric gauge. R006 round-hole/slot tabs were evaluated at 6.4, 7 and 8 mm. Current captured shafts conflict near the seated A tab; current enlarged rod ends also obstruct insertion. Retraction/removal can remove the tip-path conflict but does not establish shaft/formed-plate plane registration. Widening locators adds more stack play than the 1 mm nominal inward gasket reserve. Plain access plus removable centering avoids making those uncertain rod axes an extra constraint.",
   "outer_appearance": "Each backing circle concentric with its actual factory cover, constant visible border. Main and diverter border widths need not match each other.",
   "requested_shop_targets": {
     "metal_profile_mm": 0.13,
@@ -68,5 +69,68 @@
     ]
   },
   "depth": "Added height = actual custom thickness + effective support/bedding height. Do not infer permitted engagement from free foam height or a generic 5 mm tolerance.",
-  "manufacture_scope": "Upload custom-only files for pricing or purchase a sacrificial fit trial. No permanent-installation release, vendor upload or purchase has occurred."
+  "manufacture_scope": "Two selected standalone plate shapes for a sacrificial fit trial. Private Ponoko draft quotes authorized; no purchase or permanent-use approval.",
+  "output_directory": "deliverables/current/fabrication/FT02",
+  "selected_parts": [
+    "MAIN",
+    "DIV"
+  ],
+  "measurement_revision": "R006",
+  "release_stage": "FIT_TRIAL_RELEASE",
+  "positioning_aid": {
+    "type": "removable radial border gauges and matched visual overlay",
+    "main_border_mm": 17.924999999999997,
+    "diverter_border_mm": 12.787500000000001,
+    "location": "Gauge touches visible cover rim and backing outer edge from front; never under factory gasket",
+    "quantity": "one paper/card template per part; use one gauge at top/right/bottom/left sequentially",
+    "retention": "Removable low-tack tape during fitting. Properly supported factory assembly supplies normal clamping in service; no assumed sealant structural strength. If it can shift or rock after correct assembly, stop and correct support/retention."
+  },
+  "reference_registration": "engineering/locator_evaluation.json: measured inner outline to cover and cover to installed rigid working transforms; primary scan unchanged. Original and prior diagnostic poses remain separate scenarios.",
+  "preferred_vendor": "Ponoko",
+  "vendor_variant": {
+    "id": "PONOKO_BRUSHED152_CLEAR150",
+    "baseline_metal_thickness_mm": 1.524,
+    "nominal_delta_mm": -0.004,
+    "date": "2026-10-16",
+    "metal_stock_range_mm": [
+      1.44,
+      1.64
+    ],
+    "clear_stock_range_mm": [
+      1.27,
+      1.73
+    ],
+    "metal_kerf_mm": 0.1,
+    "metal_compensation": "Vendor automatic; upload intended finished profile unchanged",
+    "clear_kerf_mm": 0.2,
+    "clear_compensation": "Separate Ponoko cut paths offset outer contour outward 0.10 mm and aperture inward 0.10 mm. Finished STEP stays authoritative. No second vendor compensation.",
+    "sources": [
+      "https://www.ponoko.com/materials/stainless-steel",
+      "https://www.ponoko.com/materials/clear-acrylic",
+      "https://help.ponoko.com/en/articles/4442594-how-much-material-does-the-laser-burn-away"
+    ],
+    "catalog_selection": "Live quote material #4 304 Stainless Steel, 1.52mm selected.1.44-1.64 thickness; minimum feature1.54; kerf0.10. Page states deburring for parts over75mm and thickness greater than1.5mm/0.060 inch. Confirm service selection: wording has rounded metric/inch threshold.",
+    "metal_nominal_mm": 1.52,
+    "clear_nominal_mm": 1.5,
+    "unselected_standard_304_150": {
+      "range_mm": [
+        1.4,
+        1.6
+      ],
+      "reason": "#2B cosmetic uncertainty and D127 deburr threshold; #4 quote interface offers D75 threshold"
+    }
+  },
+  "authorization": {
+    "private_ponoko_upload": "Selected custom manufacturing parts and necessary drawings only; quotes/drafts authorized by goal update",
+    "purchase": "NOT AUTHORIZED",
+    "messages": "NOT AUTHORIZED",
+    "excluded_uploads": [
+      "Polycam",
+      "home photos",
+      "installation assembly",
+      "unrelated files"
+    ],
+    "source": "docs/decisions/delivery_goal_with_ponoko_2026-10-16.md"
+  },
+  "recommended_order_route": "CLEAR_FIT_TRIAL"
 }

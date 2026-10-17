@@ -1,7 +1,7 @@
 {
   "project_id": "shower-kohler-valve",
   "schema_version": 1,
-  "revision": "R005",
+  "revision": "R006",
   "measurements": [
     {
       "id": "M02-W",
@@ -162,7 +162,7 @@
       "repeat_span_mm": 0.0,
       "status": "user-confirmed",
       "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
-      "role": "fitting input",
+      "role": "historical edge observation / reconciliation check; final TOP/LEFT survey governs locating layout",
       "correction_reason": null
     },
     {
@@ -189,7 +189,7 @@
       "repeat_span_mm": 0.0,
       "status": "user-confirmed",
       "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
-      "role": "fitting input",
+      "role": "historical edge observation / reconciliation check; final TOP/LEFT survey governs locating layout",
       "correction_reason": null
     },
     {
@@ -413,6 +413,190 @@
       "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
       "role": "fitting input",
       "correction_reason": null
+    },
+    {
+      "id": "M11-NED",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "opposite inside edges of upper-right round mounting hole, front view",
+      "purpose": "NE mounting-hole diameter",
+      "raw_readings": [
+        5.66
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        5.66
+      ],
+      "value_mm": 5.66,
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "source": "user measurement response",
+      "date": "2026-10-16",
+      "photo_ref": "",
+      "date_basis": "date of final selection in supplied goal",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "approximate": false,
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "id": "M13-FAX",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "LEFT block contact face to A right/far inside wall",
+      "purpose": "A far X from LEFT",
+      "raw_readings": [
+        119.17
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        119.17
+      ],
+      "value_mm": 119.17,
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "source": "user measurement response",
+      "date": "2026-10-16",
+      "photo_ref": "",
+      "date_basis": "date of final selection in supplied goal",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "approximate": false,
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "id": "M13-FBX",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "LEFT block contact face to B right/far inside wall",
+      "purpose": "B far X from LEFT",
+      "raw_readings": [
+        16.38
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        16.38
+      ],
+      "value_mm": 16.38,
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "source": "user measurement response",
+      "date": "2026-10-16",
+      "photo_ref": "",
+      "date_basis": "date of final selection in supplied goal",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "approximate": false,
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "id": "M13-FAY",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "TOP block contact face to A bottom/far inside wall; y down",
+      "purpose": "A far Y from TOP",
+      "raw_readings": [
+        61.4
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        61.4
+      ],
+      "value_mm": 61.4,
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "source": "user measurement response",
+      "date": "2026-10-16",
+      "photo_ref": "",
+      "date_basis": "date of final selection in supplied goal",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "approximate": false,
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "id": "M13-FBY",
+      "component": "see worksheet",
+      "state": "current_physical_observation",
+      "datum": "TOP block contact face to B bottom/far inside wall; y down",
+      "purpose": "B far Y from TOP",
+      "raw_readings": [
+        108.85
+      ],
+      "raw_unit": "mm",
+      "values_mm": [
+        108.85
+      ],
+      "value_mm": 108.85,
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "source": "user measurement response",
+      "date": "2026-10-16",
+      "photo_ref": "",
+      "date_basis": "date of final selection in supplied goal",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "approximate": false,
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "uncertainty_mm": null,
+      "repeat_span_mm": 0.0,
+      "status": "user-confirmed",
+      "reduction": "median of repeat readings; repeat span does not establish measurement accuracy",
+      "role": "fitting input",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "id": "M11-CC",
+      "component": "derived",
+      "state": "current_physical_observation",
+      "status": "user-confirmed",
+      "value_mm": 112.05,
+      "raw_unit": "mm",
+      "raw_readings": [],
+      "source": "derived from accepted raw observations",
+      "inputs": [
+        "M11-G",
+        "M11-SWD",
+        "M11-NED"
+      ],
+      "method": "nearest-edge gap + (SW diameter + NE diameter)/2",
+      "date": "2026-10-16",
+      "uncertainty_mm": null,
+      "note": "Derived relation, not an independent second piece of evidence",
+      "role": "historical edge observation / reconciliation check; final TOP/LEFT survey governs locating layout"
+    },
+    {
+      "id": "M11-NERC",
+      "component": "derived",
+      "state": "current_physical_observation",
+      "status": "user-confirmed",
+      "value_mm": 14.540000000000001,
+      "raw_unit": "mm",
+      "raw_readings": [],
+      "source": "derived from accepted raw observations",
+      "inputs": [
+        "M11-R",
+        "M11-NED"
+      ],
+      "method": "right hole-edge gap + NE diameter/2",
+      "date": "2026-10-16",
+      "uncertainty_mm": null,
+      "note": "Derived relation, not an independent second piece of evidence",
+      "role": "historical edge observation / reconciliation check; final TOP/LEFT survey governs locating layout"
     }
   ],
   "history": [
@@ -489,7 +673,83 @@
       },
       "date_utc": "2026-10-15T17:14:31.660610+00:00",
       "physical_fit": "not established by measurement import"
+    },
+    {
+      "from_revision": "R005",
+      "to_revision": "R006",
+      "accepted_or_recorded_ids": [
+        "M11-NED",
+        "M13-FAX",
+        "M13-FBX",
+        "M13-FAY",
+        "M13-FBY",
+        "M11-CC",
+        "M11-NERC"
+      ],
+      "conflicting_ids": [],
+      "response_sha256": "bd43708b132342ead00d6f69c571acec1e6fc06243d0d1b9261186339af723d9",
+      "current_state_note": "Final owner-selected loose-plate coordinate survey: FAX119.17 and FBY108.85 govern; no further hole survey requested. New delivery goal requires a genuine locator evaluation and selected fit-trial release, not a wait for Pro or physical parts.",
+      "group_notes": {
+        "13": "Both bores 5.66. FAX119.17 supersedes118.79; FBY108.85 supersedes109.06 (typed109.-6). Do not average. Planar TOP/LEFT far-inside-edge contacts. Earlier106.39 diagonal preserved only as a discrepancy check."
+      },
+      "date_utc": "2026-10-16T22:39:31.390304+00:00",
+      "physical_fit": "not established by measurement import"
     }
   ],
-  "note": "User-confirmed readings retain source units, endpoints and unknown uncertainty. Derived values are not independent evidence. Remaining assumptions are in design_decisions.json."
+  "note": "User-confirmed readings retain source units, endpoints and unknown uncertainty. Derived values are not independent evidence. Remaining assumptions are in design_decisions.json.",
+  "active_locating_layout": {
+    "source_ids": [
+      "M11-NED",
+      "M11-SWD",
+      "M13-FAX",
+      "M13-FBX",
+      "M13-FAY",
+      "M13-FBY"
+    ],
+    "frame": "Front toward handles; x RIGHT from LEFT block, y DOWN from TOP block",
+    "center_from_left_top_mm": {
+      "A": [
+        116.34,
+        58.57
+      ],
+      "B": [
+        13.549999999999999,
+        106.02
+      ]
+    },
+    "diameters_mm": {
+      "A": 5.66,
+      "B": 5.66
+    },
+    "separation_xy_mm": [
+      102.79,
+      47.449999999999996
+    ],
+    "center_distance_mm": 113.21345591403878,
+    "predicted_nearest_edge_gap_mm": 107.55345591403878,
+    "uncertainty_mm": null,
+    "status": "derived from owner-selected planar observations",
+    "installed_pose": "Separate transform required; no scan/valve relocation implied",
+    "outline_centered_xy_up_mm": {
+      "A": [
+        51.165000000000006,
+        23.979999999999997
+      ],
+      "B": [
+        -51.625,
+        -23.47
+      ]
+    },
+    "outline_midpoint_offset_mm": [
+      -0.22999999999999687,
+      0.254999999999999
+    ],
+    "outline_note": "Comparison frame only; tape height does not gain accuracy from derived decimals",
+    "earlier_diagonal_comparison": {
+      "edge_gap_mm": 106.39,
+      "implied_center_mm": 112.05,
+      "difference_mm": 1.163455914038778,
+      "role": "Retained disagreement / robustness scenario; not selected layout or certified error bound"
+    }
+  }
 }

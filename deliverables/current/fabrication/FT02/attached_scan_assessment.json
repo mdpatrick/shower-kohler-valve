@@ -1,0 +1,173 @@
+{
+  "id": "ATTACHED01",
+  "source_sha256": "6ee787e70c3c9c3cefd70885f3084abf6f9fa791f16d08f4b8c2dd53f66d2b91",
+  "state": "inner plate attached; successful fit not established",
+  "view": {
+    "center": [
+      0.13270914546072013,
+      0.2777825767504203,
+      0.0
+    ],
+    "span": 1.4,
+    "pixels": 1800
+  },
+  "plane": {
+    "raw_to_wall_frame_units": [
+      [
+        0.8331608201595586,
+        0.0,
+        -0.5530307837282223,
+        0.13270914546072013
+      ],
+      [
+        -0.006285564601243557,
+        0.9999354087028706,
+        -0.009469429754043406,
+        -1.3521121394352587
+      ],
+      [
+        0.5529950627525488,
+        0.011365668577922223,
+        0.8331070052214672,
+        -0.02152715387980232
+      ],
+      [
+        0.0,
+        0.0,
+        0.0,
+        1.0
+      ]
+    ],
+    "regions_raw_front_px": [
+      [
+        425,
+        530,
+        530,
+        690
+      ],
+      [
+        440,
+        900,
+        535,
+        1000
+      ],
+      [
+        985,
+        580,
+        1040,
+        750
+      ],
+      [
+        980,
+        950,
+        1030,
+        1050
+      ]
+    ],
+    "plane_residual_rms_raw": 0.0015483796152865527,
+    "points": 3377,
+    "scale_status": "inspection frame; not aligned to primary scan"
+  },
+  "manual_visual_picks": {
+    "U": {
+      "pixels": [
+        897,
+        565
+      ],
+      "zero_based_vertex": 223625,
+      "point_wall_units": [
+        0.13018603398950299,
+        0.5381964811805044,
+        0.18765340190690144
+      ]
+    },
+    "L": {
+      "pixels": [
+        884,
+        1157
+      ],
+      "zero_based_vertex": 50680,
+      "point_wall_units": [
+        0.12038002649197413,
+        0.08121660951552889,
+        0.19753885136661908
+      ]
+    },
+    "hub_U": {
+      "pixels": [
+        888,
+        591
+      ],
+      "zero_based_vertex": 120002,
+      "point_wall_units": [
+        0.12334198804574531,
+        0.5172434519055684,
+        0.12357234029488216
+      ]
+    },
+    "hub_L": {
+      "pixels": [
+        880,
+        1184
+      ],
+      "zero_based_vertex": 50771,
+      "point_wall_units": [
+        0.11780491936235536,
+        0.057394127422254915,
+        0.18389630753540376
+      ]
+    }
+  },
+  "uniform_mm_per_raw_unit": 174.98120704456468,
+  "raw_to_local_diagnostic_mm": [
+    [
+      145.78748597375906,
+      0.0,
+      -96.76999406956595,
+      2.157364118947214
+    ],
+    [
+      -1.0998556808821855,
+      174.9699047814284,
+      -1.6569722483862304,
+      -250.80559458308463
+    ],
+    [
+      96.76374357012578,
+      1.9887784066333116,
+      145.7780693709348,
+      -3.766847370121894
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "calibration": "80 mm user U-L tip distance. Manually selected cap centers. This is not an independent accuracy check or global registration.",
+  "checks_mm": {
+    "outline_width_approx": 134.4633364355788,
+    "outline_height_approx": 166.0377231289536,
+    "caliper_width": 130.35,
+    "caliper_height": 165.1,
+    "estimated_stem_above_hub_center": [
+      3.5385088535678633,
+      3.674605347935858
+    ]
+  },
+  "conclusions": [
+    "Actual stems appear above visible hub centers in wall-normal projection. Do not force concentricity in the evidence.",
+    "Reflective-metal/hub contours are warped. Width cross-check differs from caliper by about 4 mm; retain physical dimensions for CAD.",
+    "New scan is useful direct assembly evidence, not a source for precision mounting holes or hidden engagement."
+  ],
+  "not_established": [
+    "shaft/hub axis alignment",
+    "physical handle engagement",
+    "cover center",
+    "foam support/compression",
+    "water performance"
+  ],
+  "CAD_effect": "No aperture shrink or fixed mounting pattern inferred. Keep a broad upright trial opening and adjustable placement.",
+  "primary_scan_or_transform_modified": false
+}

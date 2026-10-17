@@ -25,8 +25,8 @@ def validate_design(d):
         raise ValueError('Capsule straight length must equal height minus width')
     if h >= m['outer_diameter_mm'] or v['aperture_diameter_mm'] >= min(v['outer_diameter_mm'], v['fallback_outer_diameter_mm']):
         raise ValueError('The aperture must remain inside the outer circle')
-    if len(d['stocks']) != 2 or len({s['id'] for s in d['stocks']}) != 2:
-        raise ValueError('The current handoff requires a primary stock and one alternate stock')
+    if not 1 <= len(d['stocks']) <= 2 or len({s['id'] for s in d['stocks']}) != len(d['stocks']):
+        raise ValueError('Use one shared stock thickness or one primary and one alternate')
     for s in d['stocks']:
         if s['id'] != f'T{round(s["thickness_mm"]*1000):04d}':
             raise ValueError('Stock ID must identify its thickness in micrometers')
@@ -42,7 +42,8 @@ def validate_design(d):
 def values(d, resolved, report=None):
     validate_design(d)
     m, v, f = d['main'], d['diverter'], d['foam']
-    a, b = d['stocks']
+    a = d['stocks'][0]
+    b = d['stocks'][-1]
     out = dict(revision=d['revision'], main_od=m['outer_diameter_mm'],
                aperture_w=m['aperture_width_mm'], aperture_h=m['aperture_height_mm'],
                aperture_r=m['aperture_width_mm']/2,

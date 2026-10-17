@@ -1,0 +1,37 @@
+{
+  "revision": "RF01",
+  "plate_release": "FT02",
+  "status": "TEMPORARY_TOOL_DRY_FIT_ONLY",
+  "decision": "Use the one-piece removable front form only if the trial shows missing support and the contractor verifies sound repair substrate/permanent backing. Its modest drafted collar clears the captured local surfaces in the tested working pose. Do not order it as a required companion to the two plate quotes; first use the plate trial to locate actual unsupported zones.",
+  "construction": "One PETG printed face-and-collar body; independent removable protective cover and contractor-supplied padded brace. All printed material and liners removed after cure. No permanent plastic liner.",
+  "panel": {
+    "outer_diameter_mm": 240,
+    "thickness_mm": 12,
+    "material": "PETG, solid perimeter and dense solid face; no hollow shell in bearing zones",
+    "target_flatness_mm": 0.3
+  },
+  "collar": {
+    "outer_width_mm": 118.35,
+    "outer_height_mm": 145.1,
+    "wall_mm": 2,
+    "depth_mm": 12,
+    "draft_deg": 1,
+    "draft_direction": "smaller toward rear; withdraw toward shower",
+    "liner_mm": 0.05
+  },
+  "datum": {
+    "frame": "FT02 cover-centered XY; +Z toward shower",
+    "liner_back_z_mm": 0,
+    "plastic_molding_face_z_mm": 0.05,
+    "pad_contact_z_mm": 0,
+    "pads": "Three removable equal-thickness 0.05 mm PE contact patches on SOUND stone, near top-left/top-right/bottom. No pad may bear on the broken edge or patch void. Confirm actual contact with straightedge and light; this assumes local sound faces are compatible with one flat plane."
+  },
+  "retention": "Contractor supplies two broad padded battens at y=+/-90 mm on the front face and a stable temporary front brace reacting to sound framing or a stable stand. No tile screws, no load on rods/stems/pipes, no tape as form restraint. Trial-load manually without movement before filling. If sound brace reaction cannot be achieved, do not use form.",
+  "fill": "Only the missing portions of the front 12 mm perimeter OUTSIDE the lined collar, within the D220 plate support region. Repair must contact cleaned sound cementitious substrate/permanent backing already reachable from rear. Contractor closes exposed outer sides with removable backing/shuttering where needed. Do not fill the valve/service cavity; leave central opening and deeper service volume empty.",
+  "product_branch": "Rapid Set Cement All is a candidate ONLY on manufacturer-suitable sound cementitious substrate with supported repair and accessible preparation. Existing travertine or unknown wall board is not assumed approved bonding substrate. If the exposed support is unsuitable, use supported matching stone/cement-board repair with a compatible bonding/waterproofing system; do not cast around pipes. No new tile abrasion/cutting is authorized.",
+  "removal": "No undercut or embedded screw. Release the front brace; pull body straight forward with hand grips, not by levering on travertine. The smaller rear collar and open center allow removal around retained hardware in the checked pose. If it binds, stop rather than chip stone or disturb plumbing.",
+  "release_layer": "Continuous removable 0.05 mm polyethylene film on molding face and outer collar, taped only to the tool; all seams outside the critical bearing strip. No oil/release chemical on stone or future seal/bond faces. Bench coupon verifies compatibility, curing temperature and demolding before field fill; actual film thickness sets cast datum.",
+  "material_and_force_limit": "Solid PETG face 12 mm, collar printed in layers normal to Z; smooth/line casting surfaces. Contractor must prove adequate flatness/stability under the intended small hand-placed patch, without ramming or hydraulic pressure. A geometric export is not a certified form-load rating. Cure heat, alkaline contact and print porosity are isolated by the removable film and verified on a coupon.",
+  "purchase": "Separate optional print quote only after support need confirmed. No form quote or price obtained. Ponoko flat laser cutting cannot manufacture this projecting one-piece collar.",
+  "source": "https://www.ctscement.com/datasheet/CEMENT_ALL_Datasheet_DS_024_EN?c=&t=Homeowners"
+}

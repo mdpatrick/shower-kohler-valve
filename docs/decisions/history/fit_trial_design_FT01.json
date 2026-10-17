@@ -1,0 +1,72 @@
+{
+  "revision": "FT01",
+  "date": "2026-10-15",
+  "purpose": "Recommended quote and physical dry-fit baseline; permanent installation remains unreleased",
+  "supersedes_for_next_quote": [
+    "F005",
+    "CB01",
+    "AP01"
+  ],
+  "status": "FOR_QUOTE_AND_DRY_FIT_ONLY",
+  "selection_basis": "Assistant recommendation responding to the user's request for a practical prototype now, broad upright access, larger useful coverage, and an evergreen handoff. Owner has not ordered a part or accepted final installation.",
+  "main": {
+    "outer_diameter_mm": 220,
+    "aperture_width_mm": 116.35,
+    "aperture_height_mm": 151.1,
+    "aperture_radius_mm": 58.175,
+    "aperture_center_mm": [
+      0,
+      0
+    ],
+    "shape": "vertical capsule / obround",
+    "straight_side_length_mm": 34.75
+  },
+  "diverter": {
+    "outer_diameter_mm": 124,
+    "aperture_diameter_mm": 80,
+    "fallback_outer_diameter_mm": 120,
+    "aperture_status": "Clearance trial; rear factory sealing and mounting footprint remains unmeasured"
+  },
+  "stocks": [
+    {
+      "id": "T1524",
+      "thickness_mm": 1.524,
+      "use": "First metal quote: 0.060 inch stainless. Same STL for a thickness-matched plastic dry-fit print; ask printer to report actual finished thickness."
+    },
+    {
+      "id": "T3000",
+      "thickness_mm": 3.0,
+      "use": "Clear acrylic / PETG shape trial only. Adds 1.476 mm more depth than T1524. Does not qualify metal stiffness or its exact installed stack."
+    }
+  ],
+  "preferred_material": "Quote 316 stainless with deburring and directional graining. Also price 304 #4 brushed protected sheet if cheaper/faster. Appearance need not exactly match Kohler BN; owner judges finish.",
+  "locator_decision": "No integral bolt tabs or threaded custom holes in FT01. They would constrain an uncertain factory plate pose, obstruct insertion and complicate stud retraction. Center with four equal exposed-border measurements, removable tape and the actual cover. Verify retention under factory clamping and the approved bedding; if it slides, stop and redesign retention, not overtighten.",
+  "outer_appearance": "Each backing circle concentric with its actual factory cover, constant visible border. Main and diverter border widths need not match each other.",
+  "requested_shop_targets": {
+    "metal_profile_mm": 0.13,
+    "plastic_profile_mm": 0.25,
+    "flatness_mm": 0.5,
+    "thickness": "Use stated stock, report actual thickness range and finishing loss; no silent gauge substitution",
+    "edge": "Deburr both faces and all aperture edges; remove cutting microtabs, sharp corners, burr and heat tint; preserve contour",
+    "finish": "Uniform directional satin grain, same direction on both parts, protect visible face. Confirm final cost and lead time. No exact BN match promised."
+  },
+  "support": "Thin metal is a supported facing/seal landing, not a structural patch spanning unsupported stone damage. Expert must establish firm continuous support at sealing and clamping zones. No tile alteration authorized.",
+  "foam": {
+    "outer_width_mm": 130.35,
+    "outer_height_mm": 165.1,
+    "outer_corner_radius_mm": 40,
+    "radius_status": "assumed",
+    "width_mm": 6,
+    "free_depth_mm": 6,
+    "free_total_plate_depth_mm": 15.44,
+    "nominal_aperture_inset_mm": 7,
+    "nominal_extra_land_mm": 1,
+    "status": "Edge-flush foam user-confirmed; actual rear outline, compression and corner radius require physical contact verification",
+    "evaluated_outer_corner_radius_range_mm": [
+      40,
+      65.175
+    ]
+  },
+  "depth": "Added height = actual custom thickness + effective support/bedding height. Do not infer permitted engagement from free foam height or a generic 5 mm tolerance.",
+  "manufacture_scope": "Upload custom-only files for pricing or purchase a sacrificial fit trial. No permanent-installation release, vendor upload or purchase has occurred."
+}

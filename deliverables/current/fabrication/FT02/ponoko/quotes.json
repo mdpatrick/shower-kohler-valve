@@ -1,0 +1,90 @@
+{
+  "revision": "FT02",
+  "date": "2026-10-16",
+  "vendor": "Ponoko",
+  "status": "Private formal quote snapshots obtained; no order",
+  "working_cart": "One mutable cart, 1268443. Separate local formal exports preserve each alternative. Current live cart contains the metal pair; adding saved designs appends to it. Order only one alternative pair.",
+  "metal": {
+    "material": "#4 304 Stainless Steel",
+    "nominal_thickness_mm": 1.52,
+    "parts": [
+      {
+        "id": "FT02_MAIN_220_T1520_FIT_TRIAL",
+        "qty": 1,
+        "production_usd": 45.72,
+        "finishing": "Linear Deburring",
+        "finish_usd": 10.83,
+        "online_bounds_mm": [
+          220,
+          220
+        ]
+      },
+      {
+        "id": "FT02_DIV_124_T1520_FIT_TRIAL",
+        "qty": 1,
+        "production_usd": 37.9,
+        "finishing": "As cut ONLY offered",
+        "finish_usd": 0,
+        "online_bounds_mm": [
+          124,
+          124
+        ]
+      }
+    ],
+    "parts_ui_total_usd": 94.46,
+    "multi_part_discount_usd": 30.14,
+    "delivery_usd": 16.16,
+    "total_usd": 80.47,
+    "tax": "Not separately shown; not asserted included",
+    "unquoted": "Diverter deburring, assured cosmetic match/face protection, flatness guarantee",
+    "formal_pdf_private": "build/FT02/ponoko_private/metal_quote_final.pdf",
+    "prior_quote": "Earlier T1500-named DXFs with explicit1.52 stock totaled78.00 at13.69 delivery. Superseded for ordering by correctly named T1520 draft with16.16 delivery."
+  },
+  "clear": {
+    "material": "Clear Acrylic",
+    "nominal_thickness_mm": 1.5,
+    "parts": [
+      {
+        "id": "FT02_MAIN_220_T1500_FIT_TRIAL_PONOKO_K020_CUT",
+        "qty": 1,
+        "price_usd": 22.79,
+        "online_bounds_mm": [
+          220.2,
+          220.2
+        ]
+      },
+      {
+        "id": "FT02_DIV_124_T1500_FIT_TRIAL_PONOKO_K020_CUT",
+        "qty": 1,
+        "price_usd": 18.04,
+        "online_bounds_mm": [
+          124.2,
+          124.2
+        ]
+      }
+    ],
+    "parts_ui_total_usd": 40.84,
+    "multi_part_discount_usd": 13.21,
+    "delivery_usd": 16.16,
+    "total_usd": 43.79,
+    "tax": "Not separately shown",
+    "formal_pdf_private": "build/FT02/ponoko_private/clear_quote.pdf"
+  },
+  "common": {
+    "production": "3 business-day ordinary production",
+    "delivery": "UPS Ground",
+    "estimated_arrival": "2026-10-26",
+    "process": "Cutting, not engraving",
+    "dfm": "Automated DFM success on both parts in both alternatives; not physical fit",
+    "validity": "Recheck price/arrival before purchase; UI rounds intermediate amounts."
+  },
+  "recommendation": "Clear-first for visible contact/landing trial and because metal diverter finishing remains unpriced. Metal-first remains reasonable with safe-edge finishing arranged; current metal total is1.84x clear before extra finishing.",
+  "excluded_uploads": [
+    "Polycam scans",
+    "home photographs",
+    "wall or factory assembly",
+    "repair form"
+  ],
+  "permissions": "Selected private fabrication uploads authorized. No purchase, payment, account change or staff message occurred.",
+  "proofs_scope": "Private originals and screenshots kept under ignored build/FT02/ponoko_private. Geometry proof dimensions confirmed. Source and exports may regenerate file metadata; current outgoing byte hashes are in each package; no vendor guarantee or hidden exact-contact inference."
+}

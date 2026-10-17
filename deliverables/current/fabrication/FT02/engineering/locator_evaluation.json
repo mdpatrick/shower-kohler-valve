@@ -1,0 +1,652 @@
+{
+  "study": "FT02 locator evaluation",
+  "measurement_revision": "R006",
+  "transforms": {
+    "inner_outline_to_cover_xy_up": {
+      "row_rotation": [
+        [
+          1.0,
+          0.0
+        ],
+        [
+          0.0,
+          1.0
+        ]
+      ],
+      "translation_mm": [
+        0.0,
+        -0.22999999999998266
+      ]
+    },
+    "cover_to_installed_xy_up": {
+      "row_rotation": [
+        [
+          0.9998274063888835,
+          -0.018578413109797246
+        ],
+        [
+          0.01857841310979725,
+          0.9998274063888836
+        ]
+      ],
+      "translation_mm": [
+        4.014384219632262,
+        39.700994788750954
+      ],
+      "determinant": 0.9999999999999998
+    },
+    "cover_opening_working_centers_mm": [
+      [
+        0.0,
+        -39.94999999999999
+      ],
+      [
+        0.0,
+        40.09000000000001
+      ]
+    ],
+    "fit_residual_mm": [
+      0.5116068255674554,
+      0.5116068255674587
+    ],
+    "basis": "Rigid fit to prior diagnostic control-cap picks, source scan unchanged; loose cover edge dimensions with equal lower bore and horizontally centered openings as working assumptions. Inner upper opening registers to upper cover opening. No physical concentricity or final pose claimed.",
+    "front_view": "A upper-right, B lower-left; no reflection",
+    "mounting_centers_in_cover_frame_mm": {
+      "A": [
+        51.165000000000006,
+        23.750000000000014
+      ],
+      "B": [
+        -51.625,
+        -23.69999999999998
+      ]
+    }
+  },
+  "layout": {
+    "source_ids": [
+      "M11-NED",
+      "M11-SWD",
+      "M13-FAX",
+      "M13-FBX",
+      "M13-FAY",
+      "M13-FBY"
+    ],
+    "frame": "Front toward handles; x RIGHT from LEFT block, y DOWN from TOP block",
+    "center_from_left_top_mm": {
+      "A": [
+        116.34,
+        58.57
+      ],
+      "B": [
+        13.549999999999999,
+        106.02
+      ]
+    },
+    "diameters_mm": {
+      "A": 5.66,
+      "B": 5.66
+    },
+    "separation_xy_mm": [
+      102.79,
+      47.449999999999996
+    ],
+    "center_distance_mm": 113.21345591403878,
+    "predicted_nearest_edge_gap_mm": 107.55345591403878,
+    "uncertainty_mm": null,
+    "status": "derived from owner-selected planar observations",
+    "installed_pose": "Separate transform required; no scan/valve relocation implied",
+    "outline_centered_xy_up_mm": {
+      "A": [
+        51.165000000000006,
+        23.979999999999997
+      ],
+      "B": [
+        -51.625,
+        -23.47
+      ]
+    },
+    "outline_midpoint_offset_mm": [
+      -0.22999999999999687,
+      0.254999999999999
+    ],
+    "outline_note": "Comparison frame only; tape height does not gain accuracy from derived decimals",
+    "earlier_diagonal_comparison": {
+      "edge_gap_mm": 106.39,
+      "implied_center_mm": 112.05,
+      "difference_mm": 1.163455914038778,
+      "role": "Retained disagreement / robustness scenario; not selected layout or certified error bound"
+    }
+  },
+  "candidate_geometry": {
+    "round_at": "A",
+    "slot_at": "B",
+    "slot_axis_unit_B_to_A": [
+      0.9079309448697235,
+      0.41911979116712106
+    ],
+    "tab_width_mm": 15,
+    "root_radius_mm": 1.5,
+    "candidates": {
+      "tight": {
+        "diameter_width_mm": 6.4,
+        "slot_length_mm": 9.4
+      },
+      "balanced": {
+        "diameter_width_mm": 7,
+        "slot_length_mm": 10
+      },
+      "generous": {
+        "diameter_width_mm": 8,
+        "slot_length_mm": 11
+      }
+    }
+  },
+  "plain_hole_locations": [
+    {
+      "hole": "A",
+      "center_mm": [
+        51.165000000000006,
+        23.750000000000014
+      ],
+      "inside_plain_aperture": true,
+      "center_to_boundary_mm": 6.6141893412032315,
+      "factory_bore_entirely_in_opening": true
+    },
+    {
+      "hole": "B",
+      "center_mm": [
+        -51.625,
+        -23.69999999999998
+      ],
+      "inside_plain_aperture": true,
+      "center_to_boundary_mm": 6.163838587202036,
+      "factory_bore_entirely_in_opening": true
+    }
+  ],
+  "full_capture_checks": [
+    {
+      "case": "sweep_from_wall",
+      "z_interval_mm": [
+        0,
+        80
+      ],
+      "clipped_triangles": 92484,
+      "parts": {
+        "PLAIN": {
+          "opening_surface_overlap_mm2": 112.22104493651969,
+          "outside_opening_contact_mm2": 4175.3260971772315,
+          "added_tab_overlap_mm2": 0.0,
+          "added_tab_conflict_bounds_mm": [],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "tight": {
+          "opening_surface_overlap_mm2": 193.03881710807573,
+          "outside_opening_contact_mm2": 4175.323383822075,
+          "added_tab_overlap_mm2": 80.81777217155599,
+          "added_tab_conflict_bounds_mm": [
+            -51.76533680032148,
+            13.53401879895651,
+            55.768484657267685,
+            67.31930706420448
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "balanced": {
+          "opening_surface_overlap_mm2": 184.88578599686545,
+          "outside_opening_contact_mm2": 4175.323383822075,
+          "added_tab_overlap_mm2": 72.66474106034586,
+          "added_tab_conflict_bounds_mm": [
+            -51.76533680032148,
+            13.53401879895651,
+            55.58571549730248,
+            67.31930706420448
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "generous": {
+          "opening_surface_overlap_mm2": 170.77398007049646,
+          "outside_opening_contact_mm2": 4175.323383822075,
+          "added_tab_overlap_mm2": 58.55293513397682,
+          "added_tab_conflict_bounds_mm": [
+            -51.73256304781276,
+            13.53401879895651,
+            55.23319390767035,
+            67.31930706420448
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        }
+      }
+    },
+    {
+      "case": "sweep_1mm_bedding",
+      "z_interval_mm": [
+        1,
+        80
+      ],
+      "clipped_triangles": 51404,
+      "parts": {
+        "PLAIN": {
+          "opening_surface_overlap_mm2": 0.0,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.0,
+          "added_tab_conflict_bounds_mm": [],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "tight": {
+          "opening_surface_overlap_mm2": 80.81777217155604,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 80.81777217155599,
+          "added_tab_conflict_bounds_mm": [
+            -51.76533680032148,
+            13.53401879895651,
+            55.768484657267685,
+            67.31930706420448
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "balanced": {
+          "opening_surface_overlap_mm2": 72.66474106034578,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 72.66474106034586,
+          "added_tab_conflict_bounds_mm": [
+            -51.76533680032148,
+            13.53401879895651,
+            55.58571549730248,
+            67.31930706420448
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "generous": {
+          "opening_surface_overlap_mm2": 58.55293513397678,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 58.55293513397682,
+          "added_tab_conflict_bounds_mm": [
+            -51.73256304781276,
+            13.53401879895651,
+            55.23319390767035,
+            67.31930706420448
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        }
+      }
+    },
+    {
+      "case": "seated_wall",
+      "z_interval_mm": [
+        0,
+        1.524
+      ],
+      "clipped_triangles": 42683,
+      "parts": {
+        "PLAIN": {
+          "opening_surface_overlap_mm2": 112.22104493651969,
+          "outside_opening_contact_mm2": 4175.3260971772315,
+          "added_tab_overlap_mm2": 0.0,
+          "added_tab_conflict_bounds_mm": [],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "tight": {
+          "opening_surface_overlap_mm2": 112.82669289272089,
+          "outside_opening_contact_mm2": 4175.323383822075,
+          "added_tab_overlap_mm2": 0.6056479562011994,
+          "added_tab_conflict_bounds_mm": [
+            50.803255090888754,
+            60.22530508809288,
+            53.35196969089899,
+            63.24240436634191
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "balanced": {
+          "opening_surface_overlap_mm2": 112.80744218172424,
+          "outside_opening_contact_mm2": 4175.323383822075,
+          "added_tab_overlap_mm2": 0.5863972452045625,
+          "added_tab_conflict_bounds_mm": [
+            50.803255090888754,
+            60.40554302713507,
+            52.80515498936212,
+            63.194338778488905
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "generous": {
+          "opening_surface_overlap_mm2": 112.70533847698431,
+          "outside_opening_contact_mm2": 4175.323383822075,
+          "added_tab_overlap_mm2": 0.48429354046461576,
+          "added_tab_conflict_bounds_mm": [
+            50.803255090888754,
+            60.711710482881884,
+            52.032291128844534,
+            63.11249860652651
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        }
+      }
+    },
+    {
+      "case": "seated_1mm_bedding",
+      "z_interval_mm": [
+        1,
+        2.524
+      ],
+      "clipped_triangles": 3108,
+      "parts": {
+        "PLAIN": {
+          "opening_surface_overlap_mm2": 0.0,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.0,
+          "added_tab_conflict_bounds_mm": [],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "tight": {
+          "opening_surface_overlap_mm2": 0.5507925129564031,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.5507925129564031,
+          "added_tab_conflict_bounds_mm": [
+            50.70530859050112,
+            60.22725140854945,
+            53.341196757841765,
+            63.24190619214542
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "balanced": {
+          "opening_surface_overlap_mm2": 0.5050013691458869,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.5050013691458869,
+          "added_tab_conflict_bounds_mm": [
+            50.70530859050112,
+            60.408588008289,
+            52.802868401781694,
+            63.194338778488905
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "generous": {
+          "opening_surface_overlap_mm2": 0.41384527490173456,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.41384527490173456,
+          "added_tab_conflict_bounds_mm": [
+            50.70530859050112,
+            60.80021917538426,
+            51.98951385507796,
+            63.14279011718213
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        }
+      }
+    },
+    {
+      "case": "seated_2mm_bedding",
+      "z_interval_mm": [
+        2,
+        3.524
+      ],
+      "clipped_triangles": 3208,
+      "parts": {
+        "PLAIN": {
+          "opening_surface_overlap_mm2": 0.0,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.0,
+          "added_tab_conflict_bounds_mm": [],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "tight": {
+          "opening_surface_overlap_mm2": 0.4441247410448663,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.4441247410448663,
+          "added_tab_conflict_bounds_mm": [
+            50.70530859050112,
+            60.28513513340372,
+            53.28544049896325,
+            63.2269047265524
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "balanced": {
+          "opening_surface_overlap_mm2": 0.3798522480302395,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.3798522480302395,
+          "added_tab_conflict_bounds_mm": [
+            50.70530859050112,
+            60.48280541298892,
+            52.7492272650345,
+            63.19780417266306
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        },
+        "generous": {
+          "opening_surface_overlap_mm2": 0.29142596135426124,
+          "outside_opening_contact_mm2": 0.0,
+          "added_tab_overlap_mm2": 0.29142596135426124,
+          "added_tab_conflict_bounds_mm": [
+            50.70530859050112,
+            60.86967698740929,
+            51.95768392894629,
+            63.153978510783354
+          ],
+          "overlap_interpretation": "Captured-surface projection in stated Z range; outside opening may be intended stone support/stand-off contact. Not a solid or hidden-geometry proof."
+        }
+      }
+    }
+  ],
+  "coverage": [
+    {
+      "feature": "OPEN-MAIN",
+      "visual_outer_margin_mm": 14.587397434622801,
+      "meaning": "Projected trace margin, not verified sound support"
+    },
+    {
+      "feature": "CUT-01",
+      "visual_outer_margin_mm": 10.01097154071796,
+      "meaning": "Projected trace margin, not verified sound support"
+    },
+    {
+      "feature": "CUT-02",
+      "visual_outer_margin_mm": 16.877946363065064,
+      "meaning": "Projected trace margin, not verified sound support"
+    },
+    {
+      "feature": "CUT-03",
+      "visual_outer_margin_mm": 10.845130982212297,
+      "meaning": "Projected trace margin, not verified sound support"
+    },
+    {
+      "feature": "CUT-04",
+      "visual_outer_margin_mm": 26.227793028246452,
+      "meaning": "Projected trace margin, not verified sound support"
+    },
+    {
+      "feature": "CUT-05",
+      "visual_outer_margin_mm": 17.033601674783696,
+      "meaning": "Projected trace margin, not verified sound support"
+    },
+    {
+      "feature": "CUT-06",
+      "visual_outer_margin_mm": 19.474579513201007,
+      "meaning": "Projected trace margin, not verified sound support"
+    },
+    {
+      "feature": "CUT-07",
+      "visual_outer_margin_mm": 15.606104796600093,
+      "meaning": "Projected trace margin, not verified sound support"
+    }
+  ],
+  "pair_gap_nominal_mm": 3.3113616648218738,
+  "sources_sha256": {
+    "canon/measurements.json": "45f7fefebd12ecbf3c057bf775e6f920685f5edfa6f40aa6314d640dba648abd",
+    "data/derived/registration.json": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3",
+    "data/derived/resolved.json": "fe9097bfc54110c287c37315fc751cb8d990358976c3bfa0e35d8f6e2a30ce1c",
+    "deliverables/current/fabrication/control-registration/registration_trial.json": "597383be29cd49d5208fd4498a57161bbb39f060d6669b69c47043f630f224ee",
+    "data/extracted/shower-hole-valve-polycam/10_14_2026.obj": "84a27b7a5e2a1271e893906a4bf56a64b33e572aaaddfdcd65a8af198bf39a8d",
+    "src/analysis/fit_trial_release.py": "6fd5abd8ad74af6b417b18b52d68f3d3edc17ee2ac5105a194fa4c25e319cb88"
+  },
+  "decision": "Select plain upright capsule and a removable four-direction concentric gauge. R006 round-hole/slot tabs were evaluated at 6.4, 7 and 8 mm. Current captured shafts conflict near the seated A tab; current enlarged rod ends also obstruct insertion. Retraction/removal can remove the tip-path conflict but does not establish shaft/formed-plate plane registration. Widening locators adds more stack play than the 1 mm nominal inward gasket reserve. Plain access plus removable centering avoids making those uncertain rod axes an extra constraint.",
+  "limits": [
+    "Capture surface only; unobserved back surfaces not reconstructed",
+    "Z=0 nominal tile plane; stone topography retained",
+    "XY working registration is not measured final cover pose",
+    "Present rods not virtually shortened; changes require a distinct physical state",
+    "Opening boundary not eroded; low surfaces included from Z=0"
+  ],
+  "allowance_budget": {
+    "nominal_stud_major_mm": 4.826,
+    "basis": "1038645 identified as #10-24; nominal #10 thread crest 0.190 inch. Actual thread envelope is not measured.",
+    "factory_radial_play_mm": 0.41700000000000026,
+    "hole_candidates": [
+      {
+        "diameter_mm": 6.4,
+        "slot_length_mm": 9.4,
+        "custom_radial_play_mm": 0.7870000000000004,
+        "custom_plus_factory_radial_play_mm": 1.2040000000000006,
+        "requested_metal_cut_profile_mm": 0.13,
+        "nominal_extra_foam_land_mm": 1
+      },
+      {
+        "diameter_mm": 7,
+        "slot_length_mm": 10,
+        "custom_radial_play_mm": 1.0870000000000002,
+        "custom_plus_factory_radial_play_mm": 1.5040000000000004,
+        "requested_metal_cut_profile_mm": 0.13,
+        "nominal_extra_foam_land_mm": 1
+      },
+      {
+        "diameter_mm": 8,
+        "slot_length_mm": 11,
+        "custom_radial_play_mm": 1.5870000000000002,
+        "custom_plus_factory_radial_play_mm": 2.0040000000000004,
+        "requested_metal_cut_profile_mm": 0.13,
+        "nominal_extra_foam_land_mm": 1
+      }
+    ],
+    "plane_and_angle": "Factory hole plane is on a formed plate, forward of the new sheet. Its offset depends on compressed foam and bedding; source shafts vary with Z. No measured normal-axis relation permits exact XY copying.",
+    "normal_disassembly": "Removing nuts/trim and retracting or removing studs can eliminate the enlarged-end insertion conflict. That is an ordinary plumber operation, not simulated evidence. Seated A-shaft overlap remains in the tested reference placement.",
+    "alternative_anchor": "Swapping round and slot does not provide transverse relief along arbitrary pose differences. Enlarging/lengthening both sacrifices centering; final survey and old 112.05 mm spacing are retained separately.",
+    "rotation_bound_example_deg": 1.5224867668348703,
+    "limit": "Worst translation from summed hole play is a conservative geometric opportunity for motion, not an observed error. Combined translation/rotation is not claimed simultaneous. Rounded 15 mm tabs with 7 mm holes leave 4 mm side ligaments; structurally plausible in metal, but pose and landing dominate. Acrylic is brittle and no tab load/forced fitting is accepted.",
+    "retention": "Tabs do not clamp in Z. Plain plate also needs sound support and correct factory clamping; positioning aid is removed. No permanent custom threaded or wall attachment."
+  },
+  "diverter_assessment": {
+    "selected_aperture_mm": 80,
+    "factory_cover_mm": 98.425,
+    "nominal_cover_overlap_mm": 9.2125,
+    "scoped_source_pieces": 6853,
+    "surface_outside_aperture_z1_to80_area_mm2": 107.06659266871814,
+    "interpretation": "Outside-aperture captured material is not automatically hardware: this neighborhood contains stone. The source scan does not show the removed rear factory plate or its gasket.",
+    "factory_reference": "1190382-2-A steps 8-9 show a rear plate assembly attached to valve with screws, then a larger cover with bottom notch. Exterior OBJ contains cover and handles only. Do not treat cover overlap as measured seal support.",
+    "assembly_path": "Remove cover/handle/rear plate as necessary; slip custom ring over exposed valve; reinstall factory rear plate on top. The rear flange need NOT pass through the 80 mm aperture.",
+    "decision": "Keep 124/80 as sacrificial trial nominal. No dimensioned rear-contact evidence establishes a known clash; actual full rear contact and screw engagement are explicit trial checks. If its contact crosses the aperture edge, do not seal: mark the overlap and revise aperture locally or smaller, checking the captured valve. Do not enlarge blindly.",
+    "remaining_checks": [
+      "Rear contact fully lands on custom metal",
+      "Ring clears installed body and permits screw/tool access",
+      "No rocking or loss of factory support",
+      "Gap to main remains positive without offsetting covers"
+    ]
+  },
+  "gasket_sensitivity": [
+    {
+      "relative_offset_mm": [
+        0,
+        0
+      ],
+      "rotation_deg": 0,
+      "foam_area_over_opening_mm2": 0.0,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    },
+    {
+      "relative_offset_mm": [
+        1,
+        0
+      ],
+      "rotation_deg": 0,
+      "foam_area_over_opening_mm2": 0.0,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    },
+    {
+      "relative_offset_mm": [
+        -1,
+        0
+      ],
+      "rotation_deg": 0,
+      "foam_area_over_opening_mm2": 0.0,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    },
+    {
+      "relative_offset_mm": [
+        0,
+        1
+      ],
+      "rotation_deg": 0,
+      "foam_area_over_opening_mm2": 0.0,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    },
+    {
+      "relative_offset_mm": [
+        0,
+        -1
+      ],
+      "rotation_deg": 0,
+      "foam_area_over_opening_mm2": 1.5835744950984831,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    },
+    {
+      "relative_offset_mm": [
+        0,
+        0
+      ],
+      "rotation_deg": 1,
+      "foam_area_over_opening_mm2": 0.0,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    },
+    {
+      "relative_offset_mm": [
+        0,
+        0
+      ],
+      "rotation_deg": -1,
+      "foam_area_over_opening_mm2": 0.0,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    },
+    {
+      "relative_offset_mm": [
+        1,
+        1
+      ],
+      "rotation_deg": 1,
+      "foam_area_over_opening_mm2": 4.4076620829607815,
+      "scope": "Scenario only; no measured bound or accepted alignment tolerance"
+    }
+  ],
+  "measurement_policy": "R006 planar owner selections govern; support approximations from credible local evidence. No new owner measurement requested. Installed tip distances remain 3D. Remaining observations belong to the physical fit trial.",
+  "vendor_thickness_check": {
+    "variant": "PONOKO_BRUSHED152_CLEAR150",
+    "nominal_mm": 1.52,
+    "baseline_mm": 1.524,
+    "nominal_delta_mm": -0.0040000000000000036,
+    "metal_range_mm": [
+      1.44,
+      1.64
+    ],
+    "clear_range_mm": [
+      1.27,
+      1.73
+    ],
+    "added_depth_delta_vs_baseline_mm": {
+      "metal": [
+        -0.08400000000000007,
+        0.11599999999999988
+      ],
+      "clear": [
+        -0.254,
+        0.20599999999999996
+      ]
+    },
+    "metal_relative_bending_stiffness_same_alloy": [
+      0.8435922383655791,
+      1.246168138297198
+    ],
+    "clearance_scope": "The full-source plain-aperture sweep Z=1..80 includes the entire sheet thickness range 1.27..1.73 at the illustrative 1 mm stand-off. It has no projected in-opening conflict. Z=0 seating still encounters captured boundary topography; actual stable support controls bedding. No fixed tabs exist to change interference.",
+    "gasket_and_XY": "Finished XY geometry is unchanged: full nominal 6 mm foam width plus 1 mm inward reserve. Thickness does not fix an unverified actual footprint or centering. Separate acrylic kerf paths target the same finished XY.",
+    "engagement_and_support": "No handle engagement allowance has been measured. The selected 1.52 mm metal is 0.004 mm below the 1.524 mm baseline, but delivered thickness and bedding must be checked with the factory hubs. Acrylic can differ from steel by up to 0.37 mm using the two catalog extremes. Thin acrylic is only a contact/clearance aid, not a stiffness or water test."
+  }
+}

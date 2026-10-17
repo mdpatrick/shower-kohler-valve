@@ -1,0 +1,99 @@
+{
+  "project_id": "shower-kohler-valve",
+  "review_revision": "R005",
+  "current_state_note": "Final owner-selected loose-plate coordinate survey: FAX119.17 and FBY108.85 govern; no further hole survey requested. New delivery goal requires a genuine locator evaluation and selected fit-trial release, not a wait for Pro or physical parts.",
+  "group_notes": {
+    "13": "Both bores 5.66. FAX119.17 supersedes118.79; FBY108.85 supersedes109.06 (typed109.-6). Do not average. Planar TOP/LEFT far-inside-edge contacts. Earlier106.39 diagonal preserved only as a discrepancy check."
+  },
+  "superseded_readings": {
+    "M13-FAX": [
+      118.79
+    ],
+    "M13-FBY": [
+      {
+        "raw_text": "109.-6",
+        "interpreted_mm": 109.06
+      }
+    ]
+  },
+  "observations": [
+    {
+      "measurement_id": "M11-NED",
+      "unit": "mm",
+      "raw_readings": [
+        5.66
+      ],
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "date": "2026-10-16",
+      "date_basis": "date of final selection in supplied goal",
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "measurement_id": "M11-SWD",
+      "unit": "mm",
+      "raw_readings": [
+        5.66
+      ],
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "date": "2026-10-16",
+      "date_basis": "date of final selection in supplied goal",
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "measurement_id": "M13-FAX",
+      "unit": "mm",
+      "raw_readings": [
+        119.17
+      ],
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "date": "2026-10-16",
+      "date_basis": "date of final selection in supplied goal",
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "measurement_id": "M13-FBX",
+      "unit": "mm",
+      "raw_readings": [
+        16.38
+      ],
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "date": "2026-10-16",
+      "date_basis": "date of final selection in supplied goal",
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "measurement_id": "M13-FAY",
+      "unit": "mm",
+      "raw_readings": [
+        61.4
+      ],
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "date": "2026-10-16",
+      "date_basis": "date of final selection in supplied goal",
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    },
+    {
+      "measurement_id": "M13-FBY",
+      "unit": "mm",
+      "raw_readings": [
+        108.85
+      ],
+      "method": "Owner-selected final caliper reading; loose front face; TOP/LEFT block datums and far inside edges",
+      "date": "2026-10-16",
+      "date_basis": "date of final selection in supplied goal",
+      "source_ref": "docs/decisions/delivery_goal_2026-10-16.md",
+      "notes": "Selected final value; earlier attempts preserved separately, not averaged",
+      "correction_reason": "Explicit owner final selection in delivery goal"
+    }
+  ]
+}

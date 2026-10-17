@@ -1,0 +1,4 @@
+FT02 CLEAR_FIT_TRIAL
+One MAIN plus one DIV, not every format. Upload the two DXFs in UPLOAD_LIST. STEP and STL are the intended finished parts, not additional order items.
+Clear acrylic 1.50 mm nominal. CUT DXFs are vendor-specific: outside +0.10 mm, inside -0.10 mm, for 0.20 mm nominal kerf. Do not apply a second compensation. STEP and drawing preserve finished dimensions. No 3 mm substitution or permanent-use claim.
+No scaling, permanent tabs, threads, countersinks or bends. Follow SHOP_DRAWINGS. Confirm actual thickness, flatness, safe edges, cosmetic finish, price and arrival before purchase. Catalog stock is not a finish/flatness certification. No exact Kohler BN match. A fit trial is not a water-performance pass.

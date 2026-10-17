@@ -58,4 +58,11 @@ def requests(d):
         [f('M12-UD','Outer cover: upper opening inside diameter',None,.2,'caliper inside jaws','left inside edge to right inside edge of upper cover opening'),
          f('M12-LD','Outer cover: lower opening inside diameter',None,.2,'caliper inside jaws','left inside edge to right inside edge of lower cover opening'),
          f('M12-G','Outer cover: vertical gap between inside opening edges',None,.2,'caliper','bottom inside edge of upper opening to top inside edge of lower opening; vertical projection')],False)
+    group('13','Recorded final TOP/LEFT mounting survey','inner_photo',
+        'Completed owner survey; do not ask for these readings again.',
+        'Front toward handles. A is upper-right; B lower-left. LEFT and TOP reference-block contact faces are the datums. Far X is the right inside wall; far Y is the bottom inside wall. Subtract the relevant radius to find each center. These are coplanar measurements, not installed tip distances.',
+        [f('M13-FAX','A far X from LEFT',None,.2,'caliper and reference blocks','LEFT block contact face to A right/far inside wall'),
+         f('M13-FBX','B far X from LEFT',None,.2,'caliper and reference blocks','LEFT block contact face to B right/far inside wall'),
+         f('M13-FAY','A far Y from TOP',None,.2,'caliper and reference blocks','TOP block contact face to A bottom/far inside wall; y down'),
+         f('M13-FBY','B far Y from TOP',None,.2,'caliper and reference blocks','TOP block contact face to B bottom/far inside wall; y down')],False)
     return groups

@@ -1,0 +1,24 @@
+[
+  {
+    "file": "FT02_MAIN_220_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf",
+    "kerf_mm": 0.2,
+    "path_outer_diameter_mm": 220.2,
+    "finished_outer_diameter_mm": 220,
+    "outside_offset_mm": 0.1,
+    "aperture_offset_mm": -0.1,
+    "readback": "PASS: mm, two closed contours, one extrudable solid, exact bounds/area",
+    "sha256": "79d4058c795e9d723ad048ad2fec43db70e3e296a139e0c3efdaa8cbbecfa2d5",
+    "note": "Nominal 0.20 mm CO2 burn compensation already applied to this DXF only. Do not apply a second compensation. Finished-part STEP and drawing govern target dimensions; actual kerf varies."
+  },
+  {
+    "file": "FT02_DIV_124_T1500_FIT_TRIAL_PONOKO_K020_CUT.dxf",
+    "kerf_mm": 0.2,
+    "path_outer_diameter_mm": 124.2,
+    "finished_outer_diameter_mm": 124,
+    "outside_offset_mm": 0.1,
+    "aperture_offset_mm": -0.1,
+    "readback": "PASS: mm, two closed contours, one extrudable solid, exact bounds/area",
+    "sha256": "5718db4ca84fb8b287841e2abb7c799219133cf19e22c8b35d8cb73dc28aa7b4",
+    "note": "Nominal 0.20 mm CO2 burn compensation already applied to this DXF only. Do not apply a second compensation. Finished-part STEP and drawing govern target dimensions; actual kerf varies."
+  }
+]

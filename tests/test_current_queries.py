@@ -30,8 +30,8 @@ class QueryTests(unittest.TestCase):
         current=self.cli('dimension','candidate.diameter_mm')
         historical=self.cli('historical','dimension','candidate.diameter_mm')
         self.assertEqual(current['result']['value'],220)
-        self.assertEqual(current['design_revision'],'FT01')
-        self.assertEqual(current['evidence_revision'],'R005')
+        self.assertEqual(current['design_revision'],'FT02')
+        self.assertEqual(current['evidence_revision'],'R006')
         self.assertEqual(historical['result']['value'],230)
         self.assertEqual(historical['state'],'historical_reconstruction')
         self.assertFalse(historical['current_design_fit_result'])
@@ -40,15 +40,15 @@ class QueryTests(unittest.TestCase):
 
     def test_current_step_solid_and_stock_selection(self):
         primary=self.q.solid('CUSTOM-01')
-        alternate=self.q.solid('DIV','T3000')
-        for response,od,t in [(primary,220,1.524),(alternate,124,3)]:
+        alternate=self.q.solid('DIV','T1500')
+        for response,od,t in [(primary,220,1.52),(alternate,124,1.5)]:
             r=response['result'];lo,hi=r['bounds_local_mm']
             self.assertAlmostEqual(hi[0]-lo[0],od,places=6)
             self.assertAlmostEqual(hi[1]-lo[1],od,places=6)
             self.assertAlmostEqual(hi[2]-lo[2],t,places=6)
             self.assertTrue(r['is_valid']);self.assertEqual(r['solid_count'],1)
             self.assertFalse(response['permanent_installation_release'])
-        with self.assertRaises(QueryError):self.q.solid(primary['result']['id'],'T3000')
+        with self.assertRaises(QueryError):self.q.solid(primary['result']['id'],'T1500')
         (OUT/'solid_examples.json').write_text(json.dumps([primary,alternate],indent=2)+'\n')
 
     def test_coverage_uses_current_circle_in_all_three_states(self):
@@ -71,7 +71,7 @@ class QueryTests(unittest.TestCase):
         with tempfile.TemporaryDirectory(dir=OUT) as temp:
             root=Path(temp)
             paths=['canon/fit_trial_design.json','canon/project_state.json','canon/measurements.json',
-                   'deliverables/current/fabrication/fit-trial/design_report.json']
+                   'deliverables/current/fabrication/FT02/design_report.json']
             for rel in paths:
                 p=root/rel;p.parent.mkdir(parents=True,exist_ok=True);p.write_bytes((ROOT/rel).read_bytes())
             p=root/'canon/fit_trial_design.json';d=json.loads(p.read_text());d['main']['outer_diameter_mm']=222
@@ -97,6 +97,8 @@ class QueryTests(unittest.TestCase):
         clear=self.q.clearance()
         self.assertIn('Read saved',clear['method'])
         self.assertIn('excludes stone',clear['result']['geometric_check_scope'])
+        self.assertIn('expanded_local_study',clear['result'])
+        self.assertIn('full_capture_checks',clear['result']['expanded_local_study'])
         states=self.q.compare_states()
         self.assertIsNone(states['result']['physical_selected_arrangement'])
 

@@ -53,7 +53,11 @@ def publish_manifest():
     try:commit=subprocess.check_output(['git','rev-parse','HEAD'],text=True).strip()
     except subprocess.CalledProcessError:commit=None
     files=[]
+    tracked=set(subprocess.check_output(['git','ls-files','-z','deliverables/current']).decode().split('\0'))
+    active=read('canon/fit_trial_design.json').get('output_directory','deliverables/current/fabrication/fit-trial')+'/'
     for p in sorted((ROOT/'deliverables/current').rglob('*')):
+        rel=str(p.relative_to(ROOT))
+        if rel not in tracked and not rel.startswith(active):continue
         if p.is_file() and p.name!='manifest.json' and not p.name.endswith(('.blend1','.blend2')):
             files.append(dict(path=str(p.relative_to(ROOT)),sha256=sha(p),size_bytes=p.stat().st_size))
     write('deliverables/current/manifest.json',dict(project_id='shower-kohler-valve',revision=read('canon/measurements.json')['revision'],
@@ -62,7 +66,7 @@ def publish_manifest():
         input_hashes={i['id']:i['sha256'] for i in read('canon/inputs.json')['inputs']},files=files,
         readiness=read('canon/project_state.json')['readiness'],
         current_recommendation=read('canon/project_state.json').get('fabrication_design_revision'),
-        current_recommendation_scope='FT01 files are for quotes and sacrificial dry fit; permanent installation remains unreleased.'))
+        current_recommendation_scope='Current selected plate-only files are for quotes and sacrificial dry fit; permanent installation remains unreleased.'))
     return files
 def build(force=False):
     (ROOT/'build').mkdir(exist_ok=True);preserve_edits();run([sys.executable,'scripts/ingest.py'])
@@ -215,35 +219,33 @@ def prepare_registration(stage='all'):
 def prepare_fit_trial(stage='all',force=False):
     """Current quote/dry-fit package; keep historical studies and source poses intact."""
     preserve_edits()
-    out='deliverables/current/fabrication/fit-trial'
-    state=read('build/fit_trial_stages.json') if (ROOT/'build/fit_trial_stages.json').exists() else {}
+    d=read('canon/fit_trial_design.json');out=d['output_directory'];rev=d['revision']
+    statefile='build/fit_trial_'+rev+'_stages.json'
+    state=read(statefile) if (ROOT/statefile).exists() else {}
     blender=[BLENDER,'--background','--factory-startup','--threads','2','--python-exit-code','1','--python']
     stages=[
-      ('analysis',['src/analysis/attached_scan.py','src/fabrication/fit_trial.py','src/fabrication/fit_trial_spec.py','deliverables/current/fabrication/concentric-border-study/analysis.json','canon/fit_trial_design.json','canon/measurements.json','data/derived/resolved.json','data/raw/polycam/polycam-inner-plate-attached.zip','deliverables/current/fabrication/control-registration/registration_trial.json'],
-       [out+'/attached_scan_assessment.json',out+'/design_report.json',out+'/cad/*',out+'/access.png',out+'/stack.png',out+'/sizes.png','build/attached_scan/wall_frame.json'],
-       [[sys.executable,'src/analysis/attached_scan.py'],[sys.executable,'src/fabrication/fit_trial.py']]),
-      ('blender',['src/fabrication/fit_trial_spec.py','src/blender/fit_trial.py','scripts/inspect_attached_scan.py','scripts/render_attached_plane.py',out+'/design_report.json',out+'/attached_scan_assessment.json',out+'/cad/*','build/attached_scan/wall_frame.json'],
-       [out+'/*.blend',out+'/blender_check.json',out+'/paired_*.png',out+'/exploded.png',out+'/plane_front.png',out+'/raw_front.png'],
-       [blender+['scripts/inspect_attached_scan.py'],blender+['scripts/render_attached_plane.py'],[sys.executable,'src/analysis/attached_scan.py'],blender+['src/blender/fit_trial.py']]),
-      ('documents',['src/fabrication/fit_trial_spec.py','src/fabrication/fit_trial_documents.py','src/fabrication/field_record.py','canon/fit_trial_handoff.json','canon/fit_trial_design.json',out+'/design_report.json',out+'/*.png',out+'/cad/*'],
-       [out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/document_check.json',out+'/field_record_*.json'],
-       [[sys.executable,'src/fabrication/fit_trial_documents.py']]),
-      ('audit',['src/fabrication/fit_trial_spec.py','src/fabrication/audit_fit_trial.py','src/fabrication/field_record.py',out+'/field_record_*.json',out+'/design_report.json',out+'/cad/*',out+'/*.pdf',out+'/*_quote.zip',out+'/index.html',out+'/blender_check.json'],
-       [out+'/audit.json','docs/validation/fit_trial_FT01.json'],
-       [[sys.executable,'src/fabrication/audit_fit_trial.py']])]
+      ('analysis',['src/analysis/fit_trial_release.py','src/analysis/mounting_layout.py','src/fabrication/release_analysis.py','src/fabrication/release_views.py','src/fabrication/repair_form.py','src/fabrication/fit_trial.py','src/fabrication/fit_trial_spec.py','canon/fit_trial_design.json','canon/repair_form_design.json','canon/measurements.json','data/derived/resolved.json','data/derived/registration.json'],
+       [out+'/design_report.json',out+'/engineering/*',out+'/reference/*',out+'/cad/*',out+'/sections.png',out+'/support_seal.png',out+'/REPAIR_FORM_TRIAL/*.step',out+'/REPAIR_FORM_TRIAL/*.stl',out+'/REPAIR_FORM_TRIAL/*.json'],
+       [[sys.executable,'src/fabrication/release_analysis.py'],[sys.executable,'src/fabrication/release_views.py'],[sys.executable,'src/fabrication/repair_form.py']]),
+      ('blender',['src/blender/fit_trial.py',out+'/design_report.json',out+'/reference/*',out+'/cad/*.stl','build/attached_scan/wall_frame.json'],
+       [out+'/*.blend',out+'/blender_check.json',out+'/paired_*.png',out+'/exploded.png'],[blender+['src/blender/fit_trial.py']]),
+      ('documents',['src/fabrication/release_documents.py','src/fabrication/release_support_documents.py','src/fabrication/ponoko.py','canon/fit_trial_handoff.json','canon/repair_form_design.json','canon/fit_trial_design.json',out+'/design_report.json',out+'/engineering/*.json',out+'/*.png',out+'/cad/*',out+'/ponoko/quotes.json'],
+       [out+'/*.pdf',out+'/*.html',out+'/*.source.json',out+'/*.zip',out+'/packages.json',out+'/document_check.json',out+'/METAL_FIT_TRIAL/*',out+'/CLEAR_FIT_TRIAL/*',out+'/REPAIR_FORM_TRIAL/*'],[[sys.executable,'src/fabrication/release_documents.py']]),
+      ('audit',['src/fabrication/audit_release.py',out+'/design_report.json',out+'/cad/*',out+'/*.pdf',out+'/*.zip',out+'/index.html',out+'/blender_check.json',out+'/REPAIR_FORM_TRIAL/*'],
+       [out+'/audit.json','docs/validation/fit_trial_FT02.json'],[[sys.executable,'src/fabrication/audit_release.py']])]
     for name,inputs,patterns,commands in stages:
         if stage not in ('all',name):continue
         digest=fingerprint(inputs);prior=state.get(name,{})
         unchanged=not force and prior.get('fingerprint')==digest and prior.get('outputs') and all((ROOT/p).exists() and sha(ROOT/p)==h for p,h in prior['outputs'].items())
-        if unchanged:print('FT01 '+name+': unchanged',flush=True);continue
-        print('FT01 '+name+': building',flush=True)
+        if unchanged:print(rev+' '+name+': unchanged',flush=True);continue
+        print(rev+' '+name+': building',flush=True)
         for i,cmd in enumerate(commands):run(cmd,'fit_trial_'+name+'_'+str(i)+'.log')
         owned={str(p.relative_to(ROOT)) for pat in patterns for p in ROOT.glob(pat) if p.is_file() and not p.name.endswith('.blend1')}
         state[name]={'fingerprint':digest,'outputs':{p:sha(ROOT/p) for p in sorted(owned)}}
-        write('build/fit_trial_stages.json',state)
+        write(statefile,state)
     # Old pages remain available as evidence but identify the current recommendation.
     d=read('canon/fit_trial_design.json')
-    banner=f'<aside id="ft01-current" style="padding:16px;background:#e5f1f3;border:2px solid #236679;margin:12px;color:#183e48">Current quote and dry-fit recommendation: <a href="/fabrication/fit-trial/index.html">{d["revision"]} main {d["main"]["outer_diameter_mm"]:g} / diverter {d["diverter"]["outer_diameter_mm"]:g}, upright capsule opening</a>. This page is a historical study.</aside>'
+    banner=f'<aside id="ft01-current" style="padding:16px;background:#e5f1f3;border:2px solid #236679;margin:12px;color:#183e48">Current quote and dry-fit recommendation: <a href="/{out.removeprefix('deliverables/current/')}/index.html">{d["revision"]} main {d["main"]["outer_diameter_mm"]:g} / diverter {d["diverter"]["outer_diameter_mm"]:g}, upright capsule opening</a>. This page is a historical study.</aside>'
     for rel in ['review/index.html','review/rear/index.html','manual/index.html','fabrication/F005/index.html','fabrication/concentric-border-study/index.html','fabrication/aperture-access/index.html','fabrication/control-registration/index.html']:
         p=ROOT/'deliverables/current'/rel
         if p.exists():
@@ -257,7 +259,7 @@ def prepare_fit_trial(stage='all',force=False):
                 text=re.sub(r'(<(?:main|header|nav)\b[^>]*>)',lambda m:banner+m.group(1),text,count=1)
             p.write_text(text)
     publish_manifest()
-    print('FT01 quote/dry-fit package prepared. Physical fit, support/seal and water verification remain open.')
+    print(rev+' quote/dry-fit package prepared. Physical fit, support/seal and water verification remain open.')
 
 def validate(git_objects=False):
     errors=[];input_results=[]
@@ -268,9 +270,13 @@ def validate(git_objects=False):
         input_results.append(dict(id=i['id'],status='PASS' if ok else 'FAIL',committed_bytes_checked=git_objects))
         if not ok:errors.append(i['id'])
     rev=read('canon/measurements.json')['revision']
-    for p in ['deliverables/current/cad/cad_manifest.json','deliverables/current/blender/scene_check.json','deliverables/current/analysis/checks.json']:
+    design=read('canon/fit_trial_design.json');out=design['output_directory']
+    for p in [out+'/design_report.json',out+'/blender_check.json',out+'/audit.json']:
         if not (ROOT/p).exists():errors.append('missing '+p);continue
-        if read(p)['revision']!=rev:errors.append('stale '+p)
+        item=read(p)
+        if item.get('revision',design['revision'])!=design['revision']:errors.append('stale '+p)
+        if p.endswith('blender_check.json') and not all(x.startswith(design['revision']+'_') for x in item.get('custom_dimensions_verified',[])):errors.append('stale Blender part identities')
+    if read(out+'/design_report.json').get('design')!=design:errors.append('stale active design report')
     mp=ROOT/'deliverables/current/manifest.json'
     if mp.exists():
         manifest=read('deliverables/current/manifest.json')
@@ -290,7 +296,7 @@ def historical_query(args,scope='historical_reconstruction'):
             'current_design_revision':read('canon/project_state.json')['fabrication_design_revision'],
             'current_design_fit_result':False,
             'source':'deliverables/current/analysis/resolved.json',
-            'scope_note':'Preserved evidence/reference reconstruction and old diagnostic assemblies. Historical candidate dimensions and clashes do not describe the current FT01 part.'}
+            'scope_note':'Preserved evidence/reference reconstruction and old diagnostic assemblies. Historical candidate dimensions and clashes do not describe the current selected fit-trial parts.'}
     if op=='features':result=r['features'] if len(args)==1 else next((f for f in r['features'] if f['id']==args[1]),None)
     elif op=='dimension':
         id=args[1];accepted=[m for m in read('canon/measurements.json')['measurements'] if m['id']==id]
@@ -345,12 +351,13 @@ def query(args):
         raise SystemExit(2)
 def review(no_open=False):
     port=int(os.environ.get('PROJECT_REVIEW_PORT','8765'))
-    current=(ROOT/'deliverables/current/fabrication/fit-trial/index.html').exists()
-    url=f'http://127.0.0.1:{port}/'+('fabrication/fit-trial/index.html' if current else 'review/index.html')
+    design=read('canon/fit_trial_design.json');page=design['output_directory']+'/index.html'
+    current=(ROOT/page).exists()
+    url=f'http://127.0.0.1:{port}/'+(page.removeprefix('deliverables/current/') if current else 'review/index.html')
     def ready():
         try:
             with urllib.request.urlopen(url,timeout=1) as response:
-                return ('FT01' if current else 'shower-kohler-valve') in response.read().decode('utf-8')
+                return (design['revision'] if current else 'shower-kohler-valve') in response.read().decode('utf-8')
         except (OSError,ValueError):return False
     try:
         with socket.create_connection(('127.0.0.1',port),timeout=.3):pass
@@ -405,11 +412,11 @@ def handoff():
             for p in sorted((ROOT/'data/evidence/user').glob('installed-*-2026-10-15.png')):
                 z.write(p,str(p.relative_to(ROOT)))
             z.writestr('CURRENT_CB01_REVIEW.txt','Current circular-only CB01 candidates supersede the F005 appearances. Open deliverables/current/fabrication/concentric-border-study/index.html, including damage.html and the 3D tip-distance clarification. RECON-001 revision 2 preserves six 3D end-tip-center lengths; derived fits do not establish plate-plane hole locations. LOC01 is diagnostic and excluded from quote ZIPs. Full Blender scenes and source scans are in the complete Git bundle. Physical fit and manufacturing release remain open.\n')
-        trial=ROOT/'deliverables/current/fabrication/fit-trial'
+        design=read('canon/fit_trial_design.json');trial=ROOT/design['output_directory']
         if trial.exists():
-            for pattern in ['*.json','*.pdf','*.html','*.png','*.jpg','*_quote.zip','cad/*']:
+            for pattern in ['*.json','*.pdf','*.html','*.png','*.jpg','*.zip','cad/*','engineering/*','photos/*','ponoko/*.json','ponoko/*.txt']:
                 for p in sorted(trial.glob(pattern)):z.write(p,str(p.relative_to(ROOT)))
-            z.writestr('START_WITH_FT01.txt','FT01 is the current quote and sacrificial fit-trial recommendation. Open deliverables/current/fabrication/fit-trial/index.html and project_handoff_FT01.pdf. The historical F005/CB01/AP01 notes describe earlier checkpoints, not the next recommended files. The three-scene Blender file and original ZIPs remain in the complete Git bundle. No physical fit or permanent-installation release is implied.\n')
+            z.writestr('START_WITH_'+design['revision']+'.txt',f'{design["revision"]} is the current quote and sacrificial fit-trial release. Open {design["output_directory"]}/index.html and ORDER_AND_NEXT_STEP.pdf. Choose one material route, one main plus one diverter. Earlier FT01/F005/CB01/AP01 notes describe history. The three-scene Blender file and original ZIPs remain in the complete Git bundle. Physical fit and permanent use remain unestablished.\n')
     print('Private local handoff:',bundle.relative_to(ROOT),'(contains complete committed originals). Not an off-machine backup.')
 
 def main():

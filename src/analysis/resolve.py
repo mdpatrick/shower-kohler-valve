@@ -1,9 +1,12 @@
 """Resolve design parameters from evidence, with no writes to accepted canon."""
 from pathlib import Path
 import json,math,numpy as np
+import sys
 from shapely.geometry import Polygon,Point,LineString,box
 from shapely.affinity import translate
 ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT))
+from src.analysis.mounting_layout import derive_layout
 
 def resolve():
     reg=json.loads((ROOT/'data/derived/registration.json').read_text());T=np.array(reg['raw_to_installed_mm'])
@@ -87,6 +90,14 @@ def resolve():
                 slot['center_mm'][i]=float(inner_center[i]-extent/2+(accepted[near]+accepted[far])/2)
                 slot['width_mm' if i==0 else 'height_mm']=accepted[far]-accepted[near]
                 slot['status']='paired edge datums override provisional coordinates; check residuals against diagonal and rim gaps'
+    layout=derive_layout(accepted)
+    if layout:
+        for label,slot in zip(['B','A'],slots):
+            slot['center_mm']=(inner_center+np.array(layout['outline_centered_xy_up_mm'][label])).tolist()
+            slot['width_mm']=slot['height_mm']=layout['diameters_mm'][label]
+            slot['diameter_status']='user-confirmed'
+            slot['status']='Final planar TOP/LEFT survey; outline-frame preview only, installed registration separate'
+        a['inner_photo_basis']='Measured face outline, upper aperture and both mounting bores/positions. Lower opening, corner radii and formed depths remain reference assumptions.'
     holes=[]
     for i,point in enumerate([bottom,top]):
         local=point[:2]-inner_center
@@ -98,6 +109,10 @@ def resolve():
         'conditional_display_center_spacing_mm':float(np.linalg.norm(np.array(slots[1]['center_mm'])-np.array(slots[0]['center_mm']))),
         'missing':['NE mounting-hole diameter','lower large-opening diameter','mounting-hole vertical datums','outline corner shape/radii','rear gasket footprint','sheet thickness, rear metal datum, rim and nut-seat depths','installed foam compression'],
         'placement_note':'No plate photograph or measurement changes the primary wall registration or captured hardware pose.'}
+    if layout:
+        plate_constraints['active_locating_layout']=layout
+        plate_constraints['mounting_center_spacing_mm']=layout['center_distance_mm']
+        plate_constraints['missing']=[x for x in plate_constraints['missing'] if x not in ['NE mounting-hole diameter','mounting-hole vertical datums']]
     # Source geometry is used once for this conditional provisional scale. No independent validation is claimed.
     candidate=dict(dc['candidate']);land=candidate['target_sound_land_mm'];dia=math.ceil(2*(maxrad+land+1.5)/candidate['diameter_rounding_mm'])*candidate['diameter_rounding_mm']
     # Rounded rectangular aperture accommodates observed valve/body/stud envelope; not merely copied factory holes.
