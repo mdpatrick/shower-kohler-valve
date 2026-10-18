@@ -2,9 +2,9 @@
   "project_id": "shower-kohler-valve",
   "revision": "R006",
   "status": "DRAFT_NOT_FOR_FABRICATION",
-  "source_commit": "91727468ad054755090105f0ecd1c2c0da903fce",
+  "source_commit": "ffe24d4e29afaee7192acfb5071701202b9beae3",
   "source_commit_note": "Commit present at build time; source_tree_hash includes current source/canon, avoiding future-commit circularity.",
-  "source_tree_hash": "1bd2a81aa5cf809dea61d5c88a3995b0d1c50d2ebde225254b634f6aef5e7f64",
+  "source_tree_hash": "fce413803052371bfa65a7486e03e36dbe0464bd655d5ce975245d624fdd7e2b",
   "input_hashes": {
     "SCAN-WALL": "bda572b01ac6c273e53402deb8ae10a692a2214d8b675b2f026a4b0cb5d2f3d5",
     "SCAN-PLATE-1": "3657248db455bfc1f2d7b86c5b07affb4ec19813f94695c0e8c3f7ac57e2ad9f",
@@ -1446,6 +1446,136 @@
       "path": "deliverables/current/fabrication/FT02/sections.png",
       "sha256": "2b76586b65857be9094be00809ecbea35c4eaed58020723dd56bbe0c97d7babe",
       "size_bytes": 122114
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/01_PRIMARY_ORIGINAL_DEEP_240.zip",
+      "sha256": "5579d696ad556fe9e86aee039bb651c0e8b6bfa3c6136095fdddf52a87c47e0d",
+      "size_bytes": 3991908
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/02_PRIMARY_SMALL_DEEP_192_55.zip",
+      "sha256": "f9a83a32d793077bc029de9b35bfbf96f9e01762655a4a119a94a4aadd054105",
+      "size_bytes": 3938444
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/03_OPTIONAL_SHORT_12MM.zip",
+      "sha256": "28313c138c82d3475b215f495012bc74390a88d34845bca59788ee213e17bb6f",
+      "size_bytes": 3783471
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SELECTED_DEEP_FORMS_AND_OPTIONAL_SHORT.zip",
+      "sha256": "97f647fa3e977de81e4eb594142aee730f96166ff6be18b1e4f2077bbce693b5",
+      "size_bytes": 9735960
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/00_START_HERE.txt",
+      "sha256": "30ae342e6eebcb7421c6cef514f6888540b92942d6d8c9dc56d25a62e05aaabd",
+      "size_bytes": 788
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PREVIEW.png",
+      "sha256": "467891233440cf7c4bb04bd58e60cc73c2d6b71138cf8084b7bd2bb43f9db5b1",
+      "size_bytes": 1650349
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.3mf",
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb",
+      "size_bytes": 200926
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.step",
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7",
+      "size_bytes": 168147
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.stl",
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091",
+      "size_bytes": 834684
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/READ_ME_FIRST.txt",
+      "sha256": "07fed6a3d73d6e09f970517c2f2fcffbe2a19898b69e9edee37eb98a91ea668e",
+      "size_bytes": 535
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/PREVIEW.png",
+      "sha256": "5b47e46a0dbe5cb9164e548791cd5607075ddbe0c371fb05f41f9efed226069e",
+      "size_bytes": 1595619
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.3mf",
+      "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4",
+      "size_bytes": 202443
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.step",
+      "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6",
+      "size_bytes": 168399
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.stl",
+      "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2",
+      "size_bytes": 834284
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/READ_ME_FIRST.txt",
+      "sha256": "6b5f0b9483fa880b3e5c5fe94918cfe2f983dd5993a90e597f68f7feeabcebc3",
+      "size_bytes": 546
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.3mf",
+      "sha256": "a034ee4b3694cbb34dd1abd1c584a67d26cb17aaf6dde90e3b19bff5a764fa85",
+      "size_bytes": 168902
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.step",
+      "sha256": "f3e52c98bee446015d23991b32e80957e6978c9bb9ff157713748f0629aaecd3",
+      "size_bytes": 122491
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.stl",
+      "sha256": "6f7bc5d06ae88250b65654d2701b1bdd65a31f94a9dabd0354b47094bb5a0991",
+      "size_bytes": 716084
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/PREVIEW.png",
+      "sha256": "e351076d1acfce76f07ba37c897e48b478d07a80c0f198a2ac47f2b376958f5d",
+      "size_bytes": 1522338
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/READ_ME_FIRST.txt",
+      "sha256": "36d1e7a159e2745ff91468eed5cc16c450d3472f2a33ea479d7d9bbcce99f2db",
+      "size_bytes": 484
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/COMPARE_PRIMARY_FORMS.png",
+      "sha256": "e16992115cf13c87a113ecf53fc16c982b3732fe1a427d571f53d75efe5fdea4",
+      "size_bytes": 1724683
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/GEOMETRY_SOURCES.json",
+      "sha256": "c538e6493ca7530060b5ac895fab06eb2aecb268e6165bd5ac419794fbc5f1c9",
+      "size_bytes": 2900
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/MANIFEST.json",
+      "sha256": "d436985b871c54fe3546e23a0a602ea4107014c49326e40f8215bc23ca93a97b",
+      "size_bytes": 3448
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/PRINT_THIS_GUIDE.pdf",
+      "sha256": "7c4f7d84c545f05023ab99e7ed8f9f3d83dad430d4747d5588cbbe9c99ef20ad",
+      "size_bytes": 2266809
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/SELECTION.json",
+      "sha256": "bd372a44df05cf5e3d316c2fb2b7ad95e243cd87185d4e265365deb5fe3824b7",
+      "size_bytes": 1478
+    },
+    {
+      "path": "deliverables/current/fabrication/FT02/selected-forms/audit.json",
+      "sha256": "45edc53b564152d2f408c08e25817bc1eff6cd434fbc9b4a6e276acc57b542b2",
+      "size_bytes": 337
     },
     {
       "path": "deliverables/current/fabrication/FT02/sizes.png",

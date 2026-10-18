@@ -12,10 +12,18 @@
     "download_limit_per_link": 25,
     "expiry_date_shown_in_desktop_app": "2026-10-27",
     "unlimited_storage": false,
-    "scope": "Isolated RF03/RF04 print geometry, CAD previews and print guide only.",
-    "small": "https://get.massive.app/01M55PAJHEVHQHACYXBB3ZGCDM?secret=DOJNGkgsWJiglAck&lang=system",
-    "original": "https://get.massive.app/01M55PQSC3KPKB950Q9C6C5CEG?secret=qxsOmFRjVNSvrYTG&lang=system",
-    "both": "https://get.massive.app/01M55PW318W9SDKRCJYK649D25?secret=edZjYTVSHjxKdOUc&lang=system",
-    "link_tokens": "The secret query parameters are intentional public recipient-link tokens, not account credentials. Keep each complete URL intact."
+    "scope": "Both primary 24 mm relieved RF03/RF04 print forms, separate optional short D12, previews and current PS01 print guide only.",
+    "small": "https://get.massive.io/01M56NWY5W2M205NAV31BTGPHY?secret=RJFecfJoaCeMNREp",
+    "original": "https://get.massive.app/01M55RBZD1EAP0RZXA8GEPEFKR?secret=OGzYfpmfQJsUwZee&lang=system",
+    "both": "https://get.massive.io/01M56P5XRRYQNG479H7RH72RQG?secret=SsYSxOvnDyhojNBs",
+    "link_tokens": "The secret query parameters are intentional public recipient-link tokens, not account credentials. Keep each complete URL intact.",
+    "selection_revision": "PS01",
+    "previous_packages_record": "docs/decisions/masv_print_sharing_2026-10-17.json",
+    "package_ids": {
+      "original": "01M55RBYP9324X9HJ94A4JH3DA",
+      "small": "01M56NWXNBS4DHZ5DCJJXE5B6P",
+      "both": "01M56P5XD8XN9TDXP45XHCG9Q3"
+    },
+    "expiry_evidence": "Original package detail shows October 27; new small and combined transfers set to 10 days, uploaded October 17 local time."
   }
 }

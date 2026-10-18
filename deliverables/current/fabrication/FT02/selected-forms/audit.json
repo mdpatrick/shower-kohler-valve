@@ -1,0 +1,15 @@
+{
+  "revision": "PS01",
+  "status": "PASS",
+  "scope": "Packaging and source-byte identity; no geometry or physical-fit change",
+  "geometry_files_compared": 9,
+  "all_geometry_bytes_match": true,
+  "primary": [
+    "original",
+    "small"
+  ],
+  "optional": [
+    "short"
+  ],
+  "download_testing": "Not performed, at owner request."
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "output": "01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.stl",
+    "source": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
+    "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091",
+    "bytes": 834684
+  },
+  {
+    "output": "01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.3mf",
+    "source": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/ORIGINAL_RF03/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+    "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb",
+    "bytes": 200926
+  },
+  {
+    "output": "01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.step",
+    "source": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/ORIGINAL_RF03/RF03_D24_RELIEVED_mm.step",
+    "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7",
+    "bytes": 168147
+  },
+  {
+    "output": "02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.stl",
+    "source": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.stl",
+    "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2",
+    "bytes": 834284
+  },
+  {
+    "output": "02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.3mf",
+    "source": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.3mf",
+    "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4",
+    "bytes": 202443
+  },
+  {
+    "output": "02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.step",
+    "source": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.step",
+    "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6",
+    "bytes": 168399
+  },
+  {
+    "output": "03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.stl",
+    "source": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.stl",
+    "sha256": "6f7bc5d06ae88250b65654d2701b1bdd65a31f94a9dabd0354b47094bb5a0991",
+    "bytes": 716084
+  },
+  {
+    "output": "03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.3mf",
+    "source": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.3mf",
+    "sha256": "a034ee4b3694cbb34dd1abd1c584a67d26cb17aaf6dde90e3b19bff5a764fa85",
+    "bytes": 168902
+  },
+  {
+    "output": "03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.step",
+    "source": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D12_mm.step",
+    "sha256": "f3e52c98bee446015d23991b32e80957e6978c9bb9ff157713748f0629aaecd3",
+    "bytes": 122491
+  }
+]

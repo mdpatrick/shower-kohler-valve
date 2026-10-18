@@ -1,81 +1,75 @@
 [
   {
-    "title": "Both relieved-collar sizes: original + small bed",
-    "path": "deliverables/current/fabrication/FT02/formwork-small-bed/RF04_ORIGINAL_AND_SMALL_BED_PRINT_PACKAGE.zip",
+    "title": "Current print package: both selected deep forms + optional short",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SELECTED_DEEP_FORMS_AND_OPTIONAL_SHORT.zip",
     "category": "print",
-    "description": "RF04 alternate plus unchanged RF03 relieved form, each in STL/3MF/STEP with guide. Choose one size."
+    "description": "PS01 owner selection. Primary \u00d8240 and \u00d8192.55, both 24 mm relieved. Separate D12 backup only."
   },
   {
-    "title": "Small-bed form · 3MF",
-    "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.3mf",
+    "title": "Current selected-form print guide",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/PRINT_THIS_GUIDE.pdf",
     "category": "print",
-    "description": "192.55 mm face; 203 mm usable bed with brim. Same 24 mm relieved collar and 12 × 8 mm slots."
+    "description": "Two-page illustrated handoff with primary/optional choices, filenames, dimensions, depth explanation and settings."
   },
   {
-    "title": "Small-bed form · STL",
-    "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.stl",
+    "title": "Primary original deep \u00b7 3MF",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.3mf",
     "category": "print",
-    "description": "Same RF04 small form; millimeters, 100% scale, pre-oriented."
+    "description": "240 \u00d7 240 \u00d7 32 mm; 24 mm relieved collar; 250 mm usable bed with brim. Millimeters, 100% scale."
   },
   {
-    "title": "Small-bed form · STEP",
-    "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/SMALL_RF04/RF04_SMALL_192_55_D24_RELIEVED_mm.step",
+    "title": "Primary original deep \u00b7 STL",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.stl",
     "category": "print",
-    "description": "One isolated CAD solid; editable alternative to the same print."
+    "description": "240 \u00d7 240 \u00d7 32 mm; 24 mm relieved collar; 250 mm usable bed with brim. Millimeters, 100% scale."
   },
   {
-    "title": "Small-bed comparison and print guide",
-    "path": "deliverables/current/fabrication/FT02/formwork-small-bed/SEND_TO_PRINTER/PRINT_GUIDE.pdf",
+    "title": "Primary original deep \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.step",
     "category": "print",
-    "description": "Two pages: original versus smaller footprint, slicer settings and repair-guidance limits."
+    "description": "240 \u00d7 240 \u00d7 32 mm; 24 mm relieved collar; 250 mm usable bed with brim. Editable CAD; same part."
   },
   {
-    "title": "Complete friend print package",
-    "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_FRIEND_PRINT_PACKAGE.zip",
+    "title": "Primary small deep \u00b7 3MF",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.3mf",
     "category": "print",
-    "description": "RF03 · Default D12 plus optional deeper alternative, instructions and CAD. Print one form."
+    "description": "192.55 \u00d7 192.55 \u00d7 32 mm; same 24 mm relieved collar; 203 mm usable bed with brim. Millimeters, 100% scale."
   },
   {
-    "title": "Default form · 3MF",
-    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.3mf",
+    "title": "Primary small deep \u00b7 STL",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.stl",
     "category": "print",
-    "description": "RF03 D12 · Geometry only, millimeter units. Use your printer profile."
+    "description": "192.55 \u00d7 192.55 \u00d7 32 mm; same 24 mm relieved collar; 203 mm usable bed with brim. Millimeters, 100% scale."
   },
   {
-    "title": "Default form · STL",
-    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_ONE_RF03_D12.stl",
+    "title": "Primary small deep \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.step",
     "category": "print",
-    "description": "Same RF03 D12 part as the 3MF. Interpret STL units as millimeters."
+    "description": "192.55 \u00d7 192.55 \u00d7 32 mm; same 24 mm relieved collar; 203 mm usable bed with brim. Editable CAD; same part."
   },
   {
-    "title": "Print guide",
-    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/PRINT_GUIDE.pdf",
+    "title": "Optional short backup \u00b7 3MF",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.3mf",
     "category": "print",
-    "description": "Three-page handoff with orientation, bed size, settings and use checks."
+    "description": "240 \u00d7 240 \u00d7 20 mm; 12 mm collar. Optional only, not the default. Millimeters, 100% scale."
   },
   {
-    "title": "Editable default form · STEP",
-    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/CAD_REFERENCE/RF03_D12_mm.step",
+    "title": "Optional short backup \u00b7 STL",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.stl",
     "category": "print",
-    "description": "One isolated RF03 D12 solid in print orientation, millimeters."
+    "description": "240 \u00d7 240 \u00d7 20 mm; 12 mm collar. Optional only, not the default. Millimeters, 100% scale."
   },
   {
-    "title": "Optional deeper form · 3MF",
-    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.3mf",
+    "title": "Optional short backup \u00b7 STEP",
+    "path": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.step",
     "category": "print",
-    "description": "Alternative only: 24 mm maximum depth with rear reliefs, 12 mm continuous collar."
-  },
-  {
-    "title": "Optional deeper form · STL",
-    "path": "deliverables/current/fabrication/FT02/formwork-print/SEND_TO_PRINTER/OPTIONAL_DEEPER/PRINT_INSTEAD_RF03_D24_RELIEVED.stl",
-    "category": "print",
-    "description": "Same optional deeper part. Do not print this in addition to the default unless chosen."
+    "description": "240 \u00d7 240 \u00d7 20 mm; 12 mm collar. Optional only, not the default. Editable CAD; same part."
   },
   {
     "title": "Print cost estimate",
     "path": "deliverables/current/fabrication/FT02/formwork-print/cost_estimate.json",
     "category": "print",
-    "description": "Dated estimate and basis for the suggested $75 thank-you budget."
+    "description": "Historical $75 planning allowance for one selected print plus one retry; not a quote for printing every version."
   },
   {
     "title": "Acrylic plate pair package",
@@ -90,25 +84,25 @@
     "description": "Alternative FT02 pair, 1.52 mm #4 brushed 304. Safe-edge finishing remains necessary."
   },
   {
-    "title": "Acrylic main · STEP",
+    "title": "Acrylic main \u00b7 STEP",
     "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1500_FIT_TRIAL.step",
     "category": "plates",
     "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
   },
   {
-    "title": "Acrylic diverter · STEP",
+    "title": "Acrylic diverter \u00b7 STEP",
     "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1500_FIT_TRIAL.step",
     "category": "plates",
     "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
   },
   {
-    "title": "Stainless main · STEP",
+    "title": "Stainless main \u00b7 STEP",
     "path": "deliverables/current/fabrication/FT02/cad/FT02_MAIN_220_T1520_FIT_TRIAL.step",
     "category": "plates",
     "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
   },
   {
-    "title": "Stainless diverter · STEP",
+    "title": "Stainless diverter \u00b7 STEP",
     "path": "deliverables/current/fabrication/FT02/cad/FT02_DIV_124_T1520_FIT_TRIAL.step",
     "category": "plates",
     "description": "One isolated custom plate solid. Quote / sacrificial dry fit only; no wall assembly."
@@ -165,7 +159,7 @@
     "title": "RF03 print-form Blender views",
     "path": "deliverables/current/fabrication/FT02/formwork-print/RF03_print_forms.blend",
     "category": "studies",
-    "description": "CAD-only default and optional forms. Geometry reference, not a printer file."
+    "description": "Reference views of deep and short forms; current owner selection is PS01. Not a printer file."
   },
   {
     "title": "Main three-scene Blender file",
@@ -238,5 +232,11 @@
     "path": "data/raw/polycam/plates-side-2-polycam.zip",
     "category": "scans",
     "description": "Secondary reflective-object scan; known distortion. Original ZIP bytes."
+  },
+  {
+    "title": "Earlier RF03 handoff (historical selection)",
+    "path": "deliverables/current/fabrication/FT02/formwork-print/index.html",
+    "category": "studies",
+    "description": "Preserved history. Its D12-default wording is superseded by PS01: both deeper relieved designs are primary."
   }
 ]

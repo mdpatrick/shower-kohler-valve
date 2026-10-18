@@ -1,0 +1,118 @@
+{
+  "date": "2026-10-17",
+  "revision": "PS01",
+  "owner_direction": "Both deeper relieved forms are primary: original face and halved minimum outer-face overhang. Separate 12 mm collar is optional. Update existing public Site and MASV packages.",
+  "selection": "canon/formwork_selection.json",
+  "geometry": "Unchanged. Nine STL/3MF/STEP files are renamed byte-identical copies of previously checked RF03/RF04 geometry.",
+  "masv": {
+    "password_required": false,
+    "download_limit_per_link": 25,
+    "expiry_date_shown_in_desktop_app": "2026-10-27",
+    "unlimited_storage": false,
+    "scope": "Both primary 24 mm relieved RF03/RF04 print forms, separate optional short D12, previews and current PS01 print guide only.",
+    "small": "https://get.massive.io/01M56NWY5W2M205NAV31BTGPHY?secret=RJFecfJoaCeMNREp",
+    "original": "https://get.massive.app/01M55RBZD1EAP0RZXA8GEPEFKR?secret=OGzYfpmfQJsUwZee&lang=system",
+    "both": "https://get.massive.io/01M56P5XRRYQNG479H7RH72RQG?secret=SsYSxOvnDyhojNBs",
+    "link_tokens": "The secret query parameters are intentional public recipient-link tokens, not account credentials. Keep each complete URL intact.",
+    "selection_revision": "PS01",
+    "previous_packages_record": "docs/decisions/masv_print_sharing_2026-10-17.json",
+    "package_ids": {
+      "original": "01M55RBYP9324X9HJ94A4JH3DA",
+      "small": "01M56NWXNBS4DHZ5DCJJXE5B6P",
+      "both": "01M56P5XD8XN9TDXP45XHCG9Q3"
+    },
+    "expiry_evidence": "Original package detail shows October 27; new small and combined transfers set to 10 days, uploaded October 17 local time."
+  },
+  "upload_manifest": [
+    {
+      "path": "build/masv_selected_deep/01_PRIMARY_ORIGINAL_DEEP_240/PREVIEW.png",
+      "bytes": 1650349,
+      "sha256": "467891233440cf7c4bb04bd58e60cc73c2d6b71138cf8084b7bd2bb43f9db5b1"
+    },
+    {
+      "path": "build/masv_selected_deep/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.3mf",
+      "bytes": 200926,
+      "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb"
+    },
+    {
+      "path": "build/masv_selected_deep/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.step",
+      "bytes": 168147,
+      "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7"
+    },
+    {
+      "path": "build/masv_selected_deep/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.stl",
+      "bytes": 834684,
+      "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+    },
+    {
+      "path": "build/masv_selected_deep/01_PRIMARY_ORIGINAL_DEEP_240/PRINT_THIS_GUIDE.pdf",
+      "bytes": 2266809,
+      "sha256": "7c4f7d84c545f05023ab99e7ed8f9f3d83dad430d4747d5588cbbe9c99ef20ad"
+    },
+    {
+      "path": "build/masv_selected_deep/01_PRIMARY_ORIGINAL_DEEP_240/READ_ME_FIRST.txt",
+      "bytes": 535,
+      "sha256": "07fed6a3d73d6e09f970517c2f2fcffbe2a19898b69e9edee37eb98a91ea668e"
+    },
+    {
+      "path": "build/masv_selected_deep/02_PRIMARY_SMALL_DEEP_192_55/PREVIEW.png",
+      "bytes": 1595619,
+      "sha256": "5b47e46a0dbe5cb9164e548791cd5607075ddbe0c371fb05f41f9efed226069e"
+    },
+    {
+      "path": "build/masv_selected_deep/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.3mf",
+      "bytes": 202443,
+      "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4"
+    },
+    {
+      "path": "build/masv_selected_deep/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.step",
+      "bytes": 168399,
+      "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6"
+    },
+    {
+      "path": "build/masv_selected_deep/02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.stl",
+      "bytes": 834284,
+      "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2"
+    },
+    {
+      "path": "build/masv_selected_deep/02_PRIMARY_SMALL_DEEP_192_55/PRINT_THIS_GUIDE.pdf",
+      "bytes": 2266809,
+      "sha256": "7c4f7d84c545f05023ab99e7ed8f9f3d83dad430d4747d5588cbbe9c99ef20ad"
+    },
+    {
+      "path": "build/masv_selected_deep/02_PRIMARY_SMALL_DEEP_192_55/READ_ME_FIRST.txt",
+      "bytes": 546,
+      "sha256": "6b5f0b9483fa880b3e5c5fe94918cfe2f983dd5993a90e597f68f7feeabcebc3"
+    },
+    {
+      "path": "build/masv_selected_deep/03_CURRENT_BOTH_DEEP_AND_OPTIONAL_SHORT/00_START_HERE.txt",
+      "bytes": 788,
+      "sha256": "30ae342e6eebcb7421c6cef514f6888540b92942d6d8c9dc56d25a62e05aaabd"
+    },
+    {
+      "path": "build/masv_selected_deep/03_CURRENT_BOTH_DEEP_AND_OPTIONAL_SHORT/COMPARE_PRIMARY_FORMS.png",
+      "bytes": 1724683,
+      "sha256": "e16992115cf13c87a113ecf53fc16c982b3732fe1a427d571f53d75efe5fdea4"
+    },
+    {
+      "path": "build/masv_selected_deep/03_CURRENT_BOTH_DEEP_AND_OPTIONAL_SHORT/PRINT_THIS_GUIDE.pdf",
+      "bytes": 2266809,
+      "sha256": "7c4f7d84c545f05023ab99e7ed8f9f3d83dad430d4747d5588cbbe9c99ef20ad"
+    },
+    {
+      "path": "build/masv_selected_deep/03_CURRENT_BOTH_DEEP_AND_OPTIONAL_SHORT/SELECTED_DEEP_FORMS_AND_OPTIONAL_SHORT.zip",
+      "bytes": 9735960,
+      "sha256": "97f647fa3e977de81e4eb594142aee730f96166ff6be18b1e4f2077bbce693b5"
+    }
+  ],
+  "verification": {
+    "uploads": "Original completed in MASV Desktop; small and combined showed successful Send completion in MASV web.",
+    "repeat_downloads": "25 maximum per link. Original confirmed in package recipient settings; small and combined configured before Send.",
+    "password": "No download password. No recipient email messages sent.",
+    "download_tests": "Not performed, as requested by the owner.",
+    "local_packages": "Local ZIP CRC checks passed; nine geometry file hashes matched source.",
+    "guide": "Two PDF pages rendered and visually inspected.",
+    "publication": "Recorded separately after deployment."
+  },
+  "history": "Earlier public packages remain historical. Site links point to PS01 packages; no deletion requested."
+}

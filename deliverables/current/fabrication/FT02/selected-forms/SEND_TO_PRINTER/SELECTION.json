@@ -1,0 +1,19 @@
+{
+  "revision": "PS01",
+  "date": "2026-10-17",
+  "status": "OWNER_SELECTED_TEMPORARY_PRINT_FORMS",
+  "owner_direction": "Both deeper relieved versions are the decisive choices: the full face and the reduced outer face for a smaller printer bed. The shorter 12 mm collar may remain optional.",
+  "primary": [
+    "RF03_D24_RELIEVED_240",
+    "RF04_D24_RELIEVED_192_55"
+  ],
+  "optional": [
+    "RF03_D12_240"
+  ],
+  "depth_explanation": "Both primary forms have a 24 mm maximum collar depth and 32 mm overall height including the 8 mm face. Each retains a continuous front 12 mm molding band, with rear clearance reliefs above it. This is different from the optional short D12 model, which has a 12 mm collar and 20 mm overall height.",
+  "small_face_explanation": "The 192.55 mm diameter halves the minimum radial face width outside the unchanged collar, from 47.45 to 23.725 mm; it does not halve the complete diameter.",
+  "handoff": "Deliver both primary designs. Print quantities are agreed at the printer; formats are alternatives, not separate objects. Do not substitute the optional short form by default.",
+  "geometry_change": false,
+  "historical_selection": "Older RF03 recommended/D12 and OPTIONAL_DEEPER/PRINT_INSTEAD labels describe the earlier selection only. This record governs the current printer handoff.",
+  "release": "Temporary tooling only; existing physical seating, bracing, release and repair checks still apply. No permanent installation release."
+}

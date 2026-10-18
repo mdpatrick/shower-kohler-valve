@@ -1,0 +1,102 @@
+[
+  {
+    "path": "00_START_HERE.txt",
+    "bytes": 788,
+    "sha256": "30ae342e6eebcb7421c6cef514f6888540b92942d6d8c9dc56d25a62e05aaabd"
+  },
+  {
+    "path": "01_PRIMARY_ORIGINAL_DEEP_240/PREVIEW.png",
+    "bytes": 1650349,
+    "sha256": "467891233440cf7c4bb04bd58e60cc73c2d6b71138cf8084b7bd2bb43f9db5b1"
+  },
+  {
+    "path": "01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.3mf",
+    "bytes": 200926,
+    "sha256": "16ca1054e1a43e8d9396d341c217a776094e6e645bb1689b5d4b59649dd508eb"
+  },
+  {
+    "path": "01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.step",
+    "bytes": 168147,
+    "sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7"
+  },
+  {
+    "path": "01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.stl",
+    "bytes": 834684,
+    "sha256": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+  },
+  {
+    "path": "01_PRIMARY_ORIGINAL_DEEP_240/READ_ME_FIRST.txt",
+    "bytes": 535,
+    "sha256": "07fed6a3d73d6e09f970517c2f2fcffbe2a19898b69e9edee37eb98a91ea668e"
+  },
+  {
+    "path": "02_PRIMARY_SMALL_DEEP_192_55/PREVIEW.png",
+    "bytes": 1595619,
+    "sha256": "5b47e46a0dbe5cb9164e548791cd5607075ddbe0c371fb05f41f9efed226069e"
+  },
+  {
+    "path": "02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.3mf",
+    "bytes": 202443,
+    "sha256": "8a0177d1c81a6ef4a61c25f80c6ec8d3e4e39de2d56e6a41e9f1d3f546a36ea4"
+  },
+  {
+    "path": "02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.step",
+    "bytes": 168399,
+    "sha256": "80592eacfaeab7039340ac1c6a40f1d15b78918d3dbe6143c88a6865cf329fa6"
+  },
+  {
+    "path": "02_PRIMARY_SMALL_DEEP_192_55/PRIMARY_SMALL_192_55_D24_RELIEVED_mm.stl",
+    "bytes": 834284,
+    "sha256": "a0420ea176242c0085bea9b2c5940ff8e9e3de3d5c32cf0bfb3599de327e3ae2"
+  },
+  {
+    "path": "02_PRIMARY_SMALL_DEEP_192_55/READ_ME_FIRST.txt",
+    "bytes": 546,
+    "sha256": "6b5f0b9483fa880b3e5c5fe94918cfe2f983dd5993a90e597f68f7feeabcebc3"
+  },
+  {
+    "path": "03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.3mf",
+    "bytes": 168902,
+    "sha256": "a034ee4b3694cbb34dd1abd1c584a67d26cb17aaf6dde90e3b19bff5a764fa85"
+  },
+  {
+    "path": "03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.step",
+    "bytes": 122491,
+    "sha256": "f3e52c98bee446015d23991b32e80957e6978c9bb9ff157713748f0629aaecd3"
+  },
+  {
+    "path": "03_OPTIONAL_SHORT_12MM/OPTIONAL_SHORT_240_D12_mm.stl",
+    "bytes": 716084,
+    "sha256": "6f7bc5d06ae88250b65654d2701b1bdd65a31f94a9dabd0354b47094bb5a0991"
+  },
+  {
+    "path": "03_OPTIONAL_SHORT_12MM/PREVIEW.png",
+    "bytes": 1522338,
+    "sha256": "e351076d1acfce76f07ba37c897e48b478d07a80c0f198a2ac47f2b376958f5d"
+  },
+  {
+    "path": "03_OPTIONAL_SHORT_12MM/READ_ME_FIRST.txt",
+    "bytes": 484,
+    "sha256": "36d1e7a159e2745ff91468eed5cc16c450d3472f2a33ea479d7d9bbcce99f2db"
+  },
+  {
+    "path": "COMPARE_PRIMARY_FORMS.png",
+    "bytes": 1724683,
+    "sha256": "e16992115cf13c87a113ecf53fc16c982b3732fe1a427d571f53d75efe5fdea4"
+  },
+  {
+    "path": "GEOMETRY_SOURCES.json",
+    "bytes": 2900,
+    "sha256": "c538e6493ca7530060b5ac895fab06eb2aecb268e6165bd5ac419794fbc5f1c9"
+  },
+  {
+    "path": "PRINT_THIS_GUIDE.pdf",
+    "bytes": 2266809,
+    "sha256": "7c4f7d84c545f05023ab99e7ed8f9f3d83dad430d4747d5588cbbe9c99ef20ad"
+  },
+  {
+    "path": "SELECTION.json",
+    "bytes": 1478,
+    "sha256": "bd372a44df05cf5e3d316c2fb2b7ad95e243cd87185d4e265365deb5fe3824b7"
+  }
+]

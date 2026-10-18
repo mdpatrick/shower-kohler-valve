@@ -112,7 +112,7 @@ def main():
                     return match.group(0)[0] + new + match.group(0)[-1]
                 text = quoted.sub(replace, text)
                 if path.suffix.lower() == '.html':
-                    nav = '<div style="font:14px/1.5 system-ui;padding:12px 20px;background:#102f3c;color:white"><a style="color:white" href="/">← Project artifact hub</a> · Saved project document · FT02 / RF03 / RF04 current selections are on the hub.</div>'
+                    nav = '<div style="font:14px/1.5 system-ui;padding:12px 20px;background:#102f3c;color:white"><a style="color:white" href="/">← Project artifact hub</a> · Saved project document · Current PS01 print selection: BOTH relieved 24 mm forms are primary; short D12 is optional. Earlier default labels are historical.</div>'
                     if re.search(r'<body\b[^>]*>', text, re.I):
                         text = re.sub(r'(<body\b[^>]*>)', lambda m:m.group(0) + nav, text, count=1, flags=re.I)
                     elif '<main' in text:
