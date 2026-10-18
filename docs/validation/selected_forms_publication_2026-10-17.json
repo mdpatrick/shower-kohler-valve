@@ -1,0 +1,40 @@
+{
+  "date": "2026-10-17",
+  "revision": "PS01",
+  "status": "PASS",
+  "scope": "Current selection packaging, MASV uploads and public Site update. Checked geometry unchanged.",
+  "deployed_url": "https://shower-kohler-artifacts.mdpatrick.chatgpt.site",
+  "audience": "public",
+  "site_project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
+  "deployment_id": "appgdep_6ad4544de44c81918b1cabb31b48b2fb",
+  "saved_version_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d~appgver_7e10187082188191b077257473c57ded",
+  "version_number": 4,
+  "native_deployment_status": "succeeded",
+  "native_deployment_updated_at": "2026-10-18T05:08:50.965605+00:00",
+  "site_source_commit": "1392d4a0e87222f22cdcb736c7c404a8561bec27",
+  "artifact_source_commit": "29059f785febbb1041cd94a818ade0dbdf535134",
+  "hosted_project_files": 270,
+  "linked_large_originals": 4,
+  "checks_executed": {
+    "project_validation": "./project validate --git-objects: PASS; four original scan ZIPs intact.",
+    "geometry": "Nine renamed STL/3MF/STEP files byte-identical to checked RF03/RF04 sources.",
+    "archives": "All four local ZIP CRC checks passed before upload.",
+    "pdf": "Both PS01 guide pages rendered with pdftoppm and visually inspected.",
+    "source_diff": "git diff --cached --check excluding byte-preserved STEP exports: PASS. STEP whitespace retained intentionally to preserve original bytes.",
+    "site_build": "prepare_artifact_site.py succeeded after source commit/push; all copied binary hashes matched.",
+    "visual": "Local primary cards and expanded optional short section inspected; published primary cards observed.",
+    "masv": "Three uploads completed; 25 download limit configured. Original recipient limit confirmed in package detail; small and combined configured before Send.",
+    "download_testing": "Not performed, at owner request. No download links were clicked.",
+    "proof_screenshot": "build/PS01-published-print-page.png (ignored local proof)"
+  },
+  "sharing_record": "docs/decisions/selected_forms_sharing_2026-10-17.json",
+  "prior_publication": "docs/validation/artifact_site_2026-10-17.json",
+  "privacy_reminder": {
+    "date": "2026-10-24",
+    "automation_id": "make-shower-artifact-site-private-again",
+    "unchanged": true
+  },
+  "geometry_changed": false,
+  "physical_fit": "UNRESOLVED",
+  "permanent_installation_release": "NOT GIVEN"
+}
