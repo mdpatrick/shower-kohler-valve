@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-17",
+  "scope": "Owner-requested repair context on existing public Site; no geometry, package or MASV changes.",
+  "status": "PASS",
+  "site_project_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d",
+  "deployed_url": "https://shower-kohler-artifacts.mdpatrick.chatgpt.site/#repair-context",
+  "audience": "public",
+  "source_images": [
+    "deliverables/current/fabrication/FT02/photos/front.png",
+    "deliverables/current/fabrication/FT02/paired_oblique.png"
+  ],
+  "source_image_bytes": "Existing originals reused unchanged; hosted hashes verified by build.",
+  "checks": [
+    "Both original images visually inspected before placement.",
+    "Local section and captions inspected; full images shown with object-fit contain.",
+    "git diff --check passed.",
+    "Site build passed with binary hashes preserved.",
+    "Published section visibly present; no download links tested."
+  ],
+  "site_source_commit": "8666f79ac4b17d3dc649b33826931c9c9522ee1a",
+  "artifact_source_commit": "f5960736ce86627f3cfaf50e216a6915db3d12f6",
+  "saved_version_id": "appgprj_6ad3c2f74a848191bc6054ec1828669d~appgver_5cb4a3e9dfa0819190425bc84c90334a",
+  "version_number": 5,
+  "deployment_id": "appgdep_6ad45620fc608191b8978f373fbf6146",
+  "deployment_status": "succeeded",
+  "deployment_updated_at": "2026-10-18T05:16:29.086010+00:00",
+  "proof_screenshot": "build/repair-context-published.png (ignored local proof)",
+  "geometry_changed": false,
+  "privacy_reminder": "Existing October 24 reminder unchanged."
+}
