@@ -4,6 +4,8 @@
 
 Browse the current print package, plate CAD, installer PDFs, narrated video, design studies and original Polycam downloads without running a local server. The owner made the ChatGPT Site public to anyone with the link on October 17, 2026. A reminder is set for October 24 to restore owner-only access; it does not change access automatically. The GitHub files below remain available separately.
 
+For a friend helping with the print, start with [Why we’re printing this](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/#repair-context): the over-cut wall photo beside the proposed main/diverter escutcheon mockup, with a short explanation of the temporary form’s role.
+
 Quick links: [MASV downloads with images and dimensions](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/#print) · [both relieved-collar sizes](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/formwork-small-bed/index.html) · [current illustrated print guide](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/selected-forms/SEND_TO_PRINTER/PRINT_THIS_GUIDE.pdf) · [current print ZIP](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/selected-forms/SELECTED_DEEP_FORMS_AND_OPTIONAL_SHORT.zip) · [installer PDF](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/artifacts/fabrication/FT02/PLUMBER_START_HERE.pdf) · [search all handoffs](https://shower-kohler-artifacts.mdpatrick.chatgpt.site/#library).
 
 **Current plates: FT02 / R006. Selected print forms: BOTH deeper relieved versions (RF03 Ø240 + RF04 Ø192.55). The short 12 mm collar is optional only.** Start with [START_HERE.md](START_HERE.md) for the selected designs, installation context and unresolved physical checks.

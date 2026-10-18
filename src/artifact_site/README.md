@@ -6,6 +6,8 @@ This is the ChatGPT Site for the current project handoffs. The owner explicitly 
 
 ## Content and reproducibility
 
+The `#repair-context` section shows the existing over-cut wall (`FT02/photos/front.png`) beside the full proposed pair (`FT02/paired_oblique.png`) before the print choices. Both use the existing image bytes and provide full-image links. Captions distinguish the owner’s observed photo from the CAD mockup and explain temporary formwork versus final escutcheons.
+
 Run from the project root:
 
 ```sh
