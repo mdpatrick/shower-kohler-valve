@@ -1,0 +1,76 @@
+{
+  "revision": "RP01-INFO01",
+  "date": "2026-10-19",
+  "mode": "built-in image_gen",
+  "output": "output/imagegen/repair-shopping-infographic-RP01.png",
+  "sha256": "047529e9e766107f1780014803aca76e9fa571cad84f91ced66d31355272ce88",
+  "prompt": "output/imagegen/repair-shopping-infographic-RP01.prompt.txt",
+  "role": "Illustrated shopping reference. Generated layout/product depictions are not new construction or dimensional evidence.",
+  "owner_images": [
+    "owner_front_form_valve_2026-10-19.jpeg",
+    "owner_rear_wall_2026-10-19.jpeg"
+  ],
+  "product_reference_urls": {
+    "cement_all_25lb_reference.jpg": "https://images.thdstatic.com/productImages/e48f678a-708a-4913-897c-a7954e707bb5/svn/rapid-set-cement-02020025-64_600.jpg",
+    "metal_lath.jpg": "https://images.thdstatic.com/productImages/8abfaa29-d9b5-49b2-99b9-a98afd26336c/svn/concrete-accessories-4113145-64_600.jpg",
+    "durock_edgeguard.jpg": "https://images.thdstatic.com/productImages/59fcd99f-dc9d-4d31-9d4f-5add3da9f24f/svn/usg-durock-brand-cement-boards-172954-64_600.jpg",
+    "custom_silicone_bone.jpg": "https://images.thdstatic.com/productImages/38ff5768-0d35-4f9f-8a43-573c05122bdd/svn/custom-building-products-grout-caulk-ccsc382-64_600.jpg"
+  },
+  "product_sources": [
+    {
+      "name": "Rapid Set Cement All 25 lb",
+      "price_usd": 21.97,
+      "quantity_shown": 46,
+      "aisle": "25",
+      "bay": "004",
+      "store_sku": "384372",
+      "model": "02020025",
+      "role": "Conditional formed repair material on suitable sound cementitious substrate",
+      "url": "https://www.homedepot.com/p/Rapid-Set-25-lbs-Cement-All-Multi-Purpose-Construction-Material-02020025/202188462"
+    },
+    {
+      "name": "27 x 96 in. 2.5 galvanized metal lath",
+      "price_usd": 15.31,
+      "quantity_shown": 132,
+      "aisle": "25",
+      "bay": "001",
+      "store_sku": "722000",
+      "model": "4113145",
+      "role": "Optional keyed reinforcement/support only when anchored and properly embedded; not waterproofing",
+      "url": "https://www.homedepot.com/p/27-in-x-96-in-2-5-Metal-Lath-Galvanized-4113145/312485681"
+    },
+    {
+      "name": "USG Durock EdgeGuard 1/2 in. x 3 x 5 ft",
+      "price_usd": 15.85,
+      "quantity_shown": 95,
+      "aisle": "24",
+      "bay": "018",
+      "store_sku": "1002991354",
+      "model": "172954",
+      "role": "Conditional permanent backer attached to suitable framing; not waterproofing",
+      "url": "https://www.homedepot.com/p/USG-Durock-Brand-1-2-in-x-3-ft-x-5-ft-Cement-Board-with-EdgeGuard-172954/304163165"
+    },
+    {
+      "name": "Custom Commercial 100% Silicone #382 Bone, 10.1 oz",
+      "price_usd": 18.97,
+      "quantity_shown": 24,
+      "aisle": "06",
+      "bay": "004",
+      "store_sku": "1001480767",
+      "model": "CCSC382",
+      "role": "Candidate accessible plate-to-stone perimeter seal; actual adhesion/staining/joint design required",
+      "url": "https://www.homedepot.com/p/Custom-Building-Products-Commercial-382-Bone-10-1-oz-Silicone-Caulk-CCSC382/202753960"
+    }
+  ],
+  "input_note": "Both owner photos plus Cement All, Durock and silicone product images were supplied to the image tool. Lath was described from the visually reviewed product photo because the tool accepts five reference paths.",
+  "validation": [
+    "Visually inspected generated output. All four SKU numbers match source product listings and RP01 record.",
+    "Aisles 6, 24 and 25 present; Home Depot Encinitas present; both owner photos and four product depictions present.",
+    "No bays, prices or RedGard; backing/lath are conditional; stock date is visible."
+  ],
+  "unchanged": [
+    "RF05 CAD",
+    "FT02 metal CAD",
+    "physical fit and water-test status"
+  ]
+}

@@ -1,0 +1,54 @@
+Use case: infographic-diagram
+Asset type: A polished English shopping infographic for a homeowner and repairer, portrait, high resolution, readable on a phone and printed on a page.
+Primary request: Create one complete infographic using the supplied real project photos and recognizable product pictures. This is a shopping reference, not an advertisement or a technical construction section.
+Input images, in order:
+1. Owner's FRONT photo: travertine wall, brass Kohler valve and white temporary printed repair form. Use as a prominent photographic insert. Preserve the actual hardware and form, with no invented repairs.
+2. Owner's REAR-access photo: close view of brass plumbing and broken wall edge. Use as a smaller photographic insert beside the front photo. Preserve the actual image content.
+3. Product reference: Rapid Set Cement All 25 LB white-and-blue BOX with red oval Rapid Set logo. Depict this actual box, not a bag.
+4. Product reference: gray USG DUROCK Cement Board with EdgeGuard panel with printed branding. Depict this board.
+5. Product reference: CUSTOM Commercial 100% Silicone cartridge, purple band, green label, white nozzle, black CUSTOM base. Depict this actual cartridge with #382 Bone identified by the adjacent text.
+
+Additional product picture: depict an unbranded flat rectangular sheet of silver galvanized expanded metal lath, a fine stretched diamond mesh with gently curved edges, photographed at a slight angle against white. This was visually checked against Home Depot SKU 722000; do not add invented branding.
+
+Composition: Clean white page, restrained Home Depot orange aisle badges, dark charcoal type, spacious editorial grid. At top a generous heading and orange store banner. Then a horizontal photo strip using the two supplied owner photographs, front view dominant, rear view inset. Below, a 2-by-2 grid of product cards, each with a large realistic product image, bold aisle marker, clear product name, size, and large accurately typeset SKU number. Product images must be clearly distinguishable. Do not allow text on top of the photos. Make all four SKU numbers exceptionally readable. Use ample padding. Small concise footer only.
+
+Text must appear exactly, with sensible line breaks:
+Main heading: "These are the products you might need from Home Depot to repair the shower wall."
+Store banner: "Home Depot Encinitas"
+Store line: "1001 N El Camino Real • Store #0660"
+Front photo caption: "Your wall and valve"
+Rear photo caption: "Rear access"
+
+Card 1:
+"Aisle 25"
+"Rapid Set Cement All"
+"25 lb box"
+"SKU 384372"
+"Cement-based repair fill"
+
+Card 2:
+"Aisle 25"
+"Galvanized Metal Lath"
+"27 × 96 in. • 2.5"
+"SKU 722000"
+"If needed: anchored mortar reinforcement"
+
+Card 3:
+"Aisle 24"
+"USG Durock EdgeGuard"
+"½ in. × 3 ft. × 5 ft."
+"SKU 1002991354"
+"If needed: permanent backing"
+
+Card 4:
+"Aisle 6"
+"Custom 100% Silicone"
+"#382 Bone • 10.1 oz"
+"SKU 1001480767"
+"Plate-to-stone perimeter seal"
+
+Footer:
+"Confirm the backing method before buying lath or board. Follow the repair guide for support, sealing and cure."
+"Stock and aisles checked Oct. 19, 2026 • Availability may change."
+
+Constraints: No bay numbers. No RedGard. No prices. No extra products or invented quantities. No claim that mortar, lath or cement board alone waterproofs the wall. Keep the exact digits in every SKU. Preserve original project photos as photographic inserts rather than turning them into drawings. Faithful product appearance from references; SKU labels, not tiny package text, are authoritative. No official-endorsement claims.
