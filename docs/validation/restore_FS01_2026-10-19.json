@@ -1,0 +1,23 @@
+{
+  "revision": "FS01",
+  "date": "2026-10-19",
+  "status": "PASS_CLEAN_CLONE_AND_INCREMENTAL_BUNDLE_RECOVERY",
+  "base_commit": "fc5d744bfeeabd6f5533ce6bbf3e20d723e0681d",
+  "assessed_commit": "5fd365ae9a6b8d4d9899f040ad59c883c7d3082f",
+  "base_clone": "Local --no-hardlinks clone made before the new evidence was committed; independent object files. New ZIP and Blender blobs verified absent before bundle fetch.",
+  "bundle_type": "Incremental, explicitly requires base commit/history; not a standalone full-project bundle.",
+  "bundle_sha256": "84cdbd29a708b6ac593bf3b3b4a0d36df6328caf1fa49bed66a8dfc6ab8dacaa",
+  "bundle_bytes": 80679748,
+  "restored_input_ids": [
+    "SCAN-WALL",
+    "SCAN-PLATE-1",
+    "SCAN-PLATE-2",
+    "SCAN-INNER-ATTACHED",
+    "SCAN-FORMWORK"
+  ],
+  "restored_FS01_artifacts_checked": 16,
+  "clean_recovered_worktree": true,
+  "primary_worktree_not_reset": true,
+  "off_machine_backup": "This local recovery test is not an off-machine backup; GitHub push verified separately.",
+  "clean_clone_analysis_rebuild": "Fresh archive extraction and analysis reproduced byte-identical analysis.json using repository inputs, with no Downloads or old cache."
+}
