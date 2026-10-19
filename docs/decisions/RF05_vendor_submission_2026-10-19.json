@@ -2,7 +2,7 @@
   "id": "RF05-VENDOR-SUBMISSION-01",
   "date": "2026-10-19",
   "owner_request": "Update the sacrificial calibration model if needed; otherwise submit it immediately to the previously used RentMyPrinter vendor.",
-  "authorization": "CORRECTED: The owner intended submission through RentMyPrinter's website. The agent incorrectly inferred permission to email; the first email was not approved. See docs/decisions/communication_approval_2026-10-19.json. No payment or purchase terms were accepted.",
+  "authorization": "CORRECTED: The owner intended submission through RentMyPrinter's website. The agent incorrectly inferred permission to email; the first email was not approved. See docs/decisions/communication_approval_2026-10-19.json. The owner subsequently explicitly approved Submit Print Request, including the $81.23 estimate and site Terms. Website submission confirmed; no payment taken. See docs/validation/RF05_website_request_2026-10-19.json.",
   "decision": "No geometry change needed. Retain the checked RF05 upper round 6.5 mm and lower diagonal 9 x 6.5 mm locators, with the original collar and tab bodies.",
   "selected_for_submission": {
     "quantity": 1,
