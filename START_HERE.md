@@ -1,5 +1,7 @@
 # Shower escutcheon project — FT02 / R006
 
+**Spanish shopping infographic:** [Materiales para la reparación — Home Depot Encinitas](output/imagegen/repair-shopping-infographic-RP01-ES.png). Same four candidates, SKU numbers and aisle locations; English original retained. [Spanish localization prompt](output/imagegen/repair-shopping-infographic-RP01-ES.prompt.txt).
+
 **RP01 shopping infographic:** [Photo-based Home Depot Encinitas shopping reference](output/imagegen/repair-shopping-infographic-RP01.png), generated with imagegen using the owner's current front/rear photos and product references. Includes four product depictions, SKUs and Aisles 6, 24 and 25; no bay numbers. [Prompt](output/imagegen/repair-shopping-infographic-RP01.prompt.txt) and [source record](data/evidence/repair-RP01/shopping_refs/sources.json). Shopping aid only; engineering and physical-check status unchanged.
 
 **October 19 — rear-access wall repair guide (RP01):** [English illustrated guide](output/pdf/Shower_Wall_Repair_Guide_EN_RP01.pdf) covers permanent backing/lath, formed cementitious infill, release of the relieved collar, the smooth custom-plate gasket landing, separate spray seals, cure and final checks. It includes live Encinitas Home Depot stock/aisle/prices checked October 19. Form fit is an owner-requested assumption, not a recorded pass; hidden membrane continuity and the site support/seal detail still need confirmation. [Research and stock record](docs/research/rear_wall_repair_RP01.json). Rebuild `./project prepare-repair-guide`; no form/metal CAD changes.

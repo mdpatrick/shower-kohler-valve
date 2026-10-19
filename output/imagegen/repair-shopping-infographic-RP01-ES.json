@@ -1,0 +1,20 @@
+{
+  "revision": "RP01-INFO01-ES",
+  "date": "2026-10-19",
+  "language": "Spanish",
+  "mode": "built-in image_gen text-localization",
+  "input": "output/imagegen/repair-shopping-infographic-RP01.png",
+  "output": "output/imagegen/repair-shopping-infographic-RP01-ES.png",
+  "prompt": "output/imagegen/repair-shopping-infographic-RP01-ES.prompt.txt",
+  "sha256": "c3a56dc22c683fc304dd42762855887d9e9fa1fece34bf61f275accb6f2cfdf0",
+  "validation": "Visually checked Spanish heading, captions, Pasillo 25/25/24/6, all four SKU numbers, dimensions, conditional support notes and dated stock footer. English companion retained.",
+  "unchanged": [
+    "SKU 384372",
+    "SKU 722000",
+    "SKU 1002991354",
+    "SKU 1001480767",
+    "Home Depot Encinitas #0660",
+    "Engineering and physical-check status"
+  ],
+  "limitations": "Generated shopping image; packaging fine print and photographs are not dimensional or construction evidence."
+}

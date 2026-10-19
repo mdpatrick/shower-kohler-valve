@@ -1,0 +1,45 @@
+Use case: text-localization
+Edit target: the supplied English shopping infographic. Create a Spanish edition by changing only the infographic's editorial text.
+Preserve the same portrait layout, orange badges, white background, Home Depot logo, store name, photographic inserts, four product pictures, card order, all SKU digits and aisle numbers. Do not redraw or alter the wall, valve, printed form, or product packaging. Preserve the English words printed on actual product packaging and all brand names. Allow small typography adjustments and line wraps so Spanish is readable and nothing is cropped. No new products, prices, bay numbers, quantities or instructions.
+
+Replace the editorial text with the following exact Spanish copy:
+
+Heading: "Estos son los productos que podrías necesitar de Home Depot para reparar la pared de la ducha."
+Store banner: "Home Depot Encinitas"
+Address line: "1001 N El Camino Real • Tienda #0660"
+Front photo caption: "Tu pared y válvula"
+Rear photo caption: "Acceso por detrás"
+
+Upper-left product card:
+"Pasillo 25"
+"Rapid Set Cement All"
+"Caja de 25 lb"
+"SKU 384372"
+"Relleno de reparación a base de cemento"
+
+Upper-right product card:
+"Pasillo 25"
+"Malla metálica galvanizada"
+"27 × 96 pulg. • 2.5"
+"SKU 722000"
+"Si hace falta: refuerzo anclado para mortero"
+
+Lower-left product card:
+"Pasillo 24"
+"USG Durock EdgeGuard"
+"½ pulg. × 3 pies × 5 pies"
+"SKU 1002991354"
+"Si hace falta: soporte permanente"
+
+Lower-right product card:
+"Pasillo 6"
+"Custom 100% Silicone"
+"#382 Bone • 10.1 oz"
+"SKU 1001480767"
+"Sellado perimetral entre placa y piedra"
+
+Footer:
+"Confirma el soporte antes de comprar malla o panel. Sigue la guía de reparación para soporte, sellado y curado."
+"Existencias y pasillos verificados el 19 de octubre de 2026 • La disponibilidad puede cambiar."
+
+Keep all four SKU labels large and easy to read. Preserve accents, Spanish punctuation and every digit. This is an otherwise identical Spanish companion to the English original.
