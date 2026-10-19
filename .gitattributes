@@ -3,6 +3,7 @@ data/raw/polycam/*.zip -filter -diff -merge -text
 deliverables/**/*.blend -filter -diff -merge -text
 deliverables/**/*.glb -filter -diff -merge -text
 deliverables/**/*.pdf -filter -diff -merge -text
+output/pdf/*.pdf -filter -diff -merge -text
 
 # Preserve downloaded evidence and neutral CAD exports byte-for-byte, including source line endings.
 data/evidence/** -text -diff -merge -filter

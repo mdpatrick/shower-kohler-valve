@@ -1,0 +1,26 @@
+{
+  "revision": "RP01",
+  "date": "2026-10-19",
+  "artifact": "output/pdf/Shower_Wall_Repair_Guide_EN_RP01.pdf",
+  "sha256": "3212e29d422983f91634be0dd52c4127159f9cc76e188f0198a8b88644bb3e2b",
+  "size_bytes": 672585,
+  "page_count": 9,
+  "status": "ENGLISH_PLANNING_HANDOFF_READY_FOR_DISCUSSION_NOT_SITE_APPROVAL",
+  "executed_checks": [
+    "./project prepare-repair-guide completed with required text, page count, nonempty extraction and text-bound checks.",
+    "All nine pages rendered with Poppler at 110 dpi and visually inspected; corrected page 2 section/labels and page 5 access sketch; affected pages rerendered and inspected.",
+    "Final image-only PDF size optimization uses 220 dpi embedded copies. Pages 1, 3 and 4 rerendered and inspected; original source images remain unchanged.",
+    "Final PDF re-opened with pypdf: nine pages and eleven HTTPS link annotations (five shopping products, six manufacturer sources).",
+    "git diff --check passed; command --help checked."
+  ],
+  "research_record": "docs/research/rear_wall_repair_RP01.json",
+  "physical_checks_performed": [],
+  "cad_modified": false,
+  "limitations": [
+    "The next RF05 fit is assumed as requested, not a recorded test.",
+    "Site substrate, support attachment and waterproofing connection remain repairer decisions.",
+    "Product candidates do not constitute manufacturer approval of the custom wall repair.",
+    "Inventory is a dated website snapshot; nothing reserved or bought."
+  ],
+  "communications_sent": false
+}

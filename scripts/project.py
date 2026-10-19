@@ -468,6 +468,7 @@ def main():
     formprint=sub.add_parser('prepare-form-print');formprint.add_argument('--stage',choices=['cad','capture','render','documents','audit'],default='cad')
     smallform=sub.add_parser('prepare-small-bed-form');smallform.add_argument('--stage',choices=['cad','render','documents','audit'],default='cad')
     sub.add_parser('prepare-selected-forms',help='Package owner-selected deeper forms with optional short backup; preserve original geometry')
+    sub.add_parser('prepare-repair-guide',help='RP01 English illustrated rear-access repair guide; no CAD or physical-status changes')
     scanform=sub.add_parser('assess-formwork-scan',help='FS01: compare all three installed scans using the printed form as a separate calibration reference')
     scanform.add_argument('--stage',choices=['all','analysis','render','report','audit'],default='all')
     shaftform=sub.add_parser('assess-tab-shafts',help='FS02/RF05: nut-excluded shaft sections and optional tighter form')
@@ -508,6 +509,8 @@ def main():
         else:run([sys.executable,'src/fabrication/formwork_print.py']+(['--capture'] if args.stage=='capture' else []),'RF03_'+args.stage+'.log')
     elif args.command=='prepare-selected-forms':
         run([sys.executable,'src/fabrication/selected_form_handoff.py'],'PS01_handoff.log')
+    elif args.command=='prepare-repair-guide':
+        run([sys.executable,'src/repair/build_repair_guide.py'])
     elif args.command=='assess-formwork-scan':
         (ROOT/'build').mkdir(exist_ok=True)
         if args.stage in ('all','analysis'):

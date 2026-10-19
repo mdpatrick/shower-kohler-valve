@@ -1,0 +1,48 @@
+{
+  "revision": "RP01",
+  "date": "2026-10-19",
+  "purpose": "English rear-access wall repair discussion and illustrated crew handoff; preserve existing travertine.",
+  "status": "PLANNING_GUIDE_SITE_SUPPORT_AND_WATERPROOFING_DETAIL_TO_BE_CONFIRMED",
+  "owner_assumption": "Assume the next RF05 form fits and centers correctly. This is a scenario, not a recorded physical pass.",
+  "scope": "Local stable support and a shower-spray exclusion detail. No new CAD, owner survey, emails, purchases or physical tests.",
+  "recommendation": "Mechanically supported cementitious infill, formed from the rear, followed by a smooth supported custom plate with a continuous stone-compatible perimeter seal and the retained factory foam/trim. The repair mortar and support are not themselves a waterproof barrier.",
+  "site_decisions": [
+    "Identify sound cementitious substrate and permanent support from rear access; no reliance on crumbly board, stone-edge adhesion or unsupported wire.",
+    "Identify the existing water-management layer and any damaged boundary. Restore a compatible connection if accessible. A local plate seal does not certify restoration of an inaccessible concealed membrane.",
+    "Choose a backing/lath attachment and mortar embedment compatible with the actual available depth, framing, pipes, service access and intended repair product.",
+    "Rehearse the lined form's release, including the rear collar reliefs. Maximum collar depth is not permissible fill depth. Keep repair out of reliefs, tabs, rods and central service cavity.",
+    "Confirm adhesion/nonstaining of the actual stone, sealant and final metal finish, with a workable joint cross-section and curing sequence."
+  ],
+  "stock_checked": {
+    "store": "Home Depot Encinitas #0660",
+    "address": "1001 N El Camino Real, Encinitas CA 92024",
+    "telephone": "760-943-9600",
+    "date_local": "2026-10-19",
+    "approximate_time_local": "15:35-15:51 PDT",
+    "method": "Live product-page UI with Encinitas selected; pickup inventory, price and aisle/bay observed. No cart changes or purchases.",
+    "limitation": "Website inventory snapshot, not reserved or physically counted. Prices before tax; ignore credit-card promotions. Delivery to the owner's ZIP was not checked.",
+    "items": [
+      {"name":"Rapid Set Cement All 25 lb", "price_usd":21.97, "quantity_shown":46, "aisle":"25", "bay":"004", "store_sku":"384372", "model":"02020025", "role":"Conditional formed repair material on suitable sound cementitious substrate", "url":"https://www.homedepot.com/p/Rapid-Set-25-lbs-Cement-All-Multi-Purpose-Construction-Material-02020025/202188462"},
+      {"name":"27 x 96 in. 2.5 galvanized metal lath", "price_usd":15.31, "quantity_shown":132, "aisle":"25", "bay":"001", "store_sku":"722000", "model":"4113145", "role":"Optional keyed reinforcement/support only when anchored and properly embedded; not waterproofing", "url":"https://www.homedepot.com/p/27-in-x-96-in-2-5-Metal-Lath-Galvanized-4113145/312485681"},
+      {"name":"USG Durock EdgeGuard 1/2 in. x 3 x 5 ft", "price_usd":15.85, "quantity_shown":95, "aisle":"24", "bay":"018", "store_sku":"1002991354", "model":"172954", "role":"Conditional permanent backer attached to suitable framing; not waterproofing", "url":"https://www.homedepot.com/p/USG-Durock-Brand-1-2-in-x-3-ft-x-5-ft-Cement-Board-with-EdgeGuard-172954/304163165"},
+      {"name":"Custom Commercial 100% Silicone #382 Bone, 10.1 oz", "price_usd":18.97, "quantity_shown":24, "aisle":"06", "bay":"004", "store_sku":"1001480767", "model":"CCSC382", "role":"Candidate accessible plate-to-stone perimeter seal; actual adhesion/staining/joint design required", "url":"https://www.homedepot.com/p/Custom-Building-Products-Commercial-382-Bone-10-1-oz-Silicone-Caulk-CCSC382/202753960"},
+      {"name":"Custom RedGard liquid membrane, 1 gal", "price_usd":55.97, "quantity_shown":70, "aisle":"06", "bay":"002", "store_sku":"755504", "model":"LQWAF1", "role":"Hold purchase; only with a suitable identified membrane connection and approved protected assembly detail", "url":"https://www.homedepot.com/p/Custom-Building-Products-RedGard-1-Gal-Waterproofing-and-Crack-Prevention-Membrane-LQWAF1/100169081"}
+    ]
+  },
+  "sources": [
+    {"id":"S1", "title":"CTS Cement All product and technical data", "url":"https://www.ctscement.com/datasheet/CEMENT_ALL_Datasheet_DS_024_EN?c=REPAIR+&t=Professionals", "supports":"Formed/vertical repair use, thickness range, clean sound saturated substrate, water mixing, rapid set and minimum one-hour water cure. Does not approve this specific concealed-wall assembly."},
+    {"id":"S2", "title":"ClarkDietrich Diamond Mesh Lath", "url":"https://www.clarkdietrich.com/products/diamond-mesh-lath", "supports":"Expanded galvanized lath as a mechanical plaster base. Not a product-specific approval of Cement All on this wall or certification of the store's unbranded sheet."},
+    {"id":"S3", "title":"USG Durock EdgeGuard installation guide", "url":"https://www.usg.com/content/dam/USG_Marketing_Communications/united_states/product_promotional_materials/finished_assets/usg-durock-cement-board-with-edgeguard-installation-guide-en-CB321650.pdf", "supports":"1/2-inch wall board, framing, appropriate fasteners and joint treatment; not unsupported scrap bridging."},
+    {"id":"S4", "title":"Custom Commercial 100% Silicone, TDS-100, May 29 2026", "url":"https://www.custombuildingproducts.com/product-pdf?id=2028", "local_reference":"data/evidence/repair-RP01/Custom_Silicone_TDS100_2026-05-29.pdf", "supports":"Stone/wet applications, nonstaining test qualification, clean dry surfaces, joint limits and generally 24-hour water protection at 70 F. Actual metal/stone adhesion remains to verify."},
+    {"id":"S5", "title":"Custom RedGard, TDS-104, February 14 2025", "url":"https://www.custombuildingproducts.com/wp-content/uploads/TDS-104-021425.pdf", "supports":"Suitable substrates, unstable/wet substrate exclusions, under-finish use; no universal rear patch or metal-cover detail."},
+    {"id":"S6", "title":"Kohler stacked trim installation, 1041504-2-F, page 7", "url":"https://resources.kohler.com/onlinecatalog/pdf/1041504_2.pdf", "local_reference":"data/evidence/kohler-1041504_2.pdf", "supports":"Inner plate flat, foam covers opening, cover drain at six o'clock; actual trim revision must be applicable."},
+    {"id":"S7", "title":"Home Depot Encinitas store", "url":"https://www.homedepot.com/l/Encinitas/CA/Encinitas/92024/660", "supports":"Store identity/address/contact; live product UI supports stock entries."}
+  ],
+  "physical_checks_performed": [],
+  "inferences": [
+    "The contractor's mention of wire may mean expanded metal lath; his intended method is not known.",
+    "The rear photographs show access and obstructions but do not identify all layers or a continuous waterproof membrane.",
+    "A plate perimeter seal outside damage plus the complete factory gasket is a maintainable local spray barrier concept, not proof of entire-shower waterproofing.",
+    "A framed cementitious backer is preferable to relying on an unsupported mortar lip; exact anchorage and reinforcement cover must be set at the exposed wall."
+  ]
+}
