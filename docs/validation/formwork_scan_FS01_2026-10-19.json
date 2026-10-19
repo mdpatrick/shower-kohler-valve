@@ -1,0 +1,55 @@
+{
+  "revision": "FS01",
+  "date": "2026-10-19",
+  "status": "PASS_ANALYSIS_EXPORT_AND_REPORT_CHECKS",
+  "purpose": "Comparison diagnostic only; no revised manufacturing geometry or physical acceptance.",
+  "executed_commands": [
+    "./project assess-formwork-scan --stage analysis",
+    "./project assess-formwork-scan --stage report",
+    "./project assess-formwork-scan --stage audit",
+    "Blender background rebuild and independent saved-file readback",
+    "Python py_compile for all new modules and project command",
+    "git diff --check"
+  ],
+  "browser_checks": {
+    "url": "http://127.0.0.1:8765/analysis/formwork-scan-FS01/index.html",
+    "all_seven_html_images_loaded": true,
+    "pair_A_B": "108.7 mm scan / 109.8 mm caliper; correct highlighted endpoints",
+    "pair_L_B": "53.7 mm scan / 54.7 mm caliper; both selector groups updated",
+    "visual_review": "Front scan, CAD overlay, comparison table, slot sections and slot-play figure inspected; labels legible.",
+    "image_origins": "Real preserved scans, actual CAD and mathematical schematics; no generated photographic evidence."
+  },
+  "readback": {
+    "status": "PASS_SAVED_FILE_READBACK",
+    "observed_vertices": 353394,
+    "packed_texture_count": 1,
+    "metric_units_and_single_coordinate_conversion_verified": true,
+    "ideal_CAD_collection_hidden_and_separate": true,
+    "primary_scene_not_opened_or_modified": true,
+    "physical_fit_verified": false
+  },
+  "artifacts_sha256": {
+    "scan_front.png": "af507fe22fb6dddf16f31ce34247900d81c4b0c5e324580f872ad4b2b2f40d1f",
+    "with_inner_plate.png": "d94005663a9a4ee7b390cfeef05efe8b221c4875e2fd3daf28b20ba641b610b6",
+    "audit.json": "fb6c1f254622f8c5bf4207aab06fd91fd632159e7771dd3ab180efde9dd77ac3",
+    "index.html": "d64296fc83ecab966a3bf8945383b282d3a8983a41fdbba1b177ec2985344bb0",
+    "formwork_scan_FS01.blend": "b474fbf37747207cdc9d99a35a88971ff2f4396f1825ce3e7f28738242e12e07",
+    "browser_comparison.png": "da1acca46c1ef6bff39aef4bdd2641b630181629f6f94df8da948b5d682cc87e",
+    "form_overlay.png": "853833f7d10a3ff087b11ffda40bf8214bbea240c2cd99de73e8fd54ec38f85d",
+    "scan_oblique.png": "eab5785deac586e9a66c769394984c264de6a4b33aa2cf63d79ea1b40aec8bc1",
+    "slot_resolution.png": "480cf27f5dd2683150b421bdabe1e00ce16833f1a8af5de238727edf4f87fa88",
+    "without_inner_plate.png": "9df7c6feaab6adc1b2464438789e5db3af9701380931cb215be261ae69850434",
+    "blender_check.json": "a839f70e4844bb28ed5dbc4e48e2cbe35ac256c6e8d616b7f3bfc6afb201e204",
+    "comparison.png": "871dd001438ee92019169cb6b1fa2c95d68be6baa2c1f95bf5b6039d57ddde17",
+    "blender_readback.json": "34c9a7529e967d7db7c041857e43aee88b3e2c079699b62a3313ddec5139f595",
+    "slot_play.png": "a8d0a6c74debe196c722b92fc97f14c01b6bc2a77dc74d49637a0114bd2a0578",
+    "measurement_comparison_mm.csv": "185c7910be5dcf08bdeebf70e5812ccf20f222ebf79fa0266e63f27b7353edc9",
+    "analysis.json": "fca244fdf35fa12f8fce1f796351ea45e0995c59cef4e0162be925ef6033890c"
+  },
+  "not_executed": [
+    "Physical seating, insertion/removal, repeated location or water testing",
+    "Tighter-slot manufacturing release",
+    "Global re-registration or local scan warping"
+  ],
+  "owner_measurements_requested": []
+}

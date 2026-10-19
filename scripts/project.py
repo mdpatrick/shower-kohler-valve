@@ -468,6 +468,8 @@ def main():
     formprint=sub.add_parser('prepare-form-print');formprint.add_argument('--stage',choices=['cad','capture','render','documents','audit'],default='cad')
     smallform=sub.add_parser('prepare-small-bed-form');smallform.add_argument('--stage',choices=['cad','render','documents','audit'],default='cad')
     sub.add_parser('prepare-selected-forms',help='Package owner-selected deeper forms with optional short backup; preserve original geometry')
+    scanform=sub.add_parser('assess-formwork-scan',help='FS01: compare all three installed scans using the printed form as a separate calibration reference')
+    scanform.add_argument('--stage',choices=['all','analysis','render','report','audit'],default='all')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -504,6 +506,17 @@ def main():
         else:run([sys.executable,'src/fabrication/formwork_print.py']+(['--capture'] if args.stage=='capture' else []),'RF03_'+args.stage+'.log')
     elif args.command=='prepare-selected-forms':
         run([sys.executable,'src/fabrication/selected_form_handoff.py'],'PS01_handoff.log')
+    elif args.command=='assess-formwork-scan':
+        (ROOT/'build').mkdir(exist_ok=True)
+        if args.stage in ('all','analysis'):
+            run([sys.executable,'src/analysis/formwork_scan.py'],'FS01_analysis.log')
+        if args.stage in ('all','render'):
+            run([BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1','--python','src/blender/formwork_scan.py'],'FS01_render.log')
+            run([BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1','--python','src/blender/verify_formwork_scan.py'],'FS01_readback.log')
+        if args.stage in ('all','report'):
+            run([sys.executable,'src/analysis/formwork_scan_review.py'],'FS01_report.log')
+        if args.stage in ('all','audit'):
+            run([sys.executable,'src/analysis/audit_formwork_scan.py'],'FS01_audit.log')
     elif args.command=='prepare-small-bed-form':
         if args.stage=='render':run([BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1','--python','src/blender/formwork_small_bed.py'],'RF04_render.log')
         elif args.stage=='documents':run([sys.executable,'src/fabrication/formwork_small_bed_handoff.py'],'RF04_documents.log')

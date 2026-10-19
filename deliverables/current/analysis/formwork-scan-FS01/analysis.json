@@ -1,0 +1,788 @@
+{
+  "revision": "FS01",
+  "status": "SCAN_DIAGNOSTIC_NOT_A_TIGHTER_FORM_RELEASE",
+  "assumption": "Treat the printed form as exactly matching CAD. Use it as a dimensional reference; discrepancies on the form are reconstruction/feature-selection effects under this assumption, not evidence of printing error.",
+  "identity_basis": "Broad-face/opening ratio identifies the original 240 mm family, not the 192.55 mm alternate. D24 relieved is the selected supplied design; the hidden skirt depth is not independently identifiable in this capture.",
+  "input_vertices": 353394,
+  "input_triangles": 635538,
+  "uniform_mm_per_raw_unit": 194.97889498614325,
+  "raw_to_face_units": [
+    [
+      0.5683215498795327,
+      -0.0006445483918193722,
+      0.8228062958557721,
+      0.0882623478968142
+    ],
+    [
+      -0.00744780279979702,
+      0.9999546958737785,
+      0.0059275992977457295,
+      -1.6007165122854976
+    ],
+    [
+      -0.8227728399600834,
+      -0.009496881453924917,
+      0.5682910020989852,
+      -0.0793544012637901
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "raw_to_form_diagnostic_mm": [
+    [
+      110.76806025375889,
+      -8.660056703341679,
+      160.2254965214089,
+      21.960574562515284
+    ],
+    [
+      3.3997897558159975,
+      194.77767876910352,
+      8.17721058513495,
+      -315.8157764217081
+    ],
+    [
+      -160.42333916002795,
+      -1.8516914517006777,
+      110.80475161982815,
+      -15.472433470700803
+    ],
+    [
+      0.0,
+      0.0,
+      0.0,
+      1.0
+    ]
+  ],
+  "form_frame": "Origin at outer-rim fitted center projected onto front face. X right/Y up/Z toward shower. Roll from upright opening. No primary registration applied.",
+  "calibration": {
+    "outer_diameter_mm": 240,
+    "nominal_face_section_raw_units": -0.01,
+    "section_sensitivity_raw_units": [
+      -0.005,
+      -0.01,
+      -0.015,
+      -0.02,
+      -0.025,
+      -0.03
+    ],
+    "basis": "Robust circle fit to the complete outer rim section approximately 2 mm behind the fitted front face. The shallower section crosses reconstructed face dips and is not a complete clean rim. Deeper sections test edge blending into the wall, not independent accuracy bounds.",
+    "uniform_scale_only": true,
+    "calipers_used_for_new_scale": false,
+    "nominal": {
+      "center_raw_units": [
+        0.0466414711555965,
+        0.022404551490436124
+      ],
+      "radius_raw_units": 0.6154512261879839,
+      "radial_residual_rms_raw": 0.005475033284963493,
+      "xy_spans_raw": [
+        1.2414160326210315,
+        1.2306981328160354
+      ],
+      "z_raw_units": -0.01,
+      "scale_mm_per_raw_unit": 194.97889498614325,
+      "usable_rim": true
+    },
+    "rim_section_sensitivity": [
+      {
+        "center_raw_units": [
+          0.043626773474179245,
+          0.010004212893811927
+        ],
+        "radius_raw_units": 0.6042443024007702,
+        "radial_residual_rms_raw": 0.040357439849910366,
+        "xy_spans_raw": [
+          1.2278981750374371,
+          1.2210414937242042
+        ],
+        "z_raw_units": -0.005,
+        "scale_mm_per_raw_unit": 198.5951700714738,
+        "usable_rim": false
+      },
+      {
+        "center_raw_units": [
+          0.0466414711555965,
+          0.022404551490436124
+        ],
+        "radius_raw_units": 0.6154512261879839,
+        "radial_residual_rms_raw": 0.005475033284963493,
+        "xy_spans_raw": [
+          1.2414160326210315,
+          1.2306981328160354
+        ],
+        "z_raw_units": -0.01,
+        "scale_mm_per_raw_unit": 194.97889498614325,
+        "usable_rim": true
+      },
+      {
+        "center_raw_units": [
+          0.04433130931392974,
+          0.02657694984430346
+        ],
+        "radius_raw_units": 0.618796181340269,
+        "radial_residual_rms_raw": 0.007174825058017802,
+        "xy_spans_raw": [
+          1.2523886193391391,
+          1.239268940966097
+        ],
+        "z_raw_units": -0.015,
+        "scale_mm_per_raw_unit": 193.9249200602506,
+        "usable_rim": true
+      },
+      {
+        "center_raw_units": [
+          0.0422413162012733,
+          0.030361155583735526
+        ],
+        "radius_raw_units": 0.6218359302995685,
+        "radial_residual_rms_raw": 0.009063992960908235,
+        "xy_spans_raw": [
+          1.2639015417509016,
+          1.2455616582769105
+        ],
+        "z_raw_units": -0.02,
+        "scale_mm_per_raw_unit": 192.97694802259204,
+        "usable_rim": true
+      },
+      {
+        "center_raw_units": [
+          0.04007384865922412,
+          0.03401336509907146
+        ],
+        "radius_raw_units": 0.624984923035314,
+        "radial_residual_rms_raw": 0.011436823513732727,
+        "xy_spans_raw": [
+          1.2791504930388624,
+          1.2526832687315066
+        ],
+        "z_raw_units": -0.025,
+        "scale_mm_per_raw_unit": 192.004631755284,
+        "usable_rim": true
+      },
+      {
+        "center_raw_units": [
+          0.037396743919588256,
+          0.037775296977675496
+        ],
+        "radius_raw_units": 0.6287534081365272,
+        "radial_residual_rms_raw": 0.014829416954305057,
+        "xy_spans_raw": [
+          1.2970149041086017,
+          1.2589521956280758
+        ],
+        "z_raw_units": -0.03,
+        "scale_mm_per_raw_unit": 190.85383625299292,
+        "usable_rim": true
+      }
+    ]
+  },
+  "form_cross_checks": {
+    "front_face_plane_rms_mm": 0.4845882731060914,
+    "outer_rim_radial_rms_mm": 1.0675159399145357,
+    "outer_rim_xy_spans_mm": [
+      242.0499262585307,
+      239.96016199798032
+    ],
+    "opening_width_scan_mm": 111.47571554312874,
+    "opening_width_CAD_mm": 114.35,
+    "opening_height_scan_mm": 137.4865376495665,
+    "opening_height_CAD_mm": 141.1,
+    "opening_vs_outer_center_offset_mm": [
+      1.442365024642889,
+      -1.4385133940618329
+    ],
+    "opening_center_offset_norm_mm": 2.037090486259355,
+    "opening_fits": [
+      {
+        "z_raw_units": -0.005,
+        "center_raw_units": [
+          0.05446756889771435,
+          0.015963400983804898
+        ],
+        "rotation_rad": -0.04266574340503413,
+        "width_mm": 111.93271031698956,
+        "height_mm": 138.53595161547872,
+        "radial_residual_rms_mm": 0.23882985670774678
+      },
+      {
+        "z_raw_units": -0.01,
+        "center_raw_units": [
+          0.05370897384227718,
+          0.0147100172250046
+        ],
+        "rotation_rad": -0.043787398027196056,
+        "width_mm": 111.47571554312874,
+        "height_mm": 137.4865376495665,
+        "radial_residual_rms_mm": 0.316469689775498
+      },
+      {
+        "z_raw_units": -0.015,
+        "center_raw_units": [
+          0.05346163350431875,
+          0.01396189602489952
+        ],
+        "rotation_rad": -0.04854164161442909,
+        "width_mm": 111.2768269754139,
+        "height_mm": 137.05812563880812,
+        "radial_residual_rms_mm": 0.4045132349102534
+      },
+      {
+        "z_raw_units": -0.02,
+        "center_raw_units": [
+          0.05335016407973209,
+          0.013349260436644738
+        ],
+        "rotation_rad": -0.0542567009549637,
+        "width_mm": 111.2144168718447,
+        "height_mm": 136.84619561187458,
+        "radial_residual_rms_mm": 0.47341753755142774
+      },
+      {
+        "z_raw_units": -0.025,
+        "center_raw_units": [
+          0.05332397558069295,
+          0.012876134185716218
+        ],
+        "rotation_rad": -0.05947180386377398,
+        "width_mm": 111.21915088496439,
+        "height_mm": 136.7475663654593,
+        "radial_residual_rms_mm": 0.527141985378464
+      },
+      {
+        "z_raw_units": -0.03,
+        "center_raw_units": [
+          0.05336171343836134,
+          0.012562194738616358
+        ],
+        "rotation_rad": -0.06381842672185006,
+        "width_mm": 111.26122965416185,
+        "height_mm": 136.70651047899128,
+        "radial_residual_rms_mm": 0.5658881705095549
+      }
+    ],
+    "not_recoverable": [
+      "Complete 12 x 8 mm slot walls: A disappears into reconstructed material below the face; B is partly occluded.",
+      "8 mm face thickness and hidden 24 mm skirt/reliefs cannot be independently checked from this front scan."
+    ]
+  },
+  "tip_points_form_frame_mm": {
+    "U": [
+      0.614340500173514,
+      40.585091095994194,
+      23.788614437106173
+    ],
+    "L": [
+      1.8780111667391952,
+      -39.03923396087544,
+      25.459151997782584
+    ],
+    "A": [
+      48.743504339803366,
+      25.213452305459324,
+      21.481051923118894
+    ],
+    "B": [
+      -48.78679148352544,
+      -22.614207721437555,
+      18.878207138179416
+    ]
+  },
+  "tip_fits": {
+    "U": {
+      "seed_pixels": [
+        1097,
+        780
+      ],
+      "chosen_band_mm": 2,
+      "sensitivity_fits_in_face_mm": [
+        {
+          "band_mm": 1,
+          "center_mm": [
+            11.38395798117382,
+            44.777292805931026,
+            23.788614437106173
+          ],
+          "cap_radius_mm": 3.4897267656665245,
+          "radial_residual_rms_mm": 0.15797159577850278
+        },
+        {
+          "band_mm": 1.5,
+          "center_mm": [
+            11.444386455009873,
+            44.814373252765634,
+            23.788614437106173
+          ],
+          "cap_radius_mm": 3.5826922950213076,
+          "radial_residual_rms_mm": 0.15233399045548035
+        },
+        {
+          "band_mm": 2,
+          "center_mm": [
+            11.484401856296493,
+            44.8877125950969,
+            23.788614437106173
+          ],
+          "cap_radius_mm": 3.6481617485071256,
+          "radial_residual_rms_mm": 0.16834669960933485
+        },
+        {
+          "band_mm": 2.5,
+          "center_mm": [
+            11.453244670484269,
+            44.87400860021346,
+            23.788614437106173
+          ],
+          "cap_radius_mm": 3.6598541361541916,
+          "radial_residual_rms_mm": 0.17342927800709587
+        }
+      ]
+    },
+    "L": {
+      "seed_pixels": [
+        1081,
+        1397
+      ],
+      "chosen_band_mm": 2,
+      "sensitivity_fits_in_face_mm": [
+        {
+          "band_mm": 1,
+          "center_mm": [
+            9.314484615365965,
+            -34.71513266895507,
+            25.459151997782584
+          ],
+          "cap_radius_mm": 3.622819151728298,
+          "radial_residual_rms_mm": 0.08791127185931469
+        },
+        {
+          "band_mm": 1.5,
+          "center_mm": [
+            9.290429326993236,
+            -34.73511036855379,
+            25.459151997782584
+          ],
+          "cap_radius_mm": 3.684526380202245,
+          "radial_residual_rms_mm": 0.09606827660385864
+        },
+        {
+          "band_mm": 2,
+          "center_mm": [
+            9.261433300472468,
+            -34.715606526126905,
+            25.459151997782584
+          ],
+          "cap_radius_mm": 3.7211624524131226,
+          "radial_residual_rms_mm": 0.09990915368043869
+        },
+        {
+          "band_mm": 2.5,
+          "center_mm": [
+            9.265881340011324,
+            -34.69955802859284,
+            25.459151997782584
+          ],
+          "cap_radius_mm": 3.752214844343439,
+          "radial_residual_rms_mm": 0.09638935228623143
+        }
+      ]
+    },
+    "A": {
+      "seed_pixels": [
+        1469,
+        910
+      ],
+      "chosen_band_mm": 1.5,
+      "sensitivity_fits_in_face_mm": [
+        {
+          "band_mm": 0.5,
+          "center_mm": [
+            58.955627404502444,
+            27.074375976965296,
+            21.481051923118894
+          ],
+          "cap_radius_mm": 0.8651824776746198,
+          "radial_residual_rms_mm": 0.08207714608427287
+        },
+        {
+          "band_mm": 1,
+          "center_mm": [
+            58.97917786879649,
+            27.32139413383797,
+            21.481051923118894
+          ],
+          "cap_radius_mm": 1.3774434512119638,
+          "radial_residual_rms_mm": 0.14333562538228856
+        },
+        {
+          "band_mm": 1.5,
+          "center_mm": [
+            58.894564174324806,
+            27.42403028045264,
+            21.481051923118894
+          ],
+          "cap_radius_mm": 2.1029114210855173,
+          "radial_residual_rms_mm": 0.12333174477245037
+        }
+      ]
+    },
+    "B": {
+      "seed_pixels": [
+        692,
+        1247
+      ],
+      "chosen_band_mm": 1.5,
+      "sensitivity_fits_in_face_mm": [
+        {
+          "band_mm": 0.5,
+          "center_mm": [
+            -40.331454961966685,
+            -15.93606872904935,
+            18.878207138179416
+          ],
+          "cap_radius_mm": 0.7846070084602624,
+          "radial_residual_rms_mm": 0.05215410187679006
+        },
+        {
+          "band_mm": 1,
+          "center_mm": [
+            -40.49770151877723,
+            -15.9819192971605,
+            18.878207138179416
+          ],
+          "cap_radius_mm": 1.1633971272534804,
+          "radial_residual_rms_mm": 0.07070737634685309
+        },
+        {
+          "band_mm": 1.5,
+          "center_mm": [
+            -40.635827023123966,
+            -16.08855290093606,
+            18.878207138179416
+          ],
+          "cap_radius_mm": 1.534249635043556,
+          "radial_residual_rms_mm": 0.10142012365926802
+        }
+      ]
+    }
+  },
+  "comparison": [
+    {
+      "pair": "U-L",
+      "caliper_3d_mm": 80,
+      "without_inner_plate_mm": 80.0,
+      "with_inner_plate_mm": 80.00000000000001,
+      "with_formwork_mm": 79.65187191809873,
+      "formwork_minus_caliper_mm": -0.3481280819012653,
+      "formwork_method_sensitivity_mm": [
+        77.84020266674703,
+        79.67056010787063
+      ]
+    },
+    {
+      "pair": "A-B",
+      "caliper_3d_mm": 109.8,
+      "without_inner_plate_mm": 109.67070777346346,
+      "with_inner_plate_mm": 111.72717969853284,
+      "with_formwork_mm": 108.65734428932517,
+      "formwork_minus_caliper_mm": -1.1426557106748305,
+      "formwork_method_sensitivity_mm": [
+        105.94415022099196,
+        108.69382458149914
+      ]
+    },
+    {
+      "pair": "U-A",
+      "caliper_3d_mm": 51.4,
+      "without_inner_plate_mm": 51.31401263458032,
+      "with_inner_plate_mm": 52.998832274679444,
+      "with_formwork_mm": 50.57695656882262,
+      "formwork_minus_caliper_mm": -0.823043431177382,
+      "formwork_method_sensitivity_mm": [
+        49.50692836702563,
+        50.81123734698552
+      ]
+    },
+    {
+      "pair": "L-A",
+      "caliper_3d_mm": 80.25,
+      "without_inner_plate_mm": 79.84779978339353,
+      "with_inner_plate_mm": 80.76653184924722,
+      "with_formwork_mm": 79.62793117366927,
+      "formwork_minus_caliper_mm": -0.6220688263307323,
+      "formwork_method_sensitivity_mm": [
+        77.68103820105941,
+        79.62793117366927
+      ]
+    },
+    {
+      "pair": "U-B",
+      "caliper_3d_mm": 81.14,
+      "without_inner_plate_mm": 80.85164618743097,
+      "with_inner_plate_mm": 81.76167625443108,
+      "with_formwork_mm": 80.36625729824195,
+      "formwork_minus_caliper_mm": -0.7737427017580529,
+      "formwork_method_sensitivity_mm": [
+        78.2138779717473,
+        80.36625729824195
+      ]
+    },
+    {
+      "pair": "L-B",
+      "caliper_3d_mm": 54.7,
+      "without_inner_plate_mm": 54.37827267135046,
+      "with_inner_plate_mm": 54.14194655049436,
+      "with_formwork_mm": 53.66574838574062,
+      "formwork_minus_caliper_mm": -1.0342516142593823,
+      "formwork_method_sensitivity_mm": [
+        52.30426681058914,
+        53.71491358907481
+      ]
+    }
+  ],
+  "old_scan_calibration": "Both earlier diagnostics use caliper U-L = 80 mm to set scale. Their 80.0 mm results are inputs, not independent validation. The new scan uses only the printed form for scale.",
+  "coplanar_plate_bores": {
+    "A_mm": [
+      116.34,
+      58.57
+    ],
+    "B_mm": [
+      13.55,
+      106.02
+    ],
+    "diameters_mm": [
+      5.66,
+      5.66
+    ],
+    "separation_mm": 113.21345591403878,
+    "scope": "R006 coplanar loose-plate calipers; independent of 3D projecting-tip distances. Kept unchanged."
+  },
+  "rod_mesh_diagnostics": {
+    "A": {
+      "visible_bins": [
+        {
+          "z_mm": 2,
+          "center_face_mm": [
+            59.91496687317318,
+            26.722807065456426
+          ],
+          "diameter_mm": 4.085389664528898,
+          "radial_residual_rms_mm": 0.17053890114934434
+        },
+        {
+          "z_mm": 3,
+          "center_face_mm": [
+            59.795111402024915,
+            26.849266276961735
+          ],
+          "diameter_mm": 3.928242637000847,
+          "radial_residual_rms_mm": 0.18441068712442588
+        },
+        {
+          "z_mm": 4,
+          "center_face_mm": [
+            59.82981748089294,
+            26.912474659105644
+          ],
+          "diameter_mm": 3.989627325598208,
+          "radial_residual_rms_mm": 0.22013657894103794
+        },
+        {
+          "z_mm": 5,
+          "center_face_mm": [
+            59.68903812601714,
+            26.9341274395662
+          ],
+          "diameter_mm": 3.8135994509393103,
+          "radial_residual_rms_mm": 0.18837584437663787
+        },
+        {
+          "z_mm": 6,
+          "center_face_mm": [
+            59.788897342449154,
+            26.94262620792934
+          ],
+          "diameter_mm": 4.025393101982233,
+          "radial_residual_rms_mm": 0.2317353434224934
+        },
+        {
+          "z_mm": 7,
+          "center_face_mm": [
+            59.863301594086096,
+            27.11367731328916
+          ],
+          "diameter_mm": 4.266733450737181,
+          "radial_residual_rms_mm": 0.224016840979442
+        },
+        {
+          "z_mm": 8,
+          "center_face_mm": [
+            59.6888977806487,
+            26.995381429399288
+          ],
+          "diameter_mm": 3.990236732954649,
+          "radial_residual_rms_mm": 0.22854947023244784
+        },
+        {
+          "z_mm": 9,
+          "center_face_mm": [
+            59.85255523244644,
+            27.141970603688748
+          ],
+          "diameter_mm": 4.241858801993647,
+          "radial_residual_rms_mm": 0.20424360690341478
+        },
+        {
+          "z_mm": 10,
+          "center_face_mm": [
+            59.78302620050719,
+            27.111501686887685
+          ],
+          "diameter_mm": 4.0868152876245984,
+          "radial_residual_rms_mm": 0.24513578613662193
+        },
+        {
+          "z_mm": 11,
+          "center_face_mm": [
+            59.84338503257404,
+            27.242103886407484
+          ],
+          "diameter_mm": 4.096753794024125,
+          "radial_residual_rms_mm": 0.18140914224393703
+        }
+      ],
+      "median_mesh_diameter_mm": 4.055391383255565
+    },
+    "B": {
+      "visible_bins": [
+        {
+          "z_mm": 2,
+          "center_face_mm": [
+            -40.39080649557054,
+            -16.32171763056264
+          ],
+          "diameter_mm": 3.258736176246447,
+          "radial_residual_rms_mm": 0.19524836723931224
+        },
+        {
+          "z_mm": 3,
+          "center_face_mm": [
+            -40.420377114565,
+            -16.207668182684113
+          ],
+          "diameter_mm": 2.9059072313489613,
+          "radial_residual_rms_mm": 0.2105386779796597
+        },
+        {
+          "z_mm": 4,
+          "center_face_mm": [
+            -40.459991930512864,
+            -16.18240160950286
+          ],
+          "diameter_mm": 3.053081973882985,
+          "radial_residual_rms_mm": 0.1940611698100706
+        },
+        {
+          "z_mm": 5,
+          "center_face_mm": [
+            -40.52037546381423,
+            -16.024943395443604
+          ],
+          "diameter_mm": 2.9099472600297047,
+          "radial_residual_rms_mm": 0.239104396842448
+        },
+        {
+          "z_mm": 6,
+          "center_face_mm": [
+            -40.47200789616132,
+            -16.31653430063603
+          ],
+          "diameter_mm": 3.596189946002368,
+          "radial_residual_rms_mm": 0.22635919915926728
+        },
+        {
+          "z_mm": 7,
+          "center_face_mm": [
+            -40.58483635841085,
+            -15.966140514689112
+          ],
+          "diameter_mm": 3.0235635709573625,
+          "radial_residual_rms_mm": 0.19912049085796046
+        },
+        {
+          "z_mm": 8,
+          "center_face_mm": [
+            -40.61107944314611,
+            -16.12815713230368
+          ],
+          "diameter_mm": 3.2052888975452305,
+          "radial_residual_rms_mm": 0.1598657186403042
+        },
+        {
+          "z_mm": 9,
+          "center_face_mm": [
+            -40.73967724758152,
+            -16.12067881156378
+          ],
+          "diameter_mm": 3.2761369240417713,
+          "radial_residual_rms_mm": 0.1317884149972342
+        },
+        {
+          "z_mm": 10,
+          "center_face_mm": [
+            -40.903173916438625,
+            -16.10514671575097
+          ],
+          "diameter_mm": 3.5598897007508863,
+          "radial_residual_rms_mm": 0.12545748290758446
+        }
+      ],
+      "median_mesh_diameter_mm": 3.2052888975452305
+    }
+  },
+  "nominal_rod_diameter_mm": 4.826,
+  "nominal_rod_basis": "Existing project Kohler 1038645 identification: 10-24 stud, nominal major diameter 0.190 inch. Not a new caliper reading.",
+  "hypothetical_slot_play": [
+    {
+      "slot_length_mm": 12,
+      "slot_width_mm": 8,
+      "one_axis_centered_clearance_x_mm": 3.587,
+      "one_axis_centered_clearance_y_mm": 1.5870000000000002
+    },
+    {
+      "slot_length_mm": 10,
+      "slot_width_mm": 7,
+      "one_axis_centered_clearance_x_mm": 2.587,
+      "one_axis_centered_clearance_y_mm": 1.0870000000000002
+    }
+  ],
+  "decision": {
+    "tight_fixed_locator_ready": false,
+    "current_12_by_8_slots": "Retain the existing observed placement as the baseline. Do not move centers or shrink both dimensions on the strength of this scan alone.",
+    "next_trial": "If less play is worth testing, use removable sacrificial locator inserts/gauges on the existing form first. Try the real rods with end nuts removed and adjust locally; a second full-size print is not required to learn this. This assessment does not release insert geometry or a tighter full form.",
+    "owner_measurements_requested": [],
+    "physical_checks": "Ordinary fit checks remain: unforced insertion/removal, intended face seating, available control access and independent bracing. A static scan does not establish repeatability or completion of these checks."
+  },
+  "limits": [
+    "Sensitivity ranges show choices within this analysis, not certified measurement bounds or confidence intervals.",
+    "Uniform calibration does not remove local photogrammetry smoothing, reflective-metal distortion or occlusion.",
+    "3D end-tip distances do not specify rod axes at the tab plane. Do not substitute them for R006 planar hole locations.",
+    "New form placement is observed; repeatable positioning, full seating, insertion/removal and water performance are not established.",
+    "Later captures may include different nut positions or adjustments; the same contact surface is not guaranteed by matching feature names.",
+    "Secondary loose reflective plate scans are not additional installed-hardware observations and are not averaged into this table."
+  ],
+  "sources_sha256": {
+    "canon/formwork_scan_assessment_FS01.json": "29e0ef83586bbb4dc47e3dc8f3038aac10a24d2072da84b6c00f94a43e0095ee",
+    "canon/formwork_print_RF03.json": "70dfd52192e570d95c6ba072b95fdd084c144c9826a01de8bb3d1431114fdb66",
+    "canon/measurements.json": "45f7fefebd12ecbf3c057bf775e6f920685f5edfa6f40aa6314d640dba648abd",
+    "deliverables/current/analysis/registration.json": "269681390ab84470c5a9d171b7174b2b854f0119ce4dc2b89fbf1b049da377c3",
+    "canon/transforms.json": "8271c23847643be73a9c64e7caf35c1bdcb37866eaea147d85eec5dcf54d4dae",
+    "deliverables/current/fabrication/FT02/tab-rethink/analysis.json": "b1b78204a3086121d95de5c9e6d8c934f54fae749560799e7e8d745cdfee278d",
+    "data/raw/polycam/polycam-shower-with-formwork.zip": "ad92323ea329ba4cb6c1afb1848a4c482379cc164f3f03f16eb1191c02eed1da",
+    "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.stl": "9bcb5a8126b3090dc7e223c7cb4dc2849cc6671fa1ebafe5d64a918c179de091"
+  }
+}

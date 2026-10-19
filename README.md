@@ -10,9 +10,11 @@ Quick links: [MASV downloads with images and dimensions](https://shower-kohler-a
 
 **Current plates: FT02 / R006. Selected print forms: BOTH deeper relieved versions (RF03 Ø240 + RF04 Ø192.55). The short 12 mm collar is optional only.** Start with [START_HERE.md](START_HERE.md) for the selected designs, installation context and unresolved physical checks.
 
-This repository preserves the complete project history, all four original Polycam ZIPs, supplied photos, manufacturer references, accepted measurements, CAD sources, Blender scenes, videos and handoff documents. Original ZIP bytes are stored directly in ordinary Git; Git LFS is not used.
+This repository preserves the complete project history, all five original Polycam ZIPs, supplied photos, manufacturer references, accepted measurements, CAD sources, Blender scenes, videos and handoff documents. Original ZIP bytes are stored directly in ordinary Git; Git LFS is not used.
 
 Public MASV downloads prioritize **original deep RF03 (Ø240 × 32 mm)** and **small deep RF04 (Ø192.55 × 32 mm)**. Both have 24 mm maximum relieved collars. The current combined handoff also includes a separately labeled optional short D12 backup. Each link allows 25 download attempts and was set to expire October 27, 2026. The Site also retains a direct ZIP backup. See the [current sharing record](docs/decisions/selected_forms_sharing_2026-10-17.json).
+
+**Latest evidence — October 19:** [FS01: three installation scans versus calipers](deliverables/current/analysis/formwork-scan-FS01/index.html), including the newly printed form as an independent calibration reference. The new source ZIP and separate Blender inspection are preserved. The report recommends retaining the current slots and trying small removable locators before another full tighter print; no new form is released.
 
 ## Open on another computer
 

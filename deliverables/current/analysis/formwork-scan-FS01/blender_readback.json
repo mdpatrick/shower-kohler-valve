@@ -1,0 +1,9 @@
+{
+  "status": "PASS_SAVED_FILE_READBACK",
+  "observed_vertices": 353394,
+  "packed_texture_count": 1,
+  "metric_units_and_single_coordinate_conversion_verified": true,
+  "ideal_CAD_collection_hidden_and_separate": true,
+  "primary_scene_not_opened_or_modified": true,
+  "physical_fit_verified": false
+}

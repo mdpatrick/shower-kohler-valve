@@ -313,6 +313,66 @@
       "registration_status": "UNREGISTERED",
       "source_priority_note": "Preserve the original SCAN-WALL as the primary bare-installation reference. Assess this new capture separately for observed plate/hardware relationships; do not force its controls concentric or overwrite the original scan transform.",
       "observation_record": "docs/physical_checks/inner_plate_attached_scan_2026-10-15.json"
+    },
+    {
+      "id": "SCAN-FORMWORK",
+      "source_path": "/Users/mdpatrick/Downloads/polycam-shower-with-formwork.zip",
+      "repository_path": "data/raw/polycam/polycam-shower-with-formwork.zip",
+      "sha256": "ad92323ea329ba4cb6c1afb1848a4c482379cc164f3f03f16eb1191c02eed1da",
+      "size_bytes": 24830655,
+      "role": "New installed state with printed repair form; separate calibration analysis",
+      "user_quality_assessment": null,
+      "calibrated_accuracy_mm": null,
+      "capture_date": null,
+      "export_name_date": "2026-10-19 (filename only; not independently established capture date)",
+      "filesystem_mtime_utc": "2026-10-19T18:10:24.485695+00:00",
+      "timestamp_note": "ZIP member 1980-01-00 is invalid; not capture evidence.",
+      "archive_members": [
+        {
+          "name": "10_19_2026.mtl",
+          "size_bytes": 77,
+          "compressed_bytes": 79,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "88a4c2d8"
+        },
+        {
+          "name": "textures/89ac5d46814112ee723cc3c1e6afc1d9.jpg",
+          "size_bytes": 7735940,
+          "compressed_bytes": 7712988,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "67a996ea"
+        },
+        {
+          "name": "10_19_2026.obj",
+          "size_bytes": 68667925,
+          "compressed_bytes": 17117192,
+          "zip_timestamp_raw": [
+            1980,
+            1,
+            0,
+            0,
+            0,
+            0
+          ],
+          "crc32": "9f2fa760"
+        }
+      ],
+      "extraction_path": "data/extracted/polycam-shower-with-formwork",
+      "analysis_assumption": "Owner directs treating printed form as exact CAD size for scale calibration. No new scale is applied to earlier scans."
     }
   ]
 }

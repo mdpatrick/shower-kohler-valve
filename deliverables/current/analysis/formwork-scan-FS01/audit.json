@@ -1,0 +1,36 @@
+{
+  "revision": "FS01",
+  "date": "2026-10-19",
+  "status": "PASS_NUMERICAL_AND_PROVENANCE_AUDIT_ONLY",
+  "executed": [
+    "All recorded input/source hashes match current files",
+    "Original formwork ZIP hash and byte size match preserved manifest",
+    "Transform has one uniform scale and proper rotation; no anisotropic correction/reflection",
+    "All six new 3D distances independently recomputed from saved coordinates",
+    "Earlier comparison distances independently recomputed; 80 mm calibration dependence retained",
+    "R006 coplanar bore separation recomputed, separate from projecting-tip distances",
+    "Accepted calipers and FT02/RF03/RF04 design canon match HEAD unchanged",
+    "Source STL reads back as one watertight 240 x 240 x 32 mm form",
+    "192.55 mm scale hypothesis gives about 63.9 mm U-L; 240 mm family agrees with independent 80 mm caliper",
+    "All report image/download references resolve locally",
+    "No tighter CAD release, added owner measurement or false independent old-scale claim"
+  ],
+  "adversarial_findings": [
+    "A 2 mm cap band on A includes its enlarged nut. Use 1.5 mm even though the larger band agrees better with calipers.",
+    "The 240 mm outer circle sets scale; it cannot also validate scale.",
+    "Opening and outer-rim centers disagree by about 2 mm. Neither supplies a submillimeter slot location.",
+    "Visible rods scan too thin versus the identified nominal stud, and complete slot walls are missing. Raw mesh collision would overstate clearance.",
+    "Deeper blended rim sections lower the scale further. Published sensitivity is not a physical accuracy interval.",
+    "Static placement does not establish repeatability, seating, an unforced insertion sweep or water performance."
+  ],
+  "physical_checks_executed": [],
+  "fabrication_readiness": "Existing files unchanged; no tighter form released",
+  "source_STL_extents_mm": [
+    239.99662696453743,
+    239.99831750476733,
+    32.000000000000014
+  ],
+  "alternate_192_55_scale_U_L_mm": 63.9040330742913,
+  "analysis_sha256": "fca244fdf35fa12f8fce1f796351ea45e0995c59cef4e0162be925ef6033890c",
+  "report_sha256": "d64296fc83ecab966a3bf8945383b282d3a8983a41fdbba1b177ec2985344bb0"
+}

@@ -1,0 +1,12 @@
+{
+  "observed_mesh_objects": 1,
+  "vertices": 353394,
+  "ideal_CAD_overlay_hidden": true,
+  "units": "Blender meters",
+  "source_archive": "data/raw/polycam/polycam-shower-with-formwork.zip",
+  "renders": [
+    "scan_front.png",
+    "scan_oblique.png"
+  ],
+  "no_primary_scene_modified": true
+}

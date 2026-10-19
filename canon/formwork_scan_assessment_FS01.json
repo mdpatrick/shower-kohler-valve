@@ -1,0 +1,53 @@
+{
+  "revision": "FS01",
+  "date": "2026-10-19",
+  "source_id": "SCAN-FORMWORK",
+  "archive": "data/raw/polycam/polycam-shower-with-formwork.zip",
+  "extracted_obj": "data/extracted/polycam-shower-with-formwork/10_19_2026.obj",
+  "archive_sha256": "ad92323ea329ba4cb6c1afb1848a4c482379cc164f3f03f16eb1191c02eed1da",
+  "form_reference": "canon/formwork_print_RF03.json",
+  "selected_reference": "deliverables/current/fabrication/FT02/selected-forms/SEND_TO_PRINTER/01_PRIMARY_ORIGINAL_DEEP_240/PRIMARY_ORIGINAL_240_D24_RELIEVED_mm.stl",
+  "identity_basis": "Broad-face/opening ratio identifies the original 240 mm family, not the 192.55 mm alternate. D24 relieved is the selected supplied design; the hidden skirt depth is not independently identifiable in this capture.",
+  "owner_assumption": "Treat the printed form as exactly matching CAD. Use it as a dimensional reference; discrepancies on the form are reconstruction/feature-selection effects under this assumption, not evidence of printing error.",
+  "scope": "Separate new-state diagnostic. Do not modify the primary scan, its registration, accepted physical measurements or existing print files.",
+  "rough_plane": {
+    "iterations": 8,
+    "retained_quantile_each_iteration": 0.85,
+    "positive_normal_raw_axis": 2
+  },
+  "face_plane": {
+    "annulus_center_rough_units": [0.043, 0.3],
+    "annulus_radii_raw_units": [0.41, 0.54],
+    "trim_iterations": 3,
+    "retained_quantile_each_iteration": 0.95
+  },
+  "calibration": {
+    "outer_diameter_mm": 240,
+    "nominal_face_section_raw_units": -0.01,
+    "section_sensitivity_raw_units": [-0.005, -0.01, -0.015, -0.02, -0.025, -0.03],
+    "basis": "Robust circle fit to the complete outer rim section approximately 2 mm behind the fitted front face. The shallower section crosses reconstructed face dips and is not a complete clean rim. Deeper sections test edge blending into the wall, not independent accuracy bounds.",
+    "uniform_scale_only": true,
+    "calipers_used_for_new_scale": false
+  },
+  "inspection_view": {
+    "face_frame_center_raw_units": [0.06, 0.018],
+    "span_raw_units": 1.45,
+    "pixels": 2200,
+    "tip_seed_pixels": {"U": [1097, 780], "L": [1081, 1397], "A": [1469, 910], "B": [692, 1247]}
+  },
+  "tip_method": {
+    "neighborhood_radius_mm": 6,
+    "control_cap_band_mm": 2,
+    "rod_cap_band_mm": 1.5,
+    "control_sensitivity_bands_mm": [1, 1.5, 2, 2.5],
+    "rod_sensitivity_bands_mm": [0.5, 1, 1.5],
+    "notes": "Fit a circle to the projected convex hull of the foremost cap band; use its center and foremost captured Z. The 2 mm A band reaches the enlarged nut and is excluded from the rod-tip estimate. No fitting to the caliper result. These are cap-center diagnostics, not precision shaft axes."
+  },
+  "decision": {
+    "tight_fixed_locator_ready": false,
+    "current_12_by_8_slots": "Retain the existing observed placement as the baseline. Do not move centers or shrink both dimensions on the strength of this scan alone.",
+    "next_trial": "If less play is worth testing, use removable sacrificial locator inserts/gauges on the existing form first. Try the real rods with end nuts removed and adjust locally; a second full-size print is not required to learn this. This assessment does not release insert geometry or a tighter full form.",
+    "owner_measurements_requested": [],
+    "physical_checks": "Ordinary fit checks remain: unforced insertion/removal, intended face seating, available control access and independent bracing. A static scan does not establish repeatability or completion of these checks."
+  }
+}
