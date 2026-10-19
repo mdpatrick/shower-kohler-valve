@@ -1,0 +1,14 @@
+{
+  "id": "COMMUNICATION-APPROVAL-01",
+  "date": "2026-10-19",
+  "source": "Direct owner correction in this chat",
+  "owner_rule": "NEVER send an email without asking me.",
+  "rule": "Require explicit owner approval for each email send. Do not infer email permission from permission to upload files, submit a vendor website form, or place a website order. An explicit request to send a particular email or exact reply is approval for that message only.",
+  "incident": "The owner requested RF05 submission to RentMyPrinter and meant its website. The agent sent an email instead and incorrectly recorded that channel as authorized. That interpretation has been corrected; factual history is retained.",
+  "approved_reply": {
+    "text": "Never mind, I'll just submit another order! Thanks for the great work. So fast, too.",
+    "scope": "One reply to Brian in the existing RF05 email conversation.",
+    "status": "SENT_VERBATIM_AND_UI_CONFIRMED"
+  },
+  "continuing_task": "Prepare the RF05 website request with the selected model, price and print settings. Do not send further email."
+}

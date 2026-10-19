@@ -118,7 +118,9 @@
     "functional_centering_record": "docs/decisions/RF05_functional_centering_2026-10-19.json",
     "successful_trial_requires": "Correct repair/trim placement and neighboring-plate gap as well as unforced close locating; transfer to final metal tab depth remains separate.",
     "vendor_submission_record": "docs/decisions/RF05_vendor_submission_2026-10-19.json",
-    "vendor_submission_status": "One unchanged full-size RF05 STL and print notes emailed to RentMyPrinter for pricing and earliest pickup on 2026-10-19; no payment or order acceptance.",
+    "vendor_submission_status": "Initial email sent without approval; owner-authorized exact reply sent withdrawing that request in favor of a website order. See the current website record; no payment made.",
+    "website_request_record": "docs/validation/RF05_website_request_2026-10-19.json",
+    "communication_approval_record": "docs/decisions/communication_approval_2026-10-19.json",
     "planned_calibration_sequence": "Trial RF05; if it seats successfully, owner plans an installed Polycam; use this physical evidence to finalize future metal CAD. Real rods are modeled as straight rigid cylinders, not distorted scan surfaces."
   }
 }

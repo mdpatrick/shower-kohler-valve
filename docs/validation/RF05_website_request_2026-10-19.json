@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-19",
+  "vendor": "RentMyPrinter",
+  "url": "https://www.rentmyprinter.com/#submit-print",
+  "status": "PREPARED_AWAITING_FINAL_TERMS_ACCEPTANCE_APPROVAL",
+  "quantity": 1,
+  "filename": "RF05_EXPERIMENTAL_240_D24_RELIEVED_TIGHT_LOCATORS_mm.stl",
+  "sha256": "5320e07ef373704de796c12dd6eac0262497a143878b3868173b0a726898935c",
+  "document": "RENTMYPRINTER_PRINT_NOTES.txt",
+  "displayed_dimensions_mm": [240, 240, 32],
+  "settings": {
+    "material": "PETG",
+    "color": "White",
+    "layer_height_mm": 0.2,
+    "infill_percent": 30,
+    "finish": "Standard as printed / textured build plate",
+    "rush": true,
+    "delivery": "Free local pickup",
+    "pickup_window": "Flexible"
+  },
+  "quote_usd": {
+    "printing": 54.69,
+    "rush": 20,
+    "tax": 6.54,
+    "total": 81.23
+  },
+  "estimated_print_hours": 22,
+  "estimated_material_grams": 219,
+  "quote_limits": "Website estimate; final price and pickup time require vendor confirmation. Earlier intermediate asynchronous prices were superseded by the completed $81.23 breakdown.",
+  "notes": "Preserve tight locators; no widening/drilling. Millimeter 100% scale; face down/collar up; 5 walls, 1.2 mm skins, 30% gyroid/cubic infill and 5 mm brim. The form explicitly explains that 30% is the website preset used instead of the attached guide's 25% starting point. This request replaces the earlier emailed request.",
+  "final_action": "Submit Print Request also accepts the site's Terms of Service; action-time approval requested under browser-control rules. No payment is taken by this form.",
+  "private_screenshots": [
+    "build/RF05/vendor_submission_private/website_ready.png",
+    "build/RF05/vendor_submission_private/website_final_action.png"
+  ],
+  "purchase_or_payment_made": false,
+  "website_request_submitted": false
+}
