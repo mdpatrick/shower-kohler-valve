@@ -1,0 +1,32 @@
+{
+  "date": "2026-10-19",
+  "local_send_time": "14:02 America/Los_Angeles",
+  "status": "SENT_FOR_VENDOR_REVIEW_PRICE_AND_PICKUP_TIME",
+  "vendor": "RentMyPrinter — Brian Hmurovich, North County San Diego",
+  "destination": "brianhmurovich@gmail.com",
+  "destination_source": "Published mailto on https://www.rentmyprinter.com/",
+  "channel": "Email through the user's existing Superhuman session",
+  "subject": "RF05 revised shower repair form — one Ø240 mm precision trial",
+  "quantity": 1,
+  "attachments": [
+    "deliverables/current/fabrication/FT02/tight-form-RF05/PRINT_ONE_SIZE/FULL_240/RF05_EXPERIMENTAL_240_D24_RELIEVED_TIGHT_LOCATORS_mm.stl",
+    "deliverables/current/fabrication/FT02/tight-form-RF05/RENTMYPRINTER_PRINT_NOTES.txt"
+  ],
+  "verification_executed": [
+    "All six existing RF05 geometry files match their checked export hashes.",
+    "Prior fresh CAD read-back audit reviewed: single closed parts and locator void/material checks pass; no geometry changed outside tab-opening neighborhoods.",
+    "Draft recipient and both attachment filenames visibly checked before sending.",
+    "Superhuman displayed Message sent; the sent-message view shows the request and both attachments."
+  ],
+  "private_screenshot": "build/RF05/vendor_submission_private/sent_request.png",
+  "private_screenshot_tracked": false,
+  "request_summary": "One full-size form, unfilled PETG, white or another in-stock color, 0.20 mm layers, 5 walls, 1.2 mm skins and 25% infill. Preserve deliberate locator openings; no widening or drilling. Send price and earliest local pickup, including a rush option.",
+  "scope": {
+    "geometry_changed": false,
+    "scans_or_home_photos_sent": false,
+    "purchase_or_payment_made": false,
+    "binding_terms_accepted": false,
+    "vendor_acceptance_received": false,
+    "physical_fit_or_precision_verified": false
+  }
+}

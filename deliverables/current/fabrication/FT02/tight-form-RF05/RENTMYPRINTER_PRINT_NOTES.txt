@@ -1,0 +1,44 @@
+RF05 — SACRIFICIAL CALIBRATION FORM — 19 OCTOBER 2026
+
+REQUEST: ONE full-size form for review, price and earliest local pickup.
+STL: RF05_EXPERIMENTAL_240_D24_RELIEVED_TIGHT_LOCATORS_mm.stl
+STL SHA-256: 5320e07ef373704de796c12dd6eac0262497a143878b3868173b0a726898935c
+
+WHAT IT IS
+A deliberately tighter follow-up to the already-working shower repair form.
+It will test more repeatable placement before the eventual metal escutcheon
+is finalized. A failed tight fit is an accepted experimental outcome.
+This is temporary tooling, not a permanent shower part.
+
+DIMENSIONS — ALL MILLIMETERS
+Outside diameter: 240. Overall height: 32.
+Face thickness: 8. Maximum relieved collar depth: 24. Tab thickness: 3.
+Upper-right locator A: round diameter 6.5.
+Lower-left locator B: 9 overall length x 6.5 wide, along the A-B diagonal.
+Collar shape, rear reliefs, control access and tab bodies match the working form.
+Only the locator openings differ from the previous loose-slot version.
+
+PRINT SETUP
+Unfilled PETG; white preferred, another in-stock color is fine.
+Import STL as mm at 100%; do not scale to the bed.
+The file is already oriented with the broad front face and tab bottoms down,
+collar up. Allow approximately 250 x 250 mm for a 5 mm brim.
+Starting setup: 0.4 mm nozzle, 0.20 mm layers, 5 walls,
+1.2 mm top/bottom skins, 25% gyroid or cubic infill, 5 mm brim.
+No raft/supports expected; inspect your slicer preview.
+Use an established calibrated PETG profile and flag any necessary departure.
+
+FIT-CRITICAL REQUEST
+Preserve the supplied opening sizes and their positions. Do not widen the
+holes, stretch the model, drill them out, or add discretionary fit clearance.
+Remove brim/stringing without changing the designed openings. Keep first-layer
+flare out of both locators using your calibrated printing process.
+If the slicer changes these features or you recommend a geometry change,
+please flag it before printing. We want to evaluate this specific revision.
+
+ON-SITE TRIAL CONTEXT
+Removable end nuts come off before fitting; locators fit the straight bare
+threaded shafts. Do not force a binding form into place using the nuts.
+The existing working form remains the fallback. If this trial seats correctly,
+an installed scan and ordinary fit comparison will inform the later metal CAD.
+No installation scan, home photo, assembly model or final metal file is included.

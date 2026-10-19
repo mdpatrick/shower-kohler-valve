@@ -1,0 +1,28 @@
+{
+  "id": "RF05-VENDOR-SUBMISSION-01",
+  "date": "2026-10-19",
+  "owner_request": "Update the sacrificial calibration model if needed; otherwise submit it immediately to the previously used RentMyPrinter vendor.",
+  "authorization": "Direct owner request authorizes transmission of the selected RF05 part and necessary print instructions to RentMyPrinter, including the submission message. No payment or purchase terms are accepted by this record.",
+  "decision": "No geometry change needed. Retain the checked RF05 upper round 6.5 mm and lower diagonal 9 x 6.5 mm locators, with the original collar and tab bodies.",
+  "selected_for_submission": {
+    "quantity": 1,
+    "diameter_mm": 240,
+    "height_mm": 32,
+    "relieved_collar_depth_mm": 24,
+    "material_requested": "Unfilled PETG",
+    "stl": "deliverables/current/fabrication/FT02/tight-form-RF05/PRINT_ONE_SIZE/FULL_240/RF05_EXPERIMENTAL_240_D24_RELIEVED_TIGHT_LOCATORS_mm.stl",
+    "sha256": "5320e07ef373704de796c12dd6eac0262497a143878b3868173b0a726898935c",
+    "rationale": "Matches the full-size working print and exact-print calibration reference. The vendor advertises a 256 mm bed; the unchanged smaller-face alternate remains available but is not an additional requested print."
+  },
+  "latest_owner_clarification": {
+    "physical_rods": "Treat as straight, rigid, normal threaded cylinders; scan lumps and blur do not establish physical bends or varying shaft diameter.",
+    "workflow": "A successful installed RF05 trial and the owner's planned new Polycam will inform the later metal design, which has not been ordered. Metal thickness/depth is a later design input, not a reason to loosen this calibration form.",
+    "risk": "A binding/remake outcome is accepted. No numerical likelihood is claimed.",
+    "additional_measurements_requested": []
+  },
+  "executed_preflight": "All six existing RF05 STEP/STL/3MF files match the hashes in geometry_checks.json. Reviewed the prior fresh-readback audit: closed connected single parts, exact locator void checks, and zero changed geometry outside the tab-opening neighborhoods.",
+  "geometry_changed": false,
+  "working_baseline_changed": false,
+  "metal_files_changed": false,
+  "vendor_result_record": "docs/validation/RF05_vendor_submission_2026-10-19.json"
+}
