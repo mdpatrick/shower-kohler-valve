@@ -114,6 +114,8 @@
     ],
     "predicted_failure_fraction": null,
     "precision_objective_record": "docs/decisions/RF05_precision_objective_2026-10-19.json",
-    "existing_form_user_report": "Owner confirms a working existing form on 2026-10-19; the next form is an optional precision experiment. No measured accuracy or completed repair inferred."
+    "existing_form_user_report": "Owner confirms a working existing form on 2026-10-19; the next form is an optional precision experiment. No measured accuracy or completed repair inferred.",
+    "functional_centering_record": "docs/decisions/RF05_functional_centering_2026-10-19.json",
+    "successful_trial_requires": "Correct repair/trim placement and neighboring-plate gap as well as unforced close locating; transfer to final metal tab depth remains separate."
   }
 }

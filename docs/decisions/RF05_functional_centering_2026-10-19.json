@@ -1,0 +1,34 @@
+{
+  "id": "RF05-FUNCTIONAL-CENTERING-01",
+  "date": "2026-10-19",
+  "owner_intent": "The second form is an aggressive calibration trial for precise horizontal/vertical repair placement and a future tabbed metal escutcheon. The metal main/diverter plates must not touch. Educated guesses and a binding/remake outcome are accepted; existing working form remains fallback.",
+  "correction_to_prior_recommendation": "RF05 reduced-play calculations concern repeatability, not verified centering to the actual trim or separation from the diverter. A snug successful print alone cannot establish a perfected metal-tab specification.",
+  "active_requirements": [
+    "Reference the repair and backing positions to the actual Kohler trim/control assembly. Keep each backing concentric with its factory cover.",
+    "Evaluate the two intended metal outer outlines together before filling. The repaired opening must not force an outer plate off its intended center.",
+    "Validate or deliberately translate locator coordinates to the final metal tab plane and actual support/bedding depth. Do not copy the form's front-tab XY blindly.",
+    "Retain independent form support, unforced insertion/removal, original clearances and the working fallback.",
+    "Accept a failed precision trial; do not describe the requested 25-30% risk as a calculated probability."
+  ],
+  "study": "deliverables/current/analysis/tab-shafts-FS02/centering_transfer.json",
+  "nominal_evidence": {
+    "main_diameter_mm": 220,
+    "diverter_diameter_mm": 124,
+    "minimum_center_distance_to_avoid_touch_mm": 172,
+    "working_model_center_distance_mm": 175.31136166482187,
+    "working_model_gap_mm": 3.3113616648218738,
+    "earlier_scenario_gaps_mm": [
+      3.2378463437339917,
+      3.057887344612084,
+      5.210407517260279
+    ],
+    "scope": "Inferred earlier positions, not physical measurements or uncertainty bounds."
+  },
+  "recommendation": "Keep RF05 available as a precision experiment using the best current working placement. Treat its outcome as calibration evidence. Establish correct trim alignment and a nonzero, suitably reserved neighboring-plate gap before repair; afterward derive a separately checked tabbed-metal successor at the correct depth. A binding-only check is insufficient.",
+  "next_physical_comparison": "Use the existing full-size cover/plate overlays and real Kohler parts to assess placement and gap without another caliper survey. No new dimensions requested this turn.",
+  "future_tabbed_metal": "Owner intends a tabbed successor if the trial validates the relevant fit and placement. Existing FT02 plain-opening plate files remain unchanged and must not be mislabeled as tabbed.",
+  "cad_geometry_changed": false,
+  "baseline_selection_changed": false,
+  "physical_fit_claim_added": false,
+  "owner_measurements_requested": []
+}

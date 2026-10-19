@@ -1,0 +1,16 @@
+{
+  "date": "2026-10-19",
+  "status": "PASS",
+  "scope": "Functional centering analysis/report only; no geometry release or physical fit claim",
+  "executed": [
+    "Report rebuilt with ./project assess-tab-shafts --stage report",
+    "Analytic circle gap compared with independently tessellated Shapely circle outlines",
+    "Recorded input hashes checked against current sources",
+    "All protected FS02 caliper/registration/baseline hashes unchanged",
+    "Every RF05 STEP/STL/3MF still matches its prior geometry-check hash",
+    "New plot visually inspected and generated centering section verified in browser"
+  ],
+  "analytic_gap_mm": 3.3113616648218738,
+  "polygon_gap_mm": 3.3113642392870166,
+  "physical_checks_performed": []
+}

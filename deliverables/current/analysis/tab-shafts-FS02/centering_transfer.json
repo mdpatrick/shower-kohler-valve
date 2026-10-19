@@ -1,0 +1,135 @@
+{
+  "id": "FS02-FUNCTIONAL-CENTERING",
+  "status": "MODEL_SENSITIVITY_NOT_FINAL_PLACEMENT",
+  "main_diameter_mm": 220.0,
+  "diverter_diameter_mm": 124.0,
+  "main_working_center_installed_mm": [
+    4.014384219632262,
+    39.700994788750954
+  ],
+  "diverter_inferred_center_installed_mm": [
+    -0.06707892223839187,
+    -135.56284970689944
+  ],
+  "center_distance_mm": 175.31136166482187,
+  "nominal_working_gap_mm": 3.3113616648218738,
+  "existing_placement_scenarios": [
+    {
+      "state": "ORIGINAL",
+      "center_separation_mm": 175.237846343734,
+      "gap_main_diverter_mm": 3.2378463437339917
+    },
+    {
+      "state": "RIGID",
+      "center_separation_mm": 175.05788734461208,
+      "gap_main_diverter_mm": 3.057887344612084
+    },
+    {
+      "state": "CALIPER",
+      "center_separation_mm": 177.21040751726028,
+      "gap_main_diverter_mm": 5.210407517260279
+    }
+  ],
+  "downward_sensitivity": [
+    {
+      "main_downward_mm": 0,
+      "gap_mm": 3.3113616648218738
+    },
+    {
+      "main_downward_mm": 0.5,
+      "gap_mm": 2.8114975746112805
+    },
+    {
+      "main_downward_mm": 1,
+      "gap_mm": 2.311634263989049
+    },
+    {
+      "main_downward_mm": 2,
+      "gap_mm": 1.3119100084912532
+    },
+    {
+      "main_downward_mm": 3,
+      "gap_mm": 0.3121889530745534
+    },
+    {
+      "main_downward_mm": 4,
+      "gap_mm": -0.6875288462373135
+    }
+  ],
+  "RF05_ideal_seated_play_gap_extrema": [
+    {
+      "gap_mm": 2.2259287412252604,
+      "pose_cover_xy_mm_angle_deg": [
+        0.20621377415887615,
+        -1.0865430971550838,
+        0.05646825441799195
+      ]
+    },
+    {
+      "gap_mm": 3.719961938541587,
+      "pose_cover_xy_mm_angle_deg": [
+        0.7003248406202229,
+        0.40392256341156013,
+        -0.15433722409191236
+      ]
+    }
+  ],
+  "gap_extrema_scope": "SLSQP estimates, original fitted 5 mm bare shafts through 3 mm tabs, independent extrema. Main circle assumed to follow form center exactly; diverter fixed. No bracing, print/scan error or physical registration uncertainty. No guaranteed actual minimum gap.",
+  "depth_transfer_sensitivity": [
+    {
+      "rod": "A",
+      "form_tab_installed_z_mm": [
+        5.05,
+        8.05
+      ],
+      "hypothetical_metal_installed_z_mm": [
+        0.0,
+        1.52
+      ],
+      "center_plane_difference_mm": -5.790000000000001,
+      "shaft_xy_change_mm": [
+        0.2458246116120577,
+        -0.20563131824268766
+      ],
+      "shaft_xy_change_norm_mm": 0.32049021625697793,
+      "source_shaft_fit_front_z_mm": [
+        -5,
+        11
+      ],
+      "metal_plane_extrapolates_beyond_fitted_band": true,
+      "scope": "Hypothetical zero-bedding metal plane. No final hole coordinates selected. Actual bedding, shaft adjustment and hidden surfaces remain unresolved."
+    },
+    {
+      "rod": "B",
+      "form_tab_installed_z_mm": [
+        5.05,
+        8.05
+      ],
+      "hypothetical_metal_installed_z_mm": [
+        0.0,
+        1.52
+      ],
+      "center_plane_difference_mm": -5.790000000000001,
+      "shaft_xy_change_mm": [
+        0.08011149459112943,
+        -0.27935255655452096
+      ],
+      "shaft_xy_change_norm_mm": 0.29061263293114326,
+      "source_shaft_fit_front_z_mm": [
+        -5,
+        7
+      ],
+      "metal_plane_extrapolates_beyond_fitted_band": true,
+      "scope": "Hypothetical zero-bedding metal plane. No final hole coordinates selected. Actual bedding, shaft adjustment and hidden surfaces remain unresolved."
+    }
+  ],
+  "conclusion": "RF05 can test a more repeatable pose. A snug fit is not absolute centering validation or a perfected metal-tab specification. Actual intended cover positions and separation must govern the repair, and hole positions must be transferred to the final tab depth.",
+  "owner_measurements_requested": [],
+  "source_sha256": {
+    "deliverables/current/analysis/tab-shafts-FS02/analysis.json": "9fd46fb0b712ac2fda953c7075fb82f9180ef7d058e910e6c715f023a9785393",
+    "canon/fit_trial_design.json": "2b191cf0d50c49a023a8b63f1ce1bfaa6903a841c25c95678c0ca8e04bcce822",
+    "deliverables/current/fabrication/FT02/engineering/locator_evaluation.json": "9f3b7c9ce5194e1a9242644649ef3f1b6d01e2ad1951fa36dc0e32695fe0123d",
+    "deliverables/current/fabrication/concentric-border-study/analysis.json": "d888b206d3b855ebb5ae687de66318c3447b969ed6aff31cdc9dae92c0368c02",
+    "deliverables/current/fabrication/FT02/design_report.json": "e34d75a723633273ccfe1663ed2ec4e760309be25544ed7c3128022b5b992d4b"
+  }
+}
