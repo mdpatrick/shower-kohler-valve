@@ -1,0 +1,62 @@
+{
+  "id": "RF05-PRECISION-OBJECTIVE-01",
+  "date": "2026-10-19",
+  "owner_report": {
+    "source": "Direct owner statement in project chat",
+    "status": "ACCEPTED_QUALITATIVE_OBSERVATION",
+    "statement": "I already have a working formwork.",
+    "scope": "Accept the existing form as a working fallback. No measured placement error, repeatability, completed repair or water test is supplied."
+  },
+  "objective": "A further print must offer a meaningful prospect of more precise repair-collar placement. The owner accepts a failed over-tight trial and does not need another conservative fit solution.",
+  "probability": {
+    "earlier_owner_accepted_failure_fraction": [
+      0.25,
+      0.3
+    ],
+    "latest_owner_language": "a nice coin toss of getting my formwork even more dialed in",
+    "predicted_success_or_failure_fraction": null,
+    "interpretation": "Value and risk preference, not a numerical probability supported by evidence. Do not shrink holes merely to cause an arbitrary failure rate."
+  },
+  "decision": {
+    "recommendation": "Retain RF05 as an optional precision experiment: upper round 6.5 mm, lower 9 x 6.5 mm slot along the locator line. Keep the working form as fallback. Do not shrink further or change the working collar dimensions on this evidence.",
+    "diagonal_reason": "Upper round opening locates XY; lower radial slot accommodates spacing variation while limiting rotation. Not required by bolt tilt. A horizontal lower slot also clears the modeled shaft but allows slightly more rotational freedom in this model.",
+    "benefit": "Substantially less possible movement before bracing; more repeatable locating is plausible. Collar profile, depth, reliefs and surface geometry match the working design.",
+    "critical_limit": "Less play does not establish correct absolute placement. If the working form is already aligned correctly and firmly braced, RF05 may offer no repair-accuracy benefit. A repeatable but incorrect scan-derived position is not an improvement.",
+    "success_criterion": "Unforced seating/removal, visibly less movement than the working form, and correct repair-opening alignment with the actual factory inner plate/control assembly. Use existing parts and an ordinary fit comparison, not a new survey. Independent support remains necessary during repair.",
+    "files_changed": false,
+    "baseline_selection_changed": false,
+    "additional_owner_measurements_requested": []
+  },
+  "executed_model_comparison": {
+    "source": "deliverables/current/analysis/tab-shafts-FS02/analysis.json",
+    "geometry_sources": [
+      "canon/formwork_print_RF03.json",
+      "canon/tab_shaft_trial_FS02.json"
+    ],
+    "scope": "Original-scan fitted bare shaft lines, 5 mm evaluation diameter, seated 3 mm tab. Nuts excluded. No scan re-registration.",
+    "method": "SLSQP separately minimized/maximized form X, Y and angle with three starting poses. At Z=-3 and 0, transform shaft centers into the moved form frame, constrain distance to the slot center segment <= hole radius - 2.5*sqrt(1+shaft_slope_squared). Round hole has zero-length segment. Endpoints suffice for a segment contained in a convex eroded capsule. Bounds +/-10 mm, +/-5 degrees were not reached. Successful solutions had constraint residuals >= -1e-6 mm. Numerically estimated model ranges, not certified global bounds.",
+    "results": {
+      "baseline_two_horizontal_12x8_slots": {
+        "collar_x_total_range_mm": 6.56222495599,
+        "collar_y_total_range_mm": 2.88826325458,
+        "rotation_total_range_deg": 3.35687857323
+      },
+      "RF05_round_and_diagonal_slot": {
+        "collar_x_total_range_mm": 1.58606171775,
+        "collar_y_total_range_mm": 1.49050796298,
+        "rotation_total_range_deg": 1.42043646939
+      },
+      "RF05_same_centers_sizes_horizontal_lower_slot": {
+        "collar_x_total_range_mm": 1.75394056442,
+        "collar_y_total_range_mm": 1.36796367316,
+        "rotation_total_range_deg": 1.59475877531
+      }
+    },
+    "limits": [
+      "Total ranges between opposite modeled extremes, not plus/minus placement accuracy. Independent extrema are not simultaneously reachable.",
+      "No friction, bracing, print distortion, shaft flex, scan error or preload. Actual play of the working print is not measured.",
+      "Existing fixed-pose RF05 upper-hole minimum gap about 0.054 mm is a geometric residual, not an uncertainty allowance. The candidate already accepts substantial binding risk.",
+      "No new physical fit test or repair accuracy measurement was executed."
+    ]
+  }
+}
