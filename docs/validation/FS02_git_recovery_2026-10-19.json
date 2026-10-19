@@ -1,0 +1,11 @@
+{
+  "revision": "FS02/RF05",
+  "commit": "956de1a8cf979747ae4c265711fe2da8f89bced7",
+  "prerequisite_commit": "76f867f55d9ef585fad8fe80607c29384bcd189a",
+  "method": "Fresh local clone; remove newly introduced object links only in clone; verify commit absent there but still present in source; restore incremental bundle into clone and sparse-check out all changed files.",
+  "new_objects_removed_then_restored": 63,
+  "changed_files_hashed_against_Git_blobs_and_working_files": 42,
+  "bundle_sha256": "48acb69fffea52e37077c53b3ab32f76e9b46df555712362fae91fddf84724ae",
+  "status": "PASS",
+  "scope": "Recovery of this update using previously validated baseline. Existing source archive recovery was checked in FS01; no full raw archive recopy needed."
+}
