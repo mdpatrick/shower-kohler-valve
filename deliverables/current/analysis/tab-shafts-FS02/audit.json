@@ -1,0 +1,73 @@
+{
+  "revision": "FS02/RF05",
+  "status": "PASS_SOFTWARE_AND_EXPORT_CHECKS_ONLY",
+  "parts": [
+    {
+      "diameter_mm": 240,
+      "readback_dimensions_mm": [
+        240.0,
+        240.0,
+        32.000000100000086
+      ],
+      "holes": [
+        {
+          "rod": "A",
+          "nominal_hole_interior_intersecting_solid_mm3": 0,
+          "nearby_ring_missing_mm3": 0
+        },
+        {
+          "rod": "B",
+          "nominal_hole_interior_intersecting_solid_mm3": 0,
+          "nearby_ring_missing_mm3": 0
+        }
+      ],
+      "changes_outside_tab_neighborhoods_mm3": 0,
+      "closed_connected_meshes": true
+    },
+    {
+      "diameter_mm": 192.55,
+      "readback_dimensions_mm": [
+        192.55,
+        192.55,
+        32.000000100000065
+      ],
+      "holes": [
+        {
+          "rod": "A",
+          "nominal_hole_interior_intersecting_solid_mm3": 0,
+          "nearby_ring_missing_mm3": 0
+        },
+        {
+          "rod": "B",
+          "nominal_hole_interior_intersecting_solid_mm3": 0,
+          "nearby_ring_missing_mm3": 0
+        }
+      ],
+      "changes_outside_tab_neighborhoods_mm3": 0,
+      "closed_connected_meshes": true
+    }
+  ],
+  "same_central_collar_between_sizes_mm3": 0,
+  "baseline_sources_preserved": true,
+  "nut_geometry_in_fit_calculations": false,
+  "owner_measurements_requested": [],
+  "files_inspected": 19,
+  "archive_integrity": true,
+  "predicted_failure_probability": null,
+  "adversarial_findings": [
+    "The upper 0.05 mm calculation gap is much smaller than unresolved scan and print error; it is not a physical clearance guarantee.",
+    "A 20 mm axis continuation is a sensitivity input. The actual bare endpoint is hidden and the complete insertion sweep remains unverified.",
+    "FS01 local R8 tab fits suggest a different captured form placement; do not force this into the original working pose or treat the tighter holes as a precision measurement.",
+    "RF05 retains baseline collar and control access exactly. It cannot cure an existing seating or depth problem.",
+    "This fresh read-back audit is not an independent physical or fabrication-readiness approval."
+  ],
+  "readiness": {
+    "experimental_geometry_prepared": true,
+    "full_insertion_verified": false,
+    "physical_fit_verified": false,
+    "permanent_installation_released": false,
+    "water_test_passed": false
+  },
+  "zip_sha256": "7b88cffb9078acaf71542bd967420490b46fb585611b4f9190285bfcb3db89d8",
+  "config_sha256": "1ca2e096322806491f9e9567038e677d2a0e8b83446d4e40b02c8ffc735ca8b8"
+}

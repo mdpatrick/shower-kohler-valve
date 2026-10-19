@@ -1,0 +1,33 @@
+RF05 — EXPERIMENTAL TIGHT LOCATORS / TEMPORARY REPAIR FORM
+
+Print ONE size, not all file formats.
+FULL: diameter 240 mm, height 32 mm. About 250 x 250 mm usable bed with 5 mm brim.
+SMALL: diameter 192.55 mm, height 32 mm. About 203 x 203 mm usable bed with 5 mm brim.
+Both have the same 24 mm maximum relieved collar, 8 mm face and 3 mm tabs.
+
+WHAT CHANGED
+Upper-right A: round 6.5 mm hole.
+Lower-left B: 9 x 6.5 mm slot along the line between the rods.
+Tab bodies, control opening, collar, draft and rear reliefs match RF03/RF04.
+This is a separate optional experiment; the existing PS01 files remain baseline.
+
+PRINT
+Use geometry-only 3MF (explicit mm) or STL (import as mm). STEP is CAD reference.
+Do not scale to fit the bed. Files rest flat on the bed; collar points upward.
+Use the printer's established unfilled PETG profile, 0.4 mm nozzle, 0.2 mm layers,
+5 walls, 1.2 mm top/bottom skins, 25% infill and 5 mm brim as the PS01 starting setup.
+Supports/raft off; inspect the slicer preview. G-code is printer-specific and absent.
+Keep both small holes clean of brim and first-layer flare. Do not resize them in advance.
+
+TRY IT
+Remove the removable end nuts. The tabs fit around the shafts, never over the nuts.
+Offer the form by hand. A tight print that binds is a failed trial: do not pull it
+in with nuts. Keep the older loose-slot form available. Usual full-face seating,
+independent padded bracing and removal checks still precede any repair material.
+No new caliper survey is requested. Feedback can simply be which tab binds or is loose.
+
+RISK
+The owner accepts a 25–30% chance of a failed experiment. That is permission to
+risk a remake, not a measured probability. Scans and actual print tolerances can
+consume the small calculated gaps. This is not a permanent escutcheon, liner or
+waterproofing approval. A successful dry fit does not establish shower-water sealing.

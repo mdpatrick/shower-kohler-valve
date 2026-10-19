@@ -1,0 +1,105 @@
+{
+  "revision": "FS02 / RF05",
+  "date": "2026-10-19",
+  "status": "EXPERIMENTAL_SACRIFICIAL_PRINT_CANDIDATE",
+  "owner_direction": "Exclude removable end nuts completely from tab fit. Inspect shafts edge-on at the tab plane. For another form, favor precision and accept a 25\u201330 percent chance that the trial does not work at all.",
+  "risk": {
+    "owner_accepted_failure_fraction": [
+      0.25,
+      0.3
+    ],
+    "predicted_failure_fraction": null,
+    "meaning": "Owner's remake-risk budget, not a probability estimated from scans. No statistical calibration or independent trials support a numerical likelihood."
+  },
+  "baseline_preserved": [
+    "RF03",
+    "RF04",
+    "PS01",
+    "FT02",
+    "R006"
+  ],
+  "nut_policy": "No nut diameter, silhouette, depth or mesh enters any clearance calculation. Nuts are removed for fitting and withdrawing the tool. Hidden bare-shaft length remains unknown.",
+  "scan_frames": {
+    "without_inner_plate": "Existing FT02 working cover placement; primary registration unchanged. Subtract 8.05 mm from installed Z for front-face coordinates. Historical 80 mm U\u2013L calibration retained.",
+    "with_formwork": "FS01 independent \u00d8240 exact-print calibration. Front face Z=0. No caliper scaling, local warp or forced shaft registration.",
+    "with_inner_plate": "Retained as assembly evidence; its inner plate obscures this repair form's tab plane. Not used to infer unobserved shaft/tab contact."
+  },
+  "tab_front_frame_z_mm": [
+    -3,
+    0
+  ],
+  "shaft_fit": {
+    "roi_radius_mm": 9,
+    "sample_half_band_mm": 0.4,
+    "without_inner_plate_z_mm": {
+      "A": [
+        -5,
+        11
+      ],
+      "B": [
+        -5,
+        7
+      ]
+    },
+    "with_formwork_z_mm": {
+      "A": [
+        2,
+        11
+      ],
+      "B": [
+        2,
+        9
+      ]
+    },
+    "minimum_points_per_band": 8,
+    "nominal_thread_major_diameter_mm": 4.826,
+    "evaluation_diameter_mm": 5.0,
+    "diameter_basis": "Existing project identification of Kohler 1038645 as nominal 10-24 (0.190 inch). Use a deliberately selected 5 mm cylinder for trial checks, not the scan's artificially thin reconstructed shaft. Neither is a new physical reading or an accuracy bound.",
+    "hypothetical_forward_extent_front_z_mm": 20,
+    "forward_extent_basis": "Chosen sensitivity interval from tab back at -3 through +20 mm. It is not a measured bare endpoint or proof of the complete insertion path; no nut geometry determines it."
+  },
+  "local_tab_fit": {
+    "sections_front_z_mm": [
+      -0.5,
+      -1,
+      -1.5,
+      -2
+    ],
+    "selected_section_front_z_mm": -1.5,
+    "known_outer_end_radius_mm": 8,
+    "distal_arc_min_inward_mm": 2.5,
+    "scope": "Fit each visible distal outer tab arc to its known R8 circle, independently of the shaft. Transfer the known 2 mm tab-end-to-slot-center offset. Fixed/free-radius alternatives and section sensitivity are reported; no local remapping of the source mesh."
+  },
+  "trial": {
+    "id": "RF05",
+    "purpose": "Optional tighter locator trial for a future 24 mm relieved repair form; not a replacement selection or permanent escutcheon.",
+    "A": {
+      "type": "round",
+      "center_cover_xy_mm": [
+        47.65,
+        23.75
+      ],
+      "diameter_mm": 6.5
+    },
+    "B": {
+      "type": "slot_along_AB",
+      "center_cover_xy_mm": [
+        -50.25,
+        -22.0
+      ],
+      "length_mm": 9,
+      "width_mm": 6.5
+    },
+    "center_basis": "Practical chosen coordinates near the midpoints of the original scan's inferred bare-shaft insertion envelopes. This preserves the existing control-centered working pose and leaves a small geometric clearance; it does not copy or force the later form's captured pose. Coordinate decimal places are CAD choices, not measurement accuracy.",
+    "outer_diameters_mm": [
+      240,
+      192.55
+    ],
+    "collar_max_depth_mm": 24,
+    "overall_height_mm": 32,
+    "tab_thickness_mm": 3,
+    "unchanged": "Complete collar, reliefs, broad face, central aperture and tab outside boundaries. Only locating openings differ. Neither central control-access envelope nor factory plate measurements is changed.",
+    "printing": "Geometry-only mm STL/3MF/STEP; 100 percent scale, same orientation and PETG setup as PS01. Use existing printer profile. Print one chosen size for the experiment. No machine-specific G-code or purchase."
+  },
+  "physical_scope": "A scan observation is not full seating, repeatability, a water test or a measured print tolerance. A tight tool that binds is a failed trial; do not use the nuts to pull it into place. Existing bracing/release requirements remain. No owner measurement is requested."
+}

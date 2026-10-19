@@ -99,5 +99,19 @@
     "package": "deliverables/current/fabrication/FT02/RF01_REPAIR_FORM_TRIAL.zip",
     "decision": "Optional only if the protected plate trial reveals missing bearing support; no form order by default. Full face seating and release rehearsal precede filling. Does not change the selected plates."
   },
-  "github_transfer_record": "docs/decisions/github_transfer_2026-10-17.json"
+  "github_transfer_record": "docs/decisions/github_transfer_2026-10-17.json",
+  "optional_shaft_locator_trial": {
+    "revision": "FS02 / RF05",
+    "status": "EXPERIMENTAL_SACRIFICIAL_PRINT_CANDIDATE",
+    "date": "2026-10-19",
+    "canon": "canon/tab_shaft_trial_FS02.json",
+    "review": "deliverables/current/analysis/tab-shafts-FS02/index.html",
+    "baseline_selection": "PS01 unchanged",
+    "permanent_installation_released": false,
+    "owner_accepted_failure_fraction": [
+      0.25,
+      0.3
+    ],
+    "predicted_failure_fraction": null
+  }
 }

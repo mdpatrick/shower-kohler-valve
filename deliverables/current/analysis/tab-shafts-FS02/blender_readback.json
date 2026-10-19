@@ -1,0 +1,45 @@
+{
+  "status": "PASS_FRESH_BLENDER_READBACK",
+  "scene_count": 6,
+  "scenes": [
+    {
+      "scene": "RF05 | front locator layout",
+      "mesh_objects": 1,
+      "vertices": 8332
+    },
+    {
+      "scene": "RF05 | optional tighter CAD forms",
+      "mesh_objects": 2,
+      "vertices": 16664
+    },
+    {
+      "scene": "with_formwork | A shaft",
+      "mesh_objects": 1,
+      "vertices": 3321
+    },
+    {
+      "scene": "with_formwork | B shaft",
+      "mesh_objects": 1,
+      "vertices": 2929
+    },
+    {
+      "scene": "without_inner_plate | A shaft",
+      "mesh_objects": 1,
+      "vertices": 2476
+    },
+    {
+      "scene": "without_inner_plate | B shaft",
+      "mesh_objects": 1,
+      "vertices": 2594
+    }
+  ],
+  "external_images_required": false,
+  "image_blocks": [
+    {
+      "name": "Render Result",
+      "source": "VIEWER"
+    }
+  ],
+  "file_sha256": "99762851f61b9facdd237470c19384775e441f384e1346aeed70794105302bc3",
+  "physical_claims": "None"
+}

@@ -1,0 +1,32 @@
+{
+  "revision": "FS02",
+  "scenes": [
+    {
+      "scene": "with_formwork | A shaft",
+      "source_crop": "build/FS02/with_formwork_A_context.ply",
+      "vertices": 3321,
+      "edge_on_axis": "canonical +X; Y versus depth Z"
+    },
+    {
+      "scene": "with_formwork | B shaft",
+      "source_crop": "build/FS02/with_formwork_B_context.ply",
+      "vertices": 2929,
+      "edge_on_axis": "canonical +X; Y versus depth Z"
+    },
+    {
+      "scene": "without_inner_plate | A shaft",
+      "source_crop": "build/FS02/without_inner_plate_A_context.ply",
+      "vertices": 2476,
+      "edge_on_axis": "canonical +X; Y versus depth Z"
+    },
+    {
+      "scene": "without_inner_plate | B shaft",
+      "source_crop": "build/FS02/without_inner_plate_B_context.ply",
+      "vertices": 2594,
+      "edge_on_axis": "canonical +X; Y versus depth Z"
+    }
+  ],
+  "candidate_solid_exports": 2,
+  "geometry_from_CAD": true,
+  "source_scans_modified": false
+}

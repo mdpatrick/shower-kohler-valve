@@ -1,0 +1,27 @@
+{
+  "revision": "FS02 / RF05",
+  "date": "2026-10-19",
+  "request": "Exclude removable end nuts; inspect shafts edge-on; prepare a more precise optional experiment under owner-accepted remake risk.",
+  "executed": [
+    "Visible-shaft band fits in the original and exact-form-calibrated scans; local R8 tab arcs inspected independently of shafts.",
+    "Bare-axis calculations for seated tab band and a chosen +20 mm forward sensitivity interval; no end-nut geometry consumed.",
+    "Isolated STEP/STL/3MF for both relieved sizes; independent STEP void-and-surrounding-material probes for hole dimensions.",
+    "Boolean read-back verifies no changes outside the locating-opening neighborhoods and identical central collar in both sizes.",
+    "Fresh Blender reopen confirms six inspection scenes and no external image dependency.",
+    "Browser visual review of the edge-on figures and files section; public/MASV downloads not tested."
+  ],
+  "records": [
+    "deliverables/current/analysis/tab-shafts-FS02/analysis.json",
+    "deliverables/current/analysis/tab-shafts-FS02/audit.json",
+    "deliverables/current/analysis/tab-shafts-FS02/blender_readback.json",
+    "deliverables/current/fabrication/FT02/tight-form-RF05/geometry_checks.json"
+  ],
+  "verification_repair": "The initial Blender dependency assertion counted the built-in Render Result as an external image. The corrected check inspects actual FILE/SEQUENCE/MOVIE dependencies and passes; no model change was needed.",
+  "reviewed_limits": [
+    "Risk preference is not a calculated failure probability.",
+    "Hidden bare tip, actual print error, seating, repeatability and water performance remain unverified.",
+    "This is an optional sacrificial candidate, not a permanent fabrication-readiness approval."
+  ],
+  "protected": "Original source ZIPs, accepted R006 calipers, primary registration, PS01 selection and RF03/RF04/FT02 geometry preserved.",
+  "owner_measurements_requested": []
+}

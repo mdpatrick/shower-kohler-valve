@@ -14,7 +14,9 @@ This repository preserves the complete project history, all five original Polyca
 
 Public MASV downloads prioritize **original deep RF03 (Ø240 × 32 mm)** and **small deep RF04 (Ø192.55 × 32 mm)**. Both have 24 mm maximum relieved collars. The current combined handoff also includes a separately labeled optional short D12 backup. Each link allows 25 download attempts and was set to expire October 27, 2026. The Site also retains a direct ZIP backup. See the [current sharing record](docs/decisions/selected_forms_sharing_2026-10-17.json).
 
-**Latest evidence — October 19:** [FS01: three installation scans versus calipers](deliverables/current/analysis/formwork-scan-FS01/index.html), including the newly printed form as an independent calibration reference. The new source ZIP and separate Blender inspection are preserved. The report recommends retaining the current slots and trying small removable locators before another full tighter print; no new form is released.
+**Latest follow-up — October 19:** [FS02: bare-shaft edge views and RF05 tighter experiment](deliverables/current/analysis/tab-shafts-FS02/index.html). Nuts are excluded. An optional Ø6.5 round / 9 × 6.5 slotted locator pair is prepared in both deep relieved sizes, accepting a possible failed print. [RF05 experimental STL/3MF/STEP package](deliverables/current/fabrication/FT02/tight-form-RF05/RF05_EXPERIMENTAL_TIGHT_FORMS_BOTH_SIZES.zip). The owner’s 25–30% risk budget is not a predicted probability. Existing PS01 files remain the baseline; this update is in the repository/local review, not the existing public MASV package.
+
+**Earlier evidence — October 19:** [FS01: three installation scans versus calipers](deliverables/current/analysis/formwork-scan-FS01/index.html), including the newly printed form as an independent calibration reference. The new source ZIP and separate Blender inspection are preserved. The report recommends retaining the current slots and trying small removable locators before another full tighter print; no new form is released.
 
 ## Open on another computer
 

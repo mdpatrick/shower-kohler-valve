@@ -470,6 +470,8 @@ def main():
     sub.add_parser('prepare-selected-forms',help='Package owner-selected deeper forms with optional short backup; preserve original geometry')
     scanform=sub.add_parser('assess-formwork-scan',help='FS01: compare all three installed scans using the printed form as a separate calibration reference')
     scanform.add_argument('--stage',choices=['all','analysis','render','report','audit'],default='all')
+    shaftform=sub.add_parser('assess-tab-shafts',help='FS02/RF05: nut-excluded shaft sections and optional tighter form')
+    shaftform.add_argument('--stage',choices=['all','analysis','cad','render','report','audit'],default='all')
     r=sub.add_parser('review');r.add_argument('--no-open',action='store_true');i=sub.add_parser('import-measurements');i.add_argument('file');i.add_argument('--dry-run',action='store_true')
     v=sub.add_parser('validate');v.add_argument('--git-objects',action='store_true');q=sub.add_parser('query');q.add_argument('args',nargs='*');sub.add_parser('handoff');sub.add_parser('manifest')
     args=p.parse_args()
@@ -517,6 +519,18 @@ def main():
             run([sys.executable,'src/analysis/formwork_scan_review.py'],'FS01_report.log')
         if args.stage in ('all','audit'):
             run([sys.executable,'src/analysis/audit_formwork_scan.py'],'FS01_audit.log')
+    elif args.command=='assess-tab-shafts':
+        if args.stage in ('all','analysis'):
+            run([sys.executable,'src/analysis/tab_shafts.py'],'FS02_analysis.log')
+        if args.stage in ('all','cad'):
+            run([sys.executable,'src/fabrication/tight_form.py'],'RF05_cad.log')
+        if args.stage in ('all','render'):
+            run([BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1','--python','src/blender/tab_shafts.py'],'FS02_render.log')
+            run([BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1','--python','src/blender/verify_tab_shafts.py'],'FS02_readback.log')
+        if args.stage in ('all','report'):
+            run([sys.executable,'src/analysis/tab_shafts_review.py'],'FS02_report.log')
+        if args.stage in ('all','audit'):
+            run([sys.executable,'src/analysis/audit_tab_shafts.py'],'FS02_audit.log')
     elif args.command=='prepare-small-bed-form':
         if args.stage=='render':run([BLENDER,'--background','--factory-startup','--threads','4','--python-exit-code','1','--python','src/blender/formwork_small_bed.py'],'RF04_render.log')
         elif args.stage=='documents':run([sys.executable,'src/fabrication/formwork_small_bed_handoff.py'],'RF04_documents.log')

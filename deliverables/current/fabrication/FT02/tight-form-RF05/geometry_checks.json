@@ -1,0 +1,97 @@
+{
+  "revision": "RF05",
+  "status": "EXPERIMENTAL_SACRIFICIAL_PRINT_CANDIDATE",
+  "source_baseline_sha256": "fb32c7a5e2b9ebfe8cb9ebde5e935ceff85b22e3ef343f20614653d8bf1142d7",
+  "protected_outside_tab_regions_difference_mm3": 0.0,
+  "changed_volume_mm3": 252.3789689534278,
+  "lower_slot_angle_deg": 25.04732309957857,
+  "parts": [
+    {
+      "diameter_mm": 240,
+      "overall_height_mm": 32,
+      "collar_max_depth_mm": 24,
+      "bounds_mm": [
+        [
+          0.0033730354625731707,
+          0.0008432618342339993,
+          -4.408697392615027e-14
+        ],
+        [
+          240.0,
+          239.99916076660156,
+          32.0
+        ]
+      ],
+      "solid_volume_mm3": 274823.79361796833,
+      "STEP_valid_solids": 1,
+      "STL_closed_components": 1,
+      "3MF_mm_components": 1,
+      "volume_mesh_vs_STEP_fraction": 4.619274730082782e-05,
+      "files": [
+        {
+          "path": "PRINT_ONE_SIZE/FULL_240/RF05_EXPERIMENTAL_240_D24_RELIEVED_TIGHT_LOCATORS_mm.stl",
+          "sha256": "5320e07ef373704de796c12dd6eac0262497a143878b3868173b0a726898935c",
+          "bytes": 833684
+        },
+        {
+          "path": "PRINT_ONE_SIZE/FULL_240/RF05_EXPERIMENTAL_240_D24_RELIEVED_TIGHT_LOCATORS_mm.3mf",
+          "sha256": "f224a4fd07c95ac6a49a736e388a2fb114ac89be507b05da979cd7b787301585",
+          "bytes": 205915
+        },
+        {
+          "path": "PRINT_ONE_SIZE/FULL_240/RF05_EXPERIMENTAL_240_D24_RELIEVED_TIGHT_LOCATORS_mm.step",
+          "sha256": "704d84e69f46b0d71c6be63457a1db24b63ef13d8bd5db5546e851f2570f58af",
+          "bytes": 158362
+        }
+      ]
+    },
+    {
+      "diameter_mm": 192.55,
+      "overall_height_mm": 32,
+      "collar_max_depth_mm": 24,
+      "bounds_mm": [
+        [
+          0.002706158207729459,
+          0.0006765419384464622,
+          -2.6334696481334664e-14
+        ],
+        [
+          192.5500030517578,
+          192.54931640625,
+          32.0
+        ]
+      ],
+      "solid_volume_mm3": 145864.57248876942,
+      "STEP_valid_solids": 1,
+      "STL_closed_components": 1,
+      "3MF_mm_components": 1,
+      "volume_mesh_vs_STEP_fraction": 5.3886938234153827e-05,
+      "files": [
+        {
+          "path": "PRINT_ONE_SIZE/SMALL_192p55/RF05_EXPERIMENTAL_192p55_D24_RELIEVED_TIGHT_LOCATORS_mm.stl",
+          "sha256": "69156e354a65e49761f66e64086205c32141081f300b84b385a615497f27f846",
+          "bytes": 833684
+        },
+        {
+          "path": "PRINT_ONE_SIZE/SMALL_192p55/RF05_EXPERIMENTAL_192p55_D24_RELIEVED_TIGHT_LOCATORS_mm.3mf",
+          "sha256": "c3fdc6f8c76695037c454f9a4acd95661bbe457f9eef582a4e99b9fcb1aa066c",
+          "bytes": 210171
+        },
+        {
+          "path": "PRINT_ONE_SIZE/SMALL_192p55/RF05_EXPERIMENTAL_192p55_D24_RELIEVED_TIGHT_LOCATORS_mm.step",
+          "sha256": "cc2345684378ee66354d9fd720ad152f1a02c7df106bd8e5925f1ee505a4e099",
+          "bytes": 159727
+        }
+      ]
+    }
+  ],
+  "physical_fit_tested": false,
+  "risk": {
+    "owner_accepted_failure_fraction": [
+      0.25,
+      0.3
+    ],
+    "predicted_failure_fraction": null,
+    "meaning": "Owner's remake-risk budget, not a probability estimated from scans. No statistical calibration or independent trials support a numerical likelihood."
+  }
+}
